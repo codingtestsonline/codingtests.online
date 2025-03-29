@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://codingtests.online/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://codingtests.online/favicon-32x32.png">
+    <link rel="icon" type="image/svg+xml" href="https://codingtests.online/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://codingtests.online/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://codingtests.online/favicon-192x192.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Java | Spring Coding Tests | Free Practice for Junior Java | Spring Skills</title>
+    <meta name="description" content="Practice beginner-level English with our free A1 tests. Perfect for those starting their English language journey with basic vocabulary and simple grammar.">
+    <meta name="keywords" content="English tests online, Free English tests, English level test, English proficiency test, Test your English level, English language assessment, English grammar tests, English vocabulary tests, TOEFL English tests, IELTS English tests, SAT English tests, Online English exercises, CEFR English tests">
+    	<meta name="author" content="codingtests.online">
+    	<meta name="robots" content="index, follow">
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K2TNG0KVK8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K2TNG0KVK8');
+    </script>
+<!-- Schema.org Markup for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Free English tests online",
+  "url": "https://codingtests.online/",
+  "description": "Free online English tests for all levels from A1 to C2. Practice and improve your English language skills with hundreds of free tests and exercises."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalResource",
+  "name": "A1 Beginner English Tests",
+  "description": "Practice beginner-level English with our free A1 tests. Perfect for those starting their English language journey with basic vocabulary and simple grammar.",
+  "educationalLevel": "A1",
+  "learningResourceType": "Assessment",
+  "isAccessibleForFree": true,
+  "provider": {
+    "@type": "Organization",
+    "name": "English Tests Online",
+    "url": "https://codingtests.online/"
+  }
+}
+</script>
+    <style>
+        /* Color Palette - Modern UI/UX - Matching the index.html */
+        :root {
+            --primary-background: #ffffff;
+            --primary-color: #008000;
+            --primary-color-darker: #006400;
+            --primary-color-lighter: #32CD32;
+            --secondary-color: #f0f0f0;
+            --secondary-color-darker: #e0e0e0;
+            --text-color-dark: #333333;
+            --text-color-light: #ffffff;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --transition-speed: 0.25s;
+            --border-radius: 10px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--primary-background);
+            color: var(--text-color-dark);
+            padding: 20px 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 600px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        /* Page Title Style */
+        .page-title {
+            font-size: 1.7em;
+            font-weight: bold;
+            color: var(--text-color-dark);
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        /* Fixed Sandwich Menu - Matching index.html */
+        .sandwich-menu-button {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            z-index: 20;
+            border-radius: 50%;
+            transition: background-color var(--transition-speed);
+        }
+
+        .sandwich-menu-button:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+
+        /* Fixed sandwich bars */
+        .sandwich-bar {
+            width: 24px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 2px 0;
+            border-radius: 3px;
+            transition: transform var(--transition-speed), 
+                        opacity var(--transition-speed),
+                        background-color var(--transition-speed);
+        }
+        
+        /* Animation for sandwich menu */
+        .sandwich-menu-button.active .sandwich-bar:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+            background-color: var(--primary-color-darker);
+        }
+        
+        .sandwich-menu-button.active .sandwich-bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .sandwich-menu-button.active .sandwich-bar:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+            background-color: var(--primary-color-darker);
+        }
+
+        /* Home button */
+        .home-button {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            z-index: 20;
+            border-radius: 50%;
+            transition: background-color var(--transition-speed);
+            text-decoration: none;
+        }
+
+        .home-button:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+
+        /* New SVG Home Icon with primary color */
+        .home-icon {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary-color);
+            transition: fill var(--transition-speed);
+        }
+
+        .home-button:hover .home-icon {
+            fill: var(--primary-color-darker);
+        }
+
+        /* Enhanced Dropdown Menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 50px; /* Adjusted to be below the menu button */
+            left: 0;
+            background-color: var(--text-color-light);
+            border-radius: var(--border-radius);
+            width: 220px;
+            box-shadow: var(--box-shadow);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all var(--transition-speed);
+            z-index: 10;
+            overflow: hidden;
+            border-top: 2px solid var(--primary-color);
+        }
+        
+        .dropdown-menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: var(--text-color-dark);
+            transition: all var(--transition-speed);
+            border-bottom: 2px solid var(--secondary-color);
+            position: relative;
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+            color: var(--primary-color);
+            padding-left: 25px;
+        }
+
+        /* Blue line for the dropdown menu */
+        .dropdown-menu a:nth-child(1)::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 2px;
+            width: 100%;
+            background-color: var(--primary-color);
+        }
+
+        /* Add a blue line after FindWord */
+        .dropdown-menu a:nth-child(6)::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 100%;
+            background-color: var(--primary-color);
+        }
+
+        /* Test Squares Grid Container */
+        .test-squares-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            max-width: 90%;
+            width: calc(5 * (60px + 10px));
+            margin-bottom: 30px;
+        }
+
+        .test-square {
+            width: 50px;
+            height: 50px;
+            border-radius: var(--border-radius);
+            background-color: var(--text-color-light);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+        }
+        
+        .test-square:hover {
+            background-color: var(--primary-color);
+            color: var(--text-color-light);
+            transform: translateY(-2px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        /* Styles for squares with scores */
+        .test-square.has-score {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+        }
+        
+        .test-square-number {
+            font-size: 0.9em;
+            margin-top: 2px;
+        }
+        
+        .test-square-score {
+            font-size: 0.9em;
+            margin-bottom: 2px;
+        }
+        
+        .test-square-divider {
+            width: 80%;
+            height: 1px;
+            background-color: currentColor;
+            margin: 2px 0;
+        }
+        
+        /* Colors for different performance levels */
+        .test-square-fail {
+            background-color:  rgba(255, 51, 51, 1);
+            border-color: #c0392b;
+            color: white;
+        }
+        
+        .test-square-good {
+            background-color: rgba(255, 204, 0, 1);
+            border-color: #f39c12;
+            color: white;
+        }
+        
+        .test-square-excellent {
+            background-color: rgba(51, 204, 51, 1);
+            border-color: #27ae60;
+            color: white;
+        }
+
+   /* Add these styles to your body and html elements */
+        html, body {
+          height: 100%;
+          margin: 0;
+        }
+
+        /* Main content area that will grow to push footer down */
+        main {
+          flex: 1 0 auto; /* This makes the main content expand */
+        }
+
+        
+    /* Footer Styling */
+    .footer {
+        background-color: #ffffff;
+        color: #000000;
+        text-align: bottom;
+        padding: 5px;
+        margin-top: 50px;
+        width: 100%;
+        flex-shrink: 0;
+    }
+    
+    .footer-content {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer p {
+        margin: 5px 0;
+        font-size: 1.1em;
+        font-weight: 300;
+    }
+    
+    .footer-email {
+        color: #008000;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .footer-email:hover {
+        color: #006400; 
+        text-decoration: underline;
+    }
+    
+    .footer-spacer {
+        height: 30px;
+        width: 100%;
+    }
+    
+    .footer-made {
+        margin-top: 10px;
+    }
+    
+    .footer-maker {
+        font-size: 1.3em;
+    }
+
+        /* Mobile adjustments */
+        @media (max-width: 700px) {
+            .header {
+                margin-bottom: 25px;
+            }
+            
+            .page-title {
+                font-size: 1.4em;
+            }
+            
+            .test-squares-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 8px;
+                width: 95%;
+            }
+            
+            .test-square {
+                width: calc(100vw / 6.5);
+                height: calc(100vw / 6.5);
+                font-size: 0.9em;
+                border-radius: 8px;
+                border-width: 1.5px;
+            }
+            .test-square.has-score {
+                padding: 3px 0;
+            }
+            
+            .test-square-number {
+                font-size: 0.8em;
+            }
+            
+            .test-square-score {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="sandwich-menu-button" id="menuButton">
+            <div class="sandwich-bar"></div>
+            <div class="sandwich-bar"></div>
+            <div class="sandwich-bar"></div>
+        </div>
+        <h1 style="font-size: 27px; text-align: center; flex-grow: 1;">Java Coding Tests</h1>
+        <a href="https://codingtests.online/" class="home-button">
+            <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
+            </svg>
+        </a>
+
+        <div class="dropdown-menu" id="sandwichDropdown">
+            <a href="https://codingtests.online/programming-languages">Programming Languages</a>
+            <a href="https://codingtests.online/learning-python">Learning Python</a>
+            <a href="https://codingtests.online/about-us">About Us</a>
+            <a href="https://codingtests.online/terms-of-use">Terms of Use</a>
+            <a href="https://codingtests.online/privacy-policy">Privacy Policy</a>
+            <a href="https://englishtests.online/">English Tests Online</a>
+        </div>
+    </div>
+
+    <div class="test-squares-grid">
+        <!-- Test squares will be generated by JavaScript -->
+    </div>
+
+    <script>
+        // Enhanced menu toggle with animation
+        const menuButton = document.getElementById('menuButton');
+        const dropdownMenu = document.getElementById('sandwichDropdown');
+        
+        menuButton.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent this click from triggering the document click handler
+            this.classList.toggle('active');
+            dropdownMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                menuButton.classList.remove('active');
+                dropdownMenu.classList.remove('active');
+            }
+        });
+
+        // Prevent dropdown clicks from closing the menu
+        dropdownMenu.addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+
+        // JavaScript to dynamically generate 100 squares
+        const gridContainer = document.querySelector('.test-squares-grid');
+
+        let currentLanguage = "Java";
+        
+        for (let i = 1; i <= 50; i++) {
+            const square = document.createElement('div');
+            square.classList.add('test-square');
+            
+            // Check if there's a saved score for this test
+            const testKey = `${currentLanguage}-test-${i}`;
+            const savedScore = localStorage.getItem(testKey);
+            
+            if (savedScore !== null) {
+                // This test has a score, so use the divided layout
+                square.classList.add('has-score');
+                
+                // Create the test number element
+                const numberElement = document.createElement('div');
+                numberElement.classList.add('test-square-number');
+                numberElement.textContent = i;
+                
+                // Create the divider
+                const divider = document.createElement('div');
+                divider.classList.add('test-square-divider');
+                
+                // Create the score element
+                const scoreElement = document.createElement('div');
+                scoreElement.classList.add('test-square-score');
+                scoreElement.textContent = `${savedScore}/50`;
+                
+                // Apply color based on performance
+                const score = parseInt(savedScore, 10);
+                if (score >= 43) {
+                    square.classList.add('test-square-excellent');
+                } else if (score >= 30) {
+                    square.classList.add('test-square-good');
+                } else {
+                    square.classList.add('test-square-fail');
+                }
+                
+                // Add all elements to the square
+                square.appendChild(numberElement);
+                square.appendChild(divider);
+                square.appendChild(scoreElement);
+            } else {
+                // No score yet, use the original simple layout with just the number
+                square.textContent = i;
+            }
+            
+            // Set the click handler
+            square.addEventListener('click', function() {
+                window.location.href = `https://codingtests.online/test-page?diff=${currentLanguage}&level=${i}`;
+            });
+            
+            // Add the square to the grid
+            gridContainer.appendChild(square);
+        }
+    </script>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <p>© Copyright 2025</p>
+        <p><a href="mailto:info@codingtests.online" class="footer-email">info@codingtests.online</a></p>
+        <p>All rights reserved</p>        
+        <p class="footer-made">Made by <a href="https://play.google.com/store/apps/dev?id=5093525609695433503" class="footer-email">KubiKDB</a></p>
+    </div>
+    </footer>
+</body>
+</html>
