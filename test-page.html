@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Developer Interview Test</title>
+    <title>Coding Test</title>
     <!-- Add Prism.js CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     <style>
@@ -179,12 +179,12 @@
         .home-icon {
             width: 24px;
             height: 24px;
-            fill: #3498DB;
+            fill: #008000;
             transition: fill 0.3s;
         }
 
         .home-button:hover .home-icon {
-            fill: #2980b9;
+            fill: #006400;
         }
         
         /* Footer Styling */
@@ -213,13 +213,13 @@
         }
         
         .footer-email {
-            color: #3498db;
+            color: #008000;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         
         .footer-email:hover {
-            color: #2980b9;
+            color: #006400;
             text-decoration: underline;
         }
         
@@ -254,10 +254,10 @@
     <div class="header">
         <a href="javascript:history.back()" class="home-button">
             <svg width="25.6" height="22.4" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.292893 7.29289C-0.097631 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31946 8.07107 0.928931C7.68054 0.538407 7.04738 0.538407 6.65685 0.928931L0.292893 7.29289ZM18 7L1 7L1 9L18 9L18 7Z" fill="#3498DB"/>
+                <path d="M0.292893 7.29289C-0.097631 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31946 8.07107 0.928931C7.68054 0.538407 7.04738 0.538407 6.65685 0.928931L0.292893 7.29289ZM18 7L1 7L1 9L18 9L18 7Z" fill="#008000"/>
             </svg>
         </a>
-        <h2>Python Developer Interview Test</h2>
+        <h2>Coding Test</h2>
         <a href="#" class="home-button">
             <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                 <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
@@ -268,7 +268,7 @@
     <form id="quizForm"></form>
     
     <div class="score-display" id="scoreDisplay" style="display: none;">
-        <div>Your Score: <span id="scoreValue">0</span> / <span id="totalQuestions">60</span></div>
+        <div>Your Score: <span id="scoreValue">0</span> / <span id="totalQuestions">48</span></div>
         <div class="progress-container">
             <div class="progress-bar" id="progressBar" style="width: 0%">0%</div>
         </div>
@@ -278,12 +278,12 @@
     <div id="result" class="result"></div>
 
     <footer class="footer">
-        <div class="footer-content">
-            <p>© Copyright 2025</p>
-            <p><a href="mailto:info@pythontest.dev" class="footer-email">info@codingtests.online</a></p>
-            <p>All rights reserved</p>        
-            <p class="footer-made">Made for Junior Python Developers</p>
-        </div>
+    <div class="footer-content">
+        <p>© Copyright 2025</p>
+        <p><a href="mailto:info@codingtests.online" class="footer-email">info@codingtests.online</a></p>
+        <p>All rights reserved</p>        
+        <p class="footer-made">Made by <a href="https://play.google.com/store/apps/dev?id=5093525609695433503" class="footer-email">KubiKDB</a></p>
+    </div>
     </footer>
 
     <!-- Add Prism.js JavaScript -->
@@ -346,92 +346,131 @@ if (q.code_example) {
         quizForm.appendChild(questionDiv);
     });
 }
-	    // Load and display test questions
-    document.addEventListener('DOMContentLoaded', function() {
-    const testData = {
-      "questions": []
-    }
 
-// Process form submission
-document.getElementById("submitBtn").addEventListener("click", function(event) {
-    event.preventDefault();
-    
-    let score = 0;
-    let total = testData.questions.length;
-    let resultText = "<h3>Results:</h3>";
-    
-    // Create categories for detailed results
-    let easyCorrect = 0, mediumCorrect = 0, hardCorrect = 0;
-    let easyTotal = 0, mediumTotal = 0, hardTotal = 0;
-    
-    testData.questions.forEach(q => {
-        let selected = document.querySelector(`input[name="q${q.id}"]:checked`);
-        
-        // Count by difficulty
-        if (q.difficulty === 'easy') easyTotal++;
-        else if (q.difficulty === 'medium') mediumTotal++;
-        else if (q.difficulty === 'hard') hardTotal++;
-        
-        if (selected) {
-            if (selected.value === q.correct_answer) {
-                score++;
-                
-                // Count correct by difficulty
-                if (q.difficulty === 'easy') easyCorrect++;
-                else if (q.difficulty === 'medium') mediumCorrect++;
-                else if (q.difficulty === 'hard') hardCorrect++;
-                
-                resultText += `<p>Question ${q.id}: Correct ✅</p>`;
-            } else {
-                resultText += `<p>Question ${q.id}: Incorrect ❌ (Your answer: ${selected.value}, Correct: ${q.correct_answer})</p>`;
+// Load and display test questions
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const levelValue = urlParams.get('level');
+    const testLevel = parseInt(levelValue, 10);
+    const language = urlParams.get('diff');
+
+    document.querySelector('h2').textContent = `${language} — test ${testLevel}`;
+
+    fetch(`json/${language}/test${testLevel}.json`) // Path to your JSON file
+        .then(response => {
+            console.log("Response Status:", response.status);
+            return response.json();
+        })
+        .then(data => {
+            console.log("JSON Data:", data);
+            
+            // Initialize the quiz with the loaded questions
+            generateQuiz(data.questions);
+            
+            if (Prism) {
+                setTimeout(function() {
+                    Prism.highlightAll();
+                }, 100);
             }
-        } else {
-            resultText += `<p>Question ${q.id}: No answer selected ❌ (Correct: ${q.correct_answer})</p>`;
-        }
-    });
-    
-    // Add summary
-    resultText += `<h3>Summary:</h3>`;
-    resultText += `<p>Easy: ${easyCorrect}/${easyTotal}</p>`;
-    resultText += `<p>Medium: ${mediumCorrect}/${mediumTotal}</p>`;
-    resultText += `<p>Hard: ${hardCorrect}/${hardTotal}</p>`;
-    resultText += `<p><strong>Total Score: ${score}/${total}</strong></p>`;
-    
-    document.getElementById("result").innerHTML = resultText;
-    
-    // Show score display
-    const scoreDisplay = document.getElementById("scoreDisplay");
-    scoreDisplay.style.display = "block";
-    document.getElementById("scoreValue").textContent = score;
-    document.getElementById("totalQuestions").textContent = total;
-    
-    // Update progress bar
-    const percentage = Math.round((score / total) * 100);
-    const progressBar = document.getElementById("progressBar");
-    progressBar.style.width = `${percentage}%`;
-    progressBar.textContent = `${percentage}%`;
-    
-    // Color code the progress bar
-    if (score < 28) {
-        progressBar.style.backgroundColor = "#dc3545"; // Red
-    } else if (score < 38) {
-        progressBar.style.backgroundColor = "#ffc107"; // Yellow
-    } else {
-        progressBar.style.backgroundColor = "#28a745"; // Green
-    }
-    
-    // Save score in localStorage
-    const testKey = "python-interview-test";
-    localStorage.setItem(testKey, score);
-});
+        })
+        .catch(error => {
+            console.error('Error loading questions:', error);
+            console.error("Fetch Error Details:", error);
+        });
 
-// Initialize the quiz
-generateQuiz(testData.questions);
-    if (Prism) {
-        setTimeout(function() {
-            Prism.highlightAll();
-        }, 100);
-    }
+    // Process form submission
+    document.getElementById("submitBtn").addEventListener("click", function(event) {
+        event.preventDefault();
+        
+        let score = 0;
+        let total = 0;
+        let resultText = "<h3>Results:</h3>";
+        
+        // Create categories for detailed results
+        let easyCorrect = 0, mediumCorrect = 0, hardCorrect = 0;
+        let easyTotal = 0, mediumTotal = 0, hardTotal = 0;
+        
+        const questions = document.querySelectorAll('.question');
+        total = questions.length;
+        
+        questions.forEach(questionDiv => {
+            const qIdText = questionDiv.querySelector('h3').textContent;
+            const qId = parseInt(qIdText.match(/\d+/)[0]);
+            const difficulty = questionDiv.dataset.difficulty;
+            
+            // Count by difficulty
+            if (difficulty === 'easy') easyTotal++;
+            else if (difficulty === 'medium') mediumTotal++;
+            else if (difficulty === 'hard') hardTotal++;
+            
+            const selected = questionDiv.querySelector(`input[name="q${qId}"]:checked`);
+            
+            if (selected) {
+                // Find the correct answer by checking all radio buttons for this question
+                const allOptions = questionDiv.querySelectorAll(`input[name="q${qId}"]`);
+                let correctOption;
+		    
+                allOptions.forEach(option => {
+                    if (option.value === data.questions.find(q => q.id === qId).correct_answer) {
+                        correctOption = option;
+                    }
+                });
+                
+                if (selected.value === correctOption.value) {
+                    score++;
+                    
+                    // Count correct by difficulty
+                    if (difficulty === 'easy') easyCorrect++;
+                    else if (difficulty === 'medium') mediumCorrect++;
+                    else if (difficulty === 'hard') hardCorrect++;
+                    
+                    resultText += `<p>Question ${qId}: Correct ✅</p>`;
+                } else {
+                    resultText += `<p>Question ${qId}: Incorrect ❌ (Your answer: ${selected.value}, Correct: ${correctOption.value})</p>`;
+                }
+            } else {
+                // Find correct answer for display
+                const correctAnswer = data.questions.find(q => q.id === qId).correct_answer;
+                resultText += `<p>Question ${qId}: No answer selected ❌ (Correct: ${correctAnswer})</p>`;
+            }
+        });
+        
+        // Add summary
+        resultText += `<h3>Summary:</h3>`;
+        resultText += `<p>Easy: ${easyCorrect}/${easyTotal}</p>`;
+        resultText += `<p>Medium: ${mediumCorrect}/${mediumTotal}</p>`;
+        resultText += `<p>Hard: ${hardCorrect}/${hardTotal}</p>`;
+        resultText += `<p><strong>Total Score: ${score}/${total}</strong></p>`;
+        
+        document.getElementById("result").innerHTML = resultText;
+        
+        // Show score display
+        const scoreDisplay = document.getElementById("scoreDisplay");
+        scoreDisplay.style.display = "block";
+        document.getElementById("scoreValue").textContent = score;
+        document.getElementById("totalQuestions").textContent = total;
+        
+        // Update progress bar
+        const percentage = Math.round((score / total) * 100);
+        const progressBar = document.getElementById("progressBar");
+        progressBar.style.width = `${percentage}%`;
+        progressBar.textContent = `${percentage}%`;
+        
+        // Color code the progress bar
+        if (score < 28) {
+            progressBar.style.backgroundColor = "#dc3545"; // Red
+        } else if (score < 38) {
+            progressBar.style.backgroundColor = "#ffc107"; // Yellow
+        } else {
+            progressBar.style.backgroundColor = "#28a745"; // Green
+        }
+        
+        // Create a unique key for this test
+        const testKey = `${language}-test-${testLevel}`;
+        
+        // Save the score
+        localStorage.setItem(testKey, score);
+    });
 });
     </script>
 </body>
