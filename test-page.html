@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Developer Interview Test</title>
+    <!-- Add Prism.js CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 10px;
+            padding-top: 70px; /* Add padding to accommodate fixed header */
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+       /* Update your existing .code-example class or add this CSS */
+/* PyCharm-inspired syntax highlighting */
+.code-example {
+  background-color: #000000; /* PyCharm dark theme background */
+  color: #a9b7c6; /* Default text color */
+  padding: 15px;
+  border-radius: 5px;
+  font-family: 'JetBrains Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  margin: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  border: 1px solid #323232;
+  line-height: 1.5;
+}
+
+/* PyCharm syntax colors */
+.code-example .token.comment {
+  color: #808080; /* Gray comments */
+}
+
+.code-example .token.punctuation {
+  color: #a9b7c6; /* Default text color */
+}
+
+.code-example .token.keyword {
+  color: #cc7832; /* Orange keywords */
+}
+
+.code-example .token.string {
+  color: #6a8759; /* Green strings */
+}
+
+.code-example .token.function {
+  color: #ffc66d; /* Yellow-orange functions */
+}
+
+.code-example .token.number {
+  color: #6897bb; /* Blue numbers */
+}
+
+.code-example .token.operator {
+  color: #a9b7c6; /* Default color */
+}
+
+.code-example .token.builtin {
+  color: #cc7832; /* Orange for built-ins like print */
+}
+
+.code-example .token.class-name {
+  color: #a9b7c6; /* Default color or slightly brighter */
+}
+
+.code-example .token.property,
+.code-example .token.variable {
+  color: #9876aa; /* Purple for variables */
+}
+
+.code-example .token.decorator {
+  color: #bbb529; /* Yellow for decorators */
+}
+
+.code-example .token.boolean {
+  color: #cc7832; /* Orange for True/False */
+}
+
+.code-example .token.constant {
+  color: #9876aa; /* Purple for constants */
+}
+
+/* Special PyCharm-specific treatment for 'self' parameter */
+.code-example .token.parameter.self {
+  color: #9876aa; /* Purple for 'self' */
+  font-style: italic;
+}
+
+.difficulty {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+        .easy {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .medium {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .hard {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .submit-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        /* Header styling */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header h2 {
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .home-button {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            z-index: 20;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .home-button:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+
+        .home-icon {
+            width: 24px;
+            height: 24px;
+            fill: #3498DB;
+            transition: fill 0.3s;
+        }
+
+        .home-button:hover .home-icon {
+            fill: #2980b9;
+        }
+        
+        /* Footer Styling */
+        .footer {
+            background-color: #ffffff;
+            color: #000000;
+            text-align: bottom;
+            padding: 5px;
+            margin-top: 50px;
+            max-width: 800px;
+            flex-shrink: 0;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .footer-email {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-email:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .score-display {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9f7ef;
+            border-radius: 5px;
+        }
+        
+        .progress-container {
+            margin-top: 10px;
+            width: 100%;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+        
+        .progress-bar {
+            height: 24px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="javascript:history.back()" class="home-button">
+            <svg width="25.6" height="22.4" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.292893 7.29289C-0.097631 7.68342 -0.0976311 8.31658 0.292893 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31946 8.07107 0.928931C7.68054 0.538407 7.04738 0.538407 6.65685 0.928931L0.292893 7.29289ZM18 7L1 7L1 9L18 9L18 7Z" fill="#3498DB"/>
+            </svg>
+        </a>
+        <h2>Python Developer Interview Test</h2>
+        <a href="#" class="home-button">
+            <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
+            </svg>
+        </a>
+    </div>
+    
+    <form id="quizForm"></form>
+    
+    <div class="score-display" id="scoreDisplay" style="display: none;">
+        <div>Your Score: <span id="scoreValue">0</span> / <span id="totalQuestions">60</span></div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar" style="width: 0%">0%</div>
+        </div>
+    </div>
+    
+    <button type="submit" class="submit-btn" id="submitBtn">Submit</button>
+    <div id="result" class="result"></div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© Copyright 2025</p>
+            <p><a href="mailto:info@pythontest.dev" class="footer-email">info@codingtests.online</a></p>
+            <p>All rights reserved</p>        
+            <p class="footer-made">Made for Junior Python Developers</p>
+        </div>
+    </footer>
+
+    <!-- Add Prism.js JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <script>
+	    function generateQuiz(questions) {
+    const quizForm = document.getElementById('quizForm');
+    quizForm.innerHTML = '';
+
+    questions.forEach(q => {
+        const questionDiv = document.createElement('div');
+        questionDiv.className = 'question';
+        questionDiv.dataset.difficulty = q.difficulty;
+
+        // Create difficulty badge
+        const difficultySpan = document.createElement('span');
+        difficultySpan.className = `difficulty ${q.difficulty}`;
+        difficultySpan.textContent = q.difficulty.charAt(0).toUpperCase() + q.difficulty.slice(1);
+
+        // Create question title
+        const questionTitle = document.createElement('h3');
+        questionTitle.appendChild(difficultySpan);
+        questionTitle.appendChild(document.createTextNode(` ${q.id}. ${q.question}`));
+        
+        questionDiv.appendChild(questionTitle);
+
+if (q.code_example) {
+    const codeBlock = document.createElement('pre');
+    const codeElement = document.createElement('code');
+    codeElement.className = 'language-python';
+    codeElement.textContent = q.code_example;
+    codeBlock.appendChild(codeElement);
+    questionDiv.appendChild(codeBlock);
+    
+    if (Prism) {
+        Prism.highlightElement(codeElement);
+    }
+}
+
+        // Add answer options
+        for (const [key, value] of Object.entries(q.options)) {
+            const optionLabel = document.createElement('label');
+            optionLabel.style.display = 'block';
+            optionLabel.style.margin = '5px 0';
+            
+            const optionInput = document.createElement('input');
+            optionInput.type = 'radio';
+            optionInput.name = `q${q.id}`;
+            optionInput.value = key;
+            optionInput.id = `q${q.id}${key}`;
+            
+            optionLabel.appendChild(optionInput);
+            optionLabel.appendChild(document.createTextNode(` ${key}. ${value}`));
+            
+            questionDiv.appendChild(optionLabel);
+        }
+
+        quizForm.appendChild(questionDiv);
+    });
+}
+	    // Load and display test questions
+    document.addEventListener('DOMContentLoaded', function() {
+    const testData = {
+      "questions": []
+    }
+
+// Process form submission
+document.getElementById("submitBtn").addEventListener("click", function(event) {
+    event.preventDefault();
+    
+    let score = 0;
+    let total = testData.questions.length;
+    let resultText = "<h3>Results:</h3>";
+    
+    // Create categories for detailed results
+    let easyCorrect = 0, mediumCorrect = 0, hardCorrect = 0;
+    let easyTotal = 0, mediumTotal = 0, hardTotal = 0;
+    
+    testData.questions.forEach(q => {
+        let selected = document.querySelector(`input[name="q${q.id}"]:checked`);
+        
+        // Count by difficulty
+        if (q.difficulty === 'easy') easyTotal++;
+        else if (q.difficulty === 'medium') mediumTotal++;
+        else if (q.difficulty === 'hard') hardTotal++;
+        
+        if (selected) {
+            if (selected.value === q.correct_answer) {
+                score++;
+                
+                // Count correct by difficulty
+                if (q.difficulty === 'easy') easyCorrect++;
+                else if (q.difficulty === 'medium') mediumCorrect++;
+                else if (q.difficulty === 'hard') hardCorrect++;
+                
+                resultText += `<p>Question ${q.id}: Correct ✅</p>`;
+            } else {
+                resultText += `<p>Question ${q.id}: Incorrect ❌ (Your answer: ${selected.value}, Correct: ${q.correct_answer})</p>`;
+            }
+        } else {
+            resultText += `<p>Question ${q.id}: No answer selected ❌ (Correct: ${q.correct_answer})</p>`;
+        }
+    });
+    
+    // Add summary
+    resultText += `<h3>Summary:</h3>`;
+    resultText += `<p>Easy: ${easyCorrect}/${easyTotal}</p>`;
+    resultText += `<p>Medium: ${mediumCorrect}/${mediumTotal}</p>`;
+    resultText += `<p>Hard: ${hardCorrect}/${hardTotal}</p>`;
+    resultText += `<p><strong>Total Score: ${score}/${total}</strong></p>`;
+    
+    document.getElementById("result").innerHTML = resultText;
+    
+    // Show score display
+    const scoreDisplay = document.getElementById("scoreDisplay");
+    scoreDisplay.style.display = "block";
+    document.getElementById("scoreValue").textContent = score;
+    document.getElementById("totalQuestions").textContent = total;
+    
+    // Update progress bar
+    const percentage = Math.round((score / total) * 100);
+    const progressBar = document.getElementById("progressBar");
+    progressBar.style.width = `${percentage}%`;
+    progressBar.textContent = `${percentage}%`;
+    
+    // Color code the progress bar
+    if (score < 28) {
+        progressBar.style.backgroundColor = "#dc3545"; // Red
+    } else if (score < 38) {
+        progressBar.style.backgroundColor = "#ffc107"; // Yellow
+    } else {
+        progressBar.style.backgroundColor = "#28a745"; // Green
+    }
+    
+    // Save score in localStorage
+    const testKey = "python-interview-test";
+    localStorage.setItem(testKey, score);
+});
+
+// Initialize the quiz
+generateQuiz(testData.questions);
+    if (Prism) {
+        setTimeout(function() {
+            Prism.highlightAll();
+        }, 100);
+    }
+});
+    </script>
+</body>
+</html>
