@@ -27,7 +27,7 @@
   background-color: #000000; /* PyCharm dark theme background */
   color: #a9b7c6; /* Default text color */
   padding: 15px;
-  border-radius: 20px;
+  border-radius: 5px;
   font-family: 'JetBrains Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
   white-space: pre-wrap;
   overflow-x: auto;
@@ -316,6 +316,7 @@ if (q.code_example) {
     const codeBlock = document.createElement('pre');
     const codeElement = document.createElement('code');
     codeElement.className = 'language-python';
+    codeBlock.borderRadius = '5px';
     codeElement.textContent = q.code_example;
     codeBlock.appendChild(codeElement);
     questionDiv.appendChild(codeBlock);
