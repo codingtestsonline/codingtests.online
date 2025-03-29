@@ -1,0 +1,614 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "15",
+        "B": "20",
+        "C": "25",
+        "D": "Error"
+      },
+      "correct_answer": "C",
+      "code_example": "x = 10\ny = 15\nprint(x + y)"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a valid docstring format in Python?",
+      "options": {
+        "A": "\"\"\"This is a docstring.\"\"\"",
+        "B": "'''This is a docstring.'''",
+        "C": "//This is a docstring.",
+        "D": "\"This is a docstring.\""
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello, John! You are 25 years old.",
+        "B": "Hello, John! You are 25 years old",
+        "C": "Hello, John. You are 25 years old.",
+        "D": "Error"
+      },
+      "correct_answer": "A",
+      "code_example": "name = \"John\"\nage = 25\nprint(f\"Hello, {name}! You are {age} years old.\")"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is the correct way to open a file named 'data.txt' for writing, creating a new file if it doesn't exist or truncating it if it does?",
+      "options": {
+        "A": "open('data.txt', 'r')",
+        "B": "open('data.txt', 'w')",
+        "C": "open('data.txt', 'a')",
+        "D": "open('data.txt', 'rb')"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "In the function call below, which is a parameter and which is an argument?",
+      "options": {
+        "A": "'Hello' is a parameter, message is an argument",
+        "B": "message is a parameter, 'Hello' is an argument",
+        "C": "Both message and 'Hello' are parameters",
+        "D": "Both message and 'Hello' are arguments"
+      },
+      "correct_answer": "B",
+      "code_example": "def print_message(message):\n    print(message)\n\nprint_message('Hello')"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following bubble sort implementation?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[5, 4, 3, 2, 1]",
+        "C": "[5, 1, 4, 2, 3]",
+        "D": "[3, 2, 4, 1, 5]"
+      },
+      "correct_answer": "A",
+      "code_example": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr\n\nresult = bubble_sort([5, 1, 4, 2, 3])\nprint(result)"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What does the following selection sort implementation return?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[5, 4, 3, 2, 1]",
+        "C": "[-5, -3, 0, 2, 4]",
+        "D": "[4, 2, 0, -3, -5]"
+      },
+      "correct_answer": "C",
+      "code_example": "def selection_sort(arr):\n    for i in range(len(arr)):\n        min_idx = i\n        for j in range(i + 1, len(arr)):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr\n\nresult = selection_sort([0, -3, 4, -5, 2])\nprint(result)"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "int",
+        "B": "<class 'int'>",
+        "C": "True",
+        "D": "False"
+      },
+      "correct_answer": "C",
+      "code_example": "x = 10\nprint(isinstance(x, int))"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will the following function return for the input 'racecar'?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "'racecar'",
+        "D": "None"
+      },
+      "correct_answer": "A",
+      "code_example": "def is_palindrome(s):\n    return s == s[::-1]\n\nresult = is_palindrome('racecar')\nprint(result)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "10",
+        "B": "5",
+        "C": "Error: UnboundLocalError",
+        "D": "None"
+      },
+      "correct_answer": "C",
+      "code_example": "x = 5\n\ndef modify_x():\n    x += 5\n    return x\n\nprint(modify_x())"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will the factorial function return for input 5?",
+      "options": {
+        "A": "5",
+        "B": "15",
+        "C": "120",
+        "D": "720"
+      },
+      "correct_answer": "C",
+      "code_example": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n - 1)\n\nresult = factorial(5)\nprint(result)"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following list comprehension?",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]",
+        "B": "[1, 4, 9, 16, 25, 36]",
+        "C": "[0, 1, 4, 9, 16, 25]",
+        "D": "[0, 1, 4, 9, 16]"
+      },
+      "correct_answer": "A",
+      "code_example": "squares = [x*x for x in range(1, 6)]\nprint(squares)"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "0 a\n1 b\n2 c",
+        "B": "1 a\n2 b\n3 c",
+        "C": "a 0\nb 1\nc 2",
+        "D": "a\nb\nc"
+      },
+      "correct_answer": "A",
+      "code_example": "for i, letter in enumerate(['a', 'b', 'c']):\n    print(i, letter)"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "Which of the following is a valid way to create a multi-line string in Python?",
+      "options": {
+        "A": "string = 'First line\nSecond line'",
+        "B": "string = \"First line\nSecond line\"",
+        "C": "string = '''First line\nSecond line'''",
+        "D": "All of the above"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "['apple', 'banana', 'cherry']",
+        "B": "apple,banana,cherry",
+        "C": "apple-banana-cherry",
+        "D": "applebananacherry"
+      },
+      "correct_answer": "C",
+      "code_example": "fruits = ['apple', 'banana', 'cherry']\nresult = '-'.join(fruits)\nprint(result)"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "Which file mode would you use to append binary data to an existing file?",
+      "options": {
+        "A": "'a'",
+        "B": "'ab'",
+        "C": "'wb'",
+        "D": "'rb'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following decorator example?",
+      "options": {
+        "A": "Calling function with arguments: (1, 2)\nResult: 3",
+        "B": "Before function\nCalculating: 1 + 2\nAfter function\n3",
+        "C": "Before function\nAfter function\n3",
+        "D": "Before function\nCalculating: 1 + 2\nAfter function\nResult: 3"
+      },
+      "correct_answer": "C",
+      "code_example": "def decorator(func):\n    def wrapper(*args, **kwargs):\n        print(\"Before function\")\n        result = func(*args, **kwargs)\n        print(\"After function\")\n        return result\n    return wrapper\n\n@decorator\ndef add(a, b):\n    print(f\"Calculating: {a} + {b}\")\n    return a + b\n\nresult = add(1, 2)\nprint(result)"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a principle of database normalization?",
+      "options": {
+        "A": "Elimination of redundant data",
+        "B": "Ensuring data dependencies make sense",
+        "C": "Maximizing indexing performance",
+        "D": "Isolation of related data in separate tables"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the time complexity of the following binary search implementation?",
+      "options": {
+        "A": "O(n)",
+        "B": "O(log n)",
+        "C": "O(n log n)",
+        "D": "O(1)"
+      },
+      "correct_answer": "B",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        \n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n            \n    return -1"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a benefit of lazy evaluation in programming?",
+      "options": {
+        "A": "Reduced memory usage",
+        "B": "Ability to work with infinite sequences",
+        "C": "Improved program readability",
+        "D": "Avoiding unnecessary calculations"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating method overriding?",
+      "options": {
+        "A": "Animal sound\nWoof!",
+        "B": "Woof!\nAnimal sound",
+        "C": "Woof!\nWoof!",
+        "D": "Animal sound\nAnimal sound"
+      },
+      "correct_answer": "A",
+      "code_example": "class Animal:\n    def make_sound(self):\n        print(\"Animal sound\")\n\nclass Dog(Animal):\n    def make_sound(self):\n        print(\"Woof!\")\n\nanimal = Animal()\ndog = Dog()\n\nanimal.make_sound()\ndog.make_sound()"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using *args and **kwargs?",
+      "options": {
+        "A": "1, 2, 3\nname=Alice age=30",
+        "B": "(1, 2, 3)\n{'name': 'Alice', 'age': 30}",
+        "C": "1 2 3\nname=Alice age=30",
+        "D": "1 2 3\n{'name': 'Alice', 'age': 30}"
+      },
+      "correct_answer": "B",
+      "code_example": "def show_args_kwargs(*args, **kwargs):\n    print(args)\n    print(kwargs)\n\nshow_args_kwargs(1, 2, 3, name=\"Alice\", age=30)"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Name: John, Age: 25\nName: Jane, Age: 30",
+        "B": "Name: John, Age: 25\nName: John, Age: 30",
+        "C": "Name: None, Age: 0\nName: Jane, Age: 30",
+        "D": "TypeError: __init__() missing required positional argument"
+      },
+      "correct_answer": "A",
+      "code_example": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n        \n    def display_info(self):\n        print(f\"Name: {self.name}, Age: {self.age}\")\n\nperson1 = Person(\"John\", 25)\nperson2 = Person(\"Jane\", 30)\n\nperson1.display_info()\nperson2.display_info()"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the first 5 values generated by the following infinite sequence generator?",
+      "options": {
+        "A": "0, 1, 1, 2, 3",
+        "B": "1, 1, 2, 3, 5",
+        "C": "1, 2, 3, 5, 8",
+        "D": "0, 1, 2, 3, 4"
+      },
+      "correct_answer": "B",
+      "code_example": "def fibonacci_generator():\n    a, b = 0, 1\n    while True:\n        yield b\n        a, b = b, a + b\n\nfib_gen = fibonacci_generator()\nfirst_five = [next(fib_gen) for _ in range(5)]\nprint(first_five)"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "Which HTTP status code indicates a successful request where a new resource has been created?",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "204 No Content",
+        "D": "302 Found"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following Flask route?",
+      "options": {
+        "A": "Hello, world!",
+        "B": "Hello, John!",
+        "C": "Hello, !",
+        "D": "Error: missing required parameter"
+      },
+      "correct_answer": "A",
+      "code_example": "from flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef hello():\n    return 'Hello, world!'\n\n@app.route('/greet/<name>')\ndef greet(name):\n    return f'Hello, {name}!'\n\n# Output when accessing the root URL '/'"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "{2: 4, 4: 16, 6: 36, 8: 64, 10: 100}",
+        "B": "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}",
+        "C": "{2: 4, 4: 16, 6: 36}",
+        "D": "{2: 4, 4: 16}"
+      },
+      "correct_answer": "C",
+      "code_example": "even_squares = {x: x**2 for x in range(1, 7) if x % 2 == 0}\nprint(even_squares)"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that detects cycles in a graph?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cycle detected",
+        "D": "No cycle detected"
+      },
+      "correct_answer": "A",
+      "code_example": "def has_cycle(graph):\n    visited = set()\n    rec_stack = set()\n    \n    def dfs(node):\n        visited.add(node)\n        rec_stack.add(node)\n        \n        for neighbor in graph[node]:\n            if neighbor not in visited:\n                if dfs(neighbor):\n                    return True\n            elif neighbor in rec_stack:\n                return True\n                \n        rec_stack.remove(node)\n        return False\n    \n    for node in graph:\n        if node not in visited:\n            if dfs(node):\n                return True\n    return False\n\n# Graph represented as adjacency list\ngraph = {\n    'A': ['B'],\n    'B': ['C'],\n    'C': ['A']\n}\n\nprint(has_cycle(graph))"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will the following sliding window algorithm return for the input array?",
+      "options": {
+        "A": "9",
+        "B": "11",
+        "C": "12",
+        "D": "15"
+      },
+      "correct_answer": "B",
+      "code_example": "def max_sum_subarray(arr, k):\n    if len(arr) < k:\n        return None\n    \n    window_sum = sum(arr[:k])\n    max_sum = window_sum\n    \n    for i in range(len(arr) - k):\n        window_sum = window_sum - arr[i] + arr[i + k]\n        max_sum = max(max_sum, window_sum)\n    \n    return max_sum\n\nresult = max_sum_subarray([2, 1, 5, 1, 3, 2], 3)\nprint(result)"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a principle of RESTful API design?",
+      "options": {
+        "A": "Stateless communication",
+        "B": "Resource-based URLs",
+        "C": "Use of appropriate HTTP methods",
+        "D": "Always returning XML responses"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is the most common error when establishing a database connection in Python?",
+      "options": {
+        "A": "Not closing the connection properly",
+        "B": "Using incorrect database credentials",
+        "C": "Not handling connection timeouts",
+        "D": "Using synchronous connections in async code"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the collections module?",
+      "options": {
+        "A": "Counter({'a': 3, 'b': 2, 'c': 1})",
+        "B": "{'a': 3, 'b': 2, 'c': 1}",
+        "C": "{'a': 3, 'b': 2}",
+        "D": "['a', 'a', 'a', 'b', 'b', 'c']"
+      },
+      "correct_answer": "A",
+      "code_example": "from collections import Counter\n\nword = 'aaabbc'\ncount = Counter(word)\nprint(count)"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Consider the following approximation algorithm for the Vertex Cover problem. What is the approximation ratio of this algorithm?",
+      "options": {
+        "A": "1.5",
+        "B": "2",
+        "C": "3",
+        "D": "log(n)"
+      },
+      "correct_answer": "B",
+      "code_example": "def greedy_vertex_cover(graph):\n    # Initialize an empty vertex cover\n    vertex_cover = set()\n    \n    # Create a copy of the graph edges\n    edges = set()\n    for u in graph:\n        for v in graph[u]:\n            # Add each edge as a frozenset to avoid duplicates\n            edges.add(frozenset([u, v]))\n    \n    # While there are edges remaining\n    while edges:\n        # Pick an arbitrary edge\n        u, v = next(iter(edges))\n        \n        # Add both endpoints to the vertex cover\n        vertex_cover.add(u)\n        vertex_cover.add(v)\n        \n        # Remove all edges incident on either u or v\n        edges_to_remove = set()\n        for edge in edges:\n            if u in edge or v in edge:\n                edges_to_remove.add(edge)\n        \n        edges -= edges_to_remove\n    \n    return vertex_cover"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What is the primary difference between WebSockets and HTTP in terms of connection handling?",
+      "options": {
+        "A": "WebSockets use UDP while HTTP uses TCP",
+        "B": "WebSockets maintain a persistent connection while HTTP is stateless",
+        "C": "WebSockets can only transfer text data while HTTP can transfer binary data",
+        "D": "WebSockets require SSL/TLS encryption while HTTP doesn't"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using the Python profiler?",
+      "options": {
+        "A": "The function 'process_data' takes the most time",
+        "B": "The function 'calculate_sum' is called the most number of times",
+        "C": "The function 'multiply_values' has the highest cumulative time",
+        "D": "The function 'initialize_data' has the highest per call time"
+      },
+      "correct_answer": "C",
+      "code_example": "import cProfile\n\ndef initialize_data(size):\n    return [i for i in range(size)]\n\ndef calculate_sum(data):\n    return sum(data)\n\ndef multiply_values(data):\n    result = 1\n    for i in range(100):\n        # Intentionally inefficient to demonstrate profiling\n        for value in data:\n            result *= (value + 1) / (value + 2)\n    return result\n\ndef process_data(size):\n    data = initialize_data(size)\n    total = calculate_sum(data)\n    product = multiply_values(data)\n    return total, product\n\n# Run with profiler\ncProfile.run('process_data(1000)', sort='cumtime')"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using abstract base classes?",
+      "options": {
+        "A": "TypeError: Can't instantiate abstract class Shape with abstract method area",
+        "B": "Output: Circle area: 78.54",
+        "C": "NotImplementedError: Subclass must implement abstract method",
+        "D": "AttributeError: 'Circle' object has no attribute 'area'"
+      },
+      "correct_answer": "B",
+      "code_example": "from abc import ABC, abstractmethod\nimport math\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self):\n        pass\n        \n    def description(self):\n        return f\"{self.__class__.__name__} area: {self.area():.2f}\"\n\nclass Circle(Shape):\n    def __init__(self, radius):\n        self.radius = radius\n        \n    def area(self):\n        return math.pi * self.radius ** 2\n\ntry:\n    circle = Circle(5)\n    print(f\"Output: {circle.description()}\")\nexcept Exception as e:\n    print(type(e).__name__ + \": \" + str(e))"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following asyncio code?",
+      "options": {
+        "A": "Starting... Completed! Duration: approximately 6 seconds",
+        "B": "Starting... Completed! Duration: approximately 3 seconds",
+        "C": "Starting... Completed! Duration: approximately 2 seconds",
+        "D": "Starting... Completed! Duration: approximately 0 seconds"
+      },
+      "correct_answer": "C",
+      "code_example": "import asyncio\n\nasync def task1():\n    await asyncio.sleep(2)\n    return \"Task 1 result\"\n\nasync def task2():\n    await asyncio.sleep(2)\n    return \"Task 2 result\"\n\nasync def task3():\n    await asyncio.sleep(1)\n    return \"Task 3 result\"\n\nasync def main():\n    print(\"Starting...\")\n    results = await asyncio.gather(task1(), task2(), task3())\n    print(\"Completed! Duration: approximately 2 seconds\")\n    \n# In a real environment, you would run:\n# asyncio.run(main())"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Which statement about threading vs multiprocessing in Python is correct?",
+      "options": {
+        "A": "Threading is always faster than multiprocessing for CPU-bound tasks due to lower overhead",
+        "B": "Multiprocessing bypasses the GIL and can utilize multiple CPU cores for CPU-bound tasks",
+        "C": "Threading creates new Python interpreters while multiprocessing creates new threads",
+        "D": "Shared memory is easier to implement in multiprocessing than in threading"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following scikit-learn code?",
+      "options": {
+        "A": "Training accuracy: 0.813, Test accuracy: 0.80",
+        "B": "Training accuracy: 1.0, Test accuracy: 0.78",
+        "C": "Training accuracy: 0.95, Test accuracy: 0.70",
+        "D": "ValueError: X has 2 features, but RandomForestClassifier is expecting 4 features"
+      },
+      "correct_answer": "B",
+      "code_example": "from sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score\nimport numpy as np\n\n# Set random seed for reproducibility\nnp.random.seed(42)\n\n# Generate a synthetic classification dataset\nX, y = make_classification(\n    n_samples=100,\n    n_features=4,\n    n_informative=2,\n    n_redundant=0,\n    random_state=42\n)\n\n# Split into training and testing sets\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.3, random_state=42\n)\n\n# Create and train a RandomForestClassifier with parameters that will overfit\nrf = RandomForestClassifier(\n    n_estimators=100,\n    max_depth=None,\n    min_samples_split=2,\n    random_state=42\n)\nrf.fit(X_train, y_train)\n\n# Calculate accuracies\ntrain_accuracy = accuracy_score(y_train, rf.predict(X_train))\ntest_accuracy = accuracy_score(y_test, rf.predict(X_test))\n\nprint(f\"Training accuracy: {train_accuracy:.1f}, Test accuracy: {test_accuracy:.2f}\")"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a secure coding practice in Python?",
+      "options": {
+        "A": "Using parameterized queries with database libraries",
+        "B": "Implementing input validation for all user-supplied data",
+        "C": "Using eval() for parsing JSON data from external sources",
+        "D": "Setting the 'secure' and 'httponly' flags on sensitive cookies"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Cython code when comparing its execution time with pure Python?",
+      "options": {
+        "A": "The Cython version is approximately 2x faster",
+        "B": "The Cython version is approximately 10x faster",
+        "C": "The Cython version is approximately 100x faster",
+        "D": "The Cython and Python versions have similar performance"
+      },
+      "correct_answer": "B",
+      "code_example": "# Python version\ndef fibonacci_py(n):\n    if n <= 1:\n        return n\n    return fibonacci_py(n-1) + fibonacci_py(n-2)\n\n# Cython version (conceptual representation)\n\"\"\"\n# fibonacci.pyx\n\ndef fibonacci_cy(int n):\n    if n <= 1:\n        return n\n    return fibonacci_cy(n-1) + fibonacci_cy(n-2)\n\"\"\"\n\n# Assuming the Cython code is compiled and imported\n# Comparison code (conceptual)\n\"\"\"\nimport time\nfrom fibonacci import fibonacci_cy\n\nn = 30\n\nt1 = time.time()\nresult_py = fibonacci_py(n)\nt2 = time.time()\npy_time = t2 - t1\n\nt1 = time.time()\nresult_cy = fibonacci_cy(n)\nt2 = time.time()\ncy_time = t2 - t1\n\nspeedup = py_time / cy_time\nprint(f\"The Cython version is approximately {int(round(speedup))}x faster\")\n\"\"\""
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following segment tree implementation for a range sum query?",
+      "options": {
+        "A": "Sum in range [1, 3]: 9",
+        "B": "Sum in range [1, 3]: 16",
+        "C": "Sum in range [1, 3]: 22",
+        "D": "Sum in range [1, 3]: 30"
+      },
+      "correct_answer": "A",
+      "code_example": "class SegmentTree:\n    def __init__(self, arr):\n        self.n = len(arr)\n        # Size of segment tree will be 2*n - 1\n        self.tree = [0] * (2 * self.n)\n        \n        # Build the tree\n        # Insert leaf nodes in tree\n        for i in range(self.n):\n            self.tree[self.n + i] = arr[i]\n        \n        # Build the tree by calculating parents\n        for i in range(self.n - 1, 0, -1):\n            self.tree[i] = self.tree[i * 2] + self.tree[i * 2 + 1]\n    \n    def query(self, left, right):\n        # Range [left, right]\n        left += self.n\n        right += self.n\n        \n        sum_val = 0\n        \n        while left <= right:\n            if left % 2 == 1:  # If left is odd\n                sum_val += self.tree[left]\n                left += 1\n            if right % 2 == 0:  # If right is even\n                sum_val += self.tree[right]\n                right -= 1\n            left //= 2\n            right //= 2\n            \n        return sum_val\n\n# Initialize with array [2, 5, 1, 4, 9, 3]\nst = SegmentTree([2, 5, 1, 4, 9, 3])\n\n# Query for sum in range [1, 3] (0-indexed, so elements at indices 1, 2, 3)\nprint(f\"Sum in range [1, 3]: {st.query(1, 3)}\")"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What is the time complexity of Kruskal's algorithm for finding a minimum spanning tree when using a union-find data structure with path compression and union by rank?",
+      "options": {
+        "A": "O(V²)",
+        "B": "O(E log V)",
+        "C": "O(E log E)",
+        "D": "O(E + V log V)"
+      },
+      "correct_answer": "C",
+      "code_example": "class UnionFind:\n    def __init__(self, n):\n        self.parent = list(range(n))\n        self.rank = [0] * n\n    \n    def find(self, x):\n        if self.parent[x] != x:\n            self.parent[x] = self.find(self.parent[x])  # Path compression\n        return self.parent[x]\n    \n    def union(self, x, y):\n        root_x = self.find(x)\n        root_y = self.find(y)\n        \n        if root_x == root_y:\n            return False\n        \n        # Union by rank\n        if self.rank[root_x] < self.rank[root_y]:\n            self.parent[root_x] = root_y\n        elif self.rank[root_x] > self.rank[root_y]:\n            self.parent[root_y] = root_x\n        else:\n            self.parent[root_y] = root_x\n            self.rank[root_x] += 1\n            \n        return True\n\ndef kruskal_mst(n, edges):\n    \"\"\"Kruskal's algorithm for Minimum Spanning Tree.\n    \n    Args:\n        n: Number of vertices (0 to n-1)\n        edges: List of edges as tuples (u, v, weight)\n        \n    Returns:\n        Total weight of the MST and list of edges in the MST\n    \"\"\"\n    # Sort edges by weight\n    edges.sort(key=lambda x: x[2])  # O(E log E) time complexity for sorting\n    \n    uf = UnionFind(n)\n    mst_weight = 0\n    mst_edges = []\n    \n    for u, v, weight in edges:  # O(E) iterations\n        if uf.union(u, v):  # O(log V) amortized time per operation with path compression and union by rank\n            mst_weight += weight\n            mst_edges.append((u, v, weight))\n            \n            # If we've added V-1 edges, we're done\n            if len(mst_edges) == n - 1:\n                break\n                \n    return mst_weight, mst_edges"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a characteristic of Infrastructure as Code (IaC)?",
+      "options": {
+        "A": "It enables version control of infrastructure configurations",
+        "B": "It requires manual approval for each resource creation in production",
+        "C": "It allows for consistent, repeatable deployments across environments",
+        "D": "It can automate testing of infrastructure configurations before deployment"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "In Kubernetes, what is the relationship between Pods and Deployments?",
+      "options": {
+        "A": "Pods manage Deployments, ensuring they maintain the desired state",
+        "B": "Deployments create and manage ReplicaSets, which create and manage Pods",
+        "C": "Pods and Deployments are interchangeable terms for the same Kubernetes object",
+        "D": "Deployments are responsible for pod-to-pod networking and service discovery"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following GraphQL query execution in Python?",
+      "options": {
+        "A": "{'data': {'user': {'id': '1', 'name': 'John Doe'}}}",
+        "B": "{'data': {'user': {'id': '1', 'name': 'John Doe', 'email': 'john@example.com'}}}",
+        "C": "{'data': None, 'errors': [{'message': 'Cannot query field \"email\" on type \"User\"'}]}",
+        "D": "SyntaxError: Invalid field \"email\" requested"
+      },
+      "correct_answer": "C",
+      "code_example": "import graphene\n\nclass User(graphene.ObjectType):\n    id = graphene.ID()\n    name = graphene.String()\n\nclass Query(graphene.ObjectType):\n    user = graphene.Field(User, id=graphene.ID(required=True))\n    \n    def resolve_user(self, info, id):\n        # Mock database lookup\n        if id == '1':\n            return User(id='1', name='John Doe')\n        return None\n\nschema = graphene.Schema(query=Query)\n\n# This query is requesting a field (email) that doesn't exist in our schema\nquery_string = '''\n{\n  user(id: \"1\") {\n    id\n    name\n    email\n  }\n}\n'''\n\nresult = schema.execute(query_string)\nprint(result.formatted)"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following data visualization code using matplotlib and seaborn?",
+      "options": {
+        "A": "A bar plot with years on the x-axis and temperature on the y-axis",
+        "B": "A line plot with years on the x-axis and temperature on the y-axis, with a regression line",
+        "C": "A scatter plot with years on the x-axis and temperature on the y-axis, with a regression line",
+        "D": "A heatmap showing the correlation between year and temperature"
+      },
+      "correct_answer": "C",
+      "code_example": "import matplotlib.pyplot as plt\nimport seaborn as sns\nimport pandas as pd\nimport numpy as np\n\n# Set random seed for reproducibility\nnp.random.seed(42)\n\n# Generate synthetic temperature data\nyears = np.arange(1900, 2021)\nbase_temp = 14.0  # Base temperature in Celsius\n\n# Adding a warming trend plus random variations\nrandom_variations = np.random.normal(0, 0.4, len(years))  # Random annual variations\nwarming_trend = 0.01 * (years - 1900)  # 0.01°C increase per year since 1900\n\ntemperatures = base_temp + warming_trend + random_variations\n\n# Create a DataFrame\ndf = pd.DataFrame({\n    'Year': years,\n    'Temperature': temperatures\n})\n\n# Set the aesthetic style\nsns.set(style=\"whitegrid\")\n\n# Create the plot\nplt.figure(figsize=(10, 6))\nsns.regplot(\n    x='Year',\n    y='Temperature',\n    data=df,\n    scatter_kws={'alpha': 0.6},\n    line_kws={'color': 'red'}\n)\n\nplt.title('Global Temperature Trend (Synthetic Data)', fontsize=16)\nplt.xlabel('Year', fontsize=14)\nplt.ylabel('Temperature (°C)', fontsize=14)\nplt.tight_layout()\n\n# In a real environment, you would show or save the plot:\n# plt.savefig('temperature_trend.png', dpi=300)\n# plt.show()"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing tree traversals?",
+      "options": {
+        "A": "In-order: 4 2 5 1 6 3 7, Pre-order: 1 2 4 5 3 6 7, Post-order: 4 5 2 6 7 3 1",
+        "B": "In-order: 4 2 5 1 6 3 7, Pre-order: 1 2 4 5 3 6 7, Post-order: 4 5 2 6 7 1 3",
+        "C": "In-order: 4 5 2 1 6 7 3, Pre-order: 1 2 4 5 3 6 7, Post-order: 5 4 2 7 6 3 1",
+        "D": "In-order: 4 2 5 1 6 3 7, Pre-order: 4 2 5 1 6 3 7, Post-order: 4 5 2 6 7 3 1"
+      },
+      "correct_answer": "A",
+      "code_example": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef in_order_traversal(root):\n    result = []\n    \n    def traverse(node):\n        if node:\n            traverse(node.left)\n            result.append(node.val)\n            traverse(node.right)\n    \n    traverse(root)\n    return result\n\ndef pre_order_traversal(root):\n    result = []\n    \n    def traverse(node):\n        if node:\n            result.append(node.val)\n            traverse(node.left)\n            traverse(node.right)\n    \n    traverse(root)\n    return result\n\ndef post_order_traversal(root):\n    result = []\n    \n    def traverse(node):\n        if node:\n            traverse(node.left)\n            traverse(node.right)\n            result.append(node.val)\n    \n    traverse(root)\n    return result\n\n# Create the following binary tree\n#       1\n#      / \\\n#     2   3\n#    / \\ / \\\n#   4  5 6  7\n\nroot = TreeNode(1)\nroot.left = TreeNode(2)\nroot.right = TreeNode(3)\nroot.left.left = TreeNode(4)\nroot.left.right = TreeNode(5)\nroot.right.left = TreeNode(6)\nroot.right.right = TreeNode(7)\n\n# Perform traversals\nin_order = in_order_traversal(root)\npre_order = pre_order_traversal(root)\npost_order = post_order_traversal(root)\n\nprint(f\"In-order: {' '.join(map(str, in_order))}, \"\n      f\"Pre-order: {' '.join(map(str, pre_order))}, \"\n      f\"Post-order: {' '.join(map(str, post_order))}\")"
+    }
+  ]
+}
