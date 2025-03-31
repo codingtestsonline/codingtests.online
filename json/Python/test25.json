@@ -1,0 +1,614 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "IndexError: list index out of range",
+        "B": "ValueError: list.remove(x): x not in list",
+        "C": "TypeError: list indices must be integers or slices, not str",
+        "D": "None of the above"
+      },
+      "correct_answer": "A",
+      "code_example": "my_list = [1, 2, 3]\nprint(my_list[3])"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "How would you convert the decimal number 42 to its binary representation in Python?",
+      "options": {
+        "A": "decimal.to_binary(42)",
+        "B": "bin(42)",
+        "C": "int('42', 2)",
+        "D": "format(42, 'binary')"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5, 6]",
+        "B": "[1, 2, 3, 6, 4, 5]",
+        "C": "[1, 2, 3, 6]",
+        "D": "[1, 2, 3, 4, 5]"
+      },
+      "correct_answer": "B",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nnumbers.insert(3, 6)\nprint(numbers)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is the most efficient way to reverse a string in Python?",
+      "options": {
+        "A": "string[::-1]",
+        "B": "string.reverse()",
+        "C": "reversed(string)",
+        "D": "''.join(list(string).reverse())"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "[2, 3, 5, 7]",
+        "B": "[2, 3, 5, 7, 11]",
+        "C": "[2, 3, 5, 7, 11, 13]",
+        "D": "[3, 5, 7, 11, 13]"
+      },
+      "correct_answer": "C",
+      "code_example": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\nprimes = [n for n in range(2, 15) if is_prime(n)]\nprint(primes)"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which file mode would you use to append binary data to an existing file?",
+      "options": {
+        "A": "'a'",
+        "B": "'ab'",
+        "C": "'w+'",
+        "D": "'rb'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "0 a\n1 b\n2 c",
+        "B": "1 a\n2 b\n3 c",
+        "C": "a 0\nb 1\nc 2",
+        "D": "a\nb\nc"
+      },
+      "correct_answer": "A",
+      "code_example": "for i, letter in enumerate(['a', 'b', 'c']):\n    print(i, letter)"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the main benefit of using a context manager with the 'with' statement when working with files?",
+      "options": {
+        "A": "It makes the code run faster",
+        "B": "It automatically closes the file even if an exception occurs",
+        "C": "It encrypts the file content",
+        "D": "It allows multiple processes to read the file simultaneously"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "10 5",
+        "B": "5 5",
+        "C": "10 10",
+        "D": "5 10"
+      },
+      "correct_answer": "D",
+      "code_example": "x = 5\n\ndef modify_variable():\n    global x\n    y = 10\n    print(x, y)\n\nmodify_variable()"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a primitive type in Python?",
+      "options": {
+        "A": "int",
+        "B": "float",
+        "C": "array",
+        "D": "bool"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "6",
+        "B": "24",
+        "C": "120",
+        "D": "720"
+      },
+      "correct_answer": "C",
+      "code_example": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1)\n\nprint(factorial(5))"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello World",
+        "B": "hello world",
+        "C": "HELLO WORLD",
+        "D": "Hello, World!"
+      },
+      "correct_answer": "B",
+      "code_example": "def greet(name='world'):\n    return f'hello {name}'\n\nprint(greet())"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following FizzBuzz implementation for the number 15?",
+      "options": {
+        "A": "15",
+        "B": "Fizz",
+        "C": "Buzz",
+        "D": "FizzBuzz"
+      },
+      "correct_answer": "D",
+      "code_example": "def fizzbuzz(n):\n    if n % 3 == 0 and n % 5 == 0:\n        return 'FizzBuzz'\n    elif n % 3 == 0:\n        return 'Fizz'\n    elif n % 5 == 0:\n        return 'Buzz'\n    else:\n        return str(n)\n\nprint(fizzbuzz(15))"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "8.0",
+        "B": "8",
+        "C": "8.25",
+        "D": "8.5"
+      },
+      "correct_answer": "C",
+      "code_example": "numbers = [5, 9, 12, 7]\naverage = sum(numbers) / len(numbers)\nprint(average)"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "4",
+        "B": "6",
+        "C": "12",
+        "D": "24"
+      },
+      "correct_answer": "C",
+      "code_example": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\ndef lcm(a, b):\n    return (a * b) // gcd(a, b)\n\nprint(lcm(4, 6))"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Python",
+        "B": "ytho",
+        "C": "Pyth",
+        "D": "thon"
+      },
+      "correct_answer": "B",
+      "code_example": "text = \"Python\"\nprint(text[1:5])"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which of the following statements about first-class functions in Python is TRUE?",
+      "options": {
+        "A": "They can only be defined at the module level",
+        "B": "They cannot be passed as arguments to other functions",
+        "C": "They can be stored in data structures like lists",
+        "D": "They must always have a return statement"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "TypeError",
+        "D": "None"
+      },
+      "correct_answer": "B",
+      "code_example": "a = (1, 2, 3)\nb = (1, 2, 3)\n\nc = [1, 2, 3]\nd = [1, 2, 3]\n\nprint(a is b and c is d)"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is a key benefit of lazy evaluation in Python?",
+      "options": {
+        "A": "It always reduces memory usage",
+        "B": "It can avoid unnecessary computations",
+        "C": "It makes debugging easier",
+        "D": "It always speeds up execution"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What would be the correct way to create a simple GET endpoint using Flask that returns a JSON response?",
+      "options": {
+        "A": "@app.endpoint('/data')\ndef get_data():\n    return jsonify({'key': 'value'})",
+        "B": "@app.route('/data')\ndef get_data():\n    return {'key': 'value'}",
+        "C": "@app.route('/data', methods=['GET'])\ndef get_data():\n    return jsonify({'key': 'value'})",
+        "D": "@app.get('/data')\ndef get_data():\n    return json({'key': 'value'})"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "In a Flask application, which decorator is used to define a route and the HTTP methods it responds to?",
+      "options": {
+        "A": "@app.path()",
+        "B": "@app.endpoint()",
+        "C": "@app.route()",
+        "D": "@app.view()"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "{'auth': 'Bearer token123'}",
+        "B": "{'Authorization': 'Bearer token123'}",
+        "C": "{'auth': 'Basic token123'}",
+        "D": "{'Authorization': 'Basic token123'}"
+      },
+      "correct_answer": "B",
+      "code_example": "def create_auth_header(token):\n    return {'Authorization': f'Bearer {token}'}\n\nprint(create_auth_header('token123'))"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "In SQLAlchemy ORM, which of the following correctly defines a one-to-many relationship between User and Post models?",
+      "options": {
+        "A": "class User(Base):\n    posts = relationship('Post', backref='user')",
+        "B": "class User(Base):\n    posts = ForeignKey('Post.id')",
+        "C": "class Post(Base):\n    user = ForeignKey('user.id')",
+        "D": "class Post(Base):\n    user_id = Column(Integer, ForeignKey('users.id'))\n    user = relationship('User', back_populates='posts')"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "50",
+        "B": "40",
+        "C": "30",
+        "D": "TypeError"
+      },
+      "correct_answer": "D",
+      "code_example": "import array\n\narr = array.array('i', [10, 20, 30])\nlst = [10, 20, 30]\n\nprint(arr + lst)"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "[1, 4, 9]",
+        "B": "[1, 4, 9, 16, 25]",
+        "C": "[1, 4, 9, 16, 25, 36]",
+        "D": "Function with no return value"
+      },
+      "correct_answer": "B",
+      "code_example": "def create_function(n):\n    return lambda x: x**n\n\nsquare = create_function(2)\nnumbers = [1, 2, 3, 4, 5]\nsquared = [square(num) for num in numbers]\nprint(squared)"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "['John Doe', 'Jane Smith']",
+        "B": "['John', 'Jane']",
+        "C": "['Doe', 'Smith']",
+        "D": "['John', 'Doe', 'Jane', 'Smith']"
+      },
+      "correct_answer": "B",
+      "code_example": "import re\n\ntext = \"John Doe and Jane Smith\"\npattern = r\"(\\w+)\\s\\w+\"\n\nmatches = re.findall(pattern, text)\nprint(matches)"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Circle with radius: 5",
+        "B": "Creating a circle with radius: 5",
+        "C": "Area of circle: 78.5",
+        "D": "Creating a circle with radius: 5\nCircle with radius: 5"
+      },
+      "correct_answer": "D",
+      "code_example": "class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n        print(f\"Creating a circle with radius: {radius}\")\n    \n    def __str__(self):\n        return f\"Circle with radius: {self.radius}\"\n\nc = Circle(5)\nprint(c)"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Counter({'a': 3, 'b': 2, 'c': 1})",
+        "B": "{'a': 3, 'b': 2, 'c': 1}",
+        "C": "OrderedDict([('a', 3), ('b', 2), ('c', 1)])",
+        "D": "defaultdict(<class 'int'>, {'a': 3, 'b': 2, 'c': 1})"
+      },
+      "correct_answer": "A",
+      "code_example": "from collections import Counter\n\ntext = \"aabac\"\ncounter = Counter(text)\nprint(counter)"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "Which normal form requires that all non-key attributes be fully functionally dependent on the primary key?",
+      "options": {
+        "A": "First Normal Form (1NF)",
+        "B": "Second Normal Form (2NF)",
+        "C": "Third Normal Form (3NF)",
+        "D": "Boyce-Codd Normal Form (BCNF)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "20",
+        "B": "5",
+        "C": "TypeError",
+        "D": "None"
+      },
+      "correct_answer": "D",
+      "code_example": "def squares():\n    for i in range(5):\n        yield i**2\n\ngen = squares()\nlist_comp = [x**2 for x in range(5)]\n\nprint(next(list_comp, None))"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "15",
+        "B": "9",
+        "C": "6",
+        "D": "3"
+      },
+      "correct_answer": "C",
+      "code_example": "import functools\n\n@functools.lru_cache(maxsize=None)\ndef fibonacci(n):\n    if n < 2:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\nprint(fibonacci(3))"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following breadth-first search implementation?",
+      "options": {
+        "A": "['A', 'B', 'C', 'D', 'E', 'F']",
+        "B": "['A', 'B', 'C', 'D', 'F', 'E']",
+        "C": "['A', 'B', 'C', 'E', 'D', 'F']",
+        "D": "['A', 'C', 'B', 'F', 'D', 'E']"
+      },
+      "correct_answer": "A",
+      "code_example": "from collections import deque\n\ndef bfs(graph, start):\n    visited = []\n    queue = deque([start])\n    \n    while queue:\n        vertex = queue.popleft()\n        if vertex not in visited:\n            visited.append(vertex)\n            neighbors = graph[vertex]\n            for neighbor in neighbors:\n                if neighbor not in visited:\n                    queue.append(neighbor)\n    \n    return visited\n\ngraph = {\n    'A': ['B', 'C'],\n    'B': ['D', 'E'],\n    'C': ['F'],\n    'D': [],\n    'E': [],\n    'F': []\n}\n\nprint(bfs(graph, 'A'))"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "In a FastAPI application, what will be the output of the following code when an HTTP request is made to '/items/42'?",
+      "code_example": "from fastapi import FastAPI, Path\nfrom typing import Optional\nimport asyncio\n\napp = FastAPI()\n\n@app.get('/items/{item_id}')\nasync def read_item(item_id: int = Path(...), q: Optional[str] = None):\n    await asyncio.sleep(1)  # Simulate delay\n    if q:\n        return {'item_id': item_id, 'q': q}\n    return {'item_id': item_id}",
+      "options": {
+        "A": "{'item_id': '42'}",
+        "B": "{'item_id': 42}",
+        "C": "A SyntaxError due to missing required query parameter",
+        "D": "An error because asyncio.sleep() cannot be used in FastAPI routes"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Consider the following Python code using Pandas for data manipulation. What will be the output?",
+      "code_example": "import pandas as pd\nimport numpy as np\n\ndf = pd.DataFrame({\n    'A': [1, 2, np.nan, 4],\n    'B': [5, np.nan, np.nan, 8],\n    'C': [9, 10, 11, 12]\n})\n\nresult = df.dropna(thresh=2)\nprint(result.shape[0])",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What is the output of the following code demonstrating Python's Method Resolution Order (MRO) with multiple inheritance?",
+      "code_example": "class A:\n    def process(self):\n        return 'A'\n\nclass B(A):\n    def process(self):\n        return 'B' + super().process()\n\nclass C(A):\n    def process(self):\n        return 'C' + super().process()\n\nclass D(B, C):\n    def process(self):\n        return 'D' + super().process()\n\nprint(D().process())\nprint(D.__mro__[2].__name__)",
+      "options": {
+        "A": "DBCA and C",
+        "B": "DBCA and B",
+        "C": "DBA and B",
+        "D": "DBC and C"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "In the context of distributed caching, which statement about Redis Cluster is FALSE?",
+      "options": {
+        "A": "Redis Cluster uses a gossip protocol for node communication",
+        "B": "Redis Cluster automatically shards data across multiple nodes",
+        "C": "Redis Cluster provides strong consistency guarantees for all operations",
+        "D": "Redis Cluster can continue operating when some nodes fail"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of this code implementing a memoization technique for calculating Fibonacci numbers?",
+      "code_example": "def fibonacci(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 2:\n        return 1\n    memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)\n    return memo[n]\n\nprint(fibonacci(5))\nprint(fibonacci(6))",
+      "options": {
+        "A": "5 and 8",
+        "B": "5 and 13",
+        "C": "8 and 13",
+        "D": "8 and 21"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "In the following implementation of a segment tree for range sum queries, what is the output of the code?",
+      "code_example": "class SegmentTree:\n    def __init__(self, arr):\n        self.n = len(arr)\n        self.tree = [0] * (4 * self.n)\n        self._build(arr, 1, 0, self.n - 1)\n    \n    def _build(self, arr, node, start, end):\n        if start == end:\n            self.tree[node] = arr[start]\n            return\n        mid = (start + end) // 2\n        self._build(arr, 2 * node, start, mid)\n        self._build(arr, 2 * node + 1, mid + 1, end)\n        self.tree[node] = self.tree[2 * node] + self.tree[2 * node + 1]\n    \n    def query(self, node, start, end, left, right):\n        if left > end or right < start:\n            return 0\n        if left <= start and right >= end:\n            return self.tree[node]\n        mid = (start + end) // 2\n        q1 = self.query(2 * node, start, mid, left, right)\n        q2 = self.query(2 * node + 1, mid + 1, end, left, right)\n        return q1 + q2\n\narr = [1, 3, 5, 7, 9, 11]\nst = SegmentTree(arr)\nprint(st.query(1, 0, st.n - 1, 1, 3))",
+      "options": {
+        "A": "8",
+        "B": "15",
+        "C": "16",
+        "D": "36"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the time complexity of the following implementation of the 0/1 Knapsack problem using dynamic programming?",
+      "code_example": "def knapsack(weights, values, capacity):\n    n = len(weights)\n    dp = [[0 for _ in range(capacity + 1)] for _ in range(n + 1)]\n    \n    for i in range(1, n + 1):\n        for w in range(1, capacity + 1):\n            if weights[i-1] <= w:\n                dp[i][w] = max(values[i-1] + dp[i-1][w - weights[i-1]], dp[i-1][w])\n            else:\n                dp[i][w] = dp[i-1][w]\n    \n    return dp[n][capacity]",
+      "options": {
+        "A": "O(n)",
+        "B": "O(n * capacity)",
+        "C": "O(n + capacity)",
+        "D": "O(2^n)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "Which statement about Docker networking is INCORRECT when implementing a microservices architecture?",
+      "options": {
+        "A": "The 'host' network mode allows containers to share the host's network namespace, bypassing network isolation",
+        "B": "User-defined bridge networks enable container-to-container communication using container names as DNS",
+        "C": "Docker Swarm's overlay networks can span multiple Docker hosts for cross-node communication",
+        "D": "By default, containers on the same bridge network cannot communicate with each other without port publishing"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What is the output of this Python code that demonstrates encryption using the Fernet symmetric encryption?",
+      "code_example": "from cryptography.fernet import Fernet\nimport base64\n\ndef generate_key():\n    return Fernet.generate_key()\n\ndef encrypt_message(message, key):\n    f = Fernet(key)\n    return f.encrypt(message.encode())\n\ndef decrypt_message(encrypted_message, key):\n    f = Fernet(key)\n    return f.decrypt(encrypted_message).decode()\n\n# Test with fixed key for reproducibility\nkey = b'9cJnZ8GlSNOg9S13QXV_kY_C7sTF5eQlnDv-fRlBXHE='\nencrypted = encrypt_message(\"Python\", key)\n# The line below is an example, actual value will vary\ndecrypted = decrypt_message(encrypted, key)\n\nprint(len(encrypted))\nprint(decrypted)",
+      "options": {
+        "A": "64 and 'Python'",
+        "B": "76 and 'Python'",
+        "C": "100 and 'Python'",
+        "D": "128 and 'Python'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "In a service discovery implementation for microservices, which mechanism is NOT typically used for health checking?",
+      "options": {
+        "A": "TCP socket checks",
+        "B": "Custom HTTP endpoints",
+        "C": "Cross-origin iframe polling",
+        "D": "gRPC health checking protocol"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What is the output of the following code that attempts to find the Longest Common Subsequence (LCS) of two strings?",
+      "code_example": "def lcs_length(X, Y):\n    m, n = len(X), len(Y)\n    L = [[0 for _ in range(n+1)] for _ in range(m+1)]\n    \n    for i in range(m+1):\n        for j in range(n+1):\n            if i == 0 or j == 0:\n                L[i][j] = 0\n            elif X[i-1] == Y[j-1]:\n                L[i][j] = L[i-1][j-1] + 1\n            else:\n                L[i][j] = max(L[i-1][j], L[i][j-1])\n    \n    return L[m][n]\n\ndef lcs(X, Y):\n    m, n = len(X), len(Y)\n    L = [[0 for _ in range(n+1)] for _ in range(m+1)]\n    \n    for i in range(m+1):\n        for j in range(n+1):\n            if i == 0 or j == 0:\n                L[i][j] = 0\n            elif X[i-1] == Y[j-1]:\n                L[i][j] = L[i-1][j-1] + 1\n            else:\n                L[i][j] = max(L[i-1][j], L[i][j-1])\n    \n    # Backtrack to find the LCS\n    lcs_str = []\n    i, j = m, n\n    while i > 0 and j > 0:\n        if X[i-1] == Y[j-1]:\n            lcs_str.append(X[i-1])\n            i -= 1\n            j -= 1\n        elif L[i-1][j] > L[i][j-1]:\n            i -= 1\n        else:\n            j -= 1\n    \n    return ''.join(reversed(lcs_str))\n\nX = \"AGGTAB\"\nY = \"GXTXAYB\"\nprint(lcs_length(X, Y))\nprint(lcs(X, Y))",
+      "options": {
+        "A": "3 and 'GTA'",
+        "B": "4 and 'GTAB'",
+        "C": "3 and 'GAB'",
+        "D": "4 and 'GTAB'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What is the output of the following Python code with Cython extension?",
+      "code_example": "# This represents a Python script that would use a Cython extension\n# The actual Cython code would be in a .pyx file and compiled\n\n'''\nAssuming this Cython code in vector_ops.pyx:\n\ncdef int dot_product(int[:] a, int[:] b, int size):\n    cdef int result = 0\n    cdef int i\n    for i in range(size):\n        result += a[i] * b[i]\n    return result\n\ndef py_dot_product(a, b):\n    if len(a) != len(b):\n        raise ValueError(\"Vectors must be of the same length\")\n    return dot_product(a, b, len(a))\n'''\n\n# Python code using the extension\nimport numpy as np\n\n# Mock the Cython function for this test\ndef py_dot_product(a, b):\n    if len(a) != len(b):\n        raise ValueError(\"Vectors must be of the same length\")\n    result = 0\n    for i in range(len(a)):\n        result += a[i] * b[i]\n    return result\n\na = np.array([1, 2, 3, 4], dtype=np.int32)\nb = np.array([5, 6, 7, 8], dtype=np.int32)\nc = np.array([9, 10], dtype=np.int32)\n\ntry:\n    print(py_dot_product(a, b))\n    print(py_dot_product(a, c))\nexcept ValueError as e:\n    print(f\"Error: {str(e)}\")",
+      "options": {
+        "A": "70 and Error: Vectors must be of the same length",
+        "B": "Error: Vectors must be of the same length",
+        "C": "70 and 19",
+        "D": "70"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing a simple MongoDB operation using PyMongo?",
+      "code_example": "# This is a mock implementation to simulate MongoDB operations\nclass MockCollection:\n    def __init__(self):\n        self.documents = []\n    \n    def insert_one(self, document):\n        self.documents.append(document)\n        return True\n    \n    def find(self, query=None):\n        if query is None:\n            return self.documents\n        \n        results = []\n        for doc in self.documents:\n            match = True\n            for key, value in query.items():\n                if key not in doc or doc[key] != value:\n                    match = False\n                    break\n            if match:\n                results.append(doc)\n        return results\n    \n    def count_documents(self, query):\n        return len(self.find(query))\n\n# Simulate PyMongo client\nclass MockMongoClient:\n    def __init__(self):\n        self.db = MockDB()\n\nclass MockDB:\n    def __init__(self):\n        self.users = MockCollection()\n\n# Simulate MongoDB operations\nclient = MockMongoClient()\ndb = client.db\n\n# Insert sample documents\ndb.users.insert_one({\"name\": \"Alice\", \"age\": 30, \"city\": \"New York\"})\ndb.users.insert_one({\"name\": \"Bob\", \"age\": 25, \"city\": \"Boston\"})\ndb.users.insert_one({\"name\": \"Charlie\", \"age\": 35, \"city\": \"New York\"})\n\n# Perform queries\nresult1 = db.users.count_documents({\"city\": \"New York\"})\nresult2 = len(db.users.find({\"age\": {\"$gt\": 30}}))\n\n# In a real MongoDB query, we would use: {\"age\": {\"$gt\": 30}}\n# For our mock, we'll simplify by direct comparison\nresult2 = len([doc for doc in db.users.find() if doc[\"age\"] > 30])\n\nprint(f\"{result1}, {result2}\")",
+      "options": {
+        "A": "1, 1",
+        "B": "2, 0",
+        "C": "2, 1",
+        "D": "3, 2"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "In Python debugging, which statement is FALSE about using the pdb module?",
+      "code_example": "import pdb\n\ndef complex_function(x, y):\n    result = x * y\n    pdb.set_trace()  # Breakpoint\n    for i in range(result):\n        if i % 3 == 0:\n            result -= 1\n    return result\n\nprint(complex_function(3, 4))",
+      "options": {
+        "A": "The command 'n' (next) executes the current line and stops at the next line in the current function",
+        "B": "The command 'c' (continue) continues execution until the next breakpoint is encountered",
+        "C": "The command 'l' (list) displays the source code around the current line",
+        "D": "The command 's' (step) automatically skips over function calls to focus only on the current scope"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "Which approach violates the Dependency Inversion Principle (DIP) of SOLID in the following code examples?",
+      "code_example": "# Example A\nclass FileLogger:\n    def log(self, message):\n        with open('app.log', 'a') as f:\n            f.write(message + '\\n')\n\nclass UserService:\n    def __init__(self):\n        self.logger = FileLogger()\n    \n    def create_user(self, user_data):\n        # Create user logic\n        self.logger.log(f\"User created: {user_data}\")\n\n# Example B\nfrom abc import ABC, abstractmethod\n\nclass Logger(ABC):\n    @abstractmethod\n    def log(self, message):\n        pass\n\nclass FileLogger(Logger):\n    def log(self, message):\n        with open('app.log', 'a') as f:\n            f.write(message + '\\n')\n\nclass UserService:\n    def __init__(self, logger: Logger):\n        self.logger = logger\n    \n    def create_user(self, user_data):\n        # Create user logic\n        self.logger.log(f\"User created: {user_data}\")",
+      "options": {
+        "A": "Both examples violate DIP",
+        "B": "Only Example A violates DIP",
+        "C": "Only Example B violates DIP",
+        "D": "Neither example violates DIP"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What is the maximum flow value in the following network flow implementation using the Ford-Fulkerson algorithm?",
+      "code_example": "class Graph:\n    def __init__(self, graph):\n        self.graph = graph  # Residual graph\n        self.ROW = len(graph)\n    \n    def bfs(self, s, t, parent):\n        visited = [False] * self.ROW\n        queue = []\n        queue.append(s)\n        visited[s] = True\n        \n        while queue:\n            u = queue.pop(0)\n            for ind, val in enumerate(self.graph[u]):\n                if visited[ind] == False and val > 0:\n                    queue.append(ind)\n                    visited[ind] = True\n                    parent[ind] = u\n        \n        return visited[t]\n    \n    def ford_fulkerson(self, source, sink):\n        parent = [-1] * self.ROW\n        max_flow = 0\n        \n        while self.bfs(source, sink, parent):\n            path_flow = float(\"Inf\")\n            s = sink\n            while s != source:\n                path_flow = min(path_flow, self.graph[parent[s]][s])\n                s = parent[s]\n            \n            max_flow += path_flow\n            \n            v = sink\n            while v != source:\n                u = parent[v]\n                self.graph[u][v] -= path_flow\n                self.graph[v][u] += path_flow\n                v = parent[v]\n        \n        return max_flow\n\n# Create a graph with the following structure:\n# 0 -> 1 (capacity 16)\n# 0 -> 2 (capacity 13)\n# 1 -> 2 (capacity 10)\n# 1 -> 3 (capacity 12)\n# 2 -> 1 (capacity 4)\n# 2 -> 4 (capacity 14)\n# 3 -> 2 (capacity 9)\n# 3 -> 5 (capacity 20)\n# 4 -> 3 (capacity 7)\n# 4 -> 5 (capacity 4)\n\ngraph = [[0, 16, 13, 0, 0, 0],\n         [0, 0, 10, 12, 0, 0],\n         [0, 4, 0, 0, 14, 0],\n         [0, 0, 9, 0, 0, 20],\n         [0, 0, 0, 7, 0, 4],\n         [0, 0, 0, 0, 0, 0]]\n\ng = Graph(graph)\nsource, sink = 0, 5\nprint(g.ford_fulkerson(source, sink))",
+      "options": {
+        "A": "19",
+        "B": "23",
+        "C": "27",
+        "D": "30"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
