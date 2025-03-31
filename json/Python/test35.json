@@ -1,0 +1,611 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is the output of the following code using multi-line strings?",
+      "options": {
+        "A": "Hello\nWorld",
+        "B": "Hello\\nWorld",
+        "C": "Hello World",
+        "D": "HelloWorld"
+      },
+      "correct_answer": "A",
+      "code_example": "text = \"\"\"Hello\nWorld\"\"\"\nprint(text)"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the output of this string slicing operation?",
+      "options": {
+        "A": "def",
+        "B": "cde",
+        "C": "cd",
+        "D": "bc"
+      },
+      "correct_answer": "B",
+      "code_example": "word = \"abcdefg\"\nprint(word[2:5])"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be printed when the following code is executed?",
+      "options": {
+        "A": "10",
+        "B": "5",
+        "C": "NameError: name 'x' is not defined",
+        "D": "SyntaxError"
+      },
+      "correct_answer": "C",
+      "code_example": "def example_function():\n    x = 5\n    print(x)\n\nexample_function()\nprint(x)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a primitive type in Python?",
+      "options": {
+        "A": "int",
+        "B": "list",
+        "C": "str",
+        "D": "bool"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the time complexity of binary search on a sorted array?",
+      "options": {
+        "A": "O(n)",
+        "B": "O(n log n)",
+        "C": "O(log n)",
+        "D": "O(1)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What is the output of this code that checks for prime numbers?",
+      "options": {
+        "A": "[2, 3, 5, 7, 11, 13, 17, 19]",
+        "B": "[2, 3, 5, 7, 11, 13, 17, 19, 23, 29]",
+        "C": "[2, 3, 5, 7, 11, 13, 17]",
+        "D": "[3, 5, 7, 11, 13, 17, 19]"
+      },
+      "correct_answer": "A",
+      "code_example": "def is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nprimes = [n for n in range(2, 20) if is_prime(n)]\nprint(primes)"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of this string formatting example?",
+      "options": {
+        "A": "Alice is 30 years old.",
+        "B": "Alice is %d years old.",
+        "C": "Alice is years old.",
+        "D": "NameError: name 'Alice' is not defined"
+      },
+      "correct_answer": "A",
+      "code_example": "name = \"Alice\"\nage = 30\nprint(f\"{name} is {age} years old.\")"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the output of this linear search implementation?",
+      "options": {
+        "A": "Found at index 0",
+        "B": "Found at index 2",
+        "C": "Found at index 3",
+        "D": "Element not found"
+      },
+      "correct_answer": "B",
+      "code_example": "def linear_search(arr, target):\n    for i in range(len(arr)):\n        if arr[i] == target:\n            return f\"Found at index {i}\"\n    return \"Element not found\"\n\nnumbers = [10, 24, 42, 55, 67]\nresult = linear_search(numbers, 42)\nprint(result)"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the greatest common divisor (GCD) of 48 and 18 using the following function?",
+      "options": {
+        "A": "6",
+        "B": "12",
+        "C": "3",
+        "D": "9"
+      },
+      "correct_answer": "A",
+      "code_example": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\nresult = gcd(48, 18)\nprint(result)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will this palindrome checking function return for the input 'radar'?",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "None",
+        "D": "'radar' is a palindrome"
+      },
+      "correct_answer": "B",
+      "code_example": "def is_palindrome(text):\n    return text == text[::-1]\n\nresult = is_palindrome('radar')\nprint(result)"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of this code using conditional expressions?",
+      "options": {
+        "A": "x is positive",
+        "B": "x is zero",
+        "C": "x is negative",
+        "D": "SyntaxError"
+      },
+      "correct_answer": "A",
+      "code_example": "x = 5\nresult = \"x is positive\" if x > 0 else \"x is zero\" if x == 0 else \"x is negative\"\nprint(result)"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "Which file mode is used to append binary data to a file?",
+      "options": {
+        "A": "'w'",
+        "B": "'ab'",
+        "C": "'a'",
+        "D": "'wb'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of this code using string methods?",
+      "options": {
+        "A": "['apple', 'banana', 'cherry']",
+        "B": "apple-banana-cherry",
+        "C": "apple,banana,cherry",
+        "D": "['apple,banana,cherry']"
+      },
+      "correct_answer": "B",
+      "code_example": "fruits = \"apple,banana,cherry\"\nsplit_fruits = fruits.split(',')\njoined_fruits = '-'.join(split_fruits)\nprint(joined_fruits)"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "Which exception will be raised by the following code?",
+      "options": {
+        "A": "TypeError",
+        "B": "ValueError",
+        "C": "IndexError",
+        "D": "KeyError"
+      },
+      "correct_answer": "C",
+      "code_example": "my_list = [1, 2, 3]\nprint(my_list[5])"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What is the correct way to create a custom exception class in Python?",
+      "options": {
+        "A": "class MyError(Error): pass",
+        "B": "class MyError extends Exception: pass",
+        "C": "class MyError(Exception): pass",
+        "D": "def MyError(Exception): pass"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What is the purpose of a docstring in Python?",
+      "options": {
+        "A": "To disable a block of code",
+        "B": "To create multi-line comments",
+        "C": "To document functions, classes, and modules",
+        "D": "To define function annotations"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What is the key difference between arrays and lists in Python?",
+      "options": {
+        "A": "Arrays can hold mixed data types, lists cannot",
+        "B": "Lists can hold mixed data types, arrays are homogeneous",
+        "C": "Lists are immutable, arrays are mutable",
+        "D": "Arrays are part of the standard library, lists are not"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which HTTP status code represents 'Not Found'?",
+      "options": {
+        "A": "200",
+        "B": "301",
+        "C": "404",
+        "D": "500"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of this code using named tuples?",
+      "options": {
+        "A": "Point(x=3, y=4)",
+        "B": "{'x': 3, 'y': 4}",
+        "C": "(3, 4)",
+        "D": "namedtuple('Point', ['x', 'y'])"
+      },
+      "correct_answer": "A",
+      "code_example": "from collections import namedtuple\n\nPoint = namedtuple('Point', ['x', 'y'])\np = Point(3, 4)\nprint(p)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What is the primary characteristic of a depth-first search (DFS) algorithm?",
+      "options": {
+        "A": "It explores all neighbors before moving to the next level",
+        "B": "It uses a queue data structure for traversal",
+        "C": "It explores as far as possible along a branch before backtracking",
+        "D": "It always finds the shortest path between two nodes"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of this code demonstrating the iterator protocol?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "1 2 3 4 5",
+        "C": "1\\n2\\n3\\n4\\n5",
+        "D": "StopIteration"
+      },
+      "correct_answer": "C",
+      "code_example": "class CountUp:\n    def __init__(self, start, end):\n        self.current = start\n        self.end = end\n        \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.current > self.end:\n            raise StopIteration\n        result = self.current\n        self.current += 1\n        return result\n\ncounter = CountUp(1, 5)\nfor num in counter:\n    print(num)"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "In Flask, which decorator is used to define a route?",
+      "options": {
+        "A": "@app.path",
+        "B": "@app.route",
+        "C": "@app.url",
+        "D": "@app.endpoint"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of this code using *args and **kwargs?",
+      "options": {
+        "A": "(1, 2, 3) {'name': 'Alice', 'age': 30}",
+        "B": "[1, 2, 3] {'name': 'Alice', 'age': 30}",
+        "C": "1 2 3 Alice 30",
+        "D": "TypeError: function takes exactly 1 argument (5 given)"
+      },
+      "correct_answer": "A",
+      "code_example": "def show_args_kwargs(*args, **kwargs):\n    return args, kwargs\n\nresult = show_args_kwargs(1, 2, 3, name='Alice', age=30)\nprint(result)"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "Which of these is NOT a characteristic of divide and conquer algorithms?",
+      "options": {
+        "A": "Breaking a problem into subproblems",
+        "B": "Solving subproblems recursively",
+        "C": "Combining solutions of subproblems",
+        "D": "Always requiring a sorting step"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "In Django, what is the purpose of migrations?",
+      "options": {
+        "A": "To manage database schema changes",
+        "B": "To handle HTTP requests",
+        "C": "To create template files",
+        "D": "To authenticate users"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of this hash-based searching example?",
+      "options": {
+        "A": "Found: Alice",
+        "B": "Found: 30",
+        "C": "KeyError: 'Bob'",
+        "D": "Not found"
+      },
+      "correct_answer": "B",
+      "code_example": "def find_in_dict(dictionary, key):\n    try:\n        return f\"Found: {dictionary[key]}\"\n    except KeyError:\n        return \"Not found\"\n\npeople = {\"Alice\": 30, \"Charlie\": 25}\nresult = find_in_dict(people, \"Alice\")\nprint(result)"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of this code demonstrating closures?",
+      "options": {
+        "A": "10",
+        "B": "15",
+        "C": "25",
+        "D": "NameError: name 'x' is not defined"
+      },
+      "correct_answer": "C",
+      "code_example": "def outer_function(x):\n    def inner_function(y):\n        return x + y\n    return inner_function\n\nclosure = outer_function(10)\nresult = closure(15)\nprint(result)"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is the output of this code that finds connected components in a graph?",
+      "options": {
+        "A": "[[0, 1, 4], [2, 3]]",
+        "B": "[[0, 1], [2, 3], [4]]",
+        "C": "[[0, 1, 2, 3, 4]]",
+        "D": "[[0, 1], [2, 3, 4]]"
+      },
+      "correct_answer": "B",
+      "code_example": "def find_components(graph):\n    visited = [False] * len(graph)\n    components = []\n    \n    def dfs(node, component):\n        visited[node] = True\n        component.append(node)\n        for neighbor in graph[node]:\n            if not visited[neighbor]:\n                dfs(neighbor, component)\n    \n    for i in range(len(graph)):\n        if not visited[i]:\n            component = []\n            dfs(i, component)\n            components.append(component)\n    \n    return components\n\ngraph = [\n    [1],    # Node 0 connected to 1\n    [0],    # Node 1 connected to 0\n    [3],    # Node 2 connected to 3\n    [2],    # Node 3 connected to 2\n    []      # Node 4 connected to nothing\n]\n\nprint(find_components(graph))"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What is the difference between class variables and instance variables in Python?",
+      "options": {
+        "A": "Class variables are defined outside any method, instance variables inside methods",
+        "B": "Instance variables are shared among all instances, class variables are unique to each instance",
+        "C": "Class variables are shared among all instances, instance variables are unique to each instance",
+        "D": "There is no difference, these terms are interchangeable"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of this code using the collections module?",
+      "options": {
+        "A": "{'a': 3, 'b': 2, 'c': 1}",
+        "B": "Counter({'a': 3, 'b': 2, 'c': 1})",
+        "C": "[('a', 3), ('b', 2), ('c', 1)]",
+        "D": "{'c': 1, 'b': 2, 'a': 3}"
+      },
+      "correct_answer": "B",
+      "code_example": "from collections import Counter\n\ntext = \"aaabbc\"\ncounter = Counter(text)\nprint(counter)"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "Which statement about absolute and relative imports in Python is true?",
+      "options": {
+        "A": "Absolute imports use periods (.) to navigate the package hierarchy",
+        "B": "Relative imports start with the module name",
+        "C": "Absolute imports use the full path from the root package",
+        "D": "Relative imports are preferred over absolute imports in all cases"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will this code using the re module output?",
+      "options": {
+        "A": "['123', '456', '789']",
+        "B": "['123-456-789']",
+        "C": "['123-456-789', '987-654-321']",
+        "D": "['123', '456', '789', '987', '654', '321']"
+      },
+      "correct_answer": "A",
+      "code_example": "import re\n\ntext = \"Phone: 123-456-789 or 987-654-321\"\npattern = r'\\d{3}'\nresult = re.findall(pattern, text)\nprint(result)"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "When working with JavaScript-heavy sites in Selenium, which approach most effectively handles dynamic content that loads after the initial page render?",
+      "options": {
+        "A": "Increase the default page load timeout using driver.set_page_load_timeout()",
+        "B": "Use explicit waits with WebDriverWait and expected conditions",
+        "C": "Add Thread.sleep() calls after each page navigation",
+        "D": "Set the capability 'javascriptEnabled' to True in the driver options"
+      },
+      "correct_answer": "B",
+      "code_example": "from selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\n\ndriver = webdriver.Chrome()\ndriver.get('https://example.com')\n\ntry:\n    # Wait for a specific element to be clickable before interacting with it\n    element = WebDriverWait(driver, 10).until(\n        EC.element_to_be_clickable((By.ID, 'dynamic-content'))\n    )\n    element.click()\nexcept Exception as e:\n    print(f\"Error: {e}\")\nfinally:\n    driver.quit()"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What is the primary difference between threading and multiprocessing in Python?",
+      "options": {
+        "A": "Threading is always faster than multiprocessing for all types of tasks",
+        "B": "Multiprocessing uses multiple CPU cores but requires more memory, while threading shares memory but is limited by the GIL",
+        "C": "Threading creates new Python interpreters while multiprocessing creates new threads",
+        "D": "Multiprocessing is only available on Unix-based systems"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "When implementing a CI/CD pipeline for a Python project, which of the following is NOT a recommended best practice?",
+      "options": {
+        "A": "Running unit tests in parallel to reduce build time",
+        "B": "Storing API keys and secrets directly in the pipeline configuration for convenient access",
+        "C": "Using a virtual environment to isolate dependencies",
+        "D": "Implementing linting and code quality checks as early pipeline stages"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses a descriptor?",
+      "options": {
+        "A": "Setting to 25\nGetting...\n25",
+        "B": "25\nGetting...\n25",
+        "C": "Setting to 25\n25",
+        "D": "Getting...\n25"
+      },
+      "correct_answer": "A",
+      "code_example": "class Descriptor:\n    def __init__(self):\n        self._value = None\n        \n    def __get__(self, instance, owner):\n        print(\"Getting...\")\n        return self._value\n        \n    def __set__(self, instance, value):\n        print(f\"Setting to {value}\")\n        self._value = value\n\nclass MyClass:\n    x = Descriptor()\n    \nobj = MyClass()\nobj.x = 25\nprint(obj.x)"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What is the result of the following topological sort implementation?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[1, 2, 4, 5, 3]",
+        "C": "[1, 4, 2, 5, 3]",
+        "D": "[1, 4, 5, 2, 3]"
+      },
+      "correct_answer": "C",
+      "code_example": "def topological_sort(graph):\n    visited = set()\n    result = []\n    \n    def dfs(node):\n        visited.add(node)\n        for neighbor in graph.get(node, []):\n            if neighbor not in visited:\n                dfs(neighbor)\n        result.insert(0, node)\n    \n    for node in sorted(graph.keys()):\n        if node not in visited:\n            dfs(node)\n            \n    return result\n\ngraph = {\n    1: [2, 4],\n    2: [3, 5],\n    3: [],\n    4: [5],\n    5: [3]\n}\n\nprint(topological_sort(graph))"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "When implementing an abstract base class in Python, which of the following statements is FALSE?",
+      "options": {
+        "A": "You must use the @abstractmethod decorator for methods that should be implemented by subclasses",
+        "B": "Abstract base classes can provide concrete method implementations that subclasses can use",
+        "C": "You can instantiate an abstract base class directly if at least one of its methods has a concrete implementation",
+        "D": "The ABC module helps enforce interface contracts in Python's duck-typed environment"
+      },
+      "correct_answer": "C",
+      "code_example": "from abc import ABC, abstractmethod\n\nclass AbstractStorage(ABC):\n    @abstractmethod\n    def save(self, data):\n        pass\n        \n    @abstractmethod\n    def load(self, identifier):\n        pass\n        \n    def exists(self, identifier):\n        # Concrete method that subclasses inherit\n        try:\n            self.load(identifier)\n            return True\n        except KeyError:\n            return False\n            \nclass FileStorage(AbstractStorage):\n    def save(self, data):\n        # Implementation here\n        pass\n        \n    def load(self, identifier):\n        # Implementation here\n        pass\n        \n# This would raise TypeError:\n# storage = AbstractStorage()"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What SQL query optimization technique is MOST effective for the following Django ORM query?",
+      "options": {
+        "A": "Adding an index on the 'category' field",
+        "B": "Using select_related() to fetch related Author objects",
+        "C": "Using values() to retrieve only the needed fields",
+        "D": "Adding a database hint using .extra()"
+      },
+      "correct_answer": "B",
+      "code_example": "# Current code with N+1 query problem\nbooks = Book.objects.filter(published_date__year=2023, category='science')\n\nfor book in books:\n    print(f\"{book.title} by {book.author.name}\")\n    \n# Optimized version would be:\n# books = Book.objects.filter(published_date__year=2023, category='science').select_related('author')"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using mock objects for testing?",
+      "options": {
+        "A": "Test passed!",
+        "B": "AssertionError: Expected 'send_email' to be called once. Called 0 times.",
+        "C": "TypeError: MagicMock object is not callable",
+        "D": "RuntimeError: Test requires valid email configuration"
+      },
+      "correct_answer": "A",
+      "code_example": "import unittest\nfrom unittest.mock import patch, MagicMock\n\nclass EmailService:\n    def send_email(self, to, subject, body):\n        # In real implementation, this would send an actual email\n        pass\n\nclass NotificationManager:\n    def __init__(self, email_service):\n        self.email_service = email_service\n    \n    def notify_user(self, user_email, message):\n        if not user_email or not message:\n            return False\n        self.email_service.send_email(user_email, \"Notification\", message)\n        return True\n\nclass TestNotificationManager(unittest.TestCase):\n    def test_notify_user(self):\n        # Create a mock for EmailService\n        mock_email_service = MagicMock()\n        \n        # Create NotificationManager with the mock\n        manager = NotificationManager(mock_email_service)\n        \n        # Call the method we want to test\n        result = manager.notify_user(\"user@example.com\", \"Hello, user!\")\n        \n        # Assert that send_email was called once\n        mock_email_service.send_email.assert_called_once()\n        \n        # Assert the result is True\n        self.assertTrue(result)\n        \n        print(\"Test passed!\")\n\n# Run the test\ntest = TestNotificationManager()\ntest.test_notify_user()"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "According to ethical web scraping practices, which of the following approaches is most problematic?",
+      "options": {
+        "A": "Identifying your scraper in the User-Agent string",
+        "B": "Implementing rate limiting to avoid overloading the target server",
+        "C": "Bypassing CAPTCHAs using automated solving services",
+        "D": "Checking robots.txt before scraping a website"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses a class decorator?",
+      "options": {
+        "A": "Creating object with x=5, y=10\nAccessing: x\n5",
+        "B": "Creating object with x=5, y=10\nAccessing: x\nAccessing: y\n15",
+        "C": "Creating object with x=5, y=10\nAccessing: x\nAccessing: y\n5",
+        "D": "TypeError: 'NoneType' object is not callable"
+      },
+      "correct_answer": "A",
+      "code_example": "def log_operations(cls):\n    original_init = cls.__init__\n    original_getattribute = cls.__getattribute__\n    \n    def new_init(self, *args, **kwargs):\n        print(f\"Creating object with x={args[0]}, y={args[1]}\")\n        original_init(self, *args, **kwargs)\n    \n    def new_getattribute(self, name):\n        if name not in ('__class__', '__dict__'):\n            print(f\"Accessing: {name}\")\n        return original_getattribute(self, name)\n    \n    cls.__init__ = new_init\n    cls.__getattribute__ = new_getattribute\n    return cls\n\n@log_operations\nclass Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    def sum_coords(self):\n        return self.x + self.y\n\np = Point(5, 10)\nprint(p.x)"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "In the context of Docker containerization for Python applications, which statement is FALSE?",
+      "options": {
+        "A": "Using multi-stage builds can significantly reduce final image size",
+        "B": "The 'slim' variants of Python base images provide a good balance between size and functionality",
+        "C": "Container orchestration tools like Kubernetes are required to run Dockerized Python applications",
+        "D": "Pinning exact dependency versions in requirements.txt improves build reproducibility"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What is the correct implementation of service discovery in a microservices architecture using Python?",
+      "options": {
+        "A": "Hardcoding service IP addresses and ports in configuration files",
+        "B": "Using a centralized registry where services register themselves and clients lookup service locations",
+        "C": "Always communicating through a message queue to avoid direct service-to-service connections",
+        "D": "Implementing the circuit breaker pattern for all service calls"
+      },
+      "correct_answer": "B",
+      "code_example": "import requests\nimport json\nfrom flask import Flask\n\napp = Flask(__name__)\n\nclass ServiceRegistry:\n    def __init__(self, registry_url):\n        self.registry_url = registry_url\n    \n    def register_service(self, service_name, service_url, health_check_url):\n        payload = {\n            \"name\": service_name,\n            \"url\": service_url,\n            \"health_check\": health_check_url\n        }\n        response = requests.post(f\"{self.registry_url}/register\", json=payload)\n        return response.status_code == 200\n    \n    def discover_service(self, service_name):\n        response = requests.get(f\"{self.registry_url}/discover/{service_name}\")\n        if response.status_code == 200:\n            return response.json()[\"url\"]\n        return None\n\n# Example usage\ndef call_user_service(user_id):\n    registry = ServiceRegistry(\"http://service-registry:8080\")\n    user_service_url = registry.discover_service(\"user-service\")\n    \n    if user_service_url:\n        response = requests.get(f\"{user_service_url}/users/{user_id}\")\n        if response.status_code == 200:\n            return response.json()\n    return None"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "When using Matplotlib for data visualization, what will be displayed by the following code?",
+      "options": {
+        "A": "A single figure with one 2D line plot",
+        "B": "A single figure with two subplots: a line plot and a histogram",
+        "C": "A single figure with four equal-sized subplots arranged in a 2x2 grid",
+        "D": "A syntax error due to incorrect implementation of GridSpec"
+      },
+      "correct_answer": "C",
+      "code_example": "import matplotlib.pyplot as plt\nimport numpy as np\n\n# Create a figure with a specific size\nplt.figure(figsize=(10, 8))\n\n# Create a 2x2 grid of subplots\nplt.subplot(2, 2, 1)\nx = np.linspace(0, 10, 100)\nplt.plot(x, np.sin(x))\nplt.title('Sine Wave')\n\nplt.subplot(2, 2, 2)\nplt.plot(x, np.cos(x), 'r-')\nplt.title('Cosine Wave')\n\nplt.subplot(2, 2, 3)\nplt.scatter(np.random.rand(50), np.random.rand(50))\nplt.title('Random Scatter')\n\nplt.subplot(2, 2, 4)\nplt.hist(np.random.normal(size=1000))\nplt.title('Normal Distribution')\n\nplt.tight_layout()"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "Which of the following correctly implements the Dependency Inversion Principle from SOLID in Python?",
+      "options": {
+        "A": "Using multiple inheritance to combine several features into one class",
+        "B": "Creating a class that can be modified to add new features without changing existing code",
+        "C": "Having high-level modules depend on abstractions, not concrete implementations",
+        "D": "Ensuring each class has only one reason to change"
+      },
+      "correct_answer": "C",
+      "code_example": "from abc import ABC, abstractmethod\n\n# Abstract class (interface)\nclass MessageSender(ABC):\n    @abstractmethod\n    def send(self, message, recipient):\n        pass\n\n# Concrete implementations\nclass EmailSender(MessageSender):\n    def send(self, message, recipient):\n        print(f\"Sending email to {recipient}: {message}\")\n\nclass SMSSender(MessageSender):\n    def send(self, message, recipient):\n        print(f\"Sending SMS to {recipient}: {message}\")\n\n# High-level module depends on abstraction (MessageSender), not concrete implementations\nclass NotificationService:\n    def __init__(self, message_sender: MessageSender):\n        self.message_sender = message_sender\n    \n    def notify(self, message, recipient):\n        self.message_sender.send(message, recipient)\n\n# Usage\nemail_sender = EmailSender()\nsms_sender = SMSSender()\n\n# We can easily switch between different implementations\nemail_notification = NotificationService(email_sender)\nsms_notification = NotificationService(sms_sender)"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What is the output of the following code that uses Selenium to automate browser actions?",
+      "options": {
+        "A": "Login successful",
+        "B": "NoSuchElementException: Unable to locate element: [id=\"username\"]",
+        "C": "TimeoutException: Message: timeout: Timed out receiving message from renderer",
+        "D": "ElementNotInteractableException: Element is not currently interactable"
+      },
+      "correct_answer": "D",
+      "code_example": "from selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\nfrom selenium.common.exceptions import ElementNotInteractableException\n\ndef simulate_login(driver_type=\"chrome\"):\n    try:\n        # Setup driver (with headless mode for testing)\n        if driver_type == \"chrome\":\n            from selenium.webdriver.chrome.options import Options\n            options = Options()\n            options.add_argument(\"--headless\")\n            driver = webdriver.Chrome(options=options)\n        else:\n            from selenium.webdriver.firefox.options import Options\n            options = Options()\n            options.add_argument(\"--headless\")\n            driver = webdriver.Firefox(options=options)\n        \n        # Navigate to login page\n        driver.get(\"https://example.com/login\")\n        \n        # Wait for username field and enter credentials\n        username_field = WebDriverWait(driver, 10).until(\n            EC.presence_of_element_located((By.ID, \"username\"))\n        )\n        username_field.send_keys(\"testuser\")\n        \n        # Find password field and enter password\n        password_field = driver.find_element(By.ID, \"password\")\n        password_field.send_keys(\"password123\")\n        \n        # Find and click a hidden submit button (will cause ElementNotInteractableException)\n        submit_button = driver.find_element(By.ID, \"submit\")\n        submit_button.click()\n        \n        return \"Login successful\"\n    \n    except ElementNotInteractableException:\n        return \"ElementNotInteractableException: Element is not currently interactable\"\n    except Exception as e:\n        return str(e)\n    finally:\n        if 'driver' in locals():\n            driver.quit()\n\n# For testing purposes, we're simulating the exception\nprint(simulate_login())"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the result of this code that implements a custom map function using Abstract Base Classes?",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]",
+        "B": "TypeError: Can't instantiate abstract class Processor with abstract method process",
+        "C": "AttributeError: 'SquareProcessor' object has no attribute 'process_all'",
+        "D": "[2, 4, 6, 8, 10]"
+      },
+      "correct_answer": "A",
+      "code_example": "from abc import ABC, abstractmethod\nfrom typing import List, TypeVar, Generic, Callable\n\nT = TypeVar('T')\nR = TypeVar('R')\n\nclass Processor(Generic[T, R], ABC):\n    @abstractmethod\n    def process(self, item: T) -> R:\n        pass\n    \n    def process_all(self, items: List[T]) -> List[R]:\n        return [self.process(item) for item in items]\n\nclass SquareProcessor(Processor[int, int]):\n    def process(self, item: int) -> int:\n        return item * item\n\nclass MapProcessor(Processor[T, R]):\n    def __init__(self, func: Callable[[T], R]):\n        self.func = func\n    \n    def process(self, item: T) -> R:\n        return self.func(item)\n\n# Test with SquareProcessor\nsquarer = SquareProcessor()\nresult = squarer.process_all([1, 2, 3, 4, 5])\nprint(result)"
+    }
+  ]
+}
