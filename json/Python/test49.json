@@ -1,0 +1,617 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is the difference between parameters and arguments in Python functions?",
+      "options": {
+        "A": "They are the same thing, just different terminology",
+        "B": "Parameters are defined in function definitions, while arguments are the values passed when calling a function",
+        "C": "Arguments are defined in function definitions, while parameters are the values passed when calling a function",
+        "D": "Parameters are used only for mandatory values, while arguments are used for optional values"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "def greet(name, greeting='Hello'):\n    return f'{greeting}, {name}!'\n\nprint(greet('Alice'))",
+      "options": {
+        "A": "Hello, Alice",
+        "B": "Hello, Alice!",
+        "C": "greeting, Alice!",
+        "D": "Hello Alice!"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the purpose of a docstring in Python?",
+      "options": {
+        "A": "To make the code run faster",
+        "B": "To prevent errors from occurring",
+        "C": "To document what a function or module does",
+        "D": "To import external libraries"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "def is_palindrome(text):\n    text = text.lower().replace(' ', '')\n    return text == text[::-1]\n\nprint(is_palindrome('Race Car'))",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "None",
+        "D": "Error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1)\n\nprint(factorial(4))",
+      "options": {
+        "A": "4",
+        "B": "12",
+        "C": "24",
+        "D": "120"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nfor i, num in enumerate(numbers, start=10):\n    print(f'{i}: {num}', end=' ')",
+      "options": {
+        "A": "0: 1 1: 2 2: 3 3: 4 4: 5",
+        "B": "1: 1 2: 2 3: 3 4: 4 5: 5",
+        "C": "10: 1 11: 2 12: 3 13: 4 14: 5",
+        "D": "10: 10 11: 11 12: 12 13: 13 14: 14"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "def find_prime_numbers(n):\n    primes = []\n    for num in range(2, n + 1):\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                break\n        else:\n            primes.append(num)\n    return primes\n\nprint(find_prime_numbers(10))",
+      "options": {
+        "A": "[2, 3, 5, 7]",
+        "B": "[1, 2, 3, 5, 7]",
+        "C": "[2, 3, 5, 7, 9]",
+        "D": "[3, 5, 7]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return -1\n\nprint(binary_search([1, 3, 5, 7, 9], 7))",
+      "options": {
+        "A": "4",
+        "B": "7",
+        "C": "3",
+        "D": "-1"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "name = 'Alice'\nage = 30\nprint(f'{name} is {age} years old.')",
+      "options": {
+        "A": "{name} is {age} years old.",
+        "B": "name is age years old.",
+        "C": "Alice is 30 years old.",
+        "D": "Alice is {age} years old."
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following FizzBuzz implementation?",
+      "code_example": "def fizzbuzz(n):\n    if n % 3 == 0 and n % 5 == 0:\n        return 'FizzBuzz'\n    elif n % 3 == 0:\n        return 'Fizz'\n    elif n % 5 == 0:\n        return 'Buzz'\n    else:\n        return str(n)\n\nprint(fizzbuzz(15))",
+      "options": {
+        "A": "15",
+        "B": "Fizz",
+        "C": "Buzz",
+        "D": "FizzBuzz"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will the following code output?",
+      "code_example": "x = 10\n\ndef modify_value():\n    x = 20\n    print(f'Inside function: {x}')\n\nmodify_value()\nprint(f'Outside function: {x}')",
+      "options": {
+        "A": "Inside function: 10\nOutside function: 10",
+        "B": "Inside function: 20\nOutside function: 20",
+        "C": "Inside function: 20\nOutside function: 10",
+        "D": "Inside function: 10\nOutside function: 20"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What is the purpose of a context manager (using the 'with' statement) in Python?",
+      "options": {
+        "A": "To make code run faster",
+        "B": "To handle errors and exceptions",
+        "C": "To automatically manage resources like file opening and closing",
+        "D": "To create global variables that can be accessed from anywhere"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following GCD calculation?",
+      "code_example": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\nprint(gcd(48, 18))",
+      "options": {
+        "A": "6",
+        "B": "8",
+        "C": "9",
+        "D": "3"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the result of the following code?",
+      "code_example": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('Division by zero')\nexcept (ValueError, TypeError):\n    print('Value or Type error')\nelse:\n    print('No error')\nfinally:\n    print('Always executed')",
+      "options": {
+        "A": "Division by zero\nAlways executed",
+        "B": "Value or Type error\nAlways executed",
+        "C": "No error\nAlways executed",
+        "D": "Division by zero"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that uses zip()?",
+      "code_example": "names = ['Alice', 'Bob', 'Charlie']\nages = [25, 30, 35, 40]\n\nfor name, age in zip(names, ages):\n    print(f'{name}: {age}', end=' ')",
+      "options": {
+        "A": "Alice: 25 Bob: 30 Charlie: 35 None: 40",
+        "B": "Alice: 25 Bob: 30 Charlie: 35",
+        "C": "Error: lists have different lengths",
+        "D": "Alice: 25 Bob: 30 Charlie: 35 40"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "How would you create a custom exception in Python?",
+      "options": {
+        "A": "By importing the exception module",
+        "B": "By creating a function that returns an error message",
+        "C": "By creating a class that inherits from the Exception class",
+        "D": "By using the 'raise' keyword with a string message"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using a decorator?",
+      "code_example": "def log_function_call(func):\n    def wrapper(*args, **kwargs):\n        print(f'Calling {func.__name__}')\n        result = func(*args, **kwargs)\n        print(f'Finished {func.__name__}')\n        return result\n    return wrapper\n\n@log_function_call\ndef add(a, b):\n    return a + b\n\nprint(add(3, 5))",
+      "options": {
+        "A": "8",
+        "B": "Calling add\nFinished add\n8",
+        "C": "Calling add\n8\nFinished add",
+        "D": "Calling add\n3 5\nFinished add\n8"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following generator function?",
+      "code_example": "def fibonacci(n):\n    a, b = 0, 1\n    count = 0\n    while count < n:\n        yield a\n        a, b = b, a + b\n        count += 1\n\nfor num in fibonacci(5):\n    print(num, end=' ')",
+      "options": {
+        "A": "0 1 1 2 3",
+        "B": "1 1 2 3 5",
+        "C": "0 1 1 2 3 5",
+        "D": "1 2 3 5 8"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using a stack implementation?",
+      "code_example": "class Stack:\n    def __init__(self):\n        self.items = []\n    \n    def push(self, item):\n        self.items.append(item)\n    \n    def pop(self):\n        if not self.is_empty():\n            return self.items.pop()\n    \n    def is_empty(self):\n        return len(self.items) == 0\n\ns = Stack()\ns.push(1)\ns.push(2)\ns.push(3)\nprint(s.pop())\nprint(s.pop())\ns.push(4)\nprint(s.pop())",
+      "options": {
+        "A": "1 2 3",
+        "B": "3 2 1",
+        "C": "3 2 4",
+        "D": "1 2 4"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using a depth-first search?",
+      "code_example": "def dfs(graph, start, visited=None):\n    if visited is None:\n        visited = set()\n    visited.add(start)\n    print(start, end=' ')\n    for next in graph[start] - visited:\n        dfs(graph, next, visited)\n    return visited\n\ngraph = {\n    '0': {'1', '2'},\n    '1': {'0', '3', '4'},\n    '2': {'0'},\n    '3': {'1'},\n    '4': {'1'},\n}\n\ndfs(graph, '0')",
+      "options": {
+        "A": "0 1 3 4 2",
+        "B": "0 1 2 3 4",
+        "C": "0 2 1 4 3",
+        "D": "0 2 1 3 4"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using a sliding window approach?",
+      "code_example": "def max_sum_subarray(arr, k):\n    n = len(arr)\n    if n < k:\n        return -1\n    \n    window_sum = sum(arr[:k])\n    max_sum = window_sum\n    \n    for i in range(n - k):\n        window_sum = window_sum - arr[i] + arr[i + k]\n        max_sum = max(max_sum, window_sum)\n    \n    return max_sum\n\nprint(max_sum_subarray([1, 4, 2, 10, 2, 3, 1, 0, 20], 4))",
+      "options": {
+        "A": "24",
+        "B": "20",
+        "C": "17",
+        "D": "18"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using property decorators?",
+      "code_example": "class Temperature:\n    def __init__(self, celsius=0):\n        self._celsius = celsius\n        \n    @property\n    def celsius(self):\n        return self._celsius\n        \n    @celsius.setter\n    def celsius(self, value):\n        if value < -273.15:\n            raise ValueError('Temperature below absolute zero is not possible')\n        self._celsius = value\n        \n    @property\n    def fahrenheit(self):\n        return self._celsius * 9/5 + 32\n        \n    @fahrenheit.setter\n    def fahrenheit(self, value):\n        self.celsius = (value - 32) * 5/9\n\ntemp = Temperature()\ntemp.celsius = 25\ntemp.fahrenheit = 77\nprint(f'{temp.celsius:.1f}')",
+      "options": {
+        "A": "25.0",
+        "B": "77.0",
+        "C": "0.0",
+        "D": "25.1"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "Which of the following is an example of a First Normal Form (1NF) violation in database design?",
+      "options": {
+        "A": "Having a column that depends on only part of the primary key",
+        "B": "Having multiple values in a single column (e.g., comma-separated values)",
+        "C": "Having a column that depends on a non-key column",
+        "D": "Having a table without a primary key"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using a decorator with arguments?",
+      "code_example": "def repeat(n):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            result = None\n            for _ in range(n):\n                result = func(*args, **kwargs)\n            return result\n        return wrapper\n    return decorator\n\n@repeat(3)\ndef greet(name):\n    print(f'Hello, {name}!')\n    return name\n\nresult = greet('Alice')\nprint(f'Result: {result}')",
+      "options": {
+        "A": "Hello, Alice!\nResult: Alice",
+        "B": "Hello, Alice!\nHello, Alice!\nHello, Alice!\nResult: Alice",
+        "C": "Hello, Alice!\nResult: Hello, Alice!\nHello, Alice!\nResult: Hello, Alice!\nHello, Alice!\nResult: Alice",
+        "D": "Result: Alice"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code implementing a greedy algorithm for coin change?",
+      "code_example": "def min_coins(coins, amount):\n    # Sort coins in descending order\n    coins.sort(reverse=True)\n    \n    # Initialize count\n    count = 0\n    \n    # Go through all coins\n    for coin in coins:\n        # Take as many as possible of current coin\n        while amount >= coin:\n            amount -= coin\n            count += 1\n    \n    # Return -1 if amount cannot be made\n    if amount > 0:\n        return -1\n    \n    return count\n\nprint(min_coins([1, 5, 10, 25], 36))",
+      "options": {
+        "A": "4",
+        "B": "3",
+        "C": "5",
+        "D": "6"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using recursion with memoization?",
+      "code_example": "def fibonacci_memo(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 1:\n        return n\n    memo[n] = fibonacci_memo(n-1, memo) + fibonacci_memo(n-2, memo)\n    return memo[n]\n\nprint(fibonacci_memo(6))",
+      "options": {
+        "A": "13",
+        "B": "8",
+        "C": "5",
+        "D": "21"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using a priority queue with heapq?",
+      "code_example": "import heapq\n\ndef find_kth_largest(nums, k):\n    heap = nums[:k]\n    heapq.heapify(heap)\n    \n    for num in nums[k:]:\n        if num > heap[0]:\n            heapq.heappushpop(heap, num)\n    \n    return heap[0]\n\nprint(find_kth_largest([3, 1, 5, 12, 2, 11], 3))",
+      "options": {
+        "A": "12",
+        "B": "5",
+        "C": "3",
+        "D": "11"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is the primary purpose of the OAuth authentication protocol?",
+      "options": {
+        "A": "To encrypt data transmitted between client and server",
+        "B": "To allow third-party applications to access resources without sharing credentials",
+        "C": "To validate user identity using biometric information",
+        "D": "To generate secure passwords for users"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using divide and conquer?",
+      "code_example": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    \n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    \n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result\n\nprint(merge_sort([38, 27, 43, 3, 9, 82, 10]))",
+      "options": {
+        "A": "[3, 9, 10, 27, 38, 43, 82]",
+        "B": "[82, 43, 38, 27, 10, 9, 3]",
+        "C": "[3, 9, 10, 38, 27, 43, 82]",
+        "D": "[38, 27, 43, 3, 9, 82, 10]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What happens if a Python module is imported multiple times in the same script?",
+      "options": {
+        "A": "The module is reloaded and code in the module is executed again",
+        "B": "A ModuleError is raised indicating duplicate imports",
+        "C": "The module is only loaded and executed once; subsequent imports just reference the already loaded module",
+        "D": "Each import creates a new instance of the module with its own namespace"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is the result of the following lambda expression?",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nresult = list(map(lambda x: x**2 if x % 2 == 0 else x, numbers))\nprint(result)",
+      "options": {
+        "A": "[1, 4, 3, 16, 5]",
+        "B": "[1, 4, 9, 16, 25]",
+        "C": "[1, 2, 3, 4, 5]",
+        "D": "[1, 2, 9, 4, 25]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "In Django, what is the purpose of the settings.py file?",
+      "options": {
+        "A": "To define database models",
+        "B": "To handle HTTP requests",
+        "C": "To configure project settings like database connections, installed apps, and middleware",
+        "D": "To define URL patterns"
+      },
+      "correct_answer": "C"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will be the output of the following asyncio code?",
+      "options": {
+        "A": "Start, Task 1, Task 2, End",
+        "B": "Start, End, Task 1, Task 2",
+        "C": "Start, Task 2, Task 1, End",
+        "D": "Start, Task 1, End, Task 2"
+      },
+      "correct_answer": "A",
+      "code_example": "import asyncio\n\nasync def task1():\n    await asyncio.sleep(0.1)\n    print('Task 1')\n\nasync def task2():\n    await asyncio.sleep(0.2)\n    print('Task 2')\n\nasync def main():\n    print('Start')\n    await task1()\n    await task2()\n    print('End')\n\n# If we execute: asyncio.run(main())"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which of the following best describes a finite state machine in the context of Python application development?",
+      "options": {
+        "A": "A design pattern where objects maintain a list of dependents that are notified of state changes",
+        "B": "A mathematical model consisting of states, transitions between states, and actions, implemented to manage application flow",
+        "C": "A parallel computing architecture where multiple processors execute instructions simultaneously",
+        "D": "A memory management technique where objects are allocated and deallocated based on reference counting"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following unittest using mocking?",
+      "options": {
+        "A": "The test will pass",
+        "B": "AssertionError: Expected 'mock_get' to be called once. Called 0 times.",
+        "C": "TypeError: 'MagicMock' object is not callable",
+        "D": "AssertionError: 201 != 200"
+      },
+      "correct_answer": "D",
+      "code_example": "import unittest\nfrom unittest.mock import patch, MagicMock\n\nclass APIClient:\n    def create_resource(self, data):\n        response = self.session.post('/api/resource', json=data)\n        return response.status_code\n\nclass TestAPIClient(unittest.TestCase):\n    @patch('__main__.APIClient.session')\n    def test_create_resource(self, mock_session):\n        # Setup\n        client = APIClient()\n        mock_response = MagicMock()\n        mock_response.status_code = 201\n        mock_session.post.return_value = mock_response\n        \n        # Execute\n        result = client.create_resource({'name': 'test'})\n        \n        # Assert\n        mock_session.post.assert_called_once_with('/api/resource', json={'name': 'test'})\n        self.assertEqual(result, 200)\n\n# If we run: unittest.main()"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "In a microservices architecture using Python, which communication pattern would be most appropriate for a use case requiring data consistency across multiple services during a transaction?",
+      "options": {
+        "A": "Asynchronous messaging with a message queue",
+        "B": "Synchronous REST API calls with circuit breakers",
+        "C": "Saga pattern with compensating transactions",
+        "D": "Event sourcing with CQRS (Command Query Responsibility Segregation)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the execution time improvement when applying the query optimization technique shown in the code example?",
+      "options": {
+        "A": "Approximately 10x faster",
+        "B": "Approximately 100x faster",
+        "C": "Approximately 1000x faster",
+        "D": "No significant improvement"
+      },
+      "correct_answer": "B",
+      "code_example": "import sqlite3\nimport time\n\n# Create a sample database\nconn = sqlite3.connect(':memory:')\ncursor = conn.cursor()\n\n# Create a table with 100,000 rows\ncursor.execute('CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, email TEXT)')\nconn.commit()\n\n# Insert 100,000 records\nfor i in range(1, 100001):\n    cursor.execute('INSERT INTO users VALUES (?, ?, ?)', \n                  (i, f'User{i}', f'user{i}@example.com'))\nconn.commit()\n\n# Unoptimized query - no index on email column\ndef unoptimized_query():\n    start = time.time()\n    cursor.execute(\"SELECT * FROM users WHERE email = 'user50000@example.com'\")\n    result = cursor.fetchone()\n    end = time.time()\n    return end - start\n\n# Measure unoptimized query time\nutime = unoptimized_query()\n\n# Add index to optimize the query\ncursor.execute('CREATE INDEX idx_email ON users(email)')\nconn.commit()\n\n# Optimized query - with index on email column\ndef optimized_query():\n    start = time.time()\n    cursor.execute(\"SELECT * FROM users WHERE email = 'user50000@example.com'\")\n    result = cursor.fetchone()\n    end = time.time()\n    return end - start\n\n# Measure optimized query time\notime = optimized_query()\n\n# Calculate improvement factor\nimprovement = utime / otime\n# improvement is approximately 100x"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What is the correct implementation of the A* search algorithm's heuristic function for finding the shortest path on a grid where diagonal movement is allowed?",
+      "options": {
+        "A": "Manhattan distance: |x1 - x2| + |y1 - y2|",
+        "B": "Euclidean distance: sqrt((x1 - x2)² + (y1 - y2)²)",
+        "C": "Chebyshev distance: max(|x1 - x2|, |y1 - y2|)",
+        "D": "Octile distance: max(|x1 - x2|, |y1 - y2|) + (sqrt(2) - 1) * min(|x1 - x2|, |y1 - y2|)"
+      },
+      "correct_answer": "D",
+      "code_example": "import math\nfrom heapq import heappush, heappop\n\ndef a_star_search(grid, start, goal):\n    rows, cols = len(grid), len(grid[0])\n    \n    # Define the heuristic function\n    def heuristic(node):\n        x1, y1 = node\n        x2, y2 = goal\n        # Octile distance for grids with diagonal movement\n        dx, dy = abs(x1 - x2), abs(y1 - y2)\n        return max(dx, dy) + (math.sqrt(2) - 1) * min(dx, dy)\n    \n    # A* algorithm implementation\n    open_set = []\n    heappush(open_set, (0, start))\n    came_from = {}\n    g_score = {start: 0}\n    f_score = {start: heuristic(start)}\n    \n    while open_set:\n        _, current = heappop(open_set)\n        \n        if current == goal:\n            path = []\n            while current in came_from:\n                path.append(current)\n                current = came_from[current]\n            path.append(start)\n            return path[::-1]\n        \n        # Get neighbors including diagonals\n        neighbors = []\n        x, y = current\n        for dx in [-1, 0, 1]:\n            for dy in [-1, 0, 1]:\n                if dx == 0 and dy == 0:\n                    continue\n                nx, ny = x + dx, y + dy\n                if 0 <= nx < rows and 0 <= ny < cols and grid[nx][ny] == 0:\n                    neighbors.append((nx, ny))\n        \n        for neighbor in neighbors:\n            # Diagonal movement costs sqrt(2)\n            if abs(neighbor[0] - x) == 1 and abs(neighbor[1] - y) == 1:\n                tentative_g = g_score[current] + math.sqrt(2)\n            else:\n                tentative_g = g_score[current] + 1\n                \n            if neighbor not in g_score or tentative_g < g_score[neighbor]:\n                came_from[neighbor] = current\n                g_score[neighbor] = tentative_g\n                f_score[neighbor] = tentative_g + heuristic(neighbor)\n                heappush(open_set, (f_score[neighbor], neighbor))\n    \n    return None  # No path found"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following encryption and hashing code?",
+      "options": {
+        "A": "b'gAAAAAB...', True",
+        "B": "b'gAAAAAB...', False",
+        "C": "ValueError: Invalid key",
+        "D": "TypeError: Password must be bytes-like object"
+      },
+      "correct_answer": "A",
+      "code_example": "from cryptography.fernet import Fernet\nimport hashlib\nimport base64\n\ndef derive_key(password, salt):\n    # Derive a 32-byte key from a password using PBKDF2\n    kdf_result = hashlib.pbkdf2_hmac(\n        'sha256',\n        password.encode(),\n        salt,\n        100000  # Number of iterations\n    )\n    # Convert to base64 as required by Fernet\n    return base64.urlsafe_b64encode(kdf_result)\n\ndef encrypt_message(message, password):\n    # Generate a random salt\n    salt = b'fixed_salt_for_testing'  # In production, use: os.urandom(16)\n    \n    # Derive the key from the password\n    key = derive_key(password, salt)\n    \n    # Create a Fernet cipher with the derived key\n    cipher = Fernet(key)\n    \n    # Encrypt the message\n    encrypted_message = cipher.encrypt(message.encode())\n    \n    return encrypted_message\n\ndef verify_password_hash(stored_hash, provided_password):\n    # In a real application, the salt would be stored alongside the hash\n    salt = b'fixed_salt_for_demo'\n    \n    # Hash the provided password with the same salt\n    provided_hash = hashlib.pbkdf2_hmac(\n        'sha256',\n        provided_password.encode(),\n        salt,\n        100000\n    ).hex()\n    \n    # Compare the stored hash with the newly generated hash\n    return stored_hash == provided_hash\n\n# Example usage\npassword = \"secure_password123\"\nmessage = \"Hello, World!\"\nencrypted = encrypt_message(message, password)\n\n# Hash a password for storage\nsalt = b'fixed_salt_for_demo'\nstored_hash = hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 100000).hex()\n\n# Later, verify a password\nresult = verify_password_hash(stored_hash, password)\n\nprint(encrypted[:10], result)  # Will print something like: b'gAAAAAB...' True"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a secure coding practice when implementing user authentication in a Python web application?",
+      "options": {
+        "A": "Using bcrypt or Argon2 for password hashing with appropriate work factors",
+        "B": "Implementing rate limiting on login attempts to prevent brute force attacks",
+        "C": "Storing API keys and secrets directly in environment variables on the production server",
+        "D": "Using prepared statements with parameterized queries to prevent SQL injection"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following pandas data manipulation code?",
+      "options": {
+        "A": "   Category  Count  Percentage\n0        A     15        30%\n1        B     20        40%\n2        C     15        30%",
+        "B": "   Category  Count  Percentage\n0        A     15       0.30\n1        B     20       0.40\n2        C     15       0.30",
+        "C": "   Category  Count  Percentage\n0        A     15        30\n1        B     20        40\n2        C     15        30",
+        "D": "ValueError: Cannot set a DataFrame with misaligned indices"
+      },
+      "correct_answer": "B",
+      "code_example": "import pandas as pd\nimport numpy as np\n\n# Create sample data\ndata = {\n    'Category': ['A', 'B', 'C'],\n    'Count': [15, 20, 15]\n}\n\n# Create DataFrame\ndf = pd.DataFrame(data)\n\n# Calculate total\ntotal = df['Count'].sum()\n\n# Calculate percentage\ndf['Percentage'] = df['Count'] / total\n\n# Create a custom function to format percentages\ndef format_percentage(x):\n    return f'{x:.0%}'\n\n# Sort by Count in descending order\ndf_sorted = df.sort_values(by='Count', ascending=False)\n\nprint(df)"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "According to ethical web scraping practices, which of the following actions would be considered most problematic?",
+      "options": {
+        "A": "Setting a random delay between requests to minimize server load",
+        "B": "Identifying your scraper using a User-Agent header with contact information",
+        "C": "Creating multiple IP addresses to bypass rate limits set by the website",
+        "D": "Checking robots.txt and respecting the directives before scraping"
+      },
+      "correct_answer": "C",
+      "code_example": "import requests\nfrom bs4 import BeautifulSoup\nimport time\nimport random\nfrom urllib.robotparser import RobotFileParser\n\ndef ethical_scraper(url, max_pages=5):\n    # 1. Check robots.txt first\n    parsed_url = url.split('/')\n    base_url = parsed_url[0] + '//' + parsed_url[2]\n    robots_url = base_url + '/robots.txt'\n    \n    rp = RobotFileParser()\n    rp.set_url(robots_url)\n    try:\n        rp.read()\n        if not rp.can_fetch('MyEthicalBot', url):\n            print(f\"robots.txt disallows scraping {url}\")\n            return None\n    except Exception as e:\n        print(f\"Error reading robots.txt: {e}\")\n    \n    # 2. Use a descriptive User-Agent with contact info\n    headers = {\n        'User-Agent': 'MyEthicalBot/1.0 (research project; contact@example.com)'\n    }\n    \n    results = []\n    current_page = 1\n    \n    while current_page <= max_pages:\n        try:\n            # 3. Add a random delay between requests (1-5 seconds)\n            time.sleep(random.uniform(1, 5))\n            \n            # 4. Make the request with proper headers\n            response = requests.get(f\"{url}?page={current_page}\", headers=headers)\n            \n            # 5. Check for successful response\n            if response.status_code == 200:\n                soup = BeautifulSoup(response.text, 'html.parser')\n                \n                # Extract data (example: product titles)\n                items = soup.select('.product-item')\n                \n                if not items:\n                    # No more items found, break the loop\n                    break\n                    \n                for item in items:\n                    title = item.select_one('.product-title').text.strip()\n                    results.append(title)\n                    \n                current_page += 1\n            else:\n                print(f\"Failed to retrieve page {current_page}: Status code {response.status_code}\")\n                break\n                \n        except Exception as e:\n            print(f\"Error scraping page {current_page}: {e}\")\n            break\n    \n    return results"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following scikit-learn code for a classification problem?",
+      "options": {
+        "A": "Confusion matrix:\n[[45  5]\n [ 8 42]]\nAccuracy: 0.87",
+        "B": "Confusion matrix:\n[[50  0]\n [50  0]]\nAccuracy: 0.50",
+        "C": "Confusion matrix:\n[[40 10]\n [15 35]]\nAccuracy: 0.75",
+        "D": "ValueError: X has 3 features, but RandomForestClassifier is expecting 2 features"
+      },
+      "correct_answer": "C",
+      "code_example": "import numpy as np\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import confusion_matrix, accuracy_score\n\n# Set random seed for reproducibility\nnp.random.seed(42)\n\n# Generate a synthetic dataset\nX, y = make_classification(\n    n_samples=1000,\n    n_features=20,\n    n_informative=10,\n    n_redundant=5,\n    n_classes=2,\n    flip_y=0.2,  # Add noise to labels\n    random_state=42\n)\n\n# Split the data into training and testing sets\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2, random_state=42\n)\n\n# Create a RandomForestClassifier\nrf = RandomForestClassifier(\n    n_estimators=100,\n    max_depth=5,\n    min_samples_split=5,\n    random_state=42\n)\n\n# Train the model\nrf.fit(X_train, y_train)\n\n# Make predictions\ny_pred = rf.predict(X_test)\n\n# Calculate confusion matrix\ncm = confusion_matrix(y_test, y_pred)\n\n# Calculate accuracy\nacc = accuracy_score(y_test, y_pred)\n\nprint(f\"Confusion matrix:\\n{cm}\")\nprint(f\"Accuracy: {acc:.2f}\")"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which of the following is a key indicator that a problem exhibits overlapping subproblems, making it suitable for dynamic programming?",
+      "options": {
+        "A": "The problem can be solved using a greedy approach by selecting the locally optimal choice",
+        "B": "The optimal solution to the problem requires evaluating all possible combinations of inputs",
+        "C": "Solving the problem requires breaking it down into subproblems that are solved multiple times",
+        "D": "The problem can be solved efficiently using a depth-first search algorithm"
+      },
+      "correct_answer": "C",
+      "code_example": "# Example: Fibonacci sequence implementation\n\n# Naive recursive approach (no memoization)\ndef fibonacci_recursive(n):\n    if n <= 1:\n        return n\n    return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)\n\n# Dynamic programming approach with memoization\ndef fibonacci_dp(n, memo={}):\n    if n in memo:\n        return memo[n]  # Return cached result\n    \n    if n <= 1:\n        return n\n    \n    # Compute and cache the result\n    memo[n] = fibonacci_dp(n-1, memo) + fibonacci_dp(n-2, memo)\n    return memo[n]\n\n# Dynamic programming with tabulation (bottom-up)\ndef fibonacci_tabulation(n):\n    if n <= 1:\n        return n\n    \n    # Initialize table\n    dp = [0] * (n + 1)\n    dp[1] = 1\n    \n    # Fill table bottom-up\n    for i in range(2, n + 1):\n        dp[i] = dp[i-1] + dp[i-2]\n    \n    return dp[n]\n\n# Demonstrate the overlapping subproblems\ndef count_fibonacci_recursive_calls(n):\n    counts = [0] * (n + 1)  # To store call counts\n    \n    def fib_with_count(n):\n        if n <= 1:\n            return n\n        \n        counts[n] += 1  # Count this call\n        return fib_with_count(n-1) + fib_with_count(n-2)\n    \n    fib_with_count(n)\n    return counts\n\n# Count calls for n=5\ncall_counts = count_fibonacci_recursive_calls(5)\n\n# fib(3) is called 2 times, fib(2) is called 3 times, etc., demonstrating overlapping subproblems"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code, which demonstrates the use of a code coverage tool?",
+      "options": {
+        "A": "coverage: 100%",
+        "B": "coverage: 75%",
+        "C": "coverage: 50%",
+        "D": "ImportError: No module named 'coverage'"
+      },
+      "correct_answer": "B",
+      "code_example": "# To demonstrate code coverage, we're showing pseudocode that represents\n# what would happen when using the coverage.py tool on this function\n\ndef process_data(data, process_complex=False):\n    results = []\n    \n    # Simple processing (always executed)\n    for item in data:\n        results.append(item * 2)\n    \n    # Complex processing (conditionally executed)\n    if process_complex:\n        for i, item in enumerate(results):\n            if i % 2 == 0:  # Only process even indices\n                results[i] = item + 10\n    \n    # Final validation (always executed)\n    for item in results:\n        if item < 0:\n            return None  # Error case\n    \n    return results\n\n# Code coverage test scenario\ntest_data = [1, 2, 3, 4]\n\n# Running with coverage tool and only executing the function once\n# with process_complex=False would lead to coverage: 75%\nresult = process_data(test_data, process_complex=False)\n\n# The code inside the if process_complex block (3 lines) would not be executed,\n# out of the total 12 lines of code in the function (excluding comments).\n# Coverage = 9/12 = 75%"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What is the best way to implement rate limiting for a REST API in Python to prevent abuse and ensure service availability?",
+      "options": {
+        "A": "Use an environment variable to set a global maximum request count per IP address",
+        "B": "Implement token bucket or leaky bucket algorithms with Redis for distributed rate limiting",
+        "C": "Add a sleep() call between processing requests to slow down API responses",
+        "D": "Store request timestamps in memory and reject requests that exceed the limit"
+      },
+      "correct_answer": "B",
+      "code_example": "from flask import Flask, request, jsonify\nimport redis\nimport time\n\napp = Flask(__name__)\n# Connect to Redis\nr = redis.Redis(host='localhost', port=6379, db=0)\n\ndef rate_limit(key, limit, period):\n    \"\"\"Implements a Redis-based rate limiter using the token bucket algorithm\n    \n    Args:\n        key (str): Unique identifier for the client (e.g., IP address)\n        limit (int): Maximum number of requests allowed in the period\n        period (int): Time window in seconds\n        \n    Returns:\n        tuple: (allowed (bool), remaining (int), reset_time (int))\n    \"\"\"\n    current_time = int(time.time())\n    key = f\"rate_limit:{key}\"\n    \n    # Use a Redis pipeline to execute commands atomically\n    pipe = r.pipeline()\n    \n    # Check if the rate limit key exists\n    pipe.exists(key)\n    # Get current count and reset time if it exists\n    pipe.hmget(key, 'count', 'reset')\n    result = pipe.execute()\n    \n    key_exists = result[0]\n    if key_exists:\n        count, reset_time = result[1]\n        count = int(count)\n        reset_time = int(reset_time)\n        \n        # Check if the period has expired and reset if needed\n        if current_time > reset_time:\n            count = 0\n            reset_time = current_time + period\n    else:\n        # First request, initialize counter\n        count = 0\n        reset_time = current_time + period\n    \n    # Check if the request is within limits\n    if count < limit:\n        # Increment the counter\n        count += 1\n        # Store the updated values\n        r.hmset(key, {'count': count, 'reset': reset_time})\n        # Set expiration to ensure memory cleanup\n        r.expire(key, period)\n        allowed = True\n    else:\n        allowed = False\n    \n    remaining = limit - count if count < limit else 0\n    return (allowed, remaining, reset_time)\n\n@app.route('/api/resource', methods=['GET'])\ndef get_resource():\n    client_ip = request.remote_addr\n    \n    # Apply rate limiting: 10 requests per minute\n    allowed, remaining, reset_time = rate_limit(client_ip, limit=10, period=60)\n    \n    # Set rate limit headers\n    headers = {\n        'X-RateLimit-Limit': '10',\n        'X-RateLimit-Remaining': str(remaining),\n        'X-RateLimit-Reset': str(reset_time)\n    }\n    \n    if not allowed:\n        # Return 429 Too Many Requests if rate limit exceeded\n        response = jsonify({\n            'error': 'Rate limit exceeded',\n            'retry_after': reset_time - int(time.time())\n        })\n        response.status_code = 429\n        return response, headers\n    \n    # Process the actual request\n    data = {'message': 'API response data'}\n    return jsonify(data), 200, headers"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing the Longest Common Subsequence algorithm?",
+      "options": {
+        "A": "7",
+        "B": "5",
+        "C": "4",
+        "D": "3"
+      },
+      "correct_answer": "C",
+      "code_example": "def longest_common_subsequence(text1, text2):\n    \"\"\"\n    Finds the length of the longest subsequence that is common to both strings.\n    A subsequence is a sequence that can be derived from another sequence by\n    deleting some or no elements without changing the order of the remaining elements.\n    \n    Args:\n        text1 (str): First string\n        text2 (str): Second string\n        \n    Returns:\n        int: Length of the longest common subsequence\n    \"\"\"\n    m, n = len(text1), len(text2)\n    \n    # Create a DP table to store LCS lengths\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    \n    # Fill the DP table\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if text1[i-1] == text2[j-1]:\n                # If current characters match, extend the previous LCS\n                dp[i][j] = dp[i-1][j-1] + 1\n            else:\n                # Otherwise, take the maximum of excluding either character\n                dp[i][j] = max(dp[i-1][j], dp[i][j-1])\n    \n    # The bottom-right cell contains the length of the LCS\n    return dp[m][n]\n\n# Example usage\nstr1 = \"ABCBDAB\"\nstr2 = \"BDCABA\"\n\nresult = longest_common_subsequence(str1, str2)\nprint(result)  # The LCS is \"BCBA\" with length 4"
+    },
+   {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What is the output of the following code?",
+      "options": {
+        "A": "[1, 2, 3, 4]",
+        "B": "[1, 2, 3, 3]",
+        "C": "[1, 2, 3]",
+        "D": "[1, 2, 2, 3]"
+      },
+      "correct_answer": "B",
+      "code_example": "def modify(lst, val):\n    lst.append(val)\n    val = 4\n\nmy_list = [1, 2]\nval = 3\nmodify(my_list, val)\nmy_list.append(val)\nprint(my_list)"
+    }
+]
+}
