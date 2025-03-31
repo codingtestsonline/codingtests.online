@@ -1,0 +1,629 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that checks if a string is a palindrome?",
+      "code_example": "def is_palindrome(text):\n    clean_text = ''.join(c.lower() for c in text if c.isalnum())\n    return clean_text == clean_text[::-1]\n\nprint(is_palindrome('A man, a plan, a canal: Panama'))",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "None",
+        "D": "SyntaxError"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to create and initialize a dictionary in Python?",
+      "options": {
+        "A": "dict = {1, 2, 3}",
+        "B": "dict = (1:'one', 2:'two', 3:'three')",
+        "C": "dict = {1:'one', 2:'two', 3:'three'}",
+        "D": "dict = [1:'one', 2:'two', 3:'three']"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following list comprehension?",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nsquares = [x**2 for x in numbers if x % 2 == 0]\nprint(squares)",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]",
+        "B": "[4, 16]",
+        "C": "[2, 4]",
+        "D": "[1, 3, 5]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is the output of the following code using default parameters?",
+      "code_example": "def greet(name, greeting='Hello'):\n    return f\"{greeting}, {name}!\"\n\nprint(greet('Alice'))",
+      "options": {
+        "A": "Hello Alice",
+        "B": "Hello, Alice!",
+        "C": "Alice, Hello!",
+        "D": "Alice"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following string reversal code?",
+      "code_example": "def reverse_string(s):\n    return s[::-1]\n\nprint(reverse_string('python'))",
+      "options": {
+        "A": "python",
+        "B": "nohtyp",
+        "C": "p y t h o n",
+        "D": "Error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which of the following is a correctly formatted docstring in Python?",
+      "options": {
+        "A": "// This function calculates the sum of two numbers",
+        "B": "/* This function calculates the sum of two numbers */",
+        "C": "# This function calculates the sum of two numbers",
+        "D": "\"\"\"This function calculates the sum of two numbers\"\"\""
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is the difference between parameters and arguments in Python?",
+      "options": {
+        "A": "They are different names for the same concept",
+        "B": "Parameters are variables in function definition; arguments are values passed to the function when called",
+        "C": "Arguments are variables in function definition; parameters are values passed to the function when called",
+        "D": "Parameters are keyword arguments; arguments are positional arguments"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code with an else clause in a loop?",
+      "code_example": "for i in range(5):\n    if i == 10:\n        break\nelse:\n    print('Loop completed without break')",
+      "options": {
+        "A": "Nothing will be printed",
+        "B": "Loop completed without break",
+        "C": "SyntaxError: invalid syntax",
+        "D": "5"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code calculating the GCD?",
+      "code_example": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\nprint(gcd(48, 18))",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "6",
+        "D": "9"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using set operations?",
+      "code_example": "set1 = {1, 2, 3, 4, 5}\nset2 = {4, 5, 6, 7, 8}\nprint(set1.intersection(set2))",
+      "options": {
+        "A": "{1, 2, 3, 4, 5, 6, 7, 8}",
+        "B": "{1, 2, 3}",
+        "C": "{6, 7, 8}",
+        "D": "{4, 5}"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "According to PEP 8, which of the following is the correct naming convention for a constant in Python?",
+      "options": {
+        "A": "MAX_VALUE",
+        "B": "maxValue",
+        "C": "max_value",
+        "D": "MaxValue"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using multi-line strings?",
+      "code_example": "poem = \"\"\"Roses are red,\nViolets are blue,\nPython is fun,\nAnd so are you!\"\"\"\nprint(len(poem.splitlines()))",
+      "options": {
+        "A": "4",
+        "B": "45",
+        "C": "47",
+        "D": "1"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following selection sort implementation?",
+      "code_example": "def selection_sort(arr):\n    for i in range(len(arr)):\n        min_idx = i\n        for j in range(i+1, len(arr)):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr\n\nprint(selection_sort([64, 25, 12, 22, 11]))",
+      "options": {
+        "A": "[64, 25, 12, 22, 11]",
+        "B": "[11, 12, 22, 25, 64]",
+        "C": "[11, 25, 12, 22, 64]",
+        "D": "[11, 12, 25, 22, 64]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What is the output of the following string formatting example?",
+      "code_example": "name = 'Alice'\nage = 30\nprint(f\"{name} is {age} years old\")",
+      "options": {
+        "A": "name is age years old",
+        "B": "{name} is {age} years old",
+        "C": "Alice is 30 years old",
+        "D": "Alice is thirty years old"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a primitive type in Python?",
+      "options": {
+        "A": "int",
+        "B": "float",
+        "C": "array",
+        "D": "bool"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that creates a custom exception?",
+      "code_example": "class ValueTooSmallError(Exception):\n    \"\"\"Raised when the input value is too small\"\"\"\n    pass\n\ndef check_value(value):\n    if value < 10:\n        raise ValueTooSmallError(\"Value is too small\")\n    return \"Value is acceptable\"\n\ntry:\n    result = check_value(5)\n    print(result)\nexcept ValueTooSmallError as e:\n    print(\"Caught an exception:\")\n    print(e)",
+      "options": {
+        "A": "Value is acceptable",
+        "B": "Caught an exception:",
+        "C": "Caught an exception:\nValue is too small",
+        "D": "ValueTooSmallError: Value is too small"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using named tuples?",
+      "code_example": "from collections import namedtuple\n\nPerson = namedtuple('Person', ['name', 'age', 'job'])\nalice = Person('Alice', 30, 'Engineer')\nprint(alice.job)",
+      "options": {
+        "A": "Person",
+        "B": "Engineer",
+        "C": "{'name': 'Alice', 'age': 30, 'job': 'Engineer'}",
+        "D": "job"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a common method for API authentication?",
+      "options": {
+        "A": "OAuth 2.0",
+        "B": "API Key",
+        "C": "JWT (JSON Web Tokens)",
+        "D": "SMTP"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that detects cycles in a graph?",
+      "code_example": "def has_cycle(graph):\n    visited = set()\n    rec_stack = set()\n    \n    def dfs(node):\n        visited.add(node)\n        rec_stack.add(node)\n        \n        for neighbor in graph.get(node, []):\n            if neighbor not in visited:\n                if dfs(neighbor):\n                    return True\n            elif neighbor in rec_stack:\n                return True\n        \n        rec_stack.remove(node)\n        return False\n    \n    for node in graph:\n        if node not in visited:\n            if dfs(node):\n                return True\n    \n    return False\n\ngraph = {\n    'A': ['B', 'C'],\n    'B': ['D'],\n    'C': ['D'],\n    'D': ['A']\n}\n\nprint(has_cycle(graph))",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "None",
+        "D": "RecursionError"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which of the following frameworks would be the most appropriate for creating a simple REST API endpoint in Python?",
+      "options": {
+        "A": "Matplotlib",
+        "B": "NumPy",
+        "C": "Flask",
+        "D": "Pygame"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code generating an infinite sequence?",
+      "code_example": "def fibonacci():\n    a, b = 0, 1\n    while True:\n        yield a\n        a, b = b, a + b\n\nfib = fibonacci()\nfor _ in range(5):\n    print(next(fib), end=' ')",
+      "options": {
+        "A": "0 1 1 2 3",
+        "B": "1 1 2 3 5",
+        "C": "0 1 2 3 5",
+        "D": "Infinite loop error"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which of the following best describes immutability in Python?",
+      "options": {
+        "A": "All Python objects can be modified after creation",
+        "B": "Immutable objects can be modified after creation, but they create a new object",
+        "C": "Immutable objects cannot be modified after creation, attempts to modify them create new objects",
+        "D": "Immutability is a principle that only applies to Python functions"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "In a Django project, where should template files be located?",
+      "options": {
+        "A": "In the root directory of the project",
+        "B": "In a 'templates' directory inside the app directory",
+        "C": "In the 'views.py' file",
+        "D": "In the 'urls.py' file"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What is the time complexity of the following divide and conquer algorithm?",
+      "code_example": "def binary_search(arr, target):\n    left = 0\n    right = len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        \n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return -1",
+      "options": {
+        "A": "O(n)",
+        "B": "O(n²)",
+        "C": "O(log n)",
+        "D": "O(n log n)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code combining functional operations?",
+      "code_example": "from functools import reduce\n\nnumbers = [1, 2, 3, 4, 5]\nresult = reduce(lambda x, y: x * y, filter(lambda x: x % 2 == 1, numbers))\nprint(result)",
+      "options": {
+        "A": "15",
+        "B": "120",
+        "C": "6",
+        "D": "30"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following quicksort implementation?",
+      "code_example": "def quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    \n    return quicksort(left) + middle + quicksort(right)\n\nprint(quicksort([3, 6, 8, 10, 1, 2, 1]))",
+      "options": {
+        "A": "[1, 1, 2, 3, 6, 8, 10]",
+        "B": "[10, 8, 6, 3, 2, 1, 1]",
+        "C": "[3, 6, 8, 10, 1, 2, 1]",
+        "D": "[1, 2, 1, 3, 6, 8, 10]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a component of the Django MVT (Model-View-Template) architecture?",
+      "options": {
+        "A": "Model",
+        "B": "View",
+        "C": "Template",
+        "D": "Controller"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following dictionary comprehension?",
+      "code_example": "words = ['hello', 'world', 'python', 'programming']\nword_lengths = {word: len(word) for word in words if 'o' in word}\nprint(word_lengths)",
+      "options": {
+        "A": "{'hello': 5, 'world': 5, 'python': 6, 'programming': 11}",
+        "B": "{'hello': 5, 'world': 5, 'python': 6}",
+        "C": "{'hello': 5, 'programming': 11}",
+        "D": "{'hello': 1, 'world': 1, 'python': 1}"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "Which of the following correctly describes the difference between absolute and relative imports in Python?",
+      "options": {
+        "A": "Absolute imports use the full path from the project root; relative imports use dots to indicate parent directories",
+        "B": "Absolute imports are faster; relative imports use less memory",
+        "C": "Absolute imports work only with built-in modules; relative imports work with all modules",
+        "D": "Absolute imports are deprecated in Python 3; relative imports are recommended"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What is the main difference between generator expressions and list comprehensions?",
+      "code_example": "# Example 1\nlist_comp = [x*x for x in range(5)]\n\n# Example 2\ngen_exp = (x*x for x in range(5))\n\nprint(type(list_comp))\nprint(type(gen_exp))",
+      "options": {
+        "A": "List comprehensions are slower than generator expressions",
+        "B": "Generator expressions are evaluated lazily and generate values on demand, while list comprehensions evaluate all values at once",
+        "C": "List comprehensions can only work with integers; generator expressions work with any data type",
+        "D": "List comprehensions use round brackets; generator expressions use square brackets"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "Which environment variable influences the Python module search path?",
+      "options": {
+        "A": "PYTHON_PATH",
+        "B": "PYTHONPATH",
+        "C": "PY_PATH",
+        "D": "PYPATH"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code working with nested data structures?",
+      "code_example": "students = [\n    {'name': 'Alice', 'grades': [85, 90, 95]},\n    {'name': 'Bob', 'grades': [70, 80, 75]},\n    {'name': 'Charlie', 'grades': [90, 95, 85]}\n]\n\nhigh_performers = [student['name'] for student in students if sum(student['grades'])/len(student['grades']) >= 85]\nprint(high_performers)",
+      "options": {
+        "A": "['Alice', 'Bob', 'Charlie']",
+        "B": "['Alice', 'Charlie']",
+        "C": "[{'name': 'Alice', 'grades': [85, 90, 95]}, {'name': 'Charlie', 'grades': [90, 95, 85]}]",
+        "D": "['Alice']"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 33,
+      "difficulty": "hard",
+      "topic": "Vectorization with NumPy",
+      "question": "What is the output of the following NumPy code?",
+      "code_example": "import numpy as np\n\nx = np.array([1, 2, 3, 4])\ny = np.array([5, 6, 7, 8])\n\nresult = np.where(x > 2, x, y)\nprint(result)",
+      "options": {
+        "A": "[5, 6, 3, 4]",
+        "B": "[1, 2, 3, 4]",
+        "C": "[5, 6, 7, 8]",
+        "D": "[False, False, True, True]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "topic": "Distributed caching",
+      "question": "Which of the following statements about Redis as a distributed cache is FALSE?",
+      "options": {
+        "A": "Redis can be configured for automatic key expiration",
+        "B": "Redis supports persistence to disk for cache durability",
+        "C": "Redis allows for atomic operations on complex data structures",
+        "D": "Redis guarantees strong consistency in all cluster configurations by default"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "topic": "String algorithms (KMP, Rabin-Karp)",
+      "question": "What is the time complexity of the following Rabin-Karp string matching implementation?",
+      "code_example": "def rabin_karp(text, pattern):\n    n, m = len(text), len(pattern)\n    if m > n:\n        return -1\n    \n    # Prime number for hash calculation\n    p = 31\n    # Large prime to avoid overflow\n    mod = 10**9 + 9\n    \n    # Precompute powers of p\n    p_pow = [1]\n    for i in range(1, n):\n        p_pow.append((p_pow[-1] * p) % mod)\n    \n    # Compute hash values\n    text_hash = [0] * (n + 1)\n    for i in range(n):\n        text_hash[i+1] = (text_hash[i] + (ord(text[i]) - ord('a') + 1) * p_pow[i]) % mod\n    \n    pattern_hash = 0\n    for i in range(m):\n        pattern_hash = (pattern_hash + (ord(pattern[i]) - ord('a') + 1) * p_pow[i]) % mod\n    \n    # Check each possible position\n    for i in range(n - m + 1):\n        curr_hash = (text_hash[i+m] - text_hash[i]) % mod\n        if curr_hash == (pattern_hash * p_pow[i]) % mod:\n            # Verify match (to avoid hash collisions)\n            if text[i:i+m] == pattern:\n                return i\n    \n    return -1",
+      "options": {
+        "A": "O(n+m) average case, O(nm) worst case",
+        "B": "O(n+m) in all cases",
+        "C": "O(nm) in all cases",
+        "D": "O(n log m) in all cases"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "topic": "Abstract classes and interfaces",
+      "question": "What will be the output of the following code using abstract base classes?",
+      "code_example": "from abc import ABC, abstractmethod\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self):\n        pass\n    \n    def description(self):\n        return f\"This shape has an area of {self.area()}\"\n\nclass Circle(Shape):\n    def __init__(self, radius):\n        self.radius = radius\n    \n    def area(self):\n        return 3.14 * self.radius ** 2\n\nclass Rectangle(Shape):\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n\ntry:\n    circle = Circle(5)\n    print(\"A:\", circle.description())\n    \n    rectangle = Rectangle(4, 5)\n    print(\"B:\", rectangle.description())\n    \n    shape = Shape()\n    print(\"C:\", shape.description())\n    \nexpect TypeError:\n    print(\"D: TypeError occurred\")",
+      "options": {
+        "A": "A: This shape has an area of 78.5\nB: This shape has an area of 20\nC: This shape has an area of None",
+        "B": "D: TypeError occurred",
+        "C": "A: This shape has an area of 78.5\nD: TypeError occurred",
+        "D": "A: This shape has an area of 78.5"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "topic": "Segment trees",
+      "question": "What will be the output of the following segment tree implementation when querying for the sum of elements from index 1 to 3 in the array [1, 3, 5, 7, 9]?",
+      "code_example": "class SegmentTree:\n    def __init__(self, arr):\n        self.n = len(arr)\n        self.tree = [0] * (4 * self.n)\n        self._build(arr, 1, 0, self.n - 1)\n    \n    def _build(self, arr, node, start, end):\n        if start == end:\n            self.tree[node] = arr[start]\n        else:\n            mid = (start + end) // 2\n            self._build(arr, 2 * node, start, mid)\n            self._build(arr, 2 * node + 1, mid + 1, end)\n            self.tree[node] = self.tree[2 * node] + self.tree[2 * node + 1]\n    \n    def query(self, left, right):\n        return self._query(1, 0, self.n - 1, left, right)\n    \n    def _query(self, node, start, end, left, right):\n        if right < start or end < left:\n            return 0\n        \n        if left <= start and end <= right:\n            return self.tree[node]\n        \n        mid = (start + end) // 2\n        left_sum = self._query(2 * node, start, mid, left, right)\n        right_sum = self._query(2 * node + 1, mid + 1, end, left, right)\n        \n        return left_sum + right_sum\n\narr = [1, 3, 5, 7, 9]\nseg_tree = SegmentTree(arr)\nprint(seg_tree.query(1, 3))",
+      "options": {
+        "A": "9",
+        "B": "15",
+        "C": "16",
+        "D": "25"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "topic": "Unit testing (unittest, pytest)",
+      "question": "What will happen when the following pytest code is executed?",
+      "code_example": "import pytest\n\nclass Calculator:\n    def add(self, a, b):\n        return a + b\n    \n    def divide(self, a, b):\n        if b == 0:\n            raise ValueError(\"Cannot divide by zero\")\n        return a / b\n\nclass TestCalculator:\n    @pytest.fixture\n    def calculator(self):\n        return Calculator()\n    \n    def test_add(self, calculator):\n        assert calculator.add(2, 3) == 5\n    \n    def test_divide(self, calculator):\n        assert calculator.divide(10, 2) == 5\n    \n    def test_divide_by_zero(self, calculator):\n        with pytest.raises(ValueError, match=\"Cannot divide by zero\"):\n            calculator.divide(10, 0)\n    \n    @pytest.mark.parametrize(\"a,b,expected\", [\n        (5, 5, 10),\n        (1, -1, 0),\n        (0, 0, 1)  # This will fail\n    ])\n    def test_add_parametrized(self, calculator, a, b, expected):\n        assert calculator.add(a, b) == expected",
+      "options": {
+        "A": "All tests pass successfully",
+        "B": "One test fails due to a parametrized test case",
+        "C": "Two tests fail: one due to a parametrized test case and one due to a division by zero error",
+        "D": "All tests fail due to incorrect fixture usage"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "topic": "Backtracking algorithms",
+      "question": "What will be the output of the following N-Queens backtracking implementation for n=4?",
+      "code_example": "def solve_n_queens(n):\n    def is_safe(board, row, col):\n        # Check if a queen can be placed at board[row][col]\n        \n        # Check the row on the left side\n        for i in range(col):\n            if board[row][i] == 'Q':\n                return False\n        \n        # Check upper diagonal on left side\n        for i, j in zip(range(row, -1, -1), range(col, -1, -1)):\n            if board[i][j] == 'Q':\n                return False\n        \n        # Check lower diagonal on left side\n        for i, j in zip(range(row, n), range(col, -1, -1)):\n            if board[i][j] == 'Q':\n                return False\n        \n        return True\n    \n    def backtrack(board, col):\n        # If all queens are placed, add the solution\n        if col >= n:\n            solutions.append([''.join(row) for row in board])\n            return\n        \n        # Try placing a queen in each row of the current column\n        for row in range(n):\n            if is_safe(board, row, col):\n                # Place the queen\n                board[row][col] = 'Q'\n                \n                # Recur to place the rest of the queens\n                backtrack(board, col + 1)\n                \n                # Backtrack and remove the queen\n                board[row][col] = '.'\n    \n    # Initialize the board with empty cells\n    board = [['.'] * n for _ in range(n)]\n    solutions = []\n    \n    # Start backtracking from the first column\n    backtrack(board, 0)\n    \n    return len(solutions)\n\nprint(solve_n_queens(4))",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "4",
+        "D": "92"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "topic": "Infrastructure as code",
+      "question": "Which of the following statements about Infrastructure as Code (IaC) in Python is FALSE?",
+      "options": {
+        "A": "Pulumi allows Python to be used for defining cloud infrastructure",
+        "B": "AWS CDK can be used with Python to define AWS resources",
+        "C": "Terraform's HCL can be directly embedded within Python code for hybrid IaC approaches",
+        "D": "Python can be used with Ansible for configuration management"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "topic": "Database sharding and replication",
+      "question": "What is the output of the following function that simulates consistent hashing for database sharding?",
+      "code_example": "import hashlib\n\nclass ConsistentHashing:\n    def __init__(self, nodes=None, replicas=3):\n        self.replicas = replicas\n        self.ring = {}\n        self.sorted_keys = []\n        \n        if nodes:\n            for node in nodes:\n                self.add_node(node)\n    \n    def add_node(self, node):\n        for i in range(self.replicas):\n            key = self._hash(f\"{node}:{i}\")\n            self.ring[key] = node\n            self.sorted_keys.append(key)\n        \n        self.sorted_keys.sort()\n    \n    def remove_node(self, node):\n        for i in range(self.replicas):\n            key = self._hash(f\"{node}:{i}\")\n            del self.ring[key]\n            self.sorted_keys.remove(key)\n    \n    def get_node(self, key):\n        if not self.ring:\n            return None\n        \n        hash_key = self._hash(key)\n        \n        # Find the first node in the ring that has a key greater than or equal to the hash_key\n        for ring_key in self.sorted_keys:\n            if hash_key <= ring_key:\n                return self.ring[ring_key]\n        \n        # If we reached here, it means the hash_key is greater than all keys in the ring\n        # So we wrap around to the first node\n        return self.ring[self.sorted_keys[0]]\n    \n    def _hash(self, key):\n        # Using MD5 for simplicity\n        return int(hashlib.md5(key.encode('utf-8')).hexdigest(), 16)\n\n# Test the consistent hashing\nch = ConsistentHashing(nodes=['node1', 'node2', 'node3'], replicas=1)\n\n# Remove a node to simulate a node failure\nch.remove_node('node2')\n\n# Get the node for a specific key\nassignments = {}\nfor key in ['user1', 'user2', 'user3', 'user4', 'user5']:\n    node = ch.get_node(key)\n    if node in assignments:\n        assignments[node].append(key)\n    else:\n        assignments[node] = [key]\n\n# Count how many keys were assigned to each node\nnode_counts = {node: len(keys) for node, keys in assignments.items()}\nprint(sorted(node_counts.items()))",
+      "options": {
+        "A": "[('node1', 2), ('node3', 3)]",
+        "B": "[('node1', 5)]",
+        "C": "[('node1', 3), ('node3', 2)]",
+        "D": "[('node3', 5)]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "topic": "Memoization vs tabulation",
+      "question": "What is the output of the following code comparing memoization and tabulation approaches for the Fibonacci sequence?",
+      "code_example": "import time\n\ndef fibonacci_memoization(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 1:\n        return n\n    memo[n] = fibonacci_memoization(n-1, memo) + fibonacci_memoization(n-2, memo)\n    return memo[n]\n\ndef fibonacci_tabulation(n):\n    if n <= 1:\n        return n\n    \n    dp = [0] * (n+1)\n    dp[1] = 1\n    \n    for i in range(2, n+1):\n        dp[i] = dp[i-1] + dp[i-2]\n    \n    return dp[n]\n\n# Test case value\nn = 30\n\n# Measure time for memoization approach\nmemo_start = time.time()\nmemo_result = fibonacci_memoization(n)\nmemo_time = time.time() - memo_start\n\n# Reset memoization cache\nfibonacci_memoization.__defaults__ = ({},)\n\n# Measure time for tabulation approach\ntab_start = time.time()\ntab_result = fibonacci_tabulation(n)\ntab_time = time.time() - tab_start\n\n# Compare results and determine which is faster\nif memo_time < tab_time:\n    faster = \"memoization\"\nelse:\n    faster = \"tabulation\"\n\nprint(f\"For n={n}, {faster} is faster. Results match: {memo_result == tab_result}\")",
+      "options": {
+        "A": "For n=30, memoization is faster. Results match: True",
+        "B": "For n=30, tabulation is faster. Results match: True",
+        "C": "For n=30, memoization is faster. Results match: False",
+        "D": "For n=30, tabulation is faster. Results match: False"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "topic": "Race conditions and deadlocks",
+      "question": "What will be the output of the following code that simulates a race condition with Python's threading?",
+      "code_example": "import threading\nimport time\n\nclass Counter:\n    def __init__(self):\n        self.count = 0\n        self.lock = threading.Lock()\n    \n    def increment(self):\n        current = self.count\n        time.sleep(0.001)  # Simulate some work\n        self.count = current + 1\n    \n    def safe_increment(self):\n        with self.lock:\n            current = self.count\n            time.sleep(0.001)  # Simulate some work\n            self.count = current + 1\n\ndef worker(counter, use_lock, num_increments=100):\n    for _ in range(num_increments):\n        if use_lock:\n            counter.safe_increment()\n        else:\n            counter.increment()\n\n# Test without lock (race condition)\nunprotected_counter = Counter()\nnum_threads = 5\nthreads = []\n\nfor _ in range(num_threads):\n    t = threading.Thread(target=worker, args=(unprotected_counter, False, 10))\n    threads.append(t)\n    t.start()\n\nfor t in threads:\n    t.join()\n\n# Test with lock (protected)\nprotected_counter = Counter()\nthreads = []\n\nfor _ in range(num_threads):\n    t = threading.Thread(target=worker, args=(protected_counter, True, 10))\n    threads.append(t)\n    t.start()\n\nfor t in threads:\n    t.join()\n\nprint(f\"Without lock: {unprotected_counter.count}, With lock: {protected_counter.count}\")",
+      "options": {
+        "A": "Without lock: 50, With lock: 50",
+        "B": "Without lock: 5, With lock: 50",
+        "C": "Without lock: A number less than 50, With lock: 50",
+        "D": "Without lock: 50, With lock: A number less than 50"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "topic": "Matplotlib/Seaborn for visualization",
+      "question": "What is incorrect about the following code that uses Matplotlib and Seaborn for data visualization?",
+      "code_example": "import matplotlib.pyplot as plt\nimport seaborn as sns\nimport numpy as np\nimport pandas as pd\n\n# Create sample data\nnp.random.seed(42)\nx = np.random.normal(0, 1, 1000)\ny = x * 3 + np.random.normal(0, 1, 1000)\ndf = pd.DataFrame({'x': x, 'y': y})\n\n# Create a figure with multiple subplots\nfig, axes = plt.subplots(2, 2, figsize=(12, 10))\n\n# Plot 1: Scatter plot with regression line\nsns.regplot(x='x', y='y', data=df, ax=axes[0, 0])\naxes[0, 0].set_title('Regression Plot')\n\n# Plot 2: Histogram with KDE\nsns.histplot(df['x'], kde=True, ax=axes[0, 1])\naxes[0, 1].set_title('Histogram with KDE')\n\n# Plot 3: Box plot\nsns.boxplot(y=df['y'], ax=axes[1, 0])\naxes[1, 0].set_title('Box Plot')\n\n# Plot 4: Heatmap of correlation\ncorr = df.corr()\nsns.heatmap(corr, annot=True, cmap='coolwarm', ax=axes[1, 1])\naxes[1, 1].set_title('Correlation Heatmap')\n\n# Adjust layout\nplt.tight_layout()\n\n# Save the figure\nplt.savefig('data_visualization.png', dpi=300)\n\n# Display the figure\nplt.show()",
+      "options": {
+        "A": "The heatmap visualization is incorrect because a correlation matrix of a DataFrame with only two columns will always be a 2x2 matrix",
+        "B": "The random seed is set incorrectly which will cause inconsistent results in different environments",
+        "C": "The boxplot should use the `x` parameter instead of `y` for proper vertical orientation",
+        "D": "The `tight_layout()` call is redundant when using `plt.savefig()` as it's applied automatically"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "topic": "Ethical scraping practices",
+      "question": "Which of the following is NOT considered an ethical practice when scraping websites with Python?",
+      "options": {
+        "A": "Including your contact information in the User-Agent string",
+        "B": "Using IP rotation services to bypass rate limiting",
+        "C": "Respecting robots.txt directives",
+        "D": "Implementing delays between requests to reduce server load"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "topic": "Abstract base classes",
+      "question": "What will be the output of the following code using abstract base classes from the `collections.abc` module?",
+      "code_example": "from collections.abc import Mapping, MutableSequence\n\nclass CustomDict(Mapping):\n    def __init__(self, data=None):\n        self._data = data or {}\n    \n    def __getitem__(self, key):\n        return self._data[key]\n    \n    def __iter__(self):\n        return iter(self._data)\n    \n    def __len__(self):\n        return len(self._data)\n\nclass CustomList(MutableSequence):\n    def __init__(self, data=None):\n        self._data = data or []\n    \n    def __getitem__(self, index):\n        return self._data[index]\n    \n    def __setitem__(self, index, value):\n        self._data[index] = value\n    \n    def __delitem__(self, index):\n        del self._data[index]\n    \n    def __len__(self):\n        return len(self._data)\n    \n    # Missing required method\n\ntry:\n    d = CustomDict({1: 'a', 2: 'b'})\n    print(f\"Dict works: {isinstance(d, Mapping)}\")\n    \n    l = CustomList([1, 2, 3])\n    print(f\"List works: {isinstance(l, MutableSequence)}\")\nexcept TypeError as e:\n    print(f\"Error: {str(e)}\")",
+      "options": {
+        "A": "Dict works: True\nList works: True",
+        "B": "Dict works: True\nError: Can't instantiate abstract class CustomList with abstract methods insert",
+        "C": "Error: Can't instantiate abstract class CustomDict with abstract methods keys",
+        "D": "Error: Can't instantiate abstract class CustomList with abstract methods append"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "topic": "Space optimization techniques",
+      "question": "What will be the output of the following code that demonstrates space optimization with a generator?",
+      "code_example": "import sys\n\ndef fibonacci_list(n):\n    result = []\n    a, b = 0, 1\n    for _ in range(n):\n        result.append(a)\n        a, b = b, a + b\n    return result\n\ndef fibonacci_generator(n):\n    a, b = 0, 1\n    for _ in range(n):\n        yield a\n        a, b = b, a + b\n\n# Compare memory usage\nn = 10000\n\n# Create a list of Fibonacci numbers\nfib_list = fibonacci_list(n)\nlist_size = sys.getsizeof(fib_list) + sum(sys.getsizeof(i) for i in fib_list)\n\n# Create a generator of Fibonacci numbers\nfib_gen = fibonacci_generator(n)\ngen_size = sys.getsizeof(fib_gen)\n\n# Calculate the last Fibonacci number using the generator\nlast_fib = 0\nfor i in fibonacci_generator(n):\n    last_fib = i\n\n# Output the results\nprint(f\"Size ratio (list:generator): {list_size // gen_size}:1\")",
+      "options": {
+        "A": "Size ratio (list:generator): approximately 100:1",
+        "B": "Size ratio (list:generator): approximately 1000:1",
+        "C": "Size ratio (list:generator): approximately 10000:1",
+        "D": "Size ratio (list:generator): approximately 1:1"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "topic": "Secure coding practices",
+      "question": "What security vulnerability is present in the following code?",
+      "code_example": "from flask import Flask, request, render_template_string\nimport sqlite3\nimport hashlib\n\napp = Flask(__name__)\n\n@app.route('/login', methods=['GET', 'POST'])\ndef login():\n    error = None\n    if request.method == 'POST':\n        username = request.form['username']\n        password = request.form['password']\n        \n        # Hash the password\n        hashed_password = hashlib.md5(password.encode()).hexdigest()\n        \n        # Connect to the database\n        conn = sqlite3.connect('users.db')\n        cursor = conn.cursor()\n        \n        # Query the database\n        query = f\"SELECT * FROM users WHERE username = '{username}' AND password = '{hashed_password}'\"\n        cursor.execute(query)\n        user = cursor.fetchone()\n        \n        if user:\n            # User found, create a welcome message\n            template = f'''\n            <div>\n                <h1>Welcome, {username}!</h1>\n                <p>You have successfully logged in.</p>\n            </div>\n            '''\n            return render_template_string(template)\n        else:\n            error = 'Invalid credentials'\n    \n    return '''<form method=\"post\">\n                <input type=\"text\" name=\"username\">\n                <input type=\"password\" name=\"password\">\n                <input type=\"submit\" value=\"Login\">\n             </form>''' + (error or '')",
+      "options": {
+        "A": "Cross-Site Request Forgery (CSRF) due to missing CSRF token",
+        "B": "SQL Injection vulnerability in the query construction",
+        "C": "Server-Side Template Injection in render_template_string",
+        "D": "All of the above"
+      },
+      "correct_answer": "D"
+    }
+  ]
+}
