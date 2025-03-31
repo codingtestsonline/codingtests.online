@@ -1,0 +1,615 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello",
+        "B": "World",
+        "C": "HelloWorld",
+        "D": "Hello World"
+      },
+      "correct_answer": "C",
+      "code_example": "def concatenate(a, b):\n    return a + b\n\nresult = concatenate(\"Hello\", \"World\")\nprint(result)"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will the following code print?",
+      "options": {
+        "A": "Adult",
+        "B": "Minor",
+        "C": "Child",
+        "D": "Error"
+      },
+      "correct_answer": "A",
+      "code_example": "age = 25\n\nif age < 13:\n    status = \"Child\"\nelif age < 18:\n    status = \"Minor\"\nelse:\n    status = \"Adult\"\n    \nprint(status)"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the value of numbers after executing the following code?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[1, 2, 3, 4]",
+        "C": "[2, 3, 4, 5]",
+        "D": "[1, 2, 3, 4, 5, 6]"
+      },
+      "correct_answer": "A",
+      "code_example": "numbers = [1, 2, 3]\nnumbers.append(4)\nnumbers.append(5)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be printed by the following code?",
+      "options": {
+        "A": "1 2 3 4 5",
+        "B": "1 2",
+        "C": "1 2 3",
+        "D": "Nothing will be printed"
+      },
+      "correct_answer": "C",
+      "code_example": "i = 1\nwhile i <= 5:\n    print(i, end=\" \")\n    if i == 3:\n        break\n    i += 1"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello, John! You are 30 years old.",
+        "B": "Hello, John! You are 30 years old",
+        "C": "Hello John! You are 30 years old.",
+        "D": "Hello, John! You are thirty years old."
+      },
+      "correct_answer": "A",
+      "code_example": "name = \"John\"\nage = 30\ngreeting = f\"Hello, {name}! You are {age} years old.\"\nprint(greeting)"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What is the correct implementation of a linear search function in Python?",
+      "options": {
+        "A": "def linear_search(arr, target):\n    for i in range(len(arr)):\n        if arr[i] == target:\n            return i\n    return -1",
+        "B": "def linear_search(arr, target):\n    for item in arr:\n        if item == target:\n            return item\n    return None",
+        "C": "def linear_search(arr, target):\n    i = 0\n    while i < len(arr):\n        if arr[i] == target:\n            return True\n        i += 1",
+        "D": "def linear_search(arr, target):\n    return arr.index(target)"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What exception will be raised when executing the following code?",
+      "options": {
+        "A": "TypeError",
+        "B": "ValueError",
+        "C": "IndexError",
+        "D": "KeyError"
+      },
+      "correct_answer": "C",
+      "code_example": "numbers = [1, 2, 3]\nprint(numbers[5])"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be printed by the following code?",
+      "options": {
+        "A": "Try block",
+        "B": "Try block\\nExcept block\\nFinally block",
+        "C": "Except block\\nFinally block",
+        "D": "Try block\\nFinally block"
+      },
+      "correct_answer": "B",
+      "code_example": "try:\n    print(\"Try block\")\n    x = 1 / 0\nexcept ZeroDivisionError:\n    print(\"Except block\")\nfinally:\n    print(\"Finally block\")"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Consider the implementation of selection sort below. What is wrong with it?",
+      "options": {
+        "A": "The outer loop should start from 0, not 1",
+        "B": "The inner loop should start from i+1, not 0",
+        "C": "The comparison should be arr[j] < arr[min_idx], not arr[j] > arr[min_idx]",
+        "D": "There is no issue; the implementation is correct"
+      },
+      "correct_answer": "B",
+      "code_example": "def selection_sort(arr):\n    for i in range(1, len(arr)):\n        min_idx = i\n        for j in range(0, len(arr)):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the value of x after the following code executes?",
+      "options": {
+        "A": "10",
+        "B": "5",
+        "C": "15",
+        "D": "Error: UnboundLocalError"
+      },
+      "correct_answer": "D",
+      "code_example": "x = 5\ndef modify_x():\n    x += 10\n    return x\n\nmodify_x()"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "Which of the following code blocks correctly handles multiple exception types?",
+      "options": {
+        "A": "try:\n    value = int(input())\nexcept (ValueError, TypeError):\n    print(\"Invalid input\")",
+        "B": "try:\n    value = int(input())\nexcept ValueError, TypeError:\n    print(\"Invalid input\")",
+        "C": "try:\n    value = int(input())\nexcept ValueError or TypeError:\n    print(\"Invalid input\")",
+        "D": "try:\n    value = int(input())\nexcept ValueError and TypeError:\n    print(\"Invalid input\")"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "{1, 2, 3, 4, 5, 6}",
+        "B": "{1, 2, 3, 4}",
+        "C": "{3, 4, 5, 6}",
+        "D": "{1, 2, 5, 6}"
+      },
+      "correct_answer": "A",
+      "code_example": "set1 = {1, 2, 3, 4}\nset2 = {3, 4, 5, 6}\nresult = set1.union(set2)\nprint(result)"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "Which of the following correctly defines a custom exception in Python?",
+      "options": {
+        "A": "class CustomError(Exception):\n    pass",
+        "B": "class CustomError:\n    def __init__(self, message):\n        self.message = message",
+        "C": "def CustomError(Exception):\n    pass",
+        "D": "CustomError = type(Exception)"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "According to PEP 8, which of the following is the correct naming convention for a constant in Python?",
+      "options": {
+        "A": "MAX_VALUE",
+        "B": "maxValue",
+        "C": "max_value",
+        "D": "MAXVALUE"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello",
+        "B": "olleH",
+        "C": "HEllo",
+        "D": "olleh"
+      },
+      "correct_answer": "B",
+      "code_example": "text = \"Hello\"\nreversed_text = text[::-1]\nprint(reversed_text)"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "Which file mode would you use to append binary data to an existing file?",
+      "options": {
+        "A": "a",
+        "B": "ab",
+        "C": "w+b",
+        "D": "rb+"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which of the following code snippets correctly uses the requests library to perform a GET request and handle possible exceptions?",
+      "options": {
+        "A": "import requests\n\nresponse = requests.get('https://api.example.com/data')\ndata = response.json()",
+        "B": "import requests\n\ntry:\n    response = requests.get('https://api.example.com/data')\n    response.raise_for_status()\n    data = response.json()\nexcept requests.exceptions.RequestException as e:\n    print(f\"Error: {e}\")",
+        "C": "import requests\n\nresponse = requests.get('https://api.example.com/data', verify=True)\nif response.status_code == 200:\n    data = response.text()\nelse:\n    print(\"Request failed\")",
+        "D": "import requests\n\nwith requests.get('https://api.example.com/data') as response:\n    data = response.json()"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following represents a correct implementation of CRUD operations using a dictionary-based data store?",
+      "options": {
+        "A": "class DataStore:\n    def __init__(self):\n        self.data = {}\n    \n    def create(self, key, value):\n        if key in self.data:\n            raise KeyError(\"Key already exists\")\n        self.data[key] = value\n        return True\n    \n    def read(self, key):\n        return self.data.get(key)\n    \n    def update(self, key, value):\n        if key not in self.data:\n            return False\n        self.data[key] = value\n        return True\n    \n    def delete(self, key):\n        if key not in self.data:\n            return False\n        del self.data[key]\n        return True",
+        "B": "class DataStore:\n    def __init__(self):\n        self.data = {}\n    \n    def create(self, key, value):\n        self.data[key] = value\n    \n    def read(self, key):\n        return self.data[key]\n    \n    def update(self, key, value):\n        self.data[key] = value\n    \n    def delete(self, key):\n        self.data.pop(key)",
+        "C": "class DataStore:\n    def __init__(self):\n        self.data = {}\n    \n    def add(self, key, value):\n        self.data[key] = value\n    \n    def get(self, key):\n        return self.data.get(key)\n    \n    def set(self, key, value):\n        self.data[key] = value\n    \n    def remove(self, key):\n        del self.data[key]",
+        "D": "class DataStore:\n    def __init__(self):\n        self.data = {}\n    \n    def write(self, key, value):\n        self.data[key] = value\n        return key\n    \n    def fetch(self, key):\n        return self.data.get(key, None)\n    \n    def modify(self, key, value):\n        if key in self.data:\n            self.data[key] = value\n            return True\n        return False\n    \n    def erase(self, key):\n        return self.data.pop(key, None)"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What does the following function implement?",
+      "options": {
+        "A": "Depth-first search",
+        "B": "Breadth-first search",
+        "C": "Dijkstra's algorithm",
+        "D": "A* search"
+      },
+      "correct_answer": "B",
+      "code_example": "from collections import deque\n\ndef search(graph, start):\n    visited = set()\n    queue = deque([start])\n    visited.add(start)\n    \n    while queue:\n        vertex = queue.popleft()\n        print(vertex, end=\" \")\n        \n        for neighbor in graph[vertex]:\n            if neighbor not in visited:\n                visited.add(neighbor)\n                queue.append(neighbor)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which of the following is a correct implementation of a stack and queue using Python list?",
+      "options": {
+        "A": "class Stack:\n    def __init__(self):\n        self.items = []\n    \n    def push(self, item):\n        self.items.append(item)\n    \n    def pop(self):\n        return self.items.pop()\n    \n    def is_empty(self):\n        return len(self.items) == 0\n\nclass Queue:\n    def __init__(self):\n        self.items = []\n    \n    def enqueue(self, item):\n        self.items.append(item)\n    \n    def dequeue(self):\n        return self.items.pop(0)\n    \n    def is_empty(self):\n        return len(self.items) == 0",
+        "B": "class Stack:\n    def __init__(self):\n        self.items = []\n    \n    def push(self, item):\n        self.items.insert(0, item)\n    \n    def pop(self):\n        return self.items.pop(0)\n    \n    def is_empty(self):\n        return len(self.items) == 0\n\nclass Queue:\n    def __init__(self):\n        self.items = []\n    \n    def enqueue(self, item):\n        self.items.insert(0, item)\n    \n    def dequeue(self):\n        return self.items.pop()\n    \n    def is_empty(self):\n        return len(self.items) == 0",
+        "C": "class Stack:\n    def __init__(self):\n        self.items = []\n    \n    def add(self, item):\n        self.items.append(item)\n    \n    def remove(self):\n        return self.items.pop()\n    \n    def is_empty(self):\n        return not self.items\n\nclass Queue:\n    def __init__(self):\n        self.items = []\n    \n    def add(self, item):\n        self.items.append(item)\n    \n    def remove(self):\n        return self.items.pop(0)\n    \n    def is_empty(self):\n        return not self.items",
+        "D": "class Stack:\n    def __init__(self):\n        self.items = []\n    \n    def push(self, item):\n        return self.items.append(item)\n    \n    def pop(self):\n        if not self.is_empty():\n            return self.items.pop(0)\n    \n    def is_empty(self):\n        return len(self.items) == 0\n\nclass Queue:\n    def __init__(self):\n        self.items = []\n    \n    def enqueue(self, item):\n        return self.items.append(item)\n    \n    def dequeue(self):\n        if not self.is_empty():\n            return self.items.pop()\n    \n    def is_empty(self):\n        return len(self.items) == 0"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "[1, 4, 9, 16]",
+        "B": "[1, 4, 9, 16, 25]",
+        "C": "[1, 4, 9]",
+        "D": "[1, 4, 9, 16, 25, 36]"
+      },
+      "correct_answer": "A",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nsquared = list(map(lambda x: x**2, filter(lambda x: x <= 4, numbers)))\nprint(squared)"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which of the following correctly initializes a basic Flask application?",
+      "options": {
+        "A": "from flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef hello_world():\n    return 'Hello, World!'\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+        "B": "import flask\n\napp = flask.App()\n\n@app.url('/')\ndef hello_world():\n    return 'Hello, World!'\n\nif __name__ == '__main__':\n    app.start()",
+        "C": "from flask import Flask\n\napp = Flask()\n\n@app.route('/')\ndef hello_world():\n    return 'Hello, World!'\n\napp.run()",
+        "D": "import flask\n\nclass App(flask.Flask):\n    def __init__(self):\n        super().__init__()\n        self.add_url_rule('/', 'hello', self.hello_world)\n    \n    def hello_world(self):\n        return 'Hello, World!'\n\napp = App()\napp.run()"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "30",
+        "B": "[10, 20, 30]",
+        "C": "10",
+        "D": "Error"
+      },
+      "correct_answer": "C",
+      "code_example": "data = [\n    {'name': 'Alice', 'scores': [10, 20, 30]},\n    {'name': 'Bob', 'scores': [15, 25, 35]},\n    {'name': 'Charlie', 'scores': [5, 15, 25]}\n]\n\nprint(data[0]['scores'][0])"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will the following code output?",
+      "options": {
+        "A": "10",
+        "B": "11",
+        "C": "21",
+        "D": "Error: local variable 'x' referenced before assignment"
+      },
+      "correct_answer": "B",
+      "code_example": "def outer():\n    x = 10\n    def inner():\n        nonlocal x\n        x += 1\n        return x\n    return inner()\n\nresult = outer()\nprint(result)"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What is the time complexity of the recursive fibonacci function below when using memoization?",
+      "options": {
+        "A": "O(2^n)",
+        "B": "O(n)",
+        "C": "O(n^2)",
+        "D": "O(log n)"
+      },
+      "correct_answer": "B",
+      "code_example": "def fibonacci(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 1:\n        return n\n    memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)\n    return memo[n]"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What does the following function implement?",
+      "options": {
+        "A": "Bubble sort",
+        "B": "Selection sort",
+        "C": "Insertion sort",
+        "D": "Merge sort"
+      },
+      "correct_answer": "D",
+      "code_example": "def sort_algorithm(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    mid = len(arr) // 2\n    left = sort_algorithm(arr[:mid])\n    right = sort_algorithm(arr[mid:])\n    \n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    \n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What's wrong with the following class implementation?",
+      "options": {
+        "A": "The constructor parameter should be self, not cls",
+        "B": "Instance attributes should be defined using self.attribute, not cls.attribute",
+        "C": "The greet method is missing the self parameter",
+        "D": "There's nothing wrong with this implementation"
+      },
+      "correct_answer": "B",
+      "code_example": "class Person:\n    def __init__(cls, name, age):\n        cls.name = name\n        cls.age = age\n    \n    def greet(self):\n        return f\"Hello, my name is {self.name} and I'm {self.age} years old.\""
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "Which of the following correctly implements a basic binary tree node and insertion method?",
+      "options": {
+        "A": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\ndef insert(root, value):\n    if root is None:\n        return Node(value)\n    if value < root.value:\n        root.left = insert(root.left, value)\n    else:\n        root.right = insert(root.right, value)\n    return root",
+        "B": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\ndef insert(root, value):\n    if root is None:\n        return Node(value)\n    if value < root.value:\n        if root.left is None:\n            root.left = Node(value)\n        else:\n            insert(root.left, value)\n    else:\n        if root.right is None:\n            root.right = Node(value)\n        else:\n            insert(root.right, value)",
+        "C": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.children = []\n\ndef insert(root, value):\n    if root is None:\n        return Node(value)\n    if value < root.value:\n        new_node = Node(value)\n        root.children.append(new_node)\n    else:\n        if root.children:\n            insert(root.children[0], value)\n        else:\n            root.children.append(Node(value))",
+        "D": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\ndef insert(root, value):\n    current = root\n    while current:\n        if value < current.value:\n            current = current.left\n        else:\n            current = current.right\n    current = Node(value)"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using a decorator?",
+      "options": {
+        "A": "Hello, World!",
+        "B": "HELLO, WORLD!",
+        "C": "Before function\\nHello, World!\\nAfter function",
+        "D": "Before function\\nHELLO, WORLD!\\nAfter function"
+      },
+      "correct_answer": "C",
+      "code_example": "def log_execution(func):\n    def wrapper(*args, **kwargs):\n        print(\"Before function\")\n        result = func(*args, **kwargs)\n        print(\"After function\")\n        return result\n    return wrapper\n\n@log_execution\ndef say_hello(message):\n    print(message)\n\nsay_hello(\"Hello, World!\")"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "Which normalization form addresses the issue of transitive dependencies in a database?",
+      "options": {
+        "A": "First Normal Form (1NF)",
+        "B": "Second Normal Form (2NF)",
+        "C": "Third Normal Form (3NF)",
+        "D": "Boyce-Codd Normal Form (BCNF)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "Which of the following is the correct way to establish a connection to a SQLite database in Python?",
+      "options": {
+        "A": "import sqlite3\n\nconn = sqlite3.connect('example.db')\ncursor = conn.cursor()",
+        "B": "import mysql.connector\n\nconn = mysql.connector.connect(database='example.db')\ncursor = conn.cursor()",
+        "C": "from database import sqlite\n\nconn = sqlite.open('example.db')\ncursor = conn.execute()",
+        "D": "import sqlite\n\nconn = sqlite.Connection('example.db')\ncursor = conn.createCursor()"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What is the primary advantage of hash-based searching over linear searching?",
+      "options": {
+        "A": "Hash-based searching always uses less memory",
+        "B": "Hash-based searching has an average time complexity of O(1) for lookups",
+        "C": "Hash-based searching maintains the order of elements",
+        "D": "Hash-based searching works better with mutable objects"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which of the following correctly implements the Singleton design pattern in Python?",
+      "options": {
+        "A": "Using a class decorator that returns the same instance every time",
+        "B": "Using a metaclass to control instance creation",
+        "C": "Using a global variable to store the instance",
+        "D": "Using a static method to create instances"
+      },
+      "correct_answer": "B",
+      "code_example": "class SingletonMeta(type):\n    _instances = {}\n    \n    def __call__(cls, *args, **kwargs):\n        if cls not in cls._instances:\n            cls._instances[cls] = super().__call__(*args, **kwargs)\n        return cls._instances[cls]\n\nclass DatabaseConnection(metaclass=SingletonMeta):\n    def __init__(self):\n        self.connection_id = id(self)\n        \n# Test the Singleton behavior\nconn1 = DatabaseConnection()\nconn2 = DatabaseConnection()\nprint(conn1 is conn2)  # Should be True\nprint(conn1.connection_id == conn2.connection_id)  # Should be True"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates Python's Method Resolution Order (MRO) with multiple inheritance?",
+      "options": {
+        "A": "['D', 'B', 'C', 'A', 'object']",
+        "B": "['D', 'C', 'B', 'A', 'object']",
+        "C": "['D', 'B', 'A', 'C', 'object']",
+        "D": "['D', 'A', 'B', 'C', 'object']"
+      },
+      "correct_answer": "A",
+      "code_example": "class A(object):\n    pass\n\nclass B(A):\n    pass\n\nclass C(A):\n    pass\n\nclass D(B, C):\n    pass\n\nprint([cls.__name__ for cls in D.__mro__])"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Which statement about continuous integration practices is FALSE?",
+      "options": {
+        "A": "Continuous integration encourages developers to integrate their changes frequently, at least daily",
+        "B": "A key goal of CI is to catch integration issues early in the development cycle",
+        "C": "CI requires that all tests must pass with 100% coverage before any code can be merged",
+        "D": "Automated build and test processes are core components of CI systems"
+      },
+      "correct_answer": "C",
+      "code_example": ""
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What is the output of the following code that demonstrates Python descriptors?",
+      "options": {
+        "A": "Setting name to Alice\nGetting name: Alice\nSetting name to Bob\nGetting name: Bob\nAlice",
+        "B": "Setting name to Alice\nGetting name: Alice\nSetting name to Bob\nGetting name: Bob\nBob",
+        "C": "Setting name to Alice\nGetting name: Alice\nGetting name: Alice",
+        "D": "Attribute Error: 'Person' object has no attribute '_name'"
+      },
+      "correct_answer": "A",
+      "code_example": "class NameDescriptor:\n    def __get__(self, instance, owner):\n        if instance is None:\n            return self\n        print(f\"Getting name: {instance._name}\")\n        return instance._name\n    \n    def __set__(self, instance, value):\n        print(f\"Setting name to {value}\")\n        instance._name = value\n\nclass Person:\n    name = NameDescriptor()\n    \n    def __init__(self, name):\n        self.name = name\n\np = Person(\"Alice\")\nprint(p.name)\np.name = \"Bob\"\noriginal_name = p._name\nprint(original_name)"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "When implementing A* search algorithm, which of the following heuristic functions would be considered admissible?",
+      "options": {
+        "A": "A heuristic that sometimes overestimates the true cost to the goal",
+        "B": "A heuristic that always returns the exact cost to the goal",
+        "C": "A heuristic that always underestimates or equals the true cost to the goal",
+        "D": "A heuristic that returns a random value between 0 and the Manhattan distance"
+      },
+      "correct_answer": "C",
+      "code_example": "import heapq\n\ndef a_star_search(graph, start, goal, heuristic):\n    # Priority queue of (f_score, node)\n    open_set = [(heuristic(start, goal), start)]\n    # Dictionary to track the best known path to a node\n    came_from = {}\n    # g_score[n] is the cost from start to n\n    g_score = {start: 0}\n    \n    while open_set:\n        # Get node with lowest f_score\n        _, current = heapq.heappop(open_set)\n        \n        if current == goal:\n            # Reconstruct path\n            path = [current]\n            while current in came_from:\n                current = came_from[current]\n                path.append(current)\n            return path[::-1]  # Reverse to get path from start to goal\n        \n        for neighbor, cost in graph[current]:\n            # Tentative g_score for neighbor\n            tentative_g = g_score[current] + cost\n            \n            if neighbor not in g_score or tentative_g < g_score[neighbor]:\n                # This path is better than any previous one\n                came_from[neighbor] = current\n                g_score[neighbor] = tentative_g\n                f_score = tentative_g + heuristic(neighbor, goal)\n                heapq.heappush(open_set, (f_score, neighbor))\n    \n    return None  # No path found\n\n# Example of an admissible heuristic (Manhattan distance for a grid)\ndef manhattan_distance(a, b):\n    return abs(a[0] - b[0]) + abs(a[1] - b[1])"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What is the output of the following code that demonstrates a race condition and its solution using a lock?",
+      "options": {
+        "A": "Counter without lock: 200000\nCounter with lock: 200000",
+        "B": "Counter without lock: <some number less than 200000>\nCounter with lock: 200000",
+        "C": "Counter without lock: <some number less than 200000>\nCounter with lock: <some number less than 200000>",
+        "D": "Counter without lock: 200000\nCounter with lock: <some number less than 200000>"
+      },
+      "correct_answer": "B",
+      "code_example": "import threading\nimport time\n\ndef demonstrate_race_condition():\n    # Without lock\n    counter_without_lock = 0\n    def increment_without_lock():\n        nonlocal counter_without_lock\n        for _ in range(100000):\n            # Read\n            temp = counter_without_lock\n            # Increment\n            temp += 1\n            # Write back\n            counter_without_lock = temp\n    \n    # Create and start threads\n    threads = []\n    for _ in range(2):\n        t = threading.Thread(target=increment_without_lock)\n        threads.append(t)\n        t.start()\n    \n    # Wait for threads to complete\n    for t in threads:\n        t.join()\n    \n    print(f\"Counter without lock: {counter_without_lock}\")\n    \n    # With lock\n    counter_with_lock = 0\n    lock = threading.Lock()\n    \n    def increment_with_lock():\n        nonlocal counter_with_lock\n        for _ in range(100000):\n            with lock:\n                # Critical section protected by lock\n                temp = counter_with_lock\n                temp += 1\n                counter_with_lock = temp\n    \n    # Create and start threads\n    threads = []\n    for _ in range(2):\n        t = threading.Thread(target=increment_with_lock)\n        threads.append(t)\n        t.start()\n    \n    # Wait for threads to complete\n    for t in threads:\n        t.join()\n    \n    print(f\"Counter with lock: {counter_with_lock}\")\n\n# Since the actual output depends on thread scheduling which can vary,\n# we'll provide the expected behavior rather than running the code\nprint(\"Counter without lock: <some number less than 200000>\\nCounter with lock: 200000\")"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the expected behavior of the following code that implements a mixin pattern?",
+      "options": {
+        "A": "The code raises a TypeError because mixins cannot define __init__ methods",
+        "B": "The code prints 'JSONSerializableSaveable object with id=123 and data=[1, 2, 3]'",
+        "C": "The code prints the object's dictionary representation as JSON",
+        "D": "The code raises an AttributeError when trying to call the save method"
+      },
+      "correct_answer": "C",
+      "code_example": "import json\nimport os\n\nclass JSONSerializableMixin:\n    def to_json(self):\n        return json.dumps(self.__dict__)\n    \n    def from_json(self, json_str):\n        self.__dict__ = json.loads(json_str)\n        return self\n\nclass SaveableMixin:\n    def save(self, filename):\n        with open(filename, 'w') as f:\n            f.write(self.to_json())\n        return True\n    \n    def load(self, filename):\n        if os.path.exists(filename):\n            with open(filename, 'r') as f:\n                return self.from_json(f.read())\n        return False\n\nclass BaseObject:\n    def __init__(self, object_id):\n        self.object_id = object_id\n\nclass JSONSerializableSaveable(JSONSerializableMixin, SaveableMixin, BaseObject):\n    def __init__(self, object_id, data):\n        super().__init__(object_id)\n        self.data = data\n\n# Create and use the mixed-in class\nobj = JSONSerializableSaveable(123, [1, 2, 3])\nprint(obj.to_json())"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "Which of the following best describes ethical web scraping practices?",
+      "options": {
+        "A": "Scraping as much data as possible as quickly as possible to minimize server load",
+        "B": "Bypassing CAPTCHA and IP blocks to ensure complete data collection",
+        "C": "Respecting robots.txt, implementing rate limiting, and identifying your scraper",
+        "D": "Creating multiple concurrent connections to speed up data collection"
+      },
+      "correct_answer": "C",
+      "code_example": "import requests\nimport time\nfrom urllib.robotparser import RobotFileParser\n\nclass EthicalScraper:\n    def __init__(self, base_url, user_agent=\"EthicalScraper/1.0 (contact@example.com)\"):\n        self.base_url = base_url\n        self.user_agent = user_agent\n        self.session = requests.Session()\n        self.session.headers.update({'User-Agent': self.user_agent})\n        self.rate_limit = 1  # Seconds between requests\n        self.last_request = 0\n        self.robot_parser = RobotFileParser()\n        self.robot_parser.set_url(f\"{base_url}/robots.txt\")\n        self.robot_parser.read()\n    \n    def can_fetch(self, url):\n        \"\"\"Check if we're allowed to fetch the URL according to robots.txt\"\"\"\n        return self.robot_parser.can_fetch(self.user_agent, url)\n    \n    def make_request(self, url):\n        \"\"\"Make a rate-limited request if allowed by robots.txt\"\"\"\n        if not self.can_fetch(url):\n            print(f\"Robots.txt disallows scraping: {url}\")\n            return None\n        \n        # Implement rate limiting\n        current_time = time.time()\n        time_since_last = current_time - self.last_request\n        if time_since_last < self.rate_limit:\n            time.sleep(self.rate_limit - time_since_last)\n        \n        try:\n            response = self.session.get(url)\n            self.last_request = time.time()\n            return response\n        except Exception as e:\n            print(f\"Error fetching {url}: {e}\")\n            return None"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "Which NoSQL database would be MOST appropriate for implementing a distributed caching layer with time-to-live (TTL) capabilities?",
+      "options": {
+        "A": "MongoDB",
+        "B": "Cassandra",
+        "C": "Redis",
+        "D": "Neo4j"
+      },
+      "correct_answer": "C",
+      "code_example": ""
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What is the output of the following code that demonstrates the Factory design pattern?",
+      "options": {
+        "A": "Creating SQLConnection\nExecuting SQL query: SELECT * FROM users",
+        "B": "Creating MongoConnection\nExecuting MongoDB query: db.users.find({})",
+        "C": "ValueError: Invalid database type: invalid",
+        "D": "TypeError: Can't instantiate abstract class Connection"
+      },
+      "correct_answer": "B",
+      "code_example": "from abc import ABC, abstractmethod\n\nclass Connection(ABC):\n    @abstractmethod\n    def execute(self, query):\n        pass\n\nclass SQLConnection(Connection):\n    def __init__(self):\n        print(\"Creating SQLConnection\")\n        \n    def execute(self, query):\n        print(f\"Executing SQL query: {query}\")\n\nclass MongoConnection(Connection):\n    def __init__(self):\n        print(\"Creating MongoConnection\")\n        \n    def execute(self, query):\n        print(f\"Executing MongoDB query: {query}\")\n\nclass ConnectionFactory:\n    @staticmethod\n    def create_connection(db_type):\n        if db_type.lower() == \"sql\":\n            return SQLConnection()\n        elif db_type.lower() == \"mongo\":\n            return MongoConnection()\n        else:\n            raise ValueError(f\"Invalid database type: {db_type}\")\n\n# Client code\nconnection = ConnectionFactory.create_connection(\"mongo\")\nconnection.execute(\"db.users.find({})\")"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "When working with GraphQL APIs in Python, which statement is TRUE?",
+      "options": {
+        "A": "GraphQL queries can only retrieve data but cannot modify data",
+        "B": "GraphQL schemas define the types and relationships but not the available operations",
+        "C": "GraphQL mutations are used to modify data on the server",
+        "D": "GraphQL requires the use of a specific database technology"
+      },
+      "correct_answer": "C",
+      "code_example": "import requests\n\n# Example of a GraphQL client making both a query and a mutation\ndef graphql_client_example():\n    # GraphQL endpoint\n    url = 'https://api.example.com/graphql'\n    \n    # Example Query - Getting user data\n    query = '''\n    query GetUserInfo($userId: ID!) {\n      user(id: $userId) {\n        id\n        name\n        email\n        posts {\n          id\n          title\n        }\n      }\n    }\n    '''\n    \n    variables = {\n        'userId': '123'\n    }\n    \n    # Making the query request\n    response = requests.post(\n        url,\n        json={'query': query, 'variables': variables},\n        headers={'Authorization': 'Bearer token'}\n    )\n    \n    print(\"Query response status:\", response.status_code)\n    \n    # Example Mutation - Updating user data\n    mutation = '''\n    mutation UpdateUserProfile($userId: ID!, $name: String!) {\n      updateUser(id: $userId, name: $name) {\n        id\n        name\n        updatedAt\n      }\n    }\n    '''\n    \n    mutation_variables = {\n        'userId': '123',\n        'name': 'New Username'\n    }\n    \n    # Making the mutation request\n    mutation_response = requests.post(\n        url,\n        json={'query': mutation, 'variables': mutation_variables},\n        headers={'Authorization': 'Bearer token'}\n    )\n    \n    print(\"Mutation response status:\", mutation_response.status_code)\n    \n    return \"This example demonstrates both GraphQL queries for retrieving data and mutations for modifying data\""
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What happens when the following code with a memory management issue is executed?",
+      "options": {
+        "A": "The code runs indefinitely, consuming more memory until it crashes",
+        "B": "Python's garbage collector will automatically free the circular references",
+        "C": "The code will raise a RecursionError due to the circular reference",
+        "D": "The last statement will return [circle_a], showing that only one object remains"
+      },
+      "correct_answer": "A",
+      "code_example": "import gc\n\n# Disable automatic garbage collection for demonstration\ngc.disable()\n\ndef create_memory_leak():\n    class CircularReference:\n        def __init__(self, name):\n            self.name = name\n            self.ref = None\n        \n        def __repr__(self):\n            return f\"CircularReference({self.name})\"\n    \n    # Create objects that reference each other\n    all_objects = []\n    \n    def create_circles():\n        circle_a = CircularReference(\"A\")\n        circle_b = CircularReference(\"B\")\n        \n        # Create circular reference\n        circle_a.ref = circle_b\n        circle_b.ref = circle_a\n        \n        # Only store reference to one object\n        return [circle_a]\n    \n    # Continuously create new circular references\n    for i in range(1000000):  # In practice, this would be a much larger loop or ongoing process\n        objects = create_circles()\n        all_objects.append(objects)\n        \n        # Normally, we would see memory usage grow until crash\n        # For demonstration, we'll limit iterations\n        if i >= 5:\n            break\n    \n    return all_objects[-1]\n\n# For the purpose of the example, we'll just describe the outcome\nprint(\"The code runs indefinitely, consuming more memory until it crashes\")"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What is the primary benefit of service discovery in a containerized microservices architecture?",
+      "options": {
+        "A": "It allows services to have static IP addresses",
+        "B": "It enables automatic scaling of container instances",
+        "C": "It provides a way for services to find and communicate with each other dynamically",
+        "D": "It prevents unauthorized access to microservices"
+      },
+      "correct_answer": "C",
+      "code_example": ""
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What would be the result of running the following code that implements the Observer design pattern?",
+      "options": {
+        "A": "NewsAgency: New story - Breaking News\nSubscriber John: Breaking News\nSubscriber Sarah: Breaking News",
+        "B": "The code will raise a TypeError because Observer is an abstract class",
+        "C": "NewsAgency: New story - Breaking News",
+        "D": "Subscriber John: Breaking News\nSubscriber Sarah: Breaking News"
+      },
+      "correct_answer": "A",
+      "code_example": "from abc import ABC, abstractmethod\n\nclass Observer(ABC):\n    @abstractmethod\n    def update(self, message):\n        pass\n\nclass Subject(ABC):\n    @abstractmethod\n    def attach(self, observer):\n        pass\n    \n    @abstractmethod\n    def detach(self, observer):\n        pass\n    \n    @abstractmethod\n    def notify(self):\n        pass\n\nclass NewsAgency(Subject):\n    def __init__(self):\n        self._observers = []\n        self._latest_news = None\n    \n    def attach(self, observer):\n        if observer not in self._observers:\n            self._observers.append(observer)\n    \n    def detach(self, observer):\n        self._observers.remove(observer)\n    \n    def notify(self):\n        for observer in self._observers:\n            observer.update(self._latest_news)\n    \n    def add_news(self, news):\n        self._latest_news = news\n        print(f\"NewsAgency: New story - {news}\")\n        self.notify()\n\nclass NewsSubscriber(Observer):\n    def __init__(self, name):\n        self.name = name\n    \n    def update(self, message):\n        print(f\"Subscriber {self.name}: {message}\")\n\n# Create the news agency\nagency = NewsAgency()\n\n# Create subscribers\njohn = NewsSubscriber(\"John\")\nsarah = NewsSubscriber(\"Sarah\")\n\n# Register subscribers\nagency.attach(john)\nagency.attach(sarah)\n\n# Add news\nagency.add_news(\"Breaking News\")"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What is the output of the following code that demonstrates Python's debugging capabilities?",
+      "options": {
+        "A": "Error in calculate: division by zero",
+        "B": "calculate(10, 0) raised an exception: division by zero",
+        "C": "Error in calculate: division by zero\ncalculate(10, 0) raised an exception: division by zero",
+        "D": "ZeroDivisionError: division by zero"
+      },
+      "correct_answer": "C",
+      "code_example": "import sys\nimport traceback\nimport logging\n\n# Configure logging\nlogging.basicConfig(level=logging.ERROR)\nlogger = logging.getLogger(\"calculator\")\n\ndef debug_example():\n    # Function that will raise an exception\n    def calculate(a, b):\n        try:\n            return a / b\n        except Exception as e:\n            logger.error(f\"Error in calculate: {str(e)}\")\n            raise\n    \n    # Function that uses try-except with traceback\n    def safe_calculate(a, b):\n        try:\n            result = calculate(a, b)\n            return result\n        except Exception as e:\n            print(f\"calculate({a}, {b}) raised an exception: {str(e)}\")\n            # In a real debugging scenario, we might want the full traceback\n            # traceback.print_exc()\n            return None\n    \n    # Call the function with values that will cause ZeroDivisionError\n    return safe_calculate(10, 0)\n\ndebug_example()"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What is the most appropriate transaction isolation level for a process that requires reading a consistent snapshot of the database while allowing other transactions to modify data?",
+      "options": {
+        "A": "READ UNCOMMITTED",
+        "B": "READ COMMITTED",
+        "C": "REPEATABLE READ",
+        "D": "SERIALIZABLE"
+      },
+      "correct_answer": "C",
+      "code_example": "import psycopg2\n\ndef demonstrate_transaction_isolation():\n    # This is a demonstration of how you might set and use different\n    # transaction isolation levels in Python with PostgreSQL\n    \n    # Connect to the database\n    conn = psycopg2.connect(\"dbname=testdb user=postgres\")\n    \n    # Example 1: READ COMMITTED (default in many databases)\n    # Can see committed changes from other transactions\n    # May see different data on repeated reads (non-repeatable reads)\n    conn.set_session(isolation_level=psycopg2.extensions.ISOLATION_LEVEL_READ_COMMITTED)\n    \n    # Example 2: REPEATABLE READ\n    # Ensures consistent view of data throughout the transaction\n    # Other transactions can still modify data\n    conn.set_session(isolation_level=psycopg2.extensions.ISOLATION_LEVEL_REPEATABLE_READ)\n    \n    # Example 3: SERIALIZABLE\n    # Highest isolation - transactions appear to execute serially\n    # May cause more contention and serialization failures\n    conn.set_session(isolation_level=psycopg2.extensions.ISOLATION_LEVEL_SERIALIZABLE)\n    \n    # Close connection\n    conn.close()\n    \n    return \"\"\"REPEATABLE READ provides a balance between consistency and concurrency.\n    It ensures all reads in a transaction see a consistent snapshot while still\n    allowing other transactions to modify data, which is ideal for reporting and\n    analysis workloads.\"\"\""
+    }
+  ]
+}
