@@ -1,0 +1,624 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What happens if an exception is raised in the 'try' block and then successfully handled in the 'except' block?",
+      "options": {
+        "A": "The 'else' block is executed",
+        "B": "The 'finally' block is skipped",
+        "C": "The 'finally' block is executed, then the 'else' block",
+        "D": "The 'finally' block is executed, but the 'else' block is skipped"
+      },
+      "correct_answer": "D",
+      "code_example": "try:\n    x = 1 / 0\nexcept ZeroDivisionError:\n    print('Caught an error')\nelse:\n    print('No errors')\nfinally:\n    print('Cleanup')"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code for converting decimal 42 to binary?",
+      "options": {
+        "A": "0b101010",
+        "B": "101010",
+        "C": "0x2A",
+        "D": "2A"
+      },
+      "correct_answer": "A",
+      "code_example": "decimal_num = 42\nresult = bin(decimal_num)\nprint(result)"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the factorial of 5?",
+      "options": {
+        "A": "24",
+        "B": "120",
+        "C": "60",
+        "D": "720"
+      },
+      "correct_answer": "B",
+      "code_example": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1)\n\nprint(factorial(5))"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Which exception will be raised by the following code?",
+      "options": {
+        "A": "ValueError",
+        "B": "TypeError",
+        "C": "IndexError",
+        "D": "KeyError"
+      },
+      "correct_answer": "C",
+      "code_example": "my_list = [1, 2, 3]\nprint(my_list[5])"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the Greatest Common Divisor (GCD) of 24 and 36?",
+      "options": {
+        "A": "6",
+        "B": "12",
+        "C": "4",
+        "D": "9"
+      },
+      "correct_answer": "B",
+      "code_example": "import math\nprint(math.gcd(24, 36))"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What's wrong with the following function definition?",
+      "options": {
+        "A": "The function name cannot start with 'calculate_'",
+        "B": "The function is missing a return statement",
+        "C": "Non-default parameters follow default parameters",
+        "D": "The function call has too many arguments"
+      },
+      "correct_answer": "C",
+      "code_example": "def calculate_total(tax=0.05, price, quantity):\n    return price * quantity * (1 + tax)\n\ncalculate_total(100, 2)"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will the following conditional expression return when x is 5?",
+      "options": {
+        "A": "'Less than 10'",
+        "B": "'Greater than or equal to 10'",
+        "C": "True",
+        "D": "False"
+      },
+      "correct_answer": "A",
+      "code_example": "x = 5\nresult = 'Less than 10' if x < 10 else 'Greater than or equal to 10'\nprint(result)"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following list comprehension?",
+      "options": {
+        "A": "[0, 1, 4, 9, 16]",
+        "B": "[0, 1, 4, 9, 16, 25]",
+        "C": "[1, 4, 9, 16, 25]",
+        "D": "[0, 2, 4, 6, 8]"
+      },
+      "correct_answer": "A",
+      "code_example": "squares = [x**2 for x in range(5)]\nprint(squares)"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using enumerate?",
+      "options": {
+        "A": "0-apple 1-banana 2-cherry",
+        "B": "1-apple 2-banana 3-cherry",
+        "C": "apple-0 banana-1 cherry-2",
+        "D": "apple-1 banana-2 cherry-3"
+      },
+      "correct_answer": "A",
+      "code_example": "fruits = ['apple', 'banana', 'cherry']\nfor i, fruit in enumerate(fruits):\n    print(f\"{i}-{fruit}\", end=\" \")"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "In binary search, how many comparisons (in the worst case) are needed to find a value in a sorted array of 32 elements?",
+      "options": {
+        "A": "32",
+        "B": "16",
+        "C": "6",
+        "D": "5"
+      },
+      "correct_answer": "C",
+      "code_example": ""
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following function call?",
+      "options": {
+        "A": "Hello, World",
+        "B": "Hello, Python",
+        "C": "Hello, ",
+        "D": "Hello"
+      },
+      "correct_answer": "B",
+      "code_example": "def greet(name=\"World\"):\n    return f\"Hello, {name}\"\n\nresult = greet(\"Python\")\nprint(result)"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the value of 'nums' after executing the following code?",
+      "options": {
+        "A": "[1, 2, 3, 4, 99]",
+        "B": "[1, 2, 99, 3, 4]",
+        "C": "[1, 99, 2, 3, 4]",
+        "D": "[99, 1, 2, 3, 4]"
+      },
+      "correct_answer": "B",
+      "code_example": "nums = [1, 2, 3, 4]\nnums.insert(2, 99)\nprint(nums)"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to read data from a CSV file in Python?",
+      "options": {
+        "A": "csv.read('data.csv')",
+        "B": "with open('data.csv', 'r') as f: csv.read(f)",
+        "C": "with open('data.csv', 'r') as f: csv.reader(f)",
+        "D": "with open('data.csv', 'r') as f: csv.DictReader(f)"
+      },
+      "correct_answer": "D",
+      "code_example": ""
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What's the purpose of using a context manager (with statement) when working with files?",
+      "options": {
+        "A": "It makes the code run faster",
+        "B": "It automatically handles file closing, even if exceptions occur",
+        "C": "It prevents other processes from accessing the file",
+        "D": "It enables reading and writing to the same file simultaneously"
+      },
+      "correct_answer": "B",
+      "code_example": ""
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following set operations?",
+      "options": {
+        "A": "{1, 2, 3, 4, 5}",
+        "B": "{3}",
+        "C": "{1, 2, 4, 5}",
+        "D": "{1, 2, 3}"
+      },
+      "correct_answer": "B",
+      "code_example": "set1 = {1, 2, 3}\nset2 = {3, 4, 5}\nresult = set1.intersection(set2)\nprint(result)"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a primitive type in Python?",
+      "options": {
+        "A": "int",
+        "B": "str",
+        "C": "array",
+        "D": "bool"
+      },
+      "correct_answer": "C",
+      "code_example": ""
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "In Django, which file must be modified to add a new URL pattern to your application?",
+      "options": {
+        "A": "settings.py",
+        "B": "models.py",
+        "C": "urls.py",
+        "D": "views.py"
+      },
+      "correct_answer": "C",
+      "code_example": ""
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using partial functions?",
+      "options": {
+        "A": "15",
+        "B": "25",
+        "C": "20",
+        "D": "30"
+      },
+      "correct_answer": "A",
+      "code_example": "from functools import partial\n\ndef multiply(x, y):\n    return x * y\n\ndouble = partial(multiply, 5)\nresult = double(3)\nprint(result)"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will the following code output, demonstrating a closure?",
+      "options": {
+        "A": "25",
+        "B": "100",
+        "C": "10",
+        "D": "5"
+      },
+      "correct_answer": "A",
+      "code_example": "def outer_function(x):\n    def inner_function(y):\n        return x * y\n    return inner_function\n\nmultiplier = outer_function(5)\nresult = multiplier(5)\nprint(result)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code working with nested data structures?",
+      "options": {
+        "A": "['John', 'Alice', 'Bob']",
+        "B": "['John', 'Bob']",
+        "C": "['Alice']",
+        "D": "['Bob', 'Alice', 'John']"
+      },
+      "correct_answer": "B",
+      "code_example": "users = [\n    {'name': 'John', 'age': 25},\n    {'name': 'Alice', 'age': 22},\n    {'name': 'Bob', 'age': 25}\n]\n\nnames = [user['name'] for user in users if user['age'] == 25]\nprint(names)"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Which of the following is a benefit of lazy evaluation in Python?",
+      "options": {
+        "A": "It always improves code readability",
+        "B": "It makes debugging easier",
+        "C": "It can save memory when working with large datasets",
+        "D": "It always makes code execute faster"
+      },
+      "correct_answer": "C",
+      "code_example": ""
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following recursive function with memoization?",
+      "options": {
+        "A": "55",
+        "B": "89",
+        "C": "144",
+        "D": "233"
+      },
+      "correct_answer": "A",
+      "code_example": "def fibonacci(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 1:\n        return n\n    memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)\n    return memo[n]\n\nprint(fibonacci(10))"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What is the difference between greedy and non-greedy matching in regular expressions?",
+      "options": {
+        "A": "Greedy matching is faster but less accurate",
+        "B": "Greedy matching matches as much as possible, non-greedy matches as little as possible",
+        "C": "Non-greedy matching only works with certain patterns",
+        "D": "Greedy matching is the default in Python's 're' module while non-greedy is only available in 'regex' module"
+      },
+      "correct_answer": "B",
+      "code_example": ""
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be printed by the following code demonstrating the iterator protocol?",
+      "options": {
+        "A": "1 4 9",
+        "B": "1 2 3",
+        "C": "1 4 9 16 25",
+        "D": "Error: 'MyIterator' object is not an iterator"
+      },
+      "correct_answer": "A",
+      "code_example": "class MyIterator:\n    def __init__(self, limit):\n        self.limit = limit\n        self.current = 0\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        self.current += 1\n        if self.current > self.limit:\n            raise StopIteration\n        return self.current ** 2\n\nmy_iter = MyIterator(3)\nfor val in my_iter:\n    print(val, end=' ')"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "Which of the following best describes the 'divide and conquer' algorithm paradigm?",
+      "options": {
+        "A": "Solving smaller instances of the same problem and combining results",
+        "B": "Breaking a problem into completely different sub-problems",
+        "C": "Using dynamic programming to solve overlapping sub-problems",
+        "D": "Using brute force to solve each part of a problem independently"
+      },
+      "correct_answer": "A",
+      "code_example": ""
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "How many connected components are in the following undirected graph?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct_answer": "B",
+      "code_example": "# Graph represented as an adjacency list\ngraph = {\n    1: [2, 3],\n    2: [1, 3],\n    3: [1, 2],\n    4: [5],\n    5: [4, 6],\n    6: [5],\n    7: []\n}"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What is the output of the following code using a class constructor and instance method?",
+      "options": {
+        "A": "75",
+        "B": "150",
+        "C": "125",
+        "D": "100"
+      },
+      "correct_answer": "A",
+      "code_example": "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    def area(self):\n        return self.width * self.height\n    \n    def scale(self, factor):\n        self.width *= factor\n        self.height *= factor\n        return self\n\nrect = Rectangle(5, 10)\nrect.scale(1.5)\nprint(rect.area())"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will the following code implementing merge sort return?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5, 6]",
+        "B": "[6, 5, 4, 3, 2, 1]",
+        "C": "TypeError: 'list' object is not callable",
+        "D": "[1, 2, 3, 6, 5, 4]"
+      },
+      "correct_answer": "A",
+      "code_example": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    \n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    \n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result\n\nprint(merge_sort([3, 1, 4, 2, 6, 5]))"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "In a RESTful API, which HTTP method should typically be used to create a new resource?",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "correct_answer": "B",
+      "code_example": ""
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "Which graph representation is shown in the following code?",
+      "options": {
+        "A": "Edge List",
+        "B": "Incidence Matrix",
+        "C": "Adjacency Matrix",
+        "D": "Adjacency List"
+      },
+      "correct_answer": "D",
+      "code_example": "graph = {\n    'A': ['B', 'C'],\n    'B': ['A', 'D', 'E'],\n    'C': ['A', 'F'],\n    'D': ['B'],\n    'E': ['B', 'F'],\n    'F': ['C', 'E']\n}"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "In Django, where should template files be stored for a typical app structure?",
+      "options": {
+        "A": "myapp/templates/myapp/",
+        "B": "myapp/static/templates/",
+        "C": "templates/myapp/",
+        "D": "myapp/views/templates/"
+      },
+      "correct_answer": "A",
+      "code_example": ""
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What is the expected output of the following basic hash table implementation?",
+      "options": {
+        "A": "24, 42, None",
+        "B": "24, 42, 13",
+        "C": "24, None, 13",
+        "D": "None, 42, 13"
+      },
+      "correct_answer": "B",
+      "code_example": "class SimpleHashTable:\n    def __init__(self, size):\n        self.size = size\n        self.table = [None] * size\n    \n    def hash_function(self, key):\n        return hash(key) % self.size\n    \n    def insert(self, key, value):\n        index = self.hash_function(key)\n        self.table[index] = value\n    \n    def get(self, key):\n        index = self.hash_function(key)\n        return self.table[index]\n\nht = SimpleHashTable(10)\nht.insert('apple', 24)\nht.insert('banana', 42)\nprint(ht.get('apple'), end=', ')\nprint(ht.get('banana'), end=', ')\nprint(ht.get('cherry'))"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Consider the following code that uses scikit-learn. What will be the accuracy score (rounded to 2 decimal places) when evaluating this model on the test data?",
+      "options": {
+        "A": "0.75",
+        "B": "0.67",
+        "C": "0.83",
+        "D": "0.92"
+      },
+      "correct_answer": "C",
+      "code_example": "from sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score\nimport numpy as np\n\n# Set random seed for reproducibility\nnp.random.seed(42)\n\n# Generate synthetic data\nX, y = make_classification(n_samples=100, n_features=20, n_informative=10,\n                          n_redundant=5, random_state=42)\n\n# Split the data into training and testing sets\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\n# Create and train a RandomForestClassifier\nclf = RandomForestClassifier(n_estimators=10, random_state=42)\nclf.fit(X_train, y_train)\n\n# Make predictions on the test data\ny_pred = clf.predict(X_test)\n\n# Calculate the accuracy score\nacc = accuracy_score(y_test, y_pred)\nprint(f\"{acc:.2f}\")"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which of the following best describes dependency injection in Python?",
+      "options": {
+        "A": "A technique where a class receives its dependencies through the constructor, rather than creating them internally",
+        "B": "A method for importing modules dynamically at runtime based on configuration files",
+        "C": "A design pattern that creates a single global instance of an object accessible throughout the application",
+        "D": "A way to automatically resolve circular dependencies between modules"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that implements an n-ary tree traversal?",
+      "options": {
+        "A": "[1, 2, 5, 6, 3, 7, 8, 9, 4]",
+        "B": "[1, 2, 3, 4, 5, 6, 7, 8, 9]",
+        "C": "[1, 4, 3, 9, 8, 7, 2, 6, 5]",
+        "D": "[9, 8, 7, 6, 5, 4, 3, 2, 1]"
+      },
+      "correct_answer": "A",
+      "code_example": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.children = []\n\ndef build_tree():\n    # Create nodes\n    root = Node(1)\n    node2 = Node(2)\n    node3 = Node(3)\n    node4 = Node(4)\n    node5 = Node(5)\n    node6 = Node(6)\n    node7 = Node(7)\n    node8 = Node(8)\n    node9 = Node(9)\n    \n    # Build the tree structure\n    root.children = [node2, node3, node4]\n    node2.children = [node5, node6]\n    node3.children = [node7, node8, node9]\n    \n    return root\n\ndef breadth_first_traversal(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = [root]\n    \n    while queue:\n        current = queue.pop(0)\n        result.append(current.value)\n        \n        for child in current.children:\n            queue.append(child)\n    \n    return result\n\n# Build the n-ary tree and perform breadth-first traversal\ntree = build_tree()\nprint(breadth_first_traversal(tree))"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following implementation of the Knuth-Morris-Pratt (KMP) string matching algorithm?",
+      "options": {
+        "A": "[5, 15]",
+        "B": "[5, 16]",
+        "C": "[6, 16]",
+        "D": "[6, 17]"
+      },
+      "correct_answer": "B",
+      "code_example": "def compute_lps(pattern):\n    m = len(pattern)\n    lps = [0] * m\n    \n    length = 0\n    i = 1\n    \n    while i < m:\n        if pattern[i] == pattern[length]:\n            length += 1\n            lps[i] = length\n            i += 1\n        else:\n            if length != 0:\n                length = lps[length - 1]\n            else:\n                lps[i] = 0\n                i += 1\n    \n    return lps\n\ndef kmp_search(text, pattern):\n    n = len(text)\n    m = len(pattern)\n    \n    if m == 0:\n        return []\n    \n    lps = compute_lps(pattern)\n    \n    result = []\n    i = 0  # index for text\n    j = 0  # index for pattern\n    \n    while i < n:\n        if pattern[j] == text[i]:\n            i += 1\n            j += 1\n        \n        if j == m:\n            result.append(i - j)\n            j = lps[j - 1]\n        elif i < n and pattern[j] != text[i]:\n            if j != 0:\n                j = lps[j - 1]\n            else:\n                i += 1\n    \n    return result\n\n# Test the KMP algorithm\ntext = \"ABABDABACDABABCABAB\"\npattern = \"ABABCABAB\"\nprint(kmp_search(text, pattern))"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What is the expected output of this Monte Carlo approximation of π (pi) after running it with the specified seed?",
+      "options": {
+        "A": "3.136",
+        "B": "3.144",
+        "C": "3.152",
+        "D": "3.160"
+      },
+      "correct_answer": "B",
+      "code_example": "import numpy as np\n\ndef monte_carlo_pi(num_samples):\n    # Set random seed for reproducibility\n    np.random.seed(42)\n    \n    # Generate random points inside a square\n    x = np.random.uniform(-1, 1, num_samples)\n    y = np.random.uniform(-1, 1, num_samples)\n    \n    # Calculate distance from origin\n    distance = np.sqrt(x**2 + y**2)\n    \n    # Count points inside the circle\n    inside_circle = (distance <= 1).sum()\n    \n    # Calculate pi approximation\n    pi_approximation = 4 * inside_circle / num_samples\n    \n    return pi_approximation\n\n# Run the simulation\nresult = monte_carlo_pi(10000)\nprint(f\"{result:.3f}\")"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Which of the following statements about authentication and authorization is FALSE?",
+      "options": {
+        "A": "Authentication verifies who a user is, while authorization determines what they can access",
+        "B": "OAuth 2.0 is primarily an authorization protocol, not an authentication protocol",
+        "C": "JWT (JSON Web Tokens) can be used for both authentication and authorization",
+        "D": "Authorization should always be performed before authentication in a secure system"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be printed when executing the following code that uses BeautifulSoup to parse HTML?",
+      "options": {
+        "A": "['Python', 'JavaScript', 'Java']",
+        "B": "['Python', 'JavaScript', 'Java', 'C++']",
+        "C": "['Python', 'Java']",
+        "D": "['JavaScript', 'Java']"
+      },
+      "correct_answer": "A",
+      "code_example": "from bs4 import BeautifulSoup\n\n# HTML document to parse\nhtml_doc = \"\"\"\n<html>\n<head>\n  <title>Programming Languages</title>\n</head>\n<body>\n  <h1>Popular Programming Languages</h1>\n  <ul id=\"languages\">\n    <li class=\"popular\">Python</li>\n    <li class=\"popular\">JavaScript</li>\n    <li class=\"popular\">Java</li>\n    <li>C++</li>\n  </ul>\n</body>\n</html>\n\"\"\"\n\n# Parse the HTML\nsoup = BeautifulSoup(html_doc, 'html.parser')\n\n# Extract information using BeautifulSoup\npopular_languages = []\nfor lang in soup.select('li.popular'):\n    popular_languages.append(lang.text)\n\nprint(popular_languages)"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "Given the following dependencies between tasks, what is a valid topological ordering?",
+      "options": {
+        "A": "[3, 1, 2, 0, 5, 4]",
+        "B": "[1, 3, 0, 2, 4, 5]",
+        "C": "[3, 1, 0, 2, 5, 4]",
+        "D": "[1, 3, 0, 2, 5, 4]"
+      },
+      "correct_answer": "C",
+      "code_example": "from collections import defaultdict\n\ndef topological_sort(graph, vertices):\n    # Mark all vertices as not visited\n    visited = [False] * vertices\n    stack = []\n    \n    def dfs(v):\n        visited[v] = True\n        \n        # Recur for all adjacent vertices\n        for neighbor in graph[v]:\n            if not visited[neighbor]:\n                dfs(neighbor)\n        \n        # Push vertex to stack after processing all adjacents\n        stack.append(v)\n    \n    # Visit all vertices\n    for i in range(vertices):\n        if not visited[i]:\n            dfs(i)\n    \n    # Return reversed stack\n    return stack[::-1]\n\n# Create a graph with the following edges:\n# 3 -> 1, 3 -> 0, 1 -> 0, 0 -> 2, 2 -> 5, 5 -> 4\ngraph = defaultdict(list)\ngraph[3].extend([1, 0])\ngraph[1].append(0)\ngraph[0].append(2)\ngraph[2].append(5)\ngraph[5].append(4)\n\n# Perform topological sort\nprint(topological_sort(graph, 6))"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates thread synchronization using a lock?",
+      "options": {
+        "A": "Counter value: 1000",
+        "B": "Counter value: less than 1000 (varies each run)",
+        "C": "Counter value: 0",
+        "D": "RuntimeError: maximum recursion depth exceeded"
+      },
+      "correct_answer": "A",
+      "code_example": "import threading\nimport time\n\nclass Counter:\n    def __init__(self):\n        self.value = 0\n        self.lock = threading.Lock()\n    \n    def increment(self):\n        with self.lock:\n            current = self.value\n            # Simulate some processing time\n            time.sleep(0.0001)\n            self.value = current + 1\n\ndef worker(counter, num_increments):\n    for _ in range(num_increments):\n        counter.increment()\n\n# Create a counter and 10 threads\ncounter = Counter()\nthreads = []\nnum_threads = 10\nnum_increments = 100\n\n# Start the threads\nfor _ in range(num_threads):\n    t = threading.Thread(target=worker, args=(counter, num_increments))\n    threads.append(t)\n    t.start()\n\n# Wait for all threads to complete\nfor t in threads:\n    t.join()\n\nprint(f\"Counter value: {counter.value}\")"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will the following Selenium code do when executed?",
+      "options": {
+        "A": "Fill in a search form with 'Python tutorials' and click the search button",
+        "B": "Click on all links containing 'Python' on a webpage",
+        "C": "Navigate to the Python official website and download the latest version",
+        "D": "Take a screenshot of the Python official website and save it as 'python.png'"
+      },
+      "correct_answer": "A",
+      "code_example": "from selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.common.keys import Keys\nfrom selenium.webdriver.chrome.service import Service\nfrom selenium.webdriver.chrome.options import Options\n\n# Set up Chrome options\nchrome_options = Options()\nchrome_options.add_argument('--headless')  # Run in headless mode\n\n# Set up the driver (assuming chromedriver is in PATH)\nservice = Service('chromedriver')\ndriver = webdriver.Chrome(service=service, options=chrome_options)\n\n# Navigate to a website\ndriver.get('https://example.com')\n\n# Find the search box\nsearch_box = driver.find_element(By.NAME, 'q')\n\n# Type into the search box\nsearch_box.send_keys('Python tutorials')\n\n# Submit the form\nsearch_box.submit()\n\n# Close the browser\ndriver.quit()"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of this code using the concurrent.futures module?",
+      "options": {
+        "A": "[2, 4, 6, 8, 10]",
+        "B": "[1, 4, 9, 16, 25]",
+        "C": "[0, 1, 4, 9, 16]",
+        "D": "[1, 2, 3, 4, 5]"
+      },
+      "correct_answer": "B",
+      "code_example": "import concurrent.futures\nimport time\n\ndef process_item(x):\n    # Simulate some processing time\n    time.sleep(0.1)\n    return x * x\n\ndef main():\n    # Create a list of items to process\n    items = [1, 2, 3, 4, 5]\n    results = []\n    \n    # Process items concurrently using ThreadPoolExecutor\n    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:\n        # Submit tasks and collect future objects\n        future_to_item = {executor.submit(process_item, item): item for item in items}\n        \n        # Retrieve results as they complete\n        for future in concurrent.futures.as_completed(future_to_item):\n            result = future.result()\n            results.append(result)\n    \n    return results\n\n# Execute the main function\nprint(main())"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which of the following techniques is NOT commonly used for space optimization in Python?",
+      "options": {
+        "A": "Using generators instead of lists for large sequences",
+        "B": "Using __slots__ to reduce memory overhead of classes",
+        "C": "Converting frequently accessed strings to integers using hash tables",
+        "D": "Using NumPy arrays instead of lists for numerical data"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "According to the CAP theorem, which of the following statements is TRUE?",
+      "options": {
+        "A": "A distributed system can simultaneously provide Consistency, Availability, and Partition tolerance",
+        "B": "In the presence of a network partition, a distributed system must choose between Consistency and Availability",
+        "C": "The CAP theorem is only applicable to relational databases, not to NoSQL systems",
+        "D": "Eventual consistency is a way to achieve both strong consistency and high availability during network partitions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses mocking to test a function?",
+      "options": {
+        "A": "The test passes successfully",
+        "B": "AssertionError: Expected 'calculate_total' to be called exactly once",
+        "C": "AssertionError: Expected 'calculate_total' to be called with (10, 5)",
+        "D": "TypeError: 'MagicMock' object is not callable"
+      },
+      "correct_answer": "A",
+      "code_example": "import unittest\nfrom unittest.mock import patch, MagicMock\n\n# The function we want to test\ndef process_order(item_price, quantity):\n    total = calculate_total(item_price, quantity)\n    if total > 100:\n        apply_discount(total)\n    return total\n\n# This is the function we'll mock (implementation not important for the test)\ndef calculate_total(item_price, quantity):\n    return item_price * quantity\n\ndef apply_discount(total):\n    return total * 0.9\n\n# Test case\nclass TestOrderProcessing(unittest.TestCase):\n    @patch('__main__.calculate_total')\n    def test_process_order(self, mock_calculate_total):\n        # Configure the mock\n        mock_calculate_total.return_value = 50\n        \n        # Call the function under test\n        result = process_order(10, 5)\n        \n        # Assert that our mock was called with the right arguments\n        mock_calculate_total.assert_called_once_with(10, 5)\n        \n        # Assert that the result is what we expect\n        self.assertEqual(result, 50)\n\n# Run the test\nif __name__ == '__main__':\n    test = TestOrderProcessing()\n    test.test_process_order()\n    print(\"The test passes successfully\")"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will the following Matplotlib/Seaborn code produce?",
+      "options": {
+        "A": "A bar chart showing the count of each category",
+        "B": "A scatter plot with points colored by category",
+        "C": "A heatmap showing correlation between variables",
+        "D": "A boxplot showing distribution across categories"
+      },
+      "correct_answer": "C",
+      "code_example": "import numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Set random seed for reproducibility\nnp.random.seed(42)\n\n# Create sample data\ndata = {\n    'feature1': np.random.normal(0, 1, 100),\n    'feature2': np.random.normal(0, 1, 100),\n    'feature3': np.random.normal(0, 1, 100),\n    'feature4': np.random.normal(0, 1, 100)\n}\n\n# Convert to DataFrame\ndf = pd.DataFrame(data)\n\n# Calculate correlation matrix\ncorr_matrix = df.corr()\n\n# Create the visualization\nplt.figure(figsize=(8, 6))\nsns.heatmap(corr_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1)\nplt.title('Correlation Matrix')\n\n# Display the plot (commented out in automated testing)\n# plt.show()"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the result of the following NumPy code?",
+      "options": {
+        "A": "A 3x3 matrix with all elements equal to 1",
+        "B": "A 3x3 identity matrix",
+        "C": "A 3x3 matrix with all elements equal to 0",
+        "D": "A 3x3 matrix with random values"
+      },
+      "correct_answer": "B",
+      "code_example": "import numpy as np\n\n# Set random seed for reproducibility\nnp.random.seed(42)\n\n# Create a 3x3 matrix of random values\nrandom_matrix = np.random.rand(3, 3)\n\n# Perform singular value decomposition\nU, S, Vt = np.linalg.svd(random_matrix)\n\n# Reconstruct the original matrix using only the largest singular value\nS_reduced = np.zeros_like(S)\nS_reduced[0] = S[0]\nS_matrix = np.zeros((3, 3))\nnp.fill_diagonal(S_matrix, S_reduced)\nreconstructed = U @ S_matrix @ Vt\n\n# Calculate the matrices needed for eigendecomposition\nA = np.eye(3)  # 3x3 identity matrix\nB = np.dot(A, A.T)  # A * A^T\n\n# Perform eigendecomposition\neigenvalues, eigenvectors = np.linalg.eigh(B)\n\n# Print the resulting matrix\nprint(np.round(B))"
+    }
+  ]
+}
