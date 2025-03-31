@@ -1,0 +1,613 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following list comprehension?",
+      "options": {
+        "A": "[2, 4, 6, 8, 10]",
+        "B": "[1, 3, 5, 7, 9]",
+        "C": "[2, 4, 6, 8]",
+        "D": "[1, 2, 3, 4, 5]"
+      },
+      "correct_answer": "A",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nresult = [num * 2 for num in numbers]\nprint(result)"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following is a correct implementation of FizzBuzz for the number 15?",
+      "options": {
+        "A": "FizzBuzz",
+        "B": "Fizz",
+        "C": "Buzz",
+        "D": "15"
+      },
+      "correct_answer": "A",
+      "code_example": "def fizzbuzz(num):\n    if num % 3 == 0 and num % 5 == 0:\n        return \"FizzBuzz\"\n    elif num % 3 == 0:\n        return \"Fizz\"\n    elif num % 5 == 0:\n        return \"Buzz\"\n    else:\n        return str(num)\n\nprint(fizzbuzz(15))"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the output of the following dictionary operation?",
+      "options": {
+        "A": "{'name': 'John', 'age': 30, 'city': 'Unknown'}",
+        "B": "{'name': 'John', 'age': 30}",
+        "C": "{'name': 'John', 'age': 30, 'city': 'New York'}",
+        "D": "KeyError: 'city'"
+      },
+      "correct_answer": "C",
+      "code_example": "person = {'name': 'John', 'age': 30}\ncity = person.get('city', 'New York')\nperson['city'] = city\nprint(person)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "According to PEP 8, which of the following is the correct way to name a constant in Python?",
+      "options": {
+        "A": "maxSize",
+        "B": "MAX_SIZE",
+        "C": "MaxSize",
+        "D": "max_size"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using default parameters?",
+      "options": {
+        "A": "[1, 2, 3, 4]",
+        "B": "[1, 2, 3, 4, 5]",
+        "C": "[1, 2, 3]",
+        "D": "[4, 5]"
+      },
+      "correct_answer": "B",
+      "code_example": "def add_elements(lst=[1, 2, 3]):\n    lst.extend([4, 5])\n    return lst\n\nresult = add_elements()\nprint(result)"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What is the result of the following tuple operation?",
+      "options": {
+        "A": "('apple', 'banana', 'cherry', 'date')",
+        "B": "TypeError: 'tuple' object does not support item assignment",
+        "C": "('apple', 'banana', 'date')",
+        "D": "('apple', 'banana', 'orange', 'date')"
+      },
+      "correct_answer": "B",
+      "code_example": "fruits = ('apple', 'banana', 'cherry', 'date')\nfruits[2] = 'orange'\nprint(fruits)"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to create a custom exception in Python?",
+      "options": {
+        "A": "class CustomError(Error): pass",
+        "B": "class CustomError extends Exception: pass",
+        "C": "class CustomError(Exception): pass",
+        "D": "def CustomError(): raise Exception"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "In the following code, what is 'x' and what is '*args'?",
+      "options": {
+        "A": "x is a parameter, *args is an argument",
+        "B": "x is an argument, *args is a parameter",
+        "C": "Both x and *args are parameters",
+        "D": "Both x and *args are arguments"
+      },
+      "correct_answer": "C",
+      "code_example": "def func(x, *args):\n    print(x, args)\n\nfunc(1, 2, 3, 4)"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the result of the following statistical calculation?",
+      "options": {
+        "A": "5.5",
+        "B": "5",
+        "C": "6",
+        "D": "5.833"
+      },
+      "correct_answer": "A",
+      "code_example": "numbers = [3, 5, 6, 8, 4, 7]\nmean = sum(numbers) / len(numbers)\nprint(mean)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the median of the following list?",
+      "options": {
+        "A": "5",
+        "B": "5.5",
+        "C": "6",
+        "D": "4"
+      },
+      "correct_answer": "B",
+      "code_example": "def find_median(numbers):\n    sorted_numbers = sorted(numbers)\n    n = len(sorted_numbers)\n    if n % 2 == 0:\n        return (sorted_numbers[n//2 - 1] + sorted_numbers[n//2]) / 2\n    else:\n        return sorted_numbers[n//2]\n\nnumbers = [7, 4, 6, 8, 5, 3]\nprint(find_median(numbers))"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What is the output of the following linear search implementation?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "-1",
+        "D": "None"
+      },
+      "correct_answer": "B",
+      "code_example": "def linear_search(arr, target):\n    for i in range(len(arr)):\n        if arr[i] == target:\n            return i\n    return -1\n\nnumbers = [4, 2, 7, 5, 9, 1]\nresult = linear_search(numbers, 5)\nprint(result)"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What is the decimal value of the binary number 1101?",
+      "options": {
+        "A": "11",
+        "B": "13",
+        "C": "15",
+        "D": "9"
+      },
+      "correct_answer": "B",
+      "code_example": "binary = \"1101\"\ndecimal = int(binary, 2)\nprint(decimal)"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What is the output of the following bubble sort implementation?",
+      "options": {
+        "A": "[1, 2, 4, 5, 7, 9]",
+        "B": "[9, 7, 5, 4, 2, 1]",
+        "C": "[4, 2, 7, 5, 9, 1]",
+        "D": "[1, 9, 2, 5, 7, 4]"
+      },
+      "correct_answer": "A",
+      "code_example": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr\n\nnumbers = [4, 2, 7, 5, 9, 1]\nsorted_numbers = bubble_sort(numbers)\nprint(sorted_numbers)"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What is the result of the following set operations?",
+      "options": {
+        "A": "{1, 2, 3, 4, 5}",
+        "B": "{3}",
+        "C": "{1, 2, 4, 5}",
+        "D": "{1, 2, 3, 4, 5, 6}"
+      },
+      "correct_answer": "B",
+      "code_example": "set1 = {1, 2, 3}\nset2 = {3, 4, 5}\nresult = set1.intersection(set2)\nprint(result)"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What is the Greatest Common Divisor (GCD) of 48 and 60?",
+      "options": {
+        "A": "6",
+        "B": "12",
+        "C": "24",
+        "D": "4"
+      },
+      "correct_answer": "B",
+      "code_example": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\nresult = gcd(48, 60)\nprint(result)"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What is the output of the following prime number checking function?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Not a prime number",
+        "D": "Prime number"
+      },
+      "correct_answer": "B",
+      "code_example": "def is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nresult = is_prime(15)\nprint(result)"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using magic/dunder methods?",
+      "options": {
+        "A": "Point(3, 4)",
+        "B": "<__main__.Point object at 0x...>",
+        "C": "(3, 4)",
+        "D": "Point: (3, 4)"
+      },
+      "correct_answer": "D",
+      "code_example": "class Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n        \n    def __repr__(self):\n        return f\"Point({self.x}, {self.y})\"\n        \n    def __str__(self):\n        return f\"Point: ({self.x}, {self.y})\"\n\np = Point(3, 4)\nprint(p)"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is the output of the following code using the collections module?",
+      "options": {
+        "A": "Counter({'a': 3, 'b': 2, 'c': 1})",
+        "B": "{'a': 3, 'b': 2, 'c': 1}",
+        "C": "[('a', 3), ('b', 2), ('c', 1)]",
+        "D": "{'c': 1, 'b': 2, 'a': 3}"
+      },
+      "correct_answer": "A",
+      "code_example": "from collections import Counter\n\ntext = \"aabcaa\"\ncounter = Counter(text)\nprint(counter)"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What demonstrates Python's first-class functions?",
+      "options": {
+        "A": "Using a function as a parameter to another function",
+        "B": "Defining a function inside a class",
+        "C": "Calling a function with default parameters",
+        "D": "Using decorators to modify a function's behavior"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a benefit of lazy evaluation in Python?",
+      "options": {
+        "A": "Reduced memory usage",
+        "B": "Handling infinite sequences",
+        "C": "Faster execution for all operations",
+        "D": "Avoiding unnecessary computations"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "In Django, what is the correct way to define a URL pattern that accepts an integer parameter?",
+      "options": {
+        "A": "path('articles/<str:id>/', views.article_detail)",
+        "B": "path('articles/<int:id>/', views.article_detail)",
+        "C": "url(r'^articles/(\\d+)/$', views.article_detail)",
+        "D": "url('articles/{id}/', views.article_detail)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which HTTP method is idempotent but not safe according to RESTful API principles?",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "OPTIONS"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following regular expression pattern matching?",
+      "options": {
+        "A": "['123', '456', '789']",
+        "B": "['123-456-789']",
+        "C": "['123-', '456-', '789']",
+        "D": "['123', '456', '789', '']"
+      },
+      "correct_answer": "A",
+      "code_example": "import re\n\ntext = \"123-456-789\"\npattern = r\"\\d+\"\nresult = re.findall(pattern, text)\nprint(result)"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What is the output of the following JSON serialization code?",
+      "options": {
+        "A": "{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}",
+        "B": "{'name': 'John', 'age': 30, 'city': 'New York'}",
+        "C": "[object Object]",
+        "D": "TypeError: Object of type 'datetime' is not JSON serializable"
+      },
+      "correct_answer": "A",
+      "code_example": "import json\n\nperson = {\n    \"name\": \"John\",\n    \"age\": 30,\n    \"city\": \"New York\"\n}\n\njson_string = json.dumps(person)\nprint(json_string)"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "In Django, where should static files be placed in a typical project structure?",
+      "options": {
+        "A": "In the root directory of the project",
+        "B": "Inside each app's static folder",
+        "C": "In the templates directory",
+        "D": "In the media directory"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code generating an infinite sequence?",
+      "options": {
+        "A": "[0, 1, 2, 3, 4]",
+        "B": "[0, 1, 4, 9, 16]",
+        "C": "An infinite loop with no output",
+        "D": "MemoryError"
+      },
+      "correct_answer": "B",
+      "code_example": "def infinite_squares():\n    n = 0\n    while True:\n        yield n ** 2\n        n += 1\n\ngen = infinite_squares()\nsquares = [next(gen) for _ in range(5)]\nprint(squares)"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What is the output of the following code using a priority queue?",
+      "options": {
+        "A": "[1, 3, 5, 7, 9]",
+        "B": "[9, 7, 5, 3, 1]",
+        "C": "[1, 3, 5]",
+        "D": "[9, 7]"
+      },
+      "correct_answer": "C",
+      "code_example": "import heapq\n\nnumbers = [5, 7, 9, 1, 3]\nheap = []\n\nfor num in numbers:\n    heapq.heappush(heap, num)\n\nresult = [heapq.heappop(heap) for _ in range(3)]\nprint(result)"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "Which of the following correctly represents a directed graph using an adjacency list?",
+      "options": {
+        "A": "[[1, 2], [2], [0, 1]]",
+        "B": "{0: [1, 2], 1: [2], 2: [0, 1]}",
+        "C": "[[0, 1, 0], [0, 0, 1], [1, 1, 0]]",
+        "D": "{(0, 1): 1, (0, 2): 1, (1, 2): 1, (2, 0): 1, (2, 1): 1}"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following nested data structure operation?",
+      "options": {
+        "A": "['Alice', 'Bob', 'Charlie']",
+        "B": "[25, 30, 28]",
+        "C": "['New York', 'London', 'Paris']",
+        "D": "[{'name': 'Alice', 'city': 'New York'}, {'name': 'Bob', 'city': 'London'}, {'name': 'Charlie', 'city': 'Paris'}]"
+      },
+      "correct_answer": "A",
+      "code_example": "people = [\n    {'name': 'Alice', 'age': 25, 'city': 'New York'},\n    {'name': 'Bob', 'age': 30, 'city': 'London'},\n    {'name': 'Charlie', 'age': 28, 'city': 'Paris'}\n]\n\nnames = [person['name'] for person in people]\nprint(names)"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What is the output of the following dictionary comprehension?",
+      "options": {
+        "A": "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}",
+        "B": "{1: 'odd', 2: 'even', 3: 'odd', 4: 'even', 5: 'odd'}",
+        "C": "{2: 'even', 4: 'even'}",
+        "D": "{1: 'odd', 3: 'odd', 5: 'odd'}"
+      },
+      "correct_answer": "B",
+      "code_example": "numbers = range(1, 6)\nresult = {num: 'even' if num % 2 == 0 else 'odd' for num in numbers}\nprint(result)"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "Which of the following regular expression patterns is most efficient for matching email addresses?",
+      "options": {
+        "A": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+        "B": "^[\\w._%+-]+@[\\w.-]+\\.[a-zA-Z]{2,}$",
+        "C": "^(\\w+)@(\\w+)\\.([a-zA-Z]{2,})$",
+        "D": ".*@.*\\..*"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "In Django, what is the correct view function signature that handles both GET and POST requests?",
+      "options": {
+        "A": "def view_func(request, *args): ...",
+        "B": "def view_func(request, **kwargs): ...",
+        "C": "def view_func(get, post): ...",
+        "D": "def view_func(request): ..."
+      },
+      "correct_answer": "D"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Consider the following implementation of a Singleton pattern. What will be the output of this code?",
+      "options": {
+        "A": "True, True",
+        "B": "False, True",
+        "C": "True, False",
+        "D": "False, False"
+      },
+      "correct_answer": "A",
+      "code_example": "class Singleton:\n    _instance = None\n    \n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance\n    \n    def __init__(self):\n        self.value = 'Singleton instance'\n\n# Create instances and check identity\ninstance1 = Singleton()\ninstance2 = Singleton()\n\nprint(instance1 is instance2, instance1.value == instance2.value)"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which of the following accurately describes the key difference between threading and multiprocessing in Python?",
+      "options": {
+        "A": "Threading is always faster than multiprocessing for all types of workloads",
+        "B": "Threading uses multiple CPU cores efficiently for CPU-bound tasks due to Python's thread-local interpreter",
+        "C": "Multiprocessing creates separate processes with their own memory space, bypassing the GIL for true parallelism",
+        "D": "Multiprocessing is a more modern approach that has completely replaced threading in Python 3.x"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates dynamic attribute access?",
+      "options": {
+        "A": "['name', 'age'] {'name': 'Alice', 'age': 30, 'profession': 'Engineer'}",
+        "B": "['name', 'age', 'profession'] {'name': 'Alice', 'age': 30}",
+        "C": "['name', 'age'] {'name': 'Alice', 'age': 30}",
+        "D": "['name', 'age', 'profession'] {'name': 'Alice', 'age': 30, 'profession': 'Engineer'}"
+      },
+      "correct_answer": "D",
+      "code_example": "class Person:\n    def __init__(self):\n        self.name = 'Alice'\n        self.age = 30\n\n# Create a person instance\nperson = Person()\n\n# Get all attributes\nattrs = [attr for attr in dir(person) if not attr.startswith('__')]\nprint(attrs, end=' ')\n\n# Add a new attribute dynamically\nsetattr(person, 'profession', 'Engineer')\n\n# Get person's dictionary\nprint(person.__dict__)"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What is the primary advantage of implementing database indexing on columns frequently used in WHERE clauses?",
+      "options": {
+        "A": "It reduces the size of the database on disk",
+        "B": "It speeds up query execution by reducing the need for full table scans",
+        "C": "It ensures data integrity and prevents duplicate entries",
+        "D": "It automatically optimizes the database schema structure"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output when running this code that demonstrates NumPy vectorization compared to a traditional loop?",
+      "options": {
+        "A": "NumPy: 0.001s, Loop: 0.1s (approximate values showing NumPy is ~100x faster)",
+        "B": "NumPy: 0.1s, Loop: 0.001s (approximate values showing Loop is ~100x faster)",
+        "C": "NumPy: 0.001s, Loop: 0.001s (approximate values showing similar performance)",
+        "D": "The code will produce an error due to incorrect array dimension"
+      },
+      "correct_answer": "A",
+      "code_example": "import numpy as np\nimport time\n\n# Create large arrays\nsize = 1000000\narray1 = np.random.rand(size)\narray2 = np.random.rand(size)\n\n# NumPy vectorized operation\nstart = time.time()\nresult_numpy = array1 * array2\nend = time.time()\ntime_numpy = end - start\n\n# Traditional loop\nstart = time.time()\nresult_loop = np.empty(size)\nfor i in range(size):\n    result_loop[i] = array1[i] * array2[i]\nend = time.time()\ntime_loop = end - start\n\nprint(f\"NumPy: {time_numpy:.3f}s, Loop: {time_loop:.3f}s\")"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of this code that implements in-order, pre-order, and post-order tree traversals?",
+      "options": {
+        "A": "In-order: [4, 2, 5, 1, 6, 3, 7], Pre-order: [1, 2, 4, 5, 3, 6, 7], Post-order: [4, 5, 2, 6, 7, 3, 1]",
+        "B": "In-order: [1, 2, 3, 4, 5, 6, 7], Pre-order: [4, 2, 1, 3, 5, 6, 7], Post-order: [1, 3, 2, 5, 7, 6, 4]",
+        "C": "In-order: [4, 2, 5, 1, 3, 6, 7], Pre-order: [1, 2, 4, 5, 3, 6, 7], Post-order: [4, 5, 2, 6, 7, 3, 1]",
+        "D": "In-order: [1, 2, 3, 4, 5, 6, 7], Pre-order: [1, 2, 3, 4, 5, 6, 7], Post-order: [7, 6, 5, 4, 3, 2, 1]"
+      },
+      "correct_answer": "C",
+      "code_example": "class TreeNode:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\ndef in_order_traversal(root, result):\n    if root:\n        in_order_traversal(root.left, result)\n        result.append(root.value)\n        in_order_traversal(root.right, result)\n        \ndef pre_order_traversal(root, result):\n    if root:\n        result.append(root.value)\n        pre_order_traversal(root.left, result)\n        pre_order_traversal(root.right, result)\n        \ndef post_order_traversal(root, result):\n    if root:\n        post_order_traversal(root.left, result)\n        post_order_traversal(root.right, result)\n        result.append(root.value)\n\n# Create a binary tree\n#       1\n#      / \\\n#     2   3\n#    / \\ / \\\n#   4  5 6  7\nroot = TreeNode(1)\nroot.left = TreeNode(2)\nroot.right = TreeNode(3)\nroot.left.left = TreeNode(4)\nroot.left.right = TreeNode(5)\nroot.right.left = TreeNode(6)\nroot.right.right = TreeNode(7)\n\n# Perform traversals\nin_order = []\nin_order_traversal(root, in_order)\n\npre_order = []\npre_order_traversal(root, pre_order)\n\npost_order = []\npost_order_traversal(root, post_order)\n\nprint(f\"In-order: {in_order}, Pre-order: {pre_order}, Post-order: {post_order}\")"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the output of this code demonstrating a secure password hashing technique?",
+      "options": {
+        "A": "True, followed by a hash string beginning with '$2b$12$'",
+        "B": "False, followed by a hash string beginning with '$2b$12$'",
+        "C": "True, followed by a string of hexadecimal digits",
+        "D": "The code will raise a ValueError due to insecure password hashing"
+      },
+      "correct_answer": "A",
+      "code_example": "import bcrypt\n\ndef hash_password(password):\n    # Generate a salt and hash the password\n    password_bytes = password.encode('utf-8')\n    salt = bcrypt.gensalt(12)\n    hashed = bcrypt.hashpw(password_bytes, salt)\n    return hashed\n\ndef check_password(password, hashed):\n    # Check if the password matches the hash\n    password_bytes = password.encode('utf-8')\n    return bcrypt.checkpw(password_bytes, hashed)\n\n# Hash a password\npassword = \"secure_password123\"\nhashed_password = hash_password(password)\n\n# Check correct password\nresult = check_password(password, hashed_password)\nprint(result, hashed_password.decode('utf-8'))"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the result of running this code that uses a segment tree for range sum queries?",
+      "options": {
+        "A": "Range sum [1, 3]: 9, Range sum [4, 5]: 9, After update: Range sum [1, 3]: 10",
+        "B": "Range sum [1, 3]: 9, Range sum [4, 5]: 9, After update: Range sum [1, 3]: 12",
+        "C": "Range sum [1, 3]: 6, Range sum [4, 5]: 9, After update: Range sum [1, 3]: 9",
+        "D": "Range sum [1, 3]: 9, Range sum [4, 5]: 9, After update: Range sum [1, 3]: 9"
+      },
+      "correct_answer": "B",
+      "code_example": "class SegmentTree:\n    def __init__(self, arr):\n        self.n = len(arr)\n        # Size of the segment tree array\n        self.tree = [0] * (4 * self.n)\n        self.build(arr, 0, 0, self.n - 1)\n    \n    def build(self, arr, node, start, end):\n        if start == end:\n            # Leaf node will have a single element\n            self.tree[node] = arr[start]\n            return\n        \n        mid = (start + end) // 2\n        # Recursively build the left and right subtrees\n        self.build(arr, 2 * node + 1, start, mid)\n        self.build(arr, 2 * node + 2, mid + 1, end)\n        \n        # Internal node will have the sum of its children\n        self.tree[node] = self.tree[2 * node + 1] + self.tree[2 * node + 2]\n    \n    def update(self, index, value, node=0, start=0, end=None):\n        if end is None:\n            end = self.n - 1\n            \n        if start == end:\n            # Leaf node\n            self.tree[node] = value\n            return\n        \n        mid = (start + end) // 2\n        if index <= mid:\n            # If index is in the left subtree\n            self.update(index, value, 2 * node + 1, start, mid)\n        else:\n            # If index is in the right subtree\n            self.update(index, value, 2 * node + 2, mid + 1, end)\n        \n        # Update the parent after updating the child\n        self.tree[node] = self.tree[2 * node + 1] + self.tree[2 * node + 2]\n    \n    def query(self, left, right, node=0, start=0, end=None):\n        if end is None:\n            end = self.n - 1\n            \n        # No overlap\n        if start > right or end < left:\n            return 0\n        \n        # Complete overlap\n        if start >= left and end <= right:\n            return self.tree[node]\n        \n        # Partial overlap - query both children\n        mid = (start + end) // 2\n        left_sum = self.query(left, right, 2 * node + 1, start, mid)\n        right_sum = self.query(left, right, 2 * node + 2, mid + 1, end)\n        \n        return left_sum + right_sum\n\n# Create a segment tree\narr = [1, 2, 3, 4, 5, 6]\nseg_tree = SegmentTree(arr)\n\n# Query range sums\nrange_sum_1 = seg_tree.query(1, 3)  # Sum of elements at indices 1, 2, 3\nrange_sum_2 = seg_tree.query(4, 5)  # Sum of elements at indices 4, 5\n\n# Update an element and query again\nseg_tree.update(2, 6)  # Update index 2 from 3 to 6\nrange_sum_3 = seg_tree.query(1, 3)  # Sum of elements at indices 1, 2, 3 after update\n\nprint(f\"Range sum [1, 3]: {range_sum_1}, Range sum [4, 5]: {range_sum_2}, After update: Range sum [1, 3]: {range_sum_3}\")"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What is the primary advantage of using Docker containerization in a Python development workflow?",
+      "options": {
+        "A": "Docker containers use less memory than virtual environments",
+        "B": "Docker provides consistent environments across development, testing, and production",
+        "C": "Docker automatically optimizes Python code for better performance",
+        "D": "Docker eliminates the need for unit testing in Python applications"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of this code that demonstrates profiling Python code with cProfile?",
+      "options": {
+        "A": "A sorted list of functions with call counts, showing that the recursive_function was called exactly 15 times",
+        "B": "A sorted list of functions with call counts, showing that the recursive_function was called exactly 3 times",
+        "C": "A sorted list of functions with call counts, showing that the recursive_function was called exactly 10 times",
+        "D": "An error because cProfile can only profile modules, not individual functions"
+      },
+      "correct_answer": "A",
+      "code_example": "import cProfile\nimport pstats\nimport io\n\ndef recursive_function(n):\n    if n <= 1:\n        return n\n    return recursive_function(n-1) + recursive_function(n-2)\n\ndef profiled_code():\n    # Call recursive function with argument 5\n    result = recursive_function(5)\n    return result\n\n# Create a profiler object\npr = cProfile.Profile()\n\n# Execute the function within the profiler\npr.enable()\nprofiled_code()\npr.disable()\n\n# Get the stats and format them\ns = io.StringIO()\nps = pstats.Stats(pr, stream=s).sort_stats('cumulative')\nps.print_stats()\n\n# Get profiling output as string\nprofile_output = s.getvalue()\n\n# Check how many times recursive_function was called\nimport re\nfunction_calls = re.search(r'recursive_function\\s+(\\d+)', profile_output)\nnum_calls = int(function_calls.group(1)) if function_calls else 0\n\nprint(f\"recursive_function was called {num_calls} times\")"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of this code demonstrating a mixin approach in Python?",
+      "options": {
+        "A": "LoggedDict added item: key1 -> value1\nLogging to file: Added item key1 -> value1",
+        "B": "LoggedDict added item: key1 -> value1\nLogging to console: Added item key1 -> value1",
+        "C": "Added item: key1 -> value1\nLogging to file: Dict modified",
+        "D": "AttributeError: 'LoggedDict' object has no attribute 'log'"
+      },
+      "correct_answer": "B",
+      "code_example": "class LoggingMixin:\n    def log(self, message):\n        print(f\"Logging to console: {message}\")\n\nclass FileMixin:\n    def log(self, message):\n        print(f\"Logging to file: {message}\")\n\nclass Dict(dict):\n    def __setitem__(self, key, value):\n        print(f\"Dict added item: {key} -> {value}\")\n        super().__setitem__(key, value)\n\n# Create a composite class using mixin\nclass LoggedDict(LoggingMixin, Dict):\n    def __setitem__(self, key, value):\n        super().__setitem__(key, value)\n        self.log(f\"Added item {key} -> {value}\")\n\n# Create a logged dictionary\nlogged_dict = LoggedDict()\nlogged_dict['key1'] = 'value1'"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the Factory design pattern?",
+      "options": {
+        "A": "Created PDF document with content: Report\nCreated Word document with content: Letter",
+        "B": "Created PDF document with content: Report\nError: Unknown document type",
+        "C": "Created Word document with content: Report\nCreated PDF document with content: Letter",
+        "D": "Error: Document factory requires content parameter"
+      },
+      "correct_answer": "A",
+      "code_example": "class Document:\n    def __init__(self, content):\n        self.content = content\n    \n    def show(self):\n        pass\n\nclass PDFDocument(Document):\n    def show(self):\n        return f\"Created PDF document with content: {self.content}\"\n\nclass WordDocument(Document):\n    def show(self):\n        return f\"Created Word document with content: {self.content}\"\n\nclass DocumentFactory:\n    @staticmethod\n    def create_document(doc_type, content):\n        if doc_type == \"pdf\":\n            return PDFDocument(content)\n        elif doc_type == \"word\":\n            return WordDocument(content)\n        else:\n            raise ValueError(\"Unknown document type\")\n\n# Use the factory to create documents\npdf_doc = DocumentFactory.create_document(\"pdf\", \"Report\")\nword_doc = DocumentFactory.create_document(\"word\", \"Letter\")\n\n# Show the documents\nprint(pdf_doc.show())\nprint(word_doc.show())"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "Which of the following correctly describes how to implement the Dependency Inversion Principle (DIP) from SOLID principles in Python?",
+      "options": {
+        "A": "Creating modules that handle one functionality and are not dependent on implementation details of other modules",
+        "B": "Ensuring that subclasses can be substituted for their base classes without affecting program correctness",
+        "C": "High-level modules should depend on abstractions, not on low-level modules, with abstractions not depending on details",
+        "D": "Designing classes so they can be extended without modification, focusing on inheritance for new functionality"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of this code demonstrating distributed caching with Redis?",
+      "options": {
+        "A": "Cache miss: Computing...\nCache hit: Result retrieved from cache",
+        "B": "Cache miss: Computing...\nCache miss: Computing...",
+        "C": "Cache hit: Result retrieved from cache\nCache hit: Result retrieved from cache",
+        "D": "Error: ModuleNotFoundError: No module named 'redis'"
+      },
+      "correct_answer": "A",
+      "code_example": "import redis\nimport time\nfrom functools import wraps\n\n# Simulate Redis for testing\nclass MockRedis:\n    def __init__(self):\n        self.data = {}\n    \n    def get(self, key):\n        return self.data.get(key)\n    \n    def setex(self, key, time, value):\n        self.data[key] = value\n\n# Create a mock Redis client\nredis_client = MockRedis()\n\ndef cache(expiration=3600):\n    def decorator(func):\n        @wraps(func)\n        def wrapper(*args, **kwargs):\n            # Create a cache key based on function name and arguments\n            key = f\"{func.__name__}:{str(args)}:{str(kwargs)}\"\n            \n            # Try to get result from cache\n            cached_result = redis_client.get(key)\n            if cached_result:\n                print(\"Cache hit: Result retrieved from cache\")\n                return cached_result\n            \n            # Cache miss, compute the result\n            print(\"Cache miss: Computing...\")\n            result = func(*args, **kwargs)\n            \n            # Store in cache for future use\n            redis_client.setex(key, expiration, result)\n            \n            return result\n        return wrapper\n    return decorator\n\n# A computationally expensive function\n@cache(expiration=10)\ndef expensive_computation(n):\n    # Simulate a long computation\n    time.sleep(0.1)  # shortened for testing\n    return n * n\n\n# First call - should be a cache miss\nexpensive_computation(5)\n\n# Second call with the same parameter - should be a cache hit\nexpensive_computation(5)"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "When working with Kubernetes for container orchestration of Python applications, what is the primary purpose of a Service resource?",
+      "options": {
+        "A": "To automatically scale the number of Pod replicas based on CPU usage",
+        "B": "To define persistent storage volumes that can be attached to Pods",
+        "C": "To provide a stable networking endpoint for accessing a set of Pods",
+        "D": "To handle rolling updates and rollbacks of application deployments"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of this code demonstrating the Observer pattern in Python?",
+      "options": {
+        "A": "WeatherStation: Temperature changed to 25°C\nDisplayDevice: Updated temperature to 25°C\nWeatherStation: Temperature changed to 30°C\nDisplayDevice: Updated temperature to 30°C\nLoggerDevice: Logged temperature change to 30°C",
+        "B": "WeatherStation: Temperature changed to 25°C\nDisplayDevice: Updated temperature to 25°C\nLoggerDevice: Logged temperature change to 25°C\nWeatherStation: Temperature changed to 30°C\nDisplayDevice: Updated temperature to 30°C\nLoggerDevice: Logged temperature change to 30°C",
+        "C": "WeatherStation: Temperature changed to 25°C\nDisplayDevice: Updated temperature to 25°C\nWeatherStation: Temperature changed to 30°C\nDisplayDevice: Updated temperature to 30°C",
+        "D": "WeatherStation: Temperature changed to 25°C\nWeatherStation: Temperature changed to 30°C\nDisplayDevice: Updated temperature to 30°C\nLoggerDevice: Logged temperature change to 30°C"
+      },
+      "correct_answer": "C",
+      "code_example": "class Subject:\n    def __init__(self):\n        self._observers = []\n    \n    def attach(self, observer):\n        if observer not in self._observers:\n            self._observers.append(observer)\n    \n    def detach(self, observer):\n        try:\n            self._observers.remove(observer)\n        except ValueError:\n            pass\n    \n    def notify(self, *args, **kwargs):\n        for observer in self._observers:\n            observer.update(self, *args, **kwargs)\n\nclass Observer:\n    def update(self, subject, *args, **kwargs):\n        pass\n\nclass WeatherStation(Subject):\n    def __init__(self):\n        super().__init__()\n        self._temperature = 0\n    \n    @property\n    def temperature(self):\n        return self._temperature\n    \n    @temperature.setter\n    def temperature(self, value):\n        self._temperature = value\n        print(f\"WeatherStation: Temperature changed to {value}°C\")\n        self.notify()\n\nclass DisplayDevice(Observer):\n    def update(self, subject, *args, **kwargs):\n        if isinstance(subject, WeatherStation):\n            print(f\"DisplayDevice: Updated temperature to {subject.temperature}°C\")\n\nclass LoggerDevice(Observer):\n    def update(self, subject, *args, **kwargs):\n        if isinstance(subject, WeatherStation):\n            print(f\"LoggerDevice: Logged temperature change to {subject.temperature}°C\")\n\n# Create the weather station and observers\nweather_station = WeatherStation()\ndisplay = DisplayDevice()\nlogger = LoggerDevice()\n\n# Attach only the display observer initially\nweather_station.attach(display)\n\n# Change temperature - only display should be notified\nweather_station.temperature = 25\n\n# Change temperature again - still only display is notified\nweather_station.temperature = 30"
+    }
+  ]
+}
