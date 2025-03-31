@@ -1,0 +1,620 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following bubble sort implementation?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[5, 4, 3, 2, 1]",
+        "C": "[3, 1, 4, 2, 5]",
+        "D": "Error: 'range' object does not support item assignment"
+      },
+      "correct_answer": "A",
+      "code_example": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr\n\nprint(bubble_sort([3, 1, 4, 2, 5]))"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the output of the primitive type operations?",
+      "options": {
+        "A": "7 <class 'int'>",
+        "B": "7.0 <class 'float'>",
+        "C": "7 <class 'float'>",
+        "D": "7.0 <class 'int'>"
+      },
+      "correct_answer": "B",
+      "code_example": "a = 5\nb = 2.0\nc = a + b\nprint(c, type(c))"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "Which file mode would you use to append binary data to an existing file?",
+      "options": {
+        "A": "'a'",
+        "B": "'ab'",
+        "C": "'wb'",
+        "D": "'rb'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What's the difference between parameters and arguments in Python functions?",
+      "options": {
+        "A": "They are exactly the same thing",
+        "B": "Parameters are defined in function declarations, arguments are the values passed to functions when called",
+        "C": "Arguments are defined in function declarations, parameters are the values passed to functions when called",
+        "D": "Parameters are only used in class methods, arguments are used in regular functions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following context manager example?",
+      "options": {
+        "A": "File opened\nProcessing file\nFile closed",
+        "B": "Processing file\nFile closed",
+        "C": "File opened\nProcessing file",
+        "D": "Error: 'FileHandler' object is not a context manager"
+      },
+      "correct_answer": "A",
+      "code_example": "class FileHandler:\n    def __enter__(self):\n        print(\"File opened\")\n        return self\n        \n    def __exit__(self, exc_type, exc_val, exc_tb):\n        print(\"File closed\")\n        \nwith FileHandler():\n    print(\"Processing file\")"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What does the following code print?",
+      "options": {
+        "A": "Hello\\nWorld",
+        "B": "Hello\nWorld",
+        "C": "Hello\\World",
+        "D": "HelloWorld"
+      },
+      "correct_answer": "B",
+      "code_example": "text = \"\"\"Hello\nWorld\"\"\"\nprint(text)"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output when finding the mean, median, and mode of the following list?",
+      "options": {
+        "A": "Mean: 5.5, Median: 5.5, Mode: 7",
+        "B": "Mean: 5.5, Median: 5.5, Mode: 5",
+        "C": "Mean: 6.0, Median: 5.5, Mode: 7",
+        "D": "Mean: 5.5, Median: 6.0, Mode: 7"
+      },
+      "correct_answer": "A",
+      "code_example": "import statistics\n\nnumbers = [1, 4, 5, 6, 7, 7, 8]\n\nmean = statistics.mean(numbers)\nmedian = statistics.median(numbers)\nmode = statistics.mode(numbers)\n\nprint(f\"Mean: {mean}, Median: {median}, Mode: {mode}\")"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Which function correctly checks if a string is a palindrome?",
+      "options": {
+        "A": "def is_palindrome(s):\n    return s == s[::-1]",
+        "B": "def is_palindrome(s):\n    return s == ''.join(reversed(s))",
+        "C": "def is_palindrome(s):\n    return s.lower() == s.lower()[::-1]",
+        "D": "All of the above"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will the following code output?",
+      "options": {
+        "A": "Adult",
+        "B": "Child",
+        "C": "Senior",
+        "D": "Error: invalid syntax"
+      },
+      "correct_answer": "C",
+      "code_example": "age = 65\nstatus = \"Adult\" if age < 18 else \"Senior\" if age >= 65 else \"Adult\"\nprint(status)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will the following selection sort implementation return?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[5, 4, 3, 2, 1]",
+        "C": "[5, 1, 4, 2, 3]",
+        "D": "The original list is modified in-place, so None"
+      },
+      "correct_answer": "D",
+      "code_example": "def selection_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        min_idx = i\n        for j in range(i+1, n):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n\narr = [5, 1, 4, 2, 3]\nprint(selection_sort(arr))"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will the following type checking code output?",
+      "options": {
+        "A": "True False",
+        "B": "False True",
+        "C": "True True",
+        "D": "False False"
+      },
+      "correct_answer": "B",
+      "code_example": "class Animal:\n    pass\n\nclass Dog(Animal):\n    pass\n\nfido = Dog()\n\nprint(type(fido) is Animal, isinstance(fido, Animal))"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What is the output of this binary search implementation on a sorted array?",
+      "options": {
+        "A": "3",
+        "B": "2",
+        "C": "-1",
+        "D": "4"
+      },
+      "correct_answer": "A",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return -1\n\nresult = binary_search([1, 3, 5, 7, 9], 7)\nprint(result)"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using for loops?",
+      "options": {
+        "A": "(0, 'a') (1, 'b') (2, 'c')",
+        "B": "0a 1b 2c",
+        "C": "(0, 'a', 'x') (1, 'b', 'y') (2, 'c', 'z')",
+        "D": "a-x b-y c-z"
+      },
+      "correct_answer": "D",
+      "code_example": "letters = ['a', 'b', 'c']\ncoords = ['x', 'y', 'z']\n\nfor i, (letter, coord) in enumerate(zip(letters, coords)):\n    print(f\"{letter}-{coord}\", end=\" \")"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will the following code containing a pass statement and else clause in a loop output?",
+      "options": {
+        "A": "Loop completed",
+        "B": "Nothing (empty output)",
+        "C": "Loop completed with exceptions",
+        "D": "Error: SyntaxError: invalid syntax"
+      },
+      "correct_answer": "A",
+      "code_example": "for i in range(5):\n    pass\nelse:\n    print(\"Loop completed\")"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following string manipulation code?",
+      "options": {
+        "A": "!dlrow olleH",
+        "B": "Hello world!",
+        "C": "hello world!",
+        "D": "!DLROW OLLEH"
+      },
+      "correct_answer": "A",
+      "code_example": "def reverse_string(s):\n    return s[::-1]\n\ntext = \"Hello world!\"\nprint(reverse_string(text))"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be printed by the following try/except/else/finally block?",
+      "options": {
+        "A": "Trying\nException occurred\nCleanup",
+        "B": "Trying\nSuccess\nCleanup",
+        "C": "Trying\nCleanup",
+        "D": "Trying\nException occurred\nSuccess\nCleanup"
+      },
+      "correct_answer": "A",
+      "code_example": "try:\n    print(\"Trying\")\n    x = 1 / 0\nexcept ZeroDivisionError:\n    print(\"Exception occurred\")\nelse:\n    print(\"Success\")\nfinally:\n    print(\"Cleanup\")"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "When should you use arrays instead of lists in Python?",
+      "options": {
+        "A": "When you need a collection with mixed data types",
+        "B": "When you need fast insertion and deletion operations",
+        "C": "When you need a homogeneous collection with efficient numerical operations",
+        "D": "Arrays and lists are identical in Python; the terms are interchangeable"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the traversal order of the following breadth-first search implementation?",
+      "options": {
+        "A": "A, B, C, D, E, F",
+        "B": "A, C, E, B, D, F",
+        "C": "A, B, C, D, F, E",
+        "D": "A, B, E, C, D, F"
+      },
+      "correct_answer": "C",
+      "code_example": "from collections import defaultdict, deque\n\ndef bfs_traversal(graph, start):\n    visited = set()\n    queue = deque([start])\n    visited.add(start)\n    result = []\n    \n    while queue:\n        vertex = queue.popleft()\n        result.append(vertex)\n        \n        for neighbor in graph[vertex]:\n            if neighbor not in visited:\n                visited.add(neighbor)\n                queue.append(neighbor)\n    \n    return result\n\ngraph = defaultdict(list)\ngraph['A'] = ['B', 'C']\ngraph['B'] = ['D', 'E']\ngraph['C'] = ['D', 'F']\ngraph['D'] = []\ngraph['E'] = []\ngraph['F'] = []\n\nprint(bfs_traversal(graph, 'A'))"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following iterator protocol implementation?",
+      "options": {
+        "A": "1 2 3 StopIteration",
+        "B": "1 2 3",
+        "C": "StopIteration",
+        "D": "Error: 'Counter' object is not an iterator"
+      },
+      "correct_answer": "B",
+      "code_example": "class Counter:\n    def __init__(self, low, high):\n        self.current = low\n        self.high = high\n        \n    def __iter__(self):\n        return self\n        \n    def __next__(self):\n        if self.current > self.high:\n            raise StopIteration\n        else:\n            self.current += 1\n            return self.current - 1\n\nc = Counter(1, 3)\nfor i in c:\n    print(i, end=\" \")"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will the following JSON parsing code output?",
+      "options": {
+        "A": "{'name': 'John', 'age': 30, 'city': 'New York'}",
+        "B": "{'name': 'John', 'city': 'New York'}",
+        "C": "John, 30, New York",
+        "D": "Error: JSON string contains unexpected character"
+      },
+      "correct_answer": "B",
+      "code_example": "import json\n\ndata = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'\nparsed = json.loads(data)\n\n# Remove the age field\nparsed.pop('age')\n\n# Convert back to JSON\njson_string = json.dumps(parsed)\n\n# Load again\nresult = json.loads(json_string)\nprint(result)"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following closure example?",
+      "options": {
+        "A": "10 15",
+        "B": "10 10",
+        "C": "5 10",
+        "D": "5 15"
+      },
+      "correct_answer": "A",
+      "code_example": "def create_multiplier(x):\n    def multiply(y):\n        return x * y\n    return multiply\n\ndoubler = create_multiplier(2)\ntripler = create_multiplier(3)\n\nprint(doubler(5), tripler(5))"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which of the following demonstrates first-class functions in Python?",
+      "options": {
+        "A": "def process(callback):\n    return callback()",
+        "B": "def process(**kwargs):\n    return kwargs",
+        "C": "process = lambda x: x * 2",
+        "D": "Both A and C"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using lambda functions?",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]",
+        "B": "[1, 8, 27, 64, 125]",
+        "C": "[2, 4, 6, 8, 10]",
+        "D": "[2, 3, 4, 5, 6]"
+      },
+      "correct_answer": "A",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nsquared = list(map(lambda x: x**2, numbers))\nprint(squared)"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "Which of the following is the most secure way to handle database connections in Python?",
+      "options": {
+        "A": "conn = sqlite3.connect('example.db')\ncursor = conn.cursor()\n# operations\nconn.close()",
+        "B": "try:\n    conn = sqlite3.connect('example.db')\n    cursor = conn.cursor()\n    # operations\nfinally:\n    conn.close()",
+        "C": "with sqlite3.connect('example.db') as conn:\n    cursor = conn.cursor()\n    # operations",
+        "D": "global conn\nconn = sqlite3.connect('example.db')\ncursor = conn.cursor()\n# operations"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will the following regular expression pattern matching code output?",
+      "options": {
+        "A": "['123', '456', '789']",
+        "B": "['123-456-789']",
+        "C": "['123-456-789', '123', '456', '789']",
+        "D": "['123', '456', '789', '123-456-789']"
+      },
+      "correct_answer": "A",
+      "code_example": "import re\n\npattern = r'\\d+'\ntext = \"123-456-789\"\nresult = re.findall(pattern, text)\nprint(result)"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following generator function using yield?",
+      "options": {
+        "A": "2 4 6 8 10",
+        "B": "1 2 3 4 5",
+        "C": "[2, 4, 6, 8, 10]",
+        "D": "StopIteration"
+      },
+      "correct_answer": "A",
+      "code_example": "def even_numbers(n):\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            yield i\n\nfor num in even_numbers(10):\n    print(num, end=\" \")"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "In a web framework like Django or Flask, what is the primary purpose of templates?",
+      "options": {
+        "A": "To store configuration settings",
+        "B": "To separate presentation logic from business logic",
+        "C": "To cache database queries",
+        "D": "To handle user authentication"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using *args and **kwargs?",
+      "options": {
+        "A": "(1, 2, 3) {'a': 4, 'b': 5}",
+        "B": "[1, 2, 3] {'a': 4, 'b': 5}",
+        "C": "1 2 3 a=4 b=5",
+        "D": "TypeError: function() got multiple values for argument"
+      },
+      "correct_answer": "A",
+      "code_example": "def show_args_kwargs(*args, **kwargs):\n    print(args, kwargs)\n\nshow_args_kwargs(1, 2, 3, a=4, b=5)"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using collections.Counter?",
+      "options": {
+        "A": "Counter({'a': 3, 'b': 2, 'c': 1})",
+        "B": "{'a': 3, 'b': 2, 'c': 1}",
+        "C": "[('a', 3), ('b', 2), ('c', 1)]",
+        "D": "{'a': 3}"
+      },
+      "correct_answer": "C",
+      "code_example": "from collections import Counter\n\ntext = \"aaabbc\"\ncounter = Counter(text)\nmost_common = counter.most_common()\nprint(most_common)"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using property decorators?",
+      "options": {
+        "A": "Setting temperature to 37\nGetting temperature\n37",
+        "B": "Celsius: 37\nKelvin: 310.15",
+        "C": "Getting temperature\n37",
+        "D": "Setting temperature to 37\nGetting temperature\n310.15"
+      },
+      "correct_answer": "C",
+      "code_example": "class Temperature:\n    def __init__(self):\n        self._temp = 0\n        \n    @property\n    def temperature(self):\n        print(\"Getting temperature\")\n        return self._temp\n        \n    @temperature.setter\n    def temperature(self, value):\n        print(f\"Setting temperature to {value}\")\n        self._temp = value\n\nt = Temperature()\nt.temperature = 37\nprint(t.temperature)"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is the correct way to create and import a custom module in Python?",
+      "options": {
+        "A": "Create a file 'mymodule.py'; import it with 'import mymodule'",
+        "B": "Create a file 'mymodule.py'; import it with 'from mymodule import *'",
+        "C": "Create a package directory with '__init__.py'; import it with 'import package.module'",
+        "D": "All of the above are correct ways to create and import modules"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following greedy vs non-greedy matching code?",
+      "options": {
+        "A": "Greedy: '<div>Content</div>', Non-greedy: '<div>'",
+        "B": "Greedy: '<div>', Non-greedy: '<div>'",
+        "C": "Greedy: '<div>Content</div>', Non-greedy: '<div>Content</div>'",
+        "D": "Greedy: '<div>Content</div><div>More</div>', Non-greedy: '<div>Content</div>'"
+      },
+      "correct_answer": "A",
+      "code_example": "import re\n\nhtml = \"<div>Content</div><div>More</div>\"\n\ngreedy = re.search('<div>.*</div>', html)\nnon_greedy = re.search('<div>.*?</div>', html)\n\nprint(f\"Greedy: '{greedy.group()}', Non-greedy: '{non_greedy.group()}'\")"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "In a microservices architecture, you need to implement service discovery. The following code snippet uses which design pattern?",
+      "options": {
+        "A": "Observer Pattern",
+        "B": "Singleton Pattern",
+        "C": "Registry Pattern",
+        "D": "Factory Pattern"
+      },
+      "correct_answer": "C",
+      "code_example": "class ServiceRegistry:\n    _instance = None\n    _services = {}\n    \n    @classmethod\n    def get_instance(cls):\n        if cls._instance is None:\n            cls._instance = cls()\n        return cls._instance\n    \n    def register(self, service_name, instance):\n        self._services[service_name] = instance\n        \n    def get_service(self, service_name):\n        return self._services.get(service_name)\n        \n# Usage\nregistry = ServiceRegistry.get_instance()\nregistry.register('payment_service', PaymentService())\n\n# Later in another part of the application\nregistry = ServiceRegistry.get_instance()\npayment_svc = registry.get_service('payment_service')"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What is the time complexity of the following approximation algorithm for the Vertex Cover problem?",
+      "options": {
+        "A": "O(V + E)",
+        "B": "O(V * E)",
+        "C": "O(V^2)",
+        "D": "O(2^V)"
+      },
+      "correct_answer": "A",
+      "code_example": "def approx_vertex_cover(graph):\n    # Input: graph as adjacency list {vertex: [neighbors]}\n    # Output: approximate minimum vertex cover\n    result = set()\n    edges = []\n    \n    # Create list of all edges\n    for u in graph:\n        for v in graph[u]:\n            if (u, v) not in edges and (v, u) not in edges:\n                edges.append((u, v))\n    \n    # Pick edges and add both endpoints to cover\n    while edges:\n        u, v = edges.pop(0)\n        if u not in result and v not in result:\n            result.add(u)\n            result.add(v)\n    \n    return result"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Which of the following query optimizations would most effectively improve the performance of this SQL query in a large database?",
+      "options": {
+        "A": "Adding an index on the student_id column in the grades table",
+        "B": "Adding a WHERE clause to filter results by semester",
+        "C": "Using EXISTS instead of IN for the subquery",
+        "D": "Replacing JOIN with a subquery"
+      },
+      "correct_answer": "A",
+      "code_example": "# Python code using SQLAlchemy to execute the query\nfrom sqlalchemy import create_engine, text\n\nengine = create_engine('postgresql://user:password@localhost/school')\n\nwith engine.connect() as conn:\n    result = conn.execute(text(\"\"\"\n        SELECT s.name, AVG(g.score) as average_score\n        FROM students s\n        JOIN grades g ON s.id = g.student_id\n        WHERE s.id IN (\n            SELECT student_id FROM enrollment\n            WHERE active = True\n        )\n        GROUP BY s.id, s.name\n        ORDER BY average_score DESC\n    \"\"\"))"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "In the following Selenium code for browser automation, what would be the output if the website's structure changed and the element with id='result-count' no longer exists?",
+      "options": {
+        "A": "0",
+        "B": "None",
+        "C": "NoSuchElementException will be raised",
+        "D": "TimeoutException will be raised"
+      },
+      "correct_answer": "C",
+      "code_example": "from selenium import webdriver\nfrom selenium.webdriver.common.by import By\n\ndef get_search_results_count(url, search_term):\n    driver = webdriver.Chrome()\n    try:\n        driver.get(url)\n        search_box = driver.find_element(By.ID, 'search-box')\n        search_box.send_keys(search_term)\n        search_box.submit()\n        \n        # Wait up to 5 seconds for results to load\n        driver.implicitly_wait(5)\n        \n        # Get the count of results\n        result_count = driver.find_element(By.ID, 'result-count')\n        return int(result_count.text.split()[0])\n    finally:\n        driver.quit()\n\n# Usage\ncount = get_search_results_count('https://example.com', 'python developer')\nprint(count)"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "In a database sharding implementation, what issue does the following code address?",
+      "options": {
+        "A": "Read scalability",
+        "B": "Write scalability",
+        "C": "Cross-shard joins",
+        "D": "Rebalancing data across shards"
+      },
+      "correct_answer": "C",
+      "code_example": "class ShardedDatabase:\n    def __init__(self, shard_count):\n        self.shards = [Database(f'shard_{i}') for i in range(shard_count)]\n        self.cache = {}\n    \n    def get_shard_for_key(self, key):\n        # Consistent hashing to determine shard\n        return hash(key) % len(self.shards)\n    \n    def query_user_with_orders(self, user_id):\n        # Query user from appropriate shard\n        user_shard = self.get_shard_for_key(f'user:{user_id}')\n        user = self.shards[user_shard].query(f\"SELECT * FROM users WHERE id = {user_id}\")\n        \n        # Cache the result to avoid distributed joins\n        if user and user_id not in self.cache:\n            # Query all shards for orders\n            orders = []\n            for shard in self.shards:\n                shard_orders = shard.query(f\"SELECT * FROM orders WHERE user_id = {user_id}\")\n                orders.extend(shard_orders)\n            \n            # Store in cache\n            self.cache[user_id] = {'user': user, 'orders': orders}\n        \n        return self.cache.get(user_id, {'user': None, 'orders': []})"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Using the profiling results below, which function should be optimized first to improve overall performance?",
+      "options": {
+        "A": "process_data",
+        "B": "parse_input",
+        "C": "calculate_statistics",
+        "D": "generate_report"
+      },
+      "correct_answer": "B",
+      "code_example": "import cProfile\nimport pstats\n\ndef parse_input(data):\n    result = []\n    for line in data.split('\\n'):\n        parts = line.strip().split(',')\n        if len(parts) >= 3:\n            result.append({\n                'id': int(parts[0]),\n                'value': float(parts[1]),\n                'category': parts[2]\n            })\n    return result\n\ndef calculate_statistics(items):\n    categories = {}\n    for item in items:\n        cat = item['category']\n        if cat not in categories:\n            categories[cat] = []\n        categories[cat].append(item['value'])\n    \n    stats = {}\n    for cat, values in categories.items():\n        stats[cat] = {\n            'min': min(values),\n            'max': max(values),\n            'avg': sum(values) / len(values)\n        }\n    return stats\n\ndef generate_report(stats):\n    report = []\n    for cat, values in stats.items():\n        report.append(f\"Category: {cat}\")\n        report.append(f\"  Min: {values['min']:.2f}\")\n        report.append(f\"  Max: {values['max']:.2f}\")\n        report.append(f\"  Avg: {values['avg']:.2f}\")\n    return '\\n'.join(report)\n\ndef process_data(data):\n    items = parse_input(data)\n    stats = calculate_statistics(items)\n    return generate_report(stats)\n\n# Profiling results\n'''\n   ncalls  tottime  percall  cumtime  percall filename:lineno(function)\n        1    0.015    0.015    1.522    1.522 processor.py:32(process_data)\n        1    0.923    0.923    0.923    0.923 processor.py:3(parse_input)\n        1    0.421    0.421    0.421    0.421 processor.py:15(calculate_statistics)\n        1    0.163    0.163    0.163    0.163 processor.py:29(generate_report)\n'''"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the time complexity of the following dynamic programming solution to the Longest Common Subsequence problem?",
+      "options": {
+        "A": "O(n)",
+        "B": "O(n log n)",
+        "C": "O(n²)",
+        "D": "O(2ⁿ)"
+      },
+      "correct_answer": "C",
+      "code_example": "def longest_common_subsequence(str1, str2):\n    m, n = len(str1), len(str2)\n    \n    # Create a table to store results of subproblems\n    dp = [[0 for _ in range(n + 1)] for _ in range(m + 1)]\n    \n    # Fill the dp table in bottom-up fashion\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if str1[i-1] == str2[j-1]:\n                dp[i][j] = dp[i-1][j-1] + 1\n            else:\n                dp[i][j] = max(dp[i-1][j], dp[i][j-1])\n    \n    # Reconstruct the LCS\n    lcs = []\n    i, j = m, n\n    while i > 0 and j > 0:\n        if str1[i-1] == str2[j-1]:\n            lcs.append(str1[i-1])\n            i -= 1\n            j -= 1\n        elif dp[i-1][j] > dp[i][j-1]:\n            i -= 1\n        else:\n            j -= 1\n    \n    return ''.join(reversed(lcs))"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "Which space optimization technique is primarily used in the following code?",
+      "options": {
+        "A": "In-place algorithm",
+        "B": "Sparse matrix representation",
+        "C": "Memoization with LRU cache",
+        "D": "Generator expression"
+      },
+      "correct_answer": "A",
+      "code_example": "def sort_almost_sorted(arr, k):\n    \"\"\"\n    Sort an array where each element is at most k positions\n    away from its correctly sorted position.\n    \"\"\"\n    import heapq\n    n = len(arr)\n    \n    # Create a min-heap with first k+1 elements\n    heap = arr[:min(k+1, n)]\n    heapq.heapify(heap)\n    \n    # Index to put next sorted element\n    sorted_idx = 0\n    \n    # Process remaining elements\n    for i in range(k+1, n):\n        # Extract minimum and place it at sorted_idx\n        arr[sorted_idx] = heapq.heappop(heap)\n        sorted_idx += 1\n        \n        # Add current element to the heap\n        heapq.heappush(heap, arr[i])\n    \n    # Extract remaining elements from heap\n    while heap:\n        arr[sorted_idx] = heapq.heappop(heap)\n        sorted_idx += 1\n    \n    return arr"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What potential race condition exists in the following code when used in a multi-threaded environment?",
+      "options": {
+        "A": "The balance might be read before a previous update is committed",
+        "B": "Multiple threads could call increment_next_id simultaneously",
+        "C": "The log file might be corrupted by concurrent writes",
+        "D": "The timeout could expire during a transaction"
+      },
+      "correct_answer": "B",
+      "code_example": "class UserManager:\n    def __init__(self):\n        self.users = {}\n        self.next_id = 1\n    \n    def increment_next_id(self):\n        current = self.next_id\n        self.next_id += 1\n        return current\n    \n    def add_user(self, name, email):\n        user_id = self.increment_next_id()\n        self.users[user_id] = {\n            'id': user_id,\n            'name': name,\n            'email': email,\n            'created_at': datetime.now()\n        }\n        return user_id\n    \n    def get_user(self, user_id):\n        return self.users.get(user_id)\n    \n    def list_users(self):\n        return list(self.users.values())"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "Which design pattern is implemented in the following code?",
+      "options": {
+        "A": "Observer Pattern",
+        "B": "Factory Pattern",
+        "C": "Singleton Pattern",
+        "D": "Decorator Pattern"
+      },
+      "correct_answer": "A",
+      "code_example": "class EventManager:\n    def __init__(self):\n        self.subscribers = {}\n    \n    def subscribe(self, event_type, listener):\n        if event_type not in self.subscribers:\n            self.subscribers[event_type] = []\n        self.subscribers[event_type].append(listener)\n    \n    def unsubscribe(self, event_type, listener):\n        if event_type in self.subscribers and listener in self.subscribers[event_type]:\n            self.subscribers[event_type].remove(listener)\n    \n    def notify(self, event_type, data):\n        if event_type in self.subscribers:\n            for listener in self.subscribers[event_type]:\n                listener(data)\n\nclass DataStore:\n    def __init__(self, event_manager):\n        self.data = {}\n        self.event_manager = event_manager\n    \n    def add_item(self, key, value):\n        self.data[key] = value\n        self.event_manager.notify('data_changed', {'key': key, 'value': value})\n    \n    def remove_item(self, key):\n        if key in self.data:\n            del self.data[key]\n            self.event_manager.notify('data_changed', {'key': key, 'deleted': True})"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "In the following code that identifies overlapping subproblems, what will be the output when fib(5) is called?",
+      "options": {
+        "A": "5",
+        "B": "8",
+        "C": "5 and {0: 0, 1: 1, 2: 1, 3: 2, 4: 3, 5: 5}",
+        "D": "5 and 5 calls to fib_with_counter"
+      },
+      "correct_answer": "C",
+      "code_example": "def fib_with_counter(n, memo={}, counter=[0]):\n    counter[0] += 1\n    \n    if n in memo:\n        return memo[n]\n    \n    if n <= 1:\n        memo[n] = n\n    else:\n        memo[n] = fib_with_counter(n-1, memo, counter) + fib_with_counter(n-2, memo, counter)\n    \n    return memo[n]\n\ndef fib(n):\n    memo = {}\n    counter = [0]\n    result = fib_with_counter(n, memo, counter)\n    print(result, \"and\", memo)\n    return result"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "In test-driven development, what issue exists with the following test case?",
+      "options": {
+        "A": "It doesn't use assertions",
+        "B": "It tests multiple behaviors in a single test",
+        "C": "It doesn't isolate the code under test from external dependencies",
+        "D": "It uses inappropriate test data"
+      },
+      "correct_answer": "B",
+      "code_example": "import unittest\nfrom user_service import UserService\n\nclass TestUserService(unittest.TestCase):\n    def setUp(self):\n        self.service = UserService()\n    \n    def test_user_creation_and_authentication(self):\n        # Test user creation\n        user = self.service.create_user('testuser', 'password123')\n        self.assertIsNotNone(user)\n        self.assertEqual(user.username, 'testuser')\n        \n        # Test user retrieval\n        retrieved = self.service.get_user_by_username('testuser')\n        self.assertEqual(retrieved.id, user.id)\n        \n        # Test authentication\n        self.assertTrue(self.service.authenticate('testuser', 'password123'))\n        self.assertFalse(self.service.authenticate('testuser', 'wrongpassword'))\n        \n        # Test password change\n        self.service.update_password('testuser', 'newpassword456')\n        self.assertFalse(self.service.authenticate('testuser', 'password123'))\n        self.assertTrue(self.service.authenticate('testuser', 'newpassword456'))"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the final appearance of the visualization produced by the following Matplotlib/Seaborn code?",
+      "options": {
+        "A": "A scatter plot with red points showing a negative correlation",
+        "B": "A line plot with two lines showing different trends",
+        "C": "A stacked bar chart with three categories and a legend",
+        "D": "A heatmap with a colorbar showing correlation values"
+      },
+      "correct_answer": "D",
+      "code_example": "import numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Set the random seed for reproducibility\nnp.random.seed(42)\n\n# Generate correlated data\ndata = np.random.randn(10, 10)\n# Make data more correlated\nfor i in range(10):\n    for j in range(10):\n        if i != j:\n            data[i, j] = data[i, j] * 0.5 + data[i, i] * 0.5\n\n# Calculate correlation matrix\ncorr_matrix = np.corrcoef(data)\n\n# Create figure and axes\nplt.figure(figsize=(10, 8))\n\n# Create heatmap\nsns.heatmap(corr_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1, \n           linewidths=0.5, square=True, cbar_kws={'label': 'Correlation Coefficient'})\n\n# Set title and labels\nplt.title('Correlation Matrix Heatmap', fontsize=14)\nplt.tight_layout()\n\n# Instead of showing, we'll just return what will be displayed\n# plt.show()"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What is the main benefit of using abstract base classes as implemented in the following code?",
+      "options": {
+        "A": "It enforces a contract for subclasses to implement specific methods",
+        "B": "It provides default implementations for all methods",
+        "C": "It prevents multiple inheritance",
+        "D": "It creates singleton instances automatically"
+      },
+      "correct_answer": "A",
+      "code_example": "from abc import ABC, abstractmethod\n\nclass DataProcessor(ABC):\n    @abstractmethod\n    def load_data(self, source):\n        \"\"\"Load data from the source\"\"\"\n        pass\n    \n    @abstractmethod\n    def process_data(self, data):\n        \"\"\"Process the loaded data\"\"\"\n        pass\n    \n    @abstractmethod\n    def save_results(self, results, destination):\n        \"\"\"Save processing results\"\"\"\n        pass\n    \n    def run_pipeline(self, source, destination):\n        \"\"\"Run the complete data processing pipeline\"\"\"\n        data = self.load_data(source)\n        results = self.process_data(data)\n        self.save_results(results, destination)\n        return results\n\nclass CSVProcessor(DataProcessor):\n    def load_data(self, source):\n        print(f\"Loading CSV data from {source}\")\n        # Implementation for loading CSV data\n        return {\"data\": \"sample csv data\"}\n    \n    def process_data(self, data):\n        print(\"Processing CSV data\")\n        # Implementation for processing CSV data\n        return {\"processed\": data[\"data\"].upper()}\n    \n    def save_results(self, results, destination):\n        print(f\"Saving results to {destination}\")\n        # Implementation for saving results"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "Which API security measure is NOT implemented in the following Flask API code?",
+      "options": {
+        "A": "Input validation",
+        "B": "Rate limiting",
+        "C": "Authentication",
+        "D": "HTTPS enforcement"
+      },
+      "correct_answer": "D",
+      "code_example": "from flask import Flask, request, jsonify\nfrom flask_limiter import Limiter\nfrom flask_limiter.util import get_remote_address\nfrom marshmallow import Schema, fields, ValidationError\nimport jwt\nimport datetime\n\napp = Flask(__name__)\n\n# Configure rate limiting\nlimiter = Limiter(\n    app,\n    key_func=get_remote_address,\n    default_limits=[\"200 per day\", \"50 per hour\"]\n)\n\n# Define validation schema\nclass UserSchema(Schema):\n    username = fields.String(required=True)\n    password = fields.String(required=True)\n\n# Secret key for JWT\nSECRET_KEY = \"your-secret-key\"\n\n# Authentication decorator\ndef token_required(f):\n    def decorated(*args, **kwargs):\n        token = request.headers.get('Authorization')\n        if not token:\n            return jsonify({'message': 'Token is missing'}), 401\n        \n        try:\n            token = token.split(\" \")[1]  # Remove 'Bearer ' prefix\n            data = jwt.decode(token, SECRET_KEY, algorithms=[\"HS256\"])\n        except:\n            return jsonify({'message': 'Invalid token'}), 401\n            \n        return f(*args, **kwargs)\n    return decorated\n\n@app.route('/login', methods=['POST'])\n@limiter.limit(\"5 per minute\")\ndef login():\n    # Validate input\n    schema = UserSchema()\n    try:\n        data = schema.load(request.json)\n    except ValidationError as err:\n        return jsonify(err.messages), 400\n    \n    # Check credentials (simplified)\n    if data['username'] == 'admin' and data['password'] == 'secret':\n        # Generate token\n        token = jwt.encode({\n            'user': data['username'],\n            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)\n        }, SECRET_KEY, algorithm=\"HS256\")\n        \n        return jsonify({'token': token})\n    \n    return jsonify({'message': 'Invalid credentials'}), 401\n\n@app.route('/api/data', methods=['GET'])\n@token_required\n@limiter.limit(\"10 per minute\")\ndef get_data():\n    return jsonify({'data': 'This is protected data'})"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What performance improvement can be expected when using the Cython implementation compared to the pure Python version of this function?",
+      "options": {
+        "A": "No significant improvement",
+        "B": "2-5x faster execution",
+        "C": "10-100x faster execution",
+        "D": "1000x or more faster execution"
+      },
+      "correct_answer": "C",
+      "code_example": "# Python version\ndef calculate_mandelbrot_py(h, w, max_iters):\n    y, x = np.ogrid[-1.4:1.4:h*1j, -2:0.8:w*1j]\n    c = x + y*1j\n    z = c\n    divtime = max_iters + np.zeros(z.shape, dtype=int)\n    \n    for i in range(max_iters):\n        z = z**2 + c\n        diverge = z*np.conj(z) > 2**2\n        div_now = diverge & (divtime == max_iters)\n        divtime[div_now] = i\n        z[diverge] = 2\n    \n    return divtime\n\n# Cython version (cython code in .pyx file)\n\"\"\"\n# distutils: language=c++\n# cython: boundscheck=False, wraparound=False, nonecheck=False\n\nimport numpy as np\ncimport numpy as np\nfrom libc.math cimport sqrt\n\ndef calculate_mandelbrot_cy(int h, int w, int max_iters):\n    cdef np.ndarray[np.complex128_t, ndim=2] c = np.zeros((h, w), dtype=np.complex128)\n    cdef np.ndarray[np.complex128_t, ndim=2] z = np.zeros((h, w), dtype=np.complex128)\n    cdef np.ndarray[np.int_t, ndim=2] divtime = max_iters + np.zeros((h, w), dtype=np.int_)\n    \n    cdef double real_range = 2.8 / w\n    cdef double imag_range = 2.8 / h\n    \n    cdef int i, row, col\n    cdef double real, imag, zr, zi, zr_new, magnitude_squared\n    \n    for row in range(h):\n        imag = 1.4 - row * imag_range\n        for col in range(w):\n            real = -2.0 + col * real_range\n            c[row, col] = complex(real, imag)\n            z[row, col] = complex(real, imag)\n    \n    for i in range(max_iters):\n        for row in range(h):\n            for col in range(w):\n                if divtime[row, col] == max_iters:\n                    zr = z[row, col].real\n                    zi = z[row, col].imag\n                    zr_new = zr*zr - zi*zi + c[row, col].real\n                    zi = 2*zr*zi + c[row, col].imag\n                    zr = zr_new\n                    z[row, col] = complex(zr, zi)\n                    \n                    magnitude_squared = zr*zr + zi*zi\n                    if magnitude_squared > 4.0:\n                        divtime[row, col] = i\n    \n    return divtime\n\"\"\"\n\n# Benchmark comparison\nimport time\nimport numpy as np\nfrom mandelbrot_cy import calculate_mandelbrot_cy  # Cython implementation\n\n# Parameters\nh, w = 1000, 1500\nmax_iters = 100\n\n# Benchmark Python version\nstart = time.time()\nresult_py = calculate_mandelbrot_py(h, w, max_iters)\npy_time = time.time() - start\nprint(f\"Python time: {py_time:.4f} seconds\")\n\n# Benchmark Cython version\nstart = time.time()\nresult_cy = calculate_mandelbrot_cy(h, w, max_iters)\ncy_time = time.time() - start\nprint(f\"Cython time: {cy_time:.4f} seconds\")\n\n# Calculate speedup\nspeedup = py_time / cy_time\nprint(f\"Speedup: {speedup:.2f}x\")"
+    }
+  ]
+}
