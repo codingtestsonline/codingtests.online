@@ -1,0 +1,670 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "Docstrings and function annotations",
+      "question": "What is the primary purpose of function annotations in Python?",
+      "options": {
+        "A": "To enforce type checking at runtime",
+        "B": "To provide documentation about parameter and return types",
+        "C": "To optimize function execution",
+        "D": "To make functions execute faster"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "Binary search on sorted arrays",
+      "question": "What will be the output of the following code?",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return -1\n\nmy_list = [1, 3, 5, 7, 9, 11, 13, 15]\nprint(binary_search(my_list, 7))",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "7",
+        "D": "-1"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "Default parameters and return values",
+      "question": "What will be the output of the following code?",
+      "code_example": "def greet(name, greeting=\"Hello\"):\n    return f\"{greeting}, {name}!\"\n\nresult = greet(\"Alice\")\nprint(result)",
+      "options": {
+        "A": "Hello",
+        "B": "Hello, Alice",
+        "C": "Hello, Alice!",
+        "D": "Alice, Hello!"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "GCD and LCM calculations",
+      "question": "What will be the output of the following code?",
+      "code_example": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\ndef lcm(a, b):\n    return a * b // gcd(a, b)\n\nprint(lcm(12, 18))",
+      "options": {
+        "A": "6",
+        "B": "36",
+        "C": "2",
+        "D": "216"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "Converting number bases",
+      "question": "What will be the output of the following code?",
+      "code_example": "decimal = 42\nbinary = bin(decimal)[2:]\noctal = oct(decimal)[2:]\nhexadecimal = hex(decimal)[2:]\nprint(f\"{binary}, {octal}, {hexadecimal}\")",
+      "options": {
+        "A": "101010, 52, 2a",
+        "B": "0b101010, 0o52, 0x2a",
+        "C": "101010, 52, 2A",
+        "D": "0b101010, 52, 2a"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "Working with CSV files",
+      "question": "Which mode should be used when opening a CSV file for reading in Python?",
+      "options": {
+        "A": "'w'",
+        "B": "'rb'",
+        "C": "'r'",
+        "D": "'a'"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "Lists: creation, access, methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nnumbers.append(6)\nnumbers.insert(1, 10)\nnumbers.pop()\nprint(numbers)",
+      "options": {
+        "A": "[1, 10, 2, 3, 4, 5]",
+        "B": "[1, 10, 2, 3, 4, 5, 6]",
+        "C": "[1, 2, 3, 4, 5]",
+        "D": "[1, 10, 2, 3, 4]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "Context managers (with statement)",
+      "question": "What is the primary advantage of using a context manager with the 'with' statement for file operations?",
+      "options": {
+        "A": "It makes the code faster",
+        "B": "It automatically closes the file even if an exception occurs",
+        "C": "It enables multi-threading for file operations",
+        "D": "It compresses the file content automatically"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Selection sort implementation",
+      "question": "What will be the output of the following code?",
+      "code_example": "def selection_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        min_idx = i\n        for j in range(i+1, n):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr\n\nprint(selection_sort([64, 25, 12, 22, 11]))",
+      "options": {
+        "A": "[11, 12, 22, 25, 64]",
+        "B": "[64, 25, 22, 12, 11]",
+        "C": "[12, 22, 11, 64, 25]",
+        "D": "[11, 22, 12, 25, 64]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "File modes ('r', 'w', 'a', 'b')",
+      "question": "Which file mode would you use to append binary data to an existing file?",
+      "options": {
+        "A": "'ab'",
+        "B": "'wb'",
+        "C": "'rb'",
+        "D": "'b+'"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "FizzBuzz implementation",
+      "question": "What will be the output of the following code?",
+      "code_example": "def fizzbuzz(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 3 == 0 and i % 5 == 0:\n            result.append(\"FizzBuzz\")\n        elif i % 3 == 0:\n            result.append(\"Fizz\")\n        elif i % 5 == 0:\n            result.append(\"Buzz\")\n        else:\n            result.append(str(i))\n    return result\n\nprint(fizzbuzz(15)[-1])",
+      "options": {
+        "A": "15",
+        "B": "Buzz",
+        "C": "Fizz",
+        "D": "FizzBuzz"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "Multi-line strings and raw strings",
+      "question": "What will be the output of the following code?",
+      "code_example": "path = r\"C:\\Users\\John\\Documents\"\nprint(len(path))",
+      "options": {
+        "A": "22",
+        "B": "20",
+        "C": "19",
+        "D": "24"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "Finding mean, median, mode",
+      "question": "What will be the output of the following code?",
+      "code_example": "def find_median(numbers):\n    sorted_numbers = sorted(numbers)\n    n = len(sorted_numbers)\n    if n % 2 == 0:\n        return (sorted_numbers[n//2 - 1] + sorted_numbers[n//2]) / 2\n    else:\n        return sorted_numbers[n//2]\n\nprint(find_median([5, 2, 9, 1, 7]))",
+      "options": {
+        "A": "5.0",
+        "B": "4.8",
+        "C": "5",
+        "D": "4"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "Pass, else clauses in loops",
+      "question": "What will be the output of the following code?",
+      "code_example": "for num in range(2, 10):\n    for i in range(2, num):\n        if num % i == 0:\n            print(f\"{num} has factor {i}\")\n            break\n    else:\n        print(f\"{num} is prime\")\n\n# How many prime numbers will be printed?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "2"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "Tuples: immutability, packing/unpacking",
+      "question": "What will be the output of the following code?",
+      "code_example": "def get_coordinates():\n    return (3, 4)\n\nx, y = get_coordinates()\nprint(x * y)",
+      "options": {
+        "A": "(3, 3, 3, 3)",
+        "B": "(4, 4, 4)",
+        "C": "12",
+        "D": "7"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "Linear search implementation",
+      "question": "What is the worst-case time complexity of linear search?",
+      "options": {
+        "A": "O(1)",
+        "B": "O(log n)",
+        "C": "O(n)",
+        "D": "O(n²)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Named tuples and dataclasses",
+      "question": "What will be the output of the following code?",
+      "code_example": "from collections import namedtuple\n\nPerson = namedtuple('Person', ['name', 'age', 'job'])\np1 = Person('Alice', 30, 'Engineer')\np2 = Person('Alice', 30, 'Doctor')\n\nprint(p1 == p2)",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "TypeError",
+        "D": "None"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "HTTP methods and status codes",
+      "question": "Which HTTP status code indicates a successful request but no content to return?",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "204 No Content",
+        "D": "304 Not Modified"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "Detecting cycles in a graph",
+      "question": "What will be the output of the following code?",
+      "code_example": "def has_cycle(graph):\n    visited = set()\n    rec_stack = set()\n    \n    def dfs(node):\n        visited.add(node)\n        rec_stack.add(node)\n        \n        for neighbor in graph.get(node, []):\n            if neighbor not in visited:\n                if dfs(neighbor):\n                    return True\n            elif neighbor in rec_stack:\n                return True\n        \n        rec_stack.remove(node)\n        return False\n    \n    for node in graph:\n        if node not in visited:\n            if dfs(node):\n                return True\n    return False\n\ngraph = {\n    1: [2, 3],\n    2: [4],\n    3: [4],\n    4: [5],\n    5: []\n}\n\nprint(has_cycle(graph))",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "None",
+        "D": "RecursionError"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "Functools module (lru_cache, partial)",
+      "question": "What will be the output of the following code?",
+      "code_example": "from functools import lru_cache\n\n@lru_cache(maxsize=None)\ndef fibonacci(n):\n    if n < 2:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\nprint(fibonacci(5))",
+      "options": {
+        "A": "8",
+        "B": "5",
+        "C": "3",
+        "D": "13"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "Divide and conquer",
+      "question": "What will be the output of the following code?",
+      "code_example": "def count_inversions(arr):\n    if len(arr) <= 1:\n        return arr, 0\n    \n    mid = len(arr) // 2\n    left, inv_left = count_inversions(arr[:mid])\n    right, inv_right = count_inversions(arr[mid:])\n    merged, inv_merge = merge_and_count(left, right)\n    \n    return merged, inv_left + inv_right + inv_merge\n\ndef merge_and_count(left, right):\n    merged = []\n    inv_count = 0\n    i = j = 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            merged.append(left[i])\n            i += 1\n        else:\n            merged.append(right[j])\n            inv_count += len(left) - i\n            j += 1\n    \n    merged.extend(left[i:])\n    merged.extend(right[j:])\n    \n    return merged, inv_count\n\narr = [3, 1, 2]\n_, inversions = count_inversions(arr)\nprint(inversions)",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "0"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "Basic hash table implementation",
+      "question": "What is the expected time complexity for insertion in a well-implemented hash table?",
+      "options": {
+        "A": "O(1)",
+        "B": "O(log n)",
+        "C": "O(n)",
+        "D": "O(n log n)"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "First-class functions",
+      "question": "What will be the output of the following code?",
+      "code_example": "def outer(x):\n    def inner(y):\n        return x + y\n    return inner\n\nf = outer(10)\nprint(f(5))",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "Error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "Database normalization principles",
+      "question": "Which normalization form eliminates transitive dependencies?",
+      "options": {
+        "A": "First Normal Form (1NF)",
+        "B": "Second Normal Form (2NF)",
+        "C": "Third Normal Form (3NF)",
+        "D": "Boyce-Codd Normal Form (BCNF)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Templates and static files",
+      "question": "In a web framework like Flask or Django, what is the primary purpose of a template engine?",
+      "options": {
+        "A": "To cache static files for faster loading",
+        "B": "To separate HTML presentation from Python business logic",
+        "C": "To compress CSS and JavaScript files",
+        "D": "To generate database schemas"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "Two-pointer technique",
+      "question": "What will be the output of the following code?",
+      "code_example": "def two_sum(numbers, target):\n    left, right = 0, len(numbers) - 1\n    \n    while left < right:\n        current_sum = numbers[left] + numbers[right]\n        \n        if current_sum == target:\n            return [left, right]\n        elif current_sum < target:\n            left += 1\n        else:\n            right -= 1\n    \n    return []\n\nprint(two_sum([2, 7, 11, 15], 9))",
+      "options": {
+        "A": "[0, 1]",
+        "B": "[1, 2]",
+        "C": "[2, 7]",
+        "D": "[]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "Class variables vs instance variables",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Counter:\n    count = 0\n    \n    def __init__(self):\n        self.count = 0\n    \n    def increment(self):\n        self.count += 1\n        Counter.count += 1\n\nc1 = Counter()\nc2 = Counter()\n\nc1.increment()\nc1.increment()\nc2.increment()\n\nprint(f\"{c1.count}, {c2.count}, {Counter.count}\")",
+      "options": {
+        "A": "2, 1, 0",
+        "B": "2, 1, 3",
+        "C": "3, 3, 3",
+        "D": "2, 1, 2"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "Combining functional operations",
+      "question": "What will be the output of the following code?",
+      "code_example": "data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\nresult = list(map(lambda x: x * x, filter(lambda x: x % 2 == 0, data)))\nprint(result)",
+      "options": {
+        "A": "[4, 16, 36, 64, 100]",
+        "B": "[2, 4, 6, 8, 10]",
+        "C": "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]",
+        "D": "[1, 9, 25, 49, 81]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "Stacks and queues implementation",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Stack:\n    def __init__(self):\n        self.items = []\n    \n    def push(self, item):\n        self.items.append(item)\n    \n    def pop(self):\n        if not self.is_empty():\n            return self.items.pop()\n    \n    def is_empty(self):\n        return len(self.items) == 0\n\ndef is_balanced(expression):\n    stack = Stack()\n    \n    for char in expression:\n        if char in \"({[\":\n            stack.push(char)\n        elif char in \")}]\":\n            if stack.is_empty():\n                return False\n            \n            top = stack.pop()\n            if (char == \")\" and top != \"(\") or \\\n               (char == \"}\" and top != \"{\") or \\\n               (char == \"]\" and top != \"[\"):\n                return False\n    \n    return stack.is_empty()\n\nprint(is_balanced(\"{[()]}()\"))",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "None",
+        "D": "SyntaxError"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Routing and view functions",
+      "question": "In a web framework like Flask, what is the purpose of the '@app.route' decorator?",
+      "options": {
+        "A": "To authenticate users",
+        "B": "To map URL patterns to view functions",
+        "C": "To validate form data",
+        "D": "To create database models"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "Generator expressions vs list comprehensions",
+      "question": "What will be the output of the following code?",
+      "code_example": "def memory_usage():\n    list_comp = [i for i in range(10000)]\n    gen_exp = (i for i in range(10000))\n    \n    print(f\"Type of list comprehension: {type(list_comp).__name__}\")\n    print(f\"Type of generator expression: {type(gen_exp).__name__}\")\n\nmemory_usage()",
+      "options": {
+        "A": "Type of list comprehension: list\nType of generator expression: generator",
+        "B": "Type of list comprehension: list\nType of generator expression: tuple",
+        "C": "Type of list comprehension: list\nType of generator expression: list",
+        "D": "Type of list comprehension: array\nType of generator expression: iterator"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "Common regex patterns",
+      "question": "What will be the output of the following code?",
+      "code_example": "import re\n\ndef validate_email(email):\n    pattern = r'^[\\w\\.-]+@[\\w\\.-]+\\.[a-zA-Z]{2,}$'\n    return bool(re.match(pattern, email))\n\nemails = [\n    'user@example.com',\n    'invalid-email',\n    'name.lastname@domain.co.uk',\n    '@missing-username.com'\n]\n\nvalid_count = sum(validate_email(email) for email in emails)\nprint(valid_count)",
+      "options": {
+        "A": "4",
+        "B": "3",
+        "C": "2",
+        "D": "1"
+      },
+      "correct_answer": "C"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "topic": "Query optimization",
+      "question": "Which of the following SQL query optimizations would be LEAST effective when working with SQLAlchemy in Python?",
+      "options": {
+        "A": "Using lazy loading for all relationships",
+        "B": "Adding appropriate indexes to frequently queried columns",
+        "C": "Using the query.options(joinedload()) to reduce N+1 query problems",
+        "D": "Implementing query-specific caching with a decorator"
+      },
+      "correct_answer": "A",
+      "explanation": "Lazy loading for all relationships can actually harm performance by creating the N+1 query problem, where each relationship access triggers a new database query. The other options are all valid query optimization techniques."
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "topic": "Threading vs multiprocessing",
+      "question": "What will be the output of the following code?",
+      "code_example": "import threading\nimport multiprocessing\n\ndef increment_counter(counter, lock):\n    with lock:\n        for _ in range(100):\n            counter.value += 1\n\ndef main():\n    # Multiprocessing approach\n    mp_counter = multiprocessing.Value('i', 0)\n    mp_lock = multiprocessing.Lock()\n    mp_processes = [multiprocessing.Process(target=increment_counter, \n                                            args=(mp_counter, mp_lock))\n                  for _ in range(4)]\n    \n    for p in mp_processes:\n        p.start()\n    for p in mp_processes:\n        p.join()\n    \n    mp_result = mp_counter.value\n    \n    # Threading approach\n    thread_counter = multiprocessing.Value('i', 0)  # Using Value for thread-safety\n    thread_lock = threading.Lock()\n    threads = [threading.Thread(target=increment_counter, \n                               args=(thread_counter, thread_lock))\n              for _ in range(4)]\n    \n    for t in threads:\n        t.start()\n    for t in threads:\n        t.join()\n    \n    thread_result = thread_counter.value\n    \n    print(f\"Multiprocessing: {mp_result}, Threading: {thread_result}\")\n\nif __name__ == \"__main__\":\n    main()",
+      "options": {
+        "A": "Multiprocessing: 400, Threading: 400",
+        "B": "Multiprocessing: 400, Threading: <random value less than 400>",
+        "C": "Multiprocessing: <random value less than 400>, Threading: 400",
+        "D": "The code will raise a TypeError because multiprocessing.Value is not thread-safe"
+      },
+      "correct_answer": "A",
+      "explanation": "Both the multiprocessing and threading approaches will give 400 as the result. The code correctly uses locks in both cases to prevent race conditions. In the threading case, using multiprocessing.Value with a lock provides proper synchronization. The GIL is not an issue here because we're using explicit locks."
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "topic": "Ethical scraping practices",
+      "question": "Which of the following is NOT considered an ethical web scraping practice when implemented in Python?",
+      "options": {
+        "A": "Respecting robots.txt directives by checking them before scraping a website",
+        "B": "Using random sleep intervals between requests to avoid overwhelming the server",
+        "C": "Setting a unique user-agent that identifies your scraper and provides contact information",
+        "D": "Bypassing rate limits by rotating through different proxy servers automatically"
+      },
+      "correct_answer": "D",
+      "explanation": "Bypassing rate limits by rotating through proxy servers is NOT an ethical practice as it deliberately circumvents technical measures put in place to prevent server overload. The other options are all considered ethical practices that respect the website's resources and make your scraping identifiable and considerate."
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "topic": "Thread synchronization",
+      "question": "What will be the output of the following code that implements a semaphore-based bounded buffer?",
+      "code_example": "import threading\nimport time\nimport random\n\nclass BoundedBuffer:\n    def __init__(self, size):\n        self.buffer = [None] * size\n        self.size = size\n        self.count = 0\n        self.in_idx = 0\n        self.out_idx = 0\n        self.mutex = threading.Lock()\n        self.not_full = threading.Semaphore(size)\n        self.not_empty = threading.Semaphore(0)\n    \n    def put(self, item):\n        self.not_full.acquire()\n        with self.mutex:\n            self.buffer[self.in_idx] = item\n            self.in_idx = (self.in_idx + 1) % self.size\n            self.count += 1\n        self.not_empty.release()\n    \n    def get(self):\n        self.not_empty.acquire()\n        with self.mutex:\n            item = self.buffer[self.out_idx]\n            self.out_idx = (self.out_idx + 1) % self.size\n            self.count -= 1\n        self.not_full.release()\n        return item\n\ndef producer(buffer, items, results):\n    for i in range(items):\n        buffer.put(i)\n        time.sleep(random.uniform(0.01, 0.05))\n    \n    # Add termination signal\n    buffer.put(-1)\n\ndef consumer(buffer, consumed):\n    while True:\n        item = buffer.get()\n        if item == -1:\n            # Pass along termination signal\n            buffer.put(-1)\n            break\n        consumed.append(item)\n        time.sleep(random.uniform(0.01, 0.05))\n\ndef run_simulation():\n    # Set the random seed for reproducibility\n    random.seed(42)\n    \n    buffer = BoundedBuffer(5)\n    consumed_items = []\n    \n    producer_thread = threading.Thread(target=producer, args=(buffer, 10, consumed_items))\n    consumer1_thread = threading.Thread(target=consumer, args=(buffer, consumed_items))\n    consumer2_thread = threading.Thread(target=consumer, args=(buffer, consumed_items))\n    \n    # Start threads\n    consumer1_thread.start()\n    consumer2_thread.start()\n    producer_thread.start()\n    \n    # Wait for all threads to finish\n    producer_thread.join()\n    consumer1_thread.join()\n    consumer2_thread.join()\n    \n    # Sort the consumed items for consistent output\n    consumed_items.sort()\n    print(consumed_items)\n\nif __name__ == \"__main__\":\n    run_simulation()",
+      "options": {
+        "A": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]",
+        "B": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9]",
+        "C": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, -1]",
+        "D": "The code will deadlock and produce no output"
+      },
+      "correct_answer": "A",
+      "explanation": "The output will be [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]. The producer puts 10 items (0-9) into the buffer, followed by a termination signal (-1). The two consumers compete to get items, with each item being consumed exactly once. When a consumer encounters the termination signal (-1), it puts it back for the other consumer. The termination signal is not added to the consumed_items list, and we sort the list at the end to get a consistent output."
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "topic": "Debugging techniques",
+      "question": "You're debugging a Python application and encounter a difficult-to-reproduce bug. Which debugging approach is LEAST effective for investigating intermittent issues?",
+      "options": {
+        "A": "Adding extensive logging with context information at different log levels",
+        "B": "Using Python's built-in pdb.set_trace() to create breakpoints",
+        "C": "Implementing post-mortem analysis with sys.excepthook to capture unexpected exceptions",
+        "D": "Creating a regression test that attempts to reproduce the exact conditions that trigger the bug"
+      },
+      "correct_answer": "B",
+      "explanation": "Using pdb.set_trace() to create breakpoints is the LEAST effective for intermittent issues because the interactive debugger requires you to be present when the bug occurs, which is difficult with intermittent bugs. The other approaches (logging, post-mortem analysis, and regression testing) can capture information when the bug occurs without requiring your immediate presence, making them more suitable for intermittent issues."
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "topic": "Profiling Python code",
+      "question": "What will be the output of the following profiling code that analyzes two different implementations of calculating Fibonacci numbers?",
+      "code_example": "import cProfile\nimport pstats\nimport io\n\ndef profile_func(func, *args, **kwargs):\n    # Create a profile object\n    pr = cProfile.Profile()\n    # Start profiling\n    pr.enable()\n    # Execute the function\n    result = func(*args, **kwargs)\n    # End profiling\n    pr.disable()\n    \n    # Get stats as string\n    s = io.StringIO()\n    ps = pstats.Stats(pr, stream=s).sort_stats('cumtime')\n    ps.print_stats(5)  # Print top 5 entries\n    stats_str = s.getvalue()\n    \n    # Extract and return relevant information\n    lines = stats_str.strip().split('\\n')\n    func_line = next((line for line in lines if func.__name__ in line), '')\n    \n    # Return the result and the stats line for the function\n    return result, func_line\n\n# Recursive Fibonacci implementation\ndef fib_recursive(n):\n    if n <= 1:\n        return n\n    return fib_recursive(n-1) + fib_recursive(n-2)\n\n# Dynamic programming Fibonacci implementation\ndef fib_dp(n):\n    if n <= 1:\n        return n\n    \n    fib = [0] * (n+1)\n    fib[1] = 1\n    \n    for i in range(2, n+1):\n        fib[i] = fib[i-1] + fib[i-2]\n    \n    return fib[n]\n\n# Run profiling\nn = 30\nrec_result, rec_stats = profile_func(fib_recursive, n)\ndp_result, dp_stats = profile_func(fib_dp, n)\n\n# Extract the number of function calls from each approach\nrec_calls = rec_stats.split()[0] if rec_stats else \"N/A\"\ndp_calls = dp_stats.split()[0] if dp_stats else \"N/A\"\n\nprint(f\"Method: fib_recursive, Result: {rec_result}, Function calls: {rec_calls}\")\nprint(f\"Method: fib_dp, Result: {dp_result}, Function calls: {dp_calls}\")",
+      "options": {
+        "A": "Method: fib_recursive, Result: 832040, Function calls: 2692537\nMethod: fib_dp, Result: 832040, Function calls: 1",
+        "B": "Method: fib_recursive, Result: 832040, Function calls: 31\nMethod: fib_dp, Result: 832040, Function calls: 1",
+        "C": "Method: fib_recursive, Result: 832040, Function calls: 2692537\nMethod: fib_dp, Result: 832040, Function calls: 31",
+        "D": "Method: fib_recursive, Result: 832040, Function calls: 14930352\nMethod: fib_dp, Result: 832040, Function calls: 1"
+      },
+      "correct_answer": "A",
+      "explanation": "The recursive implementation of Fibonacci has exponential time complexity and makes 2,692,537 function calls for n=30. The dynamic programming implementation is much more efficient, making only 1 call to the main function. Both produce the correct result of 832,040 for the 30th Fibonacci number."
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "topic": "NumPy for numerical computing",
+      "question": "What will be the output of the following NumPy code that implements a custom vectorized operation?",
+      "code_example": "import numpy as np\n\n# Set a fixed seed for reproducible results\nnp.random.seed(42)\n\n# Create sample data\nmatrix_a = np.random.randint(1, 10, size=(3, 3))\nmatrix_b = np.random.randint(1, 10, size=(3, 3))\n\n# Define a custom ufunc using vectorize\n@np.vectorize\ndef custom_operation(a, b):\n    if a > b:\n        return a - b\n    elif a < b:\n        return b - a\n    else:  # a == b\n        return a * b\n\n# Apply the vectorized operation\nresult = custom_operation(matrix_a, matrix_b)\n\n# Perform operations for verification\nprint(\"Matrix A:\")\nprint(matrix_a)\nprint(\"\\nMatrix B:\")\nprint(matrix_b)\nprint(\"\\nResult:\")\nprint(result)",
+      "options": {
+        "A": "Matrix A:\n[[6 3 7]\n [4 6 9]\n [2 6 7]]\n\nMatrix B:\n[[4 6 9]\n [1 3 8]\n [5 2 6]]\n\nResult:\n[[2 3 2]\n [3 3 1]\n [3 4 1]]",
+        "B": "Matrix A:\n[[6 3 7]\n [4 6 9]\n [2 6 7]]\n\nMatrix B:\n[[4 6 9]\n [1 3 8]\n [5 2 6]]\n\nResult:\n[[2 18 63]\n [3 18 1]\n [3 4 1]]",
+        "C": "Matrix A:\n[[6 3 7]\n [4 6 9]\n [2 6 7]]\n\nMatrix B:\n[[4 6 9]\n [1 3 8]\n [5 2 6]]\n\nResult:\n[[2 3 2]\n [3 3 1]\n [3 4 1]]",
+        "D": "The code will raise a ValueError because the vectorize decorator cannot handle conditional logic"
+      },
+      "correct_answer": "C",
+      "explanation": "The output will show the two matrices A and B, followed by the result of applying the custom operation elementwise. For each pair of elements, if a > b, it returns a-b; if a < b, it returns b-a; if a = b, it returns a*b. For example, the first element (6, 4) gives 6-4=2 because 6 > 4. The @np.vectorize decorator successfully translates this function to work on entire arrays."
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "topic": "Service discovery",
+      "question": "In a Python microservices architecture using service discovery, which of the following code patterns would be MOST appropriate for implementing client-side service discovery?",
+      "code_example": "import requests\nimport random\nimport time\nfrom functools import wraps\n\nclass ServiceRegistry:\n    def __init__(self):\n        self.services = {}\n        self.health_check_interval = 30  # seconds\n    \n    def register(self, service_name, instance_url, health_check_endpoint=\"/health\"):\n        if service_name not in self.services:\n            self.services[service_name] = []\n        \n        self.services[service_name].append({\n            \"url\": instance_url,\n            \"health_check\": instance_url + health_check_endpoint,\n            \"last_check\": 0,\n            \"healthy\": False\n        })\n    \n    def get_instances(self, service_name):\n        if service_name not in self.services:\n            return []\n        \n        # Filter to only return healthy instances\n        return [s[\"url\"] for s in self.services[service_name] if s[\"healthy\"]]\n    \n    def check_health(self, service_name):\n        if service_name not in self.services:\n            return\n        \n        current_time = time.time()\n        for instance in self.services[service_name]:\n            if current_time - instance[\"last_check\"] > self.health_check_interval:\n                try:\n                    response = requests.get(instance[\"health_check\"], timeout=2)\n                    instance[\"healthy\"] = response.status_code == 200\n                except:\n                    instance[\"healthy\"] = False\n                instance[\"last_check\"] = current_time\n\nclass ServiceClient:\n    def __init__(self, service_registry):\n        self.registry = service_registry\n    \n    def call_service(self, service_name, endpoint, method=\"GET\", **kwargs):\n        # First check health of all service instances\n        self.registry.check_health(service_name)\n        \n        # Get available instances\n        instances = self.registry.get_instances(service_name)\n        if not instances:\n            raise Exception(f\"No healthy instances of {service_name} available\")\n        \n        # Select an instance using random load balancing\n        instance_url = random.choice(instances)\n        \n        # Make the actual service call\n        url = instance_url + endpoint\n        return requests.request(method, url, **kwargs)",
+      "options": {
+        "A": "This implementation is most appropriate for client-side service discovery",
+        "B": "This implementation is more appropriate for server-side service discovery and should use a proxy instead of direct client calls",
+        "C": "This implementation is flawed because it lacks service registration with a central registry",
+        "D": "This implementation is incorrect because it uses random load balancing instead of consistent hashing"
+      },
+      "correct_answer": "A",
+      "explanation": "This code implements client-side service discovery correctly. It includes a ServiceRegistry class that tracks available service instances and their health status, and a ServiceClient that checks for healthy instances, selects one using load balancing, and makes the service call directly. This is the definition of client-side discovery, where the client is responsible for selecting the appropriate service instance."
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "topic": "SOLID principles implementation",
+      "question": "Which SOLID principle is violated in the following Python code?",
+      "code_example": "class Report:\n    def __init__(self, data):\n        self.data = data\n        self.formatter = None\n    \n    def format_as_pdf(self):\n        # Format the data as PDF\n        return f\"PDF: {self.data}\"\n    \n    def format_as_csv(self):\n        # Format the data as CSV\n        return f\"CSV: {self.data}\"\n    \n    def format_as_json(self):\n        # Format the data as JSON\n        return f\"JSON: {self.data}\"\n    \n    def save(self, filename, format_type):\n        if format_type == \"pdf\":\n            formatted_data = self.format_as_pdf()\n        elif format_type == \"csv\":\n            formatted_data = self.format_as_csv()\n        elif format_type == \"json\":\n            formatted_data = self.format_as_json()\n        else:\n            raise ValueError(f\"Unsupported format: {format_type}\")\n        \n        with open(filename, 'w') as f:\n            f.write(formatted_data)",
+      "options": {
+        "A": "Single Responsibility Principle - the Report class has multiple responsibilities",
+        "B": "Open/Closed Principle - the class is not open for extension but closed for modification",
+        "C": "Liskov Substitution Principle - inheritance is used incorrectly",
+        "D": "Dependency Inversion Principle - high-level modules depend on low-level modules"
+      },
+      "correct_answer": "B",
+      "explanation": "The code violates the Open/Closed Principle, which states that software entities should be open for extension but closed for modification. To add a new format type, we would need to modify the save method by adding another condition. This could be fixed by implementing a strategy pattern or using polymorphism to make the code extensible without modification."
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "topic": "CAP theorem",
+      "question": "According to the CAP theorem, which of the following statements is TRUE when implementing a distributed data store in Python?",
+      "options": {
+        "A": "You can achieve Consistency and Availability, but must sacrifice Partition tolerance",
+        "B": "You can achieve Consistency and Partition tolerance, but must sacrifice Availability in case of network partitions",
+        "C": "You can achieve Availability and Partition tolerance, but must sacrifice Consistency in case of network partitions",
+        "D": "With careful design, you can achieve all three properties (Consistency, Availability, and Partition tolerance) simultaneously"
+      },
+      "correct_answer": "C",
+      "explanation": "According to the CAP theorem, in the presence of a network partition (which must be tolerated in distributed systems), you must choose between consistency and availability. Many modern distributed systems choose availability and partition tolerance, sacrificing strong consistency in favor of eventual consistency. This is the approach taken by systems like Amazon's Dynamo and Apache Cassandra."
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "topic": "Memory management and garbage collection",
+      "question": "What will be the output of the following code that demonstrates Python's memory management?",
+      "code_example": "import sys\nimport gc\nimport weakref\n\nclass Node:\n    def __init__(self, value):\n        self.value = value\n        self.next = None\n    \n    def __repr__(self):\n        return f\"Node({self.value})\"\n\ndef create_cycle():\n    # Create a cycle of nodes\n    a = Node(1)\n    b = Node(2)\n    c = Node(3)\n    \n    a.next = b\n    b.next = c\n    c.next = a\n    \n    # Create a weak reference to node a\n    weak_a = weakref.ref(a)\n    \n    # Print reference counts\n    print(f\"Reference count for a: {sys.getrefcount(a) - 1}\")  # -1 to exclude getrefcount's own reference\n    \n    # Return weak reference and strong references\n    return weak_a, (a, b, c)\n\n# Create cycle and get weak reference\nweak_ref, strong_refs = create_cycle()\n\n# Check if weak reference is still valid\nprint(f\"Weak reference valid? {weak_ref() is not None}\")\n\n# Remove strong references to break the reference cycle\nstrong_refs = None\n\n# Force garbage collection\ngc.collect()\n\n# Check weak reference again\nprint(f\"After GC, weak reference valid? {weak_ref() is not None}\")",
+      "options": {
+        "A": "Reference count for a: 2\nWeak reference valid? True\nAfter GC, weak reference valid? False",
+        "B": "Reference count for a: 2\nWeak reference valid? True\nAfter GC, weak reference valid? True",
+        "C": "Reference count for a: 3\nWeak reference valid? True\nAfter GC, weak reference valid? False",
+        "D": "Reference count for a: 3\nWeak reference valid? True\nAfter GC, weak reference valid? True"
+      },
+      "correct_answer": "A",
+      "explanation": "The output shows how Python's garbage collection handles reference cycles. Node 'a' has a reference count of 2 (one from variable 'a' and one from 'c.next'). The weak reference is valid initially. After removing strong references and forcing garbage collection, the cycle is detected and collected, causing the weak reference to become invalid (return None)."
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "topic": "Bit manipulation",
+      "question": "What will be the output of the following bit manipulation code?",
+      "code_example": "def count_bits(n):\n    \"\"\"Count the number of set bits (1s) in the binary representation of n.\"\"\"\n    count = 0\n    while n:\n        count += n & 1\n        n >>= 1\n    return count\n\ndef parity(n):\n    \"\"\"Return 1 if the number of set bits is odd, 0 otherwise.\"\"\"\n    return count_bits(n) % 2\n\ndef next_power_of_2(n):\n    \"\"\"Find the next power of 2 greater than or equal to n.\"\"\"\n    if n <= 0:\n        return 1\n    # Decrement n if it's already a power of 2\n    if n & (n - 1) == 0:\n        return n\n    # Find position of MSB\n    position = 0\n    temp = n\n    while temp:\n        temp >>= 1\n        position += 1\n    # Return 2^position\n    return 1 << position\n\ndef is_power_of_4(n):\n    \"\"\"Check if n is a power of 4.\"\"\"\n    # Check if n is a power of 2 and has an even number of trailing zeros\n    return n > 0 and (n & (n - 1)) == 0 and (n & 0xAAAAAAAA) == 0\n\n# Test and print results\ntest_value = 16\nresults = [\n    count_bits(test_value),\n    parity(test_value),\n    next_power_of_2(test_value),\n    is_power_of_4(test_value)\n]\n\nprint(f\"For value {test_value}:\")\nprint(f\"Number of set bits: {results[0]}\")\nprint(f\"Parity: {results[1]}\")\nprint(f\"Next power of 2: {results[2]}\")\nprint(f\"Is power of 4: {results[3]}\")",
+      "options": {
+        "A": "For value 16:\nNumber of set bits: 1\nParity: 1\nNext power of 2: 16\nIs power of 4: True",
+        "B": "For value 16:\nNumber of set bits: 1\nParity: 1\nNext power of 2: 32\nIs power of 4: True",
+        "C": "For value 16:\nNumber of set bits: 1\nParity: 1\nNext power of 2: 16\nIs power of 4: False",
+        "D": "For value 16:\nNumber of set bits: 1\nParity: 1\nNext power of 2: 32\nIs power of 4: False"
+      },
+      "correct_answer": "A",
+      "explanation": "For the value 16 (binary 10000): it has 1 set bit, so the parity is 1 (odd). Since 16 is already a power of 2 (2^4), the next power of 2 is 16 itself. 16 is also a power of 4 (4^2), so is_power_of_4 returns True. The function correctly checks that a number is a power of 4 if it has only one bit set and that bit is at an even position."
+    },
+{
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What is a metaclass in Python?",
+      "options": {
+        "A": "A class that inherits from multiple parent classes",
+        "B": "A design pattern for creating objects",
+        "C": "A class whose instances are classes",
+        "D": "A special class used for data validation"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "correct_answer": "B",
+      "code_example": "async def async_function():\n    return 1\n\nimport asyncio\n\ntry:\n    print(asyncio.run(async_function()))\nexcept Exception as e:\n    print(0)"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will the following code print?",
+      "options": {
+        "A": "3",
+        "B": "6",
+        "C": "9",
+        "D": "Error"
+      },
+      "correct_answer": "C",
+      "code_example": "class A:\n    def __init__(self, x=1):\n        self.x = x\n\nclass B(A):\n    def __init__(self, y=2):\n        super().__init__()\n        self.y = y\n\nclass C(B):\n    def __init__(self, z=3):\n        super().__init__()\n        self.z = z\n    \n    def sum(self):\n        return self.x + self.y + self.z\n\nobj = C()\nprint(obj.sum())"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What is a descriptor in Python?",
+      "options": {
+        "A": "A built-in function for describing objects",
+        "B": "A special comment that describes a function or method",
+        "C": "An object that defines the methods __get__, __set__, or __delete__",
+        "D": "A string that describes the purpose of a class"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    }
+]
+}
