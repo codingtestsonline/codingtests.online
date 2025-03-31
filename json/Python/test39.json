@@ -1,0 +1,632 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5, 6]",
+        "B": "[1, 2, 3, 4, 5]",
+        "C": "TypeError: can only concatenate list (not 'int') to list",
+        "D": "[1, 2, 3, 4, 5, 6, 7]"
+      },
+      "correct_answer": "A",
+      "code_example": "numbers = [1, 2, 3]\nmore_numbers = [4, 5, 6]\nresult = numbers + more_numbers\nprint(result)"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to define a custom exception in Python?",
+      "options": {
+        "A": "class MyError(CustomException): pass",
+        "B": "class MyError extends Exception: pass",
+        "C": "class MyError(Exception): pass",
+        "D": "def MyError(Exception): pass"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the output of the following code for calculating the factorial of 5?",
+      "options": {
+        "A": "15",
+        "B": "60",
+        "C": "120",
+        "D": "20"
+      },
+      "correct_answer": "C",
+      "code_example": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n - 1)\n\nprint(factorial(5))"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following palindrome checking function when called with the argument 'racecar'?",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "None",
+        "D": "SyntaxError"
+      },
+      "correct_answer": "B",
+      "code_example": "def is_palindrome(word):\n    return word == word[::-1]\n\nprint(is_palindrome('racecar'))"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "According to PEP 8, which of the following is the proper naming convention for a constant in Python?",
+      "options": {
+        "A": "maxSize",
+        "B": "MAX_SIZE",
+        "C": "MaxSize",
+        "D": "max_size"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which file mode would you use to append binary data to an existing file?",
+      "options": {
+        "A": "'a'",
+        "B": "'w+'",
+        "C": "'ab'",
+        "D": "'rb'"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is the result of the following binary search implementation when searching for 7 in the given array?",
+      "options": {
+        "A": "0",
+        "B": "3",
+        "C": "4",
+        "D": "-1"
+      },
+      "correct_answer": "B",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return -1\n\nprint(binary_search([1, 3, 5, 7, 9, 11], 7))"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the output of the following code using enumerate?",
+      "options": {
+        "A": "0 apple, 1 banana, 2 cherry",
+        "B": "1 apple, 2 banana, 3 cherry",
+        "C": "apple 0, banana 1, cherry 2",
+        "D": "apple 1, banana 2, cherry 3"
+      },
+      "correct_answer": "A",
+      "code_example": "fruits = ['apple', 'banana', 'cherry']\nfor index, fruit in enumerate(fruits):\n    if index < len(fruits) - 1:\n        print(f\"{index} {fruit}\", end=\", \")\n    else:\n        print(f\"{index} {fruit}\", end=\"\")"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following selection sort implementation for the given array?",
+      "options": {
+        "A": "[1, 2, 5, 7, 8]",
+        "B": "[8, 7, 5, 2, 1]",
+        "C": "[1, 2, 5, 8, 7]",
+        "D": "[7, 8, 5, 2, 1]"
+      },
+      "correct_answer": "A",
+      "code_example": "def selection_sort(arr):\n    for i in range(len(arr)):\n        min_idx = i\n        for j in range(i+1, len(arr)):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr\n\nprint(selection_sort([5, 2, 8, 7, 1]))"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the output of the following code using the 'pass' statement?",
+      "options": {
+        "A": "This will execute\nLoop is finished",
+        "B": "This will execute",
+        "C": "Loop is finished",
+        "D": "No output will be produced"
+      },
+      "correct_answer": "A",
+      "code_example": "print(\"This will execute\")\nfor i in range(3):\n    pass\nprint(\"Loop is finished\")"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to format a string using f-strings to display 'The value of pi is 3.14'?",
+      "options": {
+        "A": "pi = 3.14\nprint('The value of pi is ' + pi)",
+        "B": "pi = 3.14\nprint('The value of pi is %f' % pi)",
+        "C": "pi = 3.14\nprint('The value of pi is {}'.format(pi))",
+        "D": "pi = 3.14\nprint(f'The value of pi is {pi}')"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What is the decimal equivalent of the binary number 1101?",
+      "options": {
+        "A": "11",
+        "B": "13",
+        "C": "14",
+        "D": "15"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code for type checking?",
+      "options": {
+        "A": "True\nFalse",
+        "B": "False\nTrue",
+        "C": "True\nTrue",
+        "D": "False\nFalse"
+      },
+      "correct_answer": "C",
+      "code_example": "class Animal:\n    pass\n\nclass Dog(Animal):\n    pass\n\ndog = Dog()\nprint(isinstance(dog, Dog))\nprint(isinstance(dog, Animal))"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What is the output of the following conditional expression?",
+      "options": {
+        "A": "x is positive",
+        "B": "x is negative",
+        "C": "x is zero",
+        "D": "No output"
+      },
+      "correct_answer": "A",
+      "code_example": "x = 5\nresult = \"x is positive\" if x > 0 else \"x is negative\" if x < 0 else \"x is zero\"\nprint(result)"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What is the output of the following code using a while loop and break?",
+      "options": {
+        "A": "0 1 2 3 4",
+        "B": "0 1 2",
+        "C": "0 1 2 3",
+        "D": "0 1"
+      },
+      "correct_answer": "B",
+      "code_example": "i = 0\nwhile i < 5:\n    print(i, end=\" \")\n    i += 1\n    if i == 3:\n        break"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code for calculating the mean, median, and mode of a list?",
+      "options": {
+        "A": "Mean: 3.0, Median: 3.0, Mode: 2",
+        "B": "Mean: 3.0, Median: 3.0, Mode: 3",
+        "C": "Mean: 3.0, Median: 3.0, Mode: [2, 3]",
+        "D": "Mean: 3.0, Median: 3.0, Mode: 5"
+      },
+      "correct_answer": "A",
+      "code_example": "from statistics import mean, median, mode\n\nnumbers = [2, 2, 3, 3, 5]\nprint(f\"Mean: {mean(numbers)}, Median: {median(numbers)}, Mode: {mode(numbers)}\")"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What is the output of the following code implementing a basic hash table?",
+      "options": {
+        "A": "{'apple': 1, 'banana': 2}\n'banana' not found in hash table",
+        "B": "{'apple': 1, 'banana': 2}\n2",
+        "C": "{'apple': 1, 'banana': 2}\nNone",
+        "D": "{'apple': 1}\n'banana' not found in hash table"
+      },
+      "correct_answer": "B",
+      "code_example": "class SimpleHashTable:\n    def __init__(self):\n        self.table = {}\n        \n    def insert(self, key, value):\n        self.table[key] = value\n        \n    def get(self, key):\n        if key in self.table:\n            return self.table[key]\n        return None\n        \n    def __str__(self):\n        return str(self.table)\n\nhash_table = SimpleHashTable()\nhash_table.insert('apple', 1)\nhash_table.insert('banana', 2)\nprint(hash_table)\nprint(hash_table.get('banana') or \"'banana' not found in hash table\")"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be printed when executing the following code about class variables and instance variables?",
+      "options": {
+        "A": "10 20\n10 30\n10 30",
+        "B": "10 20\n10 30\n40 30",
+        "C": "10 20\n40 30\n40 30",
+        "D": "10 20\n40 20\n40 30"
+      },
+      "correct_answer": "B",
+      "code_example": "class Example:\n    class_var = 10\n    \n    def __init__(self, instance_var):\n        self.instance_var = instance_var\n\na = Example(20)\nprint(a.class_var, a.instance_var)\n\nb = Example(30)\nprint(a.class_var, b.instance_var)\n\nExample.class_var = 40\nprint(b.class_var, b.instance_var)"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code for detecting cycles in a graph?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cycle detected",
+        "D": "No cycle detected"
+      },
+      "correct_answer": "C",
+      "code_example": "def has_cycle(graph):\n    visited = set()\n    rec_stack = set()\n    \n    def dfs(node):\n        visited.add(node)\n        rec_stack.add(node)\n        \n        for neighbor in graph.get(node, []):\n            if neighbor not in visited:\n                if dfs(neighbor):\n                    return True\n            elif neighbor in rec_stack:\n                return True\n        \n        rec_stack.remove(node)\n        return False\n    \n    for node in graph:\n        if node not in visited:\n            if dfs(node):\n                return \"Cycle detected\"\n    \n    return \"No cycle detected\"\n\ngraph = {\n    1: [2, 3],\n    2: [3],\n    3: [1]\n}\n\nprint(has_cycle(graph))"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which of the following SQL queries will return all columns for employees whose salary is greater than 50000, sorted by last name in ascending order?",
+      "options": {
+        "A": "SELECT * FROM employees WHERE salary >= 50000 ORDER BY last_name ASC;",
+        "B": "SELECT * FROM employees HAVING salary > 50000 ORDER BY last_name;",
+        "C": "SELECT * FROM employees WHERE salary > 50000 ORDER BY last_name;",
+        "D": "SELECT * FROM employees WHERE salary > 50000 SORT BY last_name ASC;"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Which of the following commands would you use to create a new virtual environment named 'myenv' using venv?",
+      "options": {
+        "A": "python -m venv myenv",
+        "B": "pip install myenv",
+        "C": "python -m pip venv myenv",
+        "D": "virtualenv -m python myenv"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "In a web framework like Flask, what will be the output of the following code for routing?",
+      "options": {
+        "A": "hello",
+        "B": "hello bob",
+        "C": "hello%20bob",
+        "D": "Error: name parameter not provided"
+      },
+      "correct_answer": "B",
+      "code_example": "# Assuming this is a Flask application\nfrom flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/hello/<name>')\ndef hello(name):\n    return f'hello {name}'\n\n# Simulate the output for the URL: /hello/bob\nprint(hello('bob'))"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following implementation of merge sort?",
+      "options": {
+        "A": "[1, 3, 5, 7, 9]",
+        "B": "[9, 7, 5, 3, 1]",
+        "C": "[1, 3, 5, 7, 9, 8]",
+        "D": "[8, 9, 7, 5, 3, 1]"
+      },
+      "correct_answer": "A",
+      "code_example": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    mid = len(arr) // 2\n    left = arr[:mid]\n    right = arr[mid:]\n    \n    left = merge_sort(left)\n    right = merge_sort(right)\n    \n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    \n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result\n\nprint(merge_sort([9, 3, 5, 7, 1]))"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code which implements a variant of binary search to find the first occurrence of a value?",
+      "options": {
+        "A": "Element not found",
+        "B": "2",
+        "C": "1",
+        "D": "0"
+      },
+      "correct_answer": "D",
+      "code_example": "def find_first_occurrence(arr, target):\n    left, right = 0, len(arr) - 1\n    result = -1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            result = mid\n            right = mid - 1  # Continue searching in the left part\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return result if result != -1 else \"Element not found\"\n\nprint(find_first_occurrence([2, 2, 2, 3, 4, 5], 2))"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What is the output of the following code for JSON parsing and serialization?",
+      "options": {
+        "A": "{'name': 'John', 'age': 30, 'city': 'New York'}\n<class 'dict'>",
+        "B": "'{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'\n<class 'str'>",
+        "C": "{'name': 'John', 'age': 30, 'city': 'New York'}\n<class 'str'>",
+        "D": "'{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'\n<class 'dict'>"
+      },
+      "correct_answer": "A",
+      "code_example": "import json\n\njson_str = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'\nparsed_data = json.loads(json_str)\n\nprint(parsed_data)\nprint(type(parsed_data))"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using classes and instances?",
+      "options": {
+        "A": "Name: Max, Age: 5\nName: Buddy, Age: 3",
+        "B": "Name: Max, Age: 5\nName: Max, Age: 3",
+        "C": "AttributeError: 'NoneType' object has no attribute 'name'",
+        "D": "Name: Max, Age: 5\nNone"
+      },
+      "correct_answer": "A",
+      "code_example": "class Dog:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n        \n    def __str__(self):\n        return f\"Name: {self.name}, Age: {self.age}\"\n\ndog1 = Dog(\"Max\", 5)\ndog2 = Dog(\"Buddy\", 3)\n\nprint(dog1)\nprint(dog2)"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What is the output of the following code demonstrating closures and scopes?",
+      "options": {
+        "A": "10\n10",
+        "B": "10\n20",
+        "C": "10\n30",
+        "D": "20\n30"
+      },
+      "correct_answer": "C",
+      "code_example": "def outer_function(x):\n    def inner_function(y):\n        return x + y\n    return inner_function\n\nclosure_instance = outer_function(10)\nprint(closure_instance(0))\nprint(closure_instance(20))"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code to find connected components in a graph?",
+      "options": {
+        "A": "[[1, 2], [3, 4, 5], [6]]",
+        "B": "[[1, 2, 3, 4, 5, 6]]",
+        "C": "[[1, 2], [3, 4], [5, 6]]",
+        "D": "[[1, 2], [3, 4, 5, 6]]"
+      },
+      "correct_answer": "A",
+      "code_example": "def find_connected_components(graph):\n    visited = set()\n    components = []\n    \n    def dfs(node, component):\n        visited.add(node)\n        component.append(node)\n        \n        for neighbor in graph.get(node, []):\n            if neighbor not in visited:\n                dfs(neighbor, component)\n    \n    for node in graph:\n        if node not in visited:\n            component = []\n            dfs(node, component)\n            components.append(component)\n    \n    return components\n\ngraph = {\n    1: [2],\n    2: [1],\n    3: [4, 5],\n    4: [3],\n    5: [3],\n    6: []\n}\n\nprint(find_connected_components(graph))"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What is the output of the following code implementing operations on a singly linked list?",
+      "options": {
+        "A": "10 -> 20 -> 30 -> None\n10 -> 20 -> None",
+        "B": "10 -> 20 -> 30 -> None\n20 -> 30 -> None",
+        "C": "10 -> 20 -> 30 -> None\n10 -> 30 -> None",
+        "D": "10 -> 20 -> 30 -> None\nNone"
+      },
+      "correct_answer": "C",
+      "code_example": "class Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n    \n    def append(self, data):\n        new_node = Node(data)\n        if not self.head:\n            self.head = new_node\n            return\n        \n        current = self.head\n        while current.next:\n            current = current.next\n        current.next = new_node\n    \n    def remove(self, value):\n        if not self.head:\n            return\n        \n        if self.head.data == value:\n            self.head = self.head.next\n            return\n        \n        current = self.head\n        while current.next and current.next.data != value:\n            current = current.next\n        \n        if current.next:\n            current.next = current.next.next\n    \n    def __str__(self):\n        values = []\n        current = self.head\n        while current:\n            values.append(str(current.data))\n            current = current.next\n        return \" -> \".join(values) + \" -> None\"\n\nllist = LinkedList()\nllist.append(10)\nllist.append(20)\nllist.append(30)\nprint(llist)\n\nllist.remove(20)\nprint(llist)"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What is the output of the following code using a decorator with arguments?",
+      "options": {
+        "A": "adding 5 and 3\n8",
+        "B": "adding 5 and 3\n13",
+        "C": "multiplying 5 and 3\n15",
+        "D": "multiplying 5 and 3\n8"
+      },
+      "correct_answer": "C",
+      "code_example": "def operation_logger(operation_name):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            print(f\"{operation_name} {args[0]} and {args[1]}\")\n            return func(*args, **kwargs)\n        return wrapper\n    return decorator\n\n@operation_logger(\"multiplying\")\ndef multiply(a, b):\n    return a * b\n\nprint(multiply(5, 3))"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "Which normalization form removes partial dependencies of non-key attributes on the primary key in a relation?",
+      "options": {
+        "A": "First Normal Form (1NF)",
+        "B": "Second Normal Form (2NF)",
+        "C": "Third Normal Form (3NF)",
+        "D": "Boyce-Codd Normal Form (BCNF)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following divide and conquer algorithm to find the maximum subarray sum?",
+      "options": {
+        "A": "6",
+        "B": "7",
+        "C": "4",
+        "D": "3"
+      },
+      "correct_answer": "B",
+      "code_example": "def max_crossing_sum(arr, low, mid, high):\n    left_sum = float('-inf')\n    sum = 0\n    for i in range(mid, low - 1, -1):\n        sum += arr[i]\n        if sum > left_sum:\n            left_sum = sum\n    \n    right_sum = float('-inf')\n    sum = 0\n    for i in range(mid + 1, high + 1):\n        sum += arr[i]\n        if sum > right_sum:\n            right_sum = sum\n    \n    return left_sum + right_sum\n\ndef max_subarray_sum(arr, low, high):\n    if low == high:\n        return arr[low]\n    \n    mid = (low + high) // 2\n    \n    return max(\n        max_subarray_sum(arr, low, mid),\n        max_subarray_sum(arr, mid + 1, high),\n        max_crossing_sum(arr, low, mid, high)\n    )\n\narr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]\nprint(max_subarray_sum(arr, 0, 2))"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "topic": "Code coverage and quality tools",
+      "question": "When using pytest's coverage plugin, which of the following statements about branch coverage is correct?",
+      "options": {
+        "A": "Branch coverage measures the percentage of functions called during test execution",
+        "B": "Branch coverage reports the percentage of conditional branches (if/else, for loops, etc.) that were executed",
+        "C": "Branch coverage is automatically enabled with the basic coverage plugin",
+        "D": "Branch coverage is incompatible with statement coverage and cannot be used simultaneously"
+      },
+      "correct_answer": "B",
+      "code_example": "# Example command to run pytest with branch coverage enabled\n# pytest --cov=mymodule --cov-branch tests/"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "topic": "Memory management and garbage collection",
+      "question": "What will be the output of the following code related to Python's garbage collection?",
+      "options": {
+        "A": "0, then 1",
+        "B": "0, then 0",
+        "C": "1, then 1",
+        "D": "1, then 0"
+      },
+      "correct_answer": "A",
+      "code_example": "import gc\nimport weakref\n\nclass MyClass:\n    pass\n\ndef check_garbage():\n    # Create an object and a weak reference to it\n    obj = MyClass()\n    ref = weakref.ref(obj)\n    \n    # Check if the weak reference returns an object\n    print(0 if ref() is None else 1, end=', then ')\n    \n    # Remove the reference to the object\n    del obj\n    \n    # Force garbage collection\n    gc.collect()\n    \n    # Check again if the weak reference returns an object\n    print(0 if ref() is None else 1)\n\ncheck_garbage()"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "topic": "Basic ML pipeline implementation",
+      "question": "In the following ML pipeline code, what is the purpose of the StandardScaler transformation?",
+      "options": {
+        "A": "To increase the weight of features with larger values",
+        "B": "To normalize features to have mean=0 and variance=1",
+        "C": "To remove features with low variance",
+        "D": "To convert categorical features into numerical representations"
+      },
+      "correct_answer": "B",
+      "code_example": "from sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import train_test_split\nimport numpy as np\n\n# Create sample data\nX = np.random.rand(100, 4)\ny = np.random.randint(0, 2, 100)\n\n# Split the data\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\n\n# Create a pipeline\npipeline = Pipeline([\n    ('scaler', StandardScaler()),\n    ('classifier', RandomForestClassifier())\n])\n\n# Train the pipeline\npipeline.fit(X_train, y_train)\n\n# Make predictions\npredictions = pipeline.predict(X_test)"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "topic": "Approximation algorithms",
+      "question": "What is the time complexity of the following greedy approximation algorithm for the Vertex Cover problem?",
+      "options": {
+        "A": "O(V)",
+        "B": "O(E)",
+        "C": "O(V + E)",
+        "D": "O(V * E)"
+      },
+      "correct_answer": "C",
+      "code_example": "def approximate_vertex_cover(graph):\n    \"\"\"\n    A greedy 2-approximation algorithm for the Vertex Cover problem.\n    Input graph is represented as an adjacency list.\n    \"\"\"\n    # Create a copy of the graph (edges)\n    edges = []\n    for u in range(len(graph)):\n        for v in graph[u]:\n            if u < v:  # To avoid counting edges twice\n                edges.append((u, v))\n    \n    # Initialize empty vertex cover\n    vertex_cover = set()\n    \n    # Continue until all edges are covered\n    while edges:\n        # Pick an arbitrary edge\n        u, v = edges.pop(0)\n        \n        # Add both endpoints to the vertex cover\n        vertex_cover.add(u)\n        vertex_cover.add(v)\n        \n        # Remove all edges incident to u or v\n        edges = [(a, b) for a, b in edges if a != u and a != v and b != u and b != v]\n    \n    return vertex_cover"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "topic": "C extensions and Cython",
+      "question": "What is the primary purpose of the 'cdef' keyword in Cython?",
+      "options": {
+        "A": "To define a C++ class in Cython",
+        "B": "To declare C-type variables and functions for improved performance",
+        "C": "To import external C libraries into Python",
+        "D": "To mark a function as thread-safe"
+      },
+      "correct_answer": "B",
+      "code_example": "# Example Cython code (.pyx file)\n# filename: example.pyx\n\ncdef int fibonacci(int n):\n    \"\"\"Compute the nth Fibonacci number using C types.\"\"\"\n    cdef int a = 0\n    cdef int b = 1\n    cdef int i\n    cdef int tmp\n    \n    if n <= 0:\n        return 0\n    \n    for i in range(n - 1):\n        tmp = a + b\n        a = b\n        b = tmp\n    \n    return b\n\n# This function can be called from Python\ndef py_fibonacci(n):\n    return fibonacci(n)"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "topic": "Tries for prefix searching",
+      "question": "What will be the output of the following code that implements a prefix search using a Trie?",
+      "options": {
+        "A": "['apple', 'apply']",
+        "B": "['application', 'apply']",
+        "C": "['apple', 'application', 'apply']",
+        "D": "['app', 'apple', 'application', 'apply']"
+      },
+      "correct_answer": "C",
+      "code_example": "class TrieNode:\n    def __init__(self):\n        self.children = {}\n        self.is_end_of_word = False\n\nclass Trie:\n    def __init__(self):\n        self.root = TrieNode()\n    \n    def insert(self, word):\n        node = self.root\n        for char in word:\n            if char not in node.children:\n                node.children[char] = TrieNode()\n            node = node.children[char]\n        node.is_end_of_word = True\n    \n    def search_prefix(self, prefix):\n        node = self.root\n        for char in prefix:\n            if char not in node.children:\n                return []\n            node = node.children[char]\n        \n        return self._get_all_words_with_prefix(node, prefix)\n    \n    def _get_all_words_with_prefix(self, node, prefix):\n        results = []\n        \n        if node.is_end_of_word:\n            results.append(prefix)\n        \n        for char, child_node in node.children.items():\n            results.extend(self._get_all_words_with_prefix(child_node, prefix + char))\n        \n        return results\n\n# Create and populate a trie\ntrie = Trie()\nwords = [\"app\", \"apple\", \"application\", \"apply\", \"banana\"]\nfor word in words:\n    trie.insert(word)\n\n# Search for words with prefix \"app\"\nprint(trie.search_prefix(\"app\")[1:])"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "topic": "Message queues (RabbitMQ, Kafka)",
+      "question": "Which statement about Kafka consumer groups is correct?",
+      "options": {
+        "A": "A Kafka partition can only be consumed by one consumer in the same consumer group",
+        "B": "Consumers in a consumer group automatically load balance, but only if there are fewer partitions than consumers",
+        "C": "When a consumer joins a group, the entire consumer group rebalances without any message loss",
+        "D": "Consumer groups are a feature specific to Kafka and not available in other messaging systems like RabbitMQ"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "topic": "Containerization with Docker",
+      "question": "In a multi-stage Docker build for a Python application, what is the primary benefit of using multiple stages?",
+      "options": {
+        "A": "It allows for parallel building of different application components",
+        "B": "It reduces the final image size by including only necessary artifacts",
+        "C": "It automatically optimizes Python bytecode compilation",
+        "D": "It ensures the application runs in the same environment as it was built"
+      },
+      "correct_answer": "B",
+      "code_example": "# Example Dockerfile with multi-stage build\n# Stage 1: Build dependencies\nFROM python:3.9-slim AS builder\n\nWORKDIR /app\n\n# Install build dependencies and compile any C extensions\nCOPY requirements.txt .\nRUN pip wheel --no-cache-dir --wheel-dir /app/wheels -r requirements.txt\n\n# Stage 2: Create final image\nFROM python:3.9-slim\n\nWORKDIR /app\n\n# Copy only the wheels from the builder stage\nCOPY --from=builder /app/wheels /app/wheels\nCOPY --from=builder /app/requirements.txt .\n\n# Install the packages without building\nRUN pip install --no-cache-dir --no-index --find-links=/app/wheels -r requirements.txt \\\n    && rm -rf /app/wheels\n\n# Copy application code\nCOPY . .\n\nCMD [\"python\", \"app.py\"]"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "topic": "Thread synchronization (locks, semaphores)",
+      "question": "What will be the output of the following code that uses a semaphore for thread synchronization?",
+      "options": {
+        "A": "All tasks completed in order (1, 2, 3, 4, 5)",
+        "B": "Tasks will be completed in random order, but only 2 at a time",
+        "C": "Tasks will be completed in random order, all 5 in parallel",
+        "D": "The code will deadlock and produce no output"
+      },
+      "correct_answer": "B",
+      "code_example": "import threading\nimport time\nimport random\n\n# Create a semaphore that allows 2 concurrent threads\nsemaphore = threading.Semaphore(2)\n\ndef task(task_id):\n    print(f\"Task {task_id} waiting for the semaphore\")\n    \n    # Acquire the semaphore\n    semaphore.acquire()\n    \n    try:\n        print(f\"Task {task_id} acquired the semaphore\")\n        # Simulate work with random duration\n        time.sleep(random.uniform(0.5, 1.5))\n        print(f\"Task {task_id} completed\")\n    finally:\n        # Release the semaphore\n        semaphore.release()\n\n# Create and start 5 threads\nthreads = []\nfor i in range(1, 6):\n    t = threading.Thread(target=task, args=(i,))\n    threads.append(t)\n    t.start()\n\n# Wait for all threads to complete\nfor t in threads:\n    t.join()"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "topic": "Bit manipulation",
+      "question": "What will be the output of the following code that uses bit manipulation?",
+      "options": {
+        "A": "20",
+        "B": "21",
+        "C": "22",
+        "D": "23"
+      },
+      "correct_answer": "D",
+      "code_example": "def count_bits(n):\n    \"\"\"Counts the number of set bits (1s) in the binary representation of n.\"\"\"\n    count = 0\n    while n:\n        count += n & 1\n        n >>= 1\n    return count\n\ndef find_missing_number(nums):\n    \"\"\"Find the missing number using bit manipulation.\n    nums is a list of distinct numbers from 0 to n, with one number missing.\n    \"\"\"\n    # XOR all numbers from 0 to n\n    n = len(nums)\n    expected_xor = 0\n    for i in range(n + 1):\n        expected_xor ^= i\n    \n    # XOR all numbers in the array\n    actual_xor = 0\n    for num in nums:\n        actual_xor ^= num\n    \n    # The missing number is the XOR of these two results\n    missing = expected_xor ^ actual_xor\n    return missing\n\n# Create a list with a missing number\nnums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24]\n\n# Find the missing number\nprint(find_missing_number(nums))"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "topic": "Asynchronous web frameworks (FastAPI)",
+      "question": "In the following FastAPI code, what is the purpose of the 'depends' parameter?",
+      "options": {
+        "A": "It specifies the HTTP method dependencies for the endpoint",
+        "B": "It marks the endpoint as requiring API key authentication",
+        "C": "It injects dependencies using dependency injection",
+        "D": "It marks the endpoint as dependent on other endpoints being called first"
+      },
+      "correct_answer": "C",
+      "code_example": "from fastapi import FastAPI, Depends, HTTPException\nfrom typing import Annotated\n\napp = FastAPI()\n\nasync def verify_token(token: str):\n    if token != \"valid_token\":\n        raise HTTPException(status_code=401, detail=\"Invalid token\")\n    return token\n\nasync def get_current_user(token: Annotated[str, Depends(verify_token)]):\n    # In a real app, you would decode the token to get the user\n    return {\"username\": \"testuser\"}\n\n@app.get(\"/users/me\")\nasync def read_users_me(current_user: Annotated[dict, Depends(get_current_user)]):\n    return current_user"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "topic": "CPython implementation details",
+      "question": "Which statement about CPython's Global Interpreter Lock (GIL) is correct?",
+      "options": {
+        "A": "The GIL prevents race conditions in multithreaded code by serializing access to Python objects",
+        "B": "The GIL is a feature used to optimize memory allocation in CPython",
+        "C": "The GIL ensures that Python code runs at the same speed regardless of the number of CPU cores",
+        "D": "The GIL is required for Python's dynamic typing system to work properly"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "topic": "Just-in-time compilation (PyPy)",
+      "question": "What is the primary difference between PyPy and CPython in terms of execution strategy?",
+      "options": {
+        "A": "PyPy compiles all Python code to C++ before execution",
+        "B": "PyPy uses a just-in-time compiler that can optimize code during runtime",
+        "C": "PyPy executes Python code directly without any bytecode generation",
+        "D": "PyPy is written in Python while CPython is written in C"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "topic": "Transaction isolation levels",
+      "question": "Which isolation level in database transactions prevents the 'phantom read' phenomenon?",
+      "options": {
+        "A": "Read Uncommitted",
+        "B": "Read Committed",
+        "C": "Repeatable Read",
+        "D": "Serializable"
+      },
+      "correct_answer": "D",
+      "code_example": "import psycopg2\n\n# Example using psycopg2 with PostgreSQL\ndef demonstrate_transaction_isolation(isolation_level):\n    # Connect to the database\n    conn = psycopg2.connect(\"dbname=testdb user=postgres\")\n    \n    # Set the isolation level\n    if isolation_level == \"read_uncommitted\":\n        conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_READ_UNCOMMITTED)\n    elif isolation_level == \"read_committed\":\n        conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_READ_COMMITTED)\n    elif isolation_level == \"repeatable_read\":\n        conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_REPEATABLE_READ)\n    elif isolation_level == \"serializable\":\n        conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_SERIALIZABLE)\n    \n    # Create a cursor and start a transaction\n    cur = conn.cursor()\n    \n    try:\n        # Execute queries in the transaction\n        cur.execute(\"SELECT * FROM users WHERE age > 25\")\n        # ... other operations\n        \n        # Commit the transaction\n        conn.commit()\n    except Exception as e:\n        # Rollback in case of error\n        conn.rollback()\n        print(f\"Transaction failed: {e}\")\n    finally:\n        # Close cursor and connection\n        cur.close()\n        conn.close()"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "topic": "API gateway patterns",
+      "question": "Which of the following is NOT a typical responsibility of an API Gateway?",
+      "options": {
+        "A": "Request routing",
+        "B": "Authentication and authorization",
+        "C": "Rate limiting and throttling",
+        "D": "Database schema migrations"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "topic": "Pandas for data manipulation",
+      "question": "What will be the output of the following Pandas code?",
+      "options": {
+        "A": "A DataFrame with 2 rows showing a count of 3 for 'apple' and 2 for 'banana'",
+        "B": "A DataFrame with 2 rows showing a count of 3 for 'apple' and 1 for 'banana'",
+        "C": "A Series with 2 entries showing a count of 3 for 'apple' and 2 for 'banana'",
+        "D": "A Series with 2 entries showing a count of 3 for 'apple' and 1 for 'banana'"
+      },
+      "correct_answer": "D",
+      "code_example": "import pandas as pd\nimport numpy as np\n\n# Create a sample DataFrame\ndf = pd.DataFrame({\n    'fruit': ['apple', 'apple', 'banana', 'apple', np.nan],\n    'color': ['red', 'green', 'yellow', 'red', 'green'],\n    'weight': [100, 120, 80, 105, 90]\n})\n\n# Count occurrences of each fruit, excluding NaN values\nfruits_count = df['fruit'].value_counts()\n\nprint(fruits_count)"
+    }
+  ]
+}
