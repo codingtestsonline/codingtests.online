@@ -1,0 +1,616 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is the result of calculating the factorial of 5 using the following code?",
+      "options": {
+        "A": "120",
+        "B": "24",
+        "C": "60",
+        "D": "720"
+      },
+      "correct_answer": "A",
+      "code_example": "def factorial(n):\n    result = 1\n    for i in range(1, n+1):\n        result *= i\n    return result\n\nprint(factorial(5))"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following is a valid way to check if a number is prime?",
+      "options": {
+        "A": "Check if the number is divisible by any integer from 2 to the number itself",
+        "B": "Check if the number is divisible by any integer from 2 to the square root of the number",
+        "C": "Check if the number is divisible by any prime number less than itself",
+        "D": "Check if the number is divisible by 2 or 3"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the output of the following code that calculates the GCD of two numbers?",
+      "options": {
+        "A": "12",
+        "B": "6",
+        "C": "24",
+        "D": "36"
+      },
+      "correct_answer": "B",
+      "code_example": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\nprint(gcd(24, 36))"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be printed by the following code?",
+      "options": {
+        "A": "{'a': 1, 'b': 2, 'c': 3}",
+        "B": "dict_keys(['a', 'b', 'c'])",
+        "C": "dict_values([1, 2, 3])",
+        "D": "dict_items([('a', 1), ('b', 2), ('c', 3)])"
+      },
+      "correct_answer": "D",
+      "code_example": "my_dict = {'a': 1, 'b': 2, 'c': 3}\nprint(my_dict.items())"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the final state of the list after running this bubble sort implementation?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[5, 4, 3, 2, 1]",
+        "C": "[2, 1, 5, 3, 4]",
+        "D": "The code will raise an error"
+      },
+      "correct_answer": "A",
+      "code_example": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr\n\nprint(bubble_sort([5, 3, 1, 4, 2]))"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which of the following correctly converts the decimal number 42 to binary?",
+      "options": {
+        "A": "bin(42)",
+        "B": "bin(42)[2:]",
+        "C": "int('42', 2)",
+        "D": "hex(42)"
+      },
+      "correct_answer": "B",
+      "code_example": "print(bin(42)[2:])"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of this palindrome checking function?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "None",
+        "D": "The code will raise an error"
+      },
+      "correct_answer": "A",
+      "code_example": "def is_palindrome(s):\n    s = s.lower().replace(' ', '')\n    return s == s[::-1]\n\nprint(is_palindrome('Race car'))"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What does the else clause do in the following loop?",
+      "options": {
+        "A": "It executes if the loop completes without a break statement",
+        "B": "It executes after each successful iteration",
+        "C": "It executes if the loop condition becomes False",
+        "D": "It executes if an exception is raised in the loop"
+      },
+      "correct_answer": "A",
+      "code_example": "for i in range(5):\n    if i == 10:\n        break\nelse:\n    print('Loop completed without break')"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the output of the following code demonstrating variable scope?",
+      "options": {
+        "A": "5 10",
+        "B": "10 10",
+        "C": "5 5",
+        "D": "The code will raise an error"
+      },
+      "correct_answer": "A",
+      "code_example": "x = 5\n\ndef modify_local():\n    x = 10\n    print(x, end=' ')\n\nmodify_local()\nprint(x)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the correct way to define a custom exception in Python?",
+      "options": {
+        "A": "class MyError(Exception): pass",
+        "B": "class MyError(Error): pass",
+        "C": "def MyError(Exception): pass",
+        "D": "exception MyError(): pass"
+      },
+      "correct_answer": "A",
+      "code_example": "class InsufficientFundsError(Exception):\n    pass\n\ndef withdraw(balance, amount):\n    if amount > balance:\n        raise InsufficientFundsError('Not enough funds')\n    return balance - amount"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the final state of the list after running this selection sort implementation?",
+      "options": {
+        "A": "[5, 4, 3, 2, 1]",
+        "B": "[1, 2, 3, 4, 5]",
+        "C": "[3, 2, 5, 1, 4]",
+        "D": "The code will raise an error"
+      },
+      "correct_answer": "B",
+      "code_example": "def selection_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        min_idx = i\n        for j in range(i+1, n):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr\n\nprint(selection_sort([3, 1, 5, 2, 4]))"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of this linear search implementation?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "-1",
+        "D": "The code will raise an error"
+      },
+      "correct_answer": "A",
+      "code_example": "def linear_search(arr, target):\n    for i in range(len(arr)):\n        if arr[i] == target:\n            return i\n    return -1\n\nprint(linear_search([10, 20, 30, 40, 50], 30))"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following type checking code?",
+      "options": {
+        "A": "True False",
+        "B": "False True",
+        "C": "True True",
+        "D": "False False"
+      },
+      "correct_answer": "B",
+      "code_example": "class Animal: pass\nclass Dog(Animal): pass\n\nfido = Dog()\n\nprint(isinstance(fido, Dog), type(fido) is Animal)"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "Which of the following is a correct way to define a raw multi-line string in Python?",
+      "options": {
+        "A": "'''This is a\nmulti-line string'''",
+        "B": "r'''This is a\nraw multi-line string'''",
+        "C": "\"\"\"This is a\nmulti-line string\"\"\"",
+        "D": "Both B and C"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following tuple unpacking code?",
+      "options": {
+        "A": "1 [2, 3, 4, 5]",
+        "B": "[1, 2] [3, 4, 5]",
+        "C": "1 2 [3, 4, 5]",
+        "D": "1 [2, 3] [4, 5]"
+      },
+      "correct_answer": "C",
+      "code_example": "numbers = (1, 2, 3, 4, 5)\na, b, *c = numbers\nprint(a, b, c)"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What is the output of the following conditional expression?",
+      "options": {
+        "A": "'odd'",
+        "B": "'even'",
+        "C": "15",
+        "D": "16"
+      },
+      "correct_answer": "B",
+      "code_example": "x = 16\nresult = 'even' if x % 2 == 0 else 'odd'\nprint(result)"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following singly linked list implementation?",
+      "options": {
+        "A": "1 -> 2 -> 3 -> None",
+        "B": "3 -> 2 -> 1 -> None",
+        "C": "1 -> 2 -> 3",
+        "D": "None -> 1 -> 2 -> 3"
+      },
+      "correct_answer": "A",
+      "code_example": "class Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n    \n    def append(self, data):\n        new_node = Node(data)\n        if not self.head:\n            self.head = new_node\n            return\n        last = self.head\n        while last.next:\n            last = last.next\n        last.next = new_node\n    \n    def __str__(self):\n        result = []\n        current = self.head\n        while current:\n            result.append(str(current.data))\n            current = current.next\n        return ' -> '.join(result + ['None'])\n\nllist = LinkedList()\nllist.append(1)\nllist.append(2)\nllist.append(3)\nprint(llist)"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following stack implementation using a list?",
+      "options": {
+        "A": "[3, 2, 1]",
+        "B": "[1, 2, 3]",
+        "C": "1",
+        "D": "3"
+      },
+      "correct_answer": "D",
+      "code_example": "class Stack:\n    def __init__(self):\n        self.items = []\n    \n    def push(self, item):\n        self.items.append(item)\n    \n    def pop(self):\n        if not self.is_empty():\n            return self.items.pop()\n    \n    def peek(self):\n        if not self.is_empty():\n            return self.items[-1]\n    \n    def is_empty(self):\n        return len(self.items) == 0\n\nstack = Stack()\nstack.push(1)\nstack.push(2)\nstack.push(3)\nprint(stack.peek())"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using property decorators?",
+      "options": {
+        "A": "Invalid temperature",
+        "B": "25",
+        "C": "77.0",
+        "D": "The code will raise an error"
+      },
+      "correct_answer": "C",
+      "code_example": "class Temperature:\n    def __init__(self, celsius=0):\n        self._celsius = celsius\n        \n    @property\n    def celsius(self):\n        return self._celsius\n    \n    @celsius.setter\n    def celsius(self, value):\n        if value < -273.15:\n            raise ValueError('Invalid temperature')\n        self._celsius = value\n    \n    @property\n    def fahrenheit(self):\n        return self._celsius * 9/5 + 32\n\ntemp = Temperature(25)\nprint(temp.fahrenheit)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following priority queue implementation using heapq?",
+      "options": {
+        "A": "[1, 3, 5]",
+        "B": "[5, 3, 1]",
+        "C": "1",
+        "D": "5"
+      },
+      "correct_answer": "C",
+      "code_example": "import heapq\n\nclass PriorityQueue:\n    def __init__(self):\n        self._queue = []\n        self._index = 0\n    \n    def push(self, item, priority):\n        heapq.heappush(self._queue, (priority, self._index, item))\n        self._index += 1\n    \n    def pop(self):\n        if self._queue:\n            return heapq.heappop(self._queue)[2]\n        return None\n\npq = PriorityQueue()\npq.push('task1', 5)\npq.push('task2', 1)\npq.push('task3', 3)\nprint(pq.pop())"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using lru_cache from functools?",
+      "options": {
+        "A": "Calculating fib(30)\nCalculating fib(29)\nCalculating fib(28)\n832040",
+        "B": "Calculating fib(30)\n832040",
+        "C": "832040",
+        "D": "The code will time out"
+      },
+      "correct_answer": "A",
+      "code_example": "from functools import lru_cache\n\n@lru_cache(maxsize=2)\ndef fib(n):\n    print(f'Calculating fib({n})')\n    if n < 2:\n        return n\n    return fib(n-1) + fib(n-2)\n\nprint(fib(30))"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the two-pointer technique?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[5, 4, 3, 2, 1]",
+        "C": "[1, 5, 2, 4, 3]",
+        "D": "[5, 1, 4, 2, 3]"
+      },
+      "correct_answer": "B",
+      "code_example": "def reverse_array(arr):\n    left, right = 0, len(arr) - 1\n    \n    while left < right:\n        arr[left], arr[right] = arr[right], arr[left]\n        left += 1\n        right -= 1\n    \n    return arr\n\nprint(reverse_array([1, 2, 3, 4, 5]))"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating partial functions?",
+      "options": {
+        "A": "8",
+        "B": "5",
+        "C": "13",
+        "D": "The code will raise an error"
+      },
+      "correct_answer": "A",
+      "code_example": "from functools import partial\n\ndef add(x, y):\n    return x + y\n\nadd_three = partial(add, 3)\nprint(add_three(5))"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following regex code with capturing groups?",
+      "options": {
+        "A": "['alice@example.com', 'bob@example.org']",
+        "B": "['alice', 'bob']",
+        "C": "['example.com', 'example.org']",
+        "D": "['alice@', 'bob@']"
+      },
+      "correct_answer": "B",
+      "code_example": "import re\n\ntext = \"Contact alice@example.com or bob@example.org for assistance.\"\npattern = r'(\\w+)@\\w+\\.\\w+'\nmatches = re.findall(pattern, text)\nprint(matches)"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating method overriding?",
+      "options": {
+        "A": "Animal speaks\nDog barks",
+        "B": "Animal speaks\nAnimal speaks",
+        "C": "Dog barks\nDog barks",
+        "D": "The code will raise an error"
+      },
+      "correct_answer": "A",
+      "code_example": "class Animal:\n    def speak(self):\n        print('Animal speaks')\n\nclass Dog(Animal):\n    def speak(self):\n        print('Dog barks')\n\na = Animal()\nd = Dog()\na.speak()\nd.speak()"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that finds connected components in a graph?",
+      "options": {
+        "A": "3",
+        "B": "2",
+        "C": "4",
+        "D": "1"
+      },
+      "correct_answer": "B",
+      "code_example": "def find_connected_components(graph):\n    visited = set()\n    count = 0\n    \n    def dfs(node):\n        visited.add(node)\n        for neighbor in graph[node]:\n            if neighbor not in visited:\n                dfs(neighbor)\n    \n    for node in graph:\n        if node not in visited:\n            count += 1\n            dfs(node)\n    \n    return count\n\ngraph = {\n    0: [1, 2],\n    1: [0, 2],\n    2: [0, 1],\n    3: [4],\n    4: [3],\n    5: []\n}\n\nprint(find_connected_components(graph))"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using memoization with recursion?",
+      "options": {
+        "A": "55",
+        "B": "89",
+        "C": "144",
+        "D": "The code will exceed recursion depth"
+      },
+      "correct_answer": "C",
+      "code_example": "def memoize(f):\n    memo = {}\n    def helper(x):\n        if x not in memo:\n            memo[x] = f(x)\n        return memo[x]\n    return helper\n\n@memoize\ndef fib(n):\n    if n < 2:\n        return n\n    return fib(n-1) + fib(n-2)\n\nprint(fib(12))"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "Which normal form requires that all non-key attributes are fully functionally dependent on the primary key?",
+      "options": {
+        "A": "First Normal Form (1NF)",
+        "B": "Second Normal Form (2NF)",
+        "C": "Third Normal Form (3NF)",
+        "D": "Boyce-Codd Normal Form (BCNF)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What is the correct way to use an absolute import in Python?",
+      "options": {
+        "A": "from .module import function",
+        "B": "from ..module import function",
+        "C": "from package.module import function",
+        "D": "import ../package/module"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that creates a database connection?",
+      "options": {
+        "A": "Connection established\nQuery executed\nConnection closed",
+        "B": "Connection established\nConnection closed",
+        "C": "Query executed",
+        "D": "The code will raise an error"
+      },
+      "correct_answer": "A",
+      "code_example": "class DatabaseConnection:\n    def __init__(self, connection_string):\n        self.connection_string = connection_string\n        self.connection = None\n    \n    def __enter__(self):\n        print('Connection established')\n        return self\n    \n    def execute_query(self, query):\n        print('Query executed')\n    \n    def __exit__(self, exc_type, exc_val, exc_tb):\n        print('Connection closed')\n\nwith DatabaseConnection('postgresql://user:pass@localhost/db') as conn:\n    conn.execute_query('SELECT * FROM users')"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using map, filter, and reduce?",
+      "options": {
+        "A": "[2, 4, 6, 8, 10]",
+        "B": "[4, 16, 36, 64, 100]",
+        "C": "220",
+        "D": "120"
+      },
+      "correct_answer": "C",
+      "code_example": "from functools import reduce\n\nnumbers = [1, 2, 3, 4, 5]\n\ndef double(x):\n    return x * 2\n\ndef is_even(x):\n    return x % 2 == 0\n\ndef add(x, y):\n    return x + y\n\nresult = reduce(add, map(lambda x: x**2, map(double, filter(is_even, numbers))))\nprint(result)"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "Which regex pattern correctly matches a valid email address?",
+      "options": {
+        "A": "\\w+@\\w+.\\w+",
+        "B": "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}",
+        "C": "\\S+@\\S+",
+        "D": ".*@.*\\..*"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "When implementing distributed caching with Redis in a Python application, what is the most effective way to handle cache invalidation across multiple application instances?",
+      "options": {
+        "A": "Use Redis' PUBLISH/SUBSCRIBE mechanism to notify all instances when a cache entry is modified",
+        "B": "Implement a polling mechanism where each instance checks for changes every few seconds",
+        "C": "Use a shared lock in Redis to ensure only one instance updates the cache at a time",
+        "D": "Store a timestamp with each cache entry and always fetch the newest entry based on timestamp"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using BeautifulSoup to parse HTML?",
+      "code_example": "from bs4 import BeautifulSoup\n\nhtml = '''\n<div class='container'>\n  <p class='info'>First paragraph</p>\n  <p>Second paragraph</p>\n  <p class='info'>Third paragraph</p>\n</div>\n'''\n\nsoup = BeautifulSoup(html, 'html.parser')\nresult = soup.select('p.info')\nprint([item.text for item in result])",
+      "options": {
+        "A": "['First paragraph', 'Second paragraph', 'Third paragraph']",
+        "B": "['First paragraph', 'Third paragraph']",
+        "C": "['First paragraph']",
+        "D": "Error: invalid selector syntax"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Consider the following code that uses NumPy vectorization. What will be the output?",
+      "code_example": "import numpy as np\n\ndef process_data(data):\n    mask = data > 5\n    filtered = data[mask]\n    return np.sum(filtered ** 2)\n\narray1 = np.array([2, 6, 4, 8, 3, 7])\narray2 = np.array([3, 5, 9, 1, 7, 4])\n\nresult = process_data(array1) + process_data(array2)\nprint(result)",
+      "options": {
+        "A": "285",
+        "B": "271",
+        "C": "233",
+        "D": "195"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "In a message queue architecture using RabbitMQ with Python's pika library, which of the following is the most effective approach for ensuring message delivery in case of consumer failures?",
+      "options": {
+        "A": "Implement a dead letter exchange to capture and reprocess failed messages",
+        "B": "Use basic_consume with auto_ack=True for maximum throughput",
+        "C": "Increase the prefetch count to ensure messages are processed faster",
+        "D": "Store all received messages in a local database before processing"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of this code that demonstrates Python attribute access techniques?",
+      "code_example": "class DynamicAttributes:\n    def __init__(self):\n        self._attributes = {}\n    \n    def __getattr__(self, name):\n        if name in self._attributes:\n            return self._attributes[name]\n        return f\"No attribute named {name}\"\n    \n    def __setattr__(self, name, value):\n        if name == '_attributes':\n            super().__setattr__(name, value)\n        else:\n            self._attributes[name] = value\n\nobj = DynamicAttributes()\nobj.x = 10\nobj.y = 20\n\nprint(getattr(obj, 'x', 'Not found'))\nprint(getattr(obj, 'z', 'Not found'))\ndelattr(obj, '_attributes')\nprint(getattr(obj, 'y', 'Not found'))",
+      "options": {
+        "A": "10\nNot found\nNot found",
+        "B": "10\nNot found\nAttributeError: 'DynamicAttributes' object has no attribute '_attributes'",
+        "C": "10\nNo attribute named z\n20",
+        "D": "10\nNo attribute named z\nAttributeError: 'DynamicAttributes' object has no attribute '_attributes'"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Which database indexing strategy would be most effective for optimizing a query that frequently filters on one column and sorts by another in a PostgreSQL database accessed through SQLAlchemy?",
+      "options": {
+        "A": "Create two separate single-column indexes on each column",
+        "B": "Create a composite index with both columns, with the filter column first",
+        "C": "Create a functional index using both columns",
+        "D": "Use database partitioning based on the filter column"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of this code demonstrating a backtracking algorithm for solving a subset sum problem?",
+      "code_example": "def subset_sum(numbers, target, partial=None, partial_sum=0):\n    if partial is None:\n        partial = []\n    \n    if partial_sum == target:\n        return [partial]\n    \n    if partial_sum > target:\n        return []\n    \n    result = []\n    \n    for i, n in enumerate(numbers):\n        remaining = numbers[i+1:]\n        result.extend(subset_sum(remaining, target, partial + [n], partial_sum + n))\n    \n    return result\n\nnumbers = [2, 4, 6, 8]\ntarget = 10\nprint(len(subset_sum(numbers, target)))",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "1"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "When profiling Python code using cProfile, which of the following metrics is most useful for identifying bottlenecks in CPU-bound applications?",
+      "options": {
+        "A": "ncalls (number of calls)",
+        "B": "tottime (total time spent in the function excluding calls to sub-functions)",
+        "C": "cumtime (cumulative time spent in the function and all sub-functions)",
+        "D": "percall (average time per call)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of this code involving C extensions and Cython optimization?",
+      "code_example": "# Assume the following Cython code is compiled into a module named 'cyfuncs'\n\"\"\"\n# cyfuncs.pyx\ncdef int _factorial(int n):\n    if n <= 1:\n        return 1\n    return n * _factorial(n-1)\n\ndef factorial(n):\n    return _factorial(n)\n\ncdef class Counter:\n    cdef int _count\n    \n    def __init__(self, int start=0):\n        self._count = start\n    \n    cpdef int increment(self):\n        self._count += 1\n        return self._count\n\"\"\"\n\n# Python code using the compiled module\nimport cyfuncs\n\ncounter = cyfuncs.Counter(5)\ncounter.increment()\ncounter.increment()\n\nresult = cyfuncs.factorial(4) + counter._count\nprint(result)",
+      "options": {
+        "A": "31",
+        "B": "24",
+        "C": "AttributeError: 'Counter' object has no attribute '_count'",
+        "D": "7"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of this code demonstrating race conditions and attempted prevention?",
+      "code_example": "import threading\nimport time\n\nclass SharedCounter:\n    def __init__(self):\n        self.counter = 0\n        self.lock = threading.Lock()\n    \n    def increment(self):\n        with self.lock:\n            current = self.counter\n            time.sleep(0.001)  # Simulate processing time\n            self.counter = current + 1\n    \n    def increment_without_lock(self):\n        current = self.counter\n        time.sleep(0.001)  # Simulate processing time\n        self.counter = current + 1\n\ndef test_locking():\n    counter = SharedCounter()\n    threads = []\n    \n    # Test with locking\n    for _ in range(5):\n        t = threading.Thread(target=counter.increment)\n        threads.append(t)\n        t.start()\n    \n    for t in threads:\n        t.join()\n    \n    locked_result = counter.counter\n    counter.counter = 0\n    \n    # Test without locking\n    threads = []\n    for _ in range(5):\n        t = threading.Thread(target=counter.increment_without_lock)\n        threads.append(t)\n        t.start()\n    \n    for t in threads:\n        t.join()\n    \n    unlocked_result = counter.counter\n    \n    print(f\"{locked_result}, {unlocked_result}\")\n\n# Note: Actual output may vary due to threading, but the expected behavior is shown in options\ntest_locking()",
+      "options": {
+        "A": "5, 5",
+        "B": "5, 1",
+        "C": "5, A number less than 5",
+        "D": "A number less than 5, 5"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "When scraping JavaScript-heavy websites with Python, which approach would be most effective for extracting data from elements that are dynamically loaded after the page initially renders?",
+      "options": {
+        "A": "Use requests with a custom User-Agent header",
+        "B": "Use selenium or playwright to automate a headless browser",
+        "C": "Analyze the network requests with requests-html and directly fetch the API endpoints",
+        "D": "Use BeautifulSoup with a JavaScript interpreter like PyV8"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of this debugging code using Python's tracemalloc module?",
+      "code_example": "import tracemalloc\n\ndef create_large_list():\n    return [object() for _ in range(100000)]\n\ndef process_data():\n    data = create_large_list()\n    # Do some processing\n    return len(data)\n\ntracemalloc.start()\n\n# Take first snapshot\nresult1 = process_data()\nsnap1 = tracemalloc.take_snapshot()\n\n# Take second snapshot\nresult2 = process_data()\nsnap2 = tracemalloc.take_snapshot()\n\n# Compare snapshots\ntop_stats = snap2.compare_to(snap1, 'lineno')\n\nprint(f\"Memory blocks: {len(top_stats)}\")\nif top_stats:\n    stat = top_stats[0]\n    print(f\"Biggest change: {stat.size_diff} bytes\")\nelse:\n    print(\"No significant memory differences detected\")",
+      "options": {
+        "A": "Memory blocks: 0\nNo significant memory differences detected",
+        "B": "Memory blocks: 1\nBiggest change: 0 bytes",
+        "C": "Memory blocks: 1\nBiggest change: 8000000 bytes",
+        "D": "Memory blocks: 2\nBiggest change: 8000000 bytes"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "Which of the following approaches is best practice for implementing a CI/CD pipeline for a Python application with pytest, using GitHub Actions?",
+      "options": {
+        "A": "Run all tests in a single workflow step to reduce execution time",
+        "B": "Only run tests on the master branch to avoid wasting resources",
+        "C": "Use matrix testing to run tests across multiple Python versions and environments",
+        "D": "Generate test coverage reports but fail the pipeline only if tests fail, not if coverage decreases"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of this code using boto3 for AWS cloud services integration?",
+      "code_example": "import boto3\nfrom botocore.exceptions import ClientError\nfrom unittest.mock import patch, MagicMock\n\ndef upload_file(file_name, bucket, object_name=None):\n    if object_name is None:\n        object_name = file_name\n    \n    s3_client = boto3.client('s3')\n    try:\n        s3_client.upload_file(file_name, bucket, object_name)\n        return True\n    except ClientError:\n        return False\n\n# Mock test\nwith patch('boto3.client') as mock_client:\n    mock_s3 = MagicMock()\n    mock_client.return_value = mock_s3\n    \n    # Case 1: Successful upload\n    result1 = upload_file('test.txt', 'my-bucket')\n    \n    # Case 2: ClientError on upload\n    mock_s3.upload_file.side_effect = ClientError(\n        {'Error': {'Code': 'NoSuchBucket', 'Message': 'The bucket does not exist'}},\n        'upload_file'\n    )\n    result2 = upload_file('test.txt', 'non-existent-bucket')\n    \n    print(f\"{result1}, {result2}, {mock_s3.upload_file.call_count}\")",
+      "options": {
+        "A": "True, False, 1",
+        "B": "True, False, 2",
+        "C": "False, False, 1",
+        "D": "True, ClientError exception is raised"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "When implementing infrastructure as code using Pulumi with Python, which of the following patterns is most appropriate for managing multiple environments (dev, staging, production)?",
+      "options": {
+        "A": "Create separate Pulumi projects for each environment",
+        "B": "Use a single Pulumi project with different stacks for each environment",
+        "C": "Duplicate the code for each environment with different configuration files",
+        "D": "Use environment variables to switch between environments at runtime"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the result of this code that interacts with Kubernetes using the Python client?",
+      "code_example": "from kubernetes import client, config\nfrom unittest.mock import patch, MagicMock\n\ndef scale_deployment(namespace, name, replicas):\n    try:\n        # Load kube config\n        config.load_kube_config()\n        \n        # Create API client\n        apps_v1 = client.AppsV1Api()\n        \n        # Patch the deployment\n        body = {\n            \"spec\": {\n                \"replicas\": replicas\n            }\n        }\n        \n        response = apps_v1.patch_namespaced_deployment_scale(\n            name=name,\n            namespace=namespace,\n            body=body\n        )\n        \n        return response.spec.replicas\n    except client.exceptions.ApiException as e:\n        if e.status == 404:\n            return \"Deployment not found\"\n        return f\"Error: {e.status}\"\n\n# Mock test\nwith patch('kubernetes.client.AppsV1Api') as mock_api:\n    mock_apps_v1 = MagicMock()\n    mock_api.return_value = mock_apps_v1\n    \n    # Setup mock response\n    mock_scale = MagicMock()\n    mock_scale.spec.replicas = 3\n    mock_apps_v1.patch_namespaced_deployment_scale.return_value = mock_scale\n    \n    # Case 1: Successful scaling\n    result1 = scale_deployment('default', 'my-app', 3)\n    \n    # Case 2: Deployment not found\n    api_exception = client.exceptions.ApiException(status=404)\n    mock_apps_v1.patch_namespaced_deployment_scale.side_effect = api_exception\n    result2 = scale_deployment('default', 'non-existent', 3)\n    \n    print(f\"{result1}, {result2}\")",
+      "options": {
+        "A": "3, Deployment not found",
+        "B": "3, Error: 404",
+        "C": "ApiException is raised in both cases",
+        "D": "3, ApiException is raised in the second case"
+      },
+      "correct_answer": "A"
+    }
+  ]
+}
