@@ -1,0 +1,616 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that calculates the mean of a list of numbers?",
+      "options": {
+        "A": "4.2",
+        "B": "4",
+        "C": "5",
+        "D": "4.25"
+      },
+      "correct_answer": "D",
+      "code_example": "numbers = [2, 4, 5, 6]\nresult = sum(numbers) / len(numbers)\nprint(result)"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that finds the median of a list?",
+      "options": {
+        "A": "4",
+        "B": "4.5",
+        "C": "5",
+        "D": "3"
+      },
+      "correct_answer": "B",
+      "code_example": "numbers = [1, 3, 6, 8]\nnumbers.sort()\nif len(numbers) % 2 == 0:\n    median = (numbers[len(numbers)//2] + numbers[len(numbers)//2 - 1]) / 2\nelse:\n    median = numbers[len(numbers)//2]\nprint(median)"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following conditional expression?",
+      "options": {
+        "A": "greater",
+        "B": "equal",
+        "C": "less",
+        "D": "None of the above"
+      },
+      "correct_answer": "A",
+      "code_example": "a = 10\nb = 5\nresult = \"greater\" if a > b else \"equal\" if a == b else \"less\"\nprint(result)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of this list manipulation code?",
+      "options": {
+        "A": "[1, 2, 3, 4]",
+        "B": "[1, 2, 3, 99, 4]",
+        "C": "[1, 99, 2, 3, 4]",
+        "D": "[99, 1, 2, 3, 4]"
+      },
+      "correct_answer": "B",
+      "code_example": "my_list = [1, 2, 3, 4]\nmy_list.insert(3, 99)\nprint(my_list)"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the result of the following tuple operation?",
+      "options": {
+        "A": "(1, 2, 3, 4, 5)",
+        "B": "Error: 'tuple' object doesn't support item assignment",
+        "C": "(1, 2, 3, 4)",
+        "D": "(1, 2, 99, 4)"
+      },
+      "correct_answer": "B",
+      "code_example": "my_tuple = (1, 2, 3, 4)\nmy_tuple[2] = 99\nprint(my_tuple)"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which of the following is a valid way to unpack a tuple in Python?",
+      "options": {
+        "A": "first, second, *rest = (1, 2, 3, 4, 5)",
+        "B": "first = tuple[0]; second = tuple[1]",
+        "C": "first + second + third = tuple",
+        "D": "unpack(tuple) as first, second, third"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will the following code print about variable scope?",
+      "options": {
+        "A": "10\n20",
+        "B": "10\n10",
+        "C": "20\n20",
+        "D": "Error: local variable 'x' referenced before assignment"
+      },
+      "correct_answer": "A",
+      "code_example": "x = 10\n\ndef change_x():\n    x = 20\n    print(x)\n    \nprint(x)\nchange_x()"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of this function call?",
+      "options": {
+        "A": "Hello, World!",
+        "B": "Hello, Python!",
+        "C": "Hello, !",
+        "D": "Error: missing required argument"
+      },
+      "correct_answer": "B",
+      "code_example": "def greet(name=\"Python\"):\n    return f\"Hello, {name}!\"\n\nprint(greet())"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "After executing the following file operation code, what will be the content of 'output.txt'?",
+      "options": {
+        "A": "Line 1\nLine 2",
+        "B": "Line 2",
+        "C": "Line 1",
+        "D": "The file will be empty"
+      },
+      "correct_answer": "A",
+      "code_example": "with open('output.txt', 'w') as f:\n    f.write('Line 1\\n')\n    f.write('Line 2')"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be printed by the following loop with an else clause?",
+      "options": {
+        "A": "Loop completed",
+        "B": "Item found",
+        "C": "Loop completed\nItem found",
+        "D": "Nothing will be printed"
+      },
+      "correct_answer": "A",
+      "code_example": "my_list = [1, 2, 3, 4]\n\nfor item in my_list:\n    if item == 5:\n        print(\"Item found\")\n        break\nelse:\n    print(\"Loop completed\")"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "According to PEP 8, which of the following is the recommended naming convention for constants in Python?",
+      "options": {
+        "A": "CONSTANT_NAME",
+        "B": "constantName",
+        "C": "constant_name",
+        "D": "ConstantName"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will the following FizzBuzz implementation print for the number 15?",
+      "options": {
+        "A": "15",
+        "B": "Fizz",
+        "C": "Buzz",
+        "D": "FizzBuzz"
+      },
+      "correct_answer": "D",
+      "code_example": "def fizzbuzz(num):\n    if num % 3 == 0 and num % 5 == 0:\n        return \"FizzBuzz\"\n    elif num % 3 == 0:\n        return \"Fizz\"\n    elif num % 5 == 0:\n        return \"Buzz\"\n    else:\n        return str(num)\n\nprint(fizzbuzz(15))"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "Which of the following correctly creates a custom exception in Python?",
+      "options": {
+        "A": "class MyError inherits Exception:",
+        "B": "class MyError(Exception): pass",
+        "C": "def MyError(Exception): pass",
+        "D": "MyError = new Exception()"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of this try/except/else/finally block?",
+      "options": {
+        "A": "Success!\nAlways runs",
+        "B": "Error occurred\nAlways runs",
+        "C": "Always runs",
+        "D": "Success!"
+      },
+      "correct_answer": "A",
+      "code_example": "try:\n    x = 10\n    y = 5\n    result = x / y\nexcept ZeroDivisionError:\n    print(\"Error occurred\")\nelse:\n    print(\"Success!\")\nfinally:\n    print(\"Always runs\")"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a primitive type in Python?",
+      "options": {
+        "A": "int",
+        "B": "float",
+        "C": "array",
+        "D": "bool"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What is the Greatest Common Divisor (GCD) of 48 and 18 calculated by this code?",
+      "options": {
+        "A": "6",
+        "B": "9",
+        "C": "3",
+        "D": "2"
+      },
+      "correct_answer": "A",
+      "code_example": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\nprint(gcd(48, 18))"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of this regex pattern with a greedy quantifier?",
+      "options": {
+        "A": "['<div>Content</div>']",
+        "B": "['<div>', '</div>']",
+        "C": "['Content']",
+        "D": "[]"
+      },
+      "correct_answer": "A",
+      "code_example": "import re\n\ntext = \"<div>Content</div>\"\npattern = r'<div>.*</div>'\nresult = re.findall(pattern, text)\nprint(result)"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the same regex pattern but with a non-greedy quantifier?",
+      "options": {
+        "A": "['<div>Content</div>']",
+        "B": "['<div>', '</div>']",
+        "C": "['<div>Content']",
+        "D": "[]"
+      },
+      "correct_answer": "C",
+      "code_example": "import re\n\ntext = \"<div>Content</div>\"\npattern = r'<div>.*?'\nresult = re.findall(pattern, text)\nprint(result)"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will this generator function produce?",
+      "options": {
+        "A": "[0, 1, 4, 9, 16, 25]",
+        "B": "<generator object squares at 0x...>",
+        "C": "0 1 4 9 16 25",
+        "D": "Error: yield is not defined"
+      },
+      "correct_answer": "B",
+      "code_example": "def squares(n):\n    for i in range(n):\n        yield i * i\n\nresult = squares(6)\nprint(result)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which HTTP status code indicates a successful response where a new resource was created?",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "204 No Content",
+        "D": "301 Moved Permanently"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will this recursive function with memoization return for fib(5)?",
+      "options": {
+        "A": "5",
+        "B": "8",
+        "C": "13",
+        "D": "Error: maximum recursion depth exceeded"
+      },
+      "correct_answer": "A",
+      "code_example": "def fib(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 1:\n        return n\n    memo[n] = fib(n-1, memo) + fib(n-2, memo)\n    return memo[n]\n\nprint(fib(5))"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of this decorated function?",
+      "options": {
+        "A": "Before function\nHello, World!\nAfter function",
+        "B": "Before function\nAfter function\nHello, World!",
+        "C": "Hello, World!\nBefore function\nAfter function",
+        "D": "Hello, World!"
+      },
+      "correct_answer": "A",
+      "code_example": "def decorator(func):\n    def wrapper():\n        print(\"Before function\")\n        func()\n        print(\"After function\")\n    return wrapper\n\n@decorator\ndef say_hello():\n    print(\"Hello, World!\")\n\nsay_hello()"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What is the output of this function using lru_cache?",
+      "options": {
+        "A": "Calculating result for 10\nResult: 55\nResult: 55",
+        "B": "Calculating result for 10\nResult: 55\nCalculating result for 10\nResult: 55",
+        "C": "Result: 55\nResult: 55",
+        "D": "Calculating result for 10\nCalculating result for 10\nResult: 55\nResult: 55"
+      },
+      "correct_answer": "A",
+      "code_example": "from functools import lru_cache\n\n@lru_cache(maxsize=None)\ndef fibonacci(n):\n    print(f\"Calculating result for {n}\")\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\nresult1 = fibonacci(10)\nprint(f\"Result: {result1}\")\nresult2 = fibonacci(10)\nprint(f\"Result: {result2}\")"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will the function call with *args and **kwargs print?",
+      "options": {
+        "A": "(1, 2, 3) {'a': 10, 'b': 20}",
+        "B": "[1, 2, 3] {'a': 10, 'b': 20}",
+        "C": "1 2 3 a=10 b=20",
+        "D": "Error: too many arguments"
+      },
+      "correct_answer": "A",
+      "code_example": "def show_args(*args, **kwargs):\n    print(args, kwargs)\n\nshow_args(1, 2, 3, a=10, b=20)"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What is a key difference between Python lists and arrays from the array module?",
+      "options": {
+        "A": "Lists can hold mixed data types, while arrays must contain elements of the same type",
+        "B": "Arrays are mutable, while lists are immutable",
+        "C": "Arrays support indexing, but lists do not",
+        "D": "Lists are implemented using linked lists, while arrays use hash tables"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will this closure function return?",
+      "options": {
+        "A": "15",
+        "B": "5",
+        "C": "10",
+        "D": "Error: 'x' is not defined"
+      },
+      "correct_answer": "A",
+      "code_example": "def outer_function(x):\n    def inner_function(y):\n        return x + y\n    return inner_function\n\nadd_five = outer_function(5)\nresult = add_five(10)\nprint(result)"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be printed by this property decorator example?",
+      "options": {
+        "A": "Setting temperature to 25\nGetting temperature\n25",
+        "B": "Setting temperature to 25\n25",
+        "C": "25",
+        "D": "Error: 'temperature' is not defined"
+      },
+      "correct_answer": "A",
+      "code_example": "class Thermometer:\n    def __init__(self):\n        self._temperature = 0\n\n    @property\n    def temperature(self):\n        print(\"Getting temperature\")\n        return self._temperature\n\n    @temperature.setter\n    def temperature(self, value):\n        print(f\"Setting temperature to {value}\")\n        self._temperature = value\n\ntherm = Thermometer()\ntherm.temperature = 25\nprint(therm.temperature)"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is the result of this partial function?",
+      "options": {
+        "A": "15",
+        "B": "8",
+        "C": "7",
+        "D": "Error: missing required argument"
+      },
+      "correct_answer": "A",
+      "code_example": "from functools import partial\n\ndef multiply(x, y):\n    return x * y\n\ndouble = partial(multiply, 3)\nresult = double(5)\nprint(result)"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of these dunder methods?",
+      "options": {
+        "A": "Point(3, 4)\nTrue",
+        "B": "Point(3, 4)\nFalse",
+        "C": "<__main__.Point object at 0x...>\nTrue",
+        "D": "<__main__.Point object at 0x...>\nFalse"
+      },
+      "correct_answer": "A",
+      "code_example": "class Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    def __repr__(self):\n        return f\"Point({self.x}, {self.y})\"\n    \n    def __eq__(self, other):\n        return self.x == other.x and self.y == other.y\n\np1 = Point(3, 4)\np2 = Point(3, 4)\nprint(p1)\nprint(p1 == p2)"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "Which regex performance optimization would NOT be effective for improving match speed?",
+      "options": {
+        "A": "Using non-capturing groups (?:...)",
+        "B": "Avoiding unnecessary backtracking",
+        "C": "Using more greedy quantifiers",
+        "D": "Using more specific character classes"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will this quicksort implementation return for the input [3, 1, 4, 1, 5, 9, 2]?",
+      "options": {
+        "A": "[1, 1, 2, 3, 4, 5, 9]",
+        "B": "[9, 5, 4, 3, 2, 1, 1]",
+        "C": "[3, 1, 4, 1, 5, 9, 2]",
+        "D": "Error: maximum recursion depth exceeded"
+      },
+      "correct_answer": "A",
+      "code_example": "def quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quicksort(left) + middle + quicksort(right)\n\nresult = quicksort([3, 1, 4, 1, 5, 9, 2])\nprint(result)"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "Which statement about Python's import system is correct?",
+      "options": {
+        "A": "from .module import func is an absolute import",
+        "B": "import module is a relative import",
+        "C": "from ..module import func navigates up two levels in the package hierarchy",
+        "D": "Relative imports can be used at the top level of a script"
+      },
+      "correct_answer": "C"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Consider the following code using MongoDB's PyMongo driver. What will be the result of executing this code against a MongoDB collection containing documents with the structure {'name': 'item1', 'category': 'A', 'price': 10}?",
+      "options": {
+        "A": "Returns all documents where category is 'A' and price is less than 50, sorted by price in ascending order",
+        "B": "Returns all documents where category is 'A' and price is less than 50, sorted by price in descending order",
+        "C": "Returns only the first document where category is 'A' and price is less than 50, with the lowest price",
+        "D": "Returns only the first document where category is 'A' and price is less than 50, with the highest price"
+      },
+      "correct_answer": "C",
+      "code_example": "import pymongo\n\ndef query_database(collection):\n    result = collection.find_one(\n        {\"category\": \"A\", \"price\": {\"$lt\": 50}},\n        sort=[(\"price\", pymongo.ASCENDING)]\n    )\n    return result"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing the A* search algorithm to find the shortest path from 'A' to 'F' in the graph?",
+      "options": {
+        "A": "['A', 'B', 'E', 'F']",
+        "B": "['A', 'C', 'E', 'F']",
+        "C": "['A', 'B', 'D', 'F']",
+        "D": "['A', 'C', 'D', 'F']"
+      },
+      "correct_answer": "A",
+      "code_example": "import heapq\n\ndef a_star_search(graph, start, goal, heuristic):\n    frontier = [(0, start, [])]\n    visited = set()\n    \n    while frontier:\n        f_cost, current, path = heapq.heappop(frontier)\n        \n        if current in visited:\n            continue\n            \n        path = path + [current]\n        \n        if current == goal:\n            return path\n            \n        visited.add(current)\n        \n        for neighbor, cost in graph[current].items():\n            if neighbor not in visited:\n                g_cost = len(path)\n                h_cost = heuristic[neighbor]\n                f_cost = g_cost + h_cost\n                heapq.heappush(frontier, (f_cost, neighbor, path))\n    \n    return None\n\n# Define graph with costs\ngraph = {\n    'A': {'B': 1, 'C': 3},\n    'B': {'A': 1, 'D': 5, 'E': 1},\n    'C': {'A': 3, 'D': 2, 'E': 4},\n    'D': {'B': 5, 'C': 2, 'F': 3},\n    'E': {'B': 1, 'C': 4, 'F': 1},\n    'F': {'D': 3, 'E': 1}\n}\n\n# Heuristic values (estimated distance to goal)\nheuristic = {\n    'A': 4,\n    'B': 3,\n    'C': 2,\n    'D': 1,\n    'E': 1,\n    'F': 0\n}\n\nprint(a_star_search(graph, 'A', 'F', heuristic))"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "When using PyPy as a JIT compiler for Python, which of the following statements is true?",
+      "options": {
+        "A": "PyPy automatically optimizes all Python code regardless of its structure",
+        "B": "PyPy performs best when code uses dynamic typing and metaclasses extensively",
+        "C": "PyPy generally performs better with code that has stable and predictable execution patterns",
+        "D": "PyPy is primarily designed to optimize I/O-bound operations rather than CPU-bound ones"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following scikit-learn code?",
+      "options": {
+        "A": "0.95",
+        "B": "0.85",
+        "C": "0.75",
+        "D": "0.65"
+      },
+      "correct_answer": "B",
+      "code_example": "import numpy as np\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import cross_val_score\nfrom sklearn.datasets import make_classification\n\nnp.random.seed(42)\nX, y = make_classification(n_samples=100, n_features=4, n_informative=2, \n                           n_redundant=0, random_state=42)\n\nmodel = RandomForestClassifier(n_estimators=10, max_depth=2, random_state=42)\nscores = cross_val_score(model, X, y, cv=5)\nprint(round(np.mean(scores), 2))"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a key benefit of database sharding in a distributed system?",
+      "options": {
+        "A": "Improved query performance through parallel processing",
+        "B": "Reduced impact of database failures",
+        "C": "Simplified transaction management across multiple tables",
+        "D": "Ability to scale horizontally by adding more servers"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the result of running the following implementation of Kruskal's algorithm to find the minimum spanning tree of the given graph?",
+      "options": {
+        "A": "Total MST weight: 16",
+        "B": "Total MST weight: 14",
+        "C": "Total MST weight: 11",
+        "D": "Total MST weight: 9"
+      },
+      "correct_answer": "C",
+      "code_example": "class DisjointSet:\n    def __init__(self, n):\n        self.parent = list(range(n))\n        self.rank = [0] * n\n        \n    def find(self, x):\n        if self.parent[x] != x:\n            self.parent[x] = self.find(self.parent[x])\n        return self.parent[x]\n    \n    def union(self, x, y):\n        root_x = self.find(x)\n        root_y = self.find(y)\n        \n        if root_x == root_y:\n            return False\n        \n        if self.rank[root_x] < self.rank[root_y]:\n            self.parent[root_x] = root_y\n        elif self.rank[root_x] > self.rank[root_y]:\n            self.parent[root_y] = root_x\n        else:\n            self.parent[root_y] = root_x\n            self.rank[root_x] += 1\n        \n        return True\n\ndef kruskal_mst(graph, vertices):\n    edges = []\n    for u in range(vertices):\n        for v, weight in graph[u]:\n            if u < v:  # Avoid duplicates\n                edges.append((weight, u, v))\n    \n    edges.sort()  # Sort by weight\n    \n    ds = DisjointSet(vertices)\n    mst_weight = 0\n    mst_edges = []\n    \n    for weight, u, v in edges:\n        if ds.union(u, v):\n            mst_weight += weight\n            mst_edges.append((u, v, weight))\n    \n    return mst_weight, mst_edges\n\n# Graph represented as adjacency list: [[(neighbor, weight), ...], ...]\ngraph = [\n    [(1, 2), (3, 6)],            # Node 0's neighbors\n    [(0, 2), (2, 3), (3, 8), (4, 5)],  # Node 1's neighbors\n    [(1, 3), (4, 7)],            # Node 2's neighbors\n    [(0, 6), (1, 8), (4, 9)],    # Node 3's neighbors\n    [(1, 5), (2, 7), (3, 9)]     # Node 4's neighbors\n]\n\nmst_weight, _ = kruskal_mst(graph, 5)\nprint(f\"Total MST weight: {mst_weight}\")"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the output of the following Rabin-Karp string matching algorithm implementation when searching for the pattern 'abcd' in the text 'abcabcdabcde'?",
+      "options": {
+        "A": "[3]",
+        "B": "[0, 3, 7]",
+        "C": "[3, 7]",
+        "D": "[4]"
+      },
+      "correct_answer": "A",
+      "code_example": "def rabin_karp(pattern, text, prime=101):\n    m, n = len(pattern), len(text)\n    pattern_hash = 0\n    text_hash = 0\n    h = 1\n    d = 256  # Number of characters in the alphabet\n    \n    # Calculate h = d^(m-1) % prime\n    for i in range(m-1):\n        h = (h * d) % prime\n    \n    # Calculate hash value for pattern and first window of text\n    for i in range(m):\n        pattern_hash = (d * pattern_hash + ord(pattern[i])) % prime\n        text_hash = (d * text_hash + ord(text[i])) % prime\n    \n    results = []\n    \n    # Slide the pattern over text one by one\n    for i in range(n - m + 1):\n        # Check if hash values match\n        if pattern_hash == text_hash:\n            # Check if characters match\n            match = True\n            for j in range(m):\n                if text[i + j] != pattern[j]:\n                    match = False\n                    break\n            if match:\n                results.append(i)\n        \n        # Calculate hash value for next window\n        if i < n - m:\n            text_hash = (d * (text_hash - ord(text[i]) * h) + ord(text[i + m])) % prime\n            if text_hash < 0:\n                text_hash += prime\n    \n    return results\n\ntext = \"abcabcdabcde\"\npattern = \"abcd\"\nprint(rabin_karp(pattern, text))"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following web scraping code using BeautifulSoup and requests?",
+      "options": {
+        "A": "A list of all URLs on the page",
+        "B": "A list of all URLs that start with 'https://'",
+        "C": "A list of all URLs that point to the same domain",
+        "D": "A list of all URLs that contain 'python' in their href attribute"
+      },
+      "correct_answer": "D",
+      "code_example": "import requests\nfrom bs4 import BeautifulSoup\nfrom urllib.parse import urljoin\n\ndef extract_specific_links(url, keyword):\n    try:\n        # Mock content for testing purposes\n        html_content = '''\n        <html>\n        <body>\n            <a href=\"https://docs.python.org/tutorial\">Python Tutorial</a>\n            <a href=\"https://example.com\">Example</a>\n            <a href=\"/python-news\">Python News</a>\n            <a href=\"https://github.com/python/cpython\">CPython</a>\n        </body>\n        </html>\n        '''\n        \n        # Parse the HTML\n        soup = BeautifulSoup(html_content, 'html.parser')\n        \n        # Find all anchor tags\n        links = []\n        for a_tag in soup.find_all('a'):\n            href = a_tag.get('href', '')\n            if keyword in href:\n                if not href.startswith(('http://', 'https://')):\n                    href = urljoin(url, href)\n                links.append(href)\n        \n        return links\n    except Exception as e:\n        return [f\"Error: {str(e)}\"]\n\nresult = extract_specific_links('https://example.com', 'python')\nprint(result)"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT an effective method for debugging memory leaks in a Python application?",
+      "options": {
+        "A": "Using the tracemalloc module to track memory blocks allocated by Python",
+        "B": "Using the gc module to force garbage collection and inspect unreachable objects",
+        "C": "Setting breakpoints and inspecting variable values at runtime with pdb",
+        "D": "Using the memory_profiler package to profile line-by-line memory usage"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What is the primary challenge when scraping JavaScript-heavy websites, and which of the following Python code snippets correctly addresses this issue?",
+      "options": {
+        "A": "Handling compressed responses; use 'requests' with proper headers",
+        "B": "Bypassing CAPTCHA; use 'requests' with rotating proxies",
+        "C": "Rendering JavaScript content; use Selenium with a headless browser",
+        "D": "Managing cookies; use 'requests.Session()' to maintain state"
+      },
+      "correct_answer": "C",
+      "code_example": "# Option A: Using requests with proper headers\ndef option_a():\n    import requests\n    headers = {\n        'Accept-Encoding': 'gzip, deflate',\n        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'\n    }\n    response = requests.get('https://example.com', headers=headers)\n    return response.text\n\n# Option B: Using requests with rotating proxies\ndef option_b():\n    import requests\n    proxies = {\n        'http': 'http://proxy1.example.com:8080',\n        'https': 'https://proxy1.example.com:8080'\n    }\n    response = requests.get('https://example.com', proxies=proxies)\n    return response.text\n\n# Option C: Using Selenium with a headless browser\ndef option_c():\n    from selenium import webdriver\n    from selenium.webdriver.chrome.options import Options\n    \n    options = Options()\n    options.headless = True\n    driver = webdriver.Chrome(options=options)\n    driver.get('https://example.com')\n    content = driver.page_source\n    driver.quit()\n    return content\n\n# Option D: Using requests.Session() to maintain state\ndef option_d():\n    import requests\n    session = requests.Session()\n    session.get('https://example.com/login')\n    response = session.get('https://example.com/dashboard')\n    return response.text"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "When working with Kubernetes for container orchestration of a Python application, which of the following is the most appropriate way to handle application secrets?",
+      "options": {
+        "A": "Store secrets as environment variables directly in the Deployment YAML file",
+        "B": "Use Kubernetes Secrets resource and mount them as environment variables or files",
+        "C": "Hard-code the secrets in the Python application code for maximum performance",
+        "D": "Store secrets in ConfigMaps for easy visibility and management"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Scrapy spider code when run against a website with the structure shown in the comments?",
+      "options": {
+        "A": "All product titles and prices from all categories",
+        "B": "Only product titles and prices from the 'electronics' category",
+        "C": "Only product titles and prices from products that have a discount",
+        "D": "Only product titles and prices where the price is below 100"
+      },
+      "correct_answer": "B",
+      "code_example": "import scrapy\n\n'''\nWebsite structure (for illustration):\n/categories/\n    - electronics/\n        - product1 (title: \"Smartphone XYZ\", price: \"$599\")\n        - product2 (title: \"Laptop ABC\", price: \"$899\")\n    - clothing/\n        - product3 (title: \"T-shirt\", price: \"$25\")\n        - product4 (title: \"Jeans\", price: \"$45\")\n'''\n\nclass ProductSpider(scrapy.Spider):\n    name = 'product_spider'\n    allowed_domains = ['example.com']\n    start_urls = ['https://example.com/categories/']\n    \n    def parse(self, response):\n        # Extract category links\n        category_links = response.css('a.category::attr(href)').getall()\n        for link in category_links:\n            if 'electronics' in link:\n                yield response.follow(link, self.parse_category)\n    \n    def parse_category(self, response):\n        # Extract product links\n        product_links = response.css('a.product::attr(href)').getall()\n        for link in product_links:\n            yield response.follow(link, self.parse_product)\n    \n    def parse_product(self, response):\n        # Extract product information\n        title = response.css('h1.product-title::text').get()\n        price = response.css('span.price::text').get()\n        \n        yield {\n            'title': title,\n            'price': price\n        }"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What is the output of the following bit manipulation code?",
+      "options": {
+        "A": "5",
+        "B": "7",
+        "C": "11",
+        "D": "13"
+      },
+      "correct_answer": "D",
+      "code_example": "def count_bits_set(num):\n    \"\"\"Count the number of bits set to 1 in the binary representation of num.\"\"\"\n    count = 0\n    while num:\n        count += num & 1\n        num >>= 1\n    return count\n\ndef find_next_number_same_bits(n):\n    \"\"\"Find the next highest number with the same number of 1 bits.\"\"\"\n    # Count trailing zeros\n    trailing_zeros = 0\n    temp = n\n    while temp & 1 == 0 and temp != 0:\n        trailing_zeros += 1\n        temp >>= 1\n    \n    # Count rightmost consecutive 1s\n    rightmost_ones = 0\n    while temp & 1 == 1:\n        rightmost_ones += 1\n        temp >>= 1\n    \n    # Position of rightmost non-trailing zero\n    position = trailing_zeros + rightmost_ones\n    \n    # Flip the rightmost non-trailing zero to 1\n    n |= (1 << position)\n    \n    # Clear all bits to the right of position\n    n &= ~((1 << position) - 1)\n    \n    # Insert rightmost_ones - 1 ones on the right\n    n |= (1 << (rightmost_ones - 1)) - 1\n    \n    return n\n\n# Apply the function to 9 (binary: 1001)\nresult = find_next_number_same_bits(9)\nprint(result)"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "When working with GraphQL APIs in Python, which of the following code snippets correctly handles query variables?",
+      "options": {
+        "A": "requests.post(url, json={'query': query})",
+        "B": "requests.post(url, json={'query': query, 'variables': variables})",
+        "C": "requests.post(url, data={'query': query, 'variables': json.dumps(variables)})",
+        "D": "requests.post(url, headers={'query': query, 'variables': variables})"
+      },
+      "correct_answer": "B",
+      "code_example": "import requests\nimport json\n\n# Example GraphQL query with variables\ndef fetch_data_from_graphql(url, query, variables):\n    # Option A\n    def option_a():\n        return requests.post(url, json={'query': query})\n    \n    # Option B\n    def option_b():\n        return requests.post(url, json={'query': query, 'variables': variables})\n    \n    # Option C\n    def option_c():\n        return requests.post(url, data={'query': query, 'variables': json.dumps(variables)})\n    \n    # Option D\n    def option_d():\n        return requests.post(url, headers={'query': query, 'variables': variables})\n    \n    # Return option B for this example\n    response = option_b()\n    return response.json()\n\n# Example usage\nurl = 'https://api.example.com/graphql'\nquery = '''\nquery GetUser($userId: ID!) {\n    user(id: $userId) {\n        id\n        name\n        email\n    }\n}'''\nvariables = {'userId': '123'}\n\n# This would return the JSON response from the GraphQL API\n# fetch_data_from_graphql(url, query, variables)"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "In the context of Test-Driven Development (TDD), which of the following Python code examples correctly implements a test case for a function that calculates the factorial of a number?",
+      "options": {
+        "A": "assert factorial(5) == 120",
+        "B": "if factorial(5) != 120: print('Test failed')",
+        "C": "self.assertEqual(factorial(5), 120)",
+        "D": "try: factorial(5) == 120 except: raise AssertionError('Test failed')"
+      },
+      "correct_answer": "C",
+      "code_example": "import unittest\n\n# Function to be tested\ndef factorial(n):\n    if n < 0:\n        raise ValueError(\"Factorial is not defined for negative numbers\")\n    if n == 0 or n == 1:\n        return 1\n    return n * factorial(n - 1)\n\n# Test implementations\n\n# Option A: Simple assertion\ndef test_option_a():\n    assert factorial(5) == 120\n\n# Option B: Conditional check with print\ndef test_option_b():\n    if factorial(5) != 120:\n        print('Test failed')\n\n# Option C: Using unittest\nclass TestFactorial(unittest.TestCase):\n    def test_factorial(self):\n        self.assertEqual(factorial(5), 120)\n        self.assertEqual(factorial(0), 1)\n        self.assertEqual(factorial(1), 1)\n        with self.assertRaises(ValueError):\n            factorial(-1)\n\n# Option D: Try-except with assertion\ndef test_option_d():\n    try:\n        factorial(5) == 120\n    except:\n        raise AssertionError('Test failed')\n\n# Running the unittest\nif __name__ == '__main__':\n    unittest.main()"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following data visualization code using matplotlib and seaborn?",
+      "options": {
+        "A": "A histogram with 10 bins showing the distribution of a normally distributed dataset",
+        "B": "A line plot showing the trend of a dataset over time",
+        "C": "A heatmap showing the correlation between different features",
+        "D": "A scatter plot with points colored by their category and a regression line"
+      },
+      "correct_answer": "D",
+      "code_example": "import numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Set seed for reproducibility\nnp.random.seed(42)\n\n# Generate sample data\nn_points = 100\nx = np.random.normal(0, 1, n_points)\ny = x * 2 + np.random.normal(0, 1, n_points)\ncategories = np.random.choice(['A', 'B', 'C'], size=n_points)\n\n# Create a dataframe\nimport pandas as pd\ndf = pd.DataFrame({\n    'x': x,\n    'y': y,\n    'category': categories\n})\n\n# Set the style\nsns.set_theme(style='whitegrid')\n\n# Create the visualization\nplt.figure(figsize=(10, 6))\nsns.scatterplot(x='x', y='y', hue='category', data=df)\nsns.regplot(x='x', y='y', data=df, scatter=False, color='black')\n\nplt.title('Relationship between X and Y with Categories')\nplt.xlabel('X Value')\nplt.ylabel('Y Value')\nplt.tight_layout()\n\n# For testing purposes, instead of showing the plot, describe what it would show\nprint(\"A scatter plot with points colored by their category and a regression line\")"
+    }
+  ]
+}
