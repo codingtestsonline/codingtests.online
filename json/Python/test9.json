@@ -1,0 +1,628 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following factorial calculation?",
+      "code_example": "def factorial(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n\nprint(factorial(5))",
+      "options": {
+        "A": "120",
+        "B": "24",
+        "C": "60",
+        "D": "5"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following FizzBuzz implementation?",
+      "code_example": "def fizzbuzz(n):\n    result = []\n    for i in range(1, n + 1):\n        if i % 3 == 0 and i % 5 == 0:\n            result.append('FizzBuzz')\n        elif i % 3 == 0:\n            result.append('Fizz')\n        elif i % 5 == 0:\n            result.append('Buzz')\n        else:\n            result.append(str(i))\n    return result\n\nprint(fizzbuzz(15)[-1])",
+      "options": {
+        "A": "15",
+        "B": "Fizz",
+        "C": "Buzz",
+        "D": "FizzBuzz"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the correct way to create a multi-line string in Python?",
+      "options": {
+        "A": "Using single quotes with line breaks (\\n)",
+        "B": "Using the concatenation operator (+) with multiple strings",
+        "C": "Using triple quotes (''' or \"\"\")",
+        "D": "Using the join() method on a list of strings"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code for converting number bases?",
+      "code_example": "decimal = 42\nprint(f'Binary: {bin(decimal)[2:]}')\nprint(f'Octal: {oct(decimal)[2:]}')\nprint(f'Hexadecimal: {hex(decimal)[2:]}')",
+      "options": {
+        "A": "Binary: 101010\nOctal: 52\nHexadecimal: 2a",
+        "B": "Binary: 101010\nOctal: 52\nHexadecimal: 2A",
+        "C": "Binary: 0b101010\nOctal: 0o52\nHexadecimal: 0x2a",
+        "D": "Binary: 42\nOctal: 42\nHexadecimal: 42"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the primary purpose of docstrings in Python functions?",
+      "options": {
+        "A": "To improve function performance",
+        "B": "To provide documentation about the function's purpose, parameters, and return values",
+        "C": "To enforce type checking on the function's parameters",
+        "D": "To prevent the function from being modified"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that manipulates a list?",
+      "code_example": "fruits = ['apple', 'banana', 'cherry']\nfruits.append('orange')\nfruits.insert(1, 'mango')\nfruits.pop(0)\nprint(fruits)",
+      "options": {
+        "A": "['apple', 'banana', 'cherry', 'orange']",
+        "B": "['apple', 'mango', 'banana', 'cherry', 'orange']",
+        "C": "['mango', 'banana', 'cherry', 'orange']",
+        "D": "['banana', 'mango', 'cherry', 'orange']"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following binary search implementation?",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return -1\n\nsorted_list = [2, 5, 8, 12, 16, 23, 38, 45, 56, 72, 91]\nprint(binary_search(sorted_list, 23))",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "4",
+        "D": "23"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following string formatting examples?",
+      "code_example": "name = 'Alice'\nage = 30\n\n# f-string\nfs = f'{name} is {age} years old.'\n\n# .format()\nformat_str = '{} is {} years old.'.format(name, age)\n\n# %-formatting\npercent_str = '%s is %d years old.' % (name, age)\n\nprint(fs == format_str == percent_str)",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "TypeError",
+        "D": "SyntaxError"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following list comprehension?",
+      "code_example": "numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nsquared_even = [x**2 for x in numbers if x % 2 == 0]\nprint(squared_even)",
+      "options": {
+        "A": "[4, 16, 36, 64, 100]",
+        "B": "[2, 4, 6, 8, 10]",
+        "C": "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]",
+        "D": "[4, 16, 36, 64]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following dictionary operations?",
+      "code_example": "student = {'name': 'John', 'age': 22, 'courses': ['Math', 'Physics']}\n\n# Add a new key-value pair\nstudent['grade'] = 'A'\n\n# Get a value with default\nmajor = student.get('major', 'Undeclared')\n\n# Print items\nprint(f\"Name: {student['name']}, Major: {major}\")",
+      "options": {
+        "A": "Name: John, Major: None",
+        "B": "Name: John, Major: KeyError",
+        "C": "Name: John, Major: Undeclared",
+        "D": "Name: John, Major: "
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What is the difference between parameters and arguments in Python functions?",
+      "options": {
+        "A": "They are completely interchangeable terms with no difference",
+        "B": "Parameters are used in function definitions, while arguments are the values passed when calling a function",
+        "C": "Arguments are used in function definitions, while parameters are the values passed when calling a function",
+        "D": "Parameters are only for positional values, while arguments are only for keyword values"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following simple statistical calculation?",
+      "code_example": "data = [4, 7, 2, 9, 6, 8, 3, 5]\n\n# Calculate mean\nmean = sum(data) / len(data)\n\n# Calculate median\nsorted_data = sorted(data)\nif len(data) % 2 == 0:\n    median = (sorted_data[len(data)//2 - 1] + sorted_data[len(data)//2]) / 2\nelse:\n    median = sorted_data[len(data)//2]\n\nprint(f'Mean: {mean}, Median: {median}')",
+      "options": {
+        "A": "Mean: 5.5, Median: 5.5",
+        "B": "Mean: 5.5, Median: 5.0",
+        "C": "Mean: 44/8, Median: 5.5",
+        "D": "Mean: 5, Median: 5"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following type checking operations?",
+      "code_example": "values = [42, 'hello', 3.14, [1, 2, 3], {'key': 'value'}]\n\nfor val in values:\n    if isinstance(val, (int, float)):\n        print(f'{val} is a number')\n    elif type(val) == str:\n        print(f'{val} is a string')\n    else:\n        print(f'{type(val).__name__} type')",
+      "options": {
+        "A": "42 is a number\nhello is a string\n3.14 is a number\nlist type\ndict type",
+        "B": "int type\nstr type\nfloat type\nlist type\ndict type",
+        "C": "42 is a number\n'hello' is a string\n3.14 is a number\n[1, 2, 3] type\n{'key': 'value'} type",
+        "D": "42 is a number\nhello\n3.14 is a number\n[1, 2, 3]\n{'key': 'value'}"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following conditional expressions?",
+      "code_example": "x = 15\n\n# If-else statement\nif x > 10:\n    message1 = 'Greater than 10'\nelse:\n    message1 = 'Not greater than 10'\n\n# Conditional expression (ternary operator)\nmessage2 = 'Greater than 10' if x > 10 else 'Not greater than 10'\n\nprint(message1 == message2, message1)",
+      "options": {
+        "A": "True Greater than 10",
+        "B": "False Greater than 10",
+        "C": "True Not greater than 10",
+        "D": "False Not greater than 10"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following function definition and call?",
+      "code_example": "def multiply(a, b=2):\n    \"\"\"Multiply two numbers.\"\"\"\n    return a * b\n\nprint(multiply(5))\nprint(multiply(3, 4))",
+      "options": {
+        "A": "10\n12",
+        "B": "7\n7",
+        "C": "5\n12",
+        "D": "Error: missing required argument"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using different loop techniques?",
+      "code_example": "names = ['Alice', 'Bob', 'Charlie']\nages = [25, 30, 35]\n\nprint('Using range:')\nfor i in range(len(names)):\n    print(f'{i}: {names[i]}', end=' ')\n\nprint('\\nUsing enumerate:')\nfor i, name in enumerate(names):\n    print(f'{i}: {name}', end=' ')\n\nprint('\\nUsing zip:')\nfor name, age in zip(names, ages):\n    print(f'{name}: {age}', end=' ')",
+      "options": {
+        "A": "Using range:\n0: Alice 1: Bob 2: Charlie \nUsing enumerate:\n0: Alice 1: Bob 2: Charlie \nUsing zip:\nAlice: 25 Bob: 30 Charlie: 35 ",
+        "B": "Using range:\n1: Alice 2: Bob 3: Charlie \nUsing enumerate:\n1: Alice 2: Bob 3: Charlie \nUsing zip:\nAlice: 25 Bob: 30 Charlie: 35 ",
+        "C": "Using range:\nAlice Bob Charlie \nUsing enumerate:\n0: Alice 1: Bob 2: Charlie \nUsing zip:\nAlice: 25 Bob: 30 Charlie: 35",
+        "D": "Using range:\n0: Alice 1: Bob 2: Charlie \nUsing enumerate:\nAlice Bob Charlie \nUsing zip:\nAlice, 25 Bob, 30 Charlie, 35"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following binary tree implementation?",
+      "code_example": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\ndef inorder_traversal(root):\n    result = []\n    if root:\n        result.extend(inorder_traversal(root.left))\n        result.append(root.value)\n        result.extend(inorder_traversal(root.right))\n    return result\n\n# Create a simple binary tree\nroot = Node(10)\nroot.left = Node(5)\nroot.right = Node(15)\nroot.left.left = Node(3)\nroot.left.right = Node(7)\n\nprint(inorder_traversal(root))",
+      "options": {
+        "A": "[10, 5, 15, 3, 7]",
+        "B": "[3, 5, 7, 10, 15]",
+        "C": "[3, 7, 5, 15, 10]",
+        "D": "[10, 5, 3, 7, 15]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the two-pointer technique?",
+      "code_example": "def is_palindrome(s):\n    # Two-pointer approach\n    left, right = 0, len(s) - 1\n    \n    while left < right:\n        # Skip non-alphanumeric characters\n        while left < right and not s[left].isalnum():\n            left += 1\n        while left < right and not s[right].isalnum():\n            right -= 1\n        \n        # Compare characters (case-insensitive)\n        if s[left].lower() != s[right].lower():\n            return False\n        \n        left += 1\n        right -= 1\n    \n    return True\n\nprint(is_palindrome(\"A man, a plan, a canal: Panama\"))",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "Error",
+        "D": "None"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which of the following Python code snippets would correctly define a simple API endpoint using Flask?",
+      "options": {
+        "A": "@app.route('/api/users', methods=['GET'])\ndef get_users():\n    return jsonify(users)",
+        "B": "def get_users():\n    return app.route('/api/users', methods=['GET'])",
+        "C": "app.get('/api/users')\ndef get_users():\n    return users",
+        "D": "@users.get('/api')\ndef get_users():\n    return users"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the iterator protocol?",
+      "code_example": "class Countdown:\n    def __init__(self, start):\n        self.start = start\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.start <= 0:\n            raise StopIteration\n        self.start -= 1\n        return self.start + 1\n\ncounter = Countdown(3)\nfor num in counter:\n    print(num, end=' ')",
+      "options": {
+        "A": "3 2 1 ",
+        "B": "3 2 1 0",
+        "C": "2 1 0",
+        "D": "Error: Countdown object is not iterable"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT an example of an immutable data type in Python?",
+      "options": {
+        "A": "Tuple",
+        "B": "Dictionary",
+        "C": "String",
+        "D": "Frozenset"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What is the correct way to import a specific function from a module in Python?",
+      "options": {
+        "A": "import mymodule.myfunction",
+        "B": "from mymodule include myfunction",
+        "C": "from mymodule import myfunction",
+        "D": "using mymodule.myfunction"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "Which HTTP methods are typically used for the following CRUD operations: Create, Read, Update, Delete?",
+      "options": {
+        "A": "PUT, GET, POST, DELETE",
+        "B": "POST, GET, PUT, DELETE",
+        "C": "POST, GET, PATCH, DELETE",
+        "D": "PUT, GET, PATCH, DROP"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "In a web framework like Flask or Django, what is the primary purpose of routing?",
+      "options": {
+        "A": "To direct HTTP requests to the appropriate view function based on the URL",
+        "B": "To convert data between Python objects and JSON",
+        "C": "To secure web applications against common attacks",
+        "D": "To optimize database query performance"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the requests library?",
+      "code_example": "import requests\n\ndef get_status(url):\n    try:\n        response = requests.get(url, timeout=3)\n        return f'Status: {response.status_code}'\n    except requests.exceptions.RequestException:\n        return 'Request failed'\n\n# Assume this is a valid URL that returns a 200 status code\nprint(get_status('https://httpbin.org/status/200'))\n# Assume this URL times out\nprint(get_status('https://httpbin.org/delay/10'))",
+      "options": {
+        "A": "Status: 200\nStatus: Timeout",
+        "B": "Status: 200\nRequest failed",
+        "C": "Status: 200\nError: Connection timed out",
+        "D": "Status: 200\nStatus: 408"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following hash-based searching implementation?",
+      "code_example": "def two_sum(nums, target):\n    # Use a hash map for efficient lookup\n    num_map = {}\n    \n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in num_map:\n            return [num_map[complement], i]\n        num_map[num] = i\n    \n    return None\n\nprint(two_sum([2, 7, 11, 15], 9))",
+      "options": {
+        "A": "[2, 7]",
+        "B": "[0, 1]",
+        "C": "[1, 0]",
+        "D": "None"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "Which of the following regular expression patterns would be most efficient for matching email addresses?",
+      "options": {
+        "A": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+        "B": "^(.*?)@(.*?)\\.(.*?)$",
+        "C": "^.+@.+\\..+$",
+        "D": "^[^@]+@[^@]+\\.[^@]+$"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "Which of the following is a commonly used authentication method for RESTful APIs?",
+      "options": {
+        "A": "SQL authentication",
+        "B": "JWT (JSON Web Tokens)",
+        "C": "FTP authentication",
+        "D": "SMTP authentication"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "In Django, what file contains URL patterns for routing HTTP requests to view functions?",
+      "options": {
+        "A": "views.py",
+        "B": "models.py",
+        "C": "urls.py",
+        "D": "settings.py"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "Which of the following SQL queries would retrieve all columns from a table named 'employees' where the 'department' is 'Engineering' and sort by 'hire_date' in descending order?",
+      "options": {
+        "A": "SELECT * FROM employees ORDER BY hire_date DESC WHERE department = 'Engineering';",
+        "B": "SELECT * FROM employees WHERE department = 'Engineering' ORDER BY hire_date DESC;",
+        "C": "SELECT ALL FROM employees WHERE department = 'Engineering' SORT BY hire_date DESC;",
+        "D": "SELECT * FROM employees WHERE department EQUALS 'Engineering' ORDER BY hire_date DESC;"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating closures?",
+      "code_example": "def make_multiplier(factor):\n    def multiply(number):\n        return number * factor\n    return multiply\n\ndoubler = make_multiplier(2)\ntripler = make_multiplier(3)\n\nprint(doubler(5))\nprint(tripler(5))",
+      "options": {
+        "A": "10\n15",
+        "B": "25\n35",
+        "C": "7\n8",
+        "D": "Error: 'factor' is not defined"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using collections.Counter?",
+      "code_example": "from collections import Counter\n\ntext = 'mississippi'\ncounter = Counter(text)\nprint(counter.most_common(2))",
+      "options": {
+        "A": "['i', 's']",
+        "B": "[('i', 4), ('s', 4)]",
+        "C": "[('i', 4), ('p', 2)]",
+        "D": "{'i': 4, 's': 4}"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "topic": "Class decorators",
+      "question": "What will be the output of the following code that uses a class decorator?",
+      "code_example": "def log_methods(cls):\n    import functools\n    import inspect\n    \n    for name, method in inspect.getmembers(cls, inspect.isfunction):\n        if not name.startswith('__'):\n            @functools.wraps(method)\n            def wrapped(self, *args, **kwargs):\n                print(f'Calling {name}')\n                return method(self, *args, **kwargs)\n            setattr(cls, name, wrapped)\n    return cls\n\n@log_methods\nclass Calculator:\n    def add(self, x, y):\n        return x + y\n    \n    def multiply(self, x, y):\n        return x * y\n\ncalc = Calculator()\nprint(calc.add(2, 3))\nprint(calc.multiply(2, 3))",
+      "options": {
+        "A": "Calling add\\n5\\nCalling multiply\\n6",
+        "B": "5\\n6",
+        "C": "The code will raise a TypeError",
+        "D": "Calling Calculator.__init__\\nCalling add\\n5\\nCalling multiply\\n6"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "topic": "Dependency injection",
+      "question": "Which of the following best describes proper dependency injection in Python?",
+      "options": {
+        "A": "Using global variables to share state between different parts of an application",
+        "B": "Importing modules at runtime using the `__import__` function",
+        "C": "Passing dependencies as parameters to functions or constructors rather than creating them inside",
+        "D": "Using context managers to ensure resources are properly initialized and cleaned up"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "topic": "WebSockets implementation",
+      "question": "What will happen when you run the following WebSocket server code?",
+      "code_example": "import asyncio\nimport websockets\n\nasync def handler(websocket, path):\n    data = await websocket.recv()\n    await websocket.send(f\"Echo: {data}\")\n\nasync def main():\n    async with websockets.serve(handler, \"localhost\", 8765):\n        await asyncio.Future()  # Run forever\n\nif __name__ == \"__main__\":\n    asyncio.run(main())",
+      "options": {
+        "A": "The code will fail because 'websockets.serve' is not an async context manager",
+        "B": "The code sets up a WebSocket server that echoes back any message it receives with 'Echo: ' prefixed",
+        "C": "The server will start but exit immediately because asyncio.Future() resolves instantly",
+        "D": "The code will raise a RuntimeError because handler() doesn't close the websocket connection"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "topic": "NumPy for numerical computing",
+      "question": "What is the result of the following NumPy operations?",
+      "code_example": "import numpy as np\n\narr1 = np.array([[1, 2], [3, 4]])\narr2 = np.array([[5, 6], [7, 8]])\n\nresult = np.vstack([arr1.flatten(), arr2.flatten()]).T\nprint(result)",
+      "options": {
+        "A": "[[1 5]\n [2 6]\n [3 7]\n [4 8]]",
+        "B": "[[1 2 3 4]\n [5 6 7 8]]",
+        "C": "[[1 5]\n [3 7]\n [2 6]\n [4 8]]",
+        "D": "[[1 2]\n [3 4]\n [5 6]\n [7 8]]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "topic": "Encryption and hashing",
+      "question": "Which of these statements about cryptographic hashing functions in Python is TRUE?",
+      "code_example": "import hashlib\n\npassword = \"secure_password\"\n\n# Method 1\nhash1 = hashlib.sha256(password.encode()).hexdigest()\n\n# Method 2\nsalt = b'\\x12\\x34\\x56\\x78'\nhash2 = hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 100000).hex()\n\n# Method 3\nhash3 = hashlib.md5(password.encode()).hexdigest()\n\n# Method 4\nhash4 = hashlib.sha3_256(password.encode()).hexdigest()",
+      "options": {
+        "A": "Method 3 (MD5) is the most secure option for storing passwords",
+        "B": "Method 1 (SHA-256) is vulnerable to rainbow table attacks but Method 2 (PBKDF2) adds protection against them",
+        "C": "All four methods provide equivalent security for password storage",
+        "D": "Method 4 (SHA3-256) is backward compatible with SHA-256, producing the same hash values"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "topic": "CAP theorem",
+      "question": "According to the CAP theorem, when designing a distributed database system, which combination is impossible to achieve simultaneously?",
+      "options": {
+        "A": "Consistency and Performance",
+        "B": "Availability and Performance",
+        "C": "Consistency and Availability (when a partition occurs)",
+        "D": "Partitioning and Scalability"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "topic": "Ethical scraping practices",
+      "question": "What is the output of this code that implements ethical web scraping practices?",
+      "code_example": "import requests\nfrom urllib.robotparser import RobotFileParser\n\ndef ethical_scraper(url, user_agent=\"MyBot/1.0\"):\n    # Parse domain from URL\n    from urllib.parse import urlparse\n    parsed_url = urlparse(url)\n    base_url = f\"{parsed_url.scheme}://{parsed_url.netloc}\"\n    \n    # Check robots.txt\n    rp = RobotFileParser()\n    rp.set_url(f\"{base_url}/robots.txt\")\n    try:\n        rp.read()\n        allowed = rp.can_fetch(user_agent, url)\n    except Exception:\n        # If can't fetch robots.txt, assume we shouldn't scrape\n        allowed = False\n    \n    if not allowed:\n        return \"Scraping not allowed by robots.txt\"\n    \n    # Add proper headers\n    headers = {\n        'User-Agent': user_agent,\n        'From': 'ethical@example.com'\n    }\n    \n    # Respect rate limiting with a delay\n    import time\n    time.sleep(1)\n    \n    # Make the request\n    response = requests.get(url, headers=headers)\n    if response.status_code == 200:\n        return \"Successfully scraped with ethical practices\"\n    else:\n        return f\"Failed with status code: {response.status_code}\"\n\n# Test with a URL that typically blocks most bots\nprint(ethical_scraper(\"https://www.google.com/search?q=python\"))",
+      "options": {
+        "A": "Successfully scraped with ethical practices",
+        "B": "Scraping not allowed by robots.txt",
+        "C": "Failed with status code: 403",
+        "D": "The code will raise a ConnectionError"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "topic": "Mixins and composition",
+      "question": "What will be the output of the following code that uses multiple mixins?",
+      "code_example": "class LoggingMixin:\n    def log(self, message):\n        print(f\"[LOG] {message}\")\n    \n    def execute(self):\n        self.log(\"Executing in LoggingMixin\")\n        if hasattr(super(), 'execute'):\n            return super().execute()\n        return \"LoggingMixin execution\"\n\nclass TimingMixin:\n    def execute(self):\n        self.log(\"Executing in TimingMixin\")\n        print(\"[TIMING] Starting execution\")\n        if hasattr(super(), 'execute'):\n            result = super().execute()\n        else:\n            result = \"TimingMixin execution\"\n        print(\"[TIMING] Finished execution\")\n        return result\n\nclass DataProcessor(LoggingMixin, TimingMixin):\n    def process(self):\n        return self.execute()\n\ndp = DataProcessor()\nprint(dp.process())",
+      "options": {
+        "A": "[LOG] Executing in TimingMixin\\n[TIMING] Starting execution\\n[LOG] Executing in LoggingMixin\\n[TIMING] Finished execution\\nTimingMixin execution",
+        "B": "[LOG] Executing in LoggingMixin\\n[LOG] Executing in TimingMixin\\n[TIMING] Starting execution\\n[TIMING] Finished execution\\nLoggingMixin execution",
+        "C": "[LOG] Executing in LoggingMixin\\n[TIMING] Starting execution\\n[TIMING] Finished execution\\nLoggingMixin execution",
+        "D": "AttributeError: 'TimingMixin' object has no attribute 'log'"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "topic": "Matplotlib/Seaborn for visualization",
+      "question": "What will be the result of running the following Matplotlib/Seaborn code?",
+      "code_example": "import matplotlib.pyplot as plt\nimport seaborn as sns\nimport numpy as np\n\n# Set the style and create data\nsns.set_style(\"whitegrid\")\nnp.random.seed(42)\ndata = np.random.normal(size=(100, 3))\n\n# Create a figure with two subplots\nfig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))\n\n# First subplot: KDE plot\nsns.kdeplot(data=data, ax=ax1)\nax1.set_title(\"KDE of Three Distributions\")\n\n# Second subplot: boxplot\nsns.boxplot(data=data, ax=ax2)\nax2.set_title(\"Boxplot of Three Distributions\")\n\n# Customize settings\nplt.tight_layout()\n\n# Show the plot only if executed directly (not when imported)\nif __name__ == \"__main__\":\n    plt.show()\n    \n# Return a description instead of displaying the plot for this test\nprint(\"Figure contains:\")\nprint(f\"Number of subplots: {len(fig.axes)}\")\nprint(f\"Plot types: {ax1.get_legend_handles_labels()[1]}, {ax2.get_legend_handles_labels()[1]}\")",
+      "options": {
+        "A": "Figure contains:\\nNumber of subplots: 2\\nPlot types: ['Column 0', 'Column 1', 'Column 2'], []",
+        "B": "Figure contains:\\nNumber of subplots: 2\\nPlot types: [], []",
+        "C": "Figure contains:\\nNumber of subplots: 2\\nPlot types: ['KDE of Three Distributions', 'Boxplot of Three Distributions'], []",
+        "D": "The code will raise a ValueError because KDE plots require named data columns"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "topic": "Handling JavaScript-heavy sites",
+      "question": "What will the following code output when scraping a JavaScript-heavy website?",
+      "code_example": "from selenium import webdriver\nfrom selenium.webdriver.chrome.options import Options\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\nimport time\n\ndef scrape_js_site(url):\n    # Setup headless Chrome\n    chrome_options = Options()\n    chrome_options.add_argument(\"--headless\")\n    chrome_options.add_argument(\"--disable-gpu\")\n    \n    # This is a simulation - we won't actually launch a browser for this test\n    # driver = webdriver.Chrome(options=chrome_options)\n    \n    # Simulate what would happen with JavaScript execution\n    print(\"Initial page loaded\")\n    print(\"Waiting for elements to be present...\")\n    \n    # Wait for dynamic content (usually would use WebDriverWait)\n    print(\"JavaScript-generated content found\")\n    \n    # Find elements after JavaScript execution\n    elements_found = 3\n    hidden_elements_revealed = 2\n    \n    # Close the browser\n    print(f\"Found {elements_found} elements\")\n    print(f\"Revealed {hidden_elements_revealed} hidden elements\")\n    return \"Completed execution\"\n\nprint(scrape_js_site(\"https://example.com\"))",
+      "options": {
+        "A": "Initial page loaded\\nWaiting for elements to be present...\\nJavaScript-generated content found\\nFound 3 elements\\nRevealed 2 hidden elements\\nCompleted execution",
+        "B": "The code will raise a WebDriverException because the Chrome driver cannot be initialized in headless mode",
+        "C": "Initial page loaded\\nTimeout Error: Element not found",
+        "D": "No output because the selenium code requires a real browser"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "topic": "Vectorization with NumPy",
+      "question": "What is the output of this code comparing vectorized and non-vectorized operations?",
+      "code_example": "import numpy as np\nimport time\n\n# Create large arrays\nsize = 1000000\narr1 = np.random.random(size)\narr2 = np.random.random(size)\n\n# Non-vectorized implementation\ndef non_vectorized(a, b):\n    result = np.zeros_like(a)\n    for i in range(len(a)):\n        result[i] = np.sin(a[i]) * np.cos(b[i]) + np.sqrt(abs(a[i] - b[i]))\n    return result\n\n# Vectorized implementation\ndef vectorized(a, b):\n    return np.sin(a) * np.cos(b) + np.sqrt(np.abs(a - b))\n\n# Test with small arrays for output verification\ntest_a = np.array([0.5, 1.5, 2.5])\ntest_b = np.array([0.2, 1.2, 2.2])\n\n# Calculate and compare results for small test case\nnv_result = non_vectorized(test_a, test_b)\nv_result = vectorized(test_a, test_b)\n\nprint(f\"Non-vectorized result: {nv_result}\")\nprint(f\"Vectorized result: {v_result}\")\nprint(f\"Results match: {np.allclose(nv_result, v_result)}\")",
+      "options": {
+        "A": "Non-vectorized result: [0.53275496 0.86054111 1.18747782]\\nVectorized result: [0.53275496 0.86054111 1.18747782]\\nResults match: True",
+        "B": "Non-vectorized result: [0.53275496 0.86054111 1.18747782]\\nVectorized result: [0.53275496 0.86054111 1.18747782]\\nResults match: False",
+        "C": "The code will produce different results because floating-point operations are not commutative",
+        "D": "The code will raise a ValueError due to broadcasting issues"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "topic": "Transaction isolation levels",
+      "question": "Which transaction isolation level in a database allows for phantom reads but prevents dirty reads and non-repeatable reads?",
+      "options": {
+        "A": "READ UNCOMMITTED",
+        "B": "READ COMMITTED",
+        "C": "REPEATABLE READ",
+        "D": "SERIALIZABLE"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "topic": "SOLID principles implementation",
+      "question": "Which SOLID principle is violated in the following code?",
+      "code_example": "class ReportGenerator:\n    def __init__(self, data):\n        self.data = data\n    \n    def generate_report(self, format_type):\n        if format_type == \"PDF\":\n            return self._generate_pdf()\n        elif format_type == \"CSV\":\n            return self._generate_csv()\n        elif format_type == \"HTML\":\n            return self._generate_html()\n        else:\n            raise ValueError(f\"Unsupported format: {format_type}\")\n    \n    def _generate_pdf(self):\n        # PDF generation logic\n        return \"PDF report generated\"\n    \n    def _generate_csv(self):\n        # CSV generation logic\n        return \"CSV report generated\"\n    \n    def _generate_html(self):\n        # HTML generation logic\n        return \"HTML report generated\"",
+      "options": {
+        "A": "Single Responsibility Principle",
+        "B": "Open/Closed Principle",
+        "C": "Liskov Substitution Principle",
+        "D": "Interface Segregation Principle"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "topic": "Microservices architecture",
+      "question": "In a Python-based microservices architecture, which communication pattern is most appropriate for handling high-traffic, time-sensitive operations that require immediate responses?",
+      "options": {
+        "A": "Asynchronous messaging with RabbitMQ or Kafka",
+        "B": "Synchronous REST API calls",
+        "C": "Event sourcing with eventual consistency",
+        "D": "Batch processing with scheduled ETL jobs"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "topic": "Distributed caching",
+      "question": "What will be the output of the following distributed caching code using Redis?",
+      "code_example": "import redis\nimport time\nimport threading\n\n# Simulate Redis server\nclass MockRedis:\n    def __init__(self):\n        self.data = {}\n        self.locks = {}\n    \n    def get(self, key):\n        return self.data.get(key)\n    \n    def set(self, key, value, ex=None):\n        self.data[key] = value\n        if ex:\n            # Simulate expiration by scheduling key deletion\n            def delete_key():\n                if key in self.data:\n                    del self.data[key]\n            threading.Timer(ex, delete_key).start()\n    \n    def delete(self, key):\n        if key in self.data:\n            del self.data[key]\n            return 1\n        return 0\n\n# Create distributed cache implementation\nclass DistributedCache:\n    def __init__(self, redis_client):\n        self.redis = redis_client\n    \n    def get_or_compute(self, key, compute_func, ttl=60):\n        # Check if value exists in cache\n        cached_value = self.redis.get(key)\n        if cached_value:\n            return f\"Cache hit: {cached_value}\"\n        \n        # Compute value if not in cache\n        computed_value = compute_func()\n        \n        # Store in cache with expiration\n        self.redis.set(key, computed_value, ex=ttl)\n        return f\"Cache miss: {computed_value}\"\n\n# Test the distributed cache\nredis_client = MockRedis()\ncache = DistributedCache(redis_client)\n\ndef expensive_operation():\n    return \"expensive result\"\n\n# First access - should be a cache miss\nresult1 = cache.get_or_compute(\"test_key\", expensive_operation, ttl=2)\nprint(result1)\n\n# Second access - should be a cache hit\nresult2 = cache.get_or_compute(\"test_key\", expensive_operation)\nprint(result2)\n\n# Wait for cache to expire\ntime.sleep(3)\n\n# Third access - should be a cache miss again\nresult3 = cache.get_or_compute(\"test_key\", expensive_operation)\nprint(result3)",
+      "options": {
+        "A": "Cache miss: expensive result\\nCache hit: expensive result\\nCache hit: expensive result",
+        "B": "Cache miss: expensive result\\nCache hit: expensive result\\nCache miss: expensive result",
+        "C": "Cache miss: expensive result\\nCache miss: expensive result\\nCache miss: expensive result",
+        "D": "The code will raise a ConnectionError when trying to connect to Redis"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "topic": "Code coverage and quality tools",
+      "question": "What will pytest report for the code coverage of the following implementation and test?",
+      "code_example": "# calculator.py\ndef add(a, b):\n    return a + b\n\ndef subtract(a, b):\n    return a - b\n\ndef multiply(a, b):\n    return a * b\n\ndef divide(a, b):\n    if b == 0:\n        raise ValueError(\"Cannot divide by zero\")\n    return a / b\n\n# test_calculator.py\nimport pytest\nfrom calculator import add, subtract, multiply, divide\n\ndef test_add():\n    assert add(1, 2) == 3\n    assert add(-1, 1) == 0\n\ndef test_subtract():\n    assert subtract(5, 2) == 3\n    assert subtract(2, 5) == -3\n\ndef test_multiply():\n    assert multiply(3, 4) == 12\n    assert multiply(-2, 3) == -6\n\n# Note: No test for divide()\n\n# Running the test with coverage would show:\ndef simulate_coverage_report():\n    # This simulates the output of:\n    # pytest --cov=calculator test_calculator.py\n    \n    # Calculate actual coverage:\n    # 3 of 4 functions have tests = 75% function coverage\n    # 6 of 8 lines covered = 75% line coverage\n    # Missing coverage: divide function (2 lines)\n    \n    return \"75%\"  # Overall coverage percentage\n\nprint(f\"Coverage: {simulate_coverage_report()}\")",
+      "options": {
+        "A": "Coverage: 100%",
+        "B": "Coverage: 50%",
+        "C": "Coverage: 75%",
+        "D": "Coverage: 66.67%"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
