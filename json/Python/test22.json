@@ -1,0 +1,617 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "ValueError: invalid literal for int() with base 10: 'hello'",
+        "B": "TypeError: can't convert 'str' object to int",
+        "C": "int('hello')",
+        "D": "hello"
+      },
+      "correct_answer": "A",
+      "code_example": "try:\n    print(int('hello'))\nexcept ValueError as e:\n    print(e)"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to reverse a string in Python?",
+      "options": {
+        "A": "string.reverse()",
+        "B": "string[::-1]",
+        "C": "reversed(string)",
+        "D": "string.backwards()"
+      },
+      "correct_answer": "B",
+      "code_example": "text = 'Python'\nreversed_text = text[::-1]\nprint(reversed_text)"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following prime number checking function?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "11 is prime",
+        "D": "11 is not prime"
+      },
+      "correct_answer": "C",
+      "code_example": "def is_prime(num):\n    if num <= 1:\n        return False\n    if num <= 3:\n        return True\n    if num % 2 == 0 or num % 3 == 0:\n        return False\n    i = 5\n    while i * i <= num:\n        if num % i == 0 or num % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nnum = 11\nif is_prime(num):\n    print(f\"{num} is prime\")\nelse:\n    print(f\"{num} is not prime\")"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the value of my_list after executing the following code?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[1, 2, 3, 99, 4, 5]",
+        "C": "[1, 99, 2, 3, 4, 5]",
+        "D": "[1, 2, 99, 3, 4, 5]"
+      },
+      "correct_answer": "D",
+      "code_example": "my_list = [1, 2, 3, 4, 5]\nmy_list.insert(2, 99)\nprint(my_list)"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code demonstrating variable scope?",
+      "options": {
+        "A": "10\n20",
+        "B": "20\n20",
+        "C": "10\n10",
+        "D": "Error: UnboundLocalError"
+      },
+      "correct_answer": "D",
+      "code_example": "x = 10\n\ndef modify_variable():\n    print(x)\n    x = 20\n    print(x)\n\nmodify_variable()"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What is the factorial of 5 (5!) calculated by the following code?",
+      "options": {
+        "A": "60",
+        "B": "120",
+        "C": "24",
+        "D": "720"
+      },
+      "correct_answer": "B",
+      "code_example": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1)\n\nprint(factorial(5))"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to PEP 8, which of the following is the recommended naming convention for constants in Python?",
+      "options": {
+        "A": "camelCase",
+        "B": "snake_case",
+        "C": "UPPER_SNAKE_CASE",
+        "D": "PascalCase"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the primary advantage of using a context manager (with statement) when working with files?",
+      "options": {
+        "A": "It makes the code run faster",
+        "B": "It automatically handles file closing, even if exceptions occur",
+        "C": "It prevents other programs from accessing the file",
+        "D": "It compresses the file content automatically"
+      },
+      "correct_answer": "B",
+      "code_example": "# Example of a context manager\nwith open('example.txt', 'w') as f:\n    f.write('Hello, World!')\n# File is automatically closed here, even if an exception occurred"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using enumerate?",
+      "options": {
+        "A": "1 apple\n2 banana\n3 cherry",
+        "B": "0 apple\n1 banana\n2 cherry",
+        "C": "apple 0\nbanana 1\ncherry 2",
+        "D": "apple 1\nbanana 2\ncherry 3"
+      },
+      "correct_answer": "B",
+      "code_example": "fruits = ['apple', 'banana', 'cherry']\nfor index, fruit in enumerate(fruits):\n    print(index, fruit)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following conditional expression?",
+      "options": {
+        "A": "Number is positive",
+        "B": "Number is negative",
+        "C": "Number is zero",
+        "D": "None of the above"
+      },
+      "correct_answer": "A",
+      "code_example": "number = 5\nresult = \"Number is positive\" if number > 0 else \"Number is negative\" if number < 0 else \"Number is zero\"\nprint(result)"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "Which module is commonly used for reading and writing CSV files in Python?",
+      "options": {
+        "A": "pandas",
+        "B": "csv",
+        "C": "excel",
+        "D": "fileio"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code with break and continue statements?",
+      "options": {
+        "A": "1\n2\n3\n4\n5",
+        "B": "1\n3\n5",
+        "C": "1\n2",
+        "D": "1"
+      },
+      "correct_answer": "B",
+      "code_example": "for i in range(1, 6):\n    if i == 2 or i == 4:\n        continue\n    if i > 5:\n        break\n    print(i)"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "Which of the following statements about tuples in Python is FALSE?",
+      "options": {
+        "A": "Tuples are immutable",
+        "B": "Tuples can contain different data types",
+        "C": "Tuples can be used as dictionary keys",
+        "D": "Elements in a tuple can be modified after creation"
+      },
+      "correct_answer": "D",
+      "code_example": "# This will raise an error\ntuple_example = (1, 2, 3)\ntry:\n    tuple_example[0] = 5\nexcept TypeError as e:\n    print(f\"Error: {e}\")"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What's the difference between parameters and arguments in Python functions?",
+      "options": {
+        "A": "There is no difference; the terms are interchangeable",
+        "B": "Parameters are defined in function definitions; arguments are the values passed to functions when called",
+        "C": "Arguments are defined in function definitions; parameters are the values passed to functions when called",
+        "D": "Parameters are used in built-in functions; arguments are used in user-defined functions"
+      },
+      "correct_answer": "B",
+      "code_example": "# Here, a and b are parameters\ndef add(a, b):\n    return a + b\n\n# Here, 5 and 3 are arguments\nresult = add(5, 3)"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What is the time complexity of the following linear search implementation?",
+      "options": {
+        "A": "O(1)",
+        "B": "O(log n)",
+        "C": "O(n)",
+        "D": "O(n²)"
+      },
+      "correct_answer": "C",
+      "code_example": "def linear_search(arr, target):\n    for i in range(len(arr)):\n        if arr[i] == target:\n            return i\n    return -1"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following set operations?",
+      "options": {
+        "A": "{1, 2, 3, 4, 5, 6}",
+        "B": "{3, 4}",
+        "C": "{1, 2, 5, 6}",
+        "D": "{1, 2, 3, 4}"
+      },
+      "correct_answer": "B",
+      "code_example": "set1 = {1, 2, 3, 4}\nset2 = {3, 4, 5, 6}\nresult = set1.intersection(set2)\nprint(result)"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating inheritance and method overriding?",
+      "options": {
+        "A": "Animal sound\nWoof!",
+        "B": "Woof!\nAnimal sound",
+        "C": "Woof!\nWoof!",
+        "D": "Animal sound\nAnimal sound"
+      },
+      "correct_answer": "A",
+      "code_example": "class Animal:\n    def make_sound(self):\n        print(\"Animal sound\")\n\nclass Dog(Animal):\n    def make_sound(self):\n        print(\"Woof!\")\n\nanimal = Animal()\ndog = Dog()\n\nanimal.make_sound()\ndog.make_sound()"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be printed after executing the following stack implementation?",
+      "options": {
+        "A": "30",
+        "B": "20",
+        "C": "10",
+        "D": "Stack is empty"
+      },
+      "correct_answer": "B",
+      "code_example": "class Stack:\n    def __init__(self):\n        self.items = []\n    \n    def push(self, item):\n        self.items.append(item)\n    \n    def pop(self):\n        if not self.is_empty():\n            return self.items.pop()\n        return \"Stack is empty\"\n    \n    def peek(self):\n        if not self.is_empty():\n            return self.items[-1]\n        return \"Stack is empty\"\n    \n    def is_empty(self):\n        return len(self.items) == 0\n\nstack = Stack()\nstack.push(10)\nstack.push(20)\nstack.push(30)\nstack.pop()\nprint(stack.peek())"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be printed after executing the following singly linked list implementation?",
+      "options": {
+        "A": "10 -> 20 -> 30 -> None",
+        "B": "30 -> 20 -> 10 -> None",
+        "C": "10 -> 20 -> None",
+        "D": "20 -> 10 -> None"
+      },
+      "correct_answer": "C",
+      "code_example": "class Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n    \n    def append(self, data):\n        new_node = Node(data)\n        if not self.head:\n            self.head = new_node\n            return\n        last = self.head\n        while last.next:\n            last = last.next\n        last.next = new_node\n    \n    def delete(self, key):\n        temp = self.head\n        if temp and temp.data == key:\n            self.head = temp.next\n            return\n        while temp and temp.next:\n            if temp.next.data == key:\n                temp.next = temp.next.next\n                return\n            temp = temp.next\n    \n    def __str__(self):\n        result = \"\"\n        temp = self.head\n        while temp:\n            result += str(temp.data) + \" -> \"\n            temp = temp.next\n        return result + \"None\"\n\nllist = LinkedList()\nllist.append(10)\nllist.append(20)\nllist.append(30)\nllist.delete(30)\nprint(llist)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code combining functional operations?",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]",
+        "B": "[4, 16]",
+        "C": "[1, 9, 25]",
+        "D": "[1, 3, 5, 7, 9]"
+      },
+      "correct_answer": "B",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\n\ndef is_even(x):\n    return x % 2 == 0\n\ndef square(x):\n    return x ** 2\n\nresult = list(map(square, filter(is_even, numbers)))\nprint(result)"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Which normalization form addresses transitive dependencies in a relational database?",
+      "options": {
+        "A": "First Normal Form (1NF)",
+        "B": "Second Normal Form (2NF)",
+        "C": "Third Normal Form (3NF)",
+        "D": "Boyce-Codd Normal Form (BCNF)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the Counter from the collections module?",
+      "options": {
+        "A": "{'a': 3, 'b': 2, 'c': 1}",
+        "B": "[('a', 3), ('b', 2), ('c', 1)]",
+        "C": "[('a', 3)]",
+        "D": "('a', 3)"
+      },
+      "correct_answer": "C",
+      "code_example": "from collections import Counter\n\ntext = 'aabac'\ncounter = Counter(text)\nprint(counter.most_common(1))"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using map, filter, and reduce?",
+      "options": {
+        "A": "15",
+        "B": "30",
+        "C": "45",
+        "D": "60"
+      },
+      "correct_answer": "A",
+      "code_example": "from functools import reduce\n\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\n# Filter even numbers, map to get their squares, then reduce to find sum\nresult = reduce(lambda x, y: x + y, \n                map(lambda x: x * x, \n                    filter(lambda x: x % 2 != 0, numbers[:5])))\nprint(result)"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a common Python library for database connections?",
+      "options": {
+        "A": "psycopg2",
+        "B": "pymysql",
+        "C": "sqlite3",
+        "D": "pydbsql"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following depth-first search implementation when searching for value 5?",
+      "options": {
+        "A": "Found 5",
+        "B": "Not found",
+        "C": "1 -> 2 -> 4 -> 5",
+        "D": "5"
+      },
+      "correct_answer": "A",
+      "code_example": "def dfs(graph, node, visited, target):\n    if node == target:\n        return \"Found \" + str(node)\n    \n    visited.add(node)\n    for neighbor in graph[node]:\n        if neighbor not in visited:\n            result = dfs(graph, neighbor, visited, target)\n            if result:\n                return result\n    return None\n\ngraph = {\n    1: [2, 3],\n    2: [4, 5],\n    3: [6],\n    4: [],\n    5: [],\n    6: []\n}\n\nresult = dfs(graph, 1, set(), 5) or \"Not found\"\nprint(result)"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following breadth-first search implementation when searching for value 6?",
+      "options": {
+        "A": "Found 6",
+        "B": "Not found",
+        "C": "1 -> 2 -> 3 -> 6",
+        "D": "6"
+      },
+      "correct_answer": "A",
+      "code_example": "from collections import deque\n\ndef bfs(graph, start, target):\n    visited = set()\n    queue = deque([start])\n    \n    while queue:\n        node = queue.popleft()\n        \n        if node == target:\n            return \"Found \" + str(node)\n        \n        if node not in visited:\n            visited.add(node)\n            queue.extend([n for n in graph[node] if n not in visited])\n    \n    return \"Not found\"\n\ngraph = {\n    1: [2, 3],\n    2: [4, 5],\n    3: [6],\n    4: [],\n    5: [],\n    6: []\n}\n\nresult = bfs(graph, 1, 6)\nprint(result)"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "When using the requests library, which HTTP status code represents a successful response?",
+      "options": {
+        "A": "200",
+        "B": "404",
+        "C": "500",
+        "D": "302"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the two-pointer technique?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "[1, 2, 3, 4, 5]",
+        "D": "[5, 4, 3, 2, 1]"
+      },
+      "correct_answer": "A",
+      "code_example": "def is_palindrome(s):\n    # Two-pointer technique to check if a string is a palindrome\n    left, right = 0, len(s) - 1\n    \n    while left < right:\n        if s[left] != s[right]:\n            return False\n        left += 1\n        right -= 1\n    \n    return True\n\nprint(is_palindrome(\"racecar\"))"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "Which of the following statements about regular expression performance in Python is TRUE?",
+      "options": {
+        "A": "The re.match function is always faster than re.search",
+        "B": "Pre-compiling regular expressions with re.compile() can improve performance for repeated use",
+        "C": "Using re.findall() is always more efficient than re.finditer()",
+        "D": "Regular expressions always have O(1) time complexity"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "In Django, which file contains the URL patterns for an application?",
+      "options": {
+        "A": "models.py",
+        "B": "views.py",
+        "C": "urls.py",
+        "D": "settings.py"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using lambda functions?",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]",
+        "B": "[1, 2, 3, 4, 5]",
+        "C": "(1, 4, 9, 16, 25)",
+        "D": "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}"
+      },
+      "correct_answer": "D",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nsquare = lambda x: x ** 2\nresult = {num: square(num) for num in numbers}\nprint(result)"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code for finding connected components?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct_answer": "B",
+      "code_example": "def find_connected_components(graph):\n    visited = set()\n    components = 0\n    \n    def dfs(node):\n        visited.add(node)\n        for neighbor in graph.get(node, []):\n            if neighbor not in visited:\n                dfs(neighbor)\n    \n    for node in graph:\n        if node not in visited:\n            components += 1\n            dfs(node)\n    \n    return components\n\ngraph = {\n    1: [2],\n    2: [1],\n    3: [4],\n    4: [3],\n    5: [],\n    6: [7],\n    7: [6]\n}\n\nprint(find_connected_components(graph))"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Consider the following code implementing the SOLID principle of Dependency Inversion. What is the main issue with this implementation?",
+      "code_example": "class FileLogger:\n    def log_message(self, message):\n        with open('app.log', 'a') as f:\n            f.write(message + '\\n')\n\nclass UserService:\n    def __init__(self):\n        self.logger = FileLogger()\n    \n    def create_user(self, username):\n        # Create user logic\n        self.logger.log_message(f'User {username} created')",
+      "options": {
+        "A": "The UserService doesn't implement a proper interface",
+        "B": "The FileLogger class violates the Single Responsibility Principle",
+        "C": "The UserService is tightly coupled to the concrete FileLogger implementation",
+        "D": "The log_message method should use f-strings instead of concatenation"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following bit manipulation code?",
+      "code_example": "def count_different_bits(a, b):\n    xor_result = a ^ b\n    count = 0\n    while xor_result:\n        count += xor_result & 1\n        xor_result >>= 1\n    return count\n\nprint(count_different_bits(10, 7))",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "In the following basic ML pipeline implementation, what is the purpose of the StandardScaler?",
+      "code_example": "from sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import train_test_split\nimport numpy as np\n\nX = np.random.rand(100, 4)\ny = np.random.randint(0, 2, 100)\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\n\npipeline = Pipeline([\n    ('scaler', StandardScaler()),\n    ('classifier', RandomForestClassifier())\n])\n\npipeline.fit(X_train, y_train)",
+      "options": {
+        "A": "To convert categorical features into numerical values",
+        "B": "To normalize features by scaling each feature to have mean 0 and variance 1",
+        "C": "To reduce the dimensionality of the feature space",
+        "D": "To remove outliers from the dataset"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "Which statement about authentication and authorization is FALSE?",
+      "options": {
+        "A": "Authentication verifies who the user is, while authorization determines what they can access",
+        "B": "JWT tokens typically contain claims about the authenticated user and can be used for authorization",
+        "C": "OAuth 2.0 is primarily an authorization framework, not an authentication protocol",
+        "D": "Authorization should always be performed before authentication in a secure system"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output when performing an in-order traversal on the following binary tree?",
+      "code_example": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef inorder_traversal(root):\n    result = []\n    if root:\n        result.extend(inorder_traversal(root.left))\n        result.append(root.val)\n        result.extend(inorder_traversal(root.right))\n    return result\n\n# Constructing the tree\n#        5\n#       / \\\n#      3   8\n#     / \\ / \\\n#    1  4 7  9\ntree = TreeNode(5,\n               TreeNode(3, TreeNode(1), TreeNode(4)),\n               TreeNode(8, TreeNode(7), TreeNode(9)))\n\nprint(inorder_traversal(tree))",
+      "options": {
+        "A": "[5, 3, 1, 4, 8, 7, 9]",
+        "B": "[1, 3, 4, 5, 7, 8, 9]",
+        "C": "[1, 4, 3, 7, 9, 8, 5]",
+        "D": "[1, 3, 4, 7, 8, 9, 5]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a common practice for API rate limiting?",
+      "options": {
+        "A": "Using token bucket algorithms to control request rates",
+        "B": "Including appropriate rate limit headers in API responses",
+        "C": "Storing rate limit data in a distributed cache like Redis",
+        "D": "Automatically increasing rate limits for authenticated users who make too many requests"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the total weight of the minimum spanning tree created by Kruskal's algorithm for the following graph?",
+      "code_example": "import networkx as nx\n\ndef kruskal_mst_weight(edges, num_nodes):\n    # Create a graph\n    G = nx.Graph()\n    \n    # Add nodes\n    for i in range(1, num_nodes + 1):\n        G.add_node(i)\n    \n    # Add edges with weights\n    for u, v, w in edges:\n        G.add_edge(u, v, weight=w)\n    \n    # Calculate the minimum spanning tree using Kruskal's algorithm\n    mst = nx.minimum_spanning_tree(G, algorithm='kruskal')\n    \n    # Calculate the total weight of the MST\n    return sum(mst[u][v]['weight'] for u, v in mst.edges())\n\n# Define the graph edges: (node1, node2, weight)\nedges = [\n    (1, 2, 7),\n    (1, 4, 5),\n    (2, 3, 8),\n    (2, 4, 9),\n    (2, 5, 7),\n    (3, 5, 5),\n    (4, 5, 15),\n    (4, 6, 6),\n    (5, 6, 8),\n    (5, 7, 9),\n    (6, 7, 11)\n]\n\nprint(kruskal_mst_weight(edges, 7))",
+      "options": {
+        "A": "35",
+        "B": "39",
+        "C": "40",
+        "D": "42"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a typical responsibility of an API Gateway?",
+      "options": {
+        "A": "Request routing and load balancing",
+        "B": "Authentication and authorization",
+        "C": "Response caching and rate limiting",
+        "D": "Implementing complex business logic specific to individual microservices"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What is the output of the following Dockerfile when built and run?",
+      "code_example": "# Dockerfile\nFROM python:3.9-slim\n\nWORKDIR /app\n\nCOPY requirements.txt .\nRUN pip install --no-cache-dir -r requirements.txt\n\nCOPY . .\n\nENV MESSAGE=\"Default message\"\nENV PORT=5000\n\nCMD [\"python\", \"app.py\"]\n\n# app.py (included in the container)\nimport os\nprint(f\"Message: {os.environ.get('MESSAGE')}\")\nprint(f\"Port: {os.environ.get('PORT')}\")",
+      "options": {
+        "A": "Message: None\\nPort: None",
+        "B": "Message: Default message\\nPort: 5000",
+        "C": "Message: $MESSAGE\\nPort: $PORT",
+        "D": "Error: requirements.txt not found"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What is a key difference between AVL trees and Red-Black trees?",
+      "options": {
+        "A": "AVL trees allow duplicate keys, while Red-Black trees do not",
+        "B": "AVL trees maintain stricter balance, requiring heights of subtrees to differ by at most 1",
+        "C": "Red-Black trees can only store integers, while AVL trees can store any comparable type",
+        "D": "Red-Black trees support deletion operations, while AVL trees do not"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the result of running the following Redis commands?",
+      "code_example": "import redis\n\ndef redis_operation():\n    r = redis.Redis(host='localhost', port=6379, db=0)\n    r.flushall()  # Clear the database\n    \n    r.set('counter', 10)\n    r.incr('counter')\n    r.incr('counter', 5)\n    \n    r.hset('user:1000', 'name', 'John')\n    r.hset('user:1000', 'email', 'john@example.com')\n    \n    r.lpush('queue', 'task1', 'task2', 'task3')\n    r.rpop('queue')\n    \n    value = r.get('counter')\n    queue = r.lrange('queue', 0, -1)\n    user = r.hgetall('user:1000')\n    \n    return {\n        'counter': int(value) if value else None,\n        'queue': [item.decode('utf-8') for item in queue],\n        'user': {k.decode('utf-8'): v.decode('utf-8') for k, v in user.items()}\n    }\n\n# Assuming a Redis server is running\nprint(redis_operation())",
+      "options": {
+        "A": "{'counter': 16, 'queue': ['task1', 'task2'], 'user': {'name': 'John', 'email': 'john@example.com'}}",
+        "B": "{'counter': 16, 'queue': ['task3', 'task2'], 'user': {'name': 'John', 'email': 'john@example.com'}}",
+        "C": "{'counter': 16, 'queue': ['task2', 'task1'], 'user': {'name': 'John', 'email': 'john@example.com'}}",
+        "D": "{'counter': 15, 'queue': ['task2', 'task1'], 'user': {'name': 'John', 'email': 'john@example.com'}}"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following WebSocket implementation?",
+      "code_example": "import asyncio\nimport websockets\n\nasync def echo_server(websocket, path):\n    async for message in websocket:\n        if message == 'ping':\n            await websocket.send('pong')\n        else:\n            await websocket.send(f'Echo: {message}')\n\nasync def client():\n    uri = \"ws://localhost:8765\"\n    async with websockets.connect(uri) as websocket:\n        await websocket.send(\"Hello\")\n        response1 = await websocket.recv()\n        \n        await websocket.send(\"ping\")\n        response2 = await websocket.recv()\n        \n        await websocket.send(\"Test\")\n        response3 = await websocket.recv()\n        \n        return [response1, response2, response3]\n\n# Assuming server is running\n# print(asyncio.get_event_loop().run_until_complete(client()))",
+      "options": {
+        "A": "['Echo: Hello', 'pong', 'Echo: Test']",
+        "B": "['Hello', 'ping', 'Test']",
+        "C": "['Echo: Hello', 'Echo: ping', 'Echo: Test']",
+        "D": "['pong', 'pong', 'pong']"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following thread synchronization code?",
+      "code_example": "import threading\nimport time\n\nclass SharedCounter:\n    def __init__(self):\n        self.counter = 0\n        self.lock = threading.Lock()\n    \n    def increment(self, amount=1):\n        with self.lock:\n            current = self.counter\n            time.sleep(0.001)  # Simulate work\n            self.counter = current + amount\n    \n    def decrement(self, amount=1):\n        with self.lock:\n            current = self.counter\n            time.sleep(0.001)  # Simulate work\n            self.counter = current - amount\n\ndef test_counter():\n    counter = SharedCounter()\n    \n    # Create and start threads\n    threads = []\n    for _ in range(5):\n        t = threading.Thread(target=counter.increment, args=(2,))\n        threads.append(t)\n        t.start()\n    \n    for _ in range(3):\n        t = threading.Thread(target=counter.decrement, args=(1,))\n        threads.append(t)\n        t.start()\n    \n    # Wait for all threads to complete\n    for t in threads:\n        t.join()\n    \n    return counter.counter\n\nprint(test_counter())",
+      "options": {
+        "A": "7",
+        "B": "10",
+        "C": "11",
+        "D": "The output varies each time due to race conditions"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a valid use of abstract classes in Python?",
+      "code_example": "from abc import ABC, abstractmethod\n\nclass DataProcessor(ABC):\n    @abstractmethod\n    def process_data(self, data):\n        pass\n    \n    @abstractmethod\n    def validate_data(self, data):\n        pass\n    \n    def run_pipeline(self, data):\n        if self.validate_data(data):\n            return self.process_data(data)\n        return None\n\nclass CSVProcessor(DataProcessor):\n    def process_data(self, data):\n        return f\"Processed CSV data: {data}\"\n    \n    def validate_data(self, data):\n        return isinstance(data, str) and data.endswith('.csv')\n\n# Instantiating and using the classes\nprocessor = CSVProcessor()\nresult = processor.run_pipeline(\"sample.csv\")\nprint(result)",
+      "options": {
+        "A": "Creating an instance of the abstract base class directly",
+        "B": "Implementing only some of the abstract methods in a child class",
+        "C": "Using non-abstract methods in the abstract base class",
+        "D": "Extending multiple abstract base classes with diamond inheritance"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following metaclass implementation?",
+      "code_example": "class UpperAttrMetaclass(type):\n    def __new__(cls, name, bases, attrs):\n        uppercase_attrs = {\n            key.upper() if not key.startswith('__') else key: value\n            for key, value in attrs.items()\n        }\n        return super().__new__(cls, name, bases, uppercase_attrs)\n\nclass Person(metaclass=UpperAttrMetaclass):\n    name = \"John\"\n    age = 30\n    \n    def greet(self):\n        return f\"Hello, my name is {self.NAME}\"\n\np = Person()\nprint([attr for attr in dir(p) if not attr.startswith('__') and attr.islower()])\nprint(p.greet())",
+      "options": {
+        "A": "[]\\nHello, my name is John",
+        "B": "['greet']\\nHello, my name is John",
+        "C": "[]\\nHello, my name is NAME",
+        "D": "[]\\nAttributeError: 'Person' object has no attribute 'NAME'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What is wrong with the following pytest test case?",
+      "code_example": "import pytest\n\nclass Calculator:\n    def add(self, a, b):\n        return a + b\n    \n    def divide(self, a, b):\n        return a / b\n\n@pytest.fixture\ndef calculator():\n    return Calculator()\n\ndef test_division(calculator):\n    assert calculator.divide(10, 2) == 5\n    assert calculator.divide(10, 0) == float('inf')\n\ndef test_addition(calculator):\n    assert calculator.add(5, 3) == 8\n    assert calculator.add(-1, 1) == 0\n    assert calculator.add(0.1, 0.2) == 0.3",
+      "options": {
+        "A": "The division by zero will raise a ZeroDivisionError rather than returning infinity",
+        "B": "The fixture is not properly defined for pytest to recognize it",
+        "C": "The test_addition will fail due to floating-point precision issues with 0.1 + 0.2",
+        "D": "The Calculator class has an inconsistent interface between add and divide methods"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
