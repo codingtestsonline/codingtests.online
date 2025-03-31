@@ -1,0 +1,614 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nnumbers.append(6)\nprint(numbers[2:5])",
+      "options": {
+        "A": "[3, 4, 5]",
+        "B": "[3, 4, 5, 6]",
+        "C": "[1, 2, 3, 4, 5]",
+        "D": "[2, 3, 4]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "In Python file modes, what does the 'a' mode do?",
+      "options": {
+        "A": "Reads the file and allows writing to it",
+        "B": "Opens the file for writing, creating it if it doesn't exist and overwriting it if it does",
+        "C": "Opens the file for appending, creating it if it doesn't exist",
+        "D": "Opens the file in binary mode"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "x = 10\ndef change_x():\n    x = 20\n    print(\"Inside function:\", x)\nchange_x()\nprint(\"Outside function:\", x)",
+      "options": {
+        "A": "Inside function: 10\nOutside function: 10",
+        "B": "Inside function: 20\nOutside function: 20",
+        "C": "Inside function: 20\nOutside function: 10",
+        "D": "Inside function: 10\nOutside function: 20"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code implementation of bubble sort?",
+      "code_example": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr\n\nprint(bubble_sort([64, 34, 25, 12, 22, 11, 90]))",
+      "options": {
+        "A": "[11, 12, 22, 25, 34, 64, 90]",
+        "B": "[90, 64, 34, 25, 22, 12, 11]",
+        "C": "[11, 12, 22, 25, 34, 90, 64]",
+        "D": "[11, 22, 12, 25, 34, 64, 90]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct implementation of a binary search on a sorted array?",
+      "code_example": "def binary_search(arr, target):\n    low = 0\n    high = len(arr) - 1\n    \n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    \n    return -1\n\nprint(binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9], 7))",
+      "options": {
+        "A": "-1",
+        "B": "6",
+        "C": "7",
+        "D": "0"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "According to PEP 8, which of the following is the correct naming convention for a constant in Python?",
+      "options": {
+        "A": "maxValue",
+        "B": "MAX_VALUE",
+        "C": "MaxValue",
+        "D": "max_value"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "def greet(name, greeting=\"Hello\"):\n    return f\"{greeting}, {name}!\"\n\nprint(greet(\"Alice\"))\nprint(greet(\"Bob\", \"Hi\"))",
+      "options": {
+        "A": "Hello, Alice!\nHi, Bob!",
+        "B": "Hello, Alice!\nHello, Bob!",
+        "C": "Alice, Hello!\nBob, Hi!",
+        "D": "Error: missing required argument"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "value = \"42\"\nprint(type(value))\nprint(type(int(value)))",
+      "options": {
+        "A": "<class 'int'>\n<class 'int'>",
+        "B": "<class 'str'>\n<class 'int'>",
+        "C": "<class 'str'>\n<class 'str'>",
+        "D": "<class 'int'>\n<class 'str'>"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Which of the following is a correct way to create a multi-line string in Python?",
+      "options": {
+        "A": "string = 'Line 1\nLine 2\nLine 3'",
+        "B": "string = '''Line 1\nLine 2\nLine 3'''",
+        "C": "Both A and B are correct",
+        "D": "Neither A nor B is correct"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "decimal_num = 42\nprint(bin(decimal_num)[2:])\nprint(hex(decimal_num)[2:])",
+      "options": {
+        "A": "101010\n2a",
+        "B": "101010\n42",
+        "C": "42\n2a",
+        "D": "0b101010\n0x2a"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What is the difference between parameters and arguments in Python?",
+      "options": {
+        "A": "They are the same thing, just different terminology",
+        "B": "Parameters are defined in function definitions, arguments are the values passed during function calls",
+        "C": "Arguments are defined in function definitions, parameters are the values passed during function calls",
+        "D": "Parameters are optional values, arguments are required values"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "counter = 0\nwhile counter < 5:\n    counter += 1\n    if counter == 3:\n        continue\n    print(counter, end=' ')\nelse:\n    print('Done')",
+      "options": {
+        "A": "1 2 4 5 Done",
+        "B": "1 2 3 4 5 Done",
+        "C": "1 2 3 4 5",
+        "D": "1 2 4 5"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What is the purpose of a docstring in Python?",
+      "options": {
+        "A": "To document code for the programmer's reference only",
+        "B": "To create executable comments",
+        "C": "To provide documentation that can be accessed at runtime",
+        "D": "To prevent code from executing"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "text = \"Python Programming\"\nprint(text[7:18:2])",
+      "options": {
+        "A": "Python",
+        "B": "Programming",
+        "C": "Pormig",
+        "D": "rgamn"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "In which of the following scenarios would you use the 'pass' statement in Python?",
+      "options": {
+        "A": "To skip the rest of the current loop iteration and move to the next one",
+        "B": "To exit from a loop entirely",
+        "C": "To serve as a placeholder when a statement is required syntactically but no action is needed",
+        "D": "To pass a value from one function to another"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "try:\n    x = 1 / 0\nexcept ZeroDivisionError:\n    print(\"Caught a division by zero\")\nelse:\n    print(\"No exception occurred\")\nfinally:\n    print(\"This always executes\")",
+      "options": {
+        "A": "Caught a division by zero\nThis always executes",
+        "B": "Caught a division by zero\nNo exception occurred\nThis always executes",
+        "C": "No exception occurred\nThis always executes",
+        "D": "This always executes"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using functools.lru_cache?",
+      "code_example": "from functools import lru_cache\n\n@lru_cache(maxsize=None)\ndef fibonacci(n):\n    if n < 2:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\nprint([fibonacci(n) for n in range(7)])",
+      "options": {
+        "A": "[0, 1, 1, 2, 3, 5, 8]",
+        "B": "[1, 1, 2, 3, 5, 8, 13]",
+        "C": "[0, 1, 2, 3, 5, 8, 13]",
+        "D": "[1, 2, 3, 5, 8, 13, 21]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following regex code?",
+      "code_example": "import re\n\npattern = r\"(\\w+)=(\\d+)\"\ntext = \"a=10, b=20, c=30\"\n\nmatches = re.findall(pattern, text)\nprint(matches)",
+      "options": {
+        "A": "['a=10', 'b=20', 'c=30']",
+        "B": "[('a', '10'), ('b', '20'), ('c', '30')]",
+        "C": "['a', 'b', 'c']",
+        "D": "['10', '20', '30']"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a core principle of RESTful API design?",
+      "options": {
+        "A": "Statelessness",
+        "B": "Resource-based URLs",
+        "C": "Client-server architecture",
+        "D": "Always use XML for data exchange"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating closures?",
+      "code_example": "def outer_function(x):\n    def inner_function(y):\n        return x + y\n    return inner_function\n\nadd_five = outer_function(5)\nprint(add_five(3))\nprint(add_five(7))",
+      "options": {
+        "A": "5\n5",
+        "B": "8\n12",
+        "C": "3\n7",
+        "D": "Error: x is not defined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating inheritance?",
+      "code_example": "class Parent:\n    def greet(self):\n        return \"Hello from Parent\"\n\nclass Child(Parent):\n    def greet(self):\n        return \"Hello from Child\"\n\nparent = Parent()\nchild = Child()\n\nprint(parent.greet())\nprint(child.greet())",
+      "options": {
+        "A": "Hello from Parent\nHello from Parent",
+        "B": "Hello from Child\nHello from Child",
+        "C": "Hello from Parent\nHello from Child",
+        "D": "Hello from Child\nHello from Parent"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which of the following best describes the 'divide and conquer' algorithm paradigm?",
+      "options": {
+        "A": "Breaking a problem into subproblems, solving them independently, and combining their results",
+        "B": "Solving the simplest instances of a problem first and using them to solve more complex instances",
+        "C": "Finding the locally optimal solution at each step to find the global optimum",
+        "D": "Using randomization to find approximate solutions to complex problems"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code working with nested data structures?",
+      "code_example": "data = [\n    {'name': 'Alice', 'age': 25, 'skills': ['Python', 'SQL']},\n    {'name': 'Bob', 'age': 30, 'skills': ['Java', 'C++', 'Python']},\n    {'name': 'Charlie', 'age': 22, 'skills': ['JavaScript', 'HTML', 'CSS']}\n]\n\npython_users = [person['name'] for person in data if 'Python' in person['skills']]\nprint(python_users)",
+      "options": {
+        "A": "['Alice', 'Bob', 'Charlie']",
+        "B": "['Alice', 'Bob']",
+        "C": "['Python', 'Python']",
+        "D": "['Alice: Python', 'Bob: Python']"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "When a Python module is imported, what is the first location where Python searches for the module?",
+      "options": {
+        "A": "The current directory",
+        "B": "The standard library directories",
+        "C": "The directories in the PYTHONPATH environment variable",
+        "D": "The directories in sys.path in order"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating classes and instances?",
+      "code_example": "class Counter:\n    count = 0  # Class variable\n    \n    def __init__(self):\n        self.count = 0  # Instance variable\n    \n    def increment(self):\n        self.count += 1\n        Counter.count += 1\n\nc1 = Counter()\nc2 = Counter()\n\nc1.increment()\nc1.increment()\nc2.increment()\n\nprint(f\"c1.count = {c1.count}, c2.count = {c2.count}, Counter.count = {Counter.count}\")",
+      "options": {
+        "A": "c1.count = 2, c2.count = 1, Counter.count = 3",
+        "B": "c1.count = 2, c2.count = 1, Counter.count = 0",
+        "C": "c1.count = 3, c2.count = 3, Counter.count = 3",
+        "D": "c1.count = 2, c2.count = 2, Counter.count = 3"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following merge sort implementation?",
+      "code_example": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    \n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    \n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result\n\nprint(merge_sort([38, 27, 43, 3, 9, 82, 10]))",
+      "options": {
+        "A": "[3, 9, 10, 27, 38, 43, 82]",
+        "B": "[82, 43, 38, 27, 10, 9, 3]",
+        "C": "[38, 27, 43, 3, 9, 82, 10]",
+        "D": "[3, 9, 10, 38, 27, 43, 82]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using namedtuple?",
+      "code_example": "from collections import namedtuple\n\nPerson = namedtuple('Person', ['name', 'age', 'city'])\n\nalice = Person('Alice', 30, 'New York')\nbob = Person('Bob', 25, 'Boston')\n\nprint(alice.name)\nprint(bob[0])\nprint(getattr(alice, 'city'))",
+      "options": {
+        "A": "Alice\nBob\nNew York",
+        "B": "Alice\nBob\nBoston",
+        "C": "Person.name\nPerson[0]\nNew York",
+        "D": "Error: namedtuple doesn't support attribute access"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "Which of the following is the correct way to establish a database connection in Python using SQLite?",
+      "code_example": "import sqlite3\n\nconn = sqlite3.connect('example.db')\ncursor = conn.cursor()\n\ncursor.execute('''CREATE TABLE IF NOT EXISTS users\n                (id INTEGER PRIMARY KEY, name TEXT, email TEXT)''')\n\nconn.commit()\nconn.close()",
+      "options": {
+        "A": "This code is incorrect because SQLite doesn't support the connect() method",
+        "B": "This code is incorrect because cursor.execute() should be conn.execute()",
+        "C": "This code is correct and will create a table named 'users' if it doesn't exist",
+        "D": "This code is incorrect because commit() should be called before execute()"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What is the difference between an absolute import and a relative import in Python?",
+      "options": {
+        "A": "Absolute imports use the full path from the project's root directory, while relative imports use the location relative to the current module",
+        "B": "Absolute imports can only import system modules, while relative imports can only import user-defined modules",
+        "C": "Absolute imports are deprecated in Python 3, while relative imports are the recommended approach",
+        "D": "Absolute imports use the 'import' keyword, while relative imports use the 'from' keyword"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating class variables vs instance variables?",
+      "code_example": "class Dog:\n    species = \"Canis familiaris\"  # Class variable\n    \n    def __init__(self, name, breed):\n        self.name = name  # Instance variable\n        self.breed = breed  # Instance variable\n\nfido = Dog(\"Fido\", \"Labrador\")\nbuddy = Dog(\"Buddy\", \"Golden Retriever\")\n\nprint(Dog.species)\nprint(fido.species)\nprint(buddy.species)\n\nDog.species = \"Canis lupus\"\nfido.species = \"Changed\"\n\nprint(Dog.species)\nprint(fido.species)\nprint(buddy.species)",
+      "options": {
+        "A": "Canis familiaris\nCanis familiaris\nCanis familiaris\nCanis lupus\nChanged\nCanis lupus",
+        "B": "Canis familiaris\nCanis familiaris\nCanis familiaris\nCanis lupus\nCanis lupus\nCanis lupus",
+        "C": "Canis familiaris\nCanis familiaris\nCanis familiaris\nChanged\nChanged\nChanged",
+        "D": "Canis familiaris\nLabrador\nGolden Retriever\nCanis lupus\nChanged\nCanis lupus"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the heapq module?",
+      "code_example": "import heapq\n\nheap = []\nheapq.heappush(heap, (5, \"task 5\"))\nheapq.heappush(heap, (2, \"task 2\"))\nheapq.heappush(heap, (7, \"task 7\"))\nheapq.heappush(heap, (1, \"task 1\"))\n\nprint([heapq.heappop(heap)[1] for _ in range(len(heap))])",
+      "options": {
+        "A": "['task 1', 'task 2', 'task 5', 'task 7']",
+        "B": "['task 1', 'task 2']",
+        "C": "['task 7', 'task 5', 'task 2', 'task 1']",
+        "D": "['task 1', 'task 2', 'task 5']"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What's the difference between a generator expression and a list comprehension in Python?",
+      "code_example": "import sys\n\nlist_comp = [x for x in range(1000)]\ngen_exp = (x for x in range(1000))\n\nprint(f\"List comprehension size: {sys.getsizeof(list_comp)} bytes\")\nprint(f\"Generator expression size: {sys.getsizeof(gen_exp)} bytes\")\nprint(f\"Is gen_exp a list? {isinstance(gen_exp, list)}\")",
+      "options": {
+        "A": "List comprehension size: ~9000 bytes\nGenerator expression size: ~120 bytes\nIs gen_exp a list? False",
+        "B": "List comprehension size: ~9000 bytes\nGenerator expression size: ~9000 bytes\nIs gen_exp a list? True",
+        "C": "List comprehension size: ~120 bytes\nGenerator expression size: ~9000 bytes\nIs gen_exp a list? False",
+        "D": "List comprehension size: ~120 bytes\nGenerator expression size: ~120 bytes\nIs gen_exp a list? True"
+      },
+      "correct_answer": "A"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Consider the following WebSocket implementation using the websockets library. What's the primary issue with this code?",
+      "options": {
+        "A": "The connection will never close properly",
+        "B": "The server doesn't handle concurrent connections",
+        "C": "Missing error handling for connection failures",
+        "D": "The message is not being properly encoded"
+      },
+      "correct_answer": "C",
+      "code_example": "import asyncio\nimport websockets\n\nasync def handler(websocket):\n    message = await websocket.recv()\n    print(f'Received message: {message}')\n    response = f'Echo: {message}'\n    await websocket.send(response)\n\nasync def main():\n    async with websockets.serve(handler, 'localhost', 8765):\n        await asyncio.Future()  # Run forever\n\nasyncio.run(main())"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which statement about dependency injection in Python is correct?",
+      "options": {
+        "A": "Dependency injection can only be achieved through third-party frameworks",
+        "B": "Python's dynamic nature makes dependency injection unnecessary",
+        "C": "Dependency injection primarily helps with unit testing by allowing mock objects to be injected",
+        "D": "Dependency injection in Python requires static type annotations"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses abstract base classes?",
+      "options": {
+        "A": "TypeError: Can't instantiate abstract class Shape with abstract method area",
+        "B": "Rectangle area: 50",
+        "C": "Shape area: Unknown",
+        "D": "AttributeError: 'Rectangle' object has no attribute 'width'"
+      },
+      "correct_answer": "A",
+      "code_example": "from abc import ABC, abstractmethod\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self):\n        pass\n\nclass Rectangle(Shape):\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    # Note: area method is not implemented\n\ntry:\n    rectangle = Rectangle(10, 5)\n    print(f\"Rectangle area: {rectangle.area()}\")\nexcept Exception as e:\n    print(type(e).__name__ + \": \" + str(e))"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What's the output of this web scraping code using BeautifulSoup and requests?",
+      "options": {
+        "A": "All h2 headings on the page",
+        "B": "Only h2 headings within div elements with class 'content'",
+        "C": "Only the first h2 heading within a div with class 'content'",
+        "D": "Only h2 headings with class 'title'"
+      },
+      "correct_answer": "B",
+      "code_example": "import requests\nfrom bs4 import BeautifulSoup\n\ndef extract_headings(url):\n    response = requests.get(url)\n    soup = BeautifulSoup(response.text, 'html.parser')\n    \n    content_divs = soup.find_all('div', class_='content')\n    headings = []\n    \n    for div in content_divs:\n        h2_tags = div.find_all('h2')\n        headings.extend(h2_tags)\n    \n    return headings\n\n# The function extracts:"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of this multithreaded code using synchronization?",
+      "options": {
+        "A": "A random mix of 'Thread-1' and 'Thread-2' messages with possible interleaving",
+        "B": "All 'Thread-1' messages, followed by all 'Thread-2' messages",
+        "C": "Alternating 'Thread-1' and 'Thread-2' messages",
+        "D": "A deadlock will occur and no messages will be printed"
+      },
+      "correct_answer": "B",
+      "code_example": "import threading\nimport time\n\nclass ResourceManager:\n    def __init__(self):\n        self.resource_lock = threading.Lock()\n        self.shared_resource = []\n    \n    def use_resource(self, thread_name):\n        with self.resource_lock:\n            for i in range(3):\n                self.shared_resource.append(f\"{thread_name} step {i}\")\n                print(f\"{thread_name} step {i}\")\n                time.sleep(0.1)\n\ndef worker(resource_manager, thread_name):\n    resource_manager.use_resource(thread_name)\n\nresource_manager = ResourceManager()\n\nt1 = threading.Thread(target=worker, args=(resource_manager, \"Thread-1\"))\nt2 = threading.Thread(target=worker, args=(resource_manager, \"Thread-2\"))\n\nt1.start()\nt2.start()\n\nt1.join()\nt2.join()"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of this bit manipulation code?",
+      "options": {
+        "A": "0",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct_answer": "D",
+      "code_example": "def count_bits_flipped(a, b):\n    # Count the number of bits that need to be flipped\n    # to convert 'a' to 'b'\n    xor_result = a ^ b\n    count = 0\n    \n    while xor_result > 0:\n        count += xor_result & 1\n        xor_result >>= 1\n        \n    return count\n\n# Test with two numbers\nnum1 = 7  # Binary: 0111\nnum2 = 13  # Binary: 1101\n\nresult = count_bits_flipped(num1, num2)\nprint(result)"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "Which statement about Python mixins and composition is correct?",
+      "options": {
+        "A": "Mixins are a form of multiple inheritance and should always be used instead of composition",
+        "B": "Composition is generally preferred over mixins when the relationship is 'has-a' rather than 'is-a'",
+        "C": "Mixins always cause the diamond problem in Python's inheritance model",
+        "D": "Python does not support mixins due to its method resolution order (MRO)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "In a service discovery setup, which code correctly implements a simple health check endpoint that would be used by a service registry?",
+      "options": {
+        "A": "A function that logs service status to a file",
+        "B": "A REST endpoint that returns service metadata and status code 200 when healthy",
+        "C": "A WebSocket connection that streams real-time metrics",
+        "D": "A background task that sends heartbeat signals to a message queue"
+      },
+      "correct_answer": "B",
+      "code_example": "from flask import Flask, jsonify\nimport socket\nimport os\n\napp = Flask(__name__)\n\n@app.route('/health')\ndef health_check():\n    # Basic health information\n    health_data = {\n        'status': 'UP',\n        'service': 'example-service',\n        'version': '1.0.0',\n        'host': socket.gethostname(),\n        'pid': os.getpid()\n    }\n    \n    # Check any dependencies or critical components here\n    # If everything is okay, return 200, otherwise return 503\n    \n    return jsonify(health_data)\n\nif __name__ == '__main__':\n    app.run(host='0.0.0.0', port=8080)"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "Which tool would NOT be considered part of an infrastructure as code (IaC) workflow for Python applications?",
+      "options": {
+        "A": "Terraform with Python CDK",
+        "B": "AWS CloudFormation with troposphere",
+        "C": "PyLint",
+        "D": "Pulumi with Python SDK"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of running this code and the associated code coverage report?",
+      "options": {
+        "A": "All tests pass with 100% code coverage",
+        "B": "All tests pass with 75% code coverage",
+        "C": "Tests fail due to uncaught exception",
+        "D": "Tests pass with 50% code coverage"
+      },
+      "correct_answer": "B",
+      "code_example": "# calculator.py\ndef add(a, b):\n    return a + b\n\ndef subtract(a, b):\n    return a - b\n\ndef multiply(a, b):\n    return a * b\n\ndef divide(a, b):\n    if b == 0:\n        raise ValueError(\"Cannot divide by zero\")\n    return a / b\n\n# test_calculator.py\nimport unittest\nfrom calculator import add, subtract, multiply, divide\n\nclass TestCalculator(unittest.TestCase):\n    def test_add(self):\n        self.assertEqual(add(3, 5), 8)\n        \n    def test_subtract(self):\n        self.assertEqual(subtract(10, 4), 6)\n        \n    def test_multiply(self):\n        self.assertEqual(multiply(2, 3), 6)\n        \n# Note: No test for divide()\n\n# Command to run tests with coverage:\n# python -m pytest test_calculator.py --cov=calculator"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What is the output of the following code using class decorators?",
+      "options": {
+        "A": "Creating new instance\nDestroying instance",
+        "B": "Creating new instance\nCalling method\nDestroying instance",
+        "C": "Calling method",
+        "D": "Creating new instance\nDestroying instance\nCalling method"
+      },
+      "correct_answer": "B",
+      "code_example": "def lifecycle_logging(cls):\n    original_init = cls.__init__\n    original_del = cls.__del__\n    \n    def __init__(self, *args, **kwargs):\n        print(\"Creating new instance\")\n        original_init(self, *args, **kwargs)\n    \n    def __del__(self):\n        print(\"Destroying instance\")\n        if original_del:\n            original_del(self)\n    \n    cls.__init__ = __init__\n    cls.__del__ = __del__\n    return cls\n\n@lifecycle_logging\nclass Example:\n    def __init__(self):\n        self.value = 42\n    \n    def method(self):\n        print(\"Calling method\")\n\n# Usage\nexample = Example()\nexample.method()\ndel example"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What's the key difference between FastAPI's async route handlers and traditional Flask route handlers?",
+      "options": {
+        "A": "FastAPI routes can only handle JSON data",
+        "B": "FastAPI allows concurrent processing of requests without blocking",
+        "C": "FastAPI routes require less code but can't handle complex requests",
+        "D": "Flask routes are more secure by default"
+      },
+      "correct_answer": "B",
+      "code_example": "# FastAPI Example\nfrom fastapi import FastAPI\nimport asyncio\n\napp = FastAPI()\n\n@app.get(\"/async-route\")\nasync def async_route():\n    # This can handle other requests while waiting\n    await asyncio.sleep(1)\n    return {\"message\": \"Processed asynchronously\"}\n\n# Flask Example\nfrom flask import Flask\nimport time\n\nflask_app = Flask(__name__)\n\n@flask_app.route(\"/sync-route\")\ndef sync_route():\n    # This blocks the entire worker while sleeping\n    time.sleep(1)\n    return {\"message\": \"Processed synchronously\"}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What is the expected behavior of this randomized quicksort implementation?",
+      "options": {
+        "A": "It will always be faster than traditional quicksort",
+        "B": "It guarantees O(n log n) worst-case time complexity",
+        "C": "It helps avoid the worst-case scenario of sorted or nearly sorted input",
+        "D": "It produces different sorted orders on each run"
+      },
+      "correct_answer": "C",
+      "code_example": "import random\n\ndef randomized_quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    # Choose a random pivot instead of always the last element\n    pivot_idx = random.randint(0, len(arr) - 1)\n    pivot = arr[pivot_idx]\n    \n    # Move pivot to the end for simplicity\n    arr[pivot_idx], arr[-1] = arr[-1], arr[pivot_idx]\n    \n    # Partition\n    i = 0\n    for j in range(len(arr) - 1):\n        if arr[j] <= pivot:\n            arr[i], arr[j] = arr[j], arr[i]\n            i += 1\n    \n    # Put pivot in its final position\n    arr[i], arr[-1] = arr[-1], arr[i]\n    \n    # Recursively sort subarrays\n    left = randomized_quicksort(arr[:i])\n    right = randomized_quicksort(arr[i+1:])\n    \n    return left + [arr[i]] + right"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of this implementation of Dijkstra's algorithm for the given graph?",
+      "options": {
+        "A": "Shortest distance from A to E: 8",
+        "B": "Shortest distance from A to E: 7",
+        "C": "Shortest distance from A to E: 9",
+        "D": "Shortest distance from A to E: 6"
+      },
+      "correct_answer": "D",
+      "code_example": "import heapq\n\ndef dijkstra(graph, start, end):\n    # Priority queue for (distance, node) pairs\n    priority_queue = [(0, start)]\n    # Distances dictionary\n    distances = {node: float('infinity') for node in graph}\n    distances[start] = 0\n    # Previous nodes for path reconstruction\n    previous = {node: None for node in graph}\n    \n    while priority_queue:\n        current_distance, current_node = heapq.heappop(priority_queue)\n        \n        # If we reached the end node\n        if current_node == end:\n            break\n            \n        # If we've already found a better path\n        if current_distance > distances[current_node]:\n            continue\n            \n        # Check all neighbors\n        for neighbor, weight in graph[current_node].items():\n            distance = current_distance + weight\n            \n            # If we found a better path\n            if distance < distances[neighbor]:\n                distances[neighbor] = distance\n                previous[neighbor] = current_node\n                heapq.heappush(priority_queue, (distance, neighbor))\n    \n    return distances[end]\n\n# Example graph (adjacency list with weights)\ngraph = {\n    'A': {'B': 2, 'C': 4},\n    'B': {'A': 2, 'C': 1, 'D': 3},\n    'C': {'A': 4, 'B': 1, 'D': 2, 'E': 5},\n    'D': {'B': 3, 'C': 2, 'E': 1},\n    'E': {'C': 5, 'D': 1}\n}\n\n# Find shortest path from A to E\nresult = dijkstra(graph, 'A', 'E')\nprint(f\"Shortest distance from A to E: {result}\")"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "In the context of cloud services integration with Python, which statement is incorrect?",
+      "options": {
+        "A": "boto3 is the AWS SDK for Python and supports most AWS services",
+        "B": "The Azure SDK for Python uses namespaced packages like azure-storage-blob",
+        "C": "Google Cloud's Python client libraries follow a consistent naming pattern like google-cloud-storage",
+        "D": "Cloud provider SDKs eliminate the need for handling authentication and authorization"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What space optimization technique is demonstrated in the following code?",
+      "options": {
+        "A": "Lazy evaluation using generators",
+        "B": "Data compression",
+        "C": "Memory pooling",
+        "D": "Reference counting"
+      },
+      "correct_answer": "A",
+      "code_example": "def process_large_file(filename):\n    with open(filename, 'r') as file:\n        # Instead of reading the entire file into memory\n        for line in file:\n            # Process one line at a time\n            processed_line = line.strip().upper()\n            yield processed_line\n\ndef fibonacci_sequence(n):\n    a, b = 0, 1\n    count = 0\n    while count < n:\n        yield a\n        a, b = b, a + b\n        count += 1\n\n# Usage examples\nfor line in process_large_file('large_data.txt'):\n    # Do something with each line\n    pass\n\nfor fib in fibonacci_sequence(10):\n    # Process each Fibonacci number\n    pass"
+    }
+  ]
+}
