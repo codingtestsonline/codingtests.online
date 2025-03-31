@@ -1,0 +1,614 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following palindrome checking code?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "None",
+        "D": "SyntaxError"
+      },
+      "correct_answer": "A",
+      "code_example": "def is_palindrome(s):\n    s = s.lower().replace(' ', '')\n    return s == s[::-1]\n\nprint(is_palindrome('A man a plan a canal Panama'))"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to check if a variable x is an instance of the int type?",
+      "options": {
+        "A": "x.isinstance(int)",
+        "B": "isinstance(int, x)",
+        "C": "isinstance(x, int)",
+        "D": "type(x) = int"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that finds prime numbers?",
+      "options": {
+        "A": "[2, 3, 5, 7, 11, 13, 17, 19]",
+        "B": "[2, 3, 5, 7, 11, 13, 17, 19, 23, 29]",
+        "C": "[3, 5, 7, 11, 13, 17, 19]",
+        "D": "[2, 3, 5, 7, 11, 13]"
+      },
+      "correct_answer": "A",
+      "code_example": "def is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\nprimes = [i for i in range(2, 20) if is_prime(i)]\nprint(primes)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Which exception will be raised by the following code?",
+      "options": {
+        "A": "TypeError",
+        "B": "ValueError",
+        "C": "IndexError",
+        "D": "KeyError"
+      },
+      "correct_answer": "B",
+      "code_example": "value = int('hello')"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which file mode would you use to open a file for both reading and writing, creating the file if it doesn't exist and positioning the cursor at the beginning of the file?",
+      "options": {
+        "A": "'r+'",
+        "B": "'w+'",
+        "C": "'a+'",
+        "D": "'rb+'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code performing a simple statistical calculation?",
+      "options": {
+        "A": "4.0",
+        "B": "4",
+        "C": "4.5",
+        "D": "5"
+      },
+      "correct_answer": "C",
+      "code_example": "numbers = [2, 3, 5, 8]\n\ndef mean(nums):\n    return sum(nums) / len(nums)\n\nprint(mean(numbers))"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following FizzBuzz implementation for the first 5 numbers?",
+      "options": {
+        "A": "[1, 2, 'Fizz', 4, 'Buzz']",
+        "B": "['Fizz', 'Buzz', 'FizzBuzz', 'Fizz', 'Buzz']",
+        "C": "[1, 2, 'Fizz', 4, 'Buzz']",
+        "D": "['FizzBuzz', 'FizzBuzz', 'FizzBuzz', 'FizzBuzz', 'FizzBuzz']"
+      },
+      "correct_answer": "C",
+      "code_example": "def fizzbuzz(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 3 == 0 and i % 5 == 0:\n            result.append('FizzBuzz')\n        elif i % 3 == 0:\n            result.append('Fizz')\n        elif i % 5 == 0:\n            result.append('Buzz')\n        else:\n            result.append(i)\n    return result\n\nprint(fizzbuzz(5))"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What happens when you use a context manager with the 'with' statement to open a file?",
+      "options": {
+        "A": "The file is automatically compressed after writing",
+        "B": "The file is automatically closed when the block ends, even if there's an exception",
+        "C": "The file is locked from other processes",
+        "D": "The file contents are automatically encrypted"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using conditional expressions?",
+      "options": {
+        "A": "'teenager'",
+        "B": "'adult'",
+        "C": "'child'",
+        "D": "SyntaxError"
+      },
+      "correct_answer": "B",
+      "code_example": "age = 25\nstatus = 'child' if age < 13 else 'teenager' if age < 18 else 'adult'\nprint(status)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using dictionary methods?",
+      "options": {
+        "A": "['a', 'b', 'c']",
+        "B": "[1, 2, 3]",
+        "C": "dict_keys(['a', 'b', 'c'])",
+        "D": "dict_values([1, 2, 3])"
+      },
+      "correct_answer": "C",
+      "code_example": "my_dict = {'a': 1, 'b': 2, 'c': 3}\nprint(my_dict.keys())"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a primitive type in Python?",
+      "options": {
+        "A": "int",
+        "B": "str",
+        "C": "array",
+        "D": "bool"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using string methods?",
+      "options": {
+        "A": "['hello', 'world']",
+        "B": "'hello-world'",
+        "C": "'hello world'",
+        "D": "['hello-world']"
+      },
+      "correct_answer": "B",
+      "code_example": "words = ['hello', 'world']\nprint('-'.join(words))"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the content of the file 'numbers.txt' after running the following code?",
+      "options": {
+        "A": "1\n2\n3\n4\n5",
+        "B": "12345",
+        "C": "[1, 2, 3, 4, 5]",
+        "D": "1 2 3 4 5"
+      },
+      "correct_answer": "A",
+      "code_example": "with open('numbers.txt', 'w') as f:\n    for i in range(1, 6):\n        f.write(f\"{i}\\n\")"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following list comprehension?",
+      "options": {
+        "A": "[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]",
+        "B": "[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]",
+        "C": "[1, 4, 9, 16, 25, 36, 49, 64, 81]",
+        "D": "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]"
+      },
+      "correct_answer": "A",
+      "code_example": "squares = [x**2 for x in range(10)]\nprint(squares)"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What is the correct way to create a custom exception in Python?",
+      "options": {
+        "A": "class MyError(Error): pass",
+        "B": "class MyError extends Exception: pass",
+        "C": "class MyError(Exception): pass",
+        "D": "def MyError(): raise Exception"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that works with a CSV file?",
+      "options": {
+        "A": "['Name,Age,City', 'Alice,30,New York', 'Bob,25,Los Angeles']",
+        "B": "[['Name', 'Age', 'City'], ['Alice', '30', 'New York'], ['Bob', '25', 'Los Angeles']]",
+        "C": "{'Name': ['Alice', 'Bob'], 'Age': ['30', '25'], 'City': ['New York', 'Los Angeles']}",
+        "D": "Error: missing import statement"
+      },
+      "correct_answer": "B",
+      "code_example": "import csv\n\ncsv_data = \"\"\"Name,Age,City\nAlice,30,New York\nBob,25,Los Angeles\"\"\"\n\nwith open('data.csv', 'w') as f:\n    f.write(csv_data)\n\nwith open('data.csv', 'r') as f:\n    reader = csv.reader(f)\n    data = list(reader)\n\nprint(data)"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the requests library?",
+      "options": {
+        "A": "A Response object",
+        "B": "HTML content of the page",
+        "C": "HTTP status code as an integer",
+        "D": "The URL that was requested"
+      },
+      "correct_answer": "C",
+      "code_example": "import requests\n\ndef get_status_code(url):\n    response = requests.get(url)\n    return response.status_code\n\nprint(type(get_status_code('https://www.example.com')))"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code implementing the two-pointer technique?",
+      "options": {
+        "A": "[]",
+        "B": "[(1, 4), (2, 3)]",
+        "C": "[(1, 4)]",
+        "D": "[(2, 3)]"
+      },
+      "correct_answer": "B",
+      "code_example": "def find_pairs_with_sum(arr, target):\n    arr.sort()\n    left, right = 0, len(arr) - 1\n    result = []\n    \n    while left < right:\n        current_sum = arr[left] + arr[right]\n        if current_sum == target:\n            result.append((arr[left], arr[right]))\n            left += 1\n            right -= 1\n        elif current_sum < target:\n            left += 1\n        else:\n            right -= 1\n            \n    return result\n\nprint(find_pairs_with_sum([1, 2, 3, 4], 5))"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which of the following is most suitable for creating a simple API endpoint using Flask?",
+      "options": {
+        "A": "@app.route('/api/data', methods=['GET'])\ndef get_data(): return jsonify({'data': 'value'})",
+        "B": "@app.endpoint('/api/data')\ndef get_data(): return json.dumps({'data': 'value'})",
+        "C": "@flask.api('/api/data')\ndef get_data(): return {'data': 'value'}",
+        "D": "app.create_endpoint('/api/data', lambda: {'data': 'value'})"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using a decorator with arguments?",
+      "options": {
+        "A": "calling greet with argument: Hello",
+        "B": "calling add with arguments: 3, 5",
+        "C": "add result: 8",
+        "D": "first calling add with arguments: 3, 5\nadd result: 8"
+      },
+      "correct_answer": "D",
+      "code_example": "def log_with_prefix(prefix):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            print(f\"{prefix} calling {func.__name__} with arguments: {', '.join(map(str, args))}\")\n            result = func(*args, **kwargs)\n            print(f\"{func.__name__} result: {result}\")\n            return result\n        return wrapper\n    return decorator\n\n@log_with_prefix('first')\ndef add(a, b):\n    return a + b\n\nadd(3, 5)"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using dictionary and set comprehensions?",
+      "options": {
+        "A": "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16}",
+        "B": "{0: 0, 2: 4, 4: 16}",
+        "C": "{1: 1, 3: 9}",
+        "D": "{0, 1, 4, 9, 16}"
+      },
+      "correct_answer": "B",
+      "code_example": "numbers = range(5)\neven_squares = {x: x**2 for x in numbers if x % 2 == 0}\nprint(even_squares)"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using lambda functions?",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]",
+        "B": "[1, 8, 27, 64, 125]",
+        "C": "[[1, 1], [2, 4], [3, 9], [4, 16], [5, 25]]",
+        "D": "[(1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]"
+      },
+      "correct_answer": "D",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nresult = list(map(lambda x: (x, x**2), numbers))\nprint(result)"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What is the time complexity of looking up a value in a Python dictionary?",
+      "options": {
+        "A": "O(1) on average",
+        "B": "O(log n)",
+        "C": "O(n)",
+        "D": "O(n log n)"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "Which of the following regular expressions is most efficient for matching a valid email address format?",
+      "options": {
+        "A": "^.*@.*\\..*$",
+        "B": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+        "C": "^\\w+@\\w+\\.\\w+$",
+        "D": ".*@.*\\..*"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using nested data structures?",
+      "options": {
+        "A": "['Alice', 'Bob', 'Charlie']",
+        "B": "[30, 25, 35]",
+        "C": "['New York', 'Los Angeles', 'Chicago']",
+        "D": "[35, 30, 25]"
+      },
+      "correct_answer": "A",
+      "code_example": "people = [\n    {'name': 'Alice', 'age': 30, 'city': 'New York'},\n    {'name': 'Bob', 'age': 25, 'city': 'Los Angeles'},\n    {'name': 'Charlie', 'age': 35, 'city': 'Chicago'}\n]\n\nnames = [person['name'] for person in people]\nprint(names)"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using named tuples?",
+      "options": {
+        "A": "('Alice', 30)",
+        "B": "Person(name='Alice', age=30)",
+        "C": "{'name': 'Alice', 'age': 30}",
+        "D": "Alice is 30 years old"
+      },
+      "correct_answer": "B",
+      "code_example": "from collections import namedtuple\n\nPerson = namedtuple('Person', ['name', 'age'])\np = Person('Alice', 30)\nprint(p)"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating inheritance?",
+      "options": {
+        "A": "Vehicle started\nCar started with fuel type: gasoline",
+        "B": "Vehicle started\nVehicle started",
+        "C": "Car started with fuel type: gasoline",
+        "D": "Error: method overriding not properly implemented"
+      },
+      "correct_answer": "A",
+      "code_example": "class Vehicle:\n    def start(self):\n        print(\"Vehicle started\")\n\nclass Car(Vehicle):\n    def __init__(self, fuel_type):\n        self.fuel_type = fuel_type\n        \n    def start(self):\n        super().start()\n        print(f\"Car started with fuel type: {self.fuel_type}\")\n\nmy_car = Car(\"gasoline\")\nmy_car.start()"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the collections module?",
+      "options": {
+        "A": "Counter({'a': 3, 'b': 2, 'c': 1})",
+        "B": "{'a': 3, 'b': 2, 'c': 1}",
+        "C": "defaultdict(<class 'int'>, {'a': 3, 'b': 2, 'c': 1})",
+        "D": "OrderedDict([('a', 3), ('b', 2), ('c', 1)])"
+      },
+      "correct_answer": "A",
+      "code_example": "from collections import Counter\n\ntext = \"aabac\"\ncounter = Counter(text)\nprint(counter)"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code comparing generator expressions and list comprehensions?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "<generator object <genexpr> at 0x...>",
+        "D": "[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]"
+      },
+      "correct_answer": "B",
+      "code_example": "list_comp = [x**2 for x in range(10)]\ngen_exp = (x**2 for x in range(10))\n\nprint(list_comp == gen_exp)"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following binary search implementation?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "-1",
+        "D": "None"
+      },
+      "correct_answer": "A",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n            \n    return -1\n\nnumbers = [1, 3, 5, 7, 9, 11, 13, 15]\nprint(binary_search(numbers, 9))"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using property decorators?",
+      "options": {
+        "A": "Setting temperature to 37.0\nGetting temperature\n37.0",
+        "B": "37.0\nGetting temperature\n37.0",
+        "C": "Setting temperature to 37.0\n98.6",
+        "D": "37.0\n98.6"
+      },
+      "correct_answer": "C",
+      "code_example": "class Temperature:\n    def __init__(self, celsius=0):\n        self._celsius = celsius\n        \n    @property\n    def celsius(self):\n        print(\"Getting temperature\")\n        return self._celsius\n    \n    @celsius.setter\n    def celsius(self, value):\n        print(f\"Setting temperature to {value}\")\n        self._celsius = value\n        \n    @property\n    def fahrenheit(self):\n        return self.celsius * 9/5 + 32\n\ntemp = Temperature()\ntemp.celsius = 37.0\nprint(temp.fahrenheit)"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using recursion with memoization?",
+      "options": {
+        "A": "55",
+        "B": "89",
+        "C": "144",
+        "D": "233"
+      },
+      "correct_answer": "B",
+      "code_example": "def fibonacci(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 1:\n        return n\n    memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)\n    return memo[n]\n\nprint(fibonacci(11))"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which of the following statements about memoization and tabulation in dynamic programming is correct?",
+      "options": {
+        "A": "Memoization is always more memory-efficient than tabulation",
+        "B": "Tabulation uses a top-down approach while memoization uses a bottom-up approach",
+        "C": "Memoization can handle problems with cycles in their dependency graph better than tabulation",
+        "D": "Memoization stores results of subproblems in a data structure and reuses them when needed"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates a class decorator?",
+      "options": {
+        "A": "True, 10",
+        "B": "False, 10",
+        "C": "True, 5",
+        "D": "False, 5"
+      },
+      "correct_answer": "A",
+      "code_example": "def add_methods(cls):\n    cls.is_decorated = lambda self: True\n    return cls\n\n@add_methods\nclass MyClass:\n    def __init__(self, value):\n        self.value = value\n\nobj = MyClass(10)\nprint(obj.is_decorated(), obj.value)"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What is the correct sequence of nodes visited in an in-order traversal of the following binary tree?",
+      "options": {
+        "A": "A, B, C, D, E, F, G",
+        "B": "D, B, E, A, F, C, G",
+        "C": "A, B, D, E, C, F, G",
+        "D": "D, E, B, F, G, C, A"
+      },
+      "correct_answer": "B",
+      "code_example": "class Node:\n    def __init__(self, value, left=None, right=None):\n        self.value = value\n        self.left = left\n        self.right = right\n\ndef in_order_traversal(node, result=None):\n    if result is None:\n        result = []\n    if node:\n        in_order_traversal(node.left, result)\n        result.append(node.value)\n        in_order_traversal(node.right, result)\n    return result\n\n# Tree structure:\n#       A\n#     /   \\\n#    B     C\n#   / \\   / \\\n#  D   E F   G\n\nD = Node('D')\nE = Node('E')\nF = Node('F')\nG = Node('G')\nB = Node('B', D, E)\nC = Node('C', F, G)\nA = Node('A', B, C)\n\n# Uncomment to verify\n# print(in_order_traversal(A))"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What is the primary advantage of WebSockets over traditional HTTP when implementing real-time applications?",
+      "options": {
+        "A": "WebSockets encrypt all data automatically",
+        "B": "WebSockets maintain a persistent connection, reducing latency and overhead",
+        "C": "WebSockets automatically scale connections based on server load",
+        "D": "WebSockets ensure delivery of all messages in order even in poor network conditions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates Python's garbage collection behavior?",
+      "options": {
+        "A": "Object initialized\\nObject destroyed",
+        "B": "Object initialized\\nCycle created\\nObject destroyed",
+        "C": "Object initialized\\nCycle created",
+        "D": "Object initialized\\nCycle created\\nCollector ran\\nObject destroyed"
+      },
+      "correct_answer": "D",
+      "code_example": "import gc\n\nclass Node:\n    def __init__(self):\n        print(\"Object initialized\")\n        self.ref = None\n    \n    def __del__(self):\n        print(\"Object destroyed\")\n\n# Create a reference cycle\nnode1 = Node()\nnode2 = Node()\nnode1.ref = node2\nnode2.ref = node1\n\nprint(\"Cycle created\")\n\n# Remove references and force collection\nnode1 = None\nnode2 = None\nprint(\"Collector ran\")\ngc.collect()"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the result of the following segment tree implementation when querying for the minimum value in the range [1, 4]?",
+      "options": {
+        "A": "2",
+        "B": "1",
+        "C": "3",
+        "D": "5"
+      },
+      "correct_answer": "B",
+      "code_example": "class SegmentTree:\n    def __init__(self, arr):\n        self.n = len(arr)\n        self.tree = [0] * (4 * self.n)\n        self._build(arr, 1, 0, self.n - 1)\n    \n    def _build(self, arr, node, start, end):\n        if start == end:\n            self.tree[node] = arr[start]\n        else:\n            mid = (start + end) // 2\n            self._build(arr, 2 * node, start, mid)\n            self._build(arr, 2 * node + 1, mid + 1, end)\n            self.tree[node] = min(self.tree[2 * node], self.tree[2 * node + 1])\n    \n    def query_min(self, node, start, end, l, r):\n        if r < start or end < l:\n            return float('inf')\n        if l <= start and end <= r:\n            return self.tree[node]\n        mid = (start + end) // 2\n        left_min = self.query_min(2 * node, start, mid, l, r)\n        right_min = self.query_min(2 * node + 1, mid + 1, end, l, r)\n        return min(left_min, right_min)\n    \n    def range_min_query(self, l, r):\n        return self.query_min(1, 0, self.n - 1, l, r)\n\n# Array: [5, 1, 4, 3, 8, 6]\narr = [5, 1, 4, 3, 8, 6]\nst = SegmentTree(arr)\nresult = st.range_min_query(1, 4)  # Query minimum in range [1, 4] (0-indexed)\n# Uncomment to verify\n# print(result)"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "In the context of network flow problems, what does the Ford-Fulkerson algorithm calculate?",
+      "options": {
+        "A": "The shortest path between two nodes in a weighted graph",
+        "B": "The maximum flow that can be sent from a source to a sink in a flow network",
+        "C": "The minimum spanning tree of a connected graph",
+        "D": "The optimal assignment of tasks to resources to minimize total cost"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output when profiling the following code using cProfile?",
+      "options": {
+        "A": "The recursion will cause a stack overflow",
+        "B": "The function fib(30) will take significantly longer than fib(20)",
+        "C": "Both function calls will take roughly the same time",
+        "D": "The profiler will show exactly 1,346,269 function calls for calculating fib(30)"
+      },
+      "correct_answer": "D",
+      "code_example": "import cProfile\n\ndef fib(n):\n    if n <= 1:\n        return n\n    return fib(n-1) + fib(n-2)\n\ndef profile_fibonacci():\n    # Profile the execution of fib(30)\n    cProfile.run('fib(30)')\n\n# Expected output fragment:\n# 1346269 function calls (4 primitive calls) in 0.307 seconds\n\n# Uncomment to verify\n# profile_fibonacci()"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following FastAPI route handler that demonstrates asynchronous operations?",
+      "options": {
+        "A": "Processing request for item 42\\nWaiting 1 second\\nItem 42 processed",
+        "B": "Processing request for item 42\\nItem 42 processed\\nWaiting 1 second",
+        "C": "Item 42 processed\\nProcessing request for item 42\\nWaiting 1 second",
+        "D": "Waiting 1 second\\nProcessing request for item 42\\nItem 42 processed"
+      },
+      "correct_answer": "A",
+      "code_example": "import asyncio\nfrom fastapi import FastAPI\n\napp = FastAPI()\n\nasync def process_item(item_id: int):\n    print(f\"Processing request for item {item_id}\")\n    print(\"Waiting 1 second\")\n    await asyncio.sleep(1)  # Simulating I/O operation\n    print(f\"Item {item_id} processed\")\n    return {\"item_id\": item_id, \"status\": \"processed\"}\n\n@app.get(\"/items/{item_id}\")\nasync def read_item(item_id: int):\n    result = await process_item(item_id)\n    return result\n\n# Simulating a FastAPI request with item_id=42\nasync def simulate_request():\n    await process_item(42)\n\n# Run in asyncio event loop\n# Uncomment to verify\n# asyncio.run(simulate_request())"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "Which of the following actions would NOT typically improve the performance of a slow SQL query in a Python application?",
+      "options": {
+        "A": "Adding appropriate indexes to the database tables",
+        "B": "Using an ORM's lazy loading feature for all relationships",
+        "C": "Rewriting the query to use more specific conditions",
+        "D": "Implementing query result caching for frequently accessed data"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of this web scraping code that follows ethical scraping practices?",
+      "options": {
+        "A": "An error due to missing user-agent information",
+        "B": "Scraped data followed by a 2-second delay",
+        "C": "2-second delay followed by scraped data",
+        "D": "An error due to robots.txt restrictions"
+      },
+      "correct_answer": "C",
+      "code_example": "import requests\nimport time\nfrom urllib.robotparser import RobotFileParser\n\ndef ethical_scrape(url):\n    # Set up proper headers with user agent\n    headers = {\n        'User-Agent': 'PythonScraper/1.0 (Educational purposes)',\n    }\n    \n    # Check robots.txt first\n    rp = RobotFileParser()\n    rp.set_url(url.split('/')[0] + '//' + url.split('/')[2] + '/robots.txt')\n    try:\n        rp.read()\n        can_fetch = rp.can_fetch(headers['User-Agent'], url)\n    except:\n        # In case robots.txt cannot be fetched, assume we can proceed\n        can_fetch = True\n    \n    if not can_fetch:\n        return \"Respecting robots.txt: URL cannot be scraped\"\n    \n    # Implement rate limiting\n    print(\"Waiting for 2 seconds before request\")\n    time.sleep(2)  # Wait for 2 seconds to avoid overwhelming the server\n    \n    # Make the request\n    response = requests.get(url, headers=headers)\n    if response.status_code == 200:\n        return \"Scraped successfully with status code 200\"\n    else:\n        return f\"Failed with status code {response.status_code}\"\n\n# For demonstration/testing purposes only - replace with a real test URL\ndef simulate_ethical_scrape():\n    print(\"Waiting for 2 seconds before request\")\n    time.sleep(2)\n    print(\"Scraped successfully with status code 200\")\n\n# Uncomment to verify\n# simulate_ethical_scrape()"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "When using Cython with a C extension, what will be the approximate speedup of the optimized Fibonacci function compared to the pure Python version for calculating fib(30)?",
+      "options": {
+        "A": "No significant speedup as recursion overhead dominates",
+        "B": "Around 10-20x faster",
+        "C": "Around 100-200x faster",
+        "D": "Over 1000x faster"
+      },
+      "correct_answer": "C",
+      "code_example": "# Pure Python (slow)\ndef fib_py(n):\n    if n <= 1:\n        return n\n    return fib_py(n-1) + fib_py(n-2)\n\n# Cython code (in a .pyx file):\n\"\"\"\ncdef int fib_cython(int n) nogil:\n    if n <= 1:\n        return n\n    return fib_cython(n-1) + fib_cython(n-2)\n\ndef fib_wrapper(n):\n    return fib_cython(n)\n\"\"\"\n\n# Example usage and timing (not actual code to run)\n\"\"\"\nimport time\nfrom fibonacci_cython import fib_wrapper\n\ndef measure_speedup():\n    start = time.time()\n    result_py = fib_py(30)\n    py_time = time.time() - start\n    \n    start = time.time()\n    result_cy = fib_wrapper(30)\n    cy_time = time.time() - start\n    \n    return py_time / cy_time  # Speedup factor\n\"\"\""
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of running the following randomized QuickSort implementation 3 times with the same input?",
+      "options": {
+        "A": "The code will produce different pivot selections each time but always the same sorted result",
+        "B": "The code will produce the same pivot selections each time because the seed is fixed",
+        "C": "The code will error because choosing random pivots makes the algorithm unstable",
+        "D": "The code will sometimes fail to sort the array correctly due to randomization"
+      },
+      "correct_answer": "A",
+      "code_example": "import random\n\ndef randomized_quicksort(arr, low, high):\n    if low < high:\n        pivot_idx = random_partition(arr, low, high)\n        randomized_quicksort(arr, low, pivot_idx - 1)\n        randomized_quicksort(arr, pivot_idx + 1, high)\n    return arr\n\ndef random_partition(arr, low, high):\n    # Choose a random pivot\n    pivot_idx = random.randint(low, high)\n    # Swap the randomly chosen pivot with the last element\n    arr[pivot_idx], arr[high] = arr[high], arr[pivot_idx]\n    # Proceed with regular partition\n    return partition(arr, low, high)\n\ndef partition(arr, low, high):\n    pivot = arr[high]\n    i = low - 1\n    for j in range(low, high):\n        if arr[j] <= pivot:\n            i += 1\n            arr[i], arr[j] = arr[j], arr[i]\n    arr[i + 1], arr[high] = arr[high], arr[i + 1]\n    return i + 1\n\n# Test runs\ndef test_randomized_sort():\n    test_array = [7, 2, 1, 6, 8, 5, 3, 4]\n    for run in range(3):\n        array_copy = test_array.copy()\n        print(f\"Run {run+1} - Original: {array_copy}\")\n        result = randomized_quicksort(array_copy, 0, len(array_copy) - 1)\n        print(f\"Run {run+1} - Sorted: {result}\")\n        \n    # Expected results:\n    # Despite possibly different pivot choices, all runs will sort correctly\n    # [1, 2, 3, 4, 5, 6, 7, 8]\n\n# Uncomment to verify\n# test_randomized_sort()"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "Which of the following approximation algorithms provides a 2-approximation for the Vertex Cover problem?",
+      "options": {
+        "A": "Greedily select vertices with the highest degree until all edges are covered",
+        "B": "Select all vertices that form a maximal independent set in the graph",
+        "C": "Randomly select half of the vertices in the graph",
+        "D": "Select both endpoints of each edge in a maximal matching"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates a CPython implementation detail?",
+      "options": {
+        "A": "True, True, False",
+        "B": "True, False, False",
+        "C": "True, True, True",
+        "D": "False, False, False"
+      },
+      "correct_answer": "B",
+      "code_example": "# CPython implementation detail: integer interning\na = 256\nb = 256\nc = 257\nd = 257\ne = 1000\nf = 1000\n\n# Compare identity (is) vs equality (==)\nprint(a is b, c is d, e is f)\n\n# CPython interns small integers (typically -5 to 256)\n# so 'a is b' is True because they reference the same object\n# but 'c is d' and 'e is f' are False because larger integers\n# are not interned"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which architectural pattern best describes a microservices implementation where services communicate by publishing events to a message broker that other services can subscribe to?",
+      "options": {
+        "A": "Request-Response Pattern",
+        "B": "Circuit Breaker Pattern",
+        "C": "Event-Driven Architecture",
+        "D": "API Gateway Pattern"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
