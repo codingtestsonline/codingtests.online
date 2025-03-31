@@ -1,0 +1,612 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that creates a custom exception?",
+      "options": {
+        "A": "Invalid age: 17",
+        "B": "Exception: Invalid age: 17",
+        "C": "AgeError: Invalid age: 17",
+        "D": "ValueError: Invalid age: 17"
+      },
+      "correct_answer": "C",
+      "code_example": "class AgeError(Exception):\n    pass\n\ndef validate_age(age):\n    if age < 18:\n        raise AgeError(f\"Invalid age: {age}\")\n    return \"Age is valid\"\n\ntry:\n    validate_age(17)\nexcept AgeError as e:\n    print(f\"AgeError: {e}\")"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will the following string methods code output?",
+      "options": {
+        "A": "['apple', 'banana', 'cherry']",
+        "B": "apple-banana-cherry",
+        "C": "apple banana cherry",
+        "D": "applebananacherry"
+      },
+      "correct_answer": "B",
+      "code_example": "fruits = \"apple, banana, cherry\"\nclean_fruits = [fruit.strip() for fruit in fruits.split(\",\")]\nresult = \"-\".join(clean_fruits)\nprint(result)"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the purpose of using a context manager (with statement) in Python?",
+      "options": {
+        "A": "To create global variables that persist throughout the program",
+        "B": "To automatically manage resources by handling setup and teardown operations",
+        "C": "To prevent other functions from accessing variables in the current scope",
+        "D": "To create temporary variables that are only accessible within the with block"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using multi-line strings?",
+      "options": {
+        "A": "Hello\\nWorld",
+        "B": "Hello\\\\nWorld",
+        "C": "Hello\nWorld",
+        "D": "HelloWorld"
+      },
+      "correct_answer": "C",
+      "code_example": "message = \"\"\"Hello\nWorld\"\"\"\nprint(message)"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the output of the binary search implementation below when searching for value 7?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "-1",
+        "D": "None"
+      },
+      "correct_answer": "A",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return -1\n\nnumbers = [1, 3, 5, 7, 9, 11]\nresult = binary_search(numbers, 7)\nprint(result)"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be printed by the following code using try/except/else/finally blocks?",
+      "options": {
+        "A": "Start\nError occurred: division by zero\nEnd",
+        "B": "Start\nError occurred: division by zero",
+        "C": "Start\nEnd",
+        "D": "Start\nOperation successful\nEnd"
+      },
+      "correct_answer": "A",
+      "code_example": "def divide(a, b):\n    try:\n        result = a / b\n    except ZeroDivisionError as e:\n        print(f\"Error occurred: {e}\")\n    else:\n        print(\"Operation successful\")\n    finally:\n        print(\"End\")\n\nprint(\"Start\")\ndivide(10, 0)"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "When opening a file with mode 'a+b', what operations are permitted?",
+      "options": {
+        "A": "Read only in binary mode",
+        "B": "Write only in binary mode",
+        "C": "Append only in binary mode",
+        "D": "Both read and append in binary mode"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using a while loop with break and continue statements?",
+      "options": {
+        "A": "1\n3\n5\n7\n9",
+        "B": "1\n3\n5",
+        "C": "1\n3\n5\n7",
+        "D": "3\n5"
+      },
+      "correct_answer": "B",
+      "code_example": "i = 0\nwhile i < 10:\n    i += 1\n    if i % 2 == 0:  # Skip even numbers\n        continue\n    if i > 5:       # Stop after 5\n        break\n    print(i)"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using default parameters?",
+      "options": {
+        "A": "Hello, Guest!",
+        "B": "Hello, World!",
+        "C": "Hello, Alice!",
+        "D": "Hello, Guest! Hello, Alice!"
+      },
+      "correct_answer": "D",
+      "code_example": "def greet(name=\"Guest\"):\n    return f\"Hello, {name}!\"\n    \nprint(greet(), greet(\"Alice\"))"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the median value in the following list of numbers?",
+      "options": {
+        "A": "4",
+        "B": "4.5",
+        "C": "5",
+        "D": "3"
+      },
+      "correct_answer": "B",
+      "code_example": "def find_median(numbers):\n    sorted_numbers = sorted(numbers)\n    n = len(sorted_numbers)\n    if n % 2 == 0:  # Even length\n        return (sorted_numbers[n//2 - 1] + sorted_numbers[n//2]) / 2\n    else:          # Odd length\n        return sorted_numbers[n//2]\n\nnumbers = [3, 1, 7, 4, 6, 8]\nprint(find_median(numbers))"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using different string formatting methods?",
+      "options": {
+        "A": "Alice is 30 years old and has $1,234.56\nAlice is 30 years old and has $1,234.56\nAlice is 30 years old and has $1,234.56",
+        "B": "Alice is 30 years old and has $1,234.56\nAlice is 30 years old and has $1,234.56\nAlice is 30 years old and has $1,234.56",
+        "C": "Alice is 30 years old and has $1234.56\nAlice is 30 years old and has $1234.56\nAlice is 30 years old and has $1234.56",
+        "D": "Alice is 30 years old and has $1,234.56\nAlice is 30 years old and has $1,234.56\nAlice is 30 years old and has 1234.56"
+      },
+      "correct_answer": "C",
+      "code_example": "name = \"Alice\"\nage = 30\nmoney = 1234.56\n\n# f-string\nstr1 = f\"{name} is {age} years old and has ${money}\"\n\n# .format()\nstr2 = \"{} is {} years old and has ${}\".format(name, age, money)\n\n# %-formatting\nstr3 = \"%s is %d years old and has $%s\" % (name, age, money)\n\nprint(str1)\nprint(str2)\nprint(str3)"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using set methods?",
+      "options": {
+        "A": "{1, 2, 3, 4, 5, 6, 7, 8}",
+        "B": "{1, 2, 3, 4}",
+        "C": "{3, 4}",
+        "D": "{1, 2, 5, 6, 7, 8}"
+      },
+      "correct_answer": "C",
+      "code_example": "set1 = {1, 2, 3, 4}\nset2 = {3, 4, 5, 6, 7, 8}\n\nset1.intersection_update(set2)\nprint(set1)"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using for loops with range, enumerate, and zip?",
+      "options": {
+        "A": "0: A-X\n1: B-Y\n2: C-Z",
+        "B": "1: A-X\n2: B-Y\n3: C-Z",
+        "C": "A: X\nB: Y\nC: Z",
+        "D": "A-X\nB-Y\nC-Z"
+      },
+      "correct_answer": "A",
+      "code_example": "letters1 = ['A', 'B', 'C']\nletters2 = ['X', 'Y', 'Z']\n\nfor i, (l1, l2) in enumerate(zip(letters1, letters2)):\n    print(f\"{i}: {l1}-{l2}\")"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the result of the following selection sort implementation?",
+      "options": {
+        "A": "[1, 3, 5, 7, 9]",
+        "B": "[9, 7, 5, 3, 1]",
+        "C": "[1, 3, 5, 7]",
+        "D": "[1, 3, 5, 7, 9, 9]"
+      },
+      "correct_answer": "A",
+      "code_example": "def selection_sort(arr):\n    for i in range(len(arr)):\n        # Find minimum element in the unsorted part\n        min_idx = i\n        for j in range(i + 1, len(arr)):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        \n        # Swap the found minimum element with the element at index i\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    \n    return arr\n\nnumbers = [9, 3, 5, 1, 7]\nprint(selection_sort(numbers))"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a primitive type in Python?",
+      "options": {
+        "A": "int",
+        "B": "float",
+        "C": "array",
+        "D": "bool"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using type conversion and checking?",
+      "options": {
+        "A": "True\nFalse",
+        "B": "False\nTrue",
+        "C": "True\nTrue",
+        "D": "False\nFalse"
+      },
+      "correct_answer": "B",
+      "code_example": "num_str = \"42\"\nnum = int(num_str)\n\nprint(isinstance(num_str, int))\nprint(isinstance(num, int))"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using named tuples?",
+      "options": {
+        "A": "Person(name='Alice', age=30)\nAlice is 30 years old",
+        "B": "Person(name='Alice', age=30)\nAlice is 25 years old",
+        "C": "namedtuple object\nAlice is 30 years old",
+        "D": "Person(name='Alice', age=25)\nAlice is 25 years old"
+      },
+      "correct_answer": "A",
+      "code_example": "from collections import namedtuple\n\nPerson = namedtuple('Person', ['name', 'age'])\n\nperson = Person('Alice', 30)\nprint(person)\nprint(f\"{person.name} is {person.age} years old\")"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following is the correct way to establish a connection to a SQLite database in Python?",
+      "options": {
+        "A": "connection = sqlite3.connect('database.db')",
+        "B": "connection = sqlite3.open('database.db')",
+        "C": "connection = sqlite3.db('database.db')",
+        "D": "connection = sqlite3.createConnection('database.db')"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using a decorator with arguments?",
+      "options": {
+        "A": "Running add with arguments: (3, 5)\nResult: 8",
+        "B": "Decorator called with debug=True\nRunning add with arguments: (3, 5)\nResult: 8",
+        "C": "Running add with arguments: (3, 5)\nDecorator called with debug=True\nResult: 8",
+        "D": "Decorator called with debug=True\nResult: 8"
+      },
+      "correct_answer": "B",
+      "code_example": "def debug_function(debug=False):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            if debug:\n                print(f\"Decorator called with debug={debug}\")\n                print(f\"Running {func.__name__} with arguments: {args}\")\n            result = func(*args, **kwargs)\n            print(f\"Result: {result}\")\n            return result\n        return wrapper\n    return decorator\n\n@debug_function(debug=True)\ndef add(a, b):\n    return a + b\n\nadd(3, 5)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using lambda functions?",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]",
+        "B": "[1, 4, 9, 16]",
+        "C": "[1, 3, 5, 7, 9]",
+        "D": "[1, 8, 27, 64, 125]"
+      },
+      "correct_answer": "A",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nsquared = list(map(lambda x: x**2, numbers))\nprint(squared)"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a benefit of lazy evaluation in Python?",
+      "options": {
+        "A": "Reduced memory usage",
+        "B": "Ability to work with infinite sequences",
+        "C": "Improved performance for all operations",
+        "D": "Avoiding unnecessary computations"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which of the following is an example of a greedy algorithm?",
+      "options": {
+        "A": "Breadth-first search",
+        "B": "Dijkstra's shortest path algorithm",
+        "C": "Binary search",
+        "D": "Merge sort"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using JSON parsing and serialization?",
+      "options": {
+        "A": "{'name': 'Alice', 'age': 30, 'city': 'New York'}\n<class 'dict'>",
+        "B": "{'name': 'Alice', 'age': 30, 'city': 'New York'}\n<class 'str'>",
+        "C": "{\"name\": \"Alice\", \"age\": 30, \"city\": \"New York\"}\n<class 'str'>",
+        "D": "{\"name\": \"Alice\", \"age\": 30, \"city\": \"New York\"}\n<class 'dict'>"
+      },
+      "correct_answer": "A",
+      "code_example": "import json\n\n# JSON string\njson_string = '{\"name\": \"Alice\", \"age\": 30, \"city\": \"New York\"}'\n\n# Parse JSON\nparsed_json = json.loads(json_string)\n\n# Print and check type\nprint(parsed_json)\nprint(type(parsed_json))"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "Which of the following statements about absolute vs. relative imports in Python is correct?",
+      "options": {
+        "A": "Absolute imports always begin with a dot (.)",
+        "B": "Relative imports use the full path from the project root",
+        "C": "Absolute imports are usually more resilient to code reorganization",
+        "D": "Relative imports are the recommended approach in all scenarios"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using classes and instances?",
+      "options": {
+        "A": "Dog named Rex says Woof!",
+        "B": "Animal named Rex says Woof!",
+        "C": "Dog named Rex says Generic sound",
+        "D": "AttributeError: 'Dog' object has no attribute 'make_sound'"
+      },
+      "correct_answer": "A",
+      "code_example": "class Animal:\n    def __init__(self, name):\n        self.name = name\n    \n    def make_sound(self):\n        return \"Generic sound\"\n\nclass Dog(Animal):\n    def make_sound(self):\n        return \"Woof!\"\n\nmy_dog = Dog(\"Rex\")\nprint(f\"{my_dog.__class__.__name__} named {my_dog.name} says {my_dog.make_sound()}\")"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that creates an infinite sequence?",
+      "options": {
+        "A": "[0, 1, 1, 2, 3]",
+        "B": "[0, 1, 1, 2, 3, 5]",
+        "C": "[0, 1, 1, 2, 3, 5, 8]",
+        "D": "MemoryError"
+      },
+      "correct_answer": "C",
+      "code_example": "def fibonacci_generator():\n    a, b = 0, 1\n    yield a\n    yield b\n    while True:\n        a, b = b, a + b\n        yield b\n\nfib_gen = fibonacci_generator()\nfib_numbers = [next(fib_gen) for _ in range(7)]\nprint(fib_numbers)"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that detects cycles in a graph?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Cycle detected",
+        "D": "No cycle found"
+      },
+      "correct_answer": "C",
+      "code_example": "def has_cycle(graph):\n    visited = set()\n    rec_stack = set()\n    \n    def dfs(node):\n        visited.add(node)\n        rec_stack.add(node)\n        \n        for neighbor in graph.get(node, []):\n            if neighbor not in visited:\n                if dfs(neighbor):\n                    return True\n            elif neighbor in rec_stack:\n                return True\n        \n        rec_stack.remove(node)\n        return False\n    \n    for node in graph:\n        if node not in visited:\n            if dfs(node):\n                return \"Cycle detected\"\n    \n    return \"No cycle found\"\n\n# Graph represented as adjacency list\ngraph = {\n    1: [2, 3],\n    2: [4],\n    3: [4],\n    4: [5],\n    5: [1]  # This creates a cycle: 1 -> 2 -> 4 -> 5 -> 1\n}\n\nprint(has_cycle(graph))"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "In a web framework like Django, what is the primary purpose of templates?",
+      "options": {
+        "A": "To manage database connections",
+        "B": "To handle form validation",
+        "C": "To separate presentation logic from business logic",
+        "D": "To optimize SQL queries"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "Which of the following statements about Python's module search path is correct?",
+      "options": {
+        "A": "The module search path is fixed and cannot be modified",
+        "B": "The module search path is defined by the PYTHONPATH environment variable only",
+        "C": "The module search path is stored in the sys.path list and can be modified during runtime",
+        "D": "The module search path is automatically updated when new packages are installed"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following Flask application code?",
+      "options": {
+        "A": "Hello, World!",
+        "B": "<!DOCTYPE html><html><head><title>Hello</title></head><body><h1>Hello, World!</h1></body></html>",
+        "C": "AttributeError: 'Flask' object has no attribute 'route'",
+        "D": "Error: app.run() not called"
+      },
+      "correct_answer": "A",
+      "code_example": "from flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef hello_world():\n    return 'Hello, World!'\n\n# Assume the following code runs when this script is executed:\n# if __name__ == '__main__':\n#     app.run()\n\n# Simulating a GET request to '/' route for testing purposes\nwith app.test_client() as client:\n    response = client.get('/')\n    print(response.data.decode('utf-8'))"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "Which of the following SQL queries would retrieve all employees with a salary greater than $50,000, sorted by last name in ascending order?",
+      "options": {
+        "A": "SELECT * FROM employees WHERE salary > 50000 SORT BY last_name ASC;",
+        "B": "SELECT * FROM employees WHERE salary > 50000 ORDER BY last_name ASC;",
+        "C": "SELECT * FROM employees WHERE salary > 50000 GROUP BY last_name ASC;",
+        "D": "SELECT * FROM employees HAVING salary > 50000 ORDER BY last_name ASC;"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using nested data structures?",
+      "options": {
+        "A": "['Alice', 'Bob', 'Charlie']",
+        "B": "['New York', 'Los Angeles', 'Chicago']",
+        "C": "[28, 32, 35]",
+        "D": "[{'name': 'Alice', 'age': 28, 'city': 'New York'}, {'name': 'Bob', 'age': 32, 'city': 'Los Angeles'}, {'name': 'Charlie', 'age': 35, 'city': 'Chicago'}]"
+      },
+      "correct_answer": "A",
+      "code_example": "people = [\n    {'name': 'Alice', 'age': 28, 'city': 'New York'},\n    {'name': 'Bob', 'age': 32, 'city': 'Los Angeles'},\n    {'name': 'Charlie', 'age': 35, 'city': 'Chicago'}\n]\n\nnames = [person['name'] for person in people]\nprint(names)"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates a race condition and how thread synchronization with locks works?",
+      "code_example": "import threading\n\ncounter = 0\nlock = threading.Lock()\n\ndef increment_with_lock():\n    global counter\n    for _ in range(100000):\n        with lock:\n            counter += 1\n\ndef increment_without_lock():\n    global counter\n    for _ in range(100000):\n        counter += 1\n\n# Reset counter and run with lock\ncounter = 0\nthreads = []\nfor _ in range(5):\n    t = threading.Thread(target=increment_with_lock)\n    threads.append(t)\n    t.start()\n\nfor t in threads:\n    t.join()\n\nprint(f\"With lock: {counter}\")\n\n# Reset counter and run without lock\ncounter = 0\nthreads = []\nfor _ in range(5):\n    t = threading.Thread(target=increment_without_lock)\n    threads.append(t)\n    t.start()\n\nfor t in threads:\n    t.join()\n\nprint(f\"Without lock: {counter}\")",
+      "options": {
+        "A": "With lock: 500000, Without lock: 500000",
+        "B": "With lock: 500000, Without lock: A number less than 500000",
+        "C": "With lock: 0, Without lock: 0",
+        "D": "With lock: A number less than 500000, Without lock: A number less than 500000"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Consider a graph represented by the following adjacency list. What is the correct topological sort of this graph?",
+      "code_example": "graph = {\n    'A': ['C', 'D'],\n    'B': ['D', 'E'],\n    'C': ['F'],\n    'D': ['F', 'G'],\n    'E': ['G'],\n    'F': [],\n    'G': []\n}\n\ndef topological_sort(graph):\n    visited = set()\n    result = []\n    \n    def dfs(node):\n        if node in visited:\n            return\n        visited.add(node)\n        \n        for neighbor in graph.get(node, []):\n            dfs(neighbor)\n        \n        result.append(node)\n    \n    for node in graph:\n        dfs(node)\n    \n    return result[::-1]\n\nprint(topological_sort(graph))",
+      "options": {
+        "A": "['A', 'B', 'C', 'D', 'E', 'F', 'G']",
+        "B": "['A', 'B', 'D', 'C', 'E', 'G', 'F']",
+        "C": "['B', 'A', 'D', 'E', 'C', 'G', 'F']",
+        "D": "['B', 'A', 'E', 'D', 'C', 'G', 'F']"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Which of the following statements about the CAP theorem is incorrect?",
+      "options": {
+        "A": "CAP theorem states that a distributed system can only guarantee two out of three properties: Consistency, Availability, and Partition tolerance",
+        "B": "If a network partition occurs, a distributed system can still provide both consistency and availability simultaneously",
+        "C": "MongoDB is an example of a database that typically prioritizes availability and partition tolerance over strong consistency",
+        "D": "In the context of distributed database systems, consistency means that all nodes see the same data at the same time"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating the `concurrent.futures` module?",
+      "code_example": "import concurrent.futures\nimport time\n\ndef process_item(item):\n    time.sleep(1)  # Simulate work\n    if item % 2 == 0:\n        return item * 2\n    else:\n        raise ValueError(f\"Odd number not allowed: {item}\")\n\ndef main():\n    items = [1, 2, 3, 4, 5]\n    results = []\n    errors = []\n    \n    with concurrent.futures.ProcessPoolExecutor(max_workers=3) as executor:\n        future_to_item = {executor.submit(process_item, item): item for item in items}\n        \n        for future in concurrent.futures.as_completed(future_to_item):\n            item = future_to_item[future]\n            try:\n                result = future.result()\n                results.append(result)\n            except Exception as e:\n                errors.append(item)\n    \n    return sorted(results), sorted(errors)\n\nprint(main())",
+      "options": {
+        "A": "([4, 8], [1, 3, 5])",
+        "B": "([2, 4, 6, 8, 10], [])",
+        "C": "([2, 4], [1, 3, 5])",
+        "D": "([4, 8], [])"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What is the primary purpose of Cython in Python development?",
+      "options": {
+        "A": "To convert Python code to JavaScript for web applications",
+        "B": "To allow writing Python code that can be compiled to C/C++ for performance optimization",
+        "C": "To enable multi-threading in Python by bypassing the GIL",
+        "D": "To create cross-platform executables from Python scripts"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "When profiling Python code, which of the following statements is false?",
+      "code_example": "import cProfile\nimport pstats\nfrom functools import lru_cache\n\ndef fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\n@lru_cache(maxsize=None)\ndef fibonacci_cached(n):\n    if n <= 1:\n        return n\n    return fibonacci_cached(n-1) + fibonacci_cached(n-2)\n\ndef profile_function(func, *args):\n    profiler = cProfile.Profile()\n    profiler.enable()\n    result = func(*args)\n    profiler.disable()\n    stats = pstats.Stats(profiler).sort_stats('cumtime')\n    stats.print_stats(5)\n    return result\n\n# Profiling both functions\nprint(\"Profiling fibonacci(20):\")\nprofile_function(fibonacci, 20)\n\nprint(\"\\nProfiling fibonacci_cached(20):\")\nprofile_function(fibonacci_cached, 20)",
+      "options": {
+        "A": "The Profile.print_stats() method displays function calls sorted by cumulative time by default",
+        "B": "cProfile has less overhead than the pure Python profile module, making it more suitable for profiling CPU-intensive code",
+        "C": "Using @lru_cache with fibonacci() will not significantly improve performance as profiling shows",
+        "D": "The line_profiler package can provide more detailed information about execution time per line than cProfile"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that implements an AVL tree insertion?",
+      "code_example": "class AVLNode:\n    def __init__(self, key):\n        self.key = key\n        self.left = None\n        self.right = None\n        self.height = 1\n\nclass AVLTree:\n    def __init__(self):\n        self.root = None\n    \n    def height(self, node):\n        if not node:\n            return 0\n        return node.height\n    \n    def balance_factor(self, node):\n        if not node:\n            return 0\n        return self.height(node.left) - self.height(node.right)\n    \n    def update_height(self, node):\n        if not node:\n            return\n        node.height = 1 + max(self.height(node.left), self.height(node.right))\n    \n    def right_rotate(self, y):\n        x = y.left\n        T2 = x.right\n        \n        x.right = y\n        y.left = T2\n        \n        self.update_height(y)\n        self.update_height(x)\n        \n        return x\n    \n    def left_rotate(self, x):\n        y = x.right\n        T2 = y.left\n        \n        y.left = x\n        x.right = T2\n        \n        self.update_height(x)\n        self.update_height(y)\n        \n        return y\n    \n    def insert(self, root, key):\n        if not root:\n            return AVLNode(key)\n        \n        if key < root.key:\n            root.left = self.insert(root.left, key)\n        elif key > root.key:\n            root.right = self.insert(root.right, key)\n        else:\n            return root  # Duplicate keys not allowed\n        \n        self.update_height(root)\n        \n        balance = self.balance_factor(root)\n        \n        # Left Left Case\n        if balance > 1 and key < root.left.key:\n            return self.right_rotate(root)\n        \n        # Right Right Case\n        if balance < -1 and key > root.right.key:\n            return self.left_rotate(root)\n        \n        # Left Right Case\n        if balance > 1 and key > root.left.key:\n            root.left = self.left_rotate(root.left)\n            return self.right_rotate(root)\n        \n        # Right Left Case\n        if balance < -1 and key < root.right.key:\n            root.right = self.right_rotate(root.right)\n            return self.left_rotate(root)\n        \n        return root\n    \n    def inorder(self, root, result):\n        if root:\n            self.inorder(root.left, result)\n            result.append(root.key)\n            self.inorder(root.right, result)\n    \n    def insert_key(self, key):\n        self.root = self.insert(self.root, key)\n    \n    def get_inorder(self):\n        result = []\n        self.inorder(self.root, result)\n        return result\n\n# Create AVL tree and insert values\navl = AVLTree()\nfor key in [10, 20, 30, 40, 50]:\n    avl.insert_key(key)\n\nprint(avl.get_inorder())\nprint(avl.root.key)  # Root key after balancing",
+      "options": {
+        "A": "[10, 20, 30, 40, 50], 10",
+        "B": "[10, 20, 30, 40, 50], 30",
+        "C": "[10, 20, 30, 40, 50], 20",
+        "D": "[50, 40, 30, 20, 10], 30"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates bit manipulation?",
+      "code_example": "def count_set_bits(n):\n    count = 0\n    while n:\n        n &= (n - 1)  # Clear the least significant bit set\n        count += 1\n    return count\n\ndef is_power_of_two(n):\n    return n != 0 and (n & (n - 1)) == 0\n\ndef find_single_number(nums):\n    result = 0\n    for num in nums:\n        result ^= num\n    return result\n\ndef swap_bits(n):\n    # Swap even and odd bits\n    even_bits = n & 0xAAAAAAAA  # Get even bits\n    odd_bits = n & 0x55555555   # Get odd bits\n    \n    even_bits >>= 1  # Right shift even bits\n    odd_bits <<= 1   # Left shift odd bits\n    \n    return even_bits | odd_bits\n\nprint(count_set_bits(15))\nprint(is_power_of_two(16))\nprint(find_single_number([4, 2, 4, 1, 2]))\nprint(bin(swap_bits(0b10101010))[2:].zfill(8))",
+      "options": {
+        "A": "4\\nTrue\\n1\\n01010101",
+        "B": "4\\nTrue\\n1\\n01010101",
+        "C": "4\\nFalse\\n1\\n01010101",
+        "D": "4\\nTrue\\n3\\n01010101"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the async/await syntax and event loop?",
+      "code_example": "import asyncio\n\nasync def process_data(name, delay):\n    print(f\"Started processing {name}\")\n    await asyncio.sleep(delay)\n    print(f\"Finished processing {name}\")\n    return f\"{name} result\"\n\nasync def fetch_data():\n    print(\"Fetch data started\")\n    # Run tasks concurrently\n    task1 = asyncio.create_task(process_data(\"item1\", 2))\n    task2 = asyncio.create_task(process_data(\"item2\", 1))\n    \n    # Wait for a specific task to complete first\n    result1 = await task1\n    print(f\"Got: {result1}\")\n    \n    # Wait for the second task\n    result2 = await task2\n    print(f\"Got: {result2}\")\n    \n    return \"All done\"\n\nasync def main():\n    result = await fetch_data()\n    print(result)\n\n# Run the main function\nasyncio.run(main())",
+      "options": {
+        "A": "Fetch data started\nStarted processing item1\nStarted processing item2\nFinished processing item1\nGot: item1 result\nFinished processing item2\nGot: item2 result\nAll done",
+        "B": "Fetch data started\nStarted processing item1\nStarted processing item2\nFinished processing item2\nFinished processing item1\nGot: item1 result\nGot: item2 result\nAll done",
+        "C": "Fetch data started\nStarted processing item1\nFinished processing item1\nGot: item1 result\nStarted processing item2\nFinished processing item2\nGot: item2 result\nAll done",
+        "D": "Fetch data started\nStarted processing item1\nStarted processing item2\nFinished processing item2\nGot: item2 result\nFinished processing item1\nGot: item1 result\nAll done"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What is one advantage of using a trie data structure for prefix searching compared to other data structures like hash tables or binary search trees?",
+      "options": {
+        "A": "Tries have a lower memory footprint than hash tables for storing large dictionaries",
+        "B": "Finding all words with a given prefix has O(m) time complexity in a trie, where m is the length of the prefix",
+        "C": "Tries support faster deletion operations than balanced search trees",
+        "D": "Tries can easily handle wildcard searches and regular expressions directly without modification"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses pytest fixtures and parametrization?",
+      "code_example": "import pytest\n\n@pytest.fixture\ndef data():\n    return [1, 2, 3, 4, 5]\n\n@pytest.fixture\ndef db():\n    # Setup\n    print(\"\\nDatabase connection opened\")\n    yield \"database_connection\"\n    # Teardown\n    print(\"\\nDatabase connection closed\")\n\nclass TestExample:\n    @pytest.mark.parametrize(\"input_val,expected\", [\n        (2, 4),\n        (3, 9),\n        pytest.param(5, 10, marks=pytest.mark.xfail),\n        (0, 0)\n    ])\n    def test_square(self, input_val, expected):\n        assert input_val * input_val == expected\n    \n    def test_with_fixtures(self, data, db):\n        assert len(data) == 5\n        assert db == \"database_connection\"\n\n# Output when running: pytest -v test_example.py::TestExample::test_with_fixtures",
+      "options": {
+        "A": "test_with_fixtures PASSED",
+        "B": "Database connection opened\ntest_with_fixtures PASSED\nDatabase connection closed",
+        "C": "Database connection opened\nTestExample::test_with_fixtures PASSED\nDatabase connection closed",
+        "D": "test_with_fixtures PASSED\nDatabase connection opened\nDatabase connection closed"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which of the following statements about database indexing strategies is correct?",
+      "options": {
+        "A": "Indexing the columns frequently used in JOIN operations typically decreases query performance due to maintenance overhead",
+        "B": "Composite indexes provide benefits only when all columns in the index are used in the query's WHERE clause in the exact order they are defined in the index",
+        "C": "A covering index that includes all columns needed by a query allows the database to retrieve data directly from the index without accessing the actual table",
+        "D": "B-tree indexes perform poorly for exact value lookups but are optimal for range queries compared to hash indexes"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that implements a trie for prefix searching?",
+      "code_example": "class TrieNode:\n    def __init__(self):\n        self.children = {}\n        self.is_end_of_word = False\n\nclass Trie:\n    def __init__(self):\n        self.root = TrieNode()\n    \n    def insert(self, word):\n        node = self.root\n        for char in word:\n            if char not in node.children:\n                node.children[char] = TrieNode()\n            node = node.children[char]\n        node.is_end_of_word = True\n    \n    def search(self, word):\n        node = self.root\n        for char in word:\n            if char not in node.children:\n                return False\n            node = node.children[char]\n        return node.is_end_of_word\n    \n    def starts_with(self, prefix):\n        node = self.root\n        for char in prefix:\n            if char not in node.children:\n                return False\n            node = node.children[char]\n        return True\n    \n    def find_words_with_prefix(self, prefix):\n        node = self.root\n        for char in prefix:\n            if char not in node.children:\n                return []\n            node = node.children[char]\n        \n        words = []\n        self._dfs(node, prefix, words)\n        return words\n    \n    def _dfs(self, node, prefix, words):\n        if node.is_end_of_word:\n            words.append(prefix)\n        \n        for char, child in node.children.items():\n            self._dfs(child, prefix + char, words)\n\n# Create trie and insert words\ntrie = Trie()\nwords = [\"apple\", \"app\", \"application\", \"banana\", \"ball\"]\nfor word in words:\n    trie.insert(word)\n\n# Test operations\nprint(trie.search(\"app\"))\nprint(trie.search(\"appl\"))\nprint(trie.starts_with(\"app\"))\nprint(sorted(trie.find_words_with_prefix(\"app\")))",
+      "options": {
+        "A": "True\nFalse\nTrue\n['app', 'apple', 'application']",
+        "B": "True\nTrue\nTrue\n['app', 'apple']",
+        "C": "True\nFalse\nTrue\n['apple', 'application']",
+        "D": "False\nFalse\nTrue\n['app', 'apple', 'application']"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a common debugging technique in Python development?",
+      "options": {
+        "A": "Using the logging module at different severity levels to capture debug information",
+        "B": "Using Python's built-in breakpoint() function (introduced in Python 3.7) to enter the debugger",
+        "C": "Adding decorator-based design patterns to automatically validate input and output types of functions",
+        "D": "Using the pdb module's set_trace() function to enter interactive debugging mode at a specific point"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that implements multiple design patterns?",
+      "code_example": "import threading\nfrom abc import ABC, abstractmethod\n\n# Singleton pattern\nclass Singleton:\n    _instance = None\n    _lock = threading.Lock()\n    \n    def __new__(cls):\n        with cls._lock:\n            if cls._instance is None:\n                cls._instance = super().__new__(cls)\n                cls._instance.value = 0\n        return cls._instance\n\n# Observer pattern\nclass Subject:\n    def __init__(self):\n        self._observers = []\n    \n    def attach(self, observer):\n        if observer not in self._observers:\n            self._observers.append(observer)\n    \n    def detach(self, observer):\n        self._observers.remove(observer)\n    \n    def notify(self):\n        for observer in self._observers:\n            observer.update(self)\n\nclass Observer(ABC):\n    @abstractmethod\n    def update(self, subject):\n        pass\n\n# Factory pattern\nclass ProductCreator:\n    @staticmethod\n    def create_product(product_type):\n        if product_type == \"A\":\n            return ProductA()\n        elif product_type == \"B\":\n            return ProductB()\n        else:\n            raise ValueError(f\"Unknown product type: {product_type}\")\n\nclass Product(ABC):\n    @abstractmethod\n    def operation(self):\n        pass\n\nclass ProductA(Product):\n    def operation(self):\n        return \"Product A\"\n\nclass ProductB(Product):\n    def operation(self):\n        return \"Product B\"\n\n# Test code\ndef test_patterns():\n    # Test Singleton\n    s1 = Singleton()\n    s1.value = 10\n    s2 = Singleton()\n    singleton_result = s1 is s2 and s2.value == 10\n    \n    # Test Factory\n    product = ProductCreator.create_product(\"A\")\n    factory_result = product.operation() == \"Product A\"\n    \n    # Test Observer\n    class ConcreteObserver(Observer):\n        def __init__(self):\n            self.updated = False\n        \n        def update(self, subject):\n            self.updated = True\n    \n    subject = Subject()\n    observer = ConcreteObserver()\n    subject.attach(observer)\n    subject.notify()\n    observer_result = observer.updated\n    \n    return (singleton_result, factory_result, observer_result)\n\nprint(test_patterns())",
+      "options": {
+        "A": "(True, True, True)",
+        "B": "(True, True, False)",
+        "C": "(False, True, True)",
+        "D": "(True, False, True)"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a best practice when setting up CI/CD pipelines for Python projects?",
+      "options": {
+        "A": "Running security scans like bandit to detect potential security vulnerabilities",
+        "B": "Using a requirements.txt file with exact version pins to ensure consistent build environments",
+        "C": "Configuring the pipeline to deploy automatically to production immediately after passing all tests",
+        "D": "Implementing code coverage reports to track test coverage over time"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
