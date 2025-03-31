@@ -1,0 +1,611 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "TypeError: can only concatenate str (not 'int') to str",
+        "B": "10",
+        "C": "1010",
+        "D": "Error: Invalid syntax"
+      },
+      "correct_answer": "A",
+      "code_example": "x = '10'\nprint(x + 10)"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "How would you implement a function to calculate the Greatest Common Divisor (GCD) of two numbers?",
+      "options": {
+        "A": "def gcd(a, b): return a if b == 0 else gcd(b, a % b)",
+        "B": "def gcd(a, b): return a * b / lcm(a, b)",
+        "C": "def gcd(a, b): return min(a, b) if max(a, b) % min(a, b) == 0 else 1",
+        "D": "def gcd(a, b): return sum(i for i in range(1, min(a, b) + 1) if a % i == 0 and b % i == 0)"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "['apple', 'banana', 'cherry', 'date']",
+        "B": "['apple', 'banana', 'cherry']",
+        "C": "[('apple', 1), ('banana', 2), ('cherry', 3)]",
+        "D": "Error: invalid syntax"
+      },
+      "correct_answer": "C",
+      "code_example": "fruits = ['apple', 'banana', 'cherry']\nnumbers = [1, 2, 3]\nresult = list(zip(fruits, numbers))\nprint(result)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to implement FizzBuzz for numbers from 1 to 15?",
+      "options": {
+        "A": "for i in range(1, 16): print('FizzBuzz' if i % 3 == 0 and i % 5 == 0 else 'Fizz' if i % 3 == 0 else 'Buzz' if i % 5 == 0 else i)",
+        "B": "for i in range(1, 16): print('FizzBuzz' if i % 15 == 0 else 'Fizz' if i % 3 == 0 else 'Buzz' if i % 5 == 0 else i)",
+        "C": "for i in range(1, 16): print('Fizz' + 'Buzz' if i % 15 == 0 else 'Fizz' if i % 3 == 0 else 'Buzz' if i % 5 == 0 else i)",
+        "D": "[print('FizzBuzz' if i % 15 == 0 else 'Fizz' if i % 3 == 0 else 'Buzz' if i % 5 == 0 else i) for i in range(1, 16)]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "['hello', 'world', 'python']",
+        "B": "['hello', 'world']",
+        "C": "['hello', 'world', '']",
+        "D": "['hello', 'world', ' ']"
+      },
+      "correct_answer": "B",
+      "code_example": "text = 'hello world'\nresult = text.split()\nprint(result)"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which statement correctly describes the behavior of tuples in Python?",
+      "options": {
+        "A": "Tuples are mutable, so you can modify their elements after creation.",
+        "B": "Tuples are immutable, but if they contain mutable objects, those objects can be modified.",
+        "C": "Tuples cannot contain mutable objects like lists or dictionaries.",
+        "D": "Tuples must contain at least one element to be valid."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following context manager code?",
+      "options": {
+        "A": "File opened\nFile closed",
+        "B": "File opened\nFile operations\nFile closed",
+        "C": "File opened\nFile operations\nError occurred\nFile closed",
+        "D": "File opened\nError occurred\nFile closed"
+      },
+      "correct_answer": "D",
+      "code_example": "class FileManager:\n    def __enter__(self):\n        print('File opened')\n        return self\n    \n    def __exit__(self, exc_type, exc_val, exc_tb):\n        print('File closed')\n        return True\n\nwith FileManager() as f:\n    print('Error occurred')\n    raise ValueError()"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code implementing selection sort?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[5, 4, 3, 2, 1]",
+        "C": "[3, 1, 4, 5, 2]",
+        "D": "Error: invalid syntax"
+      },
+      "correct_answer": "A",
+      "code_example": "def selection_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        min_idx = i\n        for j in range(i+1, n):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr\n\nprint(selection_sort([3, 1, 4, 5, 2]))"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code with multi-line strings?",
+      "options": {
+        "A": "Hello\\nWorld",
+        "B": "Hello\nWorld",
+        "C": "Hello World",
+        "D": "HelloWorld"
+      },
+      "correct_answer": "B",
+      "code_example": "text = '''Hello\nWorld'''\nprint(text)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "Which exception will be caught by the following code?",
+      "options": {
+        "A": "ValueError",
+        "B": "TypeError",
+        "C": "IndexError",
+        "D": "No exception will be caught"
+      },
+      "correct_answer": "C",
+      "code_example": "my_list = [1, 2, 3]\ntry:\n    print(my_list[5])\nexcept IndexError:\n    print('IndexError caught')\nexcept ValueError:\n    print('ValueError caught')\nexcept TypeError:\n    print('TypeError caught')"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What's the most efficient way to reverse a string in Python?",
+      "options": {
+        "A": "'.'.join(reversed(s))",
+        "B": "s[::-1]",
+        "C": "''.join([s[i] for i in range(len(s)-1, -1, -1)])",
+        "D": "''.join(reversed(s))"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following bubble sort implementation?",
+      "options": {
+        "A": "[5, 4, 3, 2, 1]",
+        "B": "[1, 2, 3, 4, 5]",
+        "C": "[3, 1, 4, 2, 5]",
+        "D": "Error: invalid syntax"
+      },
+      "correct_answer": "B",
+      "code_example": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr\n\nprint(bubble_sort([5, 3, 1, 4, 2]))"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will the following dictionary code output?",
+      "options": {
+        "A": "{'a': 1, 'b': 2, 'c': 3}",
+        "B": "dict_keys(['a', 'b', 'c'])",
+        "C": "dict_values([1, 2, 3])",
+        "D": "[('a', 1), ('b', 2), ('c', 3)]"
+      },
+      "correct_answer": "D",
+      "code_example": "my_dict = {'a': 1, 'b': 2, 'c': 3}\nprint(list(my_dict.items()))"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following list comprehension?",
+      "options": {
+        "A": "[2, 4, 6, 8, 10]",
+        "B": "[1, 2, 3, 4, 5]",
+        "C": "[1, 3, 5, 7, 9]",
+        "D": "[0, 2, 4, 6, 8]"
+      },
+      "correct_answer": "A",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nresult = [n * 2 for n in numbers]\nprint(result)"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following string formatting code?",
+      "options": {
+        "A": "Hello, World! You are 25 years old.",
+        "B": "Hello, World! You are {age} years old.",
+        "C": "Hello, World! You are 25years old.",
+        "D": "Error: invalid syntax"
+      },
+      "correct_answer": "A",
+      "code_example": "name = 'World'\nage = 25\nprint(f\"Hello, {name}! You are {age} years old.\")"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What's the correct way to calculate the Least Common Multiple (LCM) of two numbers using their GCD?",
+      "options": {
+        "A": "def lcm(a, b): return (a * b) // gcd(a, b)",
+        "B": "def lcm(a, b): return (a + b) // gcd(a, b)",
+        "C": "def lcm(a, b): return max(a, b) if min(a, b) == 0 else (a * b) // gcd(a, b)",
+        "D": "def lcm(a, b): return a * b"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following binary search implementation?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "-1",
+        "D": "None"
+      },
+      "correct_answer": "A",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n            \n    return -1\n\nprint(binary_search([1, 2, 4, 7, 9, 11], 7))"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will the following lambda function code output?",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]",
+        "B": "[2, 4, 6, 8, 10]",
+        "C": "[(1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]",
+        "D": "Error: lambda functions cannot use comprehensions"
+      },
+      "correct_answer": "A",
+      "code_example": "square = lambda x: x ** 2\nnumbers = [1, 2, 3, 4, 5]\nresult = list(map(square, numbers))\nprint(result)"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which of the following best describes the difference between absolute and relative imports in Python?",
+      "options": {
+        "A": "Absolute imports use the full path from the project root, while relative imports use dots to indicate parent directories.",
+        "B": "Absolute imports are always faster than relative imports.",
+        "C": "Relative imports are preferred in all cases according to PEP 8.",
+        "D": "Absolute imports can only be used for standard library modules."
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following nested data structure code?",
+      "options": {
+        "A": "['Alice', 'Bob', 'Charlie']",
+        "B": "[30, 25, 35]",
+        "C": "['NY', 'SF', 'LA']",
+        "D": "[{'name': 'Alice', 'age': 30, 'city': 'NY'}, {'name': 'Bob', 'age': 25, 'city': 'SF'}, {'name': 'Charlie', 'age': 35, 'city': 'LA'}]"
+      },
+      "correct_answer": "A",
+      "code_example": "people = [\n    {'name': 'Alice', 'age': 30, 'city': 'NY'},\n    {'name': 'Bob', 'age': 25, 'city': 'SF'},\n    {'name': 'Charlie', 'age': 35, 'city': 'LA'}\n]\n\nnames = [person['name'] for person in people]\nprint(names)"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What is the correct way to make a GET request using the requests library?",
+      "options": {
+        "A": "response = requests.post('https://api.example.com/data')",
+        "B": "response = requests.get('https://api.example.com/data')",
+        "C": "response = requests.fetch('https://api.example.com/data')",
+        "D": "response = requests.download('https://api.example.com/data')"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code comparing generator expressions and list comprehensions?",
+      "options": {
+        "A": "list\ngenerator",
+        "B": "<class 'list'>\n<class 'generator'>",
+        "C": "[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n<generator object <genexpr> at 0x...>",
+        "D": "[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]"
+      },
+      "correct_answer": "C",
+      "code_example": "list_comp = [x**2 for x in range(10)]\ngen_exp = (x**2 for x in range(10))\n\nprint(list_comp)\nprint(gen_exp)"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "In Django, what is the correct way to define a URL pattern that accepts an integer parameter?",
+      "options": {
+        "A": "path('articles/<str:article_id>/', views.article_detail)",
+        "B": "path('articles/<int:article_id>/', views.article_detail)",
+        "C": "url('articles/(?P<article_id>\\d+)/', views.article_detail)",
+        "D": "route('articles/{article_id:int}/', views.article_detail)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What is the primary benefit of lazy evaluation in Python?",
+      "options": {
+        "A": "It always makes code run faster by optimizing computation.",
+        "B": "It allows working with potentially infinite sequences and saves memory by generating values only when needed.",
+        "C": "It automatically parallelizes computations across multiple CPU cores.",
+        "D": "It reduces the number of lines of code required for the same functionality."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will the following regex code output?",
+      "options": {
+        "A": "['123-456-7890']",
+        "B": "['123', '456', '7890']",
+        "C": "('123', '456', '7890')",
+        "D": "123-456-7890"
+      },
+      "correct_answer": "C",
+      "code_example": "import re\n\nphone = '123-456-7890'\npattern = r'(\\d{3})-(\\d{3})-(\\d{4})'\n\nmatch = re.search(pattern, phone)\nprint(match.groups())"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What is the correct way to define a named tuple in Python?",
+      "options": {
+        "A": "Point = namedtuple('Point', ['x', 'y'])",
+        "B": "Point = collections.named_tuple('Point', ['x', 'y'])",
+        "C": "Point = dataclass(type('Point', (tuple,), {'x': 0, 'y': 0}))",
+        "D": "Point = collections.namedtuple(['x', 'y'], name='Point')"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following decorator code?",
+      "options": {
+        "A": "Function 'greet' called with args: ('World',), kwargs: {}",
+        "B": "Before function execution\nHello, World!\nAfter function execution",
+        "C": "Hello, World!",
+        "D": "Error: invalid decorator syntax"
+      },
+      "correct_answer": "B",
+      "code_example": "def decorator(func):\n    def wrapper(*args, **kwargs):\n        print('Before function execution')\n        result = func(*args, **kwargs)\n        print('After function execution')\n        return result\n    return wrapper\n\n@decorator\ndef greet(name):\n    print(f'Hello, {name}!')\n\ngreet('World')"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will the following regex code with greedy vs non-greedy matching output?",
+      "options": {
+        "A": "Greedy: <div>First</div><div>Second</div>\nNon-greedy: <div>First</div>",
+        "B": "Greedy: <div>First</div>\nNon-greedy: <div>First</div>",
+        "C": "Greedy: First\nNon-greedy: First",
+        "D": "Greedy: <div>First</div><div>Second</div>\nNon-greedy: <div>First</div><div>Second</div>"
+      },
+      "correct_answer": "A",
+      "code_example": "import re\n\ntext = '<div>First</div><div>Second</div>'\n\ngreedy = re.search(r'<div>.*</div>', text)\nnon_greedy = re.search(r'<div>.*?</div>', text)\n\nprint(f'Greedy: {greedy.group()}')\nprint(f'Non-greedy: {non_greedy.group()}')"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following merge sort implementation?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[5, 4, 3, 2, 1]",
+        "C": "[3, 1, 4, 2, 5]",
+        "D": "Error: maximum recursion depth exceeded"
+      },
+      "correct_answer": "A",
+      "code_example": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n        \n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    \n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n            \n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result\n\nprint(merge_sort([3, 1, 4, 2, 5]))"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "Which statement best describes the principle of immutability in Python?",
+      "options": {
+        "A": "All Python objects should be immutable for thread safety.",
+        "B": "Immutable objects can't be changed after creation, which makes them safer for certain operations and potentially more efficient.",
+        "C": "Immutable objects always use less memory than mutable objects.",
+        "D": "Python's dynamic typing means immutability is not relevant."
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is the correct way to establish a database connection using psycopg2?",
+      "options": {
+        "A": "conn = psycopg2.connect(user='username', password='password', host='localhost', database='mydb')",
+        "B": "conn = psycopg2.Connection(user='username', password='password', host='localhost', database='mydb')",
+        "C": "conn = psycopg2.open(user='username', password='password', host='localhost', database='mydb')",
+        "D": "conn = psycopg2.database(user='username', password='password', host='localhost', db='mydb')"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will the following sliding window algorithm output?",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "correct_answer": "C",
+      "code_example": "def max_sum_subarray(arr, k):\n    n = len(arr)\n    if n < k:\n        return None\n        \n    window_sum = sum(arr[:k])\n    max_sum = window_sum\n    \n    for i in range(n - k):\n        window_sum = window_sum - arr[i] + arr[i + k]\n        max_sum = max(max_sum, window_sum)\n        \n    return max_sum\n\nprint(max_sum_subarray([1, 2, 3, 4, 2, 5, 1], 3))"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the primary purpose of running unit tests in a CI pipeline?",
+      "options": {
+        "A": "To automatically fix bugs in the code",
+        "B": "To prevent integration of code that breaks existing functionality",
+        "C": "To improve code performance",
+        "D": "To document the codebase for future developers"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What is the output of the following Cython code when compiled and executed?",
+      "code_example": "# example.pyx\ncdef int fibonacci(int n):\n    if n <= 1:\n        return n\n    else:\n        return fibonacci(n-1) + fibonacci(n-2)\n\ndef get_fib(n):\n    return fibonacci(n)\n\nprint(get_fib(6))",
+      "options": {
+        "A": "6",
+        "B": "5",
+        "C": "8",
+        "D": "13"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "In Test-Driven Development, what is the correct order of operations?",
+      "options": {
+        "A": "Write code, write tests, refactor code",
+        "B": "Write tests, refactor code, write more tests",
+        "C": "Write tests, write code to pass tests, refactor code",
+        "D": "Refactor code, write tests, write more code"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code when using PyMongo to interact with MongoDB?",
+      "code_example": "import pymongo\n\n# Assuming a MongoDB instance is running locally\nclient = pymongo.MongoClient(\"mongodb://localhost:27017/\")\ndb = client[\"example_db\"]\ncollection = db[\"users\"]\n\n# Assume the collection has these documents:\n# {\"name\": \"Alice\", \"age\": 30, \"role\": \"admin\"}\n# {\"name\": \"Bob\", \"age\": 25, \"role\": \"user\"}\n# {\"name\": \"Charlie\", \"age\": 35, \"role\": \"user\"}\n\nresult = collection.find({\"role\": \"user\"}).sort(\"age\", -1).limit(1)\nprint(list(result)[0][\"name\"])",
+      "options": {
+        "A": "Bob",
+        "B": "Charlie",
+        "C": "Alice",
+        "D": "IndexError: list index out of range"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "When using RabbitMQ with the Pika library in Python, what is the correct sequence to publish a message?",
+      "code_example": "import pika\n\nconnection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))\nchannel = connection.channel()\n\n# Step 1\nchannel.exchange_declare(exchange='logs', exchange_type='fanout')\n\n# Step 2\nchannel.queue_declare(queue='task_queue', durable=True)\n\n# Step 3\nchannel.queue_bind(exchange='logs', queue='task_queue')\n\n# Step 4\nchannel.basic_publish(\n    exchange='logs',\n    routing_key='',\n    body='Hello World!',\n    properties=pika.BasicProperties(delivery_mode=2)\n)\n\nconnection.close()",
+      "options": {
+        "A": "Steps 1, 3, 2, 4",
+        "B": "Steps 1, 2, 3, 4",
+        "C": "Steps 2, 1, 3, 4",
+        "D": "Steps 2, 1, 4, 3"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What is the primary reason to implement distributed caching in a Python web application?",
+      "options": {
+        "A": "To increase memory available to the application",
+        "B": "To decrease database load and improve response times",
+        "C": "To simplify application code",
+        "D": "To ensure consistent session management across multiple servers"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the output of the following code that demonstrates abstract classes in Python?",
+      "code_example": "from abc import ABC, abstractmethod\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self):\n        pass\n        \n    def description(self):\n        return f\"This shape has an area of {self.area()}\"\n\nclass Square(Shape):\n    def __init__(self, side):\n        self.side = side\n        \n    def area(self):\n        return self.side ** 2\n\nclass Circle(Shape):\n    def __init__(self, radius):\n        self.radius = radius\n    \n    def area(self):\n        return 3.14 * (self.radius ** 2)\n\ntry:\n    shape = Shape()\n    print(\"A\")\nexcept TypeError:\n    try:\n        square = Square(5)\n        print(square.description())\n    except Exception:\n        print(\"B\")\n    else:\n        print(\"C\")\nfinally:\n    print(\"D\")",
+      "options": {
+        "A": "A D",
+        "B": "B D",
+        "C": "C D",
+        "D": "Error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "Which of the following code examples BEST demonstrates the Single Responsibility Principle from SOLID?",
+      "code_example": "# Option A\nclass User:\n    def __init__(self, name, email):\n        self.name = name\n        self.email = email\n        \n    def save(self):\n        # Code to save user to database\n        pass\n        \n    def send_email(self, subject, body):\n        # Code to send email\n        pass\n        \n# Option B\nclass User:\n    def __init__(self, name, email):\n        self.name = name\n        self.email = email\n\nclass UserRepository:\n    def save(self, user):\n        # Code to save user to database\n        pass\n        \nclass EmailService:\n    def send_email(self, to_email, subject, body):\n        # Code to send email\n        pass\n        \n# Option C\nclass UserManager:\n    def create_user(self, name, email):\n        # Code to validate and create user\n        pass\n    \n    def update_user(self, user_id, data):\n        # Code to update user\n        pass\n    \n    def delete_user(self, user_id):\n        # Code to delete user\n        pass\n        \n    def notify_user(self, user_id, message):\n        # Code to notify user\n        pass\n        \n# Option D\nclass User:\n    def __init__(self, name, email):\n        self.name = name\n        self.email = email\n        self.is_active = True\n        \n    def deactivate(self):\n        self.is_active = False\n        self.save()\n        self.send_deactivation_email()\n        \n    def save(self):\n        # Save to database\n        pass\n        \n    def send_deactivation_email(self):\n        # Send email\n        pass",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "Which of the following best describes an OWASP Top 10 vulnerability that affects Python web applications using insecure deserialization?",
+      "options": {
+        "A": "Using pickle with untrusted data",
+        "B": "Using numpy.loadtxt to load user-supplied CSV files",
+        "C": "Using the Django ORM to query a PostgreSQL database",
+        "D": "Using json.loads on user-supplied JSON data"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What is the output of the following middleware function in a Flask application?",
+      "code_example": "from flask import Flask, request, g\nimport jwt\n\napp = Flask(__name__)\n\ndef auth_middleware():\n    token = request.headers.get('Authorization', '').replace('Bearer ', '')\n    if not token:\n        return {\"error\": \"Token required\"}, 401\n        \n    try:\n        # In a real app, you'd use a secret key from config\n        payload = jwt.decode(token, \"secret\", algorithms=[\"HS256\"])\n        g.user = payload\n    except jwt.PyJWTError:\n        return {\"error\": \"Invalid token\"}, 401\n        \n@app.route('/api/profile')\ndef profile():\n    result = auth_middleware()\n    if result:\n        return result\n    return {\"user\": g.user}\n\n# Assume the following JWT token is provided\n# eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMjMsInVzZXJuYW1lIjoiam9obiJ9.fake_signature\n# Which decodes to: {\"user_id\": 123, \"username\": \"john\"}\n\n# What will be returned by the profile endpoint if this token is provided?",
+      "options": {
+        "A": "{\"user\": {\"user_id\": 123, \"username\": \"john\"}}",
+        "B": "{\"error\": \"Invalid token\"}, 401",
+        "C": "{\"error\": \"Token required\"}, 401",
+        "D": "Internal Server Error - middleware cannot return values"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What is the output of the following async code?",
+      "code_example": "import asyncio\n\nasync def task1():\n    print(\"T1: Start\")\n    await asyncio.sleep(1)\n    print(\"T1: End\")\n    return \"Result 1\"\n\nasync def task2():\n    print(\"T2: Start\")\n    await asyncio.sleep(0.5)\n    print(\"T2: End\")\n    return \"Result 2\"\n\nasync def main():\n    task_obj1 = asyncio.create_task(task1())\n    task_obj2 = asyncio.create_task(task2())\n    \n    print(\"Main: Before gathering tasks\")\n    results = await asyncio.gather(task_obj1, task_obj2)\n    print(f\"Main: Results = {results}\")\n\n# Output when run with: asyncio.run(main())",
+      "options": {
+        "A": "Main: Before gathering tasks\\nT1: Start\\nT1: End\\nT2: Start\\nT2: End\\nMain: Results = ['Result 1', 'Result 2']",
+        "B": "Main: Before gathering tasks\\nT1: Start\\nT2: Start\\nT2: End\\nT1: End\\nMain: Results = ['Result 1', 'Result 2']",
+        "C": "Main: Before gathering tasks\\nT1: Start\\nT2: Start\\nT1: End\\nT2: End\\nMain: Results = ['Result 1', 'Result 2']",
+        "D": "T1: Start\\nT2: Start\\nMain: Before gathering tasks\\nT2: End\\nT1: End\\nMain: Results = ['Result 1', 'Result 2']"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "According to the CAP theorem, which of the following is NOT possible for a distributed database system to simultaneously guarantee?",
+      "options": {
+        "A": "Consistency and Availability, sacrificing Partition Tolerance",
+        "B": "Consistency and Partition Tolerance, sacrificing Availability",
+        "C": "Availability and Partition Tolerance, sacrificing Consistency",
+        "D": "Consistency, Availability, and Partition Tolerance"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What is the most appropriate indexing strategy for the following Django ORM query?",
+      "code_example": "from django.db.models import Count\nfrom myapp.models import Order\n\n# Assuming Order model has: user_id, status, created_at, total_amount\n\nquery = Order.objects.filter(\n    status='completed',\n    created_at__gte='2023-01-01',\n    total_amount__gt=100\n).values('user_id').annotate(\n    order_count=Count('id')\n).order_by('-order_count')[:10]",
+      "options": {
+        "A": "A composite index on (user_id, status, created_at)",
+        "B": "A composite index on (status, created_at, total_amount)",
+        "C": "Individual indexes on status, created_at, total_amount, and user_id",
+        "D": "A composite index on (user_id, total_amount) and another on (status, created_at)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "Which query optimization technique would be MOST effective to improve the performance of the following SQL query?",
+      "code_example": "SELECT users.name, users.email, orders.id, orders.created_at, SUM(order_items.price) as total_amount\nFROM users\nJOIN orders ON users.id = orders.user_id\nJOIN order_items ON orders.id = order_items.order_id\nWHERE users.status = 'active'\nAND orders.created_at >= '2023-01-01'\nGROUP BY users.id, orders.id\nORDER BY orders.created_at DESC\nLIMIT 100",
+      "options": {
+        "A": "Adding a covering index on users(status, name, email)",
+        "B": "Normalizing the database further to reduce the need for joins",
+        "C": "Using EXPLAIN ANALYZE to check the query execution plan",
+        "D": "Adding a composite index on orders(user_id, created_at)"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What is the output of the following scikit-learn code?",
+      "code_example": "import numpy as np\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score\n\n# Create synthetic data\nX = np.array([\n    [1, 2], [2, 3], [3, 4], [4, 5], [5, 6],\n    [6, 7], [7, 8], [8, 9], [9, 10], [10, 11]\n])\ny = np.array([0, 0, 0, 0, 0, 1, 1, 1, 1, 1])\n\n# Split the data with a fixed random state\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.4, random_state=42\n)\n\n# Train the model\nclf = RandomForestClassifier(n_estimators=5, max_depth=2, random_state=42)\nclf.fit(X_train, y_train)\n\n# Make predictions\ny_pred = clf.predict(X_test)\n\n# Calculate accuracy\naccuracy = accuracy_score(y_test, y_pred)\nprint(f\"Accuracy: {accuracy:.2f}\")",
+      "options": {
+        "A": "Accuracy: 0.75",
+        "B": "Accuracy: 0.80",
+        "C": "Accuracy: 1.00",
+        "D": "Accuracy: 0.50"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What is the expected response from the following FastAPI endpoint?",
+      "code_example": "from fastapi import FastAPI, Depends, HTTPException, status\nfrom pydantic import BaseModel\nfrom typing import List, Optional\nimport asyncio\n\napp = FastAPI()\n\nclass Item(BaseModel):\n    id: int\n    name: str\n    description: Optional[str] = None\n\n# Simulate a database\nitems_db = [\n    {\"id\": 1, \"name\": \"Item 1\", \"description\": \"Description 1\"},\n    {\"id\": 2, \"name\": \"Item 2\", \"description\": \"Description 2\"}\n]\n\nasync def get_item_by_id(item_id: int):\n    await asyncio.sleep(0.1)  # Simulate database lookup\n    for item in items_db:\n        if item[\"id\"] == item_id:\n            return item\n    return None\n\n@app.get(\"/items/{item_id}\", response_model=Item)\nasync def read_item(item_id: int):\n    item = await get_item_by_id(item_id)\n    if item is None:\n        raise HTTPException(\n            status_code=status.HTTP_404_NOT_FOUND,\n            detail=f\"Item with id {item_id} not found\"\n        )\n    return item\n\n@app.get(\"/items/\", response_model=List[Item])\nasync def read_items():\n    return items_db\n\n# What would be the response for a GET request to /items/3",
+      "options": {
+        "A": "{\"id\": 3, \"name\": null, \"description\": null}",
+        "B": "{\"detail\": \"Item with id 3 not found\"}",
+        "C": "[]",
+        "D": "{\"error\": \"Not found\"}"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
