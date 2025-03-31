@@ -1,0 +1,620 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "def greet(name):\n    return f\"Hello, {name}!\"\n\nprint(greet(\"Python\"))",
+      "options": {
+        "A": "Hello, Python",
+        "B": "Hello, Python!",
+        "C": "Hello Python!",
+        "D": "greet(\"Python\")"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the purpose of a docstring in Python?",
+      "options": {
+        "A": "To create executable code comments",
+        "B": "To disable sections of code during debugging",
+        "C": "To document functions, classes, and modules",
+        "D": "To increase code execution performance"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following FizzBuzz implementation for the number 15?",
+      "code_example": "def fizzbuzz(num):\n    if num % 3 == 0 and num % 5 == 0:\n        return \"FizzBuzz\"\n    elif num % 3 == 0:\n        return \"Fizz\"\n    elif num % 5 == 0:\n        return \"Buzz\"\n    else:\n        return str(num)\n\nprint(fizzbuzz(15))",
+      "options": {
+        "A": "15",
+        "B": "Fizz",
+        "C": "Buzz",
+        "D": "FizzBuzz"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following string reversal code?",
+      "code_example": "text = \"Python\"\nreversed_text = text[::-1]\nprint(reversed_text)",
+      "options": {
+        "A": "Python",
+        "B": "nohtyP",
+        "C": "PYthon",
+        "D": "pythoN"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to format a string with variables name='Bob' and age=30 using f-strings?",
+      "options": {
+        "A": "print('Name: {name}, Age: {age}'.format(name, age))",
+        "B": "print(f'Name: {name}, Age: {age}')",
+        "C": "print('Name: %s, Age: %d' % (name, age))",
+        "D": "print('Name: ' + name + ', Age: ' + age)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "x = '123'\nprint(isinstance(x, str), isinstance(int(x), int))",
+      "options": {
+        "A": "True True",
+        "B": "False False",
+        "C": "True False",
+        "D": "False True"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following linear search implementation?",
+      "code_example": "def linear_search(arr, target):\n    for i, item in enumerate(arr):\n        if item == target:\n            return i\n    return -1\n\nnumbers = [5, 2, 8, 1, 9]\nprint(linear_search(numbers, 8))",
+      "options": {
+        "A": "8",
+        "B": "2",
+        "C": "3",
+        "D": "-1"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to define a custom exception in Python?",
+      "code_example": "class MyError(Exception):\n    def __init__(self, message=\"This is a custom error\"):\n        self.message = message\n        super().__init__(self.message)\n\ntry:\n    raise MyError()\nexcept MyError as e:\n    print(e)",
+      "options": {
+        "A": "This is a custom error",
+        "B": "Exception: This is a custom error",
+        "C": "MyError: This is a custom error",
+        "D": "Error: Custom exception raised"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following binary search implementation on a sorted array?",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return -1\n\nnumbers = [1, 3, 5, 7, 9, 11, 13]\nprint(binary_search(numbers, 7))",
+      "options": {
+        "A": "7",
+        "B": "3",
+        "C": "4",
+        "D": "-1"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to PEP 8, which of the following is the recommended naming convention for constants in Python?",
+      "options": {
+        "A": "camelCase (e.g., maxValue)",
+        "B": "PascalCase (e.g., MaxValue)",
+        "C": "snake_case (e.g., max_value)",
+        "D": "UPPER_SNAKE_CASE (e.g., MAX_VALUE)"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using a context manager?",
+      "code_example": "class Counter:\n    def __init__(self, start=0):\n        self.count = start\n        \n    def __enter__(self):\n        self.count += 1\n        return self\n        \n    def __exit__(self, exc_type, exc_val, exc_tb):\n        self.count -= 1\n\ncounter = Counter(5)\nwith counter as c:\n    print(f\"In context: {c.count}\")\nprint(f\"Out of context: {counter.count}\")",
+      "options": {
+        "A": "In context: 5\nOut of context: 5",
+        "B": "In context: 6\nOut of context: 5",
+        "C": "In context: 6\nOut of context: 6",
+        "D": "In context: 5\nOut of context: 4"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code demonstrating variable scope?",
+      "code_example": "x = 10\n\ndef modify_x():\n    x = 20\n    print(f\"Inside function: {x}\")\n\nmodify_x()\nprint(f\"Outside function: {x}\")",
+      "options": {
+        "A": "Inside function: 10\nOutside function: 10",
+        "B": "Inside function: 20\nOutside function: 20",
+        "C": "Inside function: 20\nOutside function: 10",
+        "D": "Inside function: 10\nOutside function: 20"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code handling multiple exceptions?",
+      "code_example": "def divide_and_convert(a, b):\n    try:\n        result = a / b\n        return int(result)\n    except ZeroDivisionError:\n        return \"Cannot divide by zero\"\n    except ValueError:\n        return \"Conversion failed\"\n    except Exception as e:\n        return f\"Error: {e}\"\n\nprint(divide_and_convert(10, 0))",
+      "options": {
+        "A": "0",
+        "B": "Error: division by zero",
+        "C": "Cannot divide by zero",
+        "D": "Conversion failed"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What exception will be raised when executing the following code?",
+      "code_example": "numbers = [1, 2, 3]\nprint(numbers[5])",
+      "options": {
+        "A": "ValueError",
+        "B": "TypeError",
+        "C": "IndexError",
+        "D": "KeyError"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "Which of the following correctly creates a raw multi-line string in Python?",
+      "code_example": "path = r\"C:\\Users\\John\\Documents\\file.txt\"\nquery = \"\"\"SELECT *\n    FROM users\n    WHERE age > 18;\"\"\"\n\nprint(f\"Path: {path}\\nQuery: {query}\")",
+      "options": {
+        "A": "Path: C:\\Users\\John\\Documents\\file.txt\nQuery: SELECT *\n    FROM users\n    WHERE age > 18;",
+        "B": "Path: C:\\Users\\John\\Documents\\file.txt\nQuery: SELECT *\n    FROM users\n    WHERE age > 18;",
+        "C": "Path: C:\\\\Users\\\\John\\\\Documents\\\\file.txt\nQuery: SELECT *\n    FROM users\n    WHERE age > 18;",
+        "D": "Path: C:\\\\Users\\\\John\\\\Documents\\\\file.txt\nQuery: SELECT * FROM users WHERE age > 18;"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What is the correct way to read a CSV file in Python?",
+      "code_example": "import csv\n\ndef read_csv(filename):\n    data = []\n    with open(filename, 'r', newline='') as csv_file:\n        csv_reader = csv.reader(csv_file)\n        for row in csv_reader:\n            data.append(row)\n    return data\n\n# Assume 'data.csv' contains:\n# Name,Age\n# Alice,30\n# Bob,25",
+      "options": {
+        "A": "Creates a list of dictionaries where each dictionary represents a row",
+        "B": "Creates a list of lists where each inner list represents a row",
+        "C": "Creates a dictionary where keys are column names and values are lists of column values",
+        "D": "Creates a pandas DataFrame object"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the collections module?",
+      "code_example": "from collections import Counter\n\ntext = \"mississippi\"\ncounter = Counter(text)\nprint(counter.most_common(2))",
+      "options": {
+        "A": "{'i': 4, 's': 4}",
+        "B": "[('i', 4), ('s', 4)]",
+        "C": "[('m', 1), ('i', 4)]",
+        "D": "['i', 's']"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following sliding window implementation?",
+      "code_example": "def max_sum_subarray(arr, k):\n    n = len(arr)\n    if n < k:\n        return None\n        \n    window_sum = sum(arr[:k])\n    max_sum = window_sum\n    \n    for i in range(n - k):\n        window_sum = window_sum - arr[i] + arr[i + k]\n        max_sum = max(max_sum, window_sum)\n        \n    return max_sum\n\nnumbers = [1, 4, 2, 10, 2, 3, 1, 0, 20]\nprint(max_sum_subarray(numbers, 3))",
+      "options": {
+        "A": "15",
+        "B": "16",
+        "C": "23",
+        "D": "20"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating partial functions?",
+      "code_example": "from functools import partial\n\ndef multiply(x, y):\n    return x * y\n\ndouble = partial(multiply, 2)\ntriple = partial(multiply, 3)\n\nprint(double(5), triple(5))",
+      "options": {
+        "A": "10 15",
+        "B": "7 8",
+        "C": "5 5",
+        "D": "2 3"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which of the following statements about SQLAlchemy ORM is NOT correct?",
+      "options": {
+        "A": "It allows Python classes to be mapped to database tables",
+        "B": "It provides a way to query databases using Python instead of raw SQL",
+        "C": "It can work with different database backends like SQLite, PostgreSQL, and MySQL",
+        "D": "It requires raw SQL for all complex queries involving joins and aggregations"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Which of the following best describes the benefit of lazy evaluation in Python?",
+      "options": {
+        "A": "It makes code execution faster in all cases",
+        "B": "It allows for working with potentially infinite sequences",
+        "C": "It automatically optimizes memory usage for all data structures",
+        "D": "It eliminates the need for explicit error handling"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following divide and conquer implementation?",
+      "code_example": "def find_max_crossing_subarray(arr, low, mid, high):\n    left_sum = float('-inf')\n    sum = 0\n    for i in range(mid, low - 1, -1):\n        sum += arr[i]\n        if sum > left_sum:\n            left_sum = sum\n    \n    right_sum = float('-inf')\n    sum = 0\n    for i in range(mid + 1, high + 1):\n        sum += arr[i]\n        if sum > right_sum:\n            right_sum = sum\n    \n    return left_sum + right_sum\n\nprint(find_max_crossing_subarray([-2, 1, -3, 4, -1, 2, 1, -5, 4], 0, 4, 8))",
+      "options": {
+        "A": "6",
+        "B": "5",
+        "C": "4",
+        "D": "3"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following binary search variation?",
+      "code_example": "def binary_search_first_occurrence(arr, target):\n    left, right = 0, len(arr) - 1\n    result = -1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            result = mid\n            right = mid - 1\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return result\n\nnumbers = [1, 2, 2, 2, 3, 4, 5, 5, 6]\nprint(binary_search_first_occurrence(numbers, 2))",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "1",
+        "D": "-1"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating dunder methods?",
+      "code_example": "class Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    def __str__(self):\n        return f\"({self.x}, {self.y})\"\n    \n    def __repr__(self):\n        return f\"Point({self.x}, {self.y})\"\n    \n    def __eq__(self, other):\n        if not isinstance(other, Point):\n            return False\n        return self.x == other.x and self.y == other.y\n\np1 = Point(1, 2)\np2 = Point(1, 2)\np3 = Point(3, 4)\n\nprint(f\"{p1} {p1 == p2} {p1 == p3}\")",
+      "options": {
+        "A": "(1, 2) True False",
+        "B": "Point(1, 2) True False",
+        "C": "(1, 2) False False",
+        "D": "Point(1, 2) False True"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following stack implementation?",
+      "code_example": "class Stack:\n    def __init__(self):\n        self.items = []\n    \n    def push(self, item):\n        self.items.append(item)\n    \n    def pop(self):\n        if not self.is_empty():\n            return self.items.pop()\n        return None\n    \n    def peek(self):\n        if not self.is_empty():\n            return self.items[-1]\n        return None\n    \n    def is_empty(self):\n        return len(self.items) == 0\n\nstack = Stack()\nstack.push(1)\nstack.push(2)\nstack.pop()\nstack.push(3)\nprint(stack.peek())",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "None"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following quicksort implementation when sorting [3, 1, 4, 1, 5, 9, 2, 6]?",
+      "code_example": "def partition(arr, low, high):\n    pivot = arr[high]\n    i = low - 1\n    for j in range(low, high):\n        if arr[j] <= pivot:\n            i += 1\n            arr[i], arr[j] = arr[j], arr[i]\n    arr[i + 1], arr[high] = arr[high], arr[i + 1]\n    return i + 1\n\ndef quicksort(arr, low, high):\n    if low < high:\n        pi = partition(arr, low, high)\n        quicksort(arr, low, pi - 1)\n        quicksort(arr, pi + 1, high)\n    return arr\n\nnumbers = [3, 1, 4, 1, 5, 9, 2, 6]\nprint(quicksort(numbers, 0, len(numbers) - 1))",
+      "options": {
+        "A": "[1, 1, 2, 3, 4, 5, 6, 9]",
+        "B": "[9, 6, 5, 4, 3, 2, 1, 1]",
+        "C": "[3, 1, 4, 1, 5, 9, 2, 6]",
+        "D": "[1, 2, 3, 4, 5, 6, 9]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating class and instance variables?",
+      "code_example": "class Counter:\n    count = 0  # Class variable\n    \n    def __init__(self):\n        self.instance_count = 0  # Instance variable\n        Counter.count += 1\n    \n    def increment(self):\n        self.instance_count += 1\n\nc1 = Counter()\nc2 = Counter()\nc1.increment()\nc2.increment()\nc2.increment()\n\nprint(Counter.count, c1.instance_count, c2.instance_count)",
+      "options": {
+        "A": "2 1 2",
+        "B": "2 2 2",
+        "C": "3 1 2",
+        "D": "1 1 2"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the re module?",
+      "code_example": "import re\n\ntext = \"Contact us at info@example.com or support@company.org\"\npattern = r'[\\w.+-]+@[\\w-]+\\.[\\w.-]+'\n\nemails = re.findall(pattern, text)\nprint(emails)",
+      "options": {
+        "A": "['info@example', 'support@company']",
+        "B": "['info@example.com', 'support@company.org']",
+        "C": "['info', 'support']",
+        "D": "['example.com', 'company.org']"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "Which of the following commands correctly creates a virtual environment and installs the requests package?",
+      "options": {
+        "A": "virtualenv myenv && pip install requests",
+        "B": "python -m venv myenv && source myenv/bin/activate && pip install requests",
+        "C": "python -m virtual myenv && pip install requests myenv",
+        "D": "pip install venv requests && python -m venv activate"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code for JSON parsing?",
+      "code_example": "import json\n\ndata = '{\"name\": \"Alice\", \"age\": 30, \"skills\": [\"Python\", \"JavaScript\", \"SQL\"]}'\n\nparsed = json.loads(data)\nprint(f\"Name: {parsed['name']}, First skill: {parsed['skills'][0]}\")",
+      "options": {
+        "A": "Name: Alice, First skill: Python",
+        "B": "Name: Alice, First skill: [\"Python\", \"JavaScript\", \"SQL\"]",
+        "C": "Name: \"Alice\", First skill: \"Python\"",
+        "D": "{'name': 'Alice', 'age': 30, 'skills': ['Python', 'JavaScript', 'SQL']}"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code comparing generator expressions and list comprehensions?",
+      "code_example": "numbers = range(1, 6)\n\nlist_comp = [x * x for x in numbers]\ngen_exp = (x * x for x in numbers)\n\nprint(list_comp)\nprint(type(gen_exp).__name__)",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]\nlist",
+        "B": "[1, 4, 9, 16, 25]\ngenerator",
+        "C": "(1, 4, 9, 16, 25)\ngenerator",
+        "D": "<generator object>\ngenerator"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using map, filter, and reduce?",
+      "code_example": "from functools import reduce\n\nnumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\neven_numbers = list(filter(lambda x: x % 2 == 0, numbers))\nsquared = list(map(lambda x: x**2, even_numbers))\nsum_result = reduce(lambda x, y: x + y, squared)\n\nprint(sum_result)",
+      "options": {
+        "A": "220",
+        "B": "100",
+        "C": "55",
+        "D": "30"
+      },
+      "correct_answer": "A"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the primary purpose of Python's cProfile module?",
+      "options": {
+        "A": "To automatically optimize code by rewriting inefficient functions",
+        "B": "To measure the execution time and call frequency of functions in a program",
+        "C": "To create visual graphs of memory usage during program execution",
+        "D": "To identify potential security vulnerabilities in code"
+      },
+      "correct_answer": "B",
+      "code_example": "import cProfile\n\ndef factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n-1)\n\ncProfile.run('factorial(10)')"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output when executing the following code that implements a basic ML pipeline?",
+      "options": {
+        "A": "[0.8, 0.82, 0.79]",
+        "B": "0.82",
+        "C": "ValueError: Cannot perform cross-validation on empty dataset",
+        "D": "TypeError: 'Pipeline' object is not callable"
+      },
+      "correct_answer": "A",
+      "code_example": "from sklearn.datasets import make_classification\nfrom sklearn.model_selection import cross_val_score\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.ensemble import RandomForestClassifier\nimport numpy as np\n\n# Set random seed for reproducibility\nnp.random.seed(42)\n\n# Generate synthetic data\nX, y = make_classification(n_samples=100, n_features=20, random_state=42)\n\n# Create a basic ML pipeline\npipeline = Pipeline([\n    ('scaler', StandardScaler()),\n    ('classifier', RandomForestClassifier(n_estimators=10, random_state=42))\n])\n\n# Perform cross-validation with 3 folds\nscores = cross_val_score(pipeline, X, y, cv=3)\n\n# Round the scores to 2 decimal places\nrounded_scores = [round(score, 2) for score in scores]\nprint(rounded_scores)"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "When using Selenium with Python to scrape a JavaScript-heavy website, which of the following approaches is MOST effective for handling dynamic content that loads after the page is initially rendered?",
+      "options": {
+        "A": "Use requests.get() to fetch the HTML and parse with BeautifulSoup",
+        "B": "Set a longer default_timeout in the Selenium WebDriver configuration",
+        "C": "Implement explicit waits using WebDriverWait and expected conditions",
+        "D": "Parse the website's JavaScript code to determine when content will load"
+      },
+      "correct_answer": "C",
+      "code_example": "from selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\n\ndriver = webdriver.Chrome()\ndriver.get('https://example.com')\n\ntry:\n    # Wait up to 10 seconds for the element to be clickable\n    element = WebDriverWait(driver, 10).until(\n        EC.element_to_be_clickable((By.ID, 'dynamicButton'))\n    )\n    element.click()\n    \n    # Wait for content to load after clicking\n    content = WebDriverWait(driver, 10).until(\n        EC.presence_of_element_located((By.CLASS_NAME, 'dynamic-content'))\n    )\n    print(f\"Found dynamic content: {content.text[:20]}...\")\nfinally:\n    driver.quit()"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "Which statement about Cython is FALSE?",
+      "options": {
+        "A": "Cython can generate C extension modules for Python",
+        "B": "Cython allows optional static typing of variables",
+        "C": "Cython code must always be compiled before execution",
+        "D": "Cython automatically converts all Python objects to C types"
+      },
+      "correct_answer": "D",
+      "code_example": "# Example Cython code (in a .pyx file)\n\n# Python function\ndef py_fibonacci(n):\n    a, b = 0, 1\n    for i in range(n):\n        a, b = b, a + b\n    return a\n\n# Cython optimized function with type declarations\ncdef int cy_fibonacci(int n):\n    cdef int a = 0\n    cdef int b = 1\n    cdef int i\n    cdef int temp\n    \n    for i in range(n):\n        temp = a\n        a = b\n        b = temp + b\n    \n    return a"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing an N-ary tree traversal?",
+      "options": {
+        "A": "[1, 2, 5, 6, 3, 7, 8, 4, 9, 10]",
+        "B": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+        "C": "[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]",
+        "D": "[1, 2, 3, 4, 5, 6, 7, 8, 9]"
+      },
+      "correct_answer": "A",
+      "code_example": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.children = []\n\ndef create_n_ary_tree():\n    # Create the tree structure\n    #       1\n    #    /  |  \\\n    #   2   3   4\n    #  / \\  / \\  / \\\n    # 5  6 7  8 9  10\n    \n    root = Node(1)\n    \n    node2 = Node(2)\n    node3 = Node(3)\n    node4 = Node(4)\n    \n    root.children = [node2, node3, node4]\n    \n    node5 = Node(5)\n    node6 = Node(6)\n    node2.children = [node5, node6]\n    \n    node7 = Node(7)\n    node8 = Node(8)\n    node3.children = [node7, node8]\n    \n    node9 = Node(9)\n    node10 = Node(10)\n    node4.children = [node9, node10]\n    \n    return root\n\ndef preorder_traversal(node, result=None):\n    if result is None:\n        result = []\n    \n    if node:\n        result.append(node.value)\n        for child in node.children:\n            preorder_traversal(child, result)\n    \n    return result\n\nroot = create_n_ary_tree()\nresult = preorder_traversal(root)\nprint(result)"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "In the context of database sharding and replication, which of the following statements is TRUE?",
+      "options": {
+        "A": "Sharding primarily improves data consistency across distributed systems",
+        "B": "Read replicas are the preferred solution for scaling write-heavy workloads",
+        "C": "Consistent hashing mitigates the need to rehash all keys when adding new shards",
+        "D": "Vertical sharding involves distributing different rows to different database servers"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following FastAPI asynchronous endpoint implementation?",
+      "options": {
+        "A": "{'status': 'ok', 'results': ['Result from operation 1', 'Result from operation 2']}",
+        "B": "{'status': 'ok', 'results': ['Result from operation 1', 'Result from operation 2', 'Result from operation 3']}",
+        "C": "RuntimeError: Cannot use await outside of an async function",
+        "D": "TypeError: Object of type coroutine is not JSON serializable"
+      },
+      "correct_answer": "B",
+      "code_example": "from fastapi import FastAPI\nimport asyncio\n\napp = FastAPI()\n\nasync def async_operation(operation_id):\n    # Simulate an asynchronous operation (e.g., database query or API call)\n    await asyncio.sleep(1)  # Simulate delay\n    return f\"Result from operation {operation_id}\"\n\n@app.get(\"/parallel-operations\")\nasync def run_parallel_operations():\n    # Run three operations concurrently\n    operations = [async_operation(i) for i in range(1, 4)]\n    results = await asyncio.gather(*operations)\n    \n    return {\"status\": \"ok\", \"results\": results}\n\n# For testing this code snippet outside of FastAPI\nasync def test_function():\n    return await run_parallel_operations()\n\n# This simulates running the endpoint and seeing the output\nimport asyncio\nprint(asyncio.run(test_function()))"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates Python's attribute access?",
+      "options": {
+        "A": "{'name': 'DynamicObject', 'custom_attr': 'This was added dynamically'}",
+        "B": "AttributeError: 'DynamicObject' object has no attribute 'custom_attr'",
+        "C": "'This was added dynamically'",
+        "D": "None"
+      },
+      "correct_answer": "C",
+      "code_example": "class DynamicObject:\n    def __init__(self, name):\n        self.name = name\n    \n    def __getattr__(self, name):\n        # Called when attribute is not found through normal lookup\n        return f\"Attribute '{name}' not found\"\n    \n    def __setattr__(self, name, value):\n        # Called when an attribute is set\n        if name.startswith('_'):\n            # For private attributes, raise an error\n            raise AttributeError(f\"Cannot set private attribute '{name}'\")\n        else:\n            # For public attributes, set normally\n            super().__setattr__(name, value)\n\nobj = DynamicObject(\"DynamicObject\")\n\n# Set a new attribute dynamically\nsetattr(obj, \"custom_attr\", \"This was added dynamically\")\n\n# Get the attribute using getattr\nresult = getattr(obj, \"custom_attr\")\nprint(result)"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "Which Python code coverage tool correctly identifies which branches of conditional statements have been executed?",
+      "options": {
+        "A": "pylint",
+        "B": "flake8",
+        "C": "coverage.py with branch=True option",
+        "D": "black"
+      },
+      "correct_answer": "C",
+      "code_example": "# Example of running coverage with branch analysis\n\n'''\nTerminal commands to run coverage analysis:\n\n# Install coverage\npip install coverage\n\n# Run your tests with coverage and branch analysis enabled\ncoverage run --branch -m unittest discover\n\n# Generate a report\ncoverage report -m\n\n# Generate HTML report for detailed branch coverage\ncoverage html\n'''\n\n# Sample Python code with branches we might want to test\ndef complex_function(a, b):\n    result = 0\n    \n    if a > 0:  # This branch needs coverage\n        result += a\n    else:      # This branch needs coverage too\n        result -= a\n    \n    if b > 0:  # Another branch\n        result *= b\n    \n    return result\n\n# Test that would provide partial branch coverage\ndef test_positive_values():\n    assert complex_function(5, 2) == 10\n    # This only covers a>0 and b>0 branches"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing abstract classes and interfaces in Python?",
+      "options": {
+        "A": "TypeError: Can't instantiate abstract class Shape with abstract methods area, perimeter",
+        "B": "Circle area: 314.16, Circle perimeter: 62.83",
+        "C": "NotImplementedError: Subclasses must implement abstract method",
+        "D": "AttributeError: 'Shape' object has no attribute 'calculate_area'"
+      },
+      "correct_answer": "B",
+      "code_example": "from abc import ABC, abstractmethod\nimport math\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self):\n        pass\n    \n    @abstractmethod\n    def perimeter(self):\n        pass\n    \n    def describe(self):\n        return f\"{self.__class__.__name__} area: {self.area():.2f}, {self.__class__.__name__} perimeter: {self.perimeter():.2f}\"\n\nclass Circle(Shape):\n    def __init__(self, radius):\n        self.radius = radius\n    \n    def area(self):\n        return math.pi * self.radius ** 2\n    \n    def perimeter(self):\n        return 2 * math.pi * self.radius\n\ntry:\n    # Trying to instantiate the abstract class would raise TypeError\n    # shape = Shape()\n    \n    # Create a concrete implementation\n    circle = Circle(10)\n    print(circle.describe())\n    \nexcept Exception as e:\n    print(type(e).__name__ + \":\", str(e))"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "In the context of Test-Driven Development (TDD), which of the following sequences BEST represents the correct order of steps?",
+      "options": {
+        "A": "Write code, Write tests, Refactor, Run tests",
+        "B": "Write tests, Run tests, Write code, Run tests, Refactor, Run tests",
+        "C": "Design interfaces, Implement classes, Write tests, Run tests",
+        "D": "Create UML diagrams, Write tests, Write code, Deploy"
+      },
+      "correct_answer": "B",
+      "code_example": "import unittest\n\n# Step 1: Write a failing test\nclass TestCalculator(unittest.TestCase):\n    def test_add_numbers(self):\n        # Arrange\n        calc = Calculator()\n        \n        # Act\n        result = calc.add(3, 5)\n        \n        # Assert\n        self.assertEqual(result, 8)\n\n# Step 2: Run the test (it will fail since Calculator doesn't exist yet)\n# unittest.main()\n\n# Step 3: Write minimal code to make the test pass\nclass Calculator:\n    def add(self, a, b):\n        return a + b\n\n# Step 4: Run the tests again (should pass now)\n# unittest.main()\n\n# Step 5: Refactor if needed\nclass ImprovedCalculator:\n    def add(self, *args):\n        return sum(args)\n\n# Step 6: Run tests again to ensure refactoring didn't break anything\nclass TestImprovedCalculator(unittest.TestCase):\n    def test_add_two_numbers(self):\n        calc = ImprovedCalculator()\n        self.assertEqual(calc.add(3, 5), 8)\n    \n    def test_add_multiple_numbers(self):\n        calc = ImprovedCalculator()\n        self.assertEqual(calc.add(1, 2, 3, 4, 5), 15)\n\n# Result of running TDD cycle\nprint(\"TDD cycle demonstration: writing a test first, implementing just enough code to pass, then refactoring\")"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which Infrastructure as Code (IaC) approach is demonstrated in the following Python code?",
+      "options": {
+        "A": "Declarative configuration using Ansible playbooks",
+        "B": "Imperative scripting using shell commands",
+        "C": "Programmatic infrastructure definition using AWS CDK",
+        "D": "Configuration management using Chef recipes"
+      },
+      "correct_answer": "C",
+      "code_example": "from aws_cdk import (\n    core,\n    aws_ec2 as ec2,\n    aws_ecs as ecs,\n    aws_ecs_patterns as ecs_patterns\n)\n\nclass WebServiceStack(core.Stack):\n    def __init__(self, scope: core.Construct, id: str, **kwargs):\n        super().__init__(scope, id, **kwargs)\n\n        # Create VPC\n        vpc = ec2.Vpc(\n            self, \"WebServiceVPC\",\n            max_azs=2\n        )\n\n        # Create ECS Cluster\n        cluster = ecs.Cluster(\n            self, \"WebServiceCluster\",\n            vpc=vpc\n        )\n\n        # Create a load-balanced Fargate service\n        fargate_service = ecs_patterns.ApplicationLoadBalancedFargateService(\n            self, \"WebService\",\n            cluster=cluster,\n            cpu=512,\n            memory_limit_mib=1024,\n            desired_count=2,\n            task_image_options=ecs_patterns.ApplicationLoadBalancedTaskImageOptions(\n                image=ecs.ContainerImage.from_registry(\"amazon/amazon-ecs-sample\")\n            )\n        )\n\n        # Output the DNS where the service can be accessed\n        core.CfnOutput(\n            self, \"LoadBalancerDNS\",\n            value=fargate_service.load_balancer.load_balancer_dns_name\n        )\n\napp = core.App()\nWebServiceStack(app, \"WebServiceStack\")\napp.synth()"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What security vulnerability is MOST directly addressed by the following code pattern?",
+      "options": {
+        "A": "Cross-Site Scripting (XSS)",
+        "B": "SQL Injection",
+        "C": "Cross-Site Request Forgery (CSRF)",
+        "D": "Server-Side Request Forgery (SSRF)"
+      },
+      "correct_answer": "B",
+      "code_example": "import sqlite3\nfrom typing import List, Dict, Any\n\nclass SecureDatabaseHandler:\n    def __init__(self, db_path: str):\n        self.connection = sqlite3.connect(db_path)\n        self.connection.row_factory = sqlite3.Row\n    \n    def find_users_by_name(self, name: str) -> List[Dict[str, Any]]:\n        # VULNERABLE approach (DO NOT USE):\n        # query = f\"SELECT * FROM users WHERE name LIKE '%{name}%'\"\n        # cursor = self.connection.execute(query)\n        \n        # SECURE approach (USE THIS):\n        query = \"SELECT * FROM users WHERE name LIKE ?\"\n        cursor = self.connection.execute(query, (f'%{name}%',))\n        \n        return [{k: row[k] for k in row.keys()} for row in cursor.fetchall()]\n    \n    def close(self):\n        if self.connection:\n            self.connection.close()\n\n# Example usage\nif __name__ == \"__main__\":\n    # Initialize database and insert sample data\n    db = SecureDatabaseHandler(\":memory:\")\n    db.connection.execute(\"CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT, email TEXT)\")\n    db.connection.execute(\"INSERT INTO users VALUES (1, 'Alice', 'alice@example.com')\")\n    db.connection.execute(\"INSERT INTO users VALUES (2, 'Bob', 'bob@example.com')\")\n    db.connection.commit()\n    \n    # Safe query with parameterized statement\n    result = db.find_users_by_name(\"Alice\")\n    print(f\"Safe query result: {result}\")\n    \n    # What happens if user input contains SQL injection attempt?\n    malicious_input = \"' OR '1'='1\"  # Attempt to get all users\n    result = db.find_users_by_name(malicious_input)\n    print(f\"Query with malicious input: {result}\")\n    \n    db.close()"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What is the main difference between RabbitMQ and Apache Kafka in terms of their messaging patterns?",
+      "options": {
+        "A": "RabbitMQ uses a producer-consumer model while Kafka uses a publish-subscribe model",
+        "B": "RabbitMQ is primarily a log-based message broker, while Kafka is primarily a queue-based message broker",
+        "C": "RabbitMQ focuses on message delivery guarantees, while Kafka focuses on high-throughput stream processing",
+        "D": "RabbitMQ is designed for small-scale deployments, while Kafka only works in large distributed environments"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Python metaclasses?",
+      "options": {
+        "A": "ValidationError: 'age' must be a positive integer",
+        "B": "[('name', <class 'str'>), ('age', <class 'int'>)]",
+        "C": "PersonClass created with fields: name, age",
+        "D": "TypeError: 'age' is not a valid attribute for Person"
+      },
+      "correct_answer": "C",
+      "code_example": "class Field:\n    def __init__(self, field_type):\n        self.field_type = field_type\n        self.name = None\n    \n    def __set_name__(self, owner, name):\n        self.name = name\n    \n    def __set__(self, instance, value):\n        if not isinstance(value, self.field_type):\n            raise TypeError(f\"{self.name} must be of type {self.field_type.__name__}\")\n        instance.__dict__[self.name] = value\n\nclass ModelMeta(type):\n    def __new__(mcs, name, bases, attrs):\n        fields = [(key, value.field_type) for key, value in attrs.items() \n                  if isinstance(value, Field)]\n        \n        cls = super().__new__(mcs, name, bases, attrs)\n        \n        print(f\"{name} created with fields: {', '.join(field[0] for field in fields)}\")\n        return cls\n\nclass Model(metaclass=ModelMeta):\n    pass\n\nclass Person(Model):\n    name = Field(str)\n    age = Field(int)\n\n# Create an instance of Person\nperson = Person()\nperson.name = \"John\"\nperson.age = 30\n\n# Try setting an invalid type (would raise TypeError)\n# person.age = \"thirty\""
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing a solution to the maximum flow problem?",
+      "options": {
+        "A": "Maximum flow: 23",
+        "B": "Maximum flow: 5",
+        "C": "Maximum flow: 19",
+        "D": "RuntimeError: Graph contains a negative cycle"
+      },
+      "correct_answer": "A",
+      "code_example": "from collections import defaultdict, deque\n\nclass Graph:\n    def __init__(self, vertices):\n        self.vertices = vertices\n        self.graph = defaultdict(list)\n        self.flow = {}  # Dictionary to store flow values for each edge\n    \n    def add_edge(self, u, v, capacity):\n        # Add forward edge with capacity\n        self.graph[u].append(v)\n        # Add reverse edge with 0 capacity (for residual graph)\n        self.graph[v].append(u)\n        # Initialize flow as 0 for both directions\n        self.flow[(u, v)] = 0\n        self.flow[(v, u)] = 0\n        # Set capacity for edges\n        self.capacity = defaultdict(int)\n        self.capacity[(u, v)] = capacity\n    \n    def bfs(self, source, sink, parent):\n        # BFS to find augmenting path\n        visited = [False] * self.vertices\n        queue = deque()\n        queue.append(source)\n        visited[source] = True\n        \n        while queue:\n            u = queue.popleft()\n            for v in self.graph[u]:\n                residual_capacity = self.capacity[(u, v)] - self.flow[(u, v)]\n                if not visited[v] and residual_capacity > 0:\n                    queue.append(v)\n                    visited[v] = True\n                    parent[v] = u\n        \n        # Return True if we reached sink in BFS\n        return visited[sink]\n    \n    def ford_fulkerson(self, source, sink):\n        parent = [-1] * self.vertices\n        max_flow = 0\n        \n        # Augment the flow while there is a path from source to sink\n        while self.bfs(source, sink, parent):\n            # Find minimum residual capacity of the edges along the path\n            path_flow = float(\"Inf\")\n            s = sink\n            while s != source:\n                path_flow = min(path_flow, self.capacity[(parent[s], s)] - self.flow[(parent[s], s)])\n                s = parent[s]\n            \n            # Add path flow to overall flow\n            max_flow += path_flow\n            \n            # Update residual capacities of the edges and reverse edges along the path\n            v = sink\n            while v != source:\n                u = parent[v]\n                self.flow[(u, v)] += path_flow\n                self.flow[(v, u)] -= path_flow\n                v = parent[v]\n        \n        return max_flow\n\n# Example graph with 6 vertices\ng = Graph(6)\n\n# Add edges with capacities\ng.add_edge(0, 1, 16)  # Source to A\ng.add_edge(0, 2, 13)  # Source to B\ng.add_edge(1, 2, 10)  # A to B\ng.add_edge(1, 3, 12)  # A to C\ng.add_edge(2, 1, 4)   # B to A\ng.add_edge(2, 4, 14)  # B to D\ng.add_edge(3, 2, 9)   # C to B\ng.add_edge(3, 5, 20)  # C to Sink\ng.add_edge(4, 3, 7)   # D to C\ng.add_edge(4, 5, 4)   # D to Sink\n\n# Calculate max flow from source (0) to sink (5)\nmax_flow = g.ford_fulkerson(0, 5)\nprint(f\"Maximum flow: {max_flow}\")"
+    }
+  ]
+}
