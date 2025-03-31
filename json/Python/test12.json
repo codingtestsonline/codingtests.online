@@ -1,0 +1,612 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following factorial calculation?",
+      "options": {
+        "A": "120",
+        "B": "24",
+        "C": "720",
+        "D": "5"
+      },
+      "correct_answer": "A",
+      "code_example": "def factorial(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n\nprint(factorial(5))"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following string reversal code?",
+      "options": {
+        "A": "olleh",
+        "B": "hello",
+        "C": "olleH",
+        "D": "OLLEH"
+      },
+      "correct_answer": "A",
+      "code_example": "text = \"hello\"\nreversed_text = text[::-1]\nprint(reversed_text)"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the purpose of the 'pass' statement in Python?",
+      "options": {
+        "A": "To skip the current iteration in a loop",
+        "B": "To terminate a function and return None",
+        "C": "To act as a placeholder where code will eventually go",
+        "D": "To pass control to another part of the program"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following binary search implementation?",
+      "options": {
+        "A": "Element found at index 5",
+        "B": "Element found at index 4",
+        "C": "Element not found",
+        "D": "Element found at index 6"
+      },
+      "correct_answer": "B",
+      "code_example": "def binary_search(arr, target):\n    low = 0\n    high = len(arr) - 1\n    \n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return f\"Element found at index {mid}\"\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    \n    return \"Element not found\"\n\nsorted_array = [10, 20, 30, 40, 50, 60, 70, 80]\nprint(binary_search(sorted_array, 50))"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which of the following statements about tuples in Python is FALSE?",
+      "options": {
+        "A": "Tuples are immutable",
+        "B": "Tuples can contain different data types",
+        "C": "Individual elements in a tuple can be modified after creation",
+        "D": "Tuples can be used as dictionary keys"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will the following palindrome checking function return for the input 'level'?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "'level is a palindrome'",
+        "D": "'level is not a palindrome'"
+      },
+      "correct_answer": "A",
+      "code_example": "def is_palindrome(text):\n    cleaned_text = ''.join(c.lower() for c in text if c.isalnum())\n    return cleaned_text == cleaned_text[::-1]\n\nprint(is_palindrome('level'))"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following prime number checking function?",
+      "options": {
+        "A": "[2, 3, 5, 7, 11, 13, 17, 19]",
+        "B": "[2, 3, 5, 7, 11, 13, 17, 19, 23]",
+        "C": "[2, 3, 5, 7, 11, 13, 17, 19, 23, 29]",
+        "D": "[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31]"
+      },
+      "correct_answer": "C",
+      "code_example": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\nprimes = [num for num in range(2, 30) if is_prime(num)]\nprint(primes)"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following bubble sort implementation?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[5, 4, 3, 2, 1]",
+        "C": "[5, 2, 1, 4, 3]",
+        "D": "[3, 1, 4, 2, 5]"
+      },
+      "correct_answer": "A",
+      "code_example": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr\n\nprint(bubble_sort([5, 2, 1, 4, 3]))"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Which exception will be raised by the following code?",
+      "options": {
+        "A": "ValueError",
+        "B": "TypeError",
+        "C": "IndexError",
+        "D": "KeyError"
+      },
+      "correct_answer": "C",
+      "code_example": "my_list = [1, 2, 3]\nprint(my_list[5])"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following string formatting example?",
+      "options": {
+        "A": "Hello, Alice. Your balance is $50.25.",
+        "B": "Hello, Alice. Your balance is 50.25.",
+        "C": "Hello, Alice. Your balance is $50.",
+        "D": "Hello, Alice. Your balance is Alice50.25."
+      },
+      "correct_answer": "A",
+      "code_example": "name = \"Alice\"\nbalance = 50.25\nprint(f\"Hello, {name}. Your balance is ${balance}.\")"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following base conversion code?",
+      "options": {
+        "A": "1010",
+        "B": "10",
+        "C": "0b1010",
+        "D": "0xa"
+      },
+      "correct_answer": "A",
+      "code_example": "decimal_number = 10\nbinary_string = bin(decimal_number)[2:]\nprint(binary_string)"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following string slicing code?",
+      "options": {
+        "A": "Python",
+        "B": "Pytho",
+        "C": "ython",
+        "D": "ytho"
+      },
+      "correct_answer": "D",
+      "code_example": "text = \"Python\"\nslice_text = text[1:5]\nprint(slice_text)"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to create a custom exception in Python?",
+      "options": {
+        "A": "class CustomError(BaseException): pass",
+        "B": "class CustomError extends Exception: pass",
+        "C": "class CustomError(Exception): pass",
+        "D": "def CustomError(Exception): pass"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What is the purpose of the 'b' mode when opening a file in Python?",
+      "options": {
+        "A": "To open the file in blocking mode",
+        "B": "To open the file in binary mode",
+        "C": "To open the file in buffered mode",
+        "D": "To open the file in backup mode"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will the following code using the CSV module produce?",
+      "options": {
+        "A": "['name', 'age', 'city']",
+        "B": "[['name', 'age', 'city'], ['Alice', '30', 'New York']]",
+        "C": "A CSV file with one header row and one data row",
+        "D": "A dictionary with keys 'name', 'age', and 'city'"
+      },
+      "correct_answer": "C",
+      "code_example": "import csv\n\nwith open('data.csv', 'w', newline='') as csvfile:\n    writer = csv.writer(csvfile)\n    writer.writerow(['name', 'age', 'city'])\n    writer.writerow(['Alice', '30', 'New York'])"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will the following code for reading and writing text files output?",
+      "options": {
+        "A": "Hello, Python!\\n",
+        "B": "Hello, Python!",
+        "C": "TypeError: 'str' object is not callable",
+        "D": "Nothing, as the file is written but not read back"
+      },
+      "correct_answer": "B",
+      "code_example": "# Write to file\nwith open('example.txt', 'w') as f:\n    f.write('Hello, Python!')\n\n# Read from file\nwith open('example.txt', 'r') as f:\n    content = f.read()\n\nprint(content)"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating the iterator protocol?",
+      "options": {
+        "A": "1\\n2\\n3",
+        "B": "StopIteration error",
+        "C": "1\\n2\\n3\\nStopIteration",
+        "D": "[1, 2, 3]"
+      },
+      "correct_answer": "A",
+      "code_example": "class CustomIterator:\n    def __init__(self, data):\n        self.data = data\n        self.index = 0\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.index >= len(self.data):\n            raise StopIteration\n        value = self.data[self.index]\n        self.index += 1\n        return value\n\nmy_iter = CustomIterator([1, 2, 3])\n\ntry:\n    print(next(my_iter))\n    print(next(my_iter))\n    print(next(my_iter))\n    # We catch the StopIteration error but don't print it\n    next(my_iter)\nexcept StopIteration:\n    pass"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following statements about regex performance in Python is TRUE?",
+      "options": {
+        "A": "Compiling a regex pattern with re.compile() has no performance benefit",
+        "B": "Using anchors like ^ and $ improves regex performance by limiting the search space",
+        "C": "Using greedy quantifiers like .* is more efficient than non-greedy quantifiers like .*?",
+        "D": "The re module is always faster than using string methods like split() and replace()"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What happens when Python tries to import a module?",
+      "options": {
+        "A": "It looks only in the current directory",
+        "B": "It first checks sys.modules, then looks in sys.path directories",
+        "C": "It always downloads the module from PyPI if not found locally",
+        "D": "It only looks in the standard library directories"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code comparing generator expressions and list comprehensions?",
+      "options": {
+        "A": "List: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\\nGenerator: <generator object <genexpr> at 0x...>",
+        "B": "List: <class 'list'>\\nGenerator: <class 'generator'>",
+        "C": "List: 10\\nGenerator: 10",
+        "D": "List: 45\\nGenerator: 45"
+      },
+      "correct_answer": "C",
+      "code_example": "# List comprehension\nsquares_list = [x*x for x in range(10)]\n\n# Generator expression\nsquares_gen = (x*x for x in range(10))\n\nprint(f\"List: {len(squares_list)}\")\nprint(f\"Generator: {sum(1 for _ in squares_gen)}\")"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following dictionary and set comprehension example?",
+      "options": {
+        "A": "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16}\\n{1, 3, 5, 7, 9}",
+        "B": "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16}\\n{0, 1, 2, 3, 4}",
+        "C": "{0: 0, 1: 1, 4: 2, 9: 3, 16: 4}\\n{1, 3, 5, 7, 9}",
+        "D": "dict_comp: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}\\nset_comp: {1, 3, 5, 7, 9}"
+      },
+      "correct_answer": "D",
+      "code_example": "# Dictionary comprehension\ndict_comp = {x: x*x for x in range(5)}\n\n# Set comprehension\nset_comp = {x for x in range(10) if x % 2 == 1}\n\nprint(f\"dict_comp: {dict_comp}\")\nprint(f\"set_comp: {set_comp}\")"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What is the primary purpose of __init__.py files in Python package directories?",
+      "options": {
+        "A": "To specify the package version number",
+        "B": "To initialize package variables when the package is imported",
+        "C": "To mark directories as Python packages",
+        "D": "To document the package contents"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "Which of the following is an example of a relative import in Python?",
+      "options": {
+        "A": "import os.path",
+        "B": "from mypackage import mymodule",
+        "C": "from .sibling_module import function",
+        "D": "import sys"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using map, filter, and reduce?",
+      "options": {
+        "A": "[2, 4, 6, 8]\\n[2, 6]\\n8",
+        "B": "[2, 4, 6, 8]\\n[2, 6]\\n30",
+        "C": "[2, 4, 6, 8]\\n[2, 6]\\n3",
+        "D": "<map object>\\n<filter object>\\n<reduce object>"
+      },
+      "correct_answer": "A",
+      "code_example": "from functools import reduce\n\nnumbers = [1, 2, 3, 4]\n\n# Using map to double each number\ndoubled = list(map(lambda x: x * 2, numbers))\n\n# Using filter to keep only numbers divisible by 3 after doubling\nfiltered = list(filter(lambda x: x % 3 == 0, doubled))\n\n# Using reduce to sum the filtered numbers\ntotal = reduce(lambda x, y: x + y, filtered)\n\nprint(doubled)\nprint(filtered)\nprint(total)"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will the following function for finding connected components in an undirected graph return?",
+      "options": {
+        "A": "[[0, 1, 2], [3, 4]]",
+        "B": "[{0, 1, 2}, {3, 4}]",
+        "C": "2",
+        "D": "[[0, 1, 2, 3, 4]]"
+      },
+      "correct_answer": "B",
+      "code_example": "def find_connected_components(graph):\n    visited = set()\n    components = []\n    \n    def dfs(node, component):\n        visited.add(node)\n        component.add(node)\n        for neighbor in graph[node]:\n            if neighbor not in visited:\n                dfs(neighbor, component)\n    \n    for node in range(len(graph)):\n        if node not in visited:\n            component = set()\n            dfs(node, component)\n            components.append(component)\n    \n    return components\n\n# Graph represented as adjacency list\ngraph = [\n    [1, 2],  # Node 0 connected to 1 and 2\n    [0, 2],  # Node 1 connected to 0 and 2\n    [0, 1],  # Node 2 connected to 0 and 1\n    [4],     # Node 3 connected to 4\n    [3]      # Node 4 connected to 3\n]\n\nprint(find_connected_components(graph))"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What makes an algorithm 'greedy'?",
+      "options": {
+        "A": "It uses recursion to solve a problem",
+        "B": "It makes locally optimal choices at each step",
+        "C": "It guarantees a globally optimal solution",
+        "D": "It has exponential time complexity"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will the following code demonstrating lazy evaluation output?",
+      "options": {
+        "A": "Calculating 1\\nCalculating 4\\nCalculating 9\\n[1, 4, 9]",
+        "B": "[1, 4, 9]\\nCalculating 1\\nCalculating 4\\nCalculating 9",
+        "C": "Calculating 1\\n1\\nCalculating 4\\n4\\nCalculating 9\\n9",
+        "D": "Calculating 1\\nCalculating 4\\nCalculating 9\\n1\\n4\\n9"
+      },
+      "correct_answer": "C",
+      "code_example": "def lazy_square(n):\n    print(f\"Calculating {n}\")\n    return n * n\n\n# Create a generator that computes squares lazily\ndef lazy_squares(numbers):\n    for n in numbers:\n        yield lazy_square(n)\n\n# Using the generator\nsquares = lazy_squares([1, 2, 3])\n\n# Values are computed one at a time, only when needed\nfor square in squares:\n    print(square)"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a standard CRUD operation?",
+      "options": {
+        "A": "Create",
+        "B": "Refresh",
+        "C": "Update",
+        "D": "Delete"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using *args and **kwargs?",
+      "options": {
+        "A": "1 2 3\\n{'a': 'apple', 'b': 'banana'}",
+        "B": "[1, 2, 3]\\n{'a': 'apple', 'b': 'banana'}",
+        "C": "1 2 3\\na=apple b=banana",
+        "D": "(1, 2, 3)\\n{'a': 'apple', 'b': 'banana'}"
+      },
+      "correct_answer": "A",
+      "code_example": "def show_args_kwargs(*args, **kwargs):\n    print(*args)\n    print(kwargs)\n\nshow_args_kwargs(1, 2, 3, a='apple', b='banana')"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will the following code using the two-pointer technique output?",
+      "options": {
+        "A": "[1, 2, 3, 5, 8, 13]",
+        "B": "[[1, 3], [2, 8], [5, 13]]",
+        "C": "[(1, 3), (2, 8), (5, 13)]",
+        "D": "No pairs found"
+      },
+      "correct_answer": "C",
+      "code_example": "def find_pairs_with_two_pointers(arr, target_sum):\n    arr.sort()  # Sort the array first\n    left = 0\n    right = len(arr) - 1\n    pairs = []\n    \n    while left < right:\n        current_sum = arr[left] + arr[right]\n        \n        if current_sum == target_sum:\n            pairs.append((arr[left], arr[right]))\n            left += 1\n            right -= 1\n        elif current_sum < target_sum:\n            left += 1\n        else:  # current_sum > target_sum\n            right -= 1\n    \n    return pairs if pairs else \"No pairs found\"\n\nnumbers = [8, 3, 5, 1, 13, 2]\ntarget = 4\nprint(find_pairs_with_two_pointers(numbers, target))"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will the following code about partial functions output?",
+      "options": {
+        "A": "25\\n36",
+        "B": "5\\n6",
+        "C": "25\\n6",
+        "D": "partial_func(5)\\npartial_func(6)"
+      },
+      "correct_answer": "A",
+      "code_example": "from functools import partial\n\ndef power(base, exponent):\n    return base ** exponent\n\n# Create a partial function that squares numbers\nsquare = partial(power, exponent=2)\n\nprint(square(5))\nprint(square(6))"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "Which statement about arrays vs lists in Python is TRUE?",
+      "options": {
+        "A": "Lists are more memory-efficient than arrays for storing numbers",
+        "B": "Python's built-in array module provides arrays that are faster than NumPy arrays",
+        "C": "Arrays from the array module can only store elements of the same data type",
+        "D": "Lists cannot be used with numerical operations, but arrays can"
+      },
+      "correct_answer": "C"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Consider the following N-ary tree implementation. What is the time complexity of the find_deepest_node function?",
+      "code_example": "class NaryTreeNode:\n    def __init__(self, value):\n        self.value = value\n        self.children = []\n        \ndef find_deepest_node(root):\n    if not root:\n        return None\n        \n    max_depth = -1\n    deepest_node = None\n    \n    def dfs(node, depth):\n        nonlocal max_depth, deepest_node\n        \n        if depth > max_depth:\n            max_depth = depth\n            deepest_node = node\n        \n        for child in node.children:\n            dfs(child, depth + 1)\n    \n    dfs(root, 0)\n    return deepest_node",
+      "options": {
+        "A": "O(1)",
+        "B": "O(log n), where n is the number of nodes",
+        "C": "O(n), where n is the number of nodes",
+        "D": "O(n^2), where n is the number of nodes"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing the Knuth-Morris-Pratt (KMP) string matching algorithm?",
+      "code_example": "def compute_lps(pattern):\n    m = len(pattern)\n    lps = [0] * m  # longest proper prefix which is also suffix\n    \n    # Length of the previous longest prefix & suffix\n    length = 0\n    i = 1\n    \n    while i < m:\n        if pattern[i] == pattern[length]:\n            length += 1\n            lps[i] = length\n            i += 1\n        else:\n            if length != 0:\n                # This is tricky. Consider the example AAACAAAA and i = 7\n                length = lps[length-1]\n            else:\n                lps[i] = 0\n                i += 1\n    \n    return lps\n\npattern = \"ABABCABAB\"\nprint(compute_lps(pattern))",
+      "options": {
+        "A": "[0, 0, 1, 2, 0, 1, 2, 3, 4]",
+        "B": "[0, 0, 1, 2, 0, 1, 2, 1, 2]",
+        "C": "[0, 1, 0, 1, 0, 1, 0, 1, 0]",
+        "D": "[0, 0, 0, 0, 0, 0, 0, 0, 0]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Which of the following tools would NOT help directly with measuring code coverage in Python?",
+      "options": {
+        "A": "pytest-cov",
+        "B": "coverage.py",
+        "C": "Pylint",
+        "D": "nose-coverage"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing bit manipulation?",
+      "code_example": "def count_set_bits(n):\n    count = 0\n    while n:\n        count += n & 1\n        n >>= 1\n    return count\n\ndef is_power_of_two(n):\n    if n <= 0:\n        return False\n    return count_set_bits(n) == 1\n\ndef next_power_of_two(n):\n    if n <= 0:\n        return 1\n    if is_power_of_two(n):\n        return n\n    # Find position of MSB\n    pos = 0\n    temp = n\n    while temp:\n        pos += 1\n        temp >>= 1\n    return 1 << pos\n\nprint([next_power_of_two(i) for i in [7, 8, 15, 16, 17]])",
+      "options": {
+        "A": "[8, 8, 16, 16, 32]",
+        "B": "[8, 16, 16, 32, 32]",
+        "C": "[8, 8, 16, 16, 32]",
+        "D": "[8, 16, 16, 16, 32]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses backtracking to solve the N-Queens problem?",
+      "code_example": "def is_safe(board, row, col, n):\n    # Check upper column\n    for i in range(row):\n        if board[i][col] == 1:\n            return False\n            \n    # Check upper left diagonal\n    for i, j in zip(range(row, -1, -1), range(col, -1, -1)):\n        if board[i][j] == 1:\n            return False\n    \n    # Check upper right diagonal\n    for i, j in zip(range(row, -1, -1), range(col, n)):\n        if board[i][j] == 1:\n            return False\n            \n    return True\n\ndef solve_n_queens(n):\n    if n == 2 or n == 3:\n        return 0\n        \n    def backtrack(board, row):\n        if row == n:\n            return 1\n            \n        count = 0\n        for col in range(n):\n            if is_safe(board, row, col, n):\n                board[row][col] = 1\n                count += backtrack(board, row + 1)\n                board[row][col] = 0\n                \n        return count\n        \n    board = [[0 for _ in range(n)] for _ in range(n)]\n    return backtrack(board, 0)\n    \nfor i in range(1, 6):\n    print(solve_n_queens(i))",
+      "options": {
+        "A": "[1, 0, 0, 2, 10]",
+        "B": "[1, 0, 0, 2, 11]", 
+        "C": "[0, 0, 0, 2, 10]",
+        "D": "[1, 1, 0, 2, 10]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using NumPy vectorization?",
+      "code_example": "import numpy as np\n\ndef sigmoid(x):\n    return 1 / (1 + np.exp(-x))\n\ndef neural_network_layer(X, W, b, activation_fn):\n    # X: input matrix (samples × features)\n    # W: weight matrix (features × output_units)\n    # b: bias vector (output_units)\n    Z = np.dot(X, W) + b\n    return activation_fn(Z)\n\n# Initialize parameters\nnp.random.seed(42)\nX = np.array([[0.5, 0.1, -0.3],\n               [0.2, -0.5, 0.8]])\n\nW = np.array([[-0.1, 0.2],\n               [0.3, -0.4],\n               [0.5, 0.6]])\n\nb = np.array([0.1, -0.1])\n\n# Compute the output\noutput = neural_network_layer(X, W, b, sigmoid)\nprint(np.round(output, 3))",
+      "options": {
+        "A": "[[0.507, 0.518], [0.562, 0.561]]",
+        "B": "[[0.507, 0.476], [0.566, 0.524]]",
+        "C": "[[0.510, 0.473], [0.565, 0.524]]",
+        "D": "[[0.510, 0.473], [0.562, 0.524]]"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "When working with microservices architecture in Python, which pattern is LEAST suitable for handling distributed transactions across multiple services?",
+      "options": {
+        "A": "Saga Pattern",
+        "B": "Two-Phase Commit",
+        "C": "Event Sourcing",
+        "D": "Circuit Breaker Pattern"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating a deadlock scenario with Python threading?",
+      "code_example": "import threading\nimport time\n\nclass DeadlockSimulation:\n    def __init__(self):\n        self.lock_a = threading.Lock()\n        self.lock_b = threading.Lock()\n        self.results = []\n    \n    def task_one(self):\n        try:\n            self.lock_a.acquire(timeout=0.5)\n            time.sleep(0.1)  # Simulate work\n            self.results.append(\"Task One acquired lock A\")\n            \n            self.lock_b.acquire(timeout=0.5)\n            self.results.append(\"Task One acquired lock B\")\n            self.lock_b.release()\n            \n            self.lock_a.release()\n        except:\n            self.results.append(\"Task One timed out\")\n    \n    def task_two(self):\n        try:\n            self.lock_b.acquire(timeout=0.5)\n            time.sleep(0.1)  # Simulate work\n            self.results.append(\"Task Two acquired lock B\")\n            \n            self.lock_a.acquire(timeout=0.5)\n            self.results.append(\"Task Two acquired lock A\")\n            self.lock_a.release()\n            \n            self.lock_b.release()\n        except:\n            self.results.append(\"Task Two timed out\")\n    \n    def run_simulation(self):\n        t1 = threading.Thread(target=self.task_one)\n        t2 = threading.Thread(target=self.task_two)\n        \n        t1.start()\n        t2.start()\n        \n        t1.join()\n        t2.join()\n        \n        return self.results\n\nsimulation = DeadlockSimulation()\nprint(simulation.run_simulation())",
+      "options": {
+        "A": "['Task One acquired lock A', 'Task Two acquired lock B', 'Task One timed out', 'Task Two timed out']",
+        "B": "['Task One acquired lock A', 'Task Two acquired lock B', 'Task One acquired lock B', 'Task Two acquired lock A']",
+        "C": "['Task One acquired lock A', 'Task One acquired lock B', 'Task Two acquired lock B', 'Task Two acquired lock A']", 
+        "D": "[]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using mocking in Python?",
+      "code_example": "import unittest\nfrom unittest.mock import patch, MagicMock\n\nclass DatabaseClient:\n    def connect(self):\n        # In real implementation, this would connect to a database\n        pass\n        \n    def query(self, sql):\n        # In real implementation, this would execute SQL\n        pass\n        \n    def close(self):\n        # In real implementation, this would close the connection\n        pass\n\nclass UserService:\n    def __init__(self, db_client):\n        self.db_client = db_client\n        \n    def get_user_count(self):\n        self.db_client.connect()\n        result = self.db_client.query(\"SELECT COUNT(*) FROM users\")\n        self.db_client.close()\n        return result\n\nclass TestUserService(unittest.TestCase):\n    @patch('__main__.DatabaseClient')\n    def test_get_user_count(self, mock_db_client):\n        # Setup mock\n        instance = mock_db_client.return_value\n        instance.query.return_value = 42\n        \n        # Create service with mocked client\n        service = UserService(instance)\n        count = service.get_user_count()\n        \n        # Assertions\n        expected_calls = [\n            unittest.mock.call.connect(),\n            unittest.mock.call.query(\"SELECT COUNT(*) FROM users\"),\n            unittest.mock.call.close()\n        ]\n        \n        instance.assert_has_calls(expected_calls)\n        print(f\"Count: {count}, Mock called: {instance.mock_calls}\")\n\nif __name__ == '__main__':\n    unittest.main(argv=['first-arg-is-ignored'], exit=False)",
+      "options": {
+        "A": "Count: 42, Mock called: []",
+        "B": "Count: 42, Mock called: [call.connect(), call.query('SELECT COUNT(*) FROM users'), call.close()]",
+        "C": "Count: None, Mock called: [call.connect(), call.query('SELECT COUNT(*) FROM users'), call.close()]",
+        "D": "TypeError: 'MagicMock' object is not callable"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "Which tool or framework is most commonly used for implementing Infrastructure as Code (IaC) specifically for Python-based cloud applications?",
+      "options": {
+        "A": "Docker Compose",
+        "B": "Pulumi",
+        "C": "Jenkins",
+        "D": "SQLAlchemy"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates space optimization using generators?",
+      "code_example": "def matrix_chain_order(dims):\n    \"\"\"Optimize matrix multiplication order using dynamic programming.\"\"\"\n    n = len(dims) - 1  # Number of matrices\n    \n    # Create DP table for minimum costs\n    dp = [[0] * n for _ in range(n)]\n    \n    # Fill dp table in bottom-up manner\n    for l in range(1, n):\n        for i in range(n - l):\n            j = i + l\n            dp[i][j] = float('inf')\n            for k in range(i, j):\n                cost = dp[i][k] + dp[k+1][j] + dims[i] * dims[k+1] * dims[j+1]\n                dp[i][j] = min(dp[i][j], cost)\n    \n    # Space-optimized version returning generator of intermediate matrix sizes\n    def optimal_dims():\n        i, j = 0, n - 1\n        while i < j:\n            yield dims[i] * dims[j+1]  # Size of resulting matrix at this step\n            i += 1\n    \n    return dp[0][n-1], list(optimal_dims())\n\n# Example: Matrices with dimensions 10×30, 30×5, 5×60\ndims = [10, 30, 5, 60]\ncost, optimal_intermediate_sizes = matrix_chain_order(dims)\nprint(f\"Minimum multiplications: {cost}\")\nprint(f\"Intermediate matrix sizes: {optimal_intermediate_sizes}\")",
+      "options": {
+        "A": "Minimum multiplications: 4500\nIntermediate matrix sizes: [600, 300]",
+        "B": "Minimum multiplications: 4500\nIntermediate matrix sizes: [600]",
+        "C": "Minimum multiplications: 4500\nIntermediate matrix sizes: []",
+        "D": "Minimum multiplications: 4500\nIntermediate matrix sizes: [600, 300, 50]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What is the primary difference between PyPy's JIT compilation and the standard CPython implementation?",
+      "options": {
+        "A": "PyPy compiles all Python code to C++ before execution",
+        "B": "PyPy uses trace-based compilation to optimize frequently executed code paths",
+        "C": "PyPy requires explicit type annotations to achieve performance gains",
+        "D": "PyPy only works with a subset of Python syntax"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing Ford-Fulkerson algorithm for network flow?",
+      "code_example": "from collections import defaultdict, deque\n\nclass Graph:\n    def __init__(self, vertices):\n        self.vertices = vertices\n        self.graph = defaultdict(lambda: defaultdict(int))\n    \n    def add_edge(self, u, v, capacity):\n        self.graph[u][v] = capacity\n    \n    def bfs(self, source, sink, parent):\n        visited = [False] * self.vertices\n        queue = deque()\n        queue.append(source)\n        visited[source] = True\n        \n        while queue:\n            u = queue.popleft()\n            \n            for v, capacity in self.graph[u].items():\n                if not visited[v] and capacity > 0:\n                    queue.append(v)\n                    visited[v] = True\n                    parent[v] = u\n        \n        return visited[sink]\n    \n    def ford_fulkerson(self, source, sink):\n        parent = [-1] * self.vertices\n        max_flow = 0\n        \n        while self.bfs(source, sink, parent):\n            path_flow = float('inf')\n            s = sink\n            \n            while s != source:\n                path_flow = min(path_flow, self.graph[parent[s]][s])\n                s = parent[s]\n            \n            max_flow += path_flow\n            \n            v = sink\n            while v != source:\n                u = parent[v]\n                self.graph[u][v] -= path_flow\n                if v not in self.graph[u] or self.graph[u][v] == 0:\n                    del self.graph[u][v]\n                self.graph[v][u] += path_flow  # Add reverse edge for residual graph\n                v = u\n        \n        return max_flow\n\n# Create a graph for the following network:\n# 0 --> 1 --> 3\n# |     |     ^\n# v     v     |\n# 2 --------- |\n#\n# With capacities:\n# 0->1: 10, 0->2: 5, 1->3: 15, 1->2: 4, 2->3: 8\n\ng = Graph(4)\ng.add_edge(0, 1, 10)\ng.add_edge(0, 2, 5)\ng.add_edge(1, 3, 15)\ng.add_edge(1, 2, 4)\ng.add_edge(2, 3, 8)\n\nprint(f\"Maximum flow: {g.ford_fulkerson(0, 3)}\")",
+      "options": {
+        "A": "Maximum flow: 13",
+        "B": "Maximum flow: 14",
+        "C": "Maximum flow: 15",
+        "D": "Maximum flow: 19"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Dockerfile snippet if built and run?",
+      "code_example": "FROM python:3.9-slim\n\nWORKDIR /app\n\nCOPY requirements.txt .\nRUN pip install --no-cache-dir -r requirements.txt\n\nCOPY app.py .\n\nCMD [\"python\", \"-c\", \"import platform; import sys; print(f'Python {platform.python_version()} running on {platform.system()}. Args: {sys.argv[1:]}')\"]\n\n# Built with: docker build -t py-test .\n# Run with: docker run py-test hello world",
+      "options": {
+        "A": "Python 3.9.x running on Linux. Args: []",
+        "B": "Python 3.9.x running on Linux. Args: ['hello', 'world']",
+        "C": "Python 3.9.x running on Linux. Args: ['-c', \"import platform; import sys; print(f'Python {platform.python_version()} running on {platform.system()}. Args: {sys.argv[1:]}')\",'hello', 'world']",
+        "D": "Python 3.9.x running on Linux. Args: []"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "In a distributed database system, which transaction isolation level provides the strongest guarantees against concurrency anomalies?",
+      "options": {
+        "A": "Read Uncommitted",
+        "B": "Read Committed",
+        "C": "Repeatable Read",
+        "D": "Serializable"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code which implements a service discovery mechanism?",
+      "code_example": "import random\nimport time\nfrom collections import defaultdict\n\nclass ServiceRegistry:\n    def __init__(self):\n        self.services = defaultdict(list)\n        self.health_checks = {}\n    \n    def register(self, service_name, instance_id, endpoint, health_check_interval=30):\n        self.services[service_name].append({\n            'instance_id': instance_id,\n            'endpoint': endpoint,\n            'last_seen': time.time(),\n            'status': 'healthy'\n        })\n        self.health_checks[instance_id] = health_check_interval\n        return True\n    \n    def deregister(self, service_name, instance_id):\n        for i, instance in enumerate(self.services[service_name]):\n            if instance['instance_id'] == instance_id:\n                self.services[service_name].pop(i)\n                if instance_id in self.health_checks:\n                    del self.health_checks[instance_id]\n                return True\n        return False\n    \n    def heartbeat(self, service_name, instance_id):\n        for instance in self.services[service_name]:\n            if instance['instance_id'] == instance_id:\n                instance['last_seen'] = time.time()\n                instance['status'] = 'healthy'\n                return True\n        return False\n    \n    def discover(self, service_name, strategy='random'):\n        if service_name not in self.services or not self.services[service_name]:\n            return None\n            \n        # Filter only healthy instances\n        healthy_instances = [i for i in self.services[service_name] if i['status'] == 'healthy']\n        if not healthy_instances:\n            return None\n            \n        if strategy == 'random':\n            return random.choice(healthy_instances)['endpoint']\n        elif strategy == 'first':\n            return healthy_instances[0]['endpoint']\n        return None\n    \n    def check_health(self, current_time):\n        unhealthy_count = 0\n        for service_name, instances in self.services.items():\n            for instance in instances:\n                instance_id = instance['instance_id']\n                if instance_id in self.health_checks:\n                    time_diff = current_time - instance['last_seen']\n                    if time_diff > self.health_checks[instance_id]:\n                        instance['status'] = 'unhealthy'\n                        unhealthy_count += 1\n        return unhealthy_count\n\n# Simulate service registry\nregistry = ServiceRegistry()\n\n# Register services\nregistry.register('auth-service', 'auth-1', 'http://auth:8000', 10)\nregistry.register('auth-service', 'auth-2', 'http://auth:8001', 10)\nregistry.register('payment-service', 'payment-1', 'http://payment:9000', 10)\n\n# Simulate passage of time and missing heartbeats\ncurrent_time = time.time() + 15  # Fast forward 15 seconds\n\n# Send heartbeat for only one auth instance\nregistry.heartbeat('auth-service', 'auth-1')\n\n# Check health and mark instances as unhealthy\nunhealthy = registry.check_health(current_time)\n\n# Try to discover services\nauth_endpoint = registry.discover('auth-service', 'random')\npayment_endpoint = registry.discover('payment-service', 'random')\n\nprint(f\"Unhealthy instances: {unhealthy}\")\nprint(f\"Auth endpoint: {auth_endpoint}\")\nprint(f\"Payment endpoint: {payment_endpoint}\")",
+      "options": {
+        "A": "Unhealthy instances: 2\nAuth endpoint: http://auth:8000\nPayment endpoint: None",
+        "B": "Unhealthy instances: 0\nAuth endpoint: http://auth:8000\nPayment endpoint: http://payment:9000",
+        "C": "Unhealthy instances: 2\nAuth endpoint: http://auth:8000\nPayment endpoint: http://payment:9000",
+        "D": "Unhealthy instances: 1\nAuth endpoint: None\nPayment endpoint: None"
+      },
+      "correct_answer": "A"
+    }
+  ]
+}
