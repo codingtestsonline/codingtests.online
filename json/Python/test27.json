@@ -1,0 +1,653 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "Context managers (with statement)",
+      "question": "What will be the output of the following code?",
+      "code_example": "class ResourceManager:\n    def __init__(self, name):\n        self.name = name\n        print(f\"Acquiring {self.name}\")\n    \n    def __enter__(self):\n        print(f\"Enter {self.name}\")\n        return self\n    \n    def __exit__(self, exc_type, exc_val, exc_tb):\n        print(f\"Exit {self.name}\")\n\nwith ResourceManager(\"resource\") as r:\n    print(f\"Using {r.name}\")",
+      "options": {
+        "A": "Acquiring resource\nEnter resource\nUsing resource\nExit resource",
+        "B": "Enter resource\nUsing resource\nExit resource",
+        "C": "Acquiring resource\nUsing resource\nExit resource",
+        "D": "Acquiring resource\nEnter resource\nExit resource"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "Try/except/else/finally blocks",
+      "question": "What will be printed when the following code is executed?",
+      "code_example": "try:\n    result = 10 / 2\nexcept ZeroDivisionError:\n    print(\"Division by zero!\")\nelse:\n    print(f\"Result: {result}\")\nfinally:\n    print(\"Execution completed\")",
+      "options": {
+        "A": "Result: 5\nExecution completed",
+        "B": "Division by zero!\nExecution completed",
+        "C": "Result: 5",
+        "D": "Execution completed"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "Reading and writing text files",
+      "question": "Which of the following code snippets correctly appends a new line to a text file named 'notes.txt'?",
+      "options": {
+        "A": "file = open('notes.txt', 'r')\nfile.write('New line\\n')\nfile.close()",
+        "B": "with open('notes.txt', 'w') as file:\n    file.write('New line\\n')",
+        "C": "with open('notes.txt', 'a') as file:\n    file.write('New line\\n')",
+        "D": "file = open('notes.txt')\nfile.append('New line\\n')\nfile.close()"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "Variable scope (local vs global)",
+      "question": "What will be the output of the following code?",
+      "code_example": "x = 10\n\ndef modify_value():\n    x = 20\n    print(f\"Inside function: {x}\")\n\nmodify_value()\nprint(f\"Outside function: {x}\")",
+      "options": {
+        "A": "Inside function: 10\nOutside function: 10",
+        "B": "Inside function: 20\nOutside function: 10",
+        "C": "Inside function: 20\nOutside function: 20",
+        "D": "Inside function: 10\nOutside function: 20"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "For loops with range, enumerate, zip",
+      "question": "What will be the output of the following code?",
+      "code_example": "fruits = ['apple', 'banana', 'cherry']\ncolors = ['red', 'yellow', 'red']\n\nfor i, (fruit, color) in enumerate(zip(fruits, colors)):\n    print(f\"{i}: {fruit} is {color}\")",
+      "options": {
+        "A": "1: apple is red\n2: banana is yellow\n3: cherry is red",
+        "B": "0: apple is red\n1: banana is yellow\n2: cherry is red",
+        "C": "apple is red\nbanana is yellow\ncherry is red",
+        "D": "0: apple\n1: banana\n2: cherry"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "Constants and naming conventions (PEP 8)",
+      "question": "According to PEP 8, which of the following is the correct way to name a constant in Python?",
+      "options": {
+        "A": "maxSize = 100",
+        "B": "MAX_SIZE = 100",
+        "C": "MaxSize = 100",
+        "D": "max_size = 100"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "Dictionaries: creation, access, methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "student = {'name': 'Alice', 'age': 22, 'courses': ['Math', 'CS']}\n\nprint(student.get('grade', 'Not found'))\nstudent['age'] = 23\n\nprint(list(student.items())[1])",
+      "options": {
+        "A": "Not found\n('age', 22)",
+        "B": "None\n('age', 23)",
+        "C": "Not found\n('age', 23)",
+        "D": "KeyError: 'grade'\n('age', 23)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "String methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "text = \"  Python programming language  \"\nprocessed = text.strip().replace(\" programming\", \"\").split()[0]\nprint(processed)",
+      "options": {
+        "A": "Python",
+        "B": "Python programming",
+        "C": "Python language",
+        "D": "Python programming language"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Common exceptions",
+      "question": "Which exception will be raised by the following code?",
+      "code_example": "numbers = [1, 2, 3]\nresult = numbers[0] + 'string'",
+      "options": {
+        "A": "IndexError",
+        "B": "ValueError",
+        "C": "TypeError",
+        "D": "KeyError"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Type conversion and checking",
+      "question": "What will be the output of the following code?",
+      "code_example": "value = '123'\n\nif isinstance(value, str):\n    result = int(value) + 7\n    print(result)\nelse:\n    print(\"Not a string\")",
+      "options": {
+        "A": "130",
+        "B": "1237",
+        "C": "Not a string",
+        "D": "TypeError will be raised"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "String slicing and indexing",
+      "question": "What is the value of `result` after executing the following code?",
+      "code_example": "word = \"Programming\"\nresult = word[1:8:2]",
+      "options": {
+        "A": "rgamm",
+        "B": "rogram",
+        "C": "rgrm",
+        "D": "rga"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "Linear search implementation",
+      "question": "What will be the output of the following linear search implementation?",
+      "code_example": "def linear_search(arr, target):\n    for i, value in enumerate(arr):\n        if value == target:\n            return i\n    return -1\n\nnumbers = [4, 2, 7, 1, 9, 3]\nprint(linear_search(numbers, 7))\nprint(linear_search(numbers, 5))",
+      "options": {
+        "A": "2\nNone",
+        "B": "2\n-1",
+        "C": "7\n5",
+        "D": "2\n0"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "Bubble sort implementation",
+      "question": "What will be the state of the list after the first pass of the bubble sort algorithm in the following code?",
+      "code_example": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n        print(f\"After pass {i+1}: {arr}\")\n    return arr\n\nnumbers = [5, 3, 8, 2, 1]\nbubble_sort(numbers)",
+      "options": {
+        "A": "[3, 5, 2, 1, 8]",
+        "B": "[3, 5, 2, 1, 8]",
+        "C": "[1, 2, 3, 5, 8]",
+        "D": "[3, 5, 2, 1, 8]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "String reversal and manipulation",
+      "question": "What is the output of the following string manipulation code?",
+      "code_example": "def transform_string(s):\n    if not s:\n        return s\n    reversed_s = s[::-1]\n    capitalized = reversed_s[0].upper() + reversed_s[1:].lower()\n    return capitalized\n\nprint(transform_string(\"pYtHoN\"))",
+      "options": {
+        "A": "nOhTyP",
+        "B": "NoHtYp",
+        "C": "NOHTYP",
+        "D": "Python"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "While loops and break/continue statements",
+      "question": "What will be the output of the following code?",
+      "code_example": "numbers = [1, 3, 5, 7, 9, 2, 4, 6, 8]\ni = 0\nresult = []\n\nwhile i < len(numbers):\n    if numbers[i] % 2 == 0:\n        result.append(numbers[i])\n    else:\n        if numbers[i] > 5:\n            break\n        continue\n    i += 1\n\nprint(result)",
+      "options": {
+        "A": "[2, 4, 6, 8]",
+        "B": "[]",
+        "C": "Infinite loop, no output",
+        "D": "[2, 4]"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "Creating custom exceptions",
+      "question": "Which of the following is the correct way to define a custom exception class in Python?",
+      "options": {
+        "A": "class InvalidValueError(Exception):\n    pass",
+        "B": "class InvalidValueError:\n    def __init__(self, message):\n        self.message = message",
+        "C": "def InvalidValueError(message):\n    raise Exception(message)",
+        "D": "InvalidValueError = type('InvalidValueError', (), {})"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Classes and instances",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    def area(self):\n        return self.width * self.height\n    \n    def __str__(self):\n        return f\"Rectangle({self.width}x{self.height})\"\n\nrect1 = Rectangle(5, 10)\nrect2 = Rectangle(3, 4)\n\nprint(rect1)\nprint(rect2.area())",
+      "options": {
+        "A": "<__main__.Rectangle object at 0x...>\n12",
+        "B": "Rectangle(5x10)\n12",
+        "C": "<__main__.Rectangle object at 0x...>\nRectangle(3x4)",
+        "D": "Rectangle(5x10)\n12"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "Creating generator functions with yield",
+      "question": "What will be the output of the following code?",
+      "code_example": "def fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n):\n        yield a\n        a, b = b, a + b\n\nfib = fibonacci(5)\nprint(list(fib))",
+      "options": {
+        "A": "[0, 1, 1, 2, 3]",
+        "B": "[1, 1, 2, 3, 5]",
+        "C": "[0, 1, 1, 2, 3, 5]",
+        "D": "[1, 2, 3, 5, 8]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "Graph representations",
+      "question": "Which of the following is a correct adjacency list representation of the undirected graph with edges: (0,1), (0,2), (1,2), (2,3)?",
+      "options": {
+        "A": "{0: [1, 2], 1: [0, 2], 2: [0, 1, 3], 3: [2]}",
+        "B": "[[0, 1, 1, 0], [1, 0, 1, 0], [1, 1, 0, 1], [0, 0, 1, 0]]",
+        "C": "{0: [1, 2], 1: [2], 2: [3]}",
+        "D": "[(0, 1), (0, 2), (1, 2), (2, 3)]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "Iterator protocol",
+      "question": "What will be the output of the following code?",
+      "code_example": "class EvenNumbers:\n    def __init__(self, max_value):\n        self.max_value = max_value\n        self.current = 0\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.current > self.max_value:\n            raise StopIteration\n        result = self.current\n        self.current += 2\n        return result\n\nevens = EvenNumbers(6)\nprint(list(evens))",
+      "options": {
+        "A": "[0, 2, 4, 6]",
+        "B": "[2, 4, 6]",
+        "C": "[0, 2, 4]",
+        "D": "[0, 2, 4, 6, 8]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "First-class functions",
+      "question": "What will be the output of the following code?",
+      "code_example": "def create_multiplier(factor):\n    def multiply(x):\n        return x * factor\n    return multiply\n\ndouble = create_multiplier(2)\ntriple = create_multiplier(3)\n\nprint(double(5))\nprint(triple(double(4)))",
+      "options": {
+        "A": "10\n12",
+        "B": "10\n20",
+        "C": "10\n24",
+        "D": "10\n7"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "Collections module",
+      "question": "What will be the output of the following code using the collections module?",
+      "code_example": "from collections import Counter, defaultdict\n\nwords = [\"apple\", \"banana\", \"apple\", \"orange\", \"banana\", \"apple\"]\nword_counter = Counter(words)\n\ndd = defaultdict(list)\nfor word, count in word_counter.items():\n    dd[count].append(word)\n\nprint(word_counter.most_common(1)[0][1])\nprint(dd[2])",
+      "options": {
+        "A": "3\n['banana', 'orange']",
+        "B": "3\n['banana']",
+        "C": "apple\n['banana']",
+        "D": "3\n[]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "Sliding window approach",
+      "question": "What will be the output of the following sliding window implementation?",
+      "code_example": "def max_sum_subarray(arr, k):\n    n = len(arr)\n    if n < k:\n        return None\n    \n    window_sum = sum(arr[:k])\n    max_sum = window_sum\n    \n    for i in range(n - k):\n        window_sum = window_sum - arr[i] + arr[i + k]\n        max_sum = max(max_sum, window_sum)\n    \n    return max_sum\n\nnumbers = [1, 4, 2, 10, 2, 3, 1, 0, 20]\nprint(max_sum_subarray(numbers, 3))",
+      "options": {
+        "A": "15",
+        "B": "16",
+        "C": "24",
+        "D": "20"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "Constructors and instance methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "class BankAccount:\n    def __init__(self, owner, balance=0):\n        self.owner = owner\n        self.balance = balance\n    \n    def deposit(self, amount):\n        self.balance += amount\n        return self\n    \n    def withdraw(self, amount):\n        if amount <= self.balance:\n            self.balance -= amount\n        else:\n            print(\"Insufficient funds\")\n        return self\n    \n    def __str__(self):\n        return f\"{self.owner}'s account. Balance: ${self.balance}\"\n\naccount = BankAccount(\"John\")\naccount.deposit(100).withdraw(30).withdraw(80)\nprint(account)",
+      "options": {
+        "A": "John's account. Balance: $70",
+        "B": "John's account. Balance: $-10",
+        "C": "Insufficient funds\nJohn's account. Balance: $70",
+        "D": "John's account. Balance: $0"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Closures and scopes",
+      "question": "What will be the output of the following code?",
+      "code_example": "def counter_factory():\n    count = 0\n    \n    def increment():\n        nonlocal count\n        count += 1\n        return count\n    \n    def decrement():\n        nonlocal count\n        count -= 1\n        return count\n    \n    return increment, decrement\n\ninc, dec = counter_factory()\nprint(inc())\nprint(inc())\nprint(dec())\nprint(inc())",
+      "options": {
+        "A": "1\n2\n1\n2",
+        "B": "1\n2\n1\n3",
+        "C": "1\n1\n0\n1",
+        "D": "1\n2\n3\n3"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "Hash-based searching",
+      "question": "What is the time complexity for searching an element in a properly implemented hash table (like Python's dictionary) in the average case?",
+      "options": {
+        "A": "O(n)",
+        "B": "O(log n)",
+        "C": "O(1)",
+        "D": "O(n log n)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "Args and kwargs in depth",
+      "question": "What will be the output of the following code?",
+      "code_example": "def format_info(name, *args, age=None, **kwargs):\n    info = f\"Name: {name}\"\n    \n    if args:\n        info += f\", args: {args}\"\n    \n    if age is not None:\n        info += f\", age: {age}\"\n    \n    if kwargs:\n        info += f\", kwargs: {kwargs}\"\n    \n    return info\n\nprint(format_info(\"Alice\", 1, 2, age=30, city=\"New York\", job=\"Developer\"))",
+      "options": {
+        "A": "Name: Alice, args: (1, 2), age: 30, kwargs: {'city': 'New York', 'job': 'Developer'}",
+        "B": "Name: Alice, args: (1, 2, 30), kwargs: {'city': 'New York', 'job': 'Developer'}",
+        "C": "Name: Alice, age: 30, kwargs: {1, 2, 'city': 'New York', 'job': 'Developer'}",
+        "D": "Name: Alice, args: (1, 2), kwargs: {'age': 30, 'city': 'New York', 'job': 'Developer'}"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "Encapsulation and property decorators",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Temperature:\n    def __init__(self, celsius=0):\n        self._celsius = celsius\n    \n    @property\n    def celsius(self):\n        return self._celsius\n    \n    @celsius.setter\n    def celsius(self, value):\n        if value < -273.15:\n            raise ValueError(\"Temperature below absolute zero is not possible\")\n        self._celsius = value\n    \n    @property\n    def fahrenheit(self):\n        return self._celsius * 9/5 + 32\n    \n    @fahrenheit.setter\n    def fahrenheit(self, value):\n        self.celsius = (value - 32) * 5/9\n\ntemp = Temperature(25)\nprint(f\"{temp.celsius}°C = {temp.fahrenheit}°F\")\ntemp.fahrenheit = 68\nprint(f\"{temp.celsius}°C\")",
+      "options": {
+        "A": "25°C = 77.0°F\n20.0°C",
+        "B": "25°C = 77.0°F\n68.0°C",
+        "C": "25°C = 25.0°F\n20.0°C",
+        "D": "25°C = 77.0°F\n25.0°C"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "Database connection in Python",
+      "question": "Which of the following is the recommended pattern for working with database connections in Python?",
+      "options": {
+        "A": "conn = connect_to_db()\ncursor = conn.cursor()\ntry:\n    cursor.execute(query)\n    conn.commit()\nfinally:\n    cursor.close()\n    conn.close()",
+        "B": "conn = connect_to_db()\ncursor = conn.cursor()\ncursor.execute(query)\nconn.commit()\ncursor.close()\nconn.close()",
+        "C": "with connect_to_db() as conn:\n    with conn.cursor() as cursor:\n        cursor.execute(query)\n        conn.commit()",
+        "D": "conn = connect_to_db()\ncursor = conn.cursor()\nif cursor.execute(query):\n    conn.commit()\n    cursor.close()\n    conn.close()"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Greedy algorithms",
+      "question": "What will be the output of the following greedy coin change algorithm?",
+      "code_example": "def min_coins(coins, amount):\n    # Sort coins in descending order\n    coins.sort(reverse=True)\n    count = 0\n    result = []\n    \n    for coin in coins:\n        while amount >= coin:\n            amount -= coin\n            count += 1\n            result.append(coin)\n    \n    return count, result\n\ncoins = [1, 5, 10, 25]\nprint(min_coins(coins, 36))",
+      "options": {
+        "A": "(4, [25, 10, 1])",
+        "B": "(4, [25, 5, 5, 1])",
+        "C": "(6, [25, 10, 1, 0])",
+        "D": "(6, [25, 10, 1, 0, 0, 0])"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "Recursion with memoization",
+      "question": "What will be the output of the following code?",
+      "code_example": "def fibonacci(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 1:\n        return n\n    memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)\n    return memo[n]\n\nprint(fibonacci(5))\nprint(fibonacci(7))",
+      "options": {
+        "A": "5\n13",
+        "B": "5\n21",
+        "C": "8\n21",
+        "D": "8\n13"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "Class variables vs instance variables",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Counter:\n    count = 0\n    \n    def __init__(self, name):\n        self.name = name\n        Counter.count += 1\n        self.id = Counter.count\n    \n    def __str__(self):\n        return f\"{self.name} (ID: {self.id}, Count: {Counter.count})\"\n\nc1 = Counter(\"First\")\nc2 = Counter(\"Second\")\nc3 = Counter(\"Third\")\n\nprint(c1)\nprint(c2)",
+      "options": {
+        "A": "First (ID: 1, Count: 1)\nSecond (ID: 2, Count: 2)",
+        "B": "First (ID: 1, Count: 3)\nSecond (ID: 2, Count: 3)",
+        "C": "First (ID: 3, Count: 3)\nSecond (ID: 3, Count: 3)",
+        "D": "First (ID: 1, Count: 1)\nSecond (ID: 1, Count: 2)"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Consider this Python code using Cython for optimization. What is the primary reason for the performance improvement?",
+      "code_example": "# file: fast_math.pyx\nimport cython\n\ndef slow_sum(n):\n    result = 0\n    for i in range(n):\n        result += i\n    return result\n\n@cython.boundscheck(False)\n@cython.wraparound(False)\ndef fast_sum(int n):\n    cdef int i\n    cdef int result = 0\n    for i in range(n):\n        result += i\n    return result",
+      "options": {
+        "A": "The @cython.boundscheck(False) decorator eliminates Python's reference counting",
+        "B": "Static typing of variables with 'cdef' allows direct C-level operations",
+        "C": "The wraparound decorator compiles the function to assembly code",
+        "D": "Python's GIL is automatically removed for any Cython function"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of this code implementing a trie data structure for prefix searching?",
+      "code_example": "class TrieNode:\n    def __init__(self):\n        self.children = {}\n        self.is_end_of_word = False\n\nclass Trie:\n    def __init__(self):\n        self.root = TrieNode()\n    \n    def insert(self, word):\n        node = self.root\n        for char in word:\n            if char not in node.children:\n                node.children[char] = TrieNode()\n            node = node.children[char]\n        node.is_end_of_word = True\n    \n    def search_prefix(self, prefix):\n        node = self.root\n        for char in prefix:\n            if char not in node.children:\n                return False\n            node = node.children[char]\n        return True\n\ntrie = Trie()\ntrie.insert(\"apple\")\ntrie.insert(\"application\")\ntrie.insert(\"banana\")\n\nresults = [\n    trie.search_prefix(\"app\"),\n    trie.search_prefix(\"ban\"),\n    trie.search_prefix(\"ora\"),\n    trie.search_prefix(\"apples\")\n]\nprint(results)",
+      "options": {
+        "A": "[True, True, False, True]",
+        "B": "[True, True, False, False]",
+        "C": "[False, False, False, False]",
+        "D": "[True, False, False, True]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "In a microservices architecture using API gateways, which pattern is being implemented in the code below?",
+      "code_example": "class ServiceRegistry:\n    def __init__(self):\n        self.services = {}\n    \n    def register(self, service_name, endpoint):\n        self.services[service_name] = endpoint\n    \n    def get_endpoint(self, service_name):\n        return self.services.get(service_name)\n\nclass APIGateway:\n    def __init__(self, registry):\n        self.registry = registry\n    \n    def forward_request(self, service_name, request):\n        endpoint = self.registry.get_endpoint(service_name)\n        if not endpoint:\n            return {\"error\": \"Service not found\"}\n        \n        print(f\"Forwarding request to {endpoint}\")\n        # In a real scenario, this would make an HTTP request\n        return self._simulate_service_response(endpoint, request)\n    \n    def _simulate_service_response(self, endpoint, request):\n        # This simulates different service responses\n        if \"user\" in endpoint:\n            return {\"status\": \"User service response\"}\n        elif \"order\" in endpoint:\n            return {\"status\": \"Order service response\"}\n        return {\"status\": \"Unknown service response\"}\n\n# Usage\nregistry = ServiceRegistry()\nregistry.register(\"user-service\", \"https://api.example.com/user-service\")\nregistry.register(\"order-service\", \"https://api.example.com/order-service\")\n\ngateway = APIGateway(registry)\nresponse = gateway.forward_request(\"payment-service\", {\"amount\": 100})\nprint(response)",
+      "options": {
+        "A": "Circuit Breaker Pattern",
+        "B": "API Composition Pattern",
+        "C": "Service Discovery Pattern",
+        "D": "Backend for Frontend (BFF) Pattern"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "When implementing the A* search algorithm, what does the following code compute?",
+      "code_example": "def heuristic(a, b):\n    # Manhattan distance on a square grid\n    return abs(a[0] - b[0]) + abs(a[1] - b[1])\n\ndef a_star_search(start, goal, grid):\n    # ... other A* implementation code ...\n    \n    # This is the part we're examining:\n    current = current_node\n    f_score = g_score[current] + heuristic(current, goal)\n    \n    # ... rest of algorithm ...",
+      "options": {
+        "A": "The exact cost from the start to the goal node",
+        "B": "The movement cost from the start to the current node only",
+        "C": "The estimated total cost from start to goal through the current node",
+        "D": "The heuristic distance from the current node to the goal only"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What security vulnerability in the OWASP Top 10 is this code susceptible to?",
+      "code_example": "from flask import Flask, request, render_template_string\n\napp = Flask(__name__)\n\n@app.route('/welcome')\ndef welcome():\n    name = request.args.get('name', 'Guest')\n    template = f'''\n    <h1>Welcome, {name}!</h1>\n    <p>Thank you for visiting our site.</p>\n    '''\n    return render_template_string(template)\n\nif __name__ == '__main__':\n    app.run(debug=True)",
+      "options": {
+        "A": "Cross-Site Scripting (XSS)",
+        "B": "Server-Side Request Forgery (SSRF)",
+        "C": "Server-Side Template Injection (SSTI)",
+        "D": "SQL Injection"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output when executing this profiling code?",
+      "code_example": "import cProfile\nimport pstats\nfrom io import StringIO\n\ndef fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\ndef profile_function():\n    pr = cProfile.Profile()\n    pr.enable()\n    \n    result = fibonacci(10)\n    \n    pr.disable()\n    s = StringIO()\n    sortby = 'cumulative'\n    ps = pstats.Stats(pr, stream=s).sort_stats(sortby)\n    ps.print_stats(1)\n    print(s.getvalue().split('\\n')[0])\n\nprofile_function()",
+      "options": {
+        "A": "55 function calls in 0.000 seconds",
+        "B": "177 function calls (3 primitive calls) in 0.000 seconds",
+        "C": "10 function calls in 0.000 seconds",
+        "D": "1 function calls in 0.000 seconds"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "Consider this implementation of a message producer for a message queue. What design pattern is being used?",
+      "code_example": "class MessagePublisher:\n    _instance = None\n    \n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super(MessagePublisher, cls).__new__(cls)\n            cls._instance.initialize()\n        return cls._instance\n    \n    def initialize(self):\n        self.subscribers = []\n        self.message_queue = []\n    \n    def register(self, subscriber):\n        self.subscribers.append(subscriber)\n    \n    def unregister(self, subscriber):\n        self.subscribers.remove(subscriber)\n    \n    def notify_all(self, message):\n        for subscriber in self.subscribers:\n            subscriber.update(message)\n    \n    def publish(self, message):\n        self.message_queue.append(message)\n        self.notify_all(message)",
+      "options": {
+        "A": "Factory Method Pattern",
+        "B": "Observer Pattern with Singleton",
+        "C": "Strategy Pattern",
+        "D": "Command Pattern"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of this Python code that implements a solution to the knapsack problem using dynamic programming?",
+      "code_example": "def knapsack(weights, values, capacity):\n    n = len(weights)\n    # Initialize a table of zeros\n    dp = [[0 for _ in range(capacity + 1)] for _ in range(n + 1)]\n    \n    # Fill the table\n    for i in range(1, n + 1):\n        for w in range(capacity + 1):\n            if weights[i-1] <= w:\n                dp[i][w] = max(values[i-1] + dp[i-1][w-weights[i-1]], dp[i-1][w])\n            else:\n                dp[i][w] = dp[i-1][w]\n    \n    # Return the maximum value\n    return dp[n][capacity]\n\nweights = [3, 1, 4, 2]\nvalues = [6, 2, 7, 3]\nprint(knapsack(weights, values, 6))",
+      "options": {
+        "A": "13",
+        "B": "12",
+        "C": "15",
+        "D": "16"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "In database sharding, which strategy does this Python code implement?",
+      "code_example": "import hashlib\n\nclass DatabaseSharding:\n    def __init__(self, shard_count):\n        self.shard_count = shard_count\n        self.shards = [[] for _ in range(shard_count)]\n    \n    def determine_shard(self, key):\n        # Convert key to bytes if it's not already\n        if not isinstance(key, bytes):\n            key = str(key).encode('utf-8')\n            \n        # Get the MD5 hash of the key\n        hash_value = hashlib.md5(key).hexdigest()\n        \n        # Convert the first 8 characters of hex hash to an integer\n        numeric_hash = int(hash_value[:8], 16)\n        \n        # Determine shard index using modulo\n        shard_index = numeric_hash % self.shard_count\n        \n        return shard_index\n    \n    def add_data(self, key, data):\n        shard_index = self.determine_shard(key)\n        self.shards[shard_index].append((key, data))\n        return shard_index\n        \n    def get_data(self, key):\n        shard_index = self.determine_shard(key)\n        for k, data in self.shards[shard_index]:\n            if k == key:\n                return data\n        return None",
+      "options": {
+        "A": "Range-based sharding",
+        "B": "Directory-based sharding",
+        "C": "Consistent hashing",
+        "D": "Hash-based sharding"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "Which of the following best describes the purpose of a Dockerfile's ENTRYPOINT instruction compared to CMD?",
+      "options": {
+        "A": "ENTRYPOINT sets environment variables; CMD specifies the program to run",
+        "B": "ENTRYPOINT specifies the program that will always run when the container starts; CMD provides default arguments to that program",
+        "C": "ENTRYPOINT is used for multi-stage builds; CMD is for single-stage builds",
+        "D": "ENTRYPOINT enables process monitoring; CMD enables container health checks"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the result of running this PyPy JIT-optimized code compared to standard CPython?",
+      "code_example": "def compute_sum(n):\n    result = 0\n    for i in range(n):\n        result += i\n    return result\n\ndef heavy_computation():\n    total = 0\n    for i in range(1000000):\n        total += i\n    return total\n\n# Let's say we run this in PyPy and standard CPython\n# and measure the execution time:\nimport time\n\nstart = time.time()\nresult = heavy_computation()\nend = time.time()\n\nprint(f\"Result: {result}\")\nprint(f\"Execution time: {end - start:.4f} seconds\")",
+      "options": {
+        "A": "PyPy will be slower because the JIT compiler adds overhead for simple numeric operations",
+        "B": "PyPy will execute at approximately the same speed as CPython for this numeric computation",
+        "C": "PyPy will be significantly faster because the JIT compiler can optimize the repetitive loop operations",
+        "D": "PyPy will crash due to integer overflow that CPython would handle gracefully"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "In the following pytest fixture implementation, what is the primary advantage of using a fixture with the 'scope' parameter set to 'session'?",
+      "code_example": "import pytest\nimport os\nimport tempfile\nimport shutil\n\n@pytest.fixture(scope='session')\ndef global_data():\n    \"\"\"Create test data once for all tests.\"\"\"\n    data = {'key1': 'value1', 'key2': 'value2'}\n    return data\n\n@pytest.fixture(scope='function')\ndef temp_dir():\n    \"\"\"Create a temporary directory for each test function.\"\"\"\n    temp_path = tempfile.mkdtemp()\n    yield temp_path\n    # Cleanup after test\n    shutil.rmtree(temp_path)\n\ndef test_one(global_data, temp_dir):\n    assert 'key1' in global_data\n    # Do something with temp_dir\n    \ndef test_two(global_data, temp_dir):\n    assert 'key2' in global_data\n    # Do something else with temp_dir",
+      "options": {
+        "A": "It provides better encapsulation of test dependencies compared to function-scoped fixtures",
+        "B": "It ensures data is created once for the entire test session rather than for each test function, improving performance",
+        "C": "It allows sharing fixtures across multiple test modules without additional imports",
+        "D": "It guarantees that fixtures are always cleaned up, even if tests fail with exceptions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What is the time complexity of finding the longest common subsequence (LCS) in the following dynamic programming implementation?",
+      "code_example": "def longest_common_subsequence(s1, s2):\n    m, n = len(s1), len(s2)\n    \n    # Create a table to store LCS of s1[0...i-1] and s2[0...j-1]\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    \n    # Fill dp table in bottom-up fashion\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if s1[i-1] == s2[j-1]:\n                dp[i][j] = dp[i-1][j-1] + 1\n            else:\n                dp[i][j] = max(dp[i-1][j], dp[i][j-1])\n    \n    # dp[m][n] contains the length of LCS\n    lcs_length = dp[m][n]\n    \n    # Reconstruct the LCS\n    lcs = []\n    i, j = m, n\n    while i > 0 and j > 0:\n        if s1[i-1] == s2[j-1]:\n            lcs.append(s1[i-1])\n            i -= 1\n            j -= 1\n        elif dp[i-1][j] > dp[i][j-1]:\n            i -= 1\n        else:\n            j -= 1\n    \n    # Return the LCS (reversed)\n    return ''.join(reversed(lcs))",
+      "options": {
+        "A": "O(m + n) where m and n are the lengths of the input strings",
+        "B": "O(m * n) where m and n are the lengths of the input strings",
+        "C": "O(m * n * log(min(m, n)))",
+        "D": "O(2^(m+n)) due to the recursive nature of the solution"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "When using RabbitMQ with Python's pika library, what does the following code pattern accomplish?",
+      "code_example": "import pika\n\nconnection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))\nchannel = connection.channel()\n\nchannel.exchange_declare(exchange='logs', exchange_type='fanout')\n\n# Note: queue name is empty string\nresult = channel.queue_declare(queue='', exclusive=True)\nqueue_name = result.method.queue\n\nchannel.queue_bind(exchange='logs', queue=queue_name)\n\nprint(' [*] Waiting for logs. To exit press CTRL+C')\n\ndef callback(ch, method, properties, body):\n    print(f\" [x] {body}\")\n\nchannel.basic_consume(\n    queue=queue_name, on_message_callback=callback, auto_ack=True)\n\nchannel.start_consuming()",
+      "options": {
+        "A": "Work queue system where each message is processed by exactly one consumer",
+        "B": "Remote procedure call (RPC) pattern where the client waits for a response",
+        "C": "Publish/subscribe pattern where all connected consumers receive a copy of each message",
+        "D": "Priority queue system where messages are processed based on their importance"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "In a Flask application, what security flaw does the following authentication middleware code have?",
+      "code_example": "import functools\nfrom flask import Flask, request, session, redirect, url_for\nimport hashlib\n\napp = Flask(__name__)\napp.secret_key = 'very_secret_key'\n\n# User database (in a real app, this would be in a database)\nusers = {\n    'admin': {\n        'password': hashlib.md5('password123'.encode()).hexdigest(),\n        'role': 'admin'\n    },\n    'user': {\n        'password': hashlib.md5('user123'.encode()).hexdigest(),\n        'role': 'user'\n    }\n}\n\ndef login_required(role='user'):\n    def decorator(view_function):\n        @functools.wraps(view_function)\n        def wrapper(*args, **kwargs):\n            if 'username' in session:\n                username = session['username']\n                if username in users and users[username]['role'] == role:\n                    return view_function(*args, **kwargs)\n            return redirect(url_for('login'))\n        return wrapper\n    return decorator\n\n@app.route('/login', methods=['GET', 'POST'])\ndef login():\n    if request.method == 'POST':\n        username = request.form['username']\n        password = request.form['password']\n        \n        if username in users and users[username]['password'] == hashlib.md5(password.encode()).hexdigest():\n            session['username'] = username\n            return redirect(url_for('dashboard'))\n    return '''<form method=\"post\">\n                <input type=\"text\" name=\"username\">\n                <input type=\"password\" name=\"password\">\n                <input type=\"submit\" value=\"Login\">\n              </form>'''",
+      "options": {
+        "A": "Cross-site request forgery (CSRF) vulnerability due to missing token validation",
+        "B": "Insecure password storage using MD5 hash without salt",
+        "C": "Session fixation vulnerability due to not regenerating session ID after login",
+        "D": "Timing attack vulnerability in the password comparison"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "In test-driven development (TDD), which principle does the following testing approach violate?",
+      "code_example": "import unittest\nfrom my_app import calculate_price\n\nclass TestPriceCalculation(unittest.TestCase):\n    def setUp(self):\n        # Set up common test data\n        self.product_id = 'PROD-123'\n        self.quantity = 5\n        \n    def test_normal_price_calculation(self):\n        # Test the regular price calculation\n        result = calculate_price(self.product_id, self.quantity)\n        self.assertEqual(result, 49.95)\n        \n        # Also test with tax included\n        result_with_tax = calculate_price(self.product_id, self.quantity, include_tax=True)\n        self.assertEqual(result_with_tax, 54.95)\n        \n        # And test with a discount\n        result_with_discount = calculate_price(self.product_id, self.quantity, discount=10)\n        self.assertEqual(result_with_discount, 44.95)\n    \n    def test_bulk_discount(self):\n        # Test bulk discount\n        result = calculate_price(self.product_id, 20)\n        self.assertEqual(result, 179.80)",
+      "options": {
+        "A": "Red-Green-Refactor cycle (writing tests before implementation)",
+        "B": "Single Responsibility Principle (each test should test only one thing)",
+        "C": "FIRST principles (tests should be Fast, Isolated, Repeatable, Self-validating, and Timely)",
+        "D": "Test fixture reuse (setting up common test data)"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
