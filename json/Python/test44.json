@@ -1,0 +1,636 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that demonstrates default parameters?",
+      "options": {
+        "A": "[1, 2, 3, 4]",
+        "B": "[1, 2, 3, 4, 5]",
+        "C": "[1, 2, 3]",
+        "D": "Error: missing required positional argument"
+      },
+      "correct_answer": "A",
+      "code_example": "def add_elements(lst=[1, 2, 3]):\n    lst.append(4)\n    return lst\n\nresult = add_elements()\nprint(result)"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What's the decimal (base 10) value of the binary number 10110?",
+      "options": {
+        "A": "16",
+        "B": "22",
+        "C": "20",
+        "D": "18"
+      },
+      "correct_answer": "B",
+      "code_example": "binary = '10110'\ndecimal = int(binary, 2)\nprint(decimal)"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be printed after executing the following try/except/else/finally block?",
+      "options": {
+        "A": "Try block executed\nFinally block executed",
+        "B": "Try block executed\nElse block executed\nFinally block executed",
+        "C": "Try block executed\nException occurred\nFinally block executed",
+        "D": "Try block executed"
+      },
+      "correct_answer": "B",
+      "code_example": "try:\n    print(\"Try block executed\")\n    x = 10\nexcept ZeroDivisionError:\n    print(\"Exception occurred\")\nelse:\n    print(\"Else block executed\")\nfinally:\n    print(\"Finally block executed\")"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Which of the following string formatting methods correctly inserts the value of 'name' into the string 'Hello, {name}!'?",
+      "options": {
+        "A": "Hello, {name}!'.format(name='Alice')",
+        "B": "f'Hello, {name}!'  # where name = 'Alice'",
+        "C": "'Hello, %s!' % name  # where name = 'Alice'",
+        "D": "All of the above"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the primary purpose of a context manager (using the 'with' statement) in Python?",
+      "options": {
+        "A": "To create a new execution context with its own local variables",
+        "B": "To automatically handle resource setup and cleanup operations",
+        "C": "To create a new thread of execution",
+        "D": "To temporarily modify the Python import system"
+      },
+      "correct_answer": "B",
+      "code_example": "with open('example.txt', 'w') as file:\n    file.write('Hello, World!')\n# File is automatically closed after the with block"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What is the output of the following code that reads data from a CSV file?",
+      "options": {
+        "A": "[['Alice', '25', 'Engineer'], ['Bob', '30', 'Designer']]",
+        "B": "['Alice,25,Engineer', 'Bob,30,Designer']",
+        "C": "{'Alice': '25', 'Bob': '30'}",
+        "D": "Error: no such file or directory"
+      },
+      "correct_answer": "A",
+      "code_example": "import csv\n\n# Assume this CSV file exists with the following content:\n# Alice,25,Engineer\n# Bob,30,Designer\n\ndata = []\nwith open('employees.csv', 'r') as file:\n    csv_reader = csv.reader(file)\n    for row in csv_reader:\n        data.append(row)\n\nprint(data)"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is the time complexity of the linear search algorithm implemented below?",
+      "options": {
+        "A": "O(1)",
+        "B": "O(log n)",
+        "C": "O(n)",
+        "D": "O(n²)"
+      },
+      "correct_answer": "C",
+      "code_example": "def linear_search(arr, target):\n    for i in range(len(arr)):\n        if arr[i] == target:\n            return i\n    return -1"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the content of 'output.txt' after executing the following code?",
+      "options": {
+        "A": "Line 1\nLine 2",
+        "B": "Line 2",
+        "C": "Line 1Line 2",
+        "D": "Line 1\\nLine 2"
+      },
+      "correct_answer": "A",
+      "code_example": "with open('output.txt', 'w') as file:\n    file.write('Line 1\\n')\n    file.write('Line 2')"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "According to PEP 8, which of the following is the correct way to name a constant in Python?",
+      "options": {
+        "A": "maximumAttempts",
+        "B": "MaximumAttempts",
+        "C": "MAXIMUM_ATTEMPTS",
+        "D": "maximum_attempts"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the output of the binary search function for the given array and target?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "-1"
+      },
+      "correct_answer": "B",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return -1\n\narray = [1, 3, 5, 7, 9, 11]\ntarget = 7\nresult = binary_search(array, target)\nprint(result)"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that handles multiple exceptions?",
+      "options": {
+        "A": "TypeError caught",
+        "B": "ValueError caught",
+        "C": "Exception caught",
+        "D": "No exception caught"
+      },
+      "correct_answer": "B",
+      "code_example": "try:\n    value = int('abc')\nexcept TypeError:\n    print(\"TypeError caught\")\nexcept ValueError:\n    print(\"ValueError caught\")\nexcept Exception:\n    print(\"Exception caught\")\nelse:\n    print(\"No exception caught\")"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What is the output of the following code using conditional expressions?",
+      "options": {
+        "A": "adult",
+        "B": "minor",
+        "C": "senior",
+        "D": "teenager"
+      },
+      "correct_answer": "A",
+      "code_example": "age = 25\nstatus = \"minor\" if age < 18 else \"adult\"\nprint(status)"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be printed after executing the following code that demonstrates variable scope?",
+      "options": {
+        "A": "5\n10",
+        "B": "5\n5",
+        "C": "10\n10",
+        "D": "Error: local variable 'x' referenced before assignment"
+      },
+      "correct_answer": "A",
+      "code_example": "x = 5\n\ndef print_values():\n    x = 10\n    print(x)\n\nprint(x)\nprint_values()"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "Which exception will be raised by the following code?",
+      "options": {
+        "A": "TypeError",
+        "B": "ValueError",
+        "C": "IndexError",
+        "D": "KeyError"
+      },
+      "correct_answer": "C",
+      "code_example": "my_list = [1, 2, 3]\nprint(my_list[5])"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What is the output of the following code that performs a simple statistical calculation?",
+      "options": {
+        "A": "2.0",
+        "B": "2.5",
+        "C": "3.0",
+        "D": "3.5"
+      },
+      "correct_answer": "B",
+      "code_example": "numbers = [1, 2, 3, 4]\n\ndef calculate_mean(nums):\n    return sum(nums) / len(nums)\n\nresult = calculate_mean(numbers)\nprint(result)"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to write a docstring with a type annotation in Python?",
+      "options": {
+        "A": "def add(a, b):\n    \"\"\"Add two numbers.\"\"\"\n    return a + b",
+        "B": "def add(a: int, b: int) -> int:\n    return a + b",
+        "C": "def add(a: int, b: int) -> int:\n    \"\"\"Add two integers and return their sum.\n    \n    Args:\n        a: First integer\n        b: Second integer\n    \n    Returns:\n        The sum of a and b\n    \"\"\"\n    return a + b",
+        "D": "@docstring(\"Add two numbers\")\ndef add(a, b):\n    return a + b"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that generates an infinite sequence?",
+      "options": {
+        "A": "[2, 3, 5, 7, 11]",
+        "B": "[2, 4, 6, 8, 10]",
+        "C": "[0, 1, 2, 3, 4]",
+        "D": "Error: infinite loop detected"
+      },
+      "correct_answer": "A",
+      "code_example": "import itertools\n\ndef is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\ndef prime_generator():\n    n = 2\n    while True:\n        if is_prime(n):\n            yield n\n        n += 1\n\nprimes = prime_generator()\nfirst_five = list(itertools.islice(primes, 5))\nprint(first_five)"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which SQL query would correctly update the 'salary' column to 60000 for employees in the 'Engineering' department?",
+      "options": {
+        "A": "SELECT * FROM employees WHERE department = 'Engineering';",
+        "B": "UPDATE employees SET department = 'Engineering' WHERE salary = 60000;",
+        "C": "UPDATE salary = 60000 FROM employees WHERE department = 'Engineering';",
+        "D": "UPDATE employees SET salary = 60000 WHERE department = 'Engineering';"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the output of the following recursive function with memoization?",
+      "options": {
+        "A": "8",
+        "B": "21",
+        "C": "13",
+        "D": "5"
+      },
+      "correct_answer": "B",
+      "code_example": "def fibonacci(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 1:\n        return n\n    memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)\n    return memo[n]\n\nresult = fibonacci(8)\nprint(result)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that demonstrates closures and scopes?",
+      "options": {
+        "A": "25",
+        "B": "36",
+        "C": "9",
+        "D": "100"
+      },
+      "correct_answer": "A",
+      "code_example": "def outer_function(x):\n    def inner_function(y):\n        return x * y\n    return inner_function\n\nmultiplier = outer_function(5)\nresult = multiplier(5)\nprint(result)"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will the depth-first search function return for the given graph?",
+      "options": {
+        "A": "['A', 'B', 'C', 'D', 'E']",
+        "B": "['A', 'B', 'D', 'C', 'E']",
+        "C": "['A', 'C', 'E', 'B', 'D']",
+        "D": "['A', 'B', 'D', 'E', 'C']"
+      },
+      "correct_answer": "C",
+      "code_example": "def dfs(graph, start, visited=None):\n    if visited is None:\n        visited = []\n    visited.append(start)\n    \n    for neighbor in graph[start]:\n        if neighbor not in visited:\n            dfs(graph, neighbor, visited)\n    \n    return visited\n\ngraph = {\n    'A': ['B', 'C'],\n    'B': ['D'],\n    'C': ['E'],\n    'D': [],\n    'E': []\n}\n\nresult = dfs(graph, 'A')\nprint(result)"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What is the output of the following code using functools.lru_cache?",
+      "options": {
+        "A": "Computing factorial(5)\nComputing factorial(4)\nComputing factorial(3)\nComputing factorial(2)\nComputing factorial(1)\n120",
+        "B": "Computing factorial(5)\nComputing factorial(4)\nComputing factorial(3)\nComputing factorial(2)\nComputing factorial(1)\nComputing factorial(5)\n120",
+        "C": "Computing factorial(5)\nComputing factorial(4)\nComputing factorial(3)\nComputing factorial(2)\nComputing factorial(1)\nComputing factorial(6)\nComputing factorial(5)\n720",
+        "D": "Computing factorial(5)\nComputing factorial(4)\nComputing factorial(3)\nComputing factorial(2)\nComputing factorial(1)\nComputing factorial(6)\n720"
+      },
+      "correct_answer": "D",
+      "code_example": "from functools import lru_cache\n\n@lru_cache(maxsize=None)\ndef factorial(n):\n    print(f\"Computing factorial({n})\")\n    if n == 1:\n        return 1\n    return n * factorial(n-1)\n\n# First call\nfactorial(5)\n\n# Second call with a new value\nresult = factorial(6)\nprint(result)"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be printed by the following code using *args and **kwargs?",
+      "options": {
+        "A": "(1, 2, 3) {'a': 4, 'b': 5}",
+        "B": "[1, 2, 3] {'a': 4, 'b': 5}",
+        "C": "1 2 3 a=4 b=5",
+        "D": "Error: invalid syntax"
+      },
+      "correct_answer": "A",
+      "code_example": "def print_args_kwargs(*args, **kwargs):\n    print(args, kwargs)\n\nprint_args_kwargs(1, 2, 3, a=4, b=5)"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "Which HTTP method would you use in a RESTful API to update an existing resource when you have all the fields?",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "PATCH"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating class variables vs instance variables?",
+      "options": {
+        "A": "10 10\n10 20",
+        "B": "10 10\n20 20",
+        "C": "10 20\n10 20",
+        "D": "10 20\n20 20"
+      },
+      "correct_answer": "A",
+      "code_example": "class Example:\n    class_var = 10\n    \n    def __init__(self):\n        self.instance_var = 10\n\nobj1 = Example()\nobj2 = Example()\n\nprint(obj1.class_var, obj1.instance_var)\nobj2.instance_var = 20\nprint(obj1.class_var, obj2.instance_var)"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "Which regex pattern would match 'color' but not 'colour'?",
+      "options": {
+        "A": "colou?r",
+        "B": "color?",
+        "C": "colou*r",
+        "D": "color$"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using regex groups?",
+      "options": {
+        "A": "['123-456-7890']",
+        "B": "['123', '456', '7890']",
+        "C": "('123', '456', '7890')",
+        "D": "(123)-(456)-(7890)"
+      },
+      "correct_answer": "C",
+      "code_example": "import re\n\nphone = \"123-456-7890\"\npattern = r\"(\\d{3})-(\\d{3})-(\\d{4})\"\n\nmatch = re.search(pattern, phone)\nif match:\n    print(match.groups())"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that demonstrates classes and instances?",
+      "options": {
+        "A": "{'name': 'Alice', 'age': 30}",
+        "B": "Person(name='Alice', age=30)",
+        "C": "Instance of Person",
+        "D": "__main__.Person object at 0x..."
+      },
+      "correct_answer": "A",
+      "code_example": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n    \n    def __repr__(self):\n        return f\"Person(name='{self.name}', age={self.age})\"\n\nperson = Person(\"Alice\", 30)\nprint(person.__dict__)"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating constructors and instance methods?",
+      "options": {
+        "A": "My name is Alice and I am 25 years old.",
+        "B": "My name is Bob and I am 30 years old.",
+        "C": "{'name': 'Alice', 'age': 25}",
+        "D": "Person object initialized"
+      },
+      "correct_answer": "A",
+      "code_example": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n    \n    def introduce(self):\n        return f\"My name is {self.name} and I am {self.age} years old.\"\n\nperson = Person(\"Alice\", 25)\nprint(person.introduce())"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will the merge sort function return for the given input?",
+      "options": {
+        "A": "[1, 3, 5, 7, 9]",
+        "B": "[9, 7, 5, 3, 1]",
+        "C": "[1, 2, 3, 4, 5]",
+        "D": "[5, 3, 1, 7, 9]"
+      },
+      "correct_answer": "A",
+      "code_example": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    \n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    \n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result\n\narray = [9, 3, 5, 1, 7]\nprint(merge_sort(array))"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using a priority queue with heapq?",
+      "options": {
+        "A": "[1, 3, 5, 7, 9]",
+        "B": "[9, 7, 5, 3, 1]",
+        "C": "1\n3\n5\n7\n9",
+        "D": "9\n7\n5\n3\n1"
+      },
+      "correct_answer": "C",
+      "code_example": "import heapq\n\nheap = [5, 7, 9, 1, 3]\nheapq.heapify(heap)\n\nwhile heap:\n    print(heapq.heappop(heap))"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that demonstrates the two-pointer technique?",
+      "options": {
+        "A": "[1, 2, 4, 7, 9]",
+        "B": "[1, 2, 4, 7, 11]",
+        "C": "[2, 7]",
+        "D": "[0, 4]"
+      },
+      "correct_answer": "C",
+      "code_example": "def two_sum(numbers, target):\n    left, right = 0, len(numbers) - 1\n    \n    while left < right:\n        current_sum = numbers[left] + numbers[right]\n        \n        if current_sum == target:\n            return [numbers[left], numbers[right]]\n        elif current_sum < target:\n            left += 1\n        else:\n            right -= 1\n    \n    return []\n\nnumbers = [1, 2, 4, 7, 11]\ntarget = 9\nprint(two_sum(numbers, target))"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "topic": "Abstract base classes",
+      "question": "What will be the output of the following code?",
+      "code_example": "from abc import ABC, abstractmethod\n\nclass Vehicle(ABC):\n    @abstractmethod\n    def get_wheels(self):\n        return 4\n\nclass Car(Vehicle):\n    pass\n\ntry:\n    car = Car()\n    print(\"Car created successfully\")\nexcept Exception as e:\n    print(f\"Error: {type(e).__name__}\")",
+      "options": {
+        "A": "Car created successfully",
+        "B": "Error: TypeError",
+        "C": "Error: NotImplementedError",
+        "D": "Error: AbstractMethodError"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "topic": "Memoization vs tabulation",
+      "question": "What is the output of the following recursive Fibonacci implementation using memoization?",
+      "code_example": "def fibonacci(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 1:\n        return n\n    memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)\n    return memo[n]\n\nresult1 = fibonacci(5)\nresult2 = fibonacci(3)\nprint(result1, result2)",
+      "options": {
+        "A": "5 2",
+        "B": "5 3",
+        "C": "8 2",
+        "D": "8 3"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "topic": "Mixins and composition",
+      "question": "What will be printed by the following code implementing mixins?",
+      "code_example": "class LoggerMixin:\n    def log(self, message):\n        print(f\"Log: {message}\")\n\nclass TimerMixin:\n    def start_timer(self):\n        print(\"Timer started\")\n        \nclass NetworkMixin:\n    def connect(self):\n        print(\"Network connected\")\n\nclass DataProcessor(LoggerMixin, TimerMixin):\n    def process(self):\n        self.log(\"Processing data\")\n        self.start_timer()\n        print(\"Data processed\")\n\ndp = DataProcessor()\ndp.process()\nprint(f\"MRO: {[c.__name__ for c in DataProcessor.__mro__]}\")",
+      "options": {
+        "A": "Log: Processing data\nTimer started\nData processed\nMRO: ['DataProcessor', 'LoggerMixin', 'TimerMixin', 'object']",
+        "B": "Timer started\nLog: Processing data\nData processed\nMRO: ['DataProcessor', 'TimerMixin', 'LoggerMixin', 'object']",
+        "C": "Log: Processing data\nTimer started\nData processed\nMRO: ['LoggerMixin', 'TimerMixin', 'DataProcessor', 'object']",
+        "D": "Network connected\nLog: Processing data\nTimer started\nData processed\nMRO: ['DataProcessor', 'LoggerMixin', 'TimerMixin', 'object']"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "topic": "Approximation algorithms",
+      "question": "Which of the following best describes a key property of the greedy approximation algorithm for the minimum vertex cover problem?",
+      "options": {
+        "A": "It always finds the optimal solution in polynomial time",
+        "B": "It provides a 2-approximation ratio, meaning the solution size is at most twice the optimal",
+        "C": "It provides a log(n)-approximation ratio, where n is the number of vertices",
+        "D": "It has an approximation ratio of 1.5 for planar graphs"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "topic": "Query optimization",
+      "question": "When using SQLAlchemy with Python to perform database queries, which of the following techniques would NOT help optimize query performance?",
+      "options": {
+        "A": "Using the 'joined' strategy for eager loading of relationships",
+        "B": "Implementing denormalized tables for frequently accessed read-only data",
+        "C": "Creating compound indexes on columns frequently used together in WHERE clauses",
+        "D": "Converting all queries to use session.query().all() to ensure complete result sets"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "topic": "Debugging techniques",
+      "question": "What will the following debugging code reveal?",
+      "code_example": "import sys\n\ndef deep_nested_function(x):\n    for i in range(x):\n        calculate(i)\n\ndef calculate(value):\n    result = value ** 2\n    if result > 10:\n        problematic_function(result)\n\ndef problematic_function(val):\n    # Simulating a division by zero error for certain values\n    try:\n        result = 100 / (val % 3)\n        print(f\"Result: {result}\")\n    except Exception as e:\n        print(f\"Error type: {type(e).__name__}\")\n        # Get the current frame and traceback information\n        _, _, tb = sys.exc_info()\n        # Print frame information\n        frame = tb.tb_frame\n        print(f\"Function where error occurred: {frame.f_code.co_name}\")\n        print(f\"Local variables: {frame.f_locals}\")\n\ndeep_nested_function(5)",
+      "options": {
+        "A": "Error type: ZeroDivisionError\nFunction where error occurred: deep_nested_function\nLocal variables: {'x': 5}",
+        "B": "Error type: ZeroDivisionError\nFunction where error occurred: problematic_function\nLocal variables: {'val': 16}",
+        "C": "Error type: ZeroDivisionError\nFunction where error occurred: calculate\nLocal variables: {'value': 4, 'result': 16}",
+        "D": "Error type: ArithmeticError\nFunction where error occurred: problematic_function\nLocal variables: {'val': 16}"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "topic": "NoSQL databases",
+      "question": "In the context of MongoDB, what would be the expected outcome of the following Python code using the PyMongo driver?",
+      "code_example": "import pymongo\n\nclient = pymongo.MongoClient(\"mongodb://localhost:27017/\")\ndb = client[\"employee_db\"]\ncollection = db[\"employees\"]\n\n# Assume this document already exists in the collection\n# {\"_id\": ObjectId(\"....\"), \"name\": \"Alice\", \"department\": \"Engineering\", \"skills\": [\"Python\", \"MongoDB\"]}\n\nresult = collection.update_one(\n    {\"name\": \"Alice\"},\n    {\"$set\": {\"department\": \"Data Science\"},\n     \"$push\": {\"skills\": \"Machine Learning\"},\n     \"$currentDate\": {\"last_modified\": True}}\n)\n\n# Then we fetch the document\nupdated_doc = collection.find_one({\"name\": \"Alice\"})\nprint(f\"Department: {updated_doc['department']}\")\nprint(f\"Skills: {updated_doc['skills']}\")\nprint(f\"Has 'last_modified': {'last_modified' in updated_doc}\")",
+      "options": {
+        "A": "Department: Engineering\nSkills: ['Python', 'MongoDB', 'Machine Learning']\nHas 'last_modified': False",
+        "B": "Department: Data Science\nSkills: ['Python', 'MongoDB']\nHas 'last_modified': True",
+        "C": "Department: Data Science\nSkills: ['Python', 'MongoDB', 'Machine Learning']\nHas 'last_modified': True",
+        "D": "Department: Data Science\nSkills: ['Machine Learning']\nHas 'last_modified': True"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "topic": "OWASP top 10 vulnerabilities",
+      "question": "Which of the following Python code snippets contains a serious OWASP vulnerability?",
+      "code_example": "# Option A\ndef process_login(username, password):\n    hashed_pw = hashlib.sha256(password.encode()).hexdigest()\n    query = f\"SELECT * FROM users WHERE username = '{username}' AND password = '{hashed_pw}'\"\n    cursor.execute(query)\n    return cursor.fetchone()\n\n# Option B\ndef process_upload(file):\n    filename = secure_filename(file.filename)\n    file.save(os.path.join(UPLOAD_FOLDER, filename))\n    return filename\n\n# Option C\ndef verify_user(user_id):\n    token = request.cookies.get('auth_token')\n    if token and validate_token(token, user_id):\n        return True\n    return False\n\n# Option D\ndef get_user_data(user_id):\n    cursor.execute(\"SELECT * FROM users WHERE id = %s\", (user_id,))\n    return cursor.fetchone()",
+      "options": {
+        "A": "Option A - SQL Injection vulnerability",
+        "B": "Option B - Unrestricted File Upload vulnerability",
+        "C": "Option C - Broken Authentication vulnerability",
+        "D": "Option D - Insufficient Logging & Monitoring"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "topic": "Continuous integration",
+      "question": "What would be the effect of the following GitHub Actions workflow file for a Python project?",
+      "code_example": "name: Python Test CI\n\non:\n  push:\n    branches: [ main ]\n  pull_request:\n    branches: [ main ]\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    strategy:\n      matrix:\n        python-version: [3.8, 3.9, 3.10]\n\n    steps:\n    - uses: actions/checkout@v2\n    - name: Set up Python ${{ matrix.python-version }}\n      uses: actions/setup-python@v2\n      with:\n        python-version: ${{ matrix.python-version }}\n    - name: Install dependencies\n      run: |\n        python -m pip install --upgrade pip\n        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi\n        pip install pytest pytest-cov flake8\n    - name: Lint with flake8\n      run: |\n        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics\n    - name: Test with pytest\n      run: |\n        pytest --cov=. --cov-report=xml\n    - name: Upload coverage report\n      uses: codecov/codecov-action@v1\n      with:\n        file: ./coverage.xml\n        fail_ci_if_error: true",
+      "options": {
+        "A": "Runs tests on Python 3.8, 3.9, and 3.10 but skips linting with flake8",
+        "B": "Tests the code against multiple Python versions, performs linting, and uploads coverage reports to codecov",
+        "C": "Executes only on the main branch and not on pull requests",
+        "D": "Will always fail CI due to the 'fail_ci_if_error: true' setting regardless of test results"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "topic": "Scrapy framework",
+      "question": "What will be the behavior of the following Scrapy spider code?",
+      "code_example": "import scrapy\nfrom scrapy.linkextractors import LinkExtractor\n\nclass BookSpider(scrapy.Spider):\n    name = 'bookspider'\n    allowed_domains = ['fictionalbooks.com']\n    start_urls = ['https://fictionalbooks.com/bestsellers']\n    \n    custom_settings = {\n        'DEPTH_LIMIT': 2,\n        'DOWNLOAD_DELAY': 1.5,\n        'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',\n        'CONCURRENT_REQUESTS': 2\n    }\n    \n    def parse(self, response):\n        le = LinkExtractor(restrict_css='div.book-item')\n        for link in le.extract_links(response):\n            yield scrapy.Request(link.url, callback=self.parse_book)\n        \n        # Follow pagination\n        next_page = response.css('a.next-page::attr(href)').get()\n        if next_page:\n            yield response.follow(next_page, callback=self.parse)\n    \n    def parse_book(self, response):\n        yield {\n            'title': response.css('h1.book-title::text').get(),\n            'author': response.css('span.author::text').get(),\n            'price': response.css('span.price::text').get(),\n            'url': response.url\n        }",
+      "options": {
+        "A": "The spider will extract book details but won't follow pagination links",
+        "B": "The spider will crawl infinitely because there is no DEPTH_LIMIT setting",
+        "C": "The spider will crawl up to 2 levels deep, scrape book details, and restrict to 2 concurrent requests with a 1.5 second delay between requests",
+        "D": "The spider will only scrape the first page of bestsellers due to the restricted LinkExtractor"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "topic": "Unit testing",
+      "question": "What is wrong with the following pytest fixture and test?",
+      "code_example": "import pytest\nimport os\nimport tempfile\n\n@pytest.fixture\ndef temp_file():\n    fd, path = tempfile.mkstemp()\n    with open(path, 'w') as f:\n        f.write('test content')\n    yield path\n    os.close(fd)\n    os.unlink(path)\n\ndef test_file_content(temp_file):\n    with open(temp_file, 'r') as f:\n        content = f.read()\n    assert content == 'test content'\n    \n    # Write new content\n    with open(temp_file, 'w') as f:\n        f.write('modified content')\n        \n    # Verify modification\n    with open(temp_file, 'r') as f:\n        new_content = f.read()\n    assert new_content == 'modified content'",
+      "options": {
+        "A": "The fixture doesn't properly clean up the temporary file",
+        "B": "The fixture closes the file descriptor before yielding the path, making it unusable",
+        "C": "Multiple assertions in a single test method violate pytest's best practices",
+        "D": "The tempfile.mkstemp() function returns a file descriptor that is closed prematurely"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "topic": "NumPy for numerical computing",
+      "question": "What will be the output of the following NumPy operations?",
+      "code_example": "import numpy as np\n\n# Set random seed for reproducibility\nnp.random.seed(42)\n\n# Create a 3x3 matrix\nmatrix = np.random.randint(1, 10, size=(3, 3))\n\n# Apply various operations\neigenvalues = np.linalg.eigvals(matrix)\ndet = np.linalg.det(matrix)\ninverse = np.linalg.inv(matrix)\n\n# Calculate something with the inverse\nresult = np.round(np.matmul(matrix, inverse))\n\nprint(f\"Matrix:\\n{matrix}\")\nprint(f\"Determinant: {det:.1f}\")\nprint(f\"Result of matrix × inverse:\\n{result.astype(int)}\")",
+      "options": {
+        "A": "Matrix:\n[[6 3 7]\n [4 6 9]\n [2 6 7]]\nDeterminant: 12.0\nResult of matrix × inverse:\n[[1 0 0]\n [0 1 0]\n [0 0 1]]",
+        "B": "Matrix:\n[[6 3 7]\n [4 6 9]\n [2 6 7]]\nDeterminant: -159.0\nResult of matrix × inverse:\n[[1 0 0]\n [0 1 0]\n [0 0 1]]",
+        "C": "Matrix:\n[[6 3 7]\n [4 6 9]\n [2 6 7]]\nDeterminant: -159.0\nResult of matrix × inverse:\n[[1 0 0]\n [0 1 0]\n [0 0 1]]",
+        "D": "Matrix:\n[[6 3 7]\n [4 6 9]\n [2 6 7]]\nDeterminant: 159.0\nResult of matrix × inverse:\n[[1 0 0]\n [0 1 0]\n [0 0 1]]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "topic": "Space optimization techniques",
+      "question": "Consider the following implementation for finding the nth Fibonacci number. Which space optimization technique does it employ and what is its space complexity?",
+      "code_example": "def fibonacci(n):\n    if n <= 1:\n        return n\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    \n    return b",
+      "options": {
+        "A": "Dynamic programming with tabulation, O(n) space complexity",
+        "B": "Sliding window technique, O(1) space complexity",
+        "C": "Variable swapping, O(1) space complexity",
+        "D": "In-place calculation, O(log n) space complexity"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "topic": "Multiple inheritance and MRO",
+      "question": "What will be the output of the following code that demonstrates Python's Method Resolution Order (MRO)?",
+      "code_example": "class A:\n    def process(self):\n        print(\"A's process\")\n        \nclass B(A):\n    def process(self):\n        print(\"B's process\")\n        super().process()\n        \nclass C(A):\n    def process(self):\n        print(\"C's process\")\n        super().process()\n        \nclass D(B, C):\n    def process(self):\n        print(\"D's process\")\n        super().process()\n\nd = D()\nd.process()\nprint(D.__mro__)",
+      "options": {
+        "A": "D's process\nB's process\nC's process\nA's process\n(<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)",
+        "B": "D's process\nB's process\nA's process\n(<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)",
+        "C": "D's process\nC's process\nB's process\nA's process\n(<class '__main__.D'>, <class '__main__.C'>, <class '__main__.B'>, <class '__main__.A'>, <class 'object'>)",
+        "D": "D's process\nB's process\nC's process\nA's process\nRecursionError: maximum recursion depth exceeded"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "topic": "Profiling Python code",
+      "question": "What will be the main performance bottleneck identified when profiling this code with cProfile?",
+      "code_example": "import time\n\ndef complex_calculation(n):\n    # Simulating a complex calculation\n    time.sleep(0.01)  # 10ms delay\n    return n ** 2\n\ndef process_data(data):\n    result = []\n    for item in data:\n        # Process each item\n        processed = complex_calculation(item)\n        result.append(processed)\n    return result\n\ndef aggregate_results(processed_data):\n    # Aggregate the processed data\n    total = 0\n    for value in processed_data:\n        total += value\n        time.sleep(0.001)  # 1ms delay\n    return total\n\ndef main():\n    data = list(range(100))\n    processed_data = process_data(data)\n    result = aggregate_results(processed_data)\n    return result\n\n# if __name__ == '__main__':\n#     import cProfile\n#     cProfile.run('main()')",
+      "options": {
+        "A": "The list comprehension in process_data is inefficient",
+        "B": "The time.sleep in complex_calculation consumes most execution time",
+        "C": "The addition operation in aggregate_results is the primary bottleneck",
+        "D": "Creating the data list in main() is the main performance issue"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "topic": "Race conditions and deadlocks",
+      "question": "What potential issue exists in the following multithreaded code?",
+      "code_example": "import threading\nimport time\n\nclass BankAccount:\n    def __init__(self, balance):\n        self.balance = balance\n        self.lock = threading.Lock()\n        \n    def deposit(self, amount):\n        with self.lock:\n            new_balance = self.balance + amount\n            time.sleep(0.001)  # Simulate processing time\n            self.balance = new_balance\n            \n    def withdraw(self, amount):\n        with self.lock:\n            if self.balance >= amount:\n                new_balance = self.balance - amount\n                time.sleep(0.001)  # Simulate processing time\n                self.balance = new_balance\n                return True\n            return False\n            \n    def transfer(self, target_account, amount):\n        if self.withdraw(amount):\n            target_account.deposit(amount)\n            return True\n        return False\n\ndef perform_transfers(account1, account2):\n    for _ in range(100):\n        account1.transfer(account2, 10)\n        account2.transfer(account1, 10)",
+      "options": {
+        "A": "Race condition in the withdraw method",
+        "B": "Deadlock potential in the transfer method",
+        "C": "Thread starvation in the deposit method",
+        "D": "Lock contention causing performance degradation"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
