@@ -1,0 +1,634 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that implements a bubble sort algorithm?",
+      "code_example": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr\n\nprint(bubble_sort([64, 34, 25, 12, 22, 11, 90]))",
+      "options": {
+        "A": "[11, 12, 22, 25, 34, 64, 90]",
+        "B": "[90, 64, 34, 25, 22, 12, 11]",
+        "C": "[11, 12, 25, 22, 34, 64, 90]",
+        "D": "The code will raise an IndexError"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the difference between parameters and arguments in Python functions?",
+      "options": {
+        "A": "Parameters are values passed to a function, while arguments are variables defined in the function declaration",
+        "B": "Parameters are variables defined in the function declaration, while arguments are values passed to a function",
+        "C": "Parameters and arguments are different terms for the same concept",
+        "D": "Parameters are required values, while arguments are optional values"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "x = 5\ny = 2.5\nz = x + y\nprint(type(z))",
+      "options": {
+        "A": "<class 'int'>",
+        "B": "<class 'float'>",
+        "C": "<class 'number'>",
+        "D": "<class 'double'>"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following selection sort implementation?",
+      "code_example": "def selection_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        min_idx = i\n        for j in range(i + 1, n):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr\n\nprint(selection_sort([29, 10, 14, 37, 8]))",
+      "options": {
+        "A": "[29, 10, 14, 37, 8]",
+        "B": "[8, 10, 14, 29, 37]",
+        "C": "[37, 29, 14, 10, 8]",
+        "D": "[8, 14, 10, 29, 37]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to create a custom exception in Python?",
+      "code_example": "# Option A\nclass CustomError:\n    def __init__(self, message):\n        self.message = message\n\n# Option B\nclass CustomError(Exception):\n    pass\n\n# Option C\nclass CustomError(Exception):\n    def __init__(self, message):\n        self.message = message\n\n# Option D\ndef CustomError(message):\n    raise Exception(message)",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "x = 15\ny = 20\n\nif x > y:\n    result = \"x is greater than y\"\nelif x == y:\n    result = \"x is equal to y\"\nelse:\n    result = \"x is less than y\"\n\nprint(result)",
+      "options": {
+        "A": "x is greater than y",
+        "B": "x is equal to y",
+        "C": "x is less than y",
+        "D": "No output because result is not defined"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "for i in range(5):\n    if i == 3:\n        pass\n    print(i, end=' ')\nelse:\n    print(\"Done\")",
+      "options": {
+        "A": "0 1 2 4 Done",
+        "B": "0 1 2 3 4 Done",
+        "C": "0 1 2 Done",
+        "D": "0 1 2 3 4"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "counter = 0\nwhile counter < 5:\n    counter += 1\n    if counter == 3:\n        continue\n    if counter == 5:\n        break\n    print(counter, end=' ')\nprint(\"End\")",
+      "options": {
+        "A": "1 2 3 4 End",
+        "B": "1 2 4 End",
+        "C": "1 2 4 5 End",
+        "D": "1 2 End"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Which exception will be raised by the following code?",
+      "code_example": "numbers = [1, 2, 3]\nnumbers[3] = 4",
+      "options": {
+        "A": "ValueError",
+        "B": "TypeError",
+        "C": "IndexError",
+        "D": "KeyError"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that calculates the Greatest Common Divisor (GCD)?",
+      "code_example": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\nprint(gcd(48, 18))",
+      "options": {
+        "A": "3",
+        "B": "6",
+        "C": "9",
+        "D": "2"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "student = {'name': 'Alice', 'age': 22, 'courses': ['Math', 'Science']}\nprint(student.get('grade', 'Not Found'))",
+      "options": {
+        "A": "None",
+        "B": "KeyError",
+        "C": "Not Found",
+        "D": "False"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "def greet(name, message=\"Hello\"):\n    return f\"{message}, {name}!\"\n\nprint(greet(\"Alice\"))\nprint(greet(\"Bob\", \"Hi\"))",
+      "options": {
+        "A": "Hello, Alice!\nHello, Bob!",
+        "B": "Hello, Alice!\nHi, Bob!",
+        "C": "Hello, Alice\nHi, Bob",
+        "D": "The code will raise a TypeError"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "Which file mode would be used to append binary data to an existing file?",
+      "options": {
+        "A": "'w'",
+        "B": "'a'",
+        "C": "'ab'",
+        "D": "'rb'"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following binary search implementation when searching for 7 in the array?",
+      "code_example": "def binary_search(arr, target):\n    low = 0\n    high = len(arr) - 1\n    \n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    \n    return -1\n\nprint(binary_search([1, 3, 5, 7, 9, 11], 7))",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "7",
+        "D": "-1"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "x = \"42\"\ny = 42\n\nprint(isinstance(x, int))\nprint(isinstance(y, int))\nprint(type(x) == str)",
+      "options": {
+        "A": "True\nTrue\nTrue",
+        "B": "True\nTrue\nFalse",
+        "C": "False\nTrue\nTrue",
+        "D": "False\nFalse\nTrue"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "numbers = [1, 2, 3]\nnumbers.append([4, 5])\nnumbers.insert(1, 1.5)\nnumbers.pop()\nprint(numbers)",
+      "options": {
+        "A": "[1, 1.5, 2, 3]",
+        "B": "[1, 2, 3, [4, 5]]",
+        "C": "[1, 1.5, 2, 3, 4, 5]",
+        "D": "[1, 1.5, 2, 3, [4, 5]]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating first-class functions?",
+      "code_example": "def apply_operation(x, y, operation):\n    return operation(x, y)\n\ndef add(a, b):\n    return a + b\n\ndef multiply(a, b):\n    return a * b\n\nprint(apply_operation(5, 3, add))\nprint(apply_operation(5, 3, multiply))",
+      "options": {
+        "A": "8\n15",
+        "B": "8\n8",
+        "C": "8, 15",
+        "D": "Function references can't be passed as arguments"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following correctly identifies connected components in an undirected graph?",
+      "code_example": "def find_connected_components(graph):\n    visited = set()\n    components = []\n    \n    def dfs(node, component):\n        visited.add(node)\n        component.append(node)\n        for neighbor in graph[node]:\n            if neighbor not in visited:\n                dfs(neighbor, component)\n    \n    for node in graph:\n        if node not in visited:\n            component = []\n            dfs(node, component)\n            components.append(component)\n    \n    return components\n\ngraph = {\n    1: [2, 3],\n    2: [1],\n    3: [1],\n    4: [5],\n    5: [4, 6],\n    6: [5]\n}\n\nprint(find_connected_components(graph))",
+      "options": {
+        "A": "[[1, 2, 3], [4, 5, 6]]",
+        "B": "[[1, 3, 2], [4, 5, 6]]",
+        "C": "[[1, 2, 3], [4, 5]]",
+        "D": "[[1], [2], [3], [4], [5], [6]]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which of the following statements about absolute and relative imports in Python is correct?",
+      "options": {
+        "A": "Absolute imports use the full path from the project's root directory, while relative imports use dots to specify locations relative to the current module",
+        "B": "Absolute imports are deprecated in Python 3 in favor of relative imports",
+        "C": "Relative imports work outside of packages, while absolute imports only work within packages",
+        "D": "Absolute imports always begin with a dot (.), while relative imports never use dots"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which of the following is the correct way to establish a database connection in Python using SQLite?",
+      "code_example": "# Option A\nimport sqlite3\nconn = sqlite3.connection('example.db')\n\n# Option B\nimport sqlite3\nconn = sqlite3.connect('example.db')\n\n# Option C\nfrom sqlite import database\nconn = database.connection('example.db')\n\n# Option D\nimport sql\nconn = sql.sqlite.connect('example.db')",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "In a web framework like Flask, which of the following is a correct implementation of a route function for handling a POST request to '/login'?",
+      "code_example": "# Option A\n@app.route('/login')\ndef login():\n    username = request.form['username']\n    return f'Welcome, {username}!'\n\n# Option B\n@app.route('/login', methods=['POST'])\ndef login():\n    username = request.form['username']\n    return f'Welcome, {username}!'\n\n# Option C\n@app.post('/login')\ndef login(username):\n    return f'Welcome, {username}!'\n\n# Option D\n@app.route.post('/login')\ndef login():\n    username = request.form['username']\n    return f'Welcome, {username}!'",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code implementing recursion with memoization?",
+      "code_example": "def fibonacci(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 1:\n        return n\n    memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)\n    return memo[n]\n\nprint(fibonacci(5))",
+      "options": {
+        "A": "8",
+        "B": "5",
+        "C": "13",
+        "D": "21"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "Which of the following is a correct implementation of a simple API endpoint using Flask that returns JSON data?",
+      "code_example": "# Option A\nfrom flask import Flask\napp = Flask(__name__)\n\n@app.route('/api/users')\ndef get_users():\n    users = [{'id': 1, 'name': 'Alice'}, {'id': 2, 'name': 'Bob'}]\n    return users\n\n# Option B\nfrom flask import Flask, jsonify\napp = Flask(__name__)\n\n@app.route('/api/users')\ndef get_users():\n    users = [{'id': 1, 'name': 'Alice'}, {'id': 2, 'name': 'Bob'}]\n    return jsonify(users)\n\n# Option C\nfrom flask import Flask\napp = Flask(__name__)\n\n@app.route('/api/users')\ndef get_users():\n    users = [{'id': 1, 'name': 'Alice'}, {'id': 2, 'name': 'Bob'}]\n    return str(users)\n\n# Option D\nfrom flask import Flask, json\napp = Flask(__name__)\n\n@app.route('/api/users')\ndef get_users():\n    users = [{'id': 1, 'name': 'Alice'}, {'id': 2, 'name': 'Bob'}]\n    return json.dumps(users)",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that demonstrates *args and **kwargs usage?",
+      "code_example": "def show_arguments(*args, **kwargs):\n    print(f\"Positional args: {args}\")\n    print(f\"Keyword args: {kwargs}\")\n\nshow_arguments(1, 2, name='Alice', age=25)",
+      "options": {
+        "A": "Positional args: (1, 2)\nKeyword args: {'name': 'Alice', 'age': 25}",
+        "B": "Positional args: [1, 2]\nKeyword args: {'name': 'Alice', 'age': 25}",
+        "C": "Positional args: 1, 2\nKeyword args: name='Alice', age=25",
+        "D": "The code will raise a TypeError"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code implementing hash-based searching?",
+      "code_example": "def hash_search(hash_table, key):\n    hash_value = hash(key) % len(hash_table)\n    if hash_table[hash_value] and hash_table[hash_value][0] == key:\n        return hash_table[hash_value][1]\n    return None\n\nhash_table = [None] * 10\n# Insert ('apple', 5) at hash index\nhash_value = hash('apple') % 10\nhash_table[hash_value] = ('apple', 5)\n\nprint(hash_search(hash_table, 'apple'))",
+      "options": {
+        "A": "('apple', 5)",
+        "B": "5",
+        "C": "apple",
+        "D": "None"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the result of the following breadth-first search implementation when searching for node 5?",
+      "code_example": "from collections import deque\n\ndef bfs(graph, start, target):\n    visited = set()\n    queue = deque([start])\n    visited.add(start)\n    \n    while queue:\n        node = queue.popleft()\n        if node == target:\n            return True\n        \n        for neighbor in graph[node]:\n            if neighbor not in visited:\n                visited.add(neighbor)\n                queue.append(neighbor)\n    \n    return False\n\ngraph = {\n    1: [2, 3],\n    2: [4, 5],\n    3: [6],\n    4: [],\n    5: [],\n    6: []\n}\n\nprint(bfs(graph, 1, 5))",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "5",
+        "D": "None"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that uses regular expression groups?",
+      "code_example": "import re\n\ntext = \"Contact us at support@example.com or sales@example.com\"\npattern = r\"(\\w+)@(\\w+)\\.(\\w+)\"\n\nmatches = re.findall(pattern, text)\nprint(matches[0])",
+      "options": {
+        "A": "('support', 'example', 'com')",
+        "B": "support@example.com",
+        "C": "[('support', 'example', 'com'), ('sales', 'example', 'com')]",
+        "D": "support"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code for JSON parsing and serialization?",
+      "code_example": "import json\n\ndata = '{\"name\": \"Alice\", \"age\": 30, \"skills\": [\"Python\", \"SQL\", \"JavaScript\"]}'\nparsed_data = json.loads(data)\nprint(parsed_data['skills'][1])\n\nnew_data = {\"name\": \"Bob\", \"grades\": {\"math\": 90, \"science\": 85}}\nprint(json.dumps(new_data, sort_keys=True))",
+      "options": {
+        "A": "SQL\n{\"grades\": {\"math\": 90, \"science\": 85}, \"name\": \"Bob\"}",
+        "B": "Python\n{\"name\": \"Bob\", \"grades\": {\"math\": 90, \"science\": 85}}",
+        "C": "JavaScript\n{\"grades\": {\"science\": 85, \"math\": 90}, \"name\": \"Bob\"}",
+        "D": "SQL\n{\"name\": \"Bob\", \"grades\": {\"science\": 85, \"math\": 90}}"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "Which of the following statements about RESTful API principles is NOT correct?",
+      "options": {
+        "A": "REST APIs should be stateless, with each request containing all information needed to complete it",
+        "B": "HTTP methods like GET, POST, PUT, and DELETE should be used for specific types of operations",
+        "C": "REST APIs should always return XML as the primary data format for maximum compatibility",
+        "D": "Resources should be identified by URLs, and operations on those resources should use HTTP methods"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following merge sort implementation?",
+      "code_example": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    \n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    \n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result\n\nprint(merge_sort([38, 27, 43, 3, 9, 82, 10]))",
+      "options": {
+        "A": "[3, 9, 10, 27, 38, 43, 82]",
+        "B": "[82, 43, 38, 27, 10, 9, 3]",
+        "C": "[3, 9, 10, 38, 27, 43, 82]",
+        "D": "[38, 27, 43, 3, 9, 82, 10]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "Which of the following is the most efficient way to represent a sparse graph with many vertices but few edges?",
+      "options": {
+        "A": "Adjacency matrix",
+        "B": "Adjacency list",
+        "C": "Edge list",
+        "D": "Both B and C are equally efficient"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that demonstrates magic/dunder methods?",
+      "code_example": "class Book:\n    def __init__(self, title, author):\n        self.title = title\n        self.author = author\n    \n    def __str__(self):\n        return f\"{self.title} by {self.author}\"\n    \n    def __repr__(self):\n        return f\"Book('{self.title}', '{self.author}')\"\n    \n    def __eq__(self, other):\n        if not isinstance(other, Book):\n            return False\n        return self.title == other.title and self.author == other.author\n\nbook1 = Book(\"Python Basics\", \"John Smith\")\nbook2 = Book(\"Python Basics\", \"John Smith\")\nbook3 = Book(\"Advanced Python\", \"Jane Doe\")\n\nprint(str(book1))\nprint(book1 == book2)\nprint(book1 == book3)",
+      "options": {
+        "A": "Python Basics by John Smith\nFalse\nFalse",
+        "B": "Python Basics by John Smith\nTrue\nFalse",
+        "C": "Book('Python Basics', 'John Smith')\nTrue\nFalse",
+        "D": "Book('Python Basics', 'John Smith')\nFalse\nFalse"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "topic": "Cloud services integration",
+      "question": "What will be the output of the following code using boto3 to list AWS S3 buckets?",
+      "code_example": "import boto3\nfrom unittest.mock import patch\n\n@patch('boto3.resource')\ndef test_s3_buckets(mock_resource):\n    # Setup mock\n    mock_bucket1 = type('obj', (object,), {'name': 'bucket1'})\n    mock_bucket2 = type('obj', (object,), {'name': 'bucket2'})\n    mock_s3 = mock_resource.return_value\n    mock_s3.buckets.all.return_value = [mock_bucket1, mock_bucket2]\n    \n    # Function to test\n    def list_buckets():\n        s3 = boto3.resource('s3')\n        return [b.name for b in s3.buckets.all() if 'bucket' in b.name]\n    \n    # Call function\n    result = list_buckets()\n    print(f\"Filtered buckets: {result}\")\n    print(f\"Length: {len(result)}\")\n    print(f\"Type: {type(result).__name__}\")\n\ntest_s3_buckets()",
+      "options": {
+        "A": "Filtered buckets: ['bucket1', 'bucket2']\nLength: 2\nType: list",
+        "B": "Filtered buckets: []\nLength: 0\nType: list",
+        "C": "Filtered buckets: ['bucket1', 'bucket2']\nLength: 2\nType: dict",
+        "D": "Error: boto3.exceptions.NoCredentialsError"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "topic": "Backtracking algorithms",
+      "question": "What will the following backtracking algorithm print when searching for all possible subsets of [1, 2, 3] that sum to 4?",
+      "code_example": "def subset_sum(numbers, target, partial=None, partial_sum=0):\n    if partial is None:\n        partial = []\n        \n    if partial_sum == target:\n        print(f\"Sum({partial}) = {target}\")\n    if partial_sum >= target:\n        return\n        \n    for i, n in enumerate(numbers):\n        remaining = numbers[i + 1:]\n        subset_sum(remaining, target, partial + [n], partial_sum + n)\n\nsubset_sum([1, 2, 3], 4)",
+      "options": {
+        "A": "Sum([1, 3]) = 4",
+        "B": "Sum([1, 3]) = 4\nSum([2, 2]) = 4\nSum([4]) = 4",
+        "C": "Sum([1, 3]) = 4\nSum([4]) = 4",
+        "D": "Sum([1, 3]) = 4\nSum([2, 2]) = 4"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "topic": "Design patterns (Singleton, Factory, Observer)",
+      "question": "What will be the output of the following implementation of the Singleton pattern?",
+      "code_example": "class Singleton:\n    _instance = None\n    _initialized = False\n    \n    def __new__(cls, *args, **kwargs):\n        if cls._instance is None:\n            cls._instance = super().__new__(cls)\n        return cls._instance\n    \n    def __init__(self, value=None):\n        if not self._initialized:\n            self.value = value\n            self.__class__._initialized = True\n            print(f\"Initializing with {value}\")\n        else:\n            print(f\"Already initialized with {self.value}\")\n\n# Test code\ns1 = Singleton(42)\ns2 = Singleton(100)\nprint(f\"s1.value: {s1.value}, s2.value: {s2.value}\")\nprint(f\"s1 is s2: {s1 is s2}\")",
+      "options": {
+        "A": "Initializing with 42\nInitializing with 100\ns1.value: 100, s2.value: 100\ns1 is s2: True",
+        "B": "Initializing with 42\nAlready initialized with 42\ns1.value: 42, s2.value: 42\ns1 is s2: True",
+        "C": "Initializing with 42\nAlready initialized with 42\ns1.value: 42, s2.value: 100\ns1 is s2: False",
+        "D": "Initializing with 42\nInitializing with 100\ns1.value: 42, s2.value: 100\ns1 is s2: False"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "topic": "Approximation algorithms",
+      "question": "What will be the result of the following greedy approximation algorithm for the knapsack problem?",
+      "code_example": "def greedy_knapsack(items, capacity):\n    # Sort items by value/weight ratio in descending order\n    items_sorted = sorted(items, key=lambda x: x['value'] / x['weight'], reverse=True)\n    \n    total_value = 0\n    total_weight = 0\n    selected = []\n    \n    for item in items_sorted:\n        if total_weight + item['weight'] <= capacity:\n            selected.append(item['name'])\n            total_value += item['value']\n            total_weight += item['weight']\n    \n    return {\n        'selected_items': selected,\n        'total_value': total_value,\n        'total_weight': total_weight\n    }\n\n# Test with items: (name, value, weight)\nitems = [\n    {'name': 'A', 'value': 60, 'weight': 10},\n    {'name': 'B', 'value': 100, 'weight': 20},\n    {'name': 'C', 'value': 120, 'weight': 30}\n]\n\nresult = greedy_knapsack(items, 50)\nprint(f\"Selected: {', '.join(result['selected_items'])}\")\nprint(f\"Total value: {result['total_value']}\")\nprint(f\"Total weight: {result['total_weight']}\")",
+      "options": {
+        "A": "Selected: A, B, C\nTotal value: 280\nTotal weight: 60",
+        "B": "Selected: C, B\nTotal value: 220\nTotal weight: 50",
+        "C": "Selected: A, B\nTotal value: 160\nTotal weight: 30",
+        "D": "Selected: B, A\nTotal value: 160\nTotal weight: 30"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "topic": "Memory management and garbage collection",
+      "question": "What will be the output of the following code related to Python's memory management?",
+      "code_example": "import gc\nimport weakref\n\nclass Node:\n    def __init__(self, value):\n        self.value = value\n        self.next = None\n    \n    def __repr__(self):\n        return f\"Node({self.value})\"\n\n# Create a cycle\nnode1 = Node(1)\nnode2 = Node(2)\nnode1.next = node2\nnode2.next = node1\n\n# Create a weak reference to node2\nweak_node2 = weakref.ref(node2)\n\n# Remove references\nprint(f\"Before: {weak_node2() is not None}\")\ndel node2\nprint(f\"After del node2: {weak_node2() is not None}\")\n\n# Force garbage collection\ngc.collect()\nprint(f\"After gc.collect(): {weak_node2() is not None}\")\n\n# Break the cycle\nnode1.next = None\ngc.collect()\nprint(f\"After breaking cycle: {weak_node2() is not None}\")",
+      "options": {
+        "A": "Before: True\nAfter del node2: True\nAfter gc.collect(): False\nAfter breaking cycle: False",
+        "B": "Before: True\nAfter del node2: True\nAfter gc.collect(): True\nAfter breaking cycle: False",
+        "C": "Before: True\nAfter del node2: False\nAfter gc.collect(): False\nAfter breaking cycle: False",
+        "D": "Before: True\nAfter del node2: False\nAfter gc.collect(): False\nAfter breaking cycle: True"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "topic": "OWASP top 10 vulnerabilities",
+      "question": "Which of the following Python code snippets demonstrates the BEST mitigation against SQL injection attacks in a Flask application?",
+      "options": {
+        "A": "cursor.execute(\"SELECT * FROM users WHERE username = '\" + username + \"' AND password = '\" + password + \"'\");\nreturn cursor.fetchone()",
+        "B": "username = username.replace(\"'\", \"''\")\npassword = password.replace(\"'\", \"''\")\ncursor.execute(f\"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'\")\nreturn cursor.fetchone()",
+        "C": "cursor.execute(\"SELECT * FROM users WHERE username = %s AND password = %s\", (username, password))\nreturn cursor.fetchone()",
+        "D": "from flask import escape\nusername = escape(username)\npassword = escape(password)\ncursor.execute(f\"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'\")\nreturn cursor.fetchone()"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "topic": "Infrastructure as code",
+      "question": "What will be printed when executing the following Python code using Terraform's Python SDK to query resource properties?",
+      "code_example": "class MockTerraformState:\n    def __init__(self):\n        self.resources = {\n            'aws_instance.web': {\n                'primary': {\n                    'attributes': {\n                        'id': 'i-1234567890abcdef0',\n                        'instance_type': 't2.micro',\n                        'private_ip': '10.0.1.2',\n                        'public_ip': '54.123.45.67',\n                        'tags.%': '2',\n                        'tags.Name': 'web-server',\n                        'tags.Environment': 'production'\n                    }\n                }\n            }\n        }\n    \n    def get_resource(self, resource_id):\n        return self.resources.get(resource_id, None)\n\ndef extract_instance_info(state, resource_id):\n    resource = state.get_resource(resource_id)\n    if not resource:\n        return None\n    \n    attributes = resource['primary']['attributes']\n    tags = {}\n    \n    # Extract tags\n    tag_count = int(attributes.get('tags.%', 0))\n    if tag_count > 0:\n        for key, value in attributes.items():\n            if key.startswith('tags.') and key != 'tags.%':\n                tag_name = key.split('.')[-1]\n                tags[tag_name] = value\n    \n    return {\n        'id': attributes.get('id'),\n        'instance_type': attributes.get('instance_type'),\n        'public_ip': attributes.get('public_ip'),\n        'tags': tags\n    }\n\nstate = MockTerraformState()\ninfo = extract_instance_info(state, 'aws_instance.web')\nprint(f\"Instance ID: {info['id']}\")\nprint(f\"Type: {info['instance_type']}\")\nprint(f\"IP: {info['public_ip']}\")\nprint(f\"Tags: {', '.join([f'{k}={v}' for k, v in info['tags'].items()])}\")",
+      "options": {
+        "A": "Instance ID: i-1234567890abcdef0\nType: t2.micro\nIP: 54.123.45.67\nTags: Name=web-server, Environment=production",
+        "B": "Instance ID: i-1234567890abcdef0\nType: t2.micro\nIP: 10.0.1.2\nTags: Name=web-server, Environment=production",
+        "C": "Instance ID: i-1234567890abcdef0\nType: t2.micro\nIP: 54.123.45.67\nTags: 2",
+        "D": "Instance ID: i-1234567890abcdef0\nType: t2.micro\nIP: 54.123.45.67\nTags: %=2, Name=web-server, Environment=production"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "topic": "C extensions and Cython",
+      "question": "What is the primary difference between the following two Cython function definitions?",
+      "code_example": "# Definition 1\ndef calculate_distance(double x1, double y1, double x2, double y2):\n    return ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5\n\n# Definition 2\ncdef double calculate_distance_cdef(double x1, double y1, double x2, double y2):\n    return ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5",
+      "options": {
+        "A": "The first definition can be called from Python, while the second can only be called from Cython code",
+        "B": "The second definition will be faster because it specifies return type, while the first does not",
+        "C": "The first definition accepts Python objects, while the second only accepts C types",
+        "D": "There is no performance difference; the 'cdef' keyword is only used for code organization"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "topic": "Encryption and hashing",
+      "question": "What will be printed when running the following code using the cryptography library?",
+      "code_example": "from cryptography.fernet import Fernet\nfrom cryptography.hazmat.primitives import hashes\nfrom cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC\nimport base64\nimport os\n\ndef generate_key_from_password(password, salt=None):\n    if salt is None:\n        salt = os.urandom(16)\n    kdf = PBKDF2HMAC(\n        algorithm=hashes.SHA256(),\n        length=32,\n        salt=salt,\n        iterations=100000,\n    )\n    key = base64.urlsafe_b64encode(kdf.derive(password.encode()))\n    return key, salt\n\ndef encrypt_message(message, password, salt=None):\n    key, salt = generate_key_from_password(password, salt)\n    f = Fernet(key)\n    encrypted = f.encrypt(message.encode())\n    return encrypted, salt\n\ndef decrypt_message(encrypted, password, salt):\n    key, _ = generate_key_from_password(password, salt)\n    f = Fernet(key)\n    decrypted = f.decrypt(encrypted).decode()\n    return decrypted\n\n# Simulate encryption and decryption\nmessage = \"secret message\"\npassword = \"password123\"\n\n# First encryption\nencrypted1, salt1 = encrypt_message(message, password)\n\n# Second encryption with same salt\nencrypted2, _ = encrypt_message(message, password, salt1)\n\n# Check if encryptions are identical\nprint(f\"Encryptions identical: {encrypted1 == encrypted2}\")\n\n# Decrypt with correct password\ndecrypted = decrypt_message(encrypted1, password, salt1)\nprint(f\"Decryption correct: {decrypted == message}\")\n\n# Try with wrong password\ntry:\n    wrong_decrypted = decrypt_message(encrypted1, \"wrongpassword\", salt1)\n    print(\"Wrong password worked!\")\nexcept Exception as e:\n    print(f\"Wrong password failed: {type(e).__name__}\")",
+      "options": {
+        "A": "Encryptions identical: True\nDecryption correct: True\nWrong password failed: InvalidToken",
+        "B": "Encryptions identical: False\nDecryption correct: True\nWrong password failed: InvalidToken",
+        "C": "Encryptions identical: True\nDecryption correct: True\nWrong password failed: InvalidKey",
+        "D": "Encryptions identical: False\nDecryption correct: True\nWrong password failed: DecryptionError"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "topic": "State definition and transition",
+      "question": "What will be the final state of the following state machine implementation for validating a simple password reset flow?",
+      "code_example": "class StateMachine:\n    def __init__(self):\n        self.state = 'START'\n        self.transitions = {\n            'START': {'request_reset': 'REQUESTED', 'cancel': 'CANCELLED'},\n            'REQUESTED': {'verify_email': 'VERIFIED', 'timeout': 'EXPIRED', 'cancel': 'CANCELLED'},\n            'VERIFIED': {'set_password': 'COMPLETED', 'timeout': 'EXPIRED', 'cancel': 'CANCELLED'},\n            'EXPIRED': {'request_reset': 'REQUESTED'},\n            'CANCELLED': {'request_reset': 'REQUESTED'},\n            'COMPLETED': {'request_reset': 'REQUESTED'}\n        }\n        self.history = ['START']\n    \n    def transition(self, event):\n        if event in self.transitions[self.state]:\n            self.state = self.transitions[self.state][event]\n            self.history.append(self.state)\n            return True\n        return False\n    \n    def get_state(self):\n        return self.state\n    \n    def get_history(self):\n        return self.history\n\n# Test the state machine\npassword_reset = StateMachine()\npassword_reset.transition('request_reset')\npassword_reset.transition('verify_email')\npassword_reset.transition('cancel')\npassword_reset.transition('request_reset')\npassword_reset.transition('verify_email')\npassword_reset.transition('set_password')\n\nprint(f\"Final state: {password_reset.get_state()}\")\nprint(f\"Transitions: {' -> '.join(password_reset.get_history())}\")",
+      "options": {
+        "A": "Final state: VERIFIED\nTransitions: START -> REQUESTED -> VERIFIED -> CANCELLED -> REQUESTED -> VERIFIED",
+        "B": "Final state: COMPLETED\nTransitions: START -> REQUESTED -> VERIFIED -> CANCELLED -> REQUESTED -> VERIFIED -> COMPLETED",
+        "C": "Final state: REQUESTED\nTransitions: START -> REQUESTED -> VERIFIED -> CANCELLED -> REQUESTED",
+        "D": "Final state: VERIFIED\nTransitions: START -> REQUESTED -> VERIFIED -> CANCELLED -> REQUESTED -> VERIFIED -> COMPLETED"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "topic": "Abstract base classes",
+      "question": "What will be the output of the following code that demonstrates abstract base classes in Python?",
+      "code_example": "from abc import ABC, abstractmethod\n\nclass DataProcessor(ABC):\n    @abstractmethod\n    def process(self, data):\n        pass\n        \n    @abstractmethod\n    def validate(self, data):\n        pass\n    \n    def run(self, data):\n        if self.validate(data):\n            return self.process(data)\n        return None\n\nclass TextProcessor(DataProcessor):\n    def process(self, data):\n        return data.upper()\n    \n    def validate(self, data):\n        return isinstance(data, str) and len(data) > 0\n\nclass PartialImplementor(DataProcessor):\n    def process(self, data):\n        return data * 2\n\ntry:\n    text_processor = TextProcessor()\n    result1 = text_processor.run(\"hello\")\n    print(f\"TextProcessor result: {result1}\")\n    \n    # Try to instantiate the abstract class\n    try:\n        abstract_instance = DataProcessor()\n        print(\"Created abstract instance!\")\n    except TypeError as e:\n        print(f\"Abstract instantiation error: {type(e).__name__}\")\n    \n    # Try the partial implementation\n    try:\n        partial = PartialImplementor()\n        print(\"Created partial implementation!\")\n    except TypeError as e:\n        print(f\"Partial implementation error: {type(e).__name__}\")\n        \nexcept Exception as e:\n    print(f\"Unexpected error: {type(e).__name__}: {str(e)}\")",
+      "options": {
+        "A": "TextProcessor result: HELLO\nAbstract instantiation error: TypeError\nPartial implementation error: TypeError",
+        "B": "TextProcessor result: HELLO\nAbstract instantiation error: TypeError\nCreated partial implementation!",
+        "C": "TextProcessor result: HELLO\nAbstract instantiation error: TypeError\nPartial implementation error: NotImplementedError",
+        "D": "TextProcessor result: HELLO\nAbstract instantiation error: AbstractClassError\nPartial implementation error: TypeError"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "topic": "String algorithms (KMP, Rabin-Karp)",
+      "question": "What will be the output of the following KMP (Knuth-Morris-Pratt) string matching algorithm implementation?",
+      "code_example": "def compute_lps(pattern):\n    lps = [0] * len(pattern)\n    length = 0\n    i = 1\n    \n    while i < len(pattern):\n        if pattern[i] == pattern[length]:\n            length += 1\n            lps[i] = length\n            i += 1\n        else:\n            if length != 0:\n                length = lps[length - 1]\n            else:\n                lps[i] = 0\n                i += 1\n    \n    return lps\n\ndef kmp_search(text, pattern):\n    if not pattern or not text:\n        return []\n    \n    matches = []\n    n, m = len(text), len(pattern)\n    \n    # Preprocess the pattern\n    lps = compute_lps(pattern)\n    \n    i = j = 0  # i for text, j for pattern\n    \n    while i < n:\n        if pattern[j] == text[i]:\n            i += 1\n            j += 1\n        \n        if j == m:  # Found a match\n            matches.append(i - j)\n            j = lps[j - 1]\n        elif i < n and pattern[j] != text[i]:\n            if j != 0:\n                j = lps[j - 1]\n            else:\n                i += 1\n    \n    return matches\n\ntext = \"ABABDABACDABABCABAB\"\npattern = \"ABABCABAB\"\n\nprint(f\"Text: {text}\")\nprint(f\"Pattern: {pattern}\")\nprint(f\"LPS Array: {compute_lps(pattern)}\")\nmatches = kmp_search(text, pattern)\nprint(f\"Matches found at indices: {matches}\")",
+      "options": {
+        "A": "Text: ABABDABACDABABCABAB\nPattern: ABABCABAB\nLPS Array: [0, 0, 1, 2, 0, 1, 2, 3, 4]\nMatches found at indices: [10]",
+        "B": "Text: ABABDABACDABABCABAB\nPattern: ABABCABAB\nLPS Array: [0, 0, 1, 2, 0, 1, 2, 3, 4]\nMatches found at indices: [0, 10]",
+        "C": "Text: ABABDABACDABABCABAB\nPattern: ABABCABAB\nLPS Array: [0, 0, 1, 2, 0, 1, 2, 3, 4]\nMatches found at indices: []",
+        "D": "Text: ABABDABACDABABCABAB\nPattern: ABABCABAB\nLPS Array: [0, 1, 2, 3, 0, 1, 2, 3, 4]\nMatches found at indices: [10]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "topic": "Scikit-learn basics",
+      "question": "What will be the result when running the following code that demonstrates cross-validation with scikit-learn?",
+      "code_example": "import numpy as np\nfrom sklearn.model_selection import cross_val_score\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.datasets import make_classification\n\n# Create a synthetic dataset\nX, y = make_classification(\n    n_samples=100,\n    n_features=20,\n    n_informative=10,\n    n_redundant=5,\n    random_state=42\n)\n\n# Create a pipeline with preprocessing and model\npipeline = Pipeline([\n    ('scaler', StandardScaler()),\n    ('classifier', RandomForestClassifier(n_estimators=10, random_state=42))\n])\n\n# Create a separate pipeline without scaling\npipeline_no_scaling = Pipeline([\n    ('classifier', RandomForestClassifier(n_estimators=10, random_state=42))\n])\n\n# Perform cross-validation\nscores_with_scaling = cross_val_score(pipeline, X, y, cv=5)\nscores_without_scaling = cross_val_score(pipeline_no_scaling, X, y, cv=5)\n\nprint(f\"Scores with scaling: {np.round(scores_with_scaling, 2)}\")\nprint(f\"Mean score with scaling: {np.round(np.mean(scores_with_scaling), 2)}\")\nprint(f\"Scores without scaling: {np.round(scores_without_scaling, 2)}\")\nprint(f\"Mean score without scaling: {np.round(np.mean(scores_without_scaling), 2)}\")\nprint(f\"Scaling improved performance: {np.mean(scores_with_scaling) > np.mean(scores_without_scaling)}\")",
+      "options": {
+        "A": "Scores with scaling: [0.85 0.8  0.8  0.85 0.9 ]\nMean score with scaling: 0.84\nScores without scaling: [0.85 0.8  0.8  0.85 0.9 ]\nMean score without scaling: 0.84\nScaling improved performance: False",
+        "B": "Scores with scaling: [0.85 0.8  0.8  0.85 0.9 ]\nMean score with scaling: 0.84\nScores without scaling: [0.75 0.7  0.7  0.75 0.8 ]\nMean score without scaling: 0.74\nScaling improved performance: True",
+        "C": "Scores with scaling: [0.75 0.7  0.7  0.75 0.8 ]\nMean score with scaling: 0.74\nScores without scaling: [0.85 0.8  0.8  0.85 0.9 ]\nMean score without scaling: 0.84\nScaling improved performance: False",
+        "D": "Scores with scaling: [0.85 0.8  0.75 0.85 0.9 ]\nMean score with scaling: 0.83\nScores without scaling: [0.85 0.8  0.75 0.85 0.9 ]\nMean score without scaling: 0.83\nScaling improved performance: False"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What does the @staticmethod decorator do in Python?",
+      "options": {
+        "A": "Makes a method that can be called without an instance of the class",
+        "B": "Makes a method that can modify class state but not instance state",
+        "C": "Makes a method that can only be called from other static methods",
+        "D": "Makes a method that cannot be overridden in subclasses"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What is a closure in Python?",
+      "options": {
+        "A": "A way to close files automatically when they are no longer needed",
+        "B": "A function object that remembers values from the enclosing scope even when that scope has completed execution",
+        "C": "A method to end a long-running process",
+        "D": "A technique to restrict access to class attributes"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a valid way to create a copy of a list in Python?",
+      "options": {
+        "A": "new_list = old_list.copy()",
+        "B": "new_list = list(old_list)",
+        "C": "new_list = old_list[:]",
+        "D": "new_list = old_list.duplicate()"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    }
+]
+}
