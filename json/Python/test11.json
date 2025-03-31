@@ -1,0 +1,629 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "16",
+        "B": "8",
+        "C": "24",
+        "D": "Error: maximum recursion depth exceeded"
+      },
+      "correct_answer": "B",
+      "code_example": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n-1)\n\nprint(factorial(3))"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to create a custom exception in Python?",
+      "options": {
+        "A": "class MyError(Error): pass",
+        "B": "class MyError(Exception): pass",
+        "C": "class MyError(CustomException): pass",
+        "D": "def MyError(): raise Exception"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "['apple', 'banana', 'cherry', 'date']",
+        "B": "['apple', 'banana', 'cherry']",
+        "C": "['date', 'apple', 'banana', 'cherry']",
+        "D": "['apple', 'date', 'banana', 'cherry']"
+      },
+      "correct_answer": "D",
+      "code_example": "fruits = ['apple', 'banana', 'cherry']\nfruits.insert(1, 'date')\nprint(fruits)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is the difference between parameters and arguments in Python functions?",
+      "options": {
+        "A": "They are exactly the same thing",
+        "B": "Parameters are defined in the function definition, while arguments are the values passed to the function",
+        "C": "Arguments are defined in the function definition, while parameters are the values passed to the function",
+        "D": "Parameters are used in built-in functions, while arguments are used in user-defined functions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Python-Programming-Is-Fun",
+        "B": "Python Programming Is Fun",
+        "C": "PythonProgrammingIsFun",
+        "D": "Python.Programming.Is.Fun"
+      },
+      "correct_answer": "A",
+      "code_example": "words = ['Python', 'Programming', 'Is', 'Fun']\nresult = '-'.join(words)\nprint(result)"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "{'name': 'John', 'age': 30, 'city': 'New York'}",
+        "B": "{'name': 'John', 'age': 30}",
+        "C": "{'city': 'New York'}",
+        "D": "{'name': 'John', 'age': 30, 'city': None}"
+      },
+      "correct_answer": "C",
+      "code_example": "person = {'name': 'John', 'age': 30, 'city': 'New York'}\nkeys_to_remove = ['name', 'age']\n\nfor key in keys_to_remove:\n    person.pop(key)\n\nprint(person)"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "5",
+        "B": "4",
+        "C": "6",
+        "D": "IndexError: list index out of range"
+      },
+      "correct_answer": "D",
+      "code_example": "def find_index(lst, target):\n    for i in range(len(lst)):\n        if lst[i] == target:\n            return i\n    return lst[i]  # This line has an issue\n\nnumbers = [10, 20, 30, 40, 50]\nprint(find_index(numbers, 60))"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the correct way to implement a linear search in Python?",
+      "options": {
+        "A": "def linear_search(arr, x):\n    for i in range(len(arr)):\n        if arr[i] == x:\n            return i\n    return -1",
+        "B": "def linear_search(arr, x):\n    for i in arr:\n        if i == x:\n            return arr.index(i)\n    return False",
+        "C": "def linear_search(arr, x):\n    if x in arr:\n        return arr.index(x)\n    else:\n        return -1",
+        "D": "def linear_search(arr, x):\n    i = 0\n    while i < len(arr):\n        if arr[i] == x:\n            return i\n        i += 2  # Skip elements"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "The file was closed",
+        "B": "An error occurred: division by zero",
+        "C": "Result: Error",
+        "D": "The file was closed, followed by 'An error occurred: division by zero'"
+      },
+      "correct_answer": "D",
+      "code_example": "try:\n    with open('example.txt', 'w') as file:\n        file.write('Example text')\n        result = 10 / 0\n    print('Result:', result)\nexcept ZeroDivisionError as e:\n    print(f'An error occurred: {e}')\nfinally:\n    print('The file was closed')"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the purpose of the 'b' mode when opening a file in Python?",
+      "options": {
+        "A": "It opens the file in 'buffer' mode for faster reading",
+        "B": "It opens the file in 'binary' mode for handling non-text files",
+        "C": "It opens the file for 'both' reading and writing",
+        "D": "It opens the file in 'backup' mode to create a copy"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[5, 1, 2, 3, 4]",
+        "C": "[2, 3, 4, 5, 1]",
+        "D": "[1, 2, 3, 4]"
+      },
+      "correct_answer": "B",
+      "code_example": "def bubble_sort_step(arr):\n    # One step of bubble sort\n    for i in range(len(arr) - 1):\n        if arr[i] > arr[i + 1]:\n            arr[i], arr[i + 1] = arr[i + 1], arr[i]\n            return arr\n    return arr\n\nnumbers = [5, 1, 2, 3, 4]\nbubble_sort_step(numbers)\nprint(numbers)"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "TypeError: 'age' is required",
+        "B": "{'name': 'Alice', 'age': None}",
+        "C": "{'name': 'Alice', 'age': 'unknown'}",
+        "D": "{'name': 'Alice'}"
+      },
+      "correct_answer": "C",
+      "code_example": "def create_person(name, age='unknown'):\n    return {'name': name, 'age': age}\n\nprint(create_person('Alice'))"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What is the proper way to write a docstring for a function in Python?",
+      "options": {
+        "A": "// This function calculates the area of a rectangle",
+        "B": "# This function calculates the area of a rectangle",
+        "C": "''' This function calculates the area of a rectangle '''",
+        "D": "<docstring>This function calculates the area of a rectangle</docstring>"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Process completed",
+        "B": "Process completed with warning: divide by zero",
+        "C": "Process failed: cannot divide by zero",
+        "D": "Process failed: [Errno 2] No such file or directory: 'nonexistent.txt'"
+      },
+      "correct_answer": "D",
+      "code_example": "try:\n    file = open('nonexistent.txt', 'r')\n    value = 10 / 0\n    print('Process completed')\nexcept ZeroDivisionError:\n    print('Process failed: cannot divide by zero')\nexcept FileNotFoundError as e:\n    print(f'Process failed: {e}')\nelse:\n    print('Process completed successfully')\nfinally:\n    print('Process completed with warning: divide by zero')"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "120",
+        "B": "720",
+        "C": "24",
+        "D": "5040"
+      },
+      "correct_answer": "C",
+      "code_example": "def factorial_iterative(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n\nprint(factorial_iterative(4))"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a common file mode in Python?",
+      "options": {
+        "A": "'r' - read mode",
+        "B": "'w' - write mode",
+        "C": "'a' - append mode",
+        "D": "'e' - edit mode"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What is the output of the following code that uses a generator function?",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]",
+        "B": "<generator object squares at 0x...>",
+        "C": "1 4 9 16 25",
+        "D": "Generator is empty"
+      },
+      "correct_answer": "C",
+      "code_example": "def squares(n):\n    for i in range(1, n+1):\n        yield i**2\n\ngen = squares(5)\nfor num in gen:\n    print(num, end=' ')"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that uses a decorator?",
+      "options": {
+        "A": "Running add(3, 5)... Result: 8",
+        "B": "Running add... Result: 8",
+        "C": "8",
+        "D": "Function 'add' returned: 8"
+      },
+      "correct_answer": "A",
+      "code_example": "def log_function(func):\n    def wrapper(*args, **kwargs):\n        result = func(*args, **kwargs)\n        print(f\"Running {func.__name__}{args}... Result: {result}\")\n        return result\n    return wrapper\n\n@log_function\ndef add(a, b):\n    return a + b\n\nadd(3, 5)"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the difference between a generator expression and a list comprehension?",
+      "options": {
+        "A": "Generator expressions use parentheses while list comprehensions use square brackets",
+        "B": "Generator expressions create iterators that generate values on-demand, while list comprehensions create the entire list in memory",
+        "C": "Generator expressions can only generate numeric values, while list comprehensions can generate any type",
+        "D": "Generator expressions are faster for all operations than list comprehensions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using dictionary comprehension?",
+      "options": {
+        "A": "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}",
+        "B": "{1: 2, 2: 4, 3: 6, 4: 8, 5: 10}",
+        "C": "{0: 0, 1: 1, 2: 4, 3: 9, 4: 16}",
+        "D": "{1: 'odd', 2: 'even', 3: 'odd', 4: 'even', 5: 'odd'}"
+      },
+      "correct_answer": "D",
+      "code_example": "numbers = range(1, 6)\nresult = {num: 'odd' if num % 2 else 'even' for num in numbers}\nprint(result)"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What is the key difference between a class and an instance in Python?",
+      "options": {
+        "A": "Classes can have methods, instances cannot",
+        "B": "Classes are templates or blueprints, instances are concrete objects created from those blueprints",
+        "C": "Instances can have attributes, classes cannot",
+        "D": "Classes are used in OOP, instances are used in functional programming"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code implementing binary search?",
+      "options": {
+        "A": "Found at index: 3",
+        "B": "Found at index: 4",
+        "C": "Not found",
+        "D": "Found at index: 0"
+      },
+      "correct_answer": "A",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return f\"Found at index: {mid}\"\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return \"Not found\"\n\nnumbers = [10, 20, 30, 40, 50, 60, 70]\nprint(binary_search(numbers, 40))"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code implementing a breadth-first search?",
+      "options": {
+        "A": "A B C D E F",
+        "B": "A B C D E",
+        "C": "A B D C E",
+        "D": "A B D E C"
+      },
+      "correct_answer": "C",
+      "code_example": "from collections import deque\n\ndef bfs(graph, start):\n    visited = set()\n    queue = deque([start])\n    result = []\n    \n    while queue:\n        vertex = queue.popleft()\n        if vertex not in visited:\n            result.append(vertex)\n            visited.add(vertex)\n            queue.extend(graph[vertex])\n    \n    return ' '.join(result)\n\ngraph = {\n    'A': ['B', 'C'],\n    'B': ['D', 'E'],\n    'C': [],\n    'D': [],\n    'E': []\n}\n\nprint(bfs(graph, 'A'))"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using nested data structures?",
+      "options": {
+        "A": "['John', 'Alice', 'Bob']",
+        "B": "['John: New York', 'Alice: London', 'Bob: Paris']",
+        "C": "[('John', 'New York'), ('Alice', 'London'), ('Bob', 'Paris')]",
+        "D": "{'John': 'New York', 'Alice': 'London', 'Bob': 'Paris'}"
+      },
+      "correct_answer": "B",
+      "code_example": "people = [\n    {'name': 'John', 'location': {'city': 'New York', 'country': 'USA'}},\n    {'name': 'Alice', 'location': {'city': 'London', 'country': 'UK'}},\n    {'name': 'Bob', 'location': {'city': 'Paris', 'country': 'France'}}\n]\n\nresult = [f\"{person['name']}: {person['location']['city']}\" for person in people]\nprint(result)"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code implementing a greedy algorithm for coin change?",
+      "options": {
+        "A": "[25, 25, 10, 10, 5, 1, 1, 1]",
+        "B": "[25, 25, 25, 1, 1, 1]",
+        "C": "[25, 25, 25, 1, 1, 1, 1]",
+        "D": "[25, 25, 25, 1, 1, 1, 1, 1]"
+      },
+      "correct_answer": "D",
+      "code_example": "def make_change(amount, coins):\n    coins.sort(reverse=True)\n    change = []\n    remaining = amount\n    \n    for coin in coins:\n        while remaining >= coin:\n            change.append(coin)\n            remaining -= coin\n            \n    return change\n\ncoins = [1, 5, 10, 25]\namount = 78\nprint(make_change(amount, coins))"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What is the main purpose of the property decorator in Python?",
+      "options": {
+        "A": "To mark a method as deprecated",
+        "B": "To make a method private",
+        "C": "To define a method that can be accessed like an attribute while allowing custom getter/setter logic",
+        "D": "To prevent a method from being overridden in subclasses"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that uses JSON serialization?",
+      "options": {
+        "A": "Error: Object of type 'datetime' is not JSON serializable",
+        "B": "{\"name\": \"John\", \"age\": 30, \"created_at\": \"2023-07-15T12:30:45\"}",
+        "C": "{\"name\": \"John\", \"age\": 30, \"created_at\": \"2023-07-15 12:30:45\"}",
+        "D": "{\"name\": \"John\", \"age\": 30}"
+      },
+      "correct_answer": "A",
+      "code_example": "import json\nfrom datetime import datetime\n\ndata = {\n    'name': 'John',\n    'age': 30,\n    'created_at': datetime(2023, 7, 15, 12, 30, 45)\n}\n\ntry:\n    json_data = json.dumps(data)\n    print(json_data)\nexcept TypeError as e:\n    print(f\"Error: {e}\")"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is a key principle of RESTful API design?",
+      "options": {
+        "A": "All API calls must use POST method for security",
+        "B": "Resources should be identified by URLs and manipulated using standard HTTP methods",
+        "C": "Every API endpoint should return XML formatted data",
+        "D": "API versioning should be handled through different subdomains"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that uses a decorator with arguments?",
+      "options": {
+        "A": "Running function: greet with retry limit: 3",
+        "B": "Hello, World!",
+        "C": "Retry 1: Hello, World!",
+        "D": "Hello, World! (Retries left: 3)"
+      },
+      "correct_answer": "A",
+      "code_example": "def retry(max_attempts):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            print(f\"Running function: {func.__name__} with retry limit: {max_attempts}\")\n            return func(*args, **kwargs)\n        return wrapper\n    return decorator\n\n@retry(3)\ndef greet(name):\n    return f\"Hello, {name}!\"\n\ngreet(\"World\")"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a valid CRUD operation in database management?",
+      "options": {
+        "A": "Create",
+        "B": "Refresh",
+        "C": "Update",
+        "D": "Delete"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is the time complexity advantage of the divide and conquer approach?",
+      "options": {
+        "A": "It always results in O(1) time complexity",
+        "B": "It can reduce time complexity from O(n²) to O(n log n) for certain problems",
+        "C": "It guarantees O(log n) time complexity for all problems",
+        "D": "It always performs better than dynamic programming approaches"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What is the output of the following code that uses regular expressions?",
+      "options": {
+        "A": "['123-456-7890', '987-654-3210']",
+        "B": "['123', '987']",
+        "C": "['123-456-7890']",
+        "D": "['7890', '3210']"
+      },
+      "correct_answer": "A",
+      "code_example": "import re\n\ntext = \"Call me at 123-456-7890 or 987-654-3210\"\npattern = r'\\d{3}-\\d{3}-\\d{4}'\n\nphone_numbers = re.findall(pattern, text)\nprint(phone_numbers)"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "topic": "Bit manipulation",
+      "question": "What will be the value of 'result' after executing the following code?",
+      "code_example": "def count_set_bits(n):\n    count = 0\n    while n:\n        count += n & 1\n        n >>= 1\n    return count\n\nresult = sum(count_set_bits(i) for i in range(16))",
+      "options": {
+        "A": "32",
+        "B": "40",
+        "C": "48",
+        "D": "64"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "topic": "Containerization with Docker",
+      "question": "Which of the following Dockerfile instructions creates a mount point with the specified name and marks it as holding externally mounted volumes from the host or other containers?",
+      "options": {
+        "A": "VOLUME",
+        "B": "MOUNT",
+        "C": "EXPOSE",
+        "D": "ENTRYPOINT"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "topic": "Handling JavaScript-heavy sites",
+      "question": "What will be the result of running the following Selenium code on a JavaScript-heavy website?",
+      "code_example": "from selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\n\ndriver = webdriver.Chrome()\ndriver.get('https://example.com')\n\nelement = WebDriverWait(driver, 10).until(\n    EC.presence_of_element_located((By.ID, 'dynamicElement'))\n)\n\nprint(element.is_displayed())",
+      "options": {
+        "A": "True (if the element exists in the DOM and is visible)",
+        "B": "False (even if the element exists and is visible)",
+        "C": "TimeoutException (regardless of whether the element exists)",
+        "D": "NoSuchElementException (even if the element exists in the DOM)"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "topic": "OWASP top 10 vulnerabilities",
+      "question": "Which of the following code snippets contains a vulnerability that falls under OWASP's 'Injection' category?",
+      "code_example": "# Snippet A\nusername = request.form['username']\ncursor.execute(f\"SELECT * FROM users WHERE username = '{username}'\")\n\n# Snippet B\nusername = request.form['username']\ncursor.execute(\"SELECT * FROM users WHERE username = %s\", (username,))\n\n# Snippet C\nfilename = request.form['filename']\nwith open(os.path.join('/safe/path', filename), 'r') as f:\n    data = f.read()\n    \n# Snippet D\nimport subprocess\ncommand = ['ls', '-l', request.form['directory']]\nresult = subprocess.run(command, capture_output=True, text=True)",
+      "options": {
+        "A": "Snippet A",
+        "B": "Snippet B",
+        "C": "Snippet C",
+        "D": "Snippet D"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "topic": "Memoization vs tabulation",
+      "question": "What will be the value of 'result' after executing the following code?",
+      "code_example": "def fibonacci(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 1:\n        return n\n    memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)\n    return memo[n]\n\nresult = fibonacci(10)",
+      "options": {
+        "A": "55",
+        "B": "89",
+        "C": "144",
+        "D": "233"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "topic": "Message queues (RabbitMQ, Kafka)",
+      "question": "In the context of message queues, what is the primary difference between RabbitMQ's and Kafka's message retention policies?",
+      "options": {
+        "A": "RabbitMQ stores messages until they're consumed, while Kafka retains messages for a configurable period regardless of consumption",
+        "B": "RabbitMQ retains all messages indefinitely, while Kafka deletes messages as soon as they're consumed",
+        "C": "RabbitMQ and Kafka both have identical retention policies based on consumer acknowledgments",
+        "D": "RabbitMQ deletes messages after a fixed time period, while Kafka retention is based solely on storage capacity"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "topic": "Classic problems (knapsack, longest common subsequence)",
+      "question": "What is the time complexity of the following implementation of the Longest Common Subsequence problem?",
+      "code_example": "def lcs(X, Y):\n    m, n = len(X), len(Y)\n    dp = [[0 for _ in range(n+1)] for _ in range(m+1)]\n    \n    for i in range(1, m+1):\n        for j in range(1, n+1):\n            if X[i-1] == Y[j-1]:\n                dp[i][j] = dp[i-1][j-1] + 1\n            else:\n                dp[i][j] = max(dp[i-1][j], dp[i][j-1])\n                \n    return dp[m][n]",
+      "options": {
+        "A": "O(m + n)",
+        "B": "O(m * n)",
+        "C": "O(2^(m+n))",
+        "D": "O(m * n * min(m, n))"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "topic": "API gateway patterns",
+      "question": "In a microservices architecture using an API gateway, which of the following is NOT a common pattern implemented by the gateway?",
+      "options": {
+        "A": "Authentication and Authorization",
+        "B": "Rate Limiting",
+        "C": "Business Logic Execution",
+        "D": "Request Routing"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "topic": "Tree traversals (in-order, pre-order, post-order)",
+      "question": "Given the following binary tree implementation and the pre-order traversal result [1, 2, 4, 5, 3], what would be the post-order traversal result?",
+      "code_example": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\n# Construct tree from pre-order [1, 2, 4, 5, 3]\nroot = TreeNode(1)\nroot.left = TreeNode(2)\nroot.right = TreeNode(3)\nroot.left.left = TreeNode(4)\nroot.left.right = TreeNode(5)\n\ndef post_order(node, result=None):\n    if result is None:\n        result = []\n    if node:\n        post_order(node.left, result)\n        post_order(node.right, result)\n        result.append(node.val)\n    return result\n\npost_order_result = post_order(root)",
+      "options": {
+        "A": "[4, 5, 2, 3, 1]",
+        "B": "[4, 2, 5, 3, 1]",
+        "C": "[4, 5, 3, 2, 1]",
+        "D": "[5, 4, 3, 2, 1]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "topic": "Secure coding practices",
+      "question": "Which of the following is the most secure way to store user passwords in a Python application?",
+      "code_example": "# Option A\nimport hashlib\ndef store_password(password):\n    return hashlib.sha256(password.encode()).hexdigest()\n\n# Option B\nimport hashlib\ndef store_password(password):\n    salt = os.urandom(32)\n    key = hashlib.pbkdf2_hmac('sha256', password.encode(), salt, 100000)\n    return salt + key\n\n# Option C\nimport bcrypt\ndef store_password(password):\n    return bcrypt.hashpw(password.encode(), bcrypt.gensalt())\n\n# Option D\nimport base64\ndef store_password(password):\n    return base64.b64encode(password.encode())",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "topic": "Vectorization with NumPy",
+      "question": "What will be the value of 'result' after executing the following NumPy operations?",
+      "code_example": "import numpy as np\n\nA = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])\nB = np.array([[9, 8, 7], [6, 5, 4], [3, 2, 1]])\n\nmask = A > 5\nA[mask] = B[mask]\nresult = np.sum(A)",
+      "options": {
+        "A": "45",
+        "B": "36",
+        "C": "30",
+        "D": "27"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "topic": "Space optimization techniques",
+      "question": "Given the following code that calculates Fibonacci numbers, which space optimization technique is being used?",
+      "code_example": "def fibonacci(n):\n    if n <= 1:\n        return n\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n\nresult = fibonacci(100)",
+      "options": {
+        "A": "Memoization",
+        "B": "Dynamic Programming with Tabulation",
+        "C": "Space-efficient Iteration",
+        "D": "Tail Recursion Optimization"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "topic": "Matplotlib/Seaborn for visualization",
+      "question": "What will the following code produce?",
+      "code_example": "import numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\nnp.random.seed(42)\ndata = np.random.normal(size=(100, 2))\ncorr = np.corrcoef(data, rowvar=False)[0, 1]\n\nsns.set_style('whitegrid')\nplt.figure(figsize=(10, 8))\ng = sns.jointplot(x=data[:, 0], y=data[:, 1], kind='hex')\nplt.suptitle(f'Correlation: {corr:.2f}', y=1.02)",
+      "options": {
+        "A": "A scatter plot with regression line",
+        "B": "A hexbin plot showing the joint distribution with correlation value in title",
+        "C": "A pair plot with histograms on the diagonal",
+        "D": "A heatmap showing the correlation matrix"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "topic": "GraphQL APIs",
+      "question": "When implementing a GraphQL API with Python's Graphene library, what is the purpose of the following code?",
+      "code_example": "import graphene\n\nclass User(graphene.ObjectType):\n    id = graphene.ID(required=True)\n    name = graphene.String()\n    email = graphene.String()\n    posts = graphene.List(lambda: Post)\n\nclass Post(graphene.ObjectType):\n    id = graphene.ID(required=True)\n    title = graphene.String()\n    content = graphene.String()\n    author = graphene.Field(User)",
+      "options": {
+        "A": "Creating database models for User and Post entities",
+        "B": "Defining GraphQL schema types with their fields and relationships",
+        "C": "Setting up REST API endpoints for User and Post resources",
+        "D": "Configuring authentication permissions for User and Post objects"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "topic": "Cloud services integration",
+      "question": "Which of the following AWS SDK for Python (boto3) code snippets correctly uploads a file to an S3 bucket with server-side encryption?",
+      "code_example": "# Option A\nimport boto3\ns3 = boto3.client('s3')\nwith open('file.txt', 'rb') as data:\n    s3.upload_fileobj(data, 'my-bucket', 'file.txt')\n\n# Option B\nimport boto3\ns3 = boto3.resource('s3')\nbucket = s3.Bucket('my-bucket')\nbucket.put_object(Key='file.txt', Body=open('file.txt', 'rb').read())\n\n# Option C\nimport boto3\ns3 = boto3.client('s3')\nwith open('file.txt', 'rb') as data:\n    s3.upload_fileobj(\n        data, \n        'my-bucket', \n        'file.txt',\n        ExtraArgs={'ServerSideEncryption': 'AES256'}\n    )\n\n# Option D\nimport boto3\ns3 = boto3.resource('s3')\ns3.meta.client.upload_file(\n    'file.txt', \n    'my-bucket', \n    'file.txt'\n)",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "topic": "Basic ML pipeline implementation",
+      "question": "What is the output of this scikit-learn pipeline code?",
+      "code_example": "from sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.decomposition import PCA\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.metrics import accuracy_score\n\niris = load_iris()\nX, y = iris.data, iris.target\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\npipeline = Pipeline([\n    ('scaler', StandardScaler()),\n    ('pca', PCA(n_components=2)),\n    ('classifier', RandomForestClassifier(random_state=42))\n])\n\npipeline.fit(X_train, y_train)\npredictions = pipeline.predict(X_test)\n\nfeature_importance = pipeline.named_steps['classifier'].feature_importances_\nprint(len(feature_importance))",
+      "options": {
+        "A": "4",
+        "B": "2",
+        "C": "3",
+        "D": "1"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
