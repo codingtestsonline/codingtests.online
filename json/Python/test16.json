@@ -1,0 +1,619 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "my_list = [1, 2, 3, 4, 5]\nmy_list.append(6)\nmy_list.insert(2, 10)\nprint(my_list)",
+      "options": {
+        "A": "[1, 2, 10, 3, 4, 5, 6]",
+        "B": "[1, 2, 3, 4, 5, 6, 10]",
+        "C": "[1, 2, 10, 3, 4, 5]",
+        "D": "[1, 10, 2, 3, 4, 5, 6]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following conditional expression?",
+      "code_example": "x = 15\nresult = 'Even' if x % 2 == 0 else 'Odd'\nprint(result)",
+      "options": {
+        "A": "Even",
+        "B": "Odd",
+        "C": "True",
+        "D": "False"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "In Python, what is the difference between parameters and arguments?",
+      "options": {
+        "A": "They are different terms for the same concept",
+        "B": "Parameters are used when defining a function, arguments are the values passed when calling a function",
+        "C": "Arguments are used when defining a function, parameters are the values passed when calling a function",
+        "D": "Parameters are keyword arguments, while arguments are positional values"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "a = 5\nb = 5.0\nc = True\nd = '5'\nprint(type(a), type(b), type(c), type(d))",
+      "options": {
+        "A": "<class 'integer'> <class 'float'> <class 'boolean'> <class 'string'>",
+        "B": "<class 'int'> <class 'float'> <class 'bool'> <class 'str'>",
+        "C": "<type 'int'> <type 'float'> <type 'bool'> <type 'str'>",
+        "D": "int float bool str"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which file mode would you use to open a file for both reading and writing, creating a new file if it doesn't exist?",
+      "options": {
+        "A": "'r+'",
+        "B": "'w+'",
+        "C": "'a+'",
+        "D": "'rb'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that reads a CSV file?",
+      "code_example": "import csv\n\ndata = [['Name', 'Age'], ['Alice', '30'], ['Bob', '25']]\n\nwith open('test.csv', 'w', newline='') as file:\n    writer = csv.writer(file)\n    writer.writerows(data)\n\nwith open('test.csv', 'r') as file:\n    reader = csv.reader(file)\n    for row in reader:\n        print(row)",
+      "options": {
+        "A": "['Name', 'Age']\n['Alice', '30']\n['Bob', '25']",
+        "B": "Name,Age\nAlice,30\nBob,25",
+        "C": "{'Name': 'Alice', 'Age': '30'}\n{'Name': 'Bob', 'Age': '25'}",
+        "D": "Name Age\nAlice 30\nBob 25"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Which of the following is a valid way to define a multi-line string in Python?",
+      "options": {
+        "A": "'''This is a\nmulti-line string'''",
+        "B": "\"This is a\nmulti-line string\"",
+        "C": "\\\"This is a multi-line string\\\"",
+        "D": "r\"This is a\nmulti-line string\""
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the correct way to handle multiple exceptions in Python?",
+      "code_example": "try:\n    num = int(input(\"Enter a number: \"))\n    result = 10 / num\nexcept ValueError:\n    print(\"Invalid input\")\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero\")\nelse:\n    print(f\"Result: {result}\")",
+      "options": {
+        "A": "This code will raise a SyntaxError because multiple except blocks are not allowed",
+        "B": "This code correctly handles ValueError and ZeroDivisionError separately",
+        "C": "This code should use 'except (ValueError, ZeroDivisionError):' instead of separate blocks",
+        "D": "The 'else' block will execute even if an exception occurs"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following selection sort implementation?",
+      "code_example": "def selection_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        min_idx = i\n        for j in range(i+1, n):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr\n\nprint(selection_sort([64, 25, 12, 22, 11]))",
+      "options": {
+        "A": "[11, 12, 22, 25, 64]",
+        "B": "[64, 25, 12, 22, 11]",
+        "C": "[11, 22, 12, 25, 64]",
+        "D": "[64, 25, 22, 12, 11]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to PEP 8, which of the following is the correct naming convention for a constant in Python?",
+      "options": {
+        "A": "MaxSize",
+        "B": "maxSize",
+        "C": "MAX_SIZE",
+        "D": "max_size"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following list comprehension?",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nsquared_even = [x**2 for x in numbers if x % 2 == 0]\nprint(squared_even)",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]",
+        "B": "[4, 16]",
+        "C": "[2, 4]",
+        "D": "[1, 9, 25]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following factorial calculation?",
+      "code_example": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1)\n\nprint(factorial(4))",
+      "options": {
+        "A": "24",
+        "B": "12",
+        "C": "16",
+        "D": "8"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that reads and writes to a file?",
+      "code_example": "with open('test_file.txt', 'w') as f:\n    f.write('Line 1\\nLine 2\\nLine 3')\n\nwith open('test_file.txt', 'r') as f:\n    print(f.readline().strip())\n    print(f.readline().strip())",
+      "options": {
+        "A": "Line 1\nLine 2\nLine 3",
+        "B": "Line 1\nLine 2",
+        "C": "Line 1 Line 2 Line 3",
+        "D": "Line 1Line 2"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following dictionary operations?",
+      "code_example": "student = {'name': 'John', 'age': 21, 'courses': ['Math', 'Science']}\nstudent['grade'] = 'A'\nprint(student.get('phone', 'Not Found'))\nprint(list(student.keys()))",
+      "options": {
+        "A": "None\n['name', 'age', 'courses', 'grade']",
+        "B": "Not Found\n['name', 'age', 'courses', 'grade']",
+        "C": "Not Found\n{'name', 'age', 'courses', 'grade'}",
+        "D": "KeyError: 'phone'\n['name', 'age', 'courses', 'grade']"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following function with default parameters?",
+      "code_example": "def greet(name, message='Hello'):\n    return f\"{message}, {name}!\"\n\nprint(greet('Alice'))\nprint(greet('Bob', 'Hi'))",
+      "options": {
+        "A": "Hello, Alice!\nHi, Bob!",
+        "B": "Hello, Alice!\nHello, Bob!",
+        "C": "Alice, Hello!\nBob, Hi!",
+        "D": "name='Alice', message='Hello'\nname='Bob', message='Hi'"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to write a docstring with function annotations in Python?",
+      "code_example": "def add_numbers(a: int, b: int) -> int:\n    \"\"\"Add two numbers and return the result.\n    \n    Args:\n        a: First number\n        b: Second number\n        \n    Returns:\n        Sum of a and b\n    \"\"\"\n    return a + b",
+      "options": {
+        "A": "Function annotations should use # comments, not type hints",
+        "B": "Docstrings should be surrounded by # comments, not triple quotes",
+        "C": "The docstring format is correct, but annotations should use the @param decorator",
+        "D": "This is a correctly formatted docstring with proper function annotations"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which of the following regex patterns is most efficient for matching a valid email address?",
+      "code_example": "import re\nimport time\n\nemail = 'user@example.com'\n\n# Pattern A\nt0 = time.time()\nre.match(r'^([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+)$', email)\ntime_a = time.time() - t0\n\n# Pattern B\nt0 = time.time()\nre.match(r'^[\\w.+-]+@[\\w-]+\\.[\\w.-]+$', email)\ntime_b = time.time() - t0",
+      "options": {
+        "A": "Pattern A, because it's more explicit and therefore optimized by Python's regex engine",
+        "B": "Pattern B, because character classes like \\w are faster than explicit character ranges",
+        "C": "Both patterns are identical in performance; regex optimization depends on the input string length",
+        "D": "Neither pattern is efficient; email validation should be done without regex"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following statements about Python virtual environments is correct?",
+      "options": {
+        "A": "A virtual environment allows you to have different versions of Python installed on the same machine",
+        "B": "pip cannot be used inside a virtual environment; you must use conda instead",
+        "C": "Virtual environments are created using the 'venv' module in Python 3 and activated differently depending on the operating system",
+        "D": "When you activate a virtual environment, it changes your global Python installation"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that demonstrates closures?",
+      "code_example": "def outer_function(x):\n    y = 4\n    \n    def inner_function(z):\n        return x + y + z\n    \n    return inner_function\n\nclosure = outer_function(10)\nprint(closure(5))",
+      "options": {
+        "A": "19",
+        "B": "15",
+        "C": "14",
+        "D": "NameError: name 'y' is not defined"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following lambda function?",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nfiltered_doubled = list(map(lambda x: x * 2, filter(lambda x: x % 2 == 0, numbers)))\nprint(filtered_doubled)",
+      "options": {
+        "A": "[2, 4, 6, 8, 10]",
+        "B": "[4, 8]",
+        "C": "[2, 6, 10]",
+        "D": "[1, 4, 9, 16, 25]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following regex code using capturing groups?",
+      "code_example": "import re\n\ntext = \"Contact us at info@example.com or support@test.org\"\npattern = r'([a-z]+)@([a-z]+)\\.([a-z]+)'\n\nmatches = re.findall(pattern, text)\nprint(matches)",
+      "options": {
+        "A": "['info@example.com', 'support@test.org']",
+        "B": "[('info', 'example', 'com'), ('support', 'test', 'org')]",
+        "C": "['info', 'support']",
+        "D": "['example.com', 'test.org']"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using *args and **kwargs?",
+      "code_example": "def example_function(required, *args, **kwargs):\n    print(f\"Required: {required}\")\n    if args:\n        print(f\"Args: {args}\")\n    if kwargs:\n        print(f\"Kwargs: {kwargs}\")\n\nexample_function('Hello', 1, 2, 3, key1='value1', key2='value2')",
+      "options": {
+        "A": "Required: Hello\nArgs: 1 2 3\nKwargs: key1=value1 key2=value2",
+        "B": "Required: Hello\nArgs: (1, 2, 3)\nKwargs: {'key1': 'value1', 'key2': 'value2'}",
+        "C": "Required: Hello\nArgs: [1, 2, 3]\nKwargs: {'key1': 'value1', 'key2': 'value2'}",
+        "D": "TypeError: example_function() got multiple values for argument 'required'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "Which of the following is the correct way to establish a connection to a SQLite database in Python?",
+      "code_example": "import sqlite3\n\nconn = sqlite3.connect('example.db')\ncursor = conn.cursor()\n\ncursor.execute('''CREATE TABLE IF NOT EXISTS users\n              (id INTEGER PRIMARY KEY, name TEXT, email TEXT)''')\n\ncursor.execute(\"INSERT INTO users (name, email) VALUES (?, ?)\", ('Alice', 'alice@example.com'))\nconn.commit()\nconn.close()",
+      "options": {
+        "A": "The code is incorrect because you should use the pymysql module for SQLite connections",
+        "B": "The code is incorrect because cursor.commit() should be used instead of conn.commit()",
+        "C": "The code is incorrect because SQLite requires explicit transaction management with BEGIN and COMMIT statements",
+        "D": "The code correctly establishes and uses a SQLite database connection"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following merge sort implementation?",
+      "code_example": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    \n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    \n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result\n\nprint(merge_sort([38, 27, 43, 3, 9, 82, 10]))",
+      "options": {
+        "A": "[3, 9, 10, 27, 38, 43, 82]",
+        "B": "[82, 43, 38, 27, 10, 9, 3]",
+        "C": "[38, 27, 43, 3, 9, 82, 10]",
+        "D": "[10, 82, 9, 3, 43, 27, 38]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using functools.lru_cache?",
+      "code_example": "import functools\nimport time\n\n@functools.lru_cache(maxsize=None)\ndef fibonacci(n):\n    if n < 2:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\nstart = time.time()\nprint(fibonacci(30))\nfirst_time = time.time() - start\n\nstart = time.time()\nprint(fibonacci(30))\nsecond_time = time.time() - start\n\nprint(f\"Second call significantly faster? {second_time < first_time/10}\")",
+      "options": {
+        "A": "832040\n832040\nSecond call significantly faster? False",
+        "B": "832040\n832040\nSecond call significantly faster? True",
+        "C": "TypeError: fibonacci() takes 0 positional arguments but 1 was given",
+        "D": "RecursionError: maximum recursion depth exceeded"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following quicksort implementation?",
+      "code_example": "def quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    \n    return quicksort(left) + middle + quicksort(right)\n\nprint(quicksort([3, 6, 8, 10, 1, 2, 1, 5]))",
+      "options": {
+        "A": "[1, 1, 2, 3, 5, 6, 8, 10]",
+        "B": "[10, 8, 6, 5, 3, 2, 1, 1]",
+        "C": "[1, 2, 1, 3, 5, 6, 8, 10]",
+        "D": "[1, 1, 2, 3, 6, 5, 8, 10]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following pattern matching code using the re module?",
+      "code_example": "import re\n\ntext = \"Python version 3.9.5 was released on May 3, 2021\"\n\npattern = r'Python version (\\d+)\\.(\\d+)\\.(\\d+)'\nmatch = re.search(pattern, text)\n\nif match:\n    print(f\"Major: {match.group(1)}\")\n    print(f\"Minor: {match.group(2)}\")\n    print(f\"Patch: {match.group(3)}\")\n    print(f\"Full version: {match.group(0)}\")",
+      "options": {
+        "A": "Major: 3\nMinor: 9\nPatch: 5\nFull version: Python version 3.9.5",
+        "B": "Major: Python\nMinor: version\nPatch: 3.9.5\nFull version: Python version 3.9.5",
+        "C": "Major: 3.9.5\nMinor: None\nPatch: None\nFull version: Python version 3.9.5",
+        "D": "IndexError: no such group"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "Which of the following statements about Python imports is correct?",
+      "options": {
+        "A": "Absolute imports always start with the name of a top-level module; relative imports use dots",
+        "B": "Relative imports are always preferred over absolute imports according to PEP 8",
+        "C": "Absolute imports cannot be used within packages, only relative imports are valid",
+        "D": "The 'import' statement can only be used at the top of a file, never inside functions"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code with nested data structures?",
+      "code_example": "students = [\n    {'name': 'Alice', 'grades': [85, 90, 78]},\n    {'name': 'Bob', 'grades': [92, 88, 95]},\n    {'name': 'Charlie', 'grades': [72, 65, 80]}\n]\n\nhigh_performers = []\nfor student in students:\n    avg = sum(student['grades']) / len(student['grades'])\n    if avg >= 85:\n        high_performers.append(student['name'])\n\nprint(high_performers)",
+      "options": {
+        "A": "['Alice', 'Bob', 'Charlie']",
+        "B": "['Alice', 'Bob']",
+        "C": "['Bob']",
+        "D": "[{'name': 'Alice', 'avg': 84.33}, {'name': 'Bob', 'avg': 91.67}]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using property decorators?",
+      "code_example": "class Temperature:\n    def __init__(self, celsius=0):\n        self._celsius = celsius\n        \n    @property\n    def celsius(self):\n        return self._celsius\n    \n    @celsius.setter\n    def celsius(self, value):\n        if value < -273.15:\n            raise ValueError(\"Temperature below absolute zero is not possible.\")\n        self._celsius = value\n        \n    @property\n    def fahrenheit(self):\n        return self._celsius * 9/5 + 32\n    \n    @fahrenheit.setter\n    def fahrenheit(self, value):\n        self.celsius = (value - 32) * 5/9\n\nt = Temperature(25)\nprint(f\"Celsius: {t.celsius}\")\nprint(f\"Fahrenheit: {t.fahrenheit}\")\nt.fahrenheit = 68\nprint(f\"New Celsius: {t.celsius}\")",
+      "options": {
+        "A": "Celsius: 25\nFahrenheit: 77.0\nNew Celsius: 20.0",
+        "B": "Celsius: 25\nFahrenheit: 77.0\nAttributeError: can't set attribute",
+        "C": "Celsius: 25\nFahrenheit: 77.0\nNew Celsius: 68",
+        "D": "Celsius: 25\nFahrenheit: 57.0\nNew Celsius: 20.0"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "Which of the following is a valid route definition in Flask?",
+      "code_example": "from flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/user/<username>')\ndef show_user_profile(username):\n    return f'User {username}'\n\n@app.route('/post/<int:post_id>')\ndef show_post(post_id):\n    return f'Post {post_id}'\n\n@app.route('/path/<path:subpath>')\ndef show_subpath(subpath):\n    return f'Subpath {subpath}'",
+      "options": {
+        "A": "The code is incorrect because Flask routes cannot have variable parts",
+        "B": "The code is incorrect because route parameters should be enclosed in {} instead of <>",
+        "C": "The code is correct and demonstrates three different types of route parameters",
+        "D": "The code is incorrect because Flask routes cannot specify types like 'int:' or 'path:'"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the difference between a generator expression and a list comprehension in the following code?",
+      "code_example": "import sys\n\nlist_comp = [x for x in range(10000)]\ngen_expr = (x for x in range(10000))\n\nprint(f\"List comprehension size: {sys.getsizeof(list_comp)} bytes\")\nprint(f\"Generator expression size: {sys.getsizeof(gen_expr)} bytes\")\nprint(f\"Is generator expression evaluated? {sum(gen_expr) == 49995000}\")\nprint(f\"Can we iterate through generator again? {sum(gen_expr) == 49995000}\")",
+      "options": {
+        "A": "List comprehension size: [large number] bytes\nGenerator expression size: [small number] bytes\nIs generator expression evaluated? True\nCan we iterate through generator again? True",
+        "B": "List comprehension size: [large number] bytes\nGenerator expression size: [small number] bytes\nIs generator expression evaluated? True\nCan we iterate through generator again? False",
+        "C": "The code will raise a TypeError because you cannot use sys.getsizeof() on generators",
+        "D": "The code will raise a MemoryError due to the large range used in the list comprehension"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Consider the following implementation of a Trie for prefix searching. What will be returned when calling `get_words_with_prefix('ca')` on this Trie after inserting the words 'car', 'cat', 'dog', and 'care'?",
+      "code_example": "class TrieNode:\n    def __init__(self):\n        self.children = {}\n        self.is_end_of_word = False\n\nclass Trie:\n    def __init__(self):\n        self.root = TrieNode()\n    \n    def insert(self, word):\n        node = self.root\n        for char in word:\n            if char not in node.children:\n                node.children[char] = TrieNode()\n            node = node.children[char]\n        node.is_end_of_word = True\n    \n    def get_words_with_prefix(self, prefix):\n        node = self.root\n        for char in prefix:\n            if char not in node.children:\n                return []\n            node = node.children[char]\n        \n        result = []\n        self._collect_words(node, prefix, result)\n        return result\n    \n    def _collect_words(self, node, prefix, result):\n        if node.is_end_of_word:\n            result.append(prefix)\n        \n        for char, child in node.children.items():\n            self._collect_words(child, prefix + char, result)\n\n# Usage\ntrie = Trie()\ntrie.insert('car')\ntrie.insert('cat')\ntrie.insert('dog')\ntrie.insert('care')\nprint(trie.get_words_with_prefix('ca'))",
+      "options": {
+        "A": "['car', 'cat', 'care']",
+        "B": "['car', 'cat']",
+        "C": "['ca', 'car', 'cat', 'care']",
+        "D": "['car']"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "When implementing a FastAPI application with asynchronous endpoints, which of the following statements is FALSE?",
+      "code_example": "from fastapi import FastAPI, Depends, HTTPException\nimport asyncio\n\napp = FastAPI()\n\nasync def some_dependency():\n    await asyncio.sleep(1)\n    return {\"message\": \"Dependency resolved\"}\n\n@app.get(\"/async-endpoint\")\nasync def async_endpoint(dep: dict = Depends(some_dependency)):\n    result = await process_data()\n    return {\"result\": result, **dep}\n\nasync def process_data():\n    await asyncio.sleep(2)\n    return \"Data processed\"\n\n@app.get(\"/sync-endpoint\")\ndef sync_endpoint(dep: dict = Depends(some_dependency)):\n    result = process_sync_data()\n    return {\"result\": result, **dep}\n\ndef process_sync_data():\n    import time\n    time.sleep(2)\n    return \"Data processed synchronously\"",
+      "options": {
+        "A": "FastAPI can handle both synchronous and asynchronous endpoint functions",
+        "B": "Using a synchronous function like `process_sync_data()` inside an asynchronous endpoint will block the event loop",
+        "C": "Synchronous dependencies used with asynchronous endpoints will always cause errors",
+        "D": "Using `await` with a synchronous function will result in a runtime error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "In the context of Infrastructure as Code (IaC) using Python, which of the following approaches would be considered a best practice?",
+      "options": {
+        "A": "Hard-coding all configuration values directly into Python scripts",
+        "B": "Using environment variables for all configuration, even for sensitive values like passwords",
+        "C": "Mixing declarative and imperative approaches in the same deployment script",
+        "D": "Using Python libraries like Pulumi to create reproducible infrastructure definitions with proper state management"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses a class decorator to extend functionality?",
+      "code_example": "def add_reverse_method(cls):\n    def reverse(self):\n        return self.data[::-1]\n    \n    cls.reverse = reverse\n    return cls\n\n@add_reverse_method\nclass DataContainer:\n    def __init__(self, data):\n        self.data = data\n    \n    def get_data(self):\n        return self.data\n\ncontainer = DataContainer([1, 2, 3, 4, 5])\nprint(container.get_data())\nprint(container.reverse())",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]\n[5, 4, 3, 2, 1]",
+        "B": "[1, 2, 3, 4, 5]\nAttributeError: 'DataContainer' object has no attribute 'reverse'",
+        "C": "[1, 2, 3, 4, 5]\nTypeError: 'list' object is not callable",
+        "D": "TypeError: 'function' object is not subscriptable"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "Given the following WebSocket implementation using the `websockets` library, what would be the expected behavior when a client connects?",
+      "code_example": "import asyncio\nimport websockets\n\nconnected_clients = set()\n\nasync def register(websocket):\n    connected_clients.add(websocket)\n    try:\n        await websocket.wait_closed()\n    finally:\n        connected_clients.remove(websocket)\n\nasync def message_handler(websocket, path):\n    await register(websocket)\n    try:\n        async for message in websocket:\n            for client in connected_clients:\n                if client != websocket:\n                    await client.send(f\"User said: {message}\")\n    except websockets.exceptions.ConnectionClosed:\n        pass\n\nstart_server = websockets.serve(message_handler, \"localhost\", 8765)\n\nasyncio.get_event_loop().run_until_complete(start_server)\nasyncio.get_event_loop().run_forever()",
+      "options": {
+        "A": "The server will forward messages from a client to all connected clients including the sender",
+        "B": "The server will forward messages from a client to all other connected clients except the sender",
+        "C": "The server will echo back messages only to the sender",
+        "D": "The server will not handle messages at all due to a logic error in the code"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Consider the following implementations of calculating the nth Fibonacci number using memoization and tabulation. What is the space complexity difference between the two approaches?",
+      "code_example": "# Memoization (Top-down)\ndef fib_memo(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 1:\n        return n\n    \n    memo[n] = fib_memo(n-1, memo) + fib_memo(n-2, memo)\n    return memo[n]\n\n# Tabulation (Bottom-up)\ndef fib_tab(n):\n    if n <= 1:\n        return n\n    \n    dp = [0] * (n + 1)\n    dp[1] = 1\n    \n    for i in range(2, n + 1):\n        dp[i] = dp[i-1] + dp[i-2]\n    \n    return dp[n]",
+      "options": {
+        "A": "Memoization has O(n) space complexity, while tabulation has O(1) space complexity",
+        "B": "Both approaches have O(n) space complexity",
+        "C": "Memoization has O(2^n) space complexity, while tabulation has O(n) space complexity",
+        "D": "Memoization has O(n) space complexity, but can be optimized to O(1) space complexity unlike tabulation"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "In the following pytest code, what is the purpose of the `conftest.py` file and the `@pytest.fixture(scope=\"module\")` decorator?",
+      "code_example": "# conftest.py\nimport pytest\nimport psycopg2\n\n@pytest.fixture(scope=\"module\")\ndef db_connection():\n    connection = psycopg2.connect(\n        dbname=\"testdb\",\n        user=\"testuser\",\n        password=\"testpass\",\n        host=\"localhost\"\n    )\n    yield connection\n    connection.close()\n\n# test_database.py\ndef test_query_execution(db_connection):\n    cursor = db_connection.cursor()\n    cursor.execute(\"SELECT 1\")\n    result = cursor.fetchone()\n    cursor.close()\n    assert result[0] == 1\n\ndef test_table_existence(db_connection):\n    cursor = db_connection.cursor()\n    cursor.execute(\"SELECT EXISTS(SELECT 1 FROM information_schema.tables WHERE table_name='users')\")\n    result = cursor.fetchone()\n    cursor.close()\n    assert result[0] is True",
+      "options": {
+        "A": "The fixture is shared across all test files but created once for each test function",
+        "B": "The fixture is created once per module and shared among all test functions in that module",
+        "C": "The fixture is global but recreated for each test file",
+        "D": "The fixture is only available in the test file where it's defined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "Given the following state machine implementation, what sequence of inputs would transition the machine from state 'S1' to state 'S4'?",
+      "code_example": "class StateMachine:\n    def __init__(self):\n        self.state = 'S1'\n        self.transitions = {\n            'S1': {'a': 'S2', 'b': 'S1'},\n            'S2': {'a': 'S2', 'b': 'S3'},\n            'S3': {'a': 'S4', 'b': 'S1'},\n            'S4': {'a': 'S4', 'b': 'S3'}\n        }\n    \n    def process_input(self, input_sequence):\n        for inp in input_sequence:\n            if inp in self.transitions[self.state]:\n                self.state = self.transitions[self.state][inp]\n            else:\n                raise ValueError(f\"Invalid input {inp} for state {self.state}\")\n        return self.state\n\nmachine = StateMachine()\nprint(machine.state)  # Initial state\n# What input sequence will result in state 'S4'?",
+      "options": {
+        "A": "['a', 'a', 'a']",
+        "B": "['a', 'b', 'a']",
+        "C": "['b', 'a', 'b', 'a']",
+        "D": "['a', 'a', 'b', 'a']"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "In a microservices architecture using Python, which of the following is NOT a common method for service discovery?",
+      "options": {
+        "A": "Using a dedicated service registry like Consul or etcd",
+        "B": "Client-side discovery with a load balancer",
+        "C": "DNS-based service discovery",
+        "D": "Hard-coding service IP addresses in environment variables for each service"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "In the following FastAPI code implementing API rate limiting, what would happen if a client makes 6 requests within 1 second?",
+      "code_example": "from fastapi import FastAPI, Request, HTTPException\nfrom fastapi.middleware.trustedhost import TrustedHostMiddleware\nimport time\nfrom typing import Dict, List, Tuple\n\napp = FastAPI()\napp.add_middleware(TrustedHostMiddleware, allowed_hosts=[\"example.com\", \"*.example.com\"])\n\n# Simple rate limiter\nclass RateLimiter:\n    def __init__(self, requests_per_second: int = 5):\n        self.requests_per_second = requests_per_second\n        self.clients: Dict[str, List[float]] = {}\n    \n    async def check_rate_limit(self, client_ip: str) -> bool:\n        current_time = time.time()\n        \n        if client_ip not in self.clients:\n            self.clients[client_ip] = []\n        \n        # Remove timestamps older than 1 second\n        self.clients[client_ip] = [t for t in self.clients[client_ip] if current_time - t < 1.0]\n        \n        # Check if rate limit is exceeded\n        if len(self.clients[client_ip]) >= self.requests_per_second:\n            return False\n        \n        # Add current request timestamp\n        self.clients[client_ip].append(current_time)\n        return True\n\nrate_limiter = RateLimiter()\n\n@app.middleware(\"http\")\nasync def rate_limiting_middleware(request: Request, call_next):\n    client_ip = request.client.host\n    \n    # Check rate limit\n    if not await rate_limiter.check_rate_limit(client_ip):\n        raise HTTPException(status_code=429, detail=\"Rate limit exceeded\")\n    \n    response = await call_next(request)\n    return response\n\n@app.get(\"/api/resource\")\nasync def get_resource():\n    return {\"message\": \"Resource accessed successfully\"}\n",
+      "options": {
+        "A": "All 6 requests would be allowed because the rate limiter is not properly implemented",
+        "B": "The first 5 requests would be allowed, and the 6th request would receive a 429 status code",
+        "C": "Only the first request would be allowed due to a bug in the rate limiter implementation",
+        "D": "The first 5 requests would be allowed, but the 6th request would be queued and processed after a 1-second delay"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "When using the Scrapy framework for web crawling, what is the output of the following spider definition?",
+      "code_example": "import scrapy\nfrom scrapy.linkextractors import LinkExtractor\nfrom scrapy.spiders import CrawlSpider, Rule\n\nclass ExampleSpider(CrawlSpider):\n    name = 'example'\n    allowed_domains = ['example.com']\n    start_urls = ['https://example.com/category/page1']\n    \n    rules = (\n        Rule(LinkExtractor(allow=r'category/page\\d+'), callback='parse_item', follow=True),\n        Rule(LinkExtractor(allow=r'item/\\d+'), callback='parse_item'),\n    )\n    \n    def parse_item(self, response):\n        item = {}\n        item['url'] = response.url\n        title = response.css('h1::text').get()\n        if title:\n            item['title'] = title.strip()\n        return item\n\n# What would this spider do when started?",
+      "options": {
+        "A": "It would only crawl the first page at 'https://example.com/category/page1' without following any links",
+        "B": "It would crawl all pages matching the 'category/page\\d+' pattern but not extract any data",
+        "C": "It would crawl pages matching both 'category/page\\d+' and 'item/\\d+' patterns, extracting URL and title from each page",
+        "D": "It would throw an error because the follow=True parameter is used incorrectly"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Consider the following implementation of a binary tree insertion and a method to check if it's balanced. What will be the output?",
+      "code_example": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef insert_into_bst(root, val):\n    if not root:\n        return TreeNode(val)\n    \n    if val < root.val:\n        root.left = insert_into_bst(root.left, val)\n    else:\n        root.right = insert_into_bst(root.right, val)\n    \n    return root\n\ndef is_balanced(root):\n    def height(node):\n        if not node:\n            return 0\n        \n        left_height = height(node.left)\n        if left_height == -1:\n            return -1\n        \n        right_height = height(node.right)\n        if right_height == -1:\n            return -1\n        \n        if abs(left_height - right_height) > 1:\n            return -1\n        \n        return max(left_height, right_height) + 1\n    \n    return height(root) != -1\n\n# Create a tree\nroot = None\nvalues = [10, 5, 15, 3, 7, 13, 18, 1, 4, 6, 8]\nfor val in values:\n    root = insert_into_bst(root, val)\n\n# Now let's add more values to the left side to unbalance it\nfor val in [0, -1, -2]:\n    root = insert_into_bst(root, val)\n\nprint(f\"Is the tree balanced? {is_balanced(root)}\")",
+      "options": {
+        "A": "Is the tree balanced? True",
+        "B": "Is the tree balanced? False",
+        "C": "RecursionError: maximum recursion depth exceeded",
+        "D": "TypeError: '<' not supported between instances of 'NoneType' and 'int'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "Given the following Python code using multiple inheritance, what will be the method resolution order (MRO) for class D and the output of the print statement?",
+      "code_example": "class A:\n    def process(self):\n        print(\"A's process\")\n        return 1\n\nclass B(A):\n    def process(self):\n        result = super().process()\n        print(\"B's process\")\n        return result + 1\n\nclass C(A):\n    def process(self):\n        result = super().process()\n        print(\"C's process\")\n        return result * 2\n\nclass D(B, C):\n    def process(self):\n        result = super().process()\n        print(\"D's process\")\n        return result + 3\n\nd = D()\nprint(d.process())\nprint(D.__mro__)",
+      "options": {
+        "A": "A's process\nB's process\nC's process\nD's process\n6\n(<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)",
+        "B": "A's process\nC's process\nB's process\nD's process\n5\n(<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)",
+        "C": "A's process\nB's process\nD's process\n5\n(<class '__main__.D'>, <class '__main__.B'>, <class '__main__.A'>, <class 'object'>)",
+        "D": "A's process\nC's process\nB's process\nD's process\n6\n(<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "In the following code using NumPy for numerical computing, what will be the output?",
+      "code_example": "import numpy as np\n\n# Create a 3x3 array\narr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])\n\n# Apply a boolean mask\nmask = arr > 4\n\n# Apply operations\nresult1 = np.sum(arr[mask])\n\n# Broadcasting\narr2 = np.array([1, 0, 1])\nresult2 = arr * arr2\n\n# Reshaping and stacking\narr3 = arr.reshape(9, 1)\narr4 = np.hstack((arr3, arr3**2))\n\n# Dot product\narr5 = np.array([1, 2, 3])\narr6 = np.array([4, 5, 6])\nresult3 = np.dot(arr5, arr6)\n\nprint(f\"Result 1: {result1}\")\nprint(f\"Result 2:\\n{result2}\")\nprint(f\"Result 3: {result3}\")",
+      "options": {
+        "A": "Result 1: 35\nResult 2:\n[[1 0 3]\n [4 0 6]\n [7 0 9]]\nResult 3: 32",
+        "B": "Result 1: 35\nResult 2:\n[[1 0 3]\n [4 0 6]\n [7 0 9]]\nResult 3: 1",
+        "C": "Result 1: 5\nResult 2:\n[[1 2 3]\n [4 5 6]\n [7 8 9]]\nResult 3: 32",
+        "D": "Result 1: 35\nResult 2:\n[[1 0 3]\n [4 0 6]\n [7 0 9]]\nResult 3: [4 10 18]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What is the purpose of the following Python code using abstract base classes, and what would happen if you tried to instantiate Shape directly?",
+      "code_example": "from abc import ABC, abstractmethod\nfrom math import pi\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self):\n        pass\n    \n    @abstractmethod\n    def perimeter(self):\n        pass\n    \n    def describe(self):\n        return f\"This shape has area {self.area()} and perimeter {self.perimeter()}\"\n\nclass Circle(Shape):\n    def __init__(self, radius):\n        self.radius = radius\n    \n    def area(self):\n        return pi * self.radius**2\n    \n    def perimeter(self):\n        return 2 * pi * self.radius\n\nclass Rectangle(Shape):\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    def area(self):\n        return self.width * self.height\n    \n    def perimeter(self):\n        return 2 * (self.width + self.height)\n\n# What happens with this code?\n# shape = Shape()\n# print(shape.describe())",
+      "options": {
+        "A": "The code would run without errors and print the default area and perimeter values",
+        "B": "A TypeError would be raised: \"Can't instantiate abstract class Shape with abstract methods area, perimeter\"",
+        "C": "An AttributeError would be raised because abstract methods cannot be called",
+        "D": "A NotImplementedError would be raised when calling shape.describe()"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT one of the OWASP Top 10 vulnerabilities that Python developers should be concerned about when developing web applications?",
+      "options": {
+        "A": "SQL Injection",
+        "B": "Cross-Site Scripting (XSS)",
+        "C": "Memory Overflow Vulnerabilities",
+        "D": "Insecure Deserialization"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
