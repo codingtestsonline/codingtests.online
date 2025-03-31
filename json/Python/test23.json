@@ -1,0 +1,628 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "['apple', 'banana', 'cherry']",
+        "B": "['apple', 'banana', 'cherry', '']",
+        "C": "['', 'apple', 'banana', 'cherry']",
+        "D": "['', 'apple', 'banana', 'cherry', '']"
+      },
+      "correct_answer": "A",
+      "code_example": "fruits = 'apple,banana,cherry'\nprint(fruits.split(','))"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the correct way to open a file named 'data.txt' for reading in Python?",
+      "options": {
+        "A": "file = open('data.txt', 'read')",
+        "B": "file = open('data.txt', 'r')",
+        "C": "file = read('data.txt')",
+        "D": "file = open.read('data.txt')"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "Which line of code correctly reverses the string 'Python'?",
+      "options": {
+        "A": "'Python'.reverse()",
+        "B": "reverse('Python')",
+        "C": "'Python'[::-1]",
+        "D": "'Python'.reversed()"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "25",
+        "B": "15",
+        "C": "20",
+        "D": "5"
+      },
+      "correct_answer": "B",
+      "code_example": "numbers = [10, 20, 30, 5, 15, 25]\ndef calculate(nums):\n    return min(nums) + max(nums) - len(nums)\nprint(calculate(numbers))"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the correct way to create a custom exception in Python?",
+      "options": {
+        "A": "class MyError(Exception): pass",
+        "B": "class MyError extends Exception: pass",
+        "C": "def MyError(Exception): pass",
+        "D": "exception MyError(): pass"
+      },
+      "correct_answer": "A",
+      "code_example": null
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "In the function definition 'def greet(name, greeting=\"Hello\"):', what is 'greeting=\"Hello\"'?",
+      "options": {
+        "A": "A required argument",
+        "B": "A parameter with a default value",
+        "C": "A keyword-only argument",
+        "D": "An error in syntax"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Try -> Finally",
+        "B": "Try -> Except -> Finally",
+        "C": "Try -> Else -> Finally",
+        "D": "Try -> Finally -> Else"
+      },
+      "correct_answer": "C",
+      "code_example": "try:\n    x = 10 / 5\nexcept ZeroDivisionError:\n    print(\"Except\")\nelse:\n    print(\"Else\")\nfinally:\n    print(\"Finally\")"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the final state of the list after the following selection sort implementation is executed?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[5, 4, 3, 2, 1]",
+        "C": "[1, 3, 2, 5, 4]",
+        "D": "[4, 5, 2, 3, 1]"
+      },
+      "correct_answer": "A",
+      "code_example": "def selection_sort(arr):\n    for i in range(len(arr)):\n        min_idx = i\n        for j in range(i+1, len(arr)):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr\n\nnumbers = [4, 2, 5, 1, 3]\nselection_sort(numbers)"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What exception would be raised when trying to access a dictionary key that doesn't exist?",
+      "options": {
+        "A": "ValueError",
+        "B": "KeyError",
+        "C": "IndexError",
+        "D": "TypeError"
+      },
+      "correct_answer": "B",
+      "code_example": "my_dict = {'name': 'John', 'age': 30}\nprint(my_dict['address'])"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What does the 'a' mode do when opening a file in Python?",
+      "options": {
+        "A": "Creates a new file for reading",
+        "B": "Opens a file for reading and writing",
+        "C": "Opens a file for appending content to the end",
+        "D": "Opens a file in binary mode"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "['Name', 'Age', 'City']",
+        "B": "['John', '30', 'New York']",
+        "C": "{'Name': 'John', 'Age': '30', 'City': 'New York'}",
+        "D": "Error: unable to parse CSV"
+      },
+      "correct_answer": "A",
+      "code_example": "import csv\n\nwith open('data.csv', 'w', newline='') as file:\n    writer = csv.writer(file)\n    writer.writerow(['Name', 'Age', 'City'])\n    writer.writerow(['John', '30', 'New York'])\n\nwith open('data.csv', 'r') as file:\n    reader = csv.reader(file)\n    first_row = next(reader)\n    print(first_row)"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will the function return if no number is provided?",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "10",
+        "D": "Error: missing required argument"
+      },
+      "correct_answer": "C",
+      "code_example": "def multiply_by_five(number=2):\n    return number * 5\n\nresult = multiply_by_five()"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What is wrong with the following function definition?",
+      "options": {
+        "A": "The function name should not have underscores",
+        "B": "The print statement is improperly indented",
+        "C": "The function is missing a return statement",
+        "D": "Nothing is wrong with the function"
+      },
+      "correct_answer": "D",
+      "code_example": "def say_hello(name):\n    print(f\"Hello, {name}!\")\n\nsay_hello(\"Alice\")"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that finds prime numbers?",
+      "options": {
+        "A": "[2, 3, 5, 7]",
+        "B": "[2, 3, 5, 7, 11, 13, 17, 19]",
+        "C": "[2, 3, 5, 7, 11, 13]",
+        "D": "[3, 5, 7, 11, 13, 17, 19]"
+      },
+      "correct_answer": "C",
+      "code_example": "def is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\nprimes = []\nfor num in range(2, 15):\n    if is_prime(num):\n        primes.append(num)\nprint(primes)"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code with an else clause in a loop?",
+      "options": {
+        "A": "Loop completed successfully",
+        "B": "Item found: 5",
+        "C": "Loop exited with break",
+        "D": "No output"
+      },
+      "correct_answer": "A",
+      "code_example": "numbers = [1, 2, 3, 4]\nfor num in numbers:\n    if num == 5:\n        print(\"Item found: 5\")\n        break\nelse:\n    print(\"Loop completed successfully\")"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be returned by the following linear search implementation?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "-1",
+        "D": "0"
+      },
+      "correct_answer": "C",
+      "code_example": "def linear_search(arr, target):\n    for i in range(len(arr)):\n        if arr[i] == target:\n            return i\n    return -1\n\nnumbers = [10, 20, 30, 40, 50]\nresult = linear_search(numbers, 60)"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the Counter class?",
+      "options": {
+        "A": "{'apple': 3, 'banana': 2, 'cherry': 1}",
+        "B": "{'apple': 1, 'banana': 1, 'cherry': 1}",
+        "C": "[('apple', 3), ('banana', 2), ('cherry', 1)]",
+        "D": "3"
+      },
+      "correct_answer": "A",
+      "code_example": "from collections import Counter\n\nfruits = ['apple', 'banana', 'apple', 'cherry', 'apple', 'banana']\ncounter = Counter(fruits)\nprint(counter)"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following is a correct way to establish a database connection with SQLite in Python?",
+      "options": {
+        "A": "db = database.connect('example.db')",
+        "B": "import sqlite3; conn = sqlite3.connect('example.db')",
+        "C": "from sql import db; conn = db.create('example.db')",
+        "D": "import db; conn = db.sqlite.open('example.db')"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be printed by the following code that generates an infinite sequence?",
+      "options": {
+        "A": "[0, 1, 1, 2, 3]",
+        "B": "[0, 1, 1, 2, 3, 5]",
+        "C": "[1, 1, 2, 3, 5]",
+        "D": "An infinite list of Fibonacci numbers"
+      },
+      "correct_answer": "A",
+      "code_example": "def fibonacci_generator():\n    a, b = 0, 1\n    yield a\n    yield b\n    while True:\n        a, b = b, a + b\n        yield b\n\nfib_gen = fibonacci_generator()\nresult = [next(fib_gen) for _ in range(5)]\nprint(result)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What divide and conquer algorithm is implemented in the following code?",
+      "options": {
+        "A": "Quick Sort",
+        "B": "Merge Sort",
+        "C": "Heap Sort",
+        "D": "Binary Search"
+      },
+      "correct_answer": "D",
+      "code_example": "def algorithm(arr, target, low, high):\n    if high >= low:\n        mid = (high + low) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] > target:\n            return algorithm(arr, target, low, mid - 1)\n        else:\n            return algorithm(arr, target, mid + 1, high)\n    else:\n        return -1"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a key principle of RESTful API design?",
+      "options": {
+        "A": "Statelessness",
+        "B": "Client-Server architecture",
+        "C": "Cacheable responses",
+        "D": "All operations must be synchronous"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using recursion with memoization?",
+      "options": {
+        "A": "55",
+        "B": "89",
+        "C": "144",
+        "D": "233"
+      },
+      "correct_answer": "B",
+      "code_example": "def fibonacci(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 1:\n        return n\n    memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)\n    return memo[n]\n\nresult = fibonacci(11)\nprint(result)"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that processes nested data structures?",
+      "options": {
+        "A": "['Alice', 'Bob', 'Charlie']",
+        "B": "[25, 30, 35]",
+        "C": "['New York', 'London', 'Paris']",
+        "D": "['Alice: 25', 'Bob: 30', 'Charlie: 35']"
+      },
+      "correct_answer": "D",
+      "code_example": "people = [\n    {'name': 'Alice', 'age': 25, 'city': 'New York'},\n    {'name': 'Bob', 'age': 30, 'city': 'London'},\n    {'name': 'Charlie', 'age': 35, 'city': 'Paris'}\n]\n\nresult = [f\"{person['name']}: {person['age']}\" for person in people]\nprint(result)"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using named tuples?",
+      "options": {
+        "A": "Person(name='Alice', age=30)",
+        "B": "{'name': 'Alice', 'age': 30}",
+        "C": "Alice is 30 years old",
+        "D": "Error: 'Person' object has no attribute 'city'"
+      },
+      "correct_answer": "C",
+      "code_example": "from collections import namedtuple\n\nPerson = namedtuple('Person', ['name', 'age'])\nalice = Person('Alice', 30)\nprint(f\"{alice.name} is {alice.age} years old\")"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using map and filter functions?",
+      "options": {
+        "A": "[2, 4, 6, 8, 10]",
+        "B": "[4, 16, 36, 64, 100]",
+        "C": "[4, 8, 12, 16, 20]",
+        "D": "[1, 4, 9, 16, 25]"
+      },
+      "correct_answer": "B",
+      "code_example": "numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\ndef is_even(x):\n    return x % 2 == 0\n\ndef square(x):\n    return x * x\n\nresult = list(map(square, filter(is_even, numbers)))\nprint(result)"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using lambda functions?",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]",
+        "B": "[1, 8, 27, 64, 125]",
+        "C": "[2, 4, 6, 8, 10]",
+        "D": "[0, 5, 10, 15, 20]"
+      },
+      "correct_answer": "A",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nsquared = list(map(lambda x: x**2, numbers))\nprint(squared)"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What is the correct implementation of a node for a doubly linked list?",
+      "options": {
+        "A": "class Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None",
+        "B": "class Node:\n    def __init__(self, data):\n        self.data = data\n        self.prev = None\n        self.next = None",
+        "C": "class Node:\n    def __init__(self, data):\n        self.data = data\n        self.left = None\n        self.right = None",
+        "D": "class Node:\n    def __init__(self, data):\n        self.data = data\n        self.child = []"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "If a file 'my_module.py' contains a function called 'calculate', what is the correct way to import and use this function?",
+      "options": {
+        "A": "import my_module\nresult = calculate(10)",
+        "B": "import my_module\nresult = my_module.calculate(10)",
+        "C": "from my_module import *\nresult = my_module.calculate(10)",
+        "D": "import calculate from my_module\nresult = calculate(10)"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that finds connected components in a graph?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct_answer": "B",
+      "code_example": "def dfs(graph, node, visited):\n    visited[node] = True\n    for neighbor in graph[node]:\n        if not visited[neighbor]:\n            dfs(graph, neighbor, visited)\n\ndef count_connected_components(graph):\n    visited = {node: False for node in graph}\n    count = 0\n    for node in graph:\n        if not visited[node]:\n            dfs(graph, node, visited)\n            count += 1\n    return count\n\ngraph = {\n    0: [1, 2],\n    1: [0, 2],\n    2: [0, 1],\n    3: [4],\n    4: [3],\n    5: []\n}\n\nprint(count_connected_components(graph))"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code implementing a greedy algorithm?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "correct_answer": "A",
+      "code_example": "def min_coins(coins, amount):\n    coins.sort(reverse=True)\n    count = 0\n    for coin in coins:\n        while amount >= coin:\n            amount -= coin\n            count += 1\n    return count\n\ncoins = [1, 2, 5, 10]\namount = 27\nprint(min_coins(coins, amount))"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using a sliding window approach?",
+      "options": {
+        "A": "6",
+        "B": "9",
+        "C": "10",
+        "D": "11"
+      },
+      "correct_answer": "C",
+      "code_example": "def max_sum_subarray(arr, k):\n    n = len(arr)\n    if n < k:\n        return -1\n    \n    window_sum = sum(arr[:k])\n    max_sum = window_sum\n    \n    for i in range(n - k):\n        window_sum = window_sum - arr[i] + arr[i + k]\n        max_sum = max(max_sum, window_sum)\n    \n    return max_sum\n\narr = [1, 4, 2, 10, 2, 3, 1, 0, 20]\nk = 3\nprint(max_sum_subarray(arr, k))"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "Which Flask route decorator would match the URL path '/users/42'?",
+      "options": {
+        "A": "@app.route('/users')",
+        "B": "@app.route('/users/<id>')",
+        "C": "@app.route('/users/:id')",
+        "D": "@app.route('/users/*')"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT typically a step in a CI/CD pipeline?",
+      "options": {
+        "A": "Automated testing",
+        "B": "Code linting",
+        "C": "Manual code review",
+        "D": "Deployment to production"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating multiple inheritance?",
+      "options": {
+        "A": "A.method()",
+        "B": "B.method()",
+        "C": "C.method()",
+        "D": "AttributeError: 'C' object has no attribute 'method'"
+      },
+      "correct_answer": "B",
+      "code_example": "class A:\n    def method(self):\n        return \"A.method()\"\n\nclass B:\n    def method(self):\n        return \"B.method()\"\n\nclass C(A, B):\n    pass\n\nclass D(B, A):\n    pass\n\nobj = D()\nprint(obj.method())"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a key principle of Test-Driven Development (TDD)?",
+      "options": {
+        "A": "Write tests before implementation",
+        "B": "Run all tests and see if the new one fails",
+        "C": "Write minimal code to pass the test",
+        "D": "Focus on integration tests over unit tests"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What is the primary difference between threading and multiprocessing in Python?",
+      "options": {
+        "A": "Threading uses multiple CPU cores, multiprocessing doesn't",
+        "B": "Multiprocessing creates separate memory spaces, threading shares memory",
+        "C": "Threading is only available on Unix systems",
+        "D": "Multiprocessing is limited to a maximum of 4 processes"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "Which statement about CPython's implementation is FALSE?",
+      "options": {
+        "A": "CPython compiles Python code to bytecode",
+        "B": "CPython uses a Global Interpreter Lock (GIL)",
+        "C": "CPython is written primarily in C",
+        "D": "CPython automatically performs tail-call optimization"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "According to the CAP theorem, which combination is impossible for a distributed data store to simultaneously provide?",
+      "options": {
+        "A": "Consistency and Availability",
+        "B": "Availability and Partition Tolerance",
+        "C": "Consistency, Availability, and Partition Tolerance",
+        "D": "Consistency and Partition Tolerance"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following basic ML pipeline implementation?",
+      "options": {
+        "A": "Accuracy score close to 0.9",
+        "B": "A trained model object",
+        "C": "ValueError: Features have different shapes",
+        "D": "A list of predicted values"
+      },
+      "correct_answer": "A",
+      "code_example": "from sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score\n\n# Load dataset\niris = load_iris()\nX, y = iris.data, iris.target\n\n# Split dataset\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\n# Preprocess\nscaler = StandardScaler()\nX_train_scaled = scaler.fit_transform(X_train)\nX_test_scaled = scaler.transform(X_test)\n\n# Train model\nmodel = RandomForestClassifier(n_estimators=100, random_state=42)\nmodel.fit(X_train_scaled, y_train)\n\n# Make predictions\ny_pred = model.predict(X_test_scaled)\n\n# Evaluate\nprint(accuracy_score(y_test, y_pred))"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using a class decorator?",
+      "options": {
+        "A": "Creating instance of MyClass\nHello World",
+        "B": "Hello World\nCreating instance of MyClass",
+        "C": "Error: 'str' object is not callable",
+        "D": "Creating instance of MyClass decorated\nHello World"
+      },
+      "correct_answer": "D",
+      "code_example": "def log_instantiation(cls):\n    original_init = cls.__init__\n    \n    def new_init(self, *args, **kwargs):\n        print(f\"Creating instance of {cls.__name__} decorated\")\n        original_init(self, *args, **kwargs)\n    \n    cls.__init__ = new_init\n    return cls\n\n@log_instantiation\nclass MyClass:\n    def __init__(self):\n        pass\n        \n    def say_hello(self):\n        print(\"Hello World\")\n\nobj = MyClass()\nobj.say_hello()"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What library would be most appropriate for scraping a JavaScript-heavy website?",
+      "options": {
+        "A": "Beautiful Soup",
+        "B": "Requests",
+        "C": "Scrapy",
+        "D": "Selenium"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing a distributed cache pattern?",
+      "options": {
+        "A": "Cache miss, fetching data...\nResult: 42",
+        "B": "Cache hit!\nResult: 42",
+        "C": "ConnectionError: Cannot connect to Redis",
+        "D": "Result: None"
+      },
+      "correct_answer": "A",
+      "code_example": "import time\n\nclass MockRedis:\n    def __init__(self):\n        self.data = {}\n    \n    def get(self, key):\n        return self.data.get(key)\n    \n    def set(self, key, value, ex=None):\n        self.data[key] = value\n\nredis_client = MockRedis()\n\ndef get_expensive_data(key):\n    # Try to get from cache first\n    cached_result = redis_client.get(key)\n    if cached_result:\n        print(\"Cache hit!\")\n        return cached_result\n    \n    # If not in cache, perform expensive operation\n    print(\"Cache miss, fetching data...\")\n    # Simulate expensive computation\n    time.sleep(0.1)\n    result = 42\n    \n    # Store in cache for future requests\n    redis_client.set(key, result, ex=3600)  # Expire after 1 hour\n    return result\n\nresult = get_expensive_data(\"unique_key\")\nprint(f\"Result: {result}\")"
+	},
+{
+      "id": 43,
+      "difficulty": "hard",
+      "question": "Which transaction isolation level allows non-repeatable reads but prevents dirty reads?",
+      "options": {
+        "A": "READ UNCOMMITTED",
+        "B": "READ COMMITTED",
+        "C": "REPEATABLE READ",
+        "D": "SERIALIZABLE"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following implementation of Kruskal's algorithm for finding a minimum spanning tree?",
+      "options": {
+        "A": "Total cost: 14",
+        "B": "Total cost: 16",
+        "C": "Total cost: 19",
+        "D": "Total cost: 21"
+      },
+      "correct_answer": "A",
+      "code_example": "class DisjointSet:\n    def __init__(self, vertices):\n        self.parent = {v: v for v in vertices}\n        self.rank = {v: 0 for v in vertices}\n    \n    def find(self, item):\n        if self.parent[item] != item:\n            self.parent[item] = self.find(self.parent[item])\n        return self.parent[item]\n    \n    def union(self, x, y):\n        root_x = self.find(x)\n        root_y = self.find(y)\n        \n        if root_x == root_y:\n            return\n        \n        if self.rank[root_x] < self.rank[root_y]:\n            self.parent[root_x] = root_y\n        elif self.rank[root_x] > self.rank[root_y]:\n            self.parent[root_y] = root_x\n        else:\n            self.parent[root_y] = root_x\n            self.rank[root_x] += 1\n\ndef kruskal(graph, vertices):\n    # List to store the MST\n    result = []\n    \n    # Sort edges in non-decreasing order of their weight\n    edges = []\n    for u in graph:\n        for v, weight in graph[u].items():\n            edges.append((u, v, weight))\n    \n    edges.sort(key=lambda x: x[2])\n    \n    # Create a disjoint set\n    ds = DisjointSet(vertices)\n    \n    # Process edges in sorted order\n    total_cost = 0\n    for u, v, weight in edges:\n        if ds.find(u) != ds.find(v):\n            result.append((u, v, weight))\n            total_cost += weight\n            ds.union(u, v)\n    \n    return total_cost\n\n# Example graph\ngraph = {\n    'A': {'B': 4, 'C': 8},\n    'B': {'A': 4, 'C': 2, 'D': 5},\n    'C': {'A': 8, 'B': 2, 'D': 1, 'E': 3},\n    'D': {'B': 5, 'C': 1, 'E': 7},\n    'E': {'C': 3, 'D': 7}\n}\n\nvertices = ['A', 'B', 'C', 'D', 'E']\nprint(f\"Total cost: {kruskal(graph, vertices)}\")"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What is the primary advantage of using a Mixin in Python class design?",
+      "options": {
+        "A": "It enables multiple inheritance",
+        "B": "It allows reusing behavior without creating an 'is-a' relationship",
+        "C": "It prevents method overriding",
+        "D": "It enforces encapsulation"
+      },
+      "correct_answer": "B",
+      "code_example": "class LoggingMixin:\n    def log(self, message):\n        print(f\"[LOG] {message}\")\n\nclass APIHandler:\n    def get(self, resource_id):\n        return {\"id\": resource_id, \"name\": \"Example\"}\n\nclass UserAPI(APIHandler, LoggingMixin):\n    def get(self, user_id):\n        self.log(f\"Fetching user {user_id}\")\n        return super().get(user_id)\n\nuser_api = UserAPI()\nresult = user_api.get(42)"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Pandas code?",
+      "options": {
+        "A": "Empty DataFrame",
+        "B": "A dataframe with entries where Age > 30",
+        "C": "A dataframe with all Age values doubled",
+        "D": "Error: inplace=True doesn't return a value"
+      },
+      "correct_answer": "D",
+      "code_example": "import pandas as pd\n\ndata = {\n    'Name': ['Alice', 'Bob', 'Charlie', 'David'],\n    'Age': [25, 30, 35, 40],\n    'City': ['New York', 'London', 'Paris', 'Tokyo']\n}\n\ndf = pd.DataFrame(data)\nresult = df['Age'].apply(lambda x: x * 2, inplace=True)\nprint(result)"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What design pattern is implemented in the following code?",
+      "options": {
+        "A": "Factory Pattern",
+        "B": "Observer Pattern",
+        "C": "State Pattern",
+        "D": "Adapter Pattern"
+      },
+      "correct_answer": "C",
+      "code_example": "class DocumentState:\n    def render(self):\n        pass\n    \n    def publish(self):\n        pass\n\nclass DraftState(DocumentState):\n    def render(self):\n        return \"Document is in draft mode.\"\n    \n    def publish(self):\n        return ModeratedState()\n\nclass ModeratedState(DocumentState):\n    def render(self):\n        return \"Document is waiting for approval.\"\n    \n    def publish(self):\n        return PublishedState()\n\nclass PublishedState(DocumentState):\n    def render(self):\n        return \"Document is published.\"\n    \n    def publish(self):\n        return self\n\nclass Document:\n    def __init__(self):\n        self.state = DraftState()\n    \n    def render(self):\n        return self.state.render()\n    \n    def publish(self):\n        self.state = self.state.publish()\n        return self.render()"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a common API rate limiting strategy?",
+      "options": {
+        "A": "Token Bucket",
+        "B": "Leaky Bucket",
+        "C": "Fixed Window Counter",
+        "D": "Dynamic Authorization"
+      },
+      "correct_answer": "D",
+      "code_example": "class RateLimiter:\n    def __init__(self, max_requests, time_window):\n        self.max_requests = max_requests\n        self.time_window = time_window  # in seconds\n        self.request_timestamps = []\n    \n    def allow_request(self, timestamp):\n        # Remove timestamps that are outside the current time window\n        self.request_timestamps = [ts for ts in self.request_timestamps\n                                  if timestamp - ts <= self.time_window]\n        \n        # Check if we're under the limit\n        if len(self.request_timestamps) < self.max_requests:\n            self.request_timestamps.append(timestamp)\n            return True\n        return False\n\n# Example usage\nlimiter = RateLimiter(max_requests=5, time_window=60)  # 5 requests per minute\ncurrent_time = 1000  # Simulated timestamp\n\nfor _ in range(6):\n    if limiter.allow_request(current_time):\n        print(\"Request allowed\")\n    else:\n        print(\"Request blocked (rate limit exceeded)\")"
+    }
+]
+}
