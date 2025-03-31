@@ -1,0 +1,624 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that calculates a factorial?",
+      "options": {
+        "A": "24",
+        "B": "120",
+        "C": "720",
+        "D": "Error: maximum recursion depth exceeded"
+      },
+      "correct_answer": "B",
+      "code_example": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1)\n\nprint(factorial(5))"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the correct way to write a docstring for a function in Python?",
+      "options": {
+        "A": "// This function does something",
+        "B": "/* This function does something */",
+        "C": "# This function does something",
+        "D": "\"\"\"This function does something\"\"\""
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using string formatting?",
+      "options": {
+        "A": "Hello, Alice. You are 30 years old.",
+        "B": "Hello, name. You are age years old.",
+        "C": "Hello, Alice. You are {age} years old.",
+        "D": "Error: invalid syntax"
+      },
+      "correct_answer": "A",
+      "code_example": "name = \"Alice\"\nage = 30\nprint(f\"Hello, {name}. You are {age} years old.\")"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will the binary_search function return when looking for the value 7 in the given list?",
+      "options": {
+        "A": "0",
+        "B": "3",
+        "C": "4",
+        "D": "-1"
+      },
+      "correct_answer": "C",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n            \n    return -1\n\nprint(binary_search([1, 3, 5, 6, 7, 9, 11], 7))"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using string slicing?",
+      "options": {
+        "A": "Python",
+        "B": "ytho",
+        "C": "thon",
+        "D": "Pyth"
+      },
+      "correct_answer": "B",
+      "code_example": "text = \"Python\"\nprint(text[1:5])"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which of the following is a valid way to create a multi-line string in Python?",
+      "options": {
+        "A": "string = 'This is a \n multi-line string'",
+        "B": "string = \"\"\"This is a\nmulti-line string\"\"\"",
+        "C": "string = 'This is a' + 'multi-line string'",
+        "D": "string = 'This is a \\\n multi-line string'"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code handling multiple exceptions?",
+      "options": {
+        "A": "Division by zero!",
+        "B": "Value error!",
+        "C": "Error occurred: division by zero",
+        "D": "This code will run without exceptions"
+      },
+      "correct_answer": "C",
+      "code_example": "try:\n    x = 10 / 0\nexcept ValueError as e:\n    print(\"Value error!\")\nexcept ZeroDivisionError as e:\n    print(f\"Error occurred: {e}\")\nexcept Exception as e:\n    print(f\"Unknown error: {e}\")"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the correct way to create a custom exception class in Python?",
+      "options": {
+        "A": "class MyError(Error): pass",
+        "B": "class MyError inherits Exception: pass",
+        "C": "class MyError(Exception): pass",
+        "D": "def MyError(Exception): pass"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using conditional expressions?",
+      "options": {
+        "A": "x is positive",
+        "B": "x is zero",
+        "C": "x is negative",
+        "D": "None of the above"
+      },
+      "correct_answer": "C",
+      "code_example": "x = -5\nresult = \"x is positive\" if x > 0 else \"x is zero\" if x == 0 else \"x is negative\"\nprint(result)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that finds statistical measures?",
+      "options": {
+        "A": "Mean: 4.0, Median: 4, Mode: 2",
+        "B": "Mean: 4.0, Median: 4.0, Mode: 2",
+        "C": "Mean: 4, Median: 4, Mode: 2",
+        "D": "Mean: 4.0, Median: 3.5, Mode: 2"
+      },
+      "correct_answer": "B",
+      "code_example": "import statistics\n\nnumbers = [2, 2, 4, 5, 7]\n\nmean = statistics.mean(numbers)\nmedian = statistics.median(numbers)\nmode = statistics.mode(numbers)\n\nprint(f\"Mean: {mean}, Median: {median}, Mode: {mode}\")"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "According to PEP 8, which of the following is the correct way to name a constant in Python?",
+      "options": {
+        "A": "maxSize",
+        "B": "MaxSize",
+        "C": "MAX_SIZE",
+        "D": "max_size"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that reverses a string?",
+      "options": {
+        "A": "nohtyP",
+        "B": "Python",
+        "C": "P y t h o n",
+        "D": "n o h t y P"
+      },
+      "correct_answer": "A",
+      "code_example": "text = \"Python\"\nreversed_text = text[::-1]\nprint(reversed_text)"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using a context manager?",
+      "options": {
+        "A": "File opened\nFile closed",
+        "B": "File opened",
+        "C": "File closed",
+        "D": "No output (file operations are silent)"
+      },
+      "correct_answer": "A",
+      "code_example": "class FileManager:\n    def __init__(self, filename):\n        self.filename = filename\n        \n    def __enter__(self):\n        print(\"File opened\")\n        return self\n        \n    def __exit__(self, exc_type, exc_val, exc_tb):\n        print(\"File closed\")\n\nwith FileManager('example.txt') as f:\n    pass"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following selection sort implementation?",
+      "options": {
+        "A": "[1, 3, 5, 7, 9]",
+        "B": "[9, 7, 5, 3, 1]",
+        "C": "Error: list index out of range",
+        "D": "[9, 7, 5, 3, 1, 1, 3, 5, 7, 9]"
+      },
+      "correct_answer": "A",
+      "code_example": "def selection_sort(arr):\n    for i in range(len(arr)):\n        min_idx = i\n        for j in range(i+1, len(arr)):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr\n\nprint(selection_sort([5, 3, 9, 1, 7]))"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using try/except/else/finally blocks?",
+      "options": {
+        "A": "Dividing\nResult: 5.0\nFinished",
+        "B": "Dividing\nFinished",
+        "C": "Dividing\nError: division by zero\nFinished",
+        "D": "Result: 5.0\nFinished"
+      },
+      "correct_answer": "A",
+      "code_example": "try:\n    print(\"Dividing\")\n    result = 10 / 2\nexcept ZeroDivisionError:\n    print(\"Error: division by zero\")\nelse:\n    print(f\"Result: {result}\")\nfinally:\n    print(\"Finished\")"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using string methods?",
+      "options": {
+        "A": "['apple', 'banana', 'cherry']",
+        "B": "apple-banana-cherry",
+        "C": "apple banana cherry",
+        "D": "['apple', ' banana', ' cherry']"
+      },
+      "correct_answer": "B",
+      "code_example": "fruits = \"apple, banana, cherry\"\nfruits_list = [fruit.strip() for fruit in fruits.split(',')]\nresult = '-'.join(fruits_list)\nprint(result)"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What is the correct way to implement a simple API endpoint using Flask?",
+      "options": {
+        "A": "@app.endpoint('/api/data')\ndef get_data():\n    return jsonify({'data': 'value'})",
+        "B": "@app.route('/api/data', methods=['GET'])\ndef get_data():\n    return jsonify({'data': 'value'})",
+        "C": "@app.get('/api/data')\ndef get_data():\n    return {'data': 'value'}",
+        "D": "app.add_url_rule('/api/data', view_func=jsonify({'data': 'value'}))"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the result of this binary search variation that finds the leftmost occurrence of a value?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct_answer": "A",
+      "code_example": "def binary_search_leftmost(arr, target):\n    left, right = 0, len(arr) - 1\n    result = -1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            result = mid\n            right = mid - 1  # Continue searching on the left side\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n            \n    return result\n\nprint(binary_search_leftmost([1, 2, 2, 2, 3, 4, 5], 2))"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating inheritance and method overriding?",
+      "options": {
+        "A": "Generic Vehicle\nCar: Toyota",
+        "B": "Generic Vehicle\nVehicle: Toyota",
+        "C": "Generic Vehicle\nVehicle: Car Toyota",
+        "D": "Vehicle: Generic\nCar: Toyota"
+      },
+      "correct_answer": "A",
+      "code_example": "class Vehicle:\n    def __init__(self, name):\n        self.name = name\n        \n    def display_info(self):\n        print(f\"Vehicle: {self.name}\")\n\nclass Car(Vehicle):\n    def __init__(self, brand):\n        super().__init__(\"Generic Vehicle\")\n        self.brand = brand\n        \n    def display_info(self):\n        print(f\"Car: {self.brand}\")\n\nvehicle = Vehicle(\"Generic Vehicle\")\ncar = Car(\"Toyota\")\n\nvehicle.display_info()\ncar.display_info()"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using classes and instances?",
+      "options": {
+        "A": "Counter value: 0\nCounter value: 1\nCounter value: 2",
+        "B": "Counter value: 0\nCounter value: 2\nCounter value: 4",
+        "C": "Counter value: 1\nCounter value: 2\nCounter value: 3",
+        "D": "Counter value: 1\nCounter value: 3\nCounter value: 5"
+      },
+      "correct_answer": "A",
+      "code_example": "class Counter:\n    def __init__(self):\n        self.value = 0\n        \n    def increment(self):\n        self.value += 1\n        \n    def get_value(self):\n        return self.value\n\ncounter = Counter()\nprint(f\"Counter value: {counter.get_value()}\")\ncounter.increment()\nprint(f\"Counter value: {counter.get_value()}\")\ncounter.increment()\nprint(f\"Counter value: {counter.get_value()}\")"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using lambda functions?",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]",
+        "B": "[1, 2, 3, 4, 5]",
+        "C": "[2, 4, 6, 8, 10]",
+        "D": "[0, 1, 4, 9, 16]"
+      },
+      "correct_answer": "A",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nsquared = list(map(lambda x: x**2, numbers))\nprint(squared)"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that detects cycles in a graph?",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "Cycle detected",
+        "D": "No cycle detected"
+      },
+      "correct_answer": "C",
+      "code_example": "def has_cycle(graph):\n    visited = set()\n    rec_stack = set()\n    \n    def dfs(node):\n        visited.add(node)\n        rec_stack.add(node)\n        \n        for neighbor in graph[node]:\n            if neighbor not in visited:\n                if dfs(neighbor):\n                    return True\n            elif neighbor in rec_stack:\n                return True\n                \n        rec_stack.remove(node)\n        return False\n    \n    for node in graph:\n        if node not in visited:\n            if dfs(node):\n                print(\"Cycle detected\")\n                return\n    \n    print(\"No cycle detected\")\n\n# Graph represented as adjacency list\ngraph = {\n    0: [1, 2],\n    1: [2],\n    2: [0, 3],\n    3: [3]\n}\n\nhas_cycle(graph)"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What is the correct order of directories that Python searches for modules when you use an import statement?",
+      "options": {
+        "A": "Current directory, PYTHONPATH, Standard library, Site-packages",
+        "B": "Standard library, Current directory, PYTHONPATH, Site-packages",
+        "C": "Site-packages, Standard library, Current directory, PYTHONPATH",
+        "D": "PYTHONPATH, Current directory, Standard library, Site-packages"
+      },
+      "correct_answer": "A",
+      "code_example": null
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using regex greedy vs non-greedy matching?",
+      "options": {
+        "A": "['<div>Content</div>']",
+        "B": "['<div>', '</div>']",
+        "C": "['<div>']",
+        "D": "['<div>', 'Content', '</div>']"
+      },
+      "correct_answer": "C",
+      "code_example": "import re\n\nhtml = \"<div>Content</div>\"\n\n# Non-greedy match\nmatches = re.findall(r'<.*?>', html)\nprint(matches)"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using map, filter, and reduce?",
+      "options": {
+        "A": "Sum of even squared numbers: 56",
+        "B": "Sum of even squared numbers: 20",
+        "C": "Sum of even squared numbers: 40",
+        "D": "Sum of even squared numbers: 30"
+      },
+      "correct_answer": "A",
+      "code_example": "from functools import reduce\n\nnumbers = [1, 2, 3, 4, 5, 6]\n\n# Filter even numbers, square them, then sum\nresult = reduce(lambda x, y: x + y, \n                map(lambda x: x**2, \n                     filter(lambda x: x % 2 == 0, numbers)))\n\nprint(f\"Sum of even squared numbers: {result}\")"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a common method for API authentication?",
+      "options": {
+        "A": "API Keys",
+        "B": "OAuth tokens",
+        "C": "JSON Web Tokens (JWT)",
+        "D": "HTML Form Authentication"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of this breadth-first search implementation?",
+      "options": {
+        "A": "[0, 1, 2, 3, 4, 5]",
+        "B": "[0, 1, 2, 4, 3, 5]",
+        "C": "[0, 1, 4, 2, 3, 5]",
+        "D": "[0, 1, 4, 2, 5, 3]"
+      },
+      "correct_answer": "C",
+      "code_example": "from collections import deque\n\ndef bfs(graph, start):\n    visited = []\n    queue = deque([start])\n    \n    while queue:\n        node = queue.popleft()\n        if node not in visited:\n            visited.append(node)\n            neighbors = graph[node]\n            for neighbor in neighbors:\n                if neighbor not in visited:\n                    queue.append(neighbor)\n    \n    return visited\n\n# Graph as adjacency list\ngraph = {\n    0: [1, 4],\n    1: [0, 2, 3],\n    2: [1, 3, 5],\n    3: [1, 2, 5],\n    4: [0],\n    5: [2, 3]\n}\n\nprint(bfs(graph, 0))"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the maximum sum found by this sliding window implementation?",
+      "options": {
+        "A": "16",
+        "B": "21",
+        "C": "23",
+        "D": "25"
+      },
+      "correct_answer": "B",
+      "code_example": "def max_sum_sliding_window(arr, k):\n    n = len(arr)\n    if n < k:\n        return None\n    \n    # Compute sum of first window\n    window_sum = sum(arr[:k])\n    max_sum = window_sum\n    \n    # Slide the window and update max_sum\n    for i in range(n - k):\n        window_sum = window_sum - arr[i] + arr[i + k]\n        max_sum = max(max_sum, window_sum)\n    \n    return max_sum\n\narr = [1, 4, 2, 10, 2, 3, 1, 0, 20]\nk = 3\nprint(max_sum_sliding_window(arr, k))"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using partial functions?",
+      "options": {
+        "A": "8",
+        "B": "16",
+        "C": "32",
+        "D": "64"
+      },
+      "correct_answer": "B",
+      "code_example": "from functools import partial\n\ndef power(base, exponent):\n    return base ** exponent\n\n# Create a partial function with base=2\npower_of_two = partial(power, 2)\n\n# Use the partial function\nresult = power_of_two(4)\nprint(result)"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be printed by the following generator function?",
+      "options": {
+        "A": "[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]",
+        "B": "[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]",
+        "C": "0 1 1 2 3 5 8 13 21 34",
+        "D": "1 1 2 3 5 8 13 21 34 55"
+      },
+      "correct_answer": "C",
+      "code_example": "def fibonacci_generator(n):\n    a, b = 0, 1\n    for _ in range(n):\n        yield a\n        a, b = b, a + b\n\n# Print first 10 Fibonacci numbers\nfor num in fibonacci_generator(10):\n    print(num, end=\" \")"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "Which of the following is the most memory-efficient way to represent a sparse graph?",
+      "options": {
+        "A": "Adjacency Matrix",
+        "B": "Adjacency List",
+        "C": "Edge List",
+        "D": "Incidence Matrix"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using functools.lru_cache?",
+      "options": {
+        "A": "Computing fibonacci(5)...\nComputing fibonacci(4)...\nComputing fibonacci(3)...\nComputing fibonacci(2)...\nComputing fibonacci(1)...\nComputing fibonacci(0)...\nComputing fibonacci(5)...\nResult: 5",
+        "B": "Computing fibonacci(5)...\nComputing fibonacci(4)...\nComputing fibonacci(3)...\nComputing fibonacci(2)...\nComputing fibonacci(1)...\nComputing fibonacci(0)...\nResult: 5",
+        "C": "Computing fibonacci(5)...\nResult: 5",
+        "D": "Result: 5"
+      },
+      "correct_answer": "B",
+      "code_example": "from functools import lru_cache\n\n@lru_cache(maxsize=None)\ndef fibonacci(n):\n    print(f\"Computing fibonacci({n})...\")\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\nresult = fibonacci(5)\nprint(f\"Result: {result}\")"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Consider the following NumPy code that calculates element-wise operations on arrays. What will be the output?",
+      "options": {
+        "A": "array([0, 0, 0])",
+        "B": "array([3, 2, 1])",
+        "C": "array([1, 2, 3])",
+        "D": "array([9, 4, 1])"
+      },
+      "correct_answer": "D",
+      "code_example": "import numpy as np\n\na = np.array([3, 2, 1])\nb = np.square(a)\nprint(repr(b))"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which of the following statements about authentication and authorization is correct?",
+      "options": {
+        "A": "Authentication verifies permissions while authorization confirms identity",
+        "B": "Authentication and authorization are different terms for the same security process",
+        "C": "Authentication confirms identity while authorization verifies permissions",
+        "D": "Authentication and authorization must always be implemented using the same protocol"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of this Docker-related Python code that parses container information?",
+      "options": {
+        "A": "['app-db', 'redis']",
+        "B": "['app-web', 'app-db', 'app-redis']",
+        "C": "['app-web', 'app-db', 'redis']",
+        "D": "['web', 'db', 'redis']"
+      },
+      "correct_answer": "C",
+      "code_example": "docker_ps_output = \"\"\"CONTAINER ID   IMAGE          NAMES\n123abc456def   postgres:13    app-db\n789ghi101jkl   nginx:1.19    app-web\n321mno654pqr   redis:alpine   redis\"\"\"\n\ndef parse_container_names(output):\n    lines = output.strip().split('\\n')[1:]\n    names = [line.split()[-1] for line in lines]\n    return names\n\nprint(parse_container_names(docker_ps_output))"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "Which middleware implementation correctly handles authentication in Flask?",
+      "options": {
+        "A": "A decorator that redirects all requests to a login page",
+        "B": "A decorator that adds the current user to the request object after verifying a token",
+        "C": "A decorator that always returns a 403 status for invalid credentials",
+        "D": "A decorator that validates permissions but doesn't verify user identity"
+      },
+      "correct_answer": "B",
+      "code_example": "from flask import Flask, request, g, jsonify\nimport jwt\nfrom functools import wraps\n\napp = Flask(__name__)\napp.config['SECRET_KEY'] = 'your-secret-key'\n\ndef auth_required(f):\n    @wraps(f)\n    def decorated(*args, **kwargs):\n        token = request.headers.get('Authorization')\n        if not token:\n            return jsonify({'message': 'Missing token'}), 401\n        \n        try:\n            # Remove 'Bearer ' prefix if present\n            if token.startswith('Bearer '):\n                token = token[7:]\n                \n            data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])\n            g.user = data['sub']\n        except:\n            return jsonify({'message': 'Invalid token'}), 401\n            \n        return f(*args, **kwargs)\n    return decorated\n\n@app.route('/protected')\n@auth_required\ndef protected():\n    return jsonify({'message': f'Hello, {g.user}!'})"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT an ethical web scraping practice?",
+      "options": {
+        "A": "Respecting the website's robots.txt file",
+        "B": "Implementing random delays between requests",
+        "C": "Using multiple IP addresses to bypass rate limits",
+        "D": "Identifying your scraper in the user-agent string"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Which implementation best follows the Single Responsibility Principle from SOLID?",
+      "options": {
+        "A": "A class that handles both database operations and business logic",
+        "B": "A class that validates, formats, and sends emails",
+        "C": "A class that only handles formatting data for email templates",
+        "D": "A class with multiple static utility methods for various operations"
+      },
+      "correct_answer": "C",
+      "code_example": "# Option A\nclass UserManager:\n    def __init__(self, db_connection):\n        self.db = db_connection\n    \n    def validate_user_data(self, user_data):\n        # Validation logic\n        return True\n    \n    def save_user(self, user_data):\n        if self.validate_user_data(user_data):\n            # SQL operations\n            return self.db.execute(\"INSERT INTO users VALUES (...)\", user_data)\n        return False\n    \n    def send_welcome_email(self, user_email):\n        # Email sending logic\n        pass\n\n# Option B\nclass EmailService:\n    def validate_email(self, email):\n        # Email validation logic\n        return True\n    \n    def format_email(self, template, data):\n        # Email formatting logic\n        return template.format(**data)\n    \n    def send_email(self, to, subject, body):\n        # Email sending logic\n        pass\n\n# Option C\nclass EmailFormatter:\n    def format_welcome_email(self, username):\n        template = \"Welcome, {username}! Thank you for joining.\"\n        return template.format(username=username)\n    \n    def format_reset_email(self, username, reset_link):\n        template = \"Hello {username}, click {reset_link} to reset your password.\"\n        return template.format(username=username, reset_link=reset_link)\n\n# Option D\nclass Utils:\n    @staticmethod\n    def validate_email(email):\n        # Email validation\n        pass\n    \n    @staticmethod\n    def format_date(date):\n        # Date formatting\n        pass\n    \n    @staticmethod\n    def generate_password(length=8):\n        # Password generation\n        pass"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "When using FastAPI, what will be the output of the following asynchronous code?",
+      "options": {
+        "A": "{'message': 'Starting', 'data': [1, 2, 3, 4, 5]}",
+        "B": "{'message': 'Starting', 'data': []}",
+        "C": "{'message': 'Processing', 'data': [1, 2, 3, 4, 5]}",
+        "D": "{'message': 'Finished', 'data': [1, 2, 3, 4, 5]}"
+      },
+      "correct_answer": "A",
+      "code_example": "import asyncio\nfrom fastapi import FastAPI\nfrom pydantic import BaseModel\n\napp = FastAPI()\n\nclass Response(BaseModel):\n    message: str\n    data: list = []\n\nasync def process_data():\n    await asyncio.sleep(2)\n    return [1, 2, 3, 4, 5]\n\n@app.get(\"/data\", response_model=Response)\nasync def get_data():\n    # Start the background task\n    task = asyncio.create_task(process_data())\n    \n    # Create initial response\n    response = Response(message=\"Starting\", data=[])\n    \n    # Check if task is done (it won't be after just starting)\n    if task.done():\n        response.message = \"Finished\"\n        response.data = task.result()\n    \n    # This line would wait for the task to complete:\n    # response.data = await task\n    # response.message = \"Finished\"\n    \n    # But we're returning immediately\n    return response"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "In Kubernetes container orchestration, which statement is true regarding the relationship between Pods and Containers?",
+      "options": {
+        "A": "A Container can contain multiple Pods",
+        "B": "A Pod can contain multiple Containers",
+        "C": "Pods and Containers are different terms for the same resource",
+        "D": "Pods and Containers must always maintain a 1:1 relationship"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the maximum flow value in the following network flow problem?",
+      "options": {
+        "A": "19",
+        "B": "20",
+        "C": "23",
+        "D": "25"
+      },
+      "correct_answer": "B",
+      "code_example": "from collections import defaultdict\n\ndef ford_fulkerson(graph, source, sink):\n    # Get maximum flow from source to sink\n    parent = [-1] * len(graph)\n    max_flow = 0\n    \n    # Residual graph\n    residual_graph = [row[:] for row in graph]\n    \n    # Augment the flow while there is a path from source to sink\n    while bfs(residual_graph, source, sink, parent):\n        # Find minimum residual capacity\n        path_flow = float(\"Inf\")\n        s = sink\n        while s != source:\n            path_flow = min(path_flow, residual_graph[parent[s]][s])\n            s = parent[s]\n        \n        # Update residual capacities\n        max_flow += path_flow\n        v = sink\n        while v != source:\n            u = parent[v]\n            residual_graph[u][v] -= path_flow\n            residual_graph[v][u] += path_flow\n            v = parent[v]\n    \n    return max_flow\n\ndef bfs(graph, source, sink, parent):\n    # Return if there is a path from source to sink with positive flow\n    visited = [False] * len(graph)\n    queue = [source]\n    visited[source] = True\n    \n    while queue:\n        u = queue.pop(0)\n        for ind, val in enumerate(graph[u]):\n            if not visited[ind] and val > 0:\n                queue.append(ind)\n                visited[ind] = True\n                parent[ind] = u\n    \n    return visited[sink]\n\n# Define the graph (adjacency matrix)\n# 0 = source, 5 = sink\ngraph = [\n    [0, 10, 8, 0, 0, 0],  # Source (node 0)\n    [0, 0, 5, 5, 0, 0],   # Node 1\n    [0, 0, 0, 0, 10, 0],  # Node 2\n    [0, 0, 0, 0, 8, 8],   # Node 3\n    [0, 0, 0, 0, 0, 10],  # Node 4\n    [0, 0, 0, 0, 0, 0]    # Sink (node 5)\n]\n\nmax_flow = ford_fulkerson(graph, 0, 5)\nprint(max_flow)"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "Which code correctly implements the Singleton design pattern in Python?",
+      "options": {
+        "A": "A class using __new__ to control instance creation",
+        "B": "A class with a static getInstance() method",
+        "C": "A class with all methods defined as @classmethod",
+        "D": "A class that inherits from a SingletonBase class"
+      },
+      "correct_answer": "A",
+      "code_example": "# Option A\nclass SingletonA:\n    _instance = None\n    \n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super(SingletonA, cls).__new__(cls)\n            cls._instance.initialized = False\n        return cls._instance\n    \n    def __init__(self):\n        if not self.initialized:\n            self.initialized = True\n            self.data = []\n\n# Option B\nclass SingletonB:\n    _instance = None\n    \n    def __init__(self):\n        self.data = []\n    \n    @staticmethod\n    def getInstance():\n        if SingletonB._instance is None:\n            SingletonB._instance = SingletonB()\n        return SingletonB._instance\n\n# Option C\nclass SingletonC:\n    _instance = None\n    _data = []\n    \n    @classmethod\n    def get_data(cls):\n        return cls._data\n    \n    @classmethod\n    def add_data(cls, item):\n        cls._data.append(item)\n\n# Option D\nclass SingletonBase:\n    def __init__(self):\n        pass\n\nclass SingletonD(SingletonBase):\n    _instance = None\n    \n    def __init__(self):\n        if not SingletonD._instance:\n            super().__init__()\n            SingletonD._instance = self\n            self.data = []\n        else:\n            self = SingletonD._instance"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using attribute access functions?",
+      "options": {
+        "A": "{'name': 'TestObject', 'custom_attr': 42}",
+        "B": "{'name': 'TestObject', 'custom_attr': 42, 'dynamic_attr': 'Added dynamically'}",
+        "C": "{'name': 'TestObject', 'dynamic_attr': 'Added dynamically'}",
+        "D": "AttributeError: 'TestClass' object has no attribute 'missing_attr'"
+      },
+      "correct_answer": "B",
+      "code_example": "class TestClass:\n    def __init__(self, name):\n        self.name = name\n        self.custom_attr = 42\n    \n    def __getattr__(self, name):\n        if name == 'missing_attr':\n            return 'This attribute does not exist'\n        raise AttributeError(f\"'TestClass' object has no attribute '{name}'\")\n\nobj = TestClass('TestObject')\nsetattr(obj, 'dynamic_attr', 'Added dynamically')\n\nattributes = {}\nfor attr in ['name', 'custom_attr', 'dynamic_attr']:\n    if hasattr(obj, attr):\n        attributes[attr] = getattr(obj, attr)\n\nprint(attributes)"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output when searching for words with the prefix 'co' in the following trie implementation?",
+      "options": {
+        "A": "['coffee', 'cold', 'coding']",
+        "B": "['co', 'coffee', 'cold', 'coding']",
+        "C": "['coffee', 'cold', 'coding', 'coder']",
+        "D": "['coffee', 'cold']"
+      },
+      "correct_answer": "C",
+      "code_example": "class TrieNode:\n    def __init__(self):\n        self.children = {}\n        self.is_end_of_word = False\n\nclass Trie:\n    def __init__(self):\n        self.root = TrieNode()\n    \n    def insert(self, word):\n        node = self.root\n        for char in word:\n            if char not in node.children:\n                node.children[char] = TrieNode()\n            node = node.children[char]\n        node.is_end_of_word = True\n    \n    def search_prefix(self, prefix):\n        node = self.root\n        for char in prefix:\n            if char not in node.children:\n                return []\n            node = node.children[char]\n        \n        # Find all words with this prefix\n        results = []\n        self._dfs(node, prefix, results)\n        return results\n    \n    def _dfs(self, node, current_word, results):\n        if node.is_end_of_word:\n            results.append(current_word)\n        \n        for char, child_node in node.children.items():\n            self._dfs(child_node, current_word + char, results)\n\n# Create and populate the trie\ntrie = Trie()\nwords = ['coffee', 'cold', 'coding', 'coder', 'hot', 'heat']\nfor word in words:\n    trie.insert(word)\n\n# Search for words with prefix 'co'\nresult = trie.search_prefix('co')\nprint(result)"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Matplotlib visualization code?",
+      "options": {
+        "A": "A stacked bar chart with 4 categories and 2 bars per category",
+        "B": "A grouped bar chart with 2 categories and 4 bars per category",
+        "C": "A grouped bar chart with 4 categories and 2 bars per category",
+        "D": "A line chart with 2 lines across 4 data points"
+      },
+      "correct_answer": "C",
+      "code_example": "import matplotlib.pyplot as plt\nimport numpy as np\n\n# Data for grouped bar chart\ncategories = ['Q1', 'Q2', 'Q3', 'Q4']\nproduct_a = [15, 30, 35, 40]\nproduct_b = [25, 20, 30, 35]\n\n# Set up plot\nfig, ax = plt.subplots(figsize=(10, 6))\n\n# Set width of bars\nbar_width = 0.35\nindices = np.arange(len(categories))\n\n# Create bars\nbar1 = ax.bar(indices - bar_width/2, product_a, bar_width, label='Product A')\nbar2 = ax.bar(indices + bar_width/2, product_b, bar_width, label='Product B')\n\n# Add labels and title\nax.set_xlabel('Quarter')\nax.set_ylabel('Sales')\nax.set_title('Quarterly Sales by Product')\nax.set_xticks(indices)\nax.set_xticklabels(categories)\nax.legend()\n\nplt.tight_layout()\n# This would display the plot: plt.show()\n\n# For this question, we're returning a description of the chart type\nprint(\"A grouped bar chart with 4 categories and 2 bars per category\")"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a common API security measure for preventing abuse?",
+      "options": {
+        "A": "Rate limiting based on IP address or API key",
+        "B": "OAuth 2.0 authentication with token expiration",
+        "C": "Using SHA-256 to hash all API response data",
+        "D": "Implementing CORS (Cross-Origin Resource Sharing) restrictions"
+      },
+      "correct_answer": "C",
+      "code_example": "from fastapi import FastAPI, Depends, HTTPException, Header, Request\nfrom fastapi.middleware.cors import CORSMiddleware\nfrom datetime import datetime, timedelta\nimport time\nfrom typing import Dict, List, Optional\n\napp = FastAPI()\n\n# CORS Implementation (Option D)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"https://trusted-app.com\"],  # Restrict to specific origins\n    allow_credentials=True,\n    allow_methods=[\"GET\", \"POST\"],  # Restrict HTTP methods\n    allow_headers=[\"Authorization\"],\n)\n\n# Rate Limiting Implementation (Option A)\nclass RateLimiter:\n    def __init__(self, requests_per_minute: int = 60):\n        self.requests_per_minute = requests_per_minute\n        self.requests: Dict[str, List[float]] = {}\n    \n    def is_rate_limited(self, key: str) -> bool:\n        now = time.time()\n        minute_ago = now - 60\n        \n        # Initialize if key not seen before\n        if key not in self.requests:\n            self.requests[key] = []\n        \n        # Clean old requests\n        self.requests[key] = [req_time for req_time in self.requests[key] if req_time > minute_ago]\n        \n        # Check if rate limit exceeded\n        if len(self.requests[key]) >= self.requests_per_minute:\n            return True\n        \n        # Add current request timestamp\n        self.requests[key].append(now)\n        return False\n\nrate_limiter = RateLimiter(requests_per_minute=10)\n\n# Token Authentication (Similar to OAuth 2.0, Option B)\nvalid_tokens = {\n    \"user1_token\": {\"expires\": datetime.now() + timedelta(hours=1), \"scope\": \"read\"},\n    \"admin_token\": {\"expires\": datetime.now() + timedelta(days=1), \"scope\": \"read write\"}\n}\n\ndef verify_token(authorization: Optional[str] = Header(None)):\n    if not authorization or not authorization.startswith(\"Bearer \"):\n        raise HTTPException(status_code=401, detail=\"Missing or invalid token\")\n    \n    token = authorization.replace(\"Bearer \", \"\")\n    if token not in valid_tokens:\n        raise HTTPException(status_code=401, detail=\"Invalid token\")\n    \n    if valid_tokens[token][\"expires\"] < datetime.now():\n        raise HTTPException(status_code=401, detail=\"Token expired\")\n    \n    return {\"token\": token, \"scope\": valid_tokens[token][\"scope\"]}\n\n# Combined endpoint with security measures\n@app.get(\"/api/data\")\nasync def get_data(\n    request: Request,\n    token_info: dict = Depends(verify_token)\n):\n    # Rate limiting check\n    client_ip = request.client.host\n    if rate_limiter.is_rate_limited(client_ip):\n        raise HTTPException(status_code=429, detail=\"Rate limit exceeded\")\n    \n    # Scope check (part of OAuth 2.0)\n    if \"read\" not in token_info[\"scope\"]:\n        raise HTTPException(status_code=403, detail=\"Insufficient permissions\")\n    \n    # Normal response (not using SHA-256 hashing of response - Option C)\n    return {\"data\": \"Sensitive information\"}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "Which statement about database sharding and replication is NOT correct?",
+      "options": {
+        "A": "Sharding distributes data across multiple servers based on a shard key",
+        "B": "Replication creates copies of data across multiple servers to improve read performance",
+        "C": "Sharding improves both read and write performance by distributing the load",
+        "D": "Replication eliminates the need for database backups since data exists on multiple servers"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the minimum spanning tree weight calculated by Kruskal's algorithm for the following graph?",
+      "options": {
+        "A": "14",
+        "B": "16",
+        "C": "19",
+        "D": "21"
+      },
+      "correct_answer": "B",
+      "code_example": "class UnionFind:\n    def __init__(self, n):\n        self.parent = list(range(n))\n        self.rank = [0] * n\n    \n    def find(self, x):\n        if self.parent[x] != x:\n            self.parent[x] = self.find(self.parent[x])  # Path compression\n        return self.parent[x]\n    \n    def union(self, x, y):\n        root_x = self.find(x)\n        root_y = self.find(y)\n        \n        if root_x == root_y:\n            return False\n        \n        # Union by rank\n        if self.rank[root_x] < self.rank[root_y]:\n            self.parent[root_x] = root_y\n        elif self.rank[root_x] > self.rank[root_y]:\n            self.parent[root_y] = root_x\n        else:\n            self.parent[root_y] = root_x\n            self.rank[root_x] += 1\n        \n        return True\n\ndef kruskal_mst(n, edges):\n    # Sort edges by weight\n    edges.sort(key=lambda x: x[2])\n    \n    uf = UnionFind(n)\n    mst_weight = 0\n    mst_edges = []\n    \n    for u, v, weight in edges:\n        if uf.union(u, v):  # If adding this edge doesn't create a cycle\n            mst_weight += weight\n            mst_edges.append((u, v, weight))\n    \n    return mst_weight, mst_edges\n\n# Define the graph\n# Each edge is (u, v, weight)\nedges = [\n    (0, 1, 4),\n    (0, 2, 8),\n    (1, 2, 9),\n    (1, 3, 8),\n    (1, 4, 5),\n    (2, 3, 2),\n    (3, 4, 7),\n    (3, 5, 6),\n    (4, 5, 1)\n]\n\n# Number of vertices\nn = 6\n\n# Calculate MST using Kruskal's algorithm\nmst_weight, mst_edges = kruskal_mst(n, edges)\n\nprint(mst_weight)"
+    }
+  ]
+}
