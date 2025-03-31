@@ -1,0 +1,623 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will the following FizzBuzz implementation print for the number 15?",
+      "options": {
+        "A": "Fizz",
+        "B": "Buzz",
+        "C": "FizzBuzz",
+        "D": "15"
+      },
+      "correct_answer": "C",
+      "code_example": "def fizzbuzz(num):\n    if num % 3 == 0 and num % 5 == 0:\n        return \"FizzBuzz\"\n    elif num % 3 == 0:\n        return \"Fizz\"\n    elif num % 5 == 0:\n        return \"Buzz\"\n    else:\n        return str(num)\n\nprint(fizzbuzz(15))"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the output of the following dictionary operation?",
+      "options": {
+        "A": "['name', 'age', 'city']",
+        "B": "['John', 25, 'New York']",
+        "C": "[('name', 'John'), ('age', 25), ('city', 'New York')]",
+        "D": "Error"
+      },
+      "correct_answer": "C",
+      "code_example": "my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}\nprint(list(my_dict.items()))"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the purpose of docstrings in Python functions?",
+      "options": {
+        "A": "They are only used for syntax highlighting",
+        "B": "They provide documentation about the function's purpose, parameters, and return values",
+        "C": "They are required for the function to execute properly",
+        "D": "They are used to define function annotations"
+      },
+      "correct_answer": "B",
+      "code_example": ""
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be printed by the following code?",
+      "options": {
+        "A": "6",
+        "B": "24",
+        "C": "120",
+        "D": "720"
+      },
+      "correct_answer": "C",
+      "code_example": "def factorial(n):\n    \"\"\"Calculate the factorial of n\"\"\"\n    if n <= 1:\n        return 1\n    return n * factorial(n-1)\n\nprint(factorial(5))"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the time complexity of a binary search on a sorted array?",
+      "options": {
+        "A": "O(1)",
+        "B": "O(log n)",
+        "C": "O(n)",
+        "D": "O(n²)"
+      },
+      "correct_answer": "B",
+      "code_example": ""
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following selection sort implementation for the given array?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[5, 4, 3, 2, 1]",
+        "C": "[3, 1, 4, 2, 5]",
+        "D": "The code will raise an error"
+      },
+      "correct_answer": "A",
+      "code_example": "def selection_sort(arr):\n    for i in range(len(arr)):\n        min_idx = i\n        for j in range(i+1, len(arr)):\n            if arr[min_idx] > arr[j]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr\n\nprint(selection_sort([3, 1, 4, 2, 5]))"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is the output of the following linear search implementation?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "-1"
+      },
+      "correct_answer": "C",
+      "code_example": "def linear_search(arr, x):\n    for i in range(len(arr)):\n        if arr[i] == x:\n            return i\n    return -1\n\nprint(linear_search([10, 20, 30, 40, 50], 30))"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will the following palindrome checking function return for the input 'level'?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "None",
+        "D": "It will raise an error"
+      },
+      "correct_answer": "A",
+      "code_example": "def is_palindrome(s):\n    return s == s[::-1]\n\nprint(is_palindrome('level'))"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Which of the following exceptions will be raised by this code?",
+      "options": {
+        "A": "ValueError",
+        "B": "TypeError",
+        "C": "IndexError",
+        "D": "KeyError"
+      },
+      "correct_answer": "B",
+      "code_example": "def add_numbers(a, b):\n    return a + b\n\nresult = add_numbers(5, \"10\")"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the median value in the following list?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "3.5"
+      },
+      "correct_answer": "D",
+      "code_example": "def find_median(numbers):\n    sorted_numbers = sorted(numbers)\n    n = len(sorted_numbers)\n    if n % 2 == 0:\n        return (sorted_numbers[n//2 - 1] + sorted_numbers[n//2]) / 2\n    else:\n        return sorted_numbers[n//2]\n\nprint(find_median([1, 3, 5, 7, 2]))"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following conditional expression?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "adult",
+        "D": "minor"
+      },
+      "correct_answer": "C",
+      "code_example": "age = 25\nstatus = \"adult\" if age >= 18 else \"minor\"\nprint(status)"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "How many swaps will the following bubble sort implementation perform for the given array?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "correct_answer": "B",
+      "code_example": "def bubble_sort(arr):\n    n = len(arr)\n    swap_count = 0\n    \n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n                swap_count += 1\n    \n    return swap_count\n\nprint(bubble_sort([5, 3, 8, 4, 2]))"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What is the correct way to create a custom exception class in Python?",
+      "options": {
+        "A": "class MyError(Exception): pass",
+        "B": "class MyError extends Exception: pass",
+        "C": "def MyError(Exception): pass",
+        "D": "class MyError implements Exception: pass"
+      },
+      "correct_answer": "A",
+      "code_example": ""
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be printed by the following code that handles multiple exceptions?",
+      "options": {
+        "A": "Division by zero!",
+        "B": "Value error!",
+        "C": "Error: division by zero",
+        "D": "No error"
+      },
+      "correct_answer": "C",
+      "code_example": "try:\n    result = 10 / 0\nexcept ValueError:\n    print(\"Value error!\")\nexcept ZeroDivisionError as e:\n    print(f\"Error: {e}\")\nexcept:\n    print(\"Unknown error!\")"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will the following while loop print?",
+      "options": {
+        "A": "1 2 3 4 5",
+        "B": "1 2 3",
+        "C": "1 2 4 5",
+        "D": "1 3 5"
+      },
+      "correct_answer": "C",
+      "code_example": "i = 0\nwhile i < 5:\n    i += 1\n    if i == 3:\n        continue\n    print(i, end=\" \")"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "Which of the following statements about tuples in Python is false?",
+      "options": {
+        "A": "Tuples are immutable",
+        "B": "Tuples can contain elements of different types",
+        "C": "Tuples can be used as dictionary keys",
+        "D": "Individual elements in a tuple can be modified after creation"
+      },
+      "correct_answer": "D",
+      "code_example": ""
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating closures?",
+      "options": {
+        "A": "15",
+        "B": "20",
+        "C": "25",
+        "D": "Error"
+      },
+      "correct_answer": "C",
+      "code_example": "def outer_function(x):\n    def inner_function(y):\n        return x + y\n    return inner_function\n\naddition_function = outer_function(10)\nprint(addition_function(15))"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following regex patterns would be most efficient for matching email addresses?",
+      "options": {
+        "A": "^.*@.*\\..*$",
+        "B": "^[^@]+@[^@]+\\.[^@]+$",
+        "C": "^(.*)@(.*)\\.(.*)",
+        "D": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+      },
+      "correct_answer": "B",
+      "code_example": ""
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the primary purpose of a virtual environment in Python?",
+      "options": {
+        "A": "To create isolated Python environments with their own packages and dependencies",
+        "B": "To improve the performance of Python scripts",
+        "C": "To enable Python to run on different operating systems",
+        "D": "To compile Python code into machine code"
+      },
+      "correct_answer": "A",
+      "code_example": ""
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will the following code print, demonstrating the difference between greedy and non-greedy matching?",
+      "options": {
+        "A": "['<h1>Title</h1>']",
+        "B": "['<h1>', '<p>']",
+        "C": "['<h1>', '<p>', '</p>', '</h1>']",
+        "D": "['<h1>', '</h1>']"
+      },
+      "correct_answer": "B",
+      "code_example": "import re\n\nhtml = \"<h1>Title</h1><p>Paragraph</p>\"\n\n# Non-greedy matching with ? after *\nresult = re.findall('<.*?>', html)\nprint(result)"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What is the key difference between a generator expression and a list comprehension in terms of memory usage?",
+      "options": {
+        "A": "List comprehensions always use less memory than generator expressions",
+        "B": "Generator expressions create elements on-demand, while list comprehensions create all elements at once",
+        "C": "There is no difference in memory usage between the two",
+        "D": "Generator expressions can only be used with numeric data types"
+      },
+      "correct_answer": "B",
+      "code_example": ""
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "In SQLAlchemy, what is the correct way to define a one-to-many relationship?",
+      "options": {
+        "A": "child = relationship('Child', backref='parent')",
+        "B": "parent = relationship('Parent', backref='child')",
+        "C": "child = relationship('Child', oneToMany=True)",
+        "D": "parent = ForeignKey('parent.id')"
+      },
+      "correct_answer": "A",
+      "code_example": ""
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating immutability principles?",
+      "options": {
+        "A": "[1, 2, 3]",
+        "B": "[1, 2, 3, 4]",
+        "C": "Error",
+        "D": "[1, 2, 3, 4, 5]"
+      },
+      "correct_answer": "B",
+      "code_example": "def add_to_list(val, items=None):\n    if items is None:\n        items = []\n    items.append(val)\n    return items\n\nlist1 = add_to_list(1)\nlist1 = add_to_list(2, list1)\nlist1 = add_to_list(3, list1)\nlist2 = add_to_list(4, list1)\nprint(list1)"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What status code will you receive when making a request to a valid endpoint that doesn't exist using the requests library?",
+      "options": {
+        "A": "200",
+        "B": "404",
+        "C": "500",
+        "D": "403"
+      },
+      "correct_answer": "B",
+      "code_example": "import requests\n\n# This is conceptual code and not meant to be executed\n# response = requests.get('https://api.example.com/nonexistent')\n# print(response.status_code)\n\n# The answer is 404 (Not Found)"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What is the primary advantage of the Divide and Conquer approach in algorithm design?",
+      "options": {
+        "A": "It always results in O(1) time complexity",
+        "B": "It breaks a problem into smaller subproblems, solves them independently, and combines their solutions",
+        "C": "It eliminates the need for recursive functions",
+        "D": "It guarantees that all algorithms will be stable"
+      },
+      "correct_answer": "B",
+      "code_example": ""
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will the following code using partial functions print?",
+      "options": {
+        "A": "15",
+        "B": "20",
+        "C": "25",
+        "D": "Error"
+      },
+      "correct_answer": "A",
+      "code_example": "from functools import partial\n\ndef multiply(x, y):\n    return x * y\n\n# Create a new function with x fixed at 5\ndouble = partial(multiply, 5)\n\n# Call the new function\nprint(double(3))"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the Counter class?",
+      "options": {
+        "A": "{'a': 3, 'b': 2, 'c': 1}",
+        "B": "[('a', 3), ('b', 2), ('c', 1)]",
+        "C": "[('a', 3)]",
+        "D": "['a', 'a', 'a']"
+      },
+      "correct_answer": "C",
+      "code_example": "from collections import Counter\n\ntext = 'aabbbaccc'\ncounter = Counter(text)\nprint(counter.most_common(1))"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating first-class functions?",
+      "options": {
+        "A": "30",
+        "B": "60",
+        "C": "90",
+        "D": "Error"
+      },
+      "correct_answer": "B",
+      "code_example": "def apply_operation(x, y, operation):\n    return operation(x, y)\n\ndef multiply(a, b):\n    return a * b\n\nresult = apply_operation(10, 6, multiply)\nprint(result)"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the two-pointer technique?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "None",
+        "D": "Error"
+      },
+      "correct_answer": "A",
+      "code_example": "def has_pair_with_sum(arr, target_sum):\n    left = 0\n    right = len(arr) - 1\n    \n    while left < right:\n        current_sum = arr[left] + arr[right]\n        \n        if current_sum == target_sum:\n            return True\n        elif current_sum < target_sum:\n            left += 1\n        else:\n            right -= 1\n    \n    return False\n\nsorted_array = [1, 3, 5, 7, 9, 11]\nprint(has_pair_with_sum(sorted_array, 12))"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "In a Flask application, which directory structure is typically used for static files?",
+      "options": {
+        "A": "/app/static/",
+        "B": "/static/app/",
+        "C": "/app/public/",
+        "D": "/resources/static/"
+      },
+      "correct_answer": "A",
+      "code_example": ""
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "Which HTTP method is idempotent but not safe according to HTTP specifications?",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "OPTIONS"
+      },
+      "correct_answer": "C",
+      "code_example": ""
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will the following Flask route function return?",
+      "options": {
+        "A": "A string containing 'Hello, World!'",
+        "B": "A JSON object with the message 'Hello, World!'",
+        "C": "A 404 error",
+        "D": "A redirect to the index page"
+      },
+      "correct_answer": "B",
+      "code_example": "from flask import Flask, jsonify\n\napp = Flask(__name__)\n\n@app.route('/api/hello')\ndef hello_api():\n    return jsonify({'message': 'Hello, World!'})\n\n# If the route was executed, it would return a JSON response"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the correct way to define an abstract class in Python?",
+      "options": {
+        "A": "Use the 'abstract' keyword before the class definition",
+        "B": "Inherit from the ABC class and use the @abstractmethod decorator",
+        "C": "Use the 'interface' keyword to define the class",
+        "D": "Set the __abstract__ attribute to True in the class"
+      },
+      "correct_answer": "B",
+      "code_example": "from abc import ABC, abstractmethod\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self):\n        pass\n    \n    @abstractmethod\n    def perimeter(self):\n        pass\n        \nclass Rectangle(Shape):\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n        \n    def area(self):\n        return self.width * self.height\n        \n    def perimeter(self):\n        return 2 * (self.width + self.height)"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code which demonstrates Python's Method Resolution Order (MRO) in multiple inheritance?",
+      "options": {
+        "A": "A, B, C, D, object",
+        "B": "A, C, B, D, object",
+        "C": "A, B, D, C, object",
+        "D": "D, B, C, A, object"
+      },
+      "correct_answer": "B",
+      "code_example": "class D: pass\nclass C: pass\nclass B(D): pass\nclass A(B, C): pass\n\nprint(\", \".join([cls.__name__ for cls in A.__mro__]))"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "When using the pytest coverage tool, what does a 'missing' line in the coverage report indicate?",
+      "options": {
+        "A": "The line contains an error and couldn't be executed",
+        "B": "The line was not executed during the tests",
+        "C": "The line is unreachable code that can never be executed",
+        "D": "The line is excluded from coverage by a pragma directive"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing a simple trie for prefix searching?",
+      "options": {
+        "A": "['apple', 'apply']",
+        "B": "['apple']",
+        "C": "['apply']",
+        "D": "['apple', 'apply', 'application']"
+      },
+      "correct_answer": "A",
+      "code_example": "class TrieNode:\n    def __init__(self):\n        self.children = {}\n        self.is_end_of_word = False\n\nclass Trie:\n    def __init__(self):\n        self.root = TrieNode()\n    \n    def insert(self, word):\n        node = self.root\n        for char in word:\n            if char not in node.children:\n                node.children[char] = TrieNode()\n            node = node.children[char]\n        node.is_end_of_word = True\n    \n    def search_prefix(self, prefix):\n        node = self.root\n        for char in prefix:\n            if char not in node.children:\n                return []\n            node = node.children[char]\n        \n        words = []\n        self._find_words(node, prefix, words)\n        return words\n    \n    def _find_words(self, node, prefix, words):\n        if node.is_end_of_word:\n            words.append(prefix)\n        \n        for char, child_node in node.children.items():\n            self._find_words(child_node, prefix + char, words)\n\n# Usage\ntrie = Trie()\nfor word in [\"apple\", \"apply\", \"banana\", \"application\"]:\n    trie.insert(word)\n\nprint(trie.search_prefix(\"app\")[:2])  # Limiting to first 2 results"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What is the correct way to implement a thread synchronization lock in Python to protect a shared resource?",
+      "options": {
+        "A": "Use the 'synchronized' keyword before method definitions",
+        "B": "Create a Lock object from threading module and use it with 'with' statement",
+        "C": "Use the @synchronized decorator from the threading module",
+        "D": "Add the thread_safe=True parameter when creating objects"
+      },
+      "correct_answer": "B",
+      "code_example": "import threading\nimport time\n\nclass SharedCounter:\n    def __init__(self):\n        self.count = 0\n        self.lock = threading.Lock()\n    \n    def increment(self):\n        with self.lock:\n            current = self.count\n            time.sleep(0.001)  # Simulate some work\n            self.count = current + 1\n    \n    def get_count(self):\n        with self.lock:\n            return self.count\n\n# Usage example\ncounter = SharedCounter()\n\ndef worker():\n    for _ in range(5):\n        counter.increment()\n\n# Create and start threads\nthreads = []\nfor _ in range(3):\n    thread = threading.Thread(target=worker)\n    threads.append(thread)\n    thread.start()\n\n# Wait for all threads to complete\nfor thread in threads:\n    thread.join()\n\nprint(counter.get_count())"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What is the primary difference between authentication and authorization in web applications?",
+      "options": {
+        "A": "Authentication uses tokens while authorization uses cookies",
+        "B": "Authentication is handled client-side while authorization is handled server-side",
+        "C": "Authentication verifies who a user is while authorization determines what they can access",
+        "D": "Authentication is optional while authorization is required for all secure applications"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code which uses mock objects for testing?",
+      "options": {
+        "A": "AssertionError: expected call not found",
+        "B": "Test passed",
+        "C": "AssertionError: Expected 'get' to be called once. Called 0 times.",
+        "D": "RuntimeError: mock object has no attribute 'return_value'"
+      },
+      "correct_answer": "C",
+      "code_example": "import unittest\nfrom unittest.mock import Mock, patch\n\ndef get_user_data(user_id):\n    response = make_api_request(f'/users/{user_id}')\n    return response.json()\n\ndef make_api_request(url):\n    # In a real app, this would make an HTTP request\n    pass\n\nclass TestUserData(unittest.TestCase):\n    @patch('__main__.make_api_request')\n    def test_get_user_data(self, mock_api):\n        # Set up mock\n        mock_response = Mock()\n        mock_response.json.return_value = {'id': 123, 'name': 'Test User'}\n        mock_api.return_value = mock_response\n        \n        # Call the function\n        result = get_user_data(123)\n        \n        # Assertions\n        mock_api.assert_called_once_with('/users/123')\n        mock_response.post.assert_called_once()\n        self.assertEqual(result, {'id': 123, 'name': 'Test User'})\n\n# For demonstration, manually run the test case and catch the exception\ntest_case = TestUserData('test_get_user_data')\ntry:\n    test_case.test_get_user_data()\n    print(\"Test passed\")\nexcept AssertionError as e:\n    print(str(e))"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What is a key feature of the Scrapy framework that differentiates it from simpler web scraping solutions like Beautiful Soup?",
+      "options": {
+        "A": "It can parse HTML and XML documents",
+        "B": "It provides a complete asynchronous framework with a crawling engine",
+        "C": "It has CSS selector support for finding elements",
+        "D": "It can handle JavaScript-rendered pages without additional tools"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating a balanced AVL tree insertion?",
+      "options": {
+        "A": "Root: 4, Left: 2, Right: 6",
+        "B": "Root: 3, Left: 2, Right: 5",
+        "C": "Root: 4, Left: 2, Right: 5",
+        "D": "Root: 3, Left: 2, Right: 4"
+      },
+      "correct_answer": "A",
+      "code_example": "class AVLNode:\n    def __init__(self, key):\n        self.key = key\n        self.left = None\n        self.right = None\n        self.height = 1\n\nclass AVLTree:\n    def get_height(self, node):\n        if not node:\n            return 0\n        return node.height\n    \n    def get_balance(self, node):\n        if not node:\n            return 0\n        return self.get_height(node.left) - self.get_height(node.right)\n    \n    def right_rotate(self, y):\n        x = y.left\n        T2 = x.right\n        \n        x.right = y\n        y.left = T2\n        \n        y.height = max(self.get_height(y.left), self.get_height(y.right)) + 1\n        x.height = max(self.get_height(x.left), self.get_height(x.right)) + 1\n        \n        return x\n    \n    def left_rotate(self, x):\n        y = x.right\n        T2 = y.left\n        \n        y.left = x\n        x.right = T2\n        \n        x.height = max(self.get_height(x.left), self.get_height(x.right)) + 1\n        y.height = max(self.get_height(y.left), self.get_height(y.right)) + 1\n        \n        return y\n    \n    def insert(self, root, key):\n        if not root:\n            return AVLNode(key)\n        \n        if key < root.key:\n            root.left = self.insert(root.left, key)\n        elif key > root.key:\n            root.right = self.insert(root.right, key)\n        else:  # Equal keys not allowed\n            return root\n        \n        root.height = 1 + max(self.get_height(root.left), self.get_height(root.right))\n        \n        balance = self.get_balance(root)\n        \n        # Left Left Case\n        if balance > 1 and key < root.left.key:\n            return self.right_rotate(root)\n        \n        # Right Right Case\n        if balance < -1 and key > root.right.key:\n            return self.left_rotate(root)\n        \n        # Left Right Case\n        if balance > 1 and key > root.left.key:\n            root.left = self.left_rotate(root.left)\n            return self.right_rotate(root)\n        \n        # Right Left Case\n        if balance < -1 and key < root.right.key:\n            root.right = self.right_rotate(root.right)\n            return self.left_rotate(root)\n        \n        return root\n\n# Create the tree and insert values\navl_tree = AVLTree()\nroot = None\n\nkeys = [3, 2, 6, 4, 5]\nfor key in keys:\n    root = avl_tree.insert(root, key)\n\n# Print the result\nresult = f\"Root: {root.key}, Left: {root.left.key}, Right: {root.right.key}\"\nprint(result)"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What is a key benefit of using an API Gateway pattern in a microservices architecture?",
+      "options": {
+        "A": "It eliminates the need for API documentation",
+        "B": "It provides a single entry point for all clients with request routing, composition, and protocol translation",
+        "C": "It directly connects clients to individual microservices for better performance",
+        "D": "It removes the need for authentication and authorization in microservices"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code which demonstrates handling of JavaScript-heavy sites using Selenium?",
+      "options": {
+        "A": "TypeError: 'WebDriver' object has no attribute 'find_element'",
+        "B": "NoSuchElementException: Unable to locate element",
+        "C": "The element text will be printed",
+        "D": "TimeoutException: Timed out waiting for page to load"
+      },
+      "correct_answer": "C",
+      "code_example": "from selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.support.ui import WebDriverWait\nfrom selenium.webdriver.support import expected_conditions as EC\nfrom selenium.webdriver.chrome.options import Options\n\n# For demonstration purposes, we'll create a mock of the Selenium behavior\nclass MockDriver:\n    def __init__(self):\n        self.current_url = \"https://example.com\"\n    \n    def get(self, url):\n        self.current_url = url\n        \n    def find_element(self, by, value):\n        # In a real scenario, this would find the actual element\n        return MockElement()\n        \n    def quit(self):\n        pass\n\nclass MockElement:\n    def text(self):\n        return \"Dynamic Content Loaded\"\n    \n    def click(self):\n        pass\n    \n    @property\n    def text(self):\n        return \"Dynamic Content Loaded\"\n\nclass MockWait:\n    def __init__(self, driver, timeout):\n        self.driver = driver\n        \n    def until(self, condition):\n        # Simulate waiting for element to be clickable\n        return MockElement()\n\n# Use our mocks to simulate the Selenium code execution\ndef selenium_example():\n    # In an actual execution, this would be real Chrome WebDriver\n    driver = MockDriver()\n    \n    try:\n        # Navigate to a JavaScript-heavy site\n        driver.get(\"https://example.com/js-heavy-page\")\n        \n        # Wait for dynamic content to load\n        wait = MockWait(driver, 10)\n        element = wait.until(\n            lambda d: d.find_element(By.ID, \"dynamic-element\")\n        )\n        \n        # Print the text of the element\n        print(element.text)\n        \n    finally:\n        driver.quit()\n\nselenium_example()"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses a segment tree for range sum queries?",
+      "options": {
+        "A": "10",
+        "B": "15",
+        "C": "7",
+        "D": "21"
+      },
+      "correct_answer": "A",
+      "code_example": "class SegmentTree:\n    def __init__(self, arr):\n        self.n = len(arr)\n        # Height of segment tree\n        x = (self.n - 1).bit_length()\n        # Maximum size of segment tree\n        max_size = 2 * (1 << x) - 1\n        # Allocate memory\n        self.tree = [0] * max_size\n        # Build the tree\n        self._build_tree(arr, 0, 0, self.n - 1)\n    \n    def _build_tree(self, arr, node, start, end):\n        # If there is only one element in the current range\n        if start == end:\n            self.tree[node] = arr[start]\n            return\n        \n        # Otherwise, split the range and recurse\n        mid = (start + end) // 2\n        self._build_tree(arr, 2 * node + 1, start, mid)\n        self._build_tree(arr, 2 * node + 2, mid + 1, end)\n        \n        # Internal node will have the sum of both its children\n        self.tree[node] = self.tree[2 * node + 1] + self.tree[2 * node + 2]\n    \n    def query(self, start, end):\n        if start < 0 or end >= self.n or start > end:\n            raise ValueError(\"Invalid range for query\")\n        \n        return self._query(0, 0, self.n - 1, start, end)\n    \n    def _query(self, node, node_start, node_end, query_start, query_end):\n        # If the current node's range is completely inside the query range\n        if query_start <= node_start and node_end <= query_end:\n            return self.tree[node]\n        \n        # If the current node's range is completely outside the query range\n        if node_end < query_start or query_end < node_start:\n            return 0\n        \n        # Otherwise, the range overlaps partially\n        mid = (node_start + node_end) // 2\n        left_sum = self._query(2 * node + 1, node_start, mid, query_start, query_end)\n        right_sum = self._query(2 * node + 2, mid + 1, node_end, query_start, query_end)\n        \n        return left_sum + right_sum\n\n# Test the segment tree\narr = [1, 3, 5, 7, 9, 11]\n# Create a segment tree from the array\nseg_tree = SegmentTree(arr)\n# Query for the sum of elements in range [1, 3]\nprint(seg_tree.query(1, 3))"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating a simple scikit-learn classification pipeline?",
+      "options": {
+        "A": "0.9666666666666667",
+        "B": "0.8333333333333334",
+        "C": "1.0",
+        "D": "0.7"
+      },
+      "correct_answer": "B",
+      "code_example": "# For demonstration, we'll create a simplified mock of scikit-learn behavior\nclass MockDataset:\n    def __init__(self):\n        # Simplified mock of iris dataset\n        self.data = [[1, 2], [2, 3], [3, 4], [4, 2], [2, 1], [3, 2]]\n        self.target = [0, 0, 1, 1, 0, 1]\n\nclass MockScaler:\n    def fit(self, X):\n        return self\n    \n    def transform(self, X):\n        # Just return the data unchanged for simplicity\n        return X\n    \n    def fit_transform(self, X):\n        return self.transform(X)\n\nclass MockSVM:\n    def fit(self, X, y):\n        # Store some data for prediction\n        self.X = X\n        self.y = y\n        return self\n    \n    def predict(self, X):\n        # Simplified mock prediction that returns predefined results\n        if len(X) == 2:\n            return [0, 1]  # Our mock test data will have 2 samples with these predictions\n        return self.y\n    \n    def score(self, X, y):\n        # For our mock, return a predefined accuracy score\n        if len(X) == 2:\n            # One correct out of two predictions\n            return 0.5\n        # Training score is higher\n        return 0.8333333333333334\n\nclass MockPipeline:\n    def __init__(self, steps):\n        self.steps = steps\n        self.scaler = steps[0][1]\n        self.classifier = steps[1][1]\n    \n    def fit(self, X, y):\n        X_transformed = self.scaler.fit_transform(X)\n        self.classifier.fit(X_transformed, y)\n        return self\n    \n    def score(self, X, y):\n        X_transformed = self.scaler.transform(X)\n        return self.classifier.score(X_transformed, y)\n\n# In a real scenario, this would use actual scikit-learn\ndef sklearn_classification_example():\n    # Load dataset\n    dataset = MockDataset()\n    X, y = dataset.data, dataset.target\n    \n    # Create a pipeline with preprocessing and SVM classifier\n    pipeline = MockPipeline([\n        ('scaler', MockScaler()),\n        ('classifier', MockSVM())\n    ])\n    \n    # Fit the pipeline\n    pipeline.fit(X, y)\n    \n    # Evaluate on the same data (just for demonstration)\n    accuracy = pipeline.score(X, y)\n    print(accuracy)\n\nsklearn_classification_example()"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What is a key feature of CPython's implementation of the Global Interpreter Lock (GIL)?",
+      "options": {
+        "A": "It allows multiple Python threads to execute Python bytecode simultaneously",
+        "B": "It restricts the execution of Python bytecode to a single thread at a time",
+        "C": "It is required only when using the multiprocessing module",
+        "D": "It only affects Python code that uses the threading module explicitly"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code which demonstrates integration with AWS S3 service?",
+      "options": {
+        "A": "PermissionError: Missing S3 credentials",
+        "B": "File uploaded to: s3://test-bucket/example.txt",
+        "C": "ImportError: No module named 'boto3'",
+        "D": "ConnectionError: Unable to connect to AWS S3"
+      },
+      "correct_answer": "B",
+      "code_example": "# This is a simplified mock to simulate AWS S3 interactions without requiring actual AWS credentials\nclass MockS3Client:\n    def __init__(self, service_name):\n        self.service_name = service_name\n        self.buckets = {}\n    \n    def upload_file(self, file_path, bucket, object_name):\n        if bucket not in self.buckets:\n            self.buckets[bucket] = {}\n        self.buckets[bucket][object_name] = f\"Content from {file_path}\"\n        return f\"File uploaded to: s3://{bucket}/{object_name}\"\n\nclass MockBoto3:\n    @staticmethod\n    def client(service_name, **kwargs):\n        return MockS3Client(service_name)\n\n# Mock the boto3 module\nboto3 = MockBoto3()\n\ndef upload_to_s3(file_path, bucket_name, object_name=None):\n    \"\"\"\n    Upload a file to an S3 bucket\n    \n    :param file_path: File to upload\n    :param bucket_name: Bucket to upload to\n    :param object_name: S3 object name (if None, file_name is used)\n    :return: True if file was uploaded, else False\n    \"\"\"\n    # If object_name was not specified, use file_path\n    if object_name is None:\n        object_name = file_path.split('/')[-1]\n    \n    # Upload the file\n    s3_client = boto3.client('s3')\n    try:\n        response = s3_client.upload_file(file_path, bucket_name, object_name)\n        print(response)\n        return True\n    except Exception as e:\n        print(f\"Error: {e}\")\n        return False\n\n# Test the function\nupload_to_s3(\"example.txt\", \"test-bucket\")"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates code coverage measurement using the `coverage` library?",
+      "options": {
+        "A": "Coverage: 75%",
+        "B": "Coverage: 50%",
+        "C": "Coverage: 66.67%",
+        "D": "Coverage report requires running tests first"
+      },
+      "correct_answer": "C",
+      "code_example": "# Mocking the coverage module for demonstration\nclass MockCoverage:\n    def __init__(self):\n        self.started = False\n        self.measured_files = {}\n    \n    def start(self):\n        self.started = True\n    \n    def stop(self):\n        self.started = False\n        # Mock some coverage data\n        self.measured_files = {\n            'example.py': {\n                'lines': [1, 2, 3, 4, 5, 6],\n                'executed': [1, 2, 3, 5]  # Line 4 and 6 not executed\n            }\n        }\n    \n    def get_coverage_percentage(self, file_path):\n        if file_path in self.measured_files:\n            data = self.measured_files[file_path]\n            total_lines = len(data['lines'])\n            executed_lines = len(data['executed'])\n            return (executed_lines / total_lines) * 100\n        return 0\n\ndef function_with_branches(x):\n    result = x * 2\n    \n    if x > 10:\n        result += 5\n    else:\n        result += 1\n        \n    if x % 2 == 0:\n        result *= 2\n        \n    return result\n\ndef measure_coverage():\n    # Create a coverage object\n    cov = MockCoverage()\n    \n    # Start measuring coverage\n    cov.start()\n    \n    # Run the function we want to measure\n    function_with_branches(5)\n    \n    # Stop measuring coverage\n    cov.stop()\n    \n    # Get and print the coverage percentage\n    coverage_percentage = cov.get_coverage_percentage('example.py')\n    print(f\"Coverage: {coverage_percentage:.2f}%\")\n\nmeasure_coverage()"
+    }
+  ]
+}
