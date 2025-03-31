@@ -1,0 +1,614 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following factorial calculation?",
+      "options": {
+        "A": "120",
+        "B": "24",
+        "C": "720",
+        "D": "6"
+      },
+      "correct_answer": "A",
+      "code_example": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1)\n\nprint(factorial(5))"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which file mode would you use to open a binary file for reading?",
+      "options": {
+        "A": "'r'",
+        "B": "'w'",
+        "C": "'rb'",
+        "D": "'ab'"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using a context manager?",
+      "options": {
+        "A": "File opened\nFile closed",
+        "B": "File opened",
+        "C": "FileNotFoundError: [Errno 2] No such file or directory: 'example.txt'",
+        "D": "No output, but the file is created"
+      },
+      "correct_answer": "C",
+      "code_example": "try:\n    with open('example.txt', 'r') as file:\n        print(\"File opened\")\n    print(\"File closed\")\nexcept FileNotFoundError as e:\n    print(e)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following set operations?",
+      "options": {
+        "A": "{1, 2, 3, 4, 5, 6}",
+        "B": "{3, 4}",
+        "C": "{1, 2, 5, 6}",
+        "D": "{1, 2, 3, 4, 5}"
+      },
+      "correct_answer": "B",
+      "code_example": "set1 = {1, 2, 3, 4}\nset2 = {3, 4, 5, 6}\nresult = set1.intersection(set2)\nprint(result)"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following type checking code?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "<class 'list'>",
+        "D": "TypeError: isinstance requires 2 arguments"
+      },
+      "correct_answer": "A",
+      "code_example": "my_list = [1, 2, 3]\nresult = isinstance(my_list, list)\nprint(result)"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which statement accurately describes the relationship between parameters and arguments in Python functions?",
+      "options": {
+        "A": "Parameters are the actual values passed to a function, arguments are the variables in the function definition",
+        "B": "Parameters are the variables in the function definition, arguments are the actual values passed to a function",
+        "C": "Parameters and arguments are different names for the same concept",
+        "D": "Parameters are only used with positional arguments, while arguments are used with keyword arguments"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code with default parameters?",
+      "options": {
+        "A": "Hello, World!",
+        "B": "Hello, User!",
+        "C": "TypeError: greet() missing 1 required positional argument: 'name'",
+        "D": "Hello, !"
+      },
+      "correct_answer": "B",
+      "code_example": "def greet(name=\"User\"):\n    return f\"Hello, {name}!\"\n\nprint(greet())"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following number base conversion?",
+      "options": {
+        "A": "42",
+        "B": "0x2a",
+        "C": "0o52",
+        "D": "0b101010"
+      },
+      "correct_answer": "D",
+      "code_example": "decimal_number = 42\nbinary_representation = bin(decimal_number)\nprint(binary_representation)"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to write a function with type annotations in Python?",
+      "options": {
+        "A": "def add(a: int, b: int) -> int:\n    return a + b",
+        "B": "def add(a(int), b(int)) -> int:\n    return a + b",
+        "C": "def add<int>(a, b):\n    return a + b",
+        "D": "def add(a, b) as int:\n    return a + b"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to PEP 8, which of the following is the CORRECT naming convention for constants in Python?",
+      "options": {
+        "A": "camelCase",
+        "B": "snake_case",
+        "C": "UPPER_SNAKE_CASE",
+        "D": "PascalCase"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code creating a custom exception?",
+      "options": {
+        "A": "This is a custom error",
+        "B": "Invalid age: -5",
+        "C": "Exception: Invalid age: -5",
+        "D": "ValueError: age cannot be negative"
+      },
+      "correct_answer": "B",
+      "code_example": "class AgeError(Exception):\n    def __init__(self, age, message=\"Invalid age\"):\n        self.age = age\n        self.message = f\"{message}: {age}\"\n        super().__init__(self.message)\n\ntry:\n    age = -5\n    if age < 0:\n        raise AgeError(age)\nexcept AgeError as e:\n    print(e)"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will the following palindrome checking function return for the input \"A man, a plan, a canal: Panama\"?",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "Error: input must be lowercase",
+        "D": "None"
+      },
+      "correct_answer": "B",
+      "code_example": "def is_palindrome(text):\n    # Remove non-alphanumeric characters and convert to lowercase\n    clean_text = ''.join(c.lower() for c in text if c.isalnum())\n    return clean_text == clean_text[::-1]\n\nprint(is_palindrome(\"A man, a plan, a canal: Panama\"))"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following try/except/else/finally blocks?",
+      "options": {
+        "A": "Division successful\nCleanup code executed",
+        "B": "Cannot divide by zero\nCleanup code executed",
+        "C": "Cannot divide by zero",
+        "D": "Division successful"
+      },
+      "correct_answer": "B",
+      "code_example": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero\")\nelse:\n    print(\"Division successful\")\nfinally:\n    print(\"Cleanup code executed\")"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of this bubble sort implementation for the given input?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[5, 4, 3, 2, 1]",
+        "C": "[5, 3, 1, 2, 4]",
+        "D": "The function will cause an infinite loop"
+      },
+      "correct_answer": "A",
+      "code_example": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        # Flag to optimize if no swaps occur\n        swapped = False\n        for j in range(0, n-i-1):\n            if arr[j] > arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n                swapped = True\n        if not swapped:\n            break\n    return arr\n\nprint(bubble_sort([5, 3, 1, 2, 4]))"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following conditional expression?",
+      "options": {
+        "A": "The number is positive",
+        "B": "The number is negative",
+        "C": "The number is zero",
+        "D": "SyntaxError: invalid syntax"
+      },
+      "correct_answer": "C",
+      "code_example": "number = 0\nresult = \"The number is positive\" if number > 0 else \"The number is negative\" if number < 0 else \"The number is zero\"\nprint(result)"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using different loop constructs?",
+      "options": {
+        "A": "0-a\n1-b\n2-c\n",
+        "B": "a-1\nb-2\nc-3\n",
+        "C": "0-a\n1-b\n2-c",
+        "D": "a\nb\nc"
+      },
+      "correct_answer": "A",
+      "code_example": "letters = ['a', 'b', 'c']\nfor i, letter in enumerate(letters):\n    print(f\"{i}-{letter}\")"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following sliding window algorithm?",
+      "options": {
+        "A": "6",
+        "B": "10",
+        "C": "9",
+        "D": "5"
+      },
+      "correct_answer": "A",
+      "code_example": "def max_sum_sliding_window(arr, k):\n    n = len(arr)\n    if n < k:\n        return None\n    \n    # Compute sum of first window\n    window_sum = sum(arr[:k])\n    max_sum = window_sum\n    \n    # Compute sums of remaining windows\n    for i in range(n - k):\n        window_sum = window_sum - arr[i] + arr[i + k]\n        max_sum = max(max_sum, window_sum)\n    \n    return max_sum\n\nprint(max_sum_sliding_window([1, 2, 3, 1, 4, 5, 2, 3, 6], 3))"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following dictionary and set comprehensions?",
+      "options": {
+        "A": "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}\n{1, 4, 9, 16, 25}",
+        "B": "{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}\n{1, 2, 3, 4, 5}",
+        "C": "{'1': 1, '2': 4, '3': 9, '4': 16, '5': 25}\n{1, 4, 9, 16, 25}",
+        "D": "{1: '1', 2: '4', 3: '9', 4: '16', 5: '25'}\n{1, 4, 9, 16, 25}"
+      },
+      "correct_answer": "A",
+      "code_example": "# Dictionary comprehension\nsquare_dict = {x: x**2 for x in range(1, 6)}\n\n# Set comprehension\nsquare_set = {x**2 for x in range(1, 6)}\n\nprint(square_dict)\nprint(square_set)"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using a decorator with arguments?",
+      "options": {
+        "A": "Hello, Alice! From: Bob",
+        "B": "HELLO, ALICE! FROM: BOB",
+        "C": "hello, alice! from: bob",
+        "D": "TypeError: decorator() takes 1 positional argument but 2 were given"
+      },
+      "correct_answer": "B",
+      "code_example": "def style_text(style):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            result = func(*args, **kwargs)\n            if style == 'uppercase':\n                return result.upper()\n            elif style == 'lowercase':\n                return result.lower()\n            else:\n                return result\n        return wrapper\n    return decorator\n\n@style_text('uppercase')\ndef greet(name, sender):\n    return f\"Hello, {name}! From: {sender}\"\n\nprint(greet(\"Alice\", \"Bob\"))"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using magic (dunder) methods?",
+      "options": {
+        "A": "Rectangle(5, 10)\n50",
+        "B": "<__main__.Rectangle object at 0x...>\n50",
+        "C": "Rectangle(width=5, height=10)\n50",
+        "D": "Rectangle(5, 10)\nError: unsupported operand type(s) for *: 'Rectangle' and 'int'"
+      },
+      "correct_answer": "A",
+      "code_example": "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    def __repr__(self):\n        return f\"Rectangle({self.width}, {self.height})\"\n    \n    def __str__(self):\n        return f\"Rectangle with width {self.width} and height {self.height}\"\n    \n    def __mul__(self, scalar):\n        return self.width * self.height * scalar\n\nrect = Rectangle(5, 10)\nprint(rect)\nprint(rect * 1)"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following regular expression code with capturing groups?",
+      "options": {
+        "A": "['123', '456', '789']",
+        "B": "['123-456-789']",
+        "C": "('123', '456', '789')",
+        "D": "re.Match object; span=(0, 11), match='123-456-789'"
+      },
+      "correct_answer": "C",
+      "code_example": "import re\n\ntext = \"123-456-789\"\npattern = r\"(\\d+)-(\\d+)-(\\d+)\"\n\nmatch = re.search(pattern, text)\nif match:\n    print(match.groups())"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which of the following is the correct way to create and import a custom module in Python?",
+      "options": {
+        "A": "Create a file named 'my_module.py' with functions/classes, then use 'import my_module'",
+        "B": "Create a file named 'my_module' with functions/classes, then use 'include my_module'",
+        "C": "Create a file named 'my_module.py' with functions/classes, then use 'require my_module'",
+        "D": "Create a file named 'my_module.pyc' with functions/classes, then use 'import my_module'"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using lambda functions?",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]",
+        "B": "[2, 4, 6, 8, 10]",
+        "C": "TypeError: 'function' object is not iterable",
+        "D": "[0, 1, 8, 27, 64]"
+      },
+      "correct_answer": "A",
+      "code_example": "numbers = [1, 2, 3, 4, 5]\nsquare = lambda x: x**2\nsquared_numbers = list(map(square, numbers))\nprint(squared_numbers)"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating inheritance and method overriding?",
+      "options": {
+        "A": "Animal makes a sound\nMeow!",
+        "B": "Animal makes a sound\nAnimal makes a sound",
+        "C": "Meow!\nMeow!",
+        "D": "AttributeError: 'Cat' object has no attribute 'make_sound'"
+      },
+      "correct_answer": "A",
+      "code_example": "class Animal:\n    def make_sound(self):\n        print(\"Animal makes a sound\")\n\nclass Cat(Animal):\n    def make_sound(self):\n        super().make_sound()  # Call parent method\n        print(\"Meow!\")\n\ncat = Cat()\ncat.make_sound()"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the collections module?",
+      "options": {
+        "A": "Counter({'a': 3, 'b': 2, 'c': 1})",
+        "B": "['a', 'a', 'a', 'b', 'b', 'c']",
+        "C": "[('a', 3), ('b', 2), ('c', 1)]",
+        "D": "{'a': 3, 'b': 2, 'c': 1}"
+      },
+      "correct_answer": "A",
+      "code_example": "from collections import Counter\n\ntext = \"aaabbc\"\ncounter = Counter(text)\nprint(counter)"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What is the primary purpose of the __init__.py file in a Python package?",
+      "options": {
+        "A": "To initialize variables when the package is imported",
+        "B": "To list all the modules that should be exported from the package",
+        "C": "To mark a directory as a Python package and control what is exported",
+        "D": "To document the package's API and usage examples"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "In the context of SQLAlchemy, what is the primary purpose of an ORM (Object-Relational Mapper)?",
+      "options": {
+        "A": "To optimize SQL queries for better performance",
+        "B": "To map Python objects to database tables and vice versa",
+        "C": "To provide a REST API interface for database operations",
+        "D": "To encrypt sensitive data before storing it in a database"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code implementing the iterator protocol?",
+      "options": {
+        "A": "1\n2\n3\n4\n5",
+        "B": "[1, 2, 3, 4, 5]",
+        "C": "StopIteration",
+        "D": "TypeError: 'Counter' object is not an iterator"
+      },
+      "correct_answer": "A",
+      "code_example": "class Counter:\n    def __init__(self, start, end):\n        self.start = start\n        self.end = end\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.start > self.end:\n            raise StopIteration\n        current = self.start\n        self.start += 1\n        return current\n\n# Using the iterator\nfor num in Counter(1, 5):\n    print(num)"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What is the main difference between a generator expression and a list comprehension in terms of memory usage?",
+      "options": {
+        "A": "They have identical memory usage patterns",
+        "B": "Generator expressions evaluate lazily and use less memory for large datasets",
+        "C": "List comprehensions are faster but use more CPU resources",
+        "D": "Generator expressions are restricted to numeric data only"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the functools module?",
+      "options": {
+        "A": "Calculating factorial for 5\nCalculating factorial for 5\n120",
+        "B": "Calculating factorial for 5\n120",
+        "C": "120\n120",
+        "D": "Calculating factorial for 5\nCalculating factorial for 4\nCalculating factorial for 3\nCalculating factorial for 2\nCalculating factorial for 1\n120"
+      },
+      "correct_answer": "B",
+      "code_example": "from functools import lru_cache\n\n@lru_cache(maxsize=None)\ndef factorial(n):\n    print(f\"Calculating factorial for {n}\")\n    if n == 1:\n        return 1\n    return n * factorial(n-1)\n\n# First call will calculate and cache\nprint(factorial(5))\n\n# Second call will use cached result\nprint(factorial(5))"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following breadth-first search implementation?",
+      "options": {
+        "A": "['A', 'B', 'C', 'D', 'E', 'F']",
+        "B": "['A', 'C', 'F', 'B', 'D', 'E']",
+        "C": "['A', 'B', 'D', 'E', 'C', 'F']",
+        "D": "['A', 'B', 'C']"
+      },
+      "correct_answer": "A",
+      "code_example": "from collections import deque\n\ndef bfs(graph, start):\n    visited = []\n    queue = deque([start])\n    \n    while queue:\n        node = queue.popleft()\n        if node not in visited:\n            visited.append(node)\n            neighbors = graph[node]\n            for neighbor in neighbors:\n                if neighbor not in visited:\n                    queue.append(neighbor)\n    \n    return visited\n\n# Graph represented as an adjacency list\ngraph = {\n    'A': ['B', 'C'],\n    'B': ['D', 'E'],\n    'C': ['F'],\n    'D': [],\n    'E': [],\n    'F': []\n}\n\nprint(bfs(graph, 'A'))"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "Which normalization form addresses the issue of transitive dependencies in relational database design?",
+      "options": {
+        "A": "First Normal Form (1NF)",
+        "B": "Second Normal Form (2NF)",
+        "C": "Third Normal Form (3NF)",
+        "D": "Fourth Normal Form (4NF)"
+      },
+      "correct_answer": "C"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Consider this N-ary tree implementation. What is the correct output of the print statement?",
+      "code_example": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.children = []\n\ndef height(node):\n    if not node:\n        return 0\n    if not node.children:\n        return 1\n    return 1 + max(height(child) for child in node.children)\n\nroot = Node(1)\nroot.children = [Node(2), Node(3), Node(4)]\nroot.children[0].children = [Node(5), Node(6)]\nroot.children[2].children = [Node(7)]\nroot.children[2].children[0].children = [Node(8)]\n\nprint(height(root))",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "The function will raise a RecursionError"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which of the following correctly describes a backtracking algorithm implementation in Python?",
+      "code_example": "def solve_n_queens(n):\n    solutions = []\n    board = [-1] * n\n    \n    def place_queen(row):\n        if row == n:\n            solutions.append(board.copy())\n            return\n        \n        for col in range(n):\n            if is_valid(row, col):\n                board[row] = col\n                place_queen(row + 1)\n                board[row] = -1  # Backtrack\n    \n    def is_valid(row, col):\n        for prev_row in range(row):\n            prev_col = board[prev_row]\n            if prev_col == col or \\\n               prev_col - prev_row == col - row or \\\n               prev_col + prev_row == col + row:\n                return False\n        return True\n    \n    place_queen(0)\n    return solutions\n\nprint(len(solve_n_queens(4)))",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "4"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Which statement about dependency injection in Python is CORRECT?",
+      "options": {
+        "A": "Dependency injection requires the use of external libraries and cannot be implemented in pure Python",
+        "B": "Dependency injection primarily relies on metaclasses to function properly in Python",
+        "C": "Dependency injection allows components to be loosely coupled by providing dependencies from outside rather than creating them internally",
+        "D": "Python's dynamic typing makes dependency injection unnecessary as dependencies can be replaced at runtime without special patterns"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "In the context of distributed caching with Python, what will the following code using Redis do?",
+      "code_example": "import redis\nimport hashlib\nimport time\n\nclass DistributedCache:\n    def __init__(self, host='localhost', port=6379):\n        self.client = redis.Redis(host=host, port=port)\n        self.default_ttl = 300  # 5 minutes\n    \n    def get(self, key):\n        hashed_key = hashlib.md5(key.encode()).hexdigest()\n        return self.client.get(hashed_key)\n    \n    def set(self, key, value, ttl=None):\n        if ttl is None:\n            ttl = self.default_ttl\n        hashed_key = hashlib.md5(key.encode()).hexdigest()\n        return self.client.setex(hashed_key, ttl, value)\n    \n    def invalidate(self, key):\n        hashed_key = hashlib.md5(key.encode()).hexdigest()\n        return self.client.delete(hashed_key)\n    \n    def get_with_refresh(self, key, refresh_func, ttl=None):\n        value = self.get(key)\n        if value is None:\n            value = refresh_func()\n            if value is not None:\n                self.set(key, value, ttl)\n        return value",
+      "options": {
+        "A": "Implement a cache that stores values only in local memory with a timestamp for expiration",
+        "B": "Implement a cache that distributes keys across multiple Redis instances for load balancing",
+        "C": "Implement a cache that hashes keys and stores values in Redis with automatic refresh on cache misses",
+        "D": "Implement a cache that replicates all data across multiple databases for redundancy"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT considered an ethical scraping practice?",
+      "options": {
+        "A": "Respecting robots.txt directives and website terms of service",
+        "B": "Implementing rate limiting to avoid overloading the target server",
+        "C": "Using multiple IP addresses and user agents to bypass rate limiting",
+        "D": "Including contact information in your scraper's user agent string"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Python's attribute access functions?",
+      "code_example": "class DynamicAttributes:\n    def __init__(self):\n        self._attributes = {}\n    \n    def __getattr__(self, name):\n        if name in self._attributes:\n            return self._attributes[name]\n        raise AttributeError(f\"'{self.__class__.__name__}' object has no attribute '{name}'\")\n    \n    def __setattr__(self, name, value):\n        if name == '_attributes':\n            super().__setattr__(name, value)\n        else:\n            if not name.startswith('_'):\n                self._attributes[name] = value\n            else:\n                super().__setattr__(name, value)\n\nobj = DynamicAttributes()\nobj.test = 42\nsetattr(obj, '_hidden', 100)\nsetattr(obj, 'calculated', 50)\n\nprint(getattr(obj, 'test', 0))\nprint(getattr(obj, '_hidden', 0))\nprint(obj._attributes)",
+      "options": {
+        "A": "42\n100\n{'test': 42}",
+        "B": "42\n100\n{'test': 42, 'calculated': 50}",
+        "C": "42\n100\n{'test': 42, '_hidden': 100, 'calculated': 50}",
+        "D": "0\n0\n{}"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "In web application security, which of the following statements correctly distinguishes between authentication and authorization?",
+      "options": {
+        "A": "Authentication is about permissions, while authorization is about identity verification",
+        "B": "Authentication verifies who a user is, while authorization determines what they can access",
+        "C": "Authentication happens client-side, while authorization happens server-side",
+        "D": "Authentication is optional in secure applications, while authorization is mandatory"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "Consider the following Python implementation of the Ford-Fulkerson algorithm for network flow problems. What will be the maximum flow from source (node 0) to sink (node 5)?",
+      "code_example": "def ford_fulkerson(graph, source, sink):\n    # Create residual graph\n    residual_graph = [row[:] for row in graph]\n    parent = [-1] * len(graph)\n    max_flow = 0\n    \n    # Augment the flow while there is a path from source to sink\n    while bfs(residual_graph, source, sink, parent):\n        # Find minimum residual capacity of the edges along the path\n        path_flow = float(\"Inf\")\n        s = sink\n        while s != source:\n            path_flow = min(path_flow, residual_graph[parent[s]][s])\n            s = parent[s]\n        \n        # Add path flow to overall flow\n        max_flow += path_flow\n        \n        # Update residual capacities\n        v = sink\n        while v != source:\n            u = parent[v]\n            residual_graph[u][v] -= path_flow\n            residual_graph[v][u] += path_flow\n            v = parent[v]\n    \n    return max_flow\n\ndef bfs(residual_graph, source, sink, parent):\n    visited = [False] * len(residual_graph)\n    queue = [source]\n    visited[source] = True\n    \n    while queue:\n        u = queue.pop(0)\n        for ind, val in enumerate(residual_graph[u]):\n            if not visited[ind] and val > 0:\n                queue.append(ind)\n                visited[ind] = True\n                parent[ind] = u\n    \n    return visited[sink]\n\n# Graph represented as adjacency matrix where graph[u][v] is capacity from u to v\ngraph = [\n    [0, 16, 13, 0, 0, 0],\n    [0, 0, 10, 12, 0, 0],\n    [0, 4, 0, 0, 14, 0],\n    [0, 0, 9, 0, 0, 20],\n    [0, 0, 0, 7, 0, 4],\n    [0, 0, 0, 0, 0, 0]\n]\n\nprint(ford_fulkerson(graph, 0, 5))",
+      "options": {
+        "A": "19",
+        "B": "23",
+        "C": "27",
+        "D": "30"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What is the time complexity of the following segment tree implementation for a range sum query?",
+      "code_example": "class SegmentTree:\n    def __init__(self, arr):\n        self.n = len(arr)\n        # Height of segment tree\n        x = (self.n - 1).bit_length()\n        # Maximum size of segment tree\n        max_size = 2 * (2 ** x) - 1\n        self.tree = [0] * max_size\n        self._build_tree(arr, 0, 0, self.n - 1)\n    \n    def _build_tree(self, arr, index, start, end):\n        # Base case: leaf node\n        if start == end:\n            self.tree[index] = arr[start]\n            return arr[start]\n        \n        mid = (start + end) // 2\n        # Recursively build left and right subtrees\n        left_sum = self._build_tree(arr, 2 * index + 1, start, mid)\n        right_sum = self._build_tree(arr, 2 * index + 2, mid + 1, end)\n        # Store the sum of left and right children\n        self.tree[index] = left_sum + right_sum\n        return self.tree[index]\n    \n    def _query(self, index, start, end, left, right):\n        # If current segment is completely outside the query range\n        if start > right or end < left:\n            return 0\n        \n        # If current segment is completely inside the query range\n        if start >= left and end <= right:\n            return self.tree[index]\n        \n        # If current segment is partially inside and partially outside the query range\n        mid = (start + end) // 2\n        left_sum = self._query(2 * index + 1, start, mid, left, right)\n        right_sum = self._query(2 * index + 2, mid + 1, end, left, right)\n        return left_sum + right_sum\n    \n    def query(self, left, right):\n        if left < 0 or right >= self.n or left > right:\n            raise ValueError(\"Invalid query range\")\n        return self._query(0, 0, self.n - 1, left, right)",
+      "options": {
+        "A": "O(n)",
+        "B": "O(log n)",
+        "C": "O(n log n)",
+        "D": "O(n²)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "Consider the following binary tree implementation. What will be the output of the in-order, pre-order, and post-order traversals?",
+      "code_example": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\ndef in_order_traversal(root):\n    result = []\n    if root:\n        result.extend(in_order_traversal(root.left))\n        result.append(root.val)\n        result.extend(in_order_traversal(root.right))\n    return result\n\ndef pre_order_traversal(root):\n    result = []\n    if root:\n        result.append(root.val)\n        result.extend(pre_order_traversal(root.left))\n        result.extend(pre_order_traversal(root.right))\n    return result\n\ndef post_order_traversal(root):\n    result = []\n    if root:\n        result.extend(post_order_traversal(root.left))\n        result.extend(post_order_traversal(root.right))\n        result.append(root.val)\n    return result\n\n# Construct the tree\n#     1\n#    / \\\n#   2   3\n#  / \\\n# 4   5\nroot = TreeNode(1)\nroot.left = TreeNode(2)\nroot.right = TreeNode(3)\nroot.left.left = TreeNode(4)\nroot.left.right = TreeNode(5)\n\nprint(f\"In-order: {in_order_traversal(root)}\")\nprint(f\"Pre-order: {pre_order_traversal(root)}\")\nprint(f\"Post-order: {post_order_traversal(root)}\")",
+      "options": {
+        "A": "In-order: [4, 2, 5, 1, 3]\nPre-order: [1, 2, 4, 5, 3]\nPost-order: [4, 5, 2, 3, 1]",
+        "B": "In-order: [1, 2, 3, 4, 5]\nPre-order: [1, 2, 4, 5, 3]\nPost-order: [5, 4, 3, 2, 1]",
+        "C": "In-order: [4, 2, 5, 1, 3]\nPre-order: [1, 2, 4, 5, 3]\nPost-order: [4, 5, 2, 1, 3]",
+        "D": "In-order: [4, 2, 5, 1, 3]\nPre-order: [4, 2, 5, 1, 3]\nPost-order: [4, 5, 2, 3, 1]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "Consider the following implementation of the knapsack problem. If we have items with weights [2, 3, 4, 5] and values [3, 4, 5, 6] with a knapsack capacity of 8, what will the maximum value be?",
+      "code_example": "def knapsack(weights, values, capacity):\n    n = len(weights)\n    # Create a table for dynamic programming\n    dp = [[0 for _ in range(capacity + 1)] for _ in range(n + 1)]\n    \n    # Fill the dp table\n    for i in range(1, n + 1):\n        for w in range(1, capacity + 1):\n            # If current item weight is less than or equal to capacity\n            if weights[i - 1] <= w:\n                # Choose maximum of including and excluding the item\n                dp[i][w] = max(values[i - 1] + dp[i - 1][w - weights[i - 1]], dp[i - 1][w])\n            else:\n                # Cannot include the item, so exclude it\n                dp[i][w] = dp[i - 1][w]\n    \n    return dp[n][capacity]\n\nweights = [2, 3, 4, 5]\nvalues = [3, 4, 5, 6]\ncapacity = 8\n\nprint(knapsack(weights, values, capacity))",
+      "options": {
+        "A": "9",
+        "B": "10",
+        "C": "12",
+        "D": "13"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which of the following accurately describes a service discovery mechanism in distributed systems using Python?",
+      "options": {
+        "A": "A method that discovers all available functions in a Python module using introspection",
+        "B": "A technique where services register themselves with a central registry, allowing clients to locate and connect to them dynamically",
+        "C": "A debugging tool that discovers memory leaks in Python services",
+        "D": "A Python implementation of service workers that allows web applications to run offline"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "Regarding Just-in-Time (JIT) compilation in PyPy, which statement is CORRECT?",
+      "options": {
+        "A": "PyPy's JIT compilation works by translating Python bytecode to C at install time",
+        "B": "PyPy's JIT compiler identifies frequently executed code paths (hot paths) and optimizes them during runtime",
+        "C": "PyPy achieves performance improvements primarily by using pre-compiled C extensions for all standard library functions",
+        "D": "PyPy's JIT compilation requires explicit annotations in the Python code to identify which functions to optimize"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the result of the following A* search algorithm implementation for finding the shortest path in a grid?",
+      "code_example": "import heapq\n\ndef a_star(grid, start, goal):\n    # Define heuristic function (Manhattan distance)\n    def heuristic(a, b):\n        return abs(a[0] - b[0]) + abs(a[1] - b[1])\n    \n    # Define possible movements (up, right, down, left)\n    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]\n    \n    # Initialize open and closed sets\n    open_set = []\n    closed_set = set()\n    \n    # Add start node to open set\n    # Format: (f_score, g_score, node, path)\n    heapq.heappush(open_set, (heuristic(start, goal), 0, start, [start]))\n    \n    while open_set:\n        # Get node with lowest f_score\n        f, g, current, path = heapq.heappop(open_set)\n        \n        # Check if we've reached the goal\n        if current == goal:\n            return path\n        \n        # Add current node to closed set\n        closed_set.add(current)\n        \n        # Explore neighbors\n        for dx, dy in directions:\n            nx, ny = current[0] + dx, current[1] + dy\n            neighbor = (nx, ny)\n            \n            # Check if neighbor is valid\n            if not (0 <= nx < len(grid) and 0 <= ny < len(grid[0])):\n                continue\n            \n            # Check if neighbor is an obstacle\n            if grid[nx][ny] == 1:\n                continue\n            \n            # Check if neighbor is in closed set\n            if neighbor in closed_set:\n                continue\n            \n            # Calculate new path and scores\n            new_g = g + 1\n            new_f = new_g + heuristic(neighbor, goal)\n            new_path = path + [neighbor]\n            \n            # Add neighbor to open set\n            heapq.heappush(open_set, (new_f, new_g, neighbor, new_path))\n    \n    # No path found\n    return None\n\n# Define a grid (0 = free, 1 = obstacle)\ngrid = [\n    [0, 0, 0, 0, 0],\n    [0, 1, 1, 0, 0],\n    [0, 0, 0, 1, 0],\n    [0, 1, 0, 0, 0],\n    [0, 0, 0, 0, 0]\n]\n\nstart = (0, 0)\ngoal = (4, 4)\n\npath = a_star(grid, start, goal)\nprint(len(path) - 1 if path else \"No path found\")",
+      "options": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "No path found"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "Consider the following trie implementation for prefix searching. What will be the output?",
+      "code_example": "class TrieNode:\n    def __init__(self):\n        self.children = {}\n        self.is_end_of_word = False\n\nclass Trie:\n    def __init__(self):\n        self.root = TrieNode()\n    \n    def insert(self, word):\n        node = self.root\n        for char in word:\n            if char not in node.children:\n                node.children[char] = TrieNode()\n            node = node.children[char]\n        node.is_end_of_word = True\n    \n    def search(self, word):\n        node = self.root\n        for char in word:\n            if char not in node.children:\n                return False\n            node = node.children[char]\n        return node.is_end_of_word\n    \n    def starts_with(self, prefix):\n        node = self.root\n        for char in prefix:\n            if char not in node.children:\n                return False\n            node = node.children[char]\n        return True\n    \n    def find_words_with_prefix(self, prefix):\n        result = []\n        node = self.root\n        \n        # Traverse to the node representing the prefix\n        for char in prefix:\n            if char not in node.children:\n                return result\n            node = node.children[char]\n        \n        # Perform DFS from this node\n        self._dfs(node, prefix, result)\n        return result\n    \n    def _dfs(self, node, current_word, result):\n        if node.is_end_of_word:\n            result.append(current_word)\n        \n        for char, child_node in node.children.items():\n            self._dfs(child_node, current_word + char, result)\n\n# Create a trie and insert words\ntrie = Trie()\nwords = [\"apple\", \"app\", \"apricot\", \"banana\", \"bat\"]\nfor word in words:\n    trie.insert(word)\n\n# Test cases\nprint(trie.search(\"apple\"))\nprint(trie.search(\"ap\"))\nprint(trie.starts_with(\"ap\"))\nprint(sorted(trie.find_words_with_prefix(\"ap\")))",
+      "options": {
+        "A": "True\nFalse\nTrue\n['app', 'apple', 'apricot']",
+        "B": "True\nTrue\nTrue\n['app', 'apple', 'apricot']",
+        "C": "True\nFalse\nTrue\n['ap', 'app', 'apple', 'apricot']",
+        "D": "True\nFalse\nFalse\n[]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the result of the following code using mock objects and patching in unit testing?",
+      "code_example": "import unittest\nfrom unittest.mock import patch, MagicMock\n\nclass Database:\n    def connect(self):\n        # In reality, this would connect to a real database\n        pass\n    \n    def query(self, sql):\n        # This would execute a real SQL query\n        pass\n    \n    def close(self):\n        # This would close the connection\n        pass\n\nclass UserService:\n    def __init__(self, database):\n        self.database = database\n    \n    def get_user_by_id(self, user_id):\n        self.database.connect()\n        query = f\"SELECT * FROM users WHERE id = {user_id}\"\n        result = self.database.query(query)\n        self.database.close()\n        return result\n\nclass TestUserService(unittest.TestCase):\n    @patch('__main__.Database')\n    def test_get_user_by_id(self, mock_database):\n        # Setup\n        mock_db_instance = MagicMock()\n        mock_database.return_value = mock_db_instance\n        mock_db_instance.query.return_value = {\"id\": 1, \"name\": \"John Doe\"}\n        \n        # Create service with mocked database\n        service = UserService(mock_database())\n        \n        # Execute\n        result = service.get_user_by_id(1)\n        \n        # Assert\n        mock_db_instance.connect.assert_called_once()\n        mock_db_instance.query.assert_called_once_with(\"SELECT * FROM users WHERE id = 1\")\n        mock_db_instance.close.assert_called_once()\n        self.assertEqual(result, {\"id\": 1, \"name\": \"John Doe\"})\n        \n        return result\n\n# Run the test and get the result\ntest = TestUserService()\nresult = test.test_get_user_by_id()\nprint(result)",
+      "options": {
+        "A": "{'id': 1, 'name': 'John Doe'}",
+        "B": "None",
+        "C": "The test will fail with an AssertionError",
+        "D": "The test will raise a TypeError because the mocked database doesn't have the required methods"
+      },
+      "correct_answer": "A"
+    }
+  ]
+}
