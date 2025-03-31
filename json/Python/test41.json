@@ -1,0 +1,614 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following binary search implementation when searching for the value 7 in the given sorted array?",
+      "options": {
+        "A": "4",
+        "B": "3",
+        "C": "-1",
+        "D": "None"
+      },
+      "correct_answer": "B",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return -1\n\narr = [1, 3, 5, 7, 9, 11]\nprint(binary_search(arr, 7))"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the purpose of the 'else' clause in a for loop in Python?",
+      "options": {
+        "A": "It executes when the loop encounters an error",
+        "B": "It executes when the loop completes normally (without a break statement)",
+        "C": "It executes after each iteration of the loop",
+        "D": "It executes when the loop condition becomes False"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be printed by the following code?",
+      "options": {
+        "A": "A tuple containing integers: (1, 2, 3)",
+        "B": "A list containing integers: [1, 2, 3]",
+        "C": "int",
+        "D": "str"
+      },
+      "correct_answer": "C",
+      "code_example": "x = 42\nprint(type(x).__name__)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will happen when the following code is executed?",
+      "options": {
+        "A": "It will print 'File not found: missing.txt'",
+        "B": "It will raise a FileNotFoundError",
+        "C": "It will print 'An error occurred'",
+        "D": "It will print 'Invalid file name error: missing.txt'"
+      },
+      "correct_answer": "D",
+      "code_example": "class InvalidFileNameError(Exception):\n    def __init__(self, filename):\n        self.filename = filename\n        self.message = f\"Invalid file name error: {filename}\"\n        super().__init__(self.message)\n\ntry:\n    filename = \"missing.txt\"\n    if not filename.endswith('.py'):\n        raise InvalidFileNameError(filename)\n    with open(filename, 'r') as f:\n        content = f.read()\nexcept InvalidFileNameError as e:\n    print(e.message)"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following while loop?",
+      "options": {
+        "A": "1 2 3 4 5",
+        "B": "1 2 3",
+        "C": "1 2",
+        "D": "1 2 3 4"
+      },
+      "correct_answer": "C",
+      "code_example": "count = 1\nwhile count < 5:\n    print(count, end=\" \")\n    if count == 2:\n        break\n    count += 1"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will the following function return when called with no arguments?",
+      "options": {
+        "A": "None",
+        "B": "Empty list []",
+        "C": "Default list ['default']",
+        "D": "It will raise a TypeError"
+      },
+      "correct_answer": "C",
+      "code_example": "def process_items(items=['default']):\n    return items\n\nresult = process_items()\nprint(result)"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "How would you define a function named 'calculate_area' that takes the radius of a circle and returns its area?",
+      "options": {
+        "A": "def calculate_area[radius]: return 3.14 * radius * radius",
+        "B": "function calculate_area(radius) { return 3.14 * radius * radius; }",
+        "C": "def calculate_area(radius): return 3.14 * radius * radius",
+        "D": "calculate_area = lambda r: 3.14 * r ** 2"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What's the difference between parameters and arguments in Python functions?",
+      "options": {
+        "A": "They are the same thing with different names",
+        "B": "Parameters are defined in function definition; arguments are values passed when calling the function",
+        "C": "Arguments are defined in function definition; parameters are values passed when calling the function",
+        "D": "Parameters are optional, while arguments are required"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the result of this tuple operation?",
+      "options": {
+        "A": "('a', 'p', 'p', 'l', 'e')",
+        "B": "Error: tuples don't support unpacking",
+        "C": "a = 'a', p = 'p', p = 'p', l = 'l', e = 'e'",
+        "D": "a = 'a', *rest = 'pple'"
+      },
+      "correct_answer": "A",
+      "code_example": "word = \"apple\"\ntuple_chars = tuple(word)\nprint(tuple_chars)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be printed by this f-string formatting code?",
+      "options": {
+        "A": "Name: Alice | Age: 30",
+        "B": "Name: Alice | Age: 30 years old",
+        "C": "Error: invalid f-string syntax",
+        "D": "Name: Alice | Age: thirty"
+      },
+      "correct_answer": "A",
+      "code_example": "name = \"Alice\"\nage = 30\nprint(f\"Name: {name} | Age: {age}\")"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "Which of these functions correctly determines if a string is a palindrome (reads the same backward as forward)?",
+      "options": {
+        "A": "def is_palindrome(s): return s == s.reverse()",
+        "B": "def is_palindrome(s): return s == s[::-1]",
+        "C": "def is_palindrome(s): return s == ''.join(reversed(s))",
+        "D": "Both B and C are correct"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of this code that converts between number bases?",
+      "options": {
+        "A": "42 in binary: 101010 | in octal: 52 | in hex: 2a",
+        "B": "42 in binary: 0b101010 | in octal: 0o52 | in hex: 0x2a",
+        "C": "42 in binary: 0b101010 | in octal: 0o52 | in hex: 0X2A",
+        "D": "Error: invalid conversion"
+      },
+      "correct_answer": "A",
+      "code_example": "num = 42\nprint(f\"{num} in binary: {bin(num)[2:]} | in octal: {oct(num)[2:]} | in hex: {hex(num)[2:]}\")"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What is the output of this linear search implementation when searching for 5 in the list?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "True",
+        "D": "False"
+      },
+      "correct_answer": "B",
+      "code_example": "def linear_search(arr, target):\n    for i, item in enumerate(arr):\n        if item == target:\n            return i\n    return -1\n\nmy_list = [3, 7, 5, 9, 1]\nprint(linear_search(my_list, 5))"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of this dictionary operation?",
+      "options": {
+        "A": "{'apple': 0.5, 'banana': 0.25, 'cherry': 0.75}",
+        "B": "dict_keys(['apple', 'banana', 'cherry'])",
+        "C": "[0.5, 0.25, 0.75]",
+        "D": "dict_items([('apple', 0.5), ('banana', 0.25), ('cherry', 0.75)])"
+      },
+      "correct_answer": "C",
+      "code_example": "prices = {'apple': 0.5, 'banana': 0.25, 'cherry': 0.75}\nprint(list(prices.values()))"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be printed by this FizzBuzz implementation for the range 1 to 15?",
+      "options": {
+        "A": "1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, FizzBuzz",
+        "B": "1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz",
+        "C": "1, 2, Fizz, 4, Buzz, 6, 7, 8, Fizz, 10, 11, Fizz, 13, 14, FizzBuzz",
+        "D": "1, 2, 3, 4, 5, Fizz, 7, 8, 9, Buzz, 11, Fizz, 13, 14, 15"
+      },
+      "correct_answer": "A",
+      "code_example": "for i in range(1, 16):\n    if i % 3 == 0 and i % 5 == 0:\n        print(\"FizzBuzz\", end=\"\")\n    elif i % 3 == 0:\n        print(\"Fizz\", end=\"\")\n    elif i % 5 == 0:\n        print(\"Buzz\", end=\"\")\n    else:\n        print(i, end=\"\")\n    if i < 15:\n        print(\", \", end=\"\")"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of this type checking code?",
+      "options": {
+        "A": "True True",
+        "B": "True False",
+        "C": "False True",
+        "D": "False False"
+      },
+      "correct_answer": "B",
+      "code_example": "value = \"42\"\nprint(isinstance(value, str), isinstance(int(value), str))"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be matched by the following regular expression pattern?",
+      "options": {
+        "A": "Any email address with a .com domain",
+        "B": "Any email address with alphabetic characters, numbers, or underscores before the @ symbol",
+        "C": "Any email address with a domain that has 2-4 characters in its extension",
+        "D": "Any email address that follows the pattern username@domain.extension"
+      },
+      "correct_answer": "C",
+      "code_example": "import re\n\npattern = r'^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,4}$'\n# Example test cases:\n# re.match(pattern, 'user@example.com') - Matches\n# re.match(pattern, 'user@example.co.uk') - Doesn't match\n# re.match(pattern, 'user@example.io') - Matches"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which SQL query would correctly retrieve all customers from a 'customers' table who have made purchases totaling over $1000?",
+      "options": {
+        "A": "SELECT * FROM customers WHERE total_purchases > 1000;",
+        "B": "SELECT customers.* FROM customers JOIN orders ON customers.id = orders.customer_id WHERE orders.total > 1000;",
+        "C": "SELECT customers.* FROM customers JOIN orders ON customers.id = orders.customer_id GROUP BY customers.id HAVING SUM(orders.total) > 1000;",
+        "D": "SELECT customers.name FROM customers WHERE exists (SELECT * FROM orders WHERE orders.customer_id = customers.id AND orders.total > 1000);"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will the following regular expression code output?",
+      "options": {
+        "A": "['555-123-4567', '555-987-6543']",
+        "B": "['123', '987']",
+        "C": "['5551234567', '5559876543']",
+        "D": "No matches found"
+      },
+      "correct_answer": "A",
+      "code_example": "import re\n\ntext = \"Call me at 555-123-4567 or my office at 555-987-6543.\"\nphone_pattern = r'\\d{3}-\\d{3}-\\d{4}'\nmatches = re.findall(phone_pattern, text)\nprint(matches)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of this nested data structure operation?",
+      "options": {
+        "A": "['Alice', 'Bob', 'Charlie']",
+        "B": "[30, 25, 35]",
+        "C": "[{'name': 'Alice', 'age': 30}, {'name': 'Bob', 'age': 25}, {'name': 'Charlie', 'age': 35}]",
+        "D": "Alice (30), Bob (25), Charlie (35)"
+      },
+      "correct_answer": "D",
+      "code_example": "people = [\n    {'name': 'Alice', 'age': 30},\n    {'name': 'Bob', 'age': 25},\n    {'name': 'Charlie', 'age': 35}\n]\n\noutput = \", \".join([f\"{p['name']} ({p['age']})\" for p in people])\nprint(output)"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "In a web framework like Flask, what is the purpose of a route decorator like '@app.route(\"/users/<int:user_id>\")'?",
+      "options": {
+        "A": "It redirects users to a different page when they access /users",
+        "B": "It maps a URL pattern to a view function and specifies that user_id must be an integer",
+        "C": "It creates a new user with the specified ID in the database",
+        "D": "It validates that the user_id parameter is an integer before passing it to the function"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of this sliding window implementation?",
+      "options": {
+        "A": "6",
+        "B": "9",
+        "C": "11",
+        "D": "15"
+      },
+      "correct_answer": "C",
+      "code_example": "def max_sum_subarray(arr, k):\n    n = len(arr)\n    if n < k:\n        return None\n    \n    # Calculate sum of first window\n    window_sum = sum(arr[:k])\n    max_sum = window_sum\n    \n    # Slide the window\n    for i in range(n - k):\n        window_sum = window_sum - arr[i] + arr[i + k]\n        max_sum = max(max_sum, window_sum)\n    \n    return max_sum\n\narr = [1, 4, 2, 10, 2, 3, 1, 0, 20]\nk = 3\nprint(max_sum_subarray(arr, k))"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "Which of the following commands would create a virtual environment named 'myenv' and install the requests package in it?",
+      "options": {
+        "A": "virtualenv myenv && source myenv/bin/activate && pip install requests",
+        "B": "python -m venv myenv && source myenv/bin/activate && pip install requests",
+        "C": "pip install virtualenv && virtualenv myenv && pip install requests",
+        "D": "python -m pip venv myenv && pip activate && pip install requests"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of this iterator implementation?",
+      "options": {
+        "A": "1 2 3 4 5 StopIteration",
+        "B": "1 2 3 4 5",
+        "C": "0 1 2 3 4",
+        "D": "StopIteration"
+      },
+      "correct_answer": "B",
+      "code_example": "class CountUpTo:\n    def __init__(self, max_value):\n        self.max_value = max_value\n        self.current = 0\n        \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.current > self.max_value:\n            raise StopIteration\n        self.current += 1\n        return self.current\n\ncounter = CountUpTo(5)\nfor num in counter:\n    print(num, end=\" \")"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "Which of the following regex patterns would be most efficient for matching numeric ZIP codes (5 digits)?",
+      "options": {
+        "A": "r'\\d\\d\\d\\d\\d'",
+        "B": "r'\\d{5}'",
+        "C": "r'[0-9][0-9][0-9][0-9][0-9]'",
+        "D": "r'[0-9]{1,5}'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the result of this hash table implementation?",
+      "options": {
+        "A": "{'apple': 0, 'banana': 1, 'cherry': 2}",
+        "B": "{'apple': 0, 'cherry': 0}",
+        "C": "{'apple': 0, 'cherry': 2}",
+        "D": "{'apple': 0, 'banana': 0, 'cherry': 0}"
+      },
+      "correct_answer": "C",
+      "code_example": "class SimpleHashTable:\n    def __init__(self, size=10):\n        self.size = size\n        self.table = {}\n    \n    def hash_function(self, key):\n        return sum(ord(c) for c in key) % self.size\n    \n    def insert(self, key):\n        hash_value = self.hash_function(key)\n        self.table[key] = hash_value\n    \n    def get_table(self):\n        return self.table\n\nht = SimpleHashTable(size=3)\nht.insert('apple')\nht.insert('banana')  # Will collide with apple in this simple example\nht.insert('cherry')\n\n# Due to collision, 'banana' will overwrite 'apple' in a real hash table\n# But our simplified version just tracks the hash values\nprint(ht.get_table())"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of this code using property decorators?",
+      "options": {
+        "A": "Setting temperature to 30\nGetting temperature: 30\nCelsius: 30, Fahrenheit: 86.0",
+        "B": "Setting temperature to 30\nGetting temperature: 30\nCelsius: 30, Fahrenheit: 30",
+        "C": "AttributeError: can't set attribute",
+        "D": "Setting temperature to 30\nGetting temperature: 30\nCelsius: 86.0, Fahrenheit: 30"
+      },
+      "correct_answer": "A",
+      "code_example": "class Temperature:\n    def __init__(self):\n        self._celsius = 0\n    \n    @property\n    def celsius(self):\n        print(f\"Getting temperature: {self._celsius}\")\n        return self._celsius\n    \n    @celsius.setter\n    def celsius(self, value):\n        print(f\"Setting temperature to {value}\")\n        self._celsius = value\n    \n    @property\n    def fahrenheit(self):\n        return (self._celsius * 9/5) + 32\n\ntemp = Temperature()\ntemp.celsius = 30\nprint(f\"Celsius: {temp.celsius}, Fahrenheit: {temp.fahrenheit}\")"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be printed by this priority queue implementation?",
+      "options": {
+        "A": "[('high', 1), ('medium', 2), ('low', 3)]",
+        "B": "[('low', 3), ('medium', 2), ('high', 1)]",
+        "C": "high medium low",
+        "D": "low medium high"
+      },
+      "correct_answer": "C",
+      "code_example": "import heapq\n\nclass PriorityQueue:\n    def __init__(self):\n        self._queue = []\n        self._index = 0\n    \n    def push(self, item, priority):\n        # Lower values = higher priority\n        heapq.heappush(self._queue, (priority, self._index, item))\n        self._index += 1\n    \n    def pop(self):\n        return heapq.heappop(self._queue)[2]\n\npq = PriorityQueue()\npq.push('low', 3)\npq.push('medium', 2)\npq.push('high', 1)\n\nresult = f\"{pq.pop()} {pq.pop()} {pq.pop()}\"\nprint(result)"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of this code using the collections module?",
+      "options": {
+        "A": "Counter({'a': 3, 'b': 2, 'c': 1, 'd': 1})",
+        "B": "{'a': 3, 'b': 2, 'c': 1}",
+        "C": "[('a', 3), ('b', 2), ('c', 1)]",
+        "D": "['a', 'a', 'a', 'b', 'b', 'c']"
+      },
+      "correct_answer": "C",
+      "code_example": "from collections import Counter\n\ntext = \"aaabbc\"\ncounter = Counter(text)\nprint(counter.most_common(3))"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of this code with constructors and instance methods?",
+      "options": {
+        "A": "Alice is 30 years old and works as a Developer\nNew job: Engineer",
+        "B": "Alice (Developer) - 30\nNew job: Engineer",
+        "C": "Alice is 30 years old\nAlice's job is now Engineer",
+        "D": "Person: Alice (30)\nPerson: Alice (30) - Engineer"
+      },
+      "correct_answer": "A",
+      "code_example": "class Person:\n    def __init__(self, name, age, job=None):\n        self.name = name\n        self.age = age\n        self.job = job\n    \n    def describe(self):\n        job_info = f\"and works as a {self.job}\" if self.job else \"\"\n        return f\"{self.name} is {self.age} years old {job_info}\"\n    \n    def change_job(self, new_job):\n        self.job = new_job\n        return f\"New job: {new_job}\"\n\nperson = Person(\"Alice\", 30, \"Developer\")\nprint(person.describe())\nprint(person.change_job(\"Engineer\"))"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "Which of these Python objects is immutable?",
+      "options": {
+        "A": "List",
+        "B": "Dictionary",
+        "C": "Set",
+        "D": "Frozenset"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of this code using magic methods?",
+      "options": {
+        "A": "Rectangle(width=5, height=10)\nArea: 50",
+        "B": "width=5, height=10\nTrue",
+        "C": "<__main__.Rectangle object at 0x...>\nFalse",
+        "D": "Rectangle(width=5, height=10)\nFalse"
+      },
+      "correct_answer": "A",
+      "code_example": "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    def __repr__(self):\n        return f\"Rectangle(width={self.width}, height={self.height})\"\n    \n    def __eq__(self, other):\n        if not isinstance(other, Rectangle):\n            return False\n        return self.width == other.width and self.height == other.height\n    \n    def area(self):\n        return self.width * self.height\n\nr1 = Rectangle(5, 10)\nprint(r1)\nprint(f\"Area: {r1.area()}\")"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which of the following is an ethical practice when scraping websites?",
+      "options": {
+        "A": "Creating multiple user agents to avoid rate limiting",
+        "B": "Ignoring robots.txt to ensure complete data collection",
+        "C": "Respecting websites' terms of service and robots.txt",
+        "D": "Scraping as fast as possible to minimize server connection time"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What is the output of the following code involving thread synchronization?",
+      "code_example": "import threading\n\ncounter = 0\nlock = threading.Lock()\n\ndef increment():\n    global counter\n    with lock:\n        for _ in range(1000):\n            counter += 1\n\nthreads = []\nfor _ in range(5):\n    t = threading.Thread(target=increment)\n    threads.append(t)\n    t.start()\n\nfor t in threads:\n    t.join()\n\nprint(counter)",
+      "options": {
+        "A": "1000",
+        "B": "5000",
+        "C": "A random number less than 5000",
+        "D": "A random number between 1000 and 5000"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Which of the following metrics is NOT typically used to evaluate a classification model in scikit-learn?",
+      "options": {
+        "A": "Precision",
+        "B": "Recall",
+        "C": "F1 score",
+        "D": "R-squared"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using the 0/1 knapsack algorithm?",
+      "code_example": "def knapsack(weights, values, capacity):\n    n = len(weights)\n    dp = [[0 for _ in range(capacity + 1)] for _ in range(n + 1)]\n    \n    for i in range(1, n + 1):\n        for w in range(capacity + 1):\n            if weights[i-1] <= w:\n                dp[i][w] = max(values[i-1] + dp[i-1][w-weights[i-1]], dp[i-1][w])\n            else:\n                dp[i][w] = dp[i-1][w]\n    \n    return dp[n][capacity]\n\nweights = [2, 3, 1, 4]\nvalues = [3, 4, 5, 6]\ncapacity = 5\n\nprint(knapsack(weights, values, capacity))",
+      "options": {
+        "A": "9",
+        "B": "10",
+        "C": "12",
+        "D": "14"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What is the output of this code using attribute access?",
+      "code_example": "class Dynamic:\n    def __init__(self):\n        self.x = 10\n    \n    def __getattr__(self, name):\n        return f\"Attribute '{name}' not found\"\n    \n    def __getattribute__(self, name):\n        if name == 'y':\n            return 20\n        return super().__getattribute__(name)\n\nobj = Dynamic()\nprint(getattr(obj, 'x'))\nprint(getattr(obj, 'y'))\nprint(getattr(obj, 'z', 'fallback'))",
+      "options": {
+        "A": "10, 20, fallback",
+        "B": "10, 20, Attribute 'z' not found",
+        "C": "10, Attribute 'y' not found, fallback",
+        "D": "Attribute 'x' not found, 20, fallback"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What is the output of this code demonstrating multiple inheritance and Method Resolution Order (MRO)?",
+      "code_example": "class A:\n    def method(self):\n        return 'A'\n\nclass B(A):\n    def method(self):\n        return 'B' + super().method()\n\nclass C(A):\n    def method(self):\n        return 'C' + super().method()\n\nclass D(B, C):\n    def method(self):\n        return 'D' + super().method()\n\nprint(D().method())\nprint(D.__mro__[2].__name__)",
+      "options": {
+        "A": "DBCA, C",
+        "B": "DBCA, B",
+        "C": "DBA, C",
+        "D": "DCBA, A"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will the following async/await code print?",
+      "code_example": "import asyncio\n\nasync def task1():\n    await asyncio.sleep(1)\n    return 'Task 1 done'\n\nasync def task2():\n    await asyncio.sleep(0.5)\n    return 'Task 2 done'\n\nasync def main():\n    results = await asyncio.gather(\n        task1(),\n        task2()\n    )\n    print(results)\n    \n    task_1 = asyncio.create_task(task1())\n    task_2 = asyncio.create_task(task2())\n    \n    result_2 = await task_2\n    result_1 = await task_1\n    \n    print([result_1, result_2])\n\n# For demonstration only - don't run this directly\n# asyncio.run(main())",
+      "options": {
+        "A": "['Task 1 done', 'Task 2 done'] followed by ['Task 1 done', 'Task 2 done']",
+        "B": "['Task 2 done', 'Task 1 done'] followed by ['Task 1 done', 'Task 2 done']",
+        "C": "['Task 2 done', 'Task 1 done'] followed by ['Task 2 done', 'Task 1 done']",
+        "D": "['Task 1 done', 'Task 2 done'] followed by ['Task 2 done', 'Task 1 done']"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What is the expected runtime complexity of this randomized quicksort implementation?",
+      "code_example": "import random\n\ndef randomized_quicksort(arr, low, high):\n    if low < high:\n        pivot_idx = random.randint(low, high)\n        arr[pivot_idx], arr[high] = arr[high], arr[pivot_idx]\n        \n        pivot = arr[high]\n        i = low - 1\n        \n        for j in range(low, high):\n            if arr[j] <= pivot:\n                i += 1\n                arr[i], arr[j] = arr[j], arr[i]\n        \n        arr[i+1], arr[high] = arr[high], arr[i+1]\n        pivot_pos = i+1\n        \n        randomized_quicksort(arr, low, pivot_pos-1)\n        randomized_quicksort(arr, pivot_pos+1, high)\n    return arr",
+      "options": {
+        "A": "O(n) average case, O(n²) worst case",
+        "B": "O(n log n) average case, O(n log n) worst case",
+        "C": "O(n log n) average case, O(n²) worst case",
+        "D": "O(n²) average case, O(n²) worst case"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "Which of the following tools would be best for measuring code coverage in a Python project?",
+      "options": {
+        "A": "mypy",
+        "B": "coverage.py",
+        "C": "isort",
+        "D": "doctest"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What is the output of this code demonstrating race conditions?",
+      "code_example": "import threading\nimport time\n\nshared_resource = 0\ncount = 0\n\ndef increment():\n    global shared_resource, count\n    local_copy = shared_resource\n    time.sleep(0.001)  # Simulate processing time\n    shared_resource = local_copy + 1\n    count += 1\n\ndef decrement():\n    global shared_resource, count\n    local_copy = shared_resource\n    time.sleep(0.001)  # Simulate processing time\n    shared_resource = local_copy - 1\n    count += 1\n\n# This would be run in a real environment, but we'll analyze it instead\n'''\nthreads = []\nfor _ in range(5):\n    threads.append(threading.Thread(target=increment))\n    threads.append(threading.Thread(target=decrement))\n\nfor t in threads:\n    t.start()\n\nfor t in threads:\n    t.join()\n\nprint(f\"Final value: {shared_resource}, Operations: {count}\")\n'''",
+      "options": {
+        "A": "Final value: 0, Operations: 10",
+        "B": "Final value: 5, Operations: 10",
+        "C": "Final value will be between -5 and 5, Operations: 10",
+        "D": "Final value will be exactly -5 or 5, Operations: 10"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What is the output of this code using LCS (Longest Common Subsequence)?",
+      "code_example": "def lcs_length(X, Y):\n    m, n = len(X), len(Y)\n    L = [[0 for _ in range(n+1)] for _ in range(m+1)]\n    \n    for i in range(m+1):\n        for j in range(n+1):\n            if i == 0 or j == 0:\n                L[i][j] = 0\n            elif X[i-1] == Y[j-1]:\n                L[i][j] = L[i-1][j-1] + 1\n            else:\n                L[i][j] = max(L[i-1][j], L[i][j-1])\n    \n    return L[m][n]\n\nX = \"AGGTAB\"\nY = \"GXTXAYB\"\nprint(lcs_length(X, Y))",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which of these SQL query optimizations would typically provide the LEAST performance improvement?",
+      "options": {
+        "A": "Adding appropriate indexes to frequently queried columns",
+        "B": "Using LIMIT clauses to restrict result set size",
+        "C": "Rewriting subqueries as joins when possible",
+        "D": "Adding comments to explain the purpose of complex queries"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What is wrong with this authentication middleware implementation?",
+      "code_example": "from functools import wraps\nfrom flask import Flask, request, jsonify\nimport jwt\n\napp = Flask(__name__)\nSECRET_KEY = \"my_secret_key\"\n\ndef token_required(f):\n    @wraps(f)\n    def decorator(*args, **kwargs):\n        token = request.headers.get('Authorization')\n        \n        if not token:\n            return jsonify({'message': 'Token is missing'}), 401\n        \n        try:\n            data = jwt.decode(token, SECRET_KEY)\n        except:\n            return jsonify({'message': 'Token is invalid'}), 401\n        \n        return f(*args, **kwargs)\n    \n    return decorator\n\n@app.route('/protected')\n@token_required\ndef protected():\n    return jsonify({'message': 'This is a protected endpoint'})",
+      "options": {
+        "A": "The middleware doesn't check token expiration",
+        "B": "SECRET_KEY is hardcoded instead of being stored in environment variables",
+        "C": "The decorator doesn't pass user information to the protected function",
+        "D": "All of the above"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What output will this CI/CD pipeline configuration produce?",
+      "code_example": "# gitlab-ci.yml example\nstages:\n  - test\n  - build\n  - deploy\n\nrun_tests:\n  stage: test\n  script:\n    - pytest\n  only:\n    - branches\n    - merge_requests\n\nbuild_image:\n  stage: build\n  script:\n    - docker build -t myapp:$CI_COMMIT_SHORT_SHA .\n  only:\n    - main\n    - tags\n\ndeploy_staging:\n  stage: deploy\n  script:\n    - echo \"Deploying to staging...\"\n  only:\n    - main\n\ndeploy_production:\n  stage: deploy\n  script:\n    - echo \"Deploying to production...\"\n  only:\n    - tags\n\n# For a commit with SHA abc123 pushed to a feature branch",
+      "options": {
+        "A": "Only run_tests will execute",
+        "B": "run_tests and build_image will execute",
+        "C": "run_tests, build_image, and deploy_staging will execute",
+        "D": "All four jobs will execute"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will this code for a simple state machine print?",
+      "code_example": "class StateMachine:\n    def __init__(self):\n        self.state = 'INIT'\n        self.transitions = {\n            'INIT': {'start': 'RUNNING'},\n            'RUNNING': {'pause': 'PAUSED', 'stop': 'STOPPED'},\n            'PAUSED': {'resume': 'RUNNING', 'stop': 'STOPPED'},\n            'STOPPED': {'reset': 'INIT'}\n        }\n    \n    def trigger(self, event):\n        if self.state in self.transitions and event in self.transitions[self.state]:\n            self.state = self.transitions[self.state][event]\n            return True\n        return False\n\nmachine = StateMachine()\nresults = []\n\nresults.append(machine.trigger('start'))\nresults.append(machine.state)\nresults.append(machine.trigger('pause'))\nresults.append(machine.state)\nresults.append(machine.trigger('start'))\nresults.append(machine.state)\n\nprint(results)",
+      "options": {
+        "A": "[True, 'RUNNING', True, 'PAUSED', True, 'RUNNING']",
+        "B": "[True, 'RUNNING', True, 'PAUSED', False, 'PAUSED']",
+        "C": "[False, 'INIT', False, 'INIT', False, 'INIT']",
+        "D": "[True, 'INIT', True, 'PAUSED', True, 'RUNNING']"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which statement about database sharding and replication is TRUE?",
+      "options": {
+        "A": "Sharding primarily improves read performance, while replication improves write performance",
+        "B": "Sharding splits data horizontally across multiple servers, while replication creates copies of the entire database",
+        "C": "Sharding increases data consistency, while replication improves data availability",
+        "D": "Replication requires a sharded database architecture to function properly"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
