@@ -1,0 +1,626 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "['apple', 'banana', 'cherry']",
+        "B": "['APPLE', 'BANANA', 'CHERRY']",
+        "C": "['Apple', 'Banana', 'Cherry']",
+        "D": "TypeError: 'tuple' object does not support item assignment"
+      },
+      "correct_answer": "D",
+      "code_example": "fruits = ('apple', 'banana', 'cherry')\nfruits[0] = fruits[0].upper()\nprint(fruits)"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following statements about tuples in Python is FALSE?",
+      "options": {
+        "A": "Tuples are immutable data structures",
+        "B": "You can unpack a tuple into individual variables",
+        "C": "Tuples can be used as dictionary keys",
+        "D": "You can add elements to a tuple after it's created using the append() method"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "['Hello', 'World']",
+        "B": "['Hello', 'World', '']",
+        "C": "['Hello', 'World', ' ']",
+        "D": "['Hello', ' ', 'World']"
+      },
+      "correct_answer": "A",
+      "code_example": "text = 'Hello World'\nwords = text.split()\nprint(words)"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "options": {
+        "A": "10",
+        "B": "5",
+        "C": "TypeError: unsupported operand type(s) for +: 'int' and 'str'",
+        "D": "15"
+      },
+      "correct_answer": "C",
+      "code_example": "def add_values(a, b):\n    return a + b\n\nresult = add_values(5, '10')\nprint(result)"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "int",
+        "B": "<class 'int'>",
+        "C": "True",
+        "D": "False"
+      },
+      "correct_answer": "B",
+      "code_example": "x = 42\nprint(type(x))"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct implementation of a selection sort algorithm in Python?",
+      "options": {
+        "A": "def selection_sort(arr):\n    for i in range(len(arr)):\n        min_idx = i\n        for j in range(i + 1, len(arr)):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr",
+        "B": "def selection_sort(arr):\n    for i in range(len(arr)):\n        min_val = arr[i]\n        for j in range(i + 1, len(arr)):\n            if arr[j] < min_val:\n                min_val = arr[j]\n        arr[i] = min_val\n    return arr",
+        "C": "def selection_sort(arr):\n    result = []\n    while arr:\n        min_val = min(arr)\n        result.append(min_val)\n        arr.remove(min_val)\n    return result",
+        "D": "def selection_sort(arr):\n    for i in range(len(arr)):\n        for j in range(i + 1, len(arr)):\n            if arr[i] > arr[j]:\n                arr[i], arr[j] = arr[j], arr[i]\n    return arr"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Found it!",
+        "B": "Not found!",
+        "C": "Found it! Not found!",
+        "D": "No output"
+      },
+      "correct_answer": "A",
+      "code_example": "numbers = [1, 3, 5, 7, 9]\nfor num in numbers:\n    if num == 5:\n        print('Found it!')\n        break\nelse:\n    print('Not found!')"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will the following code output?",
+      "options": {
+        "A": "{'name': 'Alice', 'age': 30, 'city': 'Unknown'}",
+        "B": "{'name': 'Alice', 'age': 30}",
+        "C": "KeyError: 'city'",
+        "D": "None"
+      },
+      "correct_answer": "A",
+      "code_example": "person = {'name': 'Alice', 'age': 30}\ncity = person.get('city', 'Unknown')\nperson['city'] = city\nprint(person)"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the correct way to write a docstring in Python?",
+      "options": {
+        "A": "// This function calculates the sum of two numbers",
+        "B": "/* This function calculates the sum of two numbers */",
+        "C": "''' This function calculates the sum of two numbers '''",
+        "D": "# This function calculates the sum of two numbers"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following recursive factorial function?",
+      "options": {
+        "A": "24",
+        "B": "120",
+        "C": "720",
+        "D": "RecursionError: maximum recursion depth exceeded"
+      },
+      "correct_answer": "B",
+      "code_example": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1)\n\nprint(factorial(5))"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will the following code output?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+        "B": "[2, 4, 6, 8, 10]",
+        "C": "[1, 3, 5, 7, 9]",
+        "D": "[]"
+      },
+      "correct_answer": "B",
+      "code_example": "numbers = []\ni = 1\nwhile i <= 10:\n    if i % 2 == 0:\n        numbers.append(i)\n    i += 1\nprint(numbers)"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that handles multiple exceptions?",
+      "options": {
+        "A": "Division by zero error",
+        "B": "Index error",
+        "C": "Value error",
+        "D": "No error"
+      },
+      "correct_answer": "A",
+      "code_example": "try:\n    x = 5\n    y = 0\n    result = x / y\n    print(result)\nexcept IndexError:\n    print(\"Index error\")\nexcept ZeroDivisionError:\n    print(\"Division by zero error\")\nexcept ValueError:\n    print(\"Value error\")"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "Which of the following correctly creates a multi-line string in Python?",
+      "options": {
+        "A": "text = 'Line 1\nLine 2\nLine 3'",
+        "B": "text = \"Line 1\nLine 2\nLine 3\"",
+        "C": "text = '''Line 1\nLine 2\nLine 3'''",
+        "D": "All of the above"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following FizzBuzz implementation?",
+      "options": {
+        "A": "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz",
+        "B": "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 Fizz Buzz",
+        "C": "Fizz Buzz FizzBuzz",
+        "D": "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15"
+      },
+      "correct_answer": "A",
+      "code_example": "result = []\nfor i in range(1, 16):\n    if i % 3 == 0 and i % 5 == 0:\n        result.append('FizzBuzz')\n    elif i % 3 == 0:\n        result.append('Fizz')\n    elif i % 5 == 0:\n        result.append('Buzz')\n    else:\n        result.append(str(i))\nprint(' '.join(result))"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to open a CSV file for reading in Python?",
+      "options": {
+        "A": "file = open('data.csv', 'r')",
+        "B": "file = open('data.csv', 'rb')",
+        "C": "import csv\nwith open('data.csv', 'r') as file:\n    reader = csv.reader(file)",
+        "D": "import csv\nfile = csv.open('data.csv')"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using different string formatting methods?",
+      "options": {
+        "A": "Hello, Alice! Your score is 95.",
+        "B": "Hello, Alice! Your score is 95.00.",
+        "C": "Hello, Alice! Your score is 95.0.",
+        "D": "Error: mixed string formatting methods"
+      },
+      "correct_answer": "A",
+      "code_example": "name = 'Alice'\nscore = 95\n\n# Using f-string\nresult = f\"Hello, {name}! Your score is {score}.\"\nprint(result)"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating first-class functions?",
+      "options": {
+        "A": "25",
+        "B": "9",
+        "C": "16",
+        "D": "TypeError: 'function' object is not subscriptable"
+      },
+      "correct_answer": "C",
+      "code_example": "def square(x):\n    return x * x\n\ndef apply_function(func, value):\n    return func(value)\n\nresult = apply_function(square, 4)\nprint(result)"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using constructors and instance methods?",
+      "options": {
+        "A": "John Doe",
+        "B": "Name: John Doe, Age: 30",
+        "C": "{'name': 'John Doe', 'age': 30}",
+        "D": "AttributeError: 'Person' object has no attribute 'get_info'"
+      },
+      "correct_answer": "B",
+      "code_example": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n    \n    def get_info(self):\n        return f\"Name: {self.name}, Age: {self.age}\"\n\nperson = Person(\"John Doe\", 30)\nprint(person.get_info())"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating partial functions?",
+      "options": {
+        "A": "15",
+        "B": "25",
+        "C": "20",
+        "D": "TypeError: multiply() missing 1 required positional argument"
+      },
+      "correct_answer": "A",
+      "code_example": "from functools import partial\n\ndef multiply(x, y):\n    return x * y\n\n# Create a new function that multiplies by 3\ntriple = partial(multiply, 3)\n\n# Use the new function\nresult = triple(5)\nprint(result)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the re module?",
+      "options": {
+        "A": "['cat', 'dog', 'bird']",
+        "B": "['The', 'cat', 'and', 'the', 'dog', 'saw', 'a', 'bird']",
+        "C": "['The cat and the dog saw a bird']",
+        "D": "[]"
+      },
+      "correct_answer": "A",
+      "code_example": "import re\n\ntext = \"The cat and the dog saw a bird\"\npattern = r'\\b[a-z]{3,4}\\b'\n\nmatches = re.findall(pattern, text)\nprint(matches)"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "In a web framework like Flask, which of the following correctly represents a route and view function?",
+      "options": {
+        "A": "@app.route('/hello')\ndef hello():\n    return 'Hello, World!'",
+        "B": "@route('/hello')\ndef hello():\n    print('Hello, World!')",
+        "C": "app.route('/hello', hello())",
+        "D": "@app.url('/hello')\ndef hello():\n    return 'Hello, World!'"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which of the following correctly establishes a database connection in Python using SQLite?",
+      "options": {
+        "A": "import sqlite3\nconn = sqlite3.connect('example.db')\ncursor = conn.cursor()",
+        "B": "from database import SQLite\ndb = SQLite.connect('example.db')",
+        "C": "import mysql\nconn = mysql.connector.connect(database='example.db')",
+        "D": "from sqlite import Database\ndb = Database('example.db')"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "Which of the following correctly represents a basic SQLAlchemy ORM model definition?",
+      "options": {
+        "A": "class User(Base):\n    __tablename__ = 'users'\n    \n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    email = Column(String, unique=True)",
+        "B": "class User(Model):\n    id = Integer(primary_key=True)\n    name = String()\n    email = String(unique=True)",
+        "C": "class User:\n    def __init__(self, id, name, email):\n        self.id = id\n        self.name = name\n        self.email = email",
+        "D": "@orm.model('users')\nclass User:\n    id = orm.Integer(key=True)\n    name = orm.String()\n    email = orm.String(unique=True)"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following hash-based search implementation?",
+      "options": {
+        "A": "Found 'banana' at position 1",
+        "B": "Found 'banana' at position 2",
+        "C": "Not found",
+        "D": "IndexError: list index out of range"
+      },
+      "correct_answer": "A",
+      "code_example": "def hash_search(items, target):\n    # Create a dictionary with items as keys and positions as values\n    item_map = {item: pos for pos, item in enumerate(items)}\n    \n    # Check if target is in the dictionary\n    if target in item_map:\n        return f\"Found '{target}' at position {item_map[target]}\"\n    else:\n        return \"Not found\"\n\nfruits = ['apple', 'banana', 'cherry']\nresult = hash_search(fruits, 'banana')\nprint(result)"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "Which of the following SQL queries would correctly retrieve all users whose age is greater than 25, ordered by their name?",
+      "options": {
+        "A": "SELECT * FROM users WHERE age > 25 ORDER BY name",
+        "B": "SELECT * FROM users HAVING age > 25 ORDER BY name",
+        "C": "SELECT * FROM users WHERE age > 25 SORT BY name",
+        "D": "SELECT ALL FROM users WHERE age > 25 ORDER BY name ASC"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "In a web framework like Django, which of the following correctly describes the relationship between templates and static files?",
+      "options": {
+        "A": "Templates contain HTML with placeholders for dynamic content, while static files include CSS, JavaScript, and images",
+        "B": "Templates are Python files that generate HTML, while static files are client-side scripts",
+        "C": "Templates are CSS files that style the HTML, while static files are JavaScript functions",
+        "D": "Templates and static files are the same thing, just stored in different directories"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating Python's module search path?",
+      "options": {
+        "A": "A list of directory paths where Python looks for modules",
+        "B": "The current working directory",
+        "C": "The Python installation directory",
+        "D": "An empty list"
+      },
+      "correct_answer": "A",
+      "code_example": "import sys\nprint(sys.path)"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "Which of the following data types in Python are immutable?",
+      "options": {
+        "A": "Lists, tuples, and strings",
+        "B": "Tuples, strings, and integers",
+        "C": "Dictionaries, sets, and frozensets",
+        "D": "Lists, dictionaries, and sets"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "Which regex pattern would correctly match a valid email address format?",
+      "options": {
+        "A": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+        "B": "^[a-z0-9]+@[a-z0-9]+\\.[a-z]+$",
+        "C": "^\\w+@\\w+\\.\\w+$",
+        "D": ".*@.*\\..*"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following binary tree implementation?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[4, 2, 5, 1, 3]",
+        "C": "[1, 2, 4, 5, 3]",
+        "D": "[4, 2, 1, 5, 3]"
+      },
+      "correct_answer": "C",
+      "code_example": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\ndef in_order_traversal(node, result=None):\n    if result is None:\n        result = []\n    if node:\n        in_order_traversal(node.left, result)\n        result.append(node.value)\n        in_order_traversal(node.right, result)\n    return result\n\n# Create a simple binary tree\nroot = Node(1)\nroot.left = Node(2)\nroot.right = Node(3)\nroot.left.left = Node(4)\nroot.left.right = Node(5)\n\nprint(in_order_traversal(root))"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is the difference between greedy and non-greedy (lazy) matching in regular expressions?",
+      "options": {
+        "A": "Greedy matching tries to match as few characters as possible, while non-greedy matching tries to match as many as possible",
+        "B": "Greedy matching tries to match as many characters as possible, while non-greedy matching tries to match as few as possible",
+        "C": "Greedy matching only works with alphanumeric characters, while non-greedy matching works with all characters",
+        "D": "There is no difference; they are just alternative terms for the same concept"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following depth-first search implementation?",
+      "options": {
+        "A": "A B C D E",
+        "B": "A B D E C",
+        "C": "A C E D B",
+        "D": "A D B E C"
+      },
+      "correct_answer": "B",
+      "code_example": "def dfs(graph, start, visited=None):\n    if visited is None:\n        visited = []\n    visited.append(start)\n    \n    for neighbor in graph[start]:\n        if neighbor not in visited:\n            dfs(graph, neighbor, visited)\n    \n    return visited\n\n# Graph represented as an adjacency list\ngraph = {\n    'A': ['B', 'C'],\n    'B': ['D', 'E'],\n    'C': [],\n    'D': [],\n    'E': []\n}\n\nresult = dfs(graph, 'A')\nprint(' '.join(result))"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "topic": "Bit manipulation",
+      "question": "What will be the output of the following bit manipulation code?",
+      "code_example": "def count_set_bits(n):\n    count = 0\n    while n:\n        count += n & 1\n        n >>= 1\n    return count\n\nprint(count_set_bits(14) + count_set_bits(23))",
+      "options": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "11"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "topic": "Dependency injection",
+      "question": "Which of the following best describes dependency injection in Python?",
+      "options": {
+        "A": "A design pattern where a class receives its dependencies from external sources rather than creating them",
+        "B": "A technique to automatically import required modules at runtime",
+        "C": "A built-in Python mechanism to manage package dependencies",
+        "D": "A method to inject code into Python's import system"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "topic": "CPython implementation details",
+      "question": "What will be the output of the following code, which leverages a CPython implementation detail?",
+      "code_example": "import sys\n\na = 'hello'\nb = 'hello'\nc = 'hello world'[:5]\nd = 'hello!!'[:5]\n\nprint(f'{a is b}, {a is c}, {a is d}')",
+      "options": {
+        "A": "True, True, True",
+        "B": "True, True, False",
+        "C": "True, False, False",
+        "D": "False, False, False"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "topic": "Abstract classes and interfaces",
+      "question": "What will be the output of the following code using abstract classes?",
+      "code_example": "from abc import ABC, abstractmethod\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self):\n        pass\n        \n    @property\n    def name(self):\n        return self.__class__.__name__\n\nclass Rectangle(Shape):\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    def area(self):\n        return self.width * self.height\n\ntry:\n    s = Shape()\n    print('A')\nexcept TypeError:\n    try:\n        r = Rectangle(3, 4)\n        print(f'B: {r.area()}')\n    except Exception:\n        print('C')\n    else:\n        print('D')",
+      "options": {
+        "A": "A",
+        "B": "B: 12",
+        "C": "C",
+        "D": "B: 12\\nD"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "topic": "Profiling Python code",
+      "question": "Which of the following profiling tools provides the most detailed function-level timing information for Python code without requiring code modifications?",
+      "options": {
+        "A": "timeit",
+        "B": "cProfile",
+        "C": "line_profiler",
+        "D": "memory_profiler"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "topic": "Threading vs multiprocessing",
+      "question": "What will be the output of the following code that uses threading and multiprocessing?",
+      "code_example": "import threading\nimport multiprocessing\nimport time\n\ndef increment_counter(counter, iterations):\n    for _ in range(iterations):\n        counter.value += 1\n\ndef test_concurrency():\n    # Shared counter using multiprocessing Value\n    mp_counter = multiprocessing.Value('i', 0)\n    processes = []\n    \n    for _ in range(2):\n        p = multiprocessing.Process(target=increment_counter, args=(mp_counter, 100))\n        processes.append(p)\n        p.start()\n    \n    for p in processes:\n        p.join()\n    \n    # Shared counter using a simple integer\n    thread_counter = type('Counter', (), {'value': 0})()\n    threads = []\n    \n    for _ in range(2):\n        t = threading.Thread(target=increment_counter, args=(thread_counter, 100))\n        threads.append(t)\n        t.start()\n    \n    for t in threads:\n        t.join()\n    \n    return mp_counter.value, thread_counter.value\n\nif __name__ == '__main__':\n    mp_result, thread_result = test_concurrency()\n    print(f'{mp_result}, {thread_result}')",
+      "options": {
+        "A": "200, 200",
+        "B": "200, less than 200",
+        "C": "less than 200, 200",
+        "D": "less than 200, less than 200"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "topic": "BeautifulSoup and requests",
+      "question": "What will be the output of the following web scraping code snippet?",
+      "code_example": "html_content = \"\"\"<!DOCTYPE html>\n<html>\n<body>\n    <div class='container'>\n        <p class='text'>First paragraph</p>\n        <p>Second paragraph</p>\n        <p class='text'>Third paragraph</p>\n    </div>\n    <div>\n        <p class='text'>Fourth paragraph</p>\n    </div>\n</body>\n</html>\"\"\"\n\nfrom bs4 import BeautifulSoup\n\nsoup = BeautifulSoup(html_content, 'html.parser')\nresult = soup.select('div p.text')\nprint(len(result))",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "1"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "topic": "Just-in-time compilation (PyPy)",
+      "question": "Which of the following statements about PyPy is NOT true?",
+      "options": {
+        "A": "PyPy often executes CPU-intensive code faster than CPython",
+        "B": "PyPy uses Just-In-Time (JIT) compilation to optimize hot code paths",
+        "C": "PyPy is fully compatible with all C extension modules designed for CPython",
+        "D": "PyPy can reduce memory usage compared to CPython in some scenarios"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "topic": "Randomized algorithms",
+      "question": "What will be the output of the following randomized algorithm code?",
+      "code_example": "import random\n\ndef monte_carlo_estimate_pi(num_samples=1000):\n    random.seed(42)  # For reproducibility\n    count_inside = 0\n    \n    for _ in range(num_samples):\n        x = random.random()\n        y = random.random()\n        if x*x + y*y <= 1:\n            count_inside += 1\n            \n    return 4 * count_inside / num_samples\n\npi_estimate = monte_carlo_estimate_pi(1000)\nprint(f'{pi_estimate:.4f}')",
+      "options": {
+        "A": "3.1416",
+        "B": "3.1336",
+        "C": "3.1520",
+        "D": "3.1840"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "topic": "String algorithms (KMP, Rabin-Karp)",
+      "question": "What will be the output of the following string matching algorithm implementation?",
+      "code_example": "def compute_lps(pattern):\n    lps = [0] * len(pattern)\n    length = 0\n    i = 1\n\n    while i < len(pattern):\n        if pattern[i] == pattern[length]:\n            length += 1\n            lps[i] = length\n            i += 1\n        else:\n            if length != 0:\n                length = lps[length-1]\n            else:\n                lps[i] = 0\n                i += 1\n    return lps\n\ndef kmp_search(text, pattern):\n    matches = []\n    if not pattern or not text:\n        return matches\n\n    lps = compute_lps(pattern)\n    i = j = 0\n\n    while i < len(text):\n        if pattern[j] == text[i]:\n            i += 1\n            j += 1\n\n        if j == len(pattern):\n            matches.append(i - j)\n            j = lps[j-1]\n        elif i < len(text) and pattern[j] != text[i]:\n            if j != 0:\n                j = lps[j-1]\n            else:\n                i += 1\n                \n    return matches\n\ntext = \"ABABCABABABABCABAB\"\npattern = \"ABABC\"\nprint(kmp_search(text, pattern))",
+      "options": {
+        "A": "[0, 10]",
+        "B": "[0, 9]",
+        "C": "[0]",
+        "D": "[0, 10, 14]"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "topic": "NoSQL databases (MongoDB, Redis)",
+      "question": "Which of the following is NOT a correct pairing of NoSQL database type and example?",
+      "options": {
+        "A": "Key-Value Store: Redis",
+        "B": "Document Store: MongoDB",
+        "C": "Column-Family Store: Cassandra",
+        "D": "Graph Database: PostgreSQL"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "topic": "Mock objects and patching",
+      "question": "What will be the output of the following code using mock objects?",
+      "code_example": "import unittest\nfrom unittest.mock import patch, MagicMock\n\ndef fetch_data(db_connection):\n    result = db_connection.execute('SELECT * FROM users')\n    if result:\n        return len(result)\n    return 0\n\nclass TestDatabase(unittest.TestCase):\n    @patch('__main__.fetch_data')\n    def test_with_direct_mock(self, mock_fetch):\n        mock_fetch.return_value = 5\n        result = fetch_data(None)\n        print(f'A:{result}', end='')\n        \n    def test_with_dependency_injection(self):\n        mock_db = MagicMock()\n        mock_db.execute.return_value = ['user1', 'user2', 'user3']\n        result = fetch_data(mock_db)\n        print(f'B:{result}', end='')\n\nif __name__ == '__main__':\n    test_suite = unittest.TestSuite()\n    test_suite.addTest(TestDatabase('test_with_direct_mock'))\n    test_suite.addTest(TestDatabase('test_with_dependency_injection'))\n    runner = unittest.TextTestRunner(verbosity=0)\n    runner.run(test_suite)",
+      "options": {
+        "A": "A:5B:3",
+        "B": "A:0B:3",
+        "C": "A:0B:0",
+        "D": "A:5B:0"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "topic": "Scikit-learn basics",
+      "question": "What will be the output of the following scikit-learn code?",
+      "code_example": "import numpy as np\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score\n\nnp.random.seed(42)\nX = np.random.rand(100, 4)\ny = (X[:, 0] + X[:, 1] > 1).astype(int)\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\nmodel = RandomForestClassifier(n_estimators=10, random_state=42)\nmodel.fit(X_train, y_train)\n\ny_pred = model.predict(X_test)\naccuracy = accuracy_score(y_test, y_pred)\n\nprint(f'{accuracy:.2f}')",
+      "options": {
+        "A": "0.83",
+        "B": "0.87",
+        "C": "0.90",
+        "D": "0.97"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "topic": "Race conditions and deadlocks",
+      "question": "What will be the most likely output of the following code that demonstrates a race condition?",
+      "code_example": "import threading\nimport time\n\ndef increment_with_delay(counter, delay=0.001):\n    for _ in range(50):\n        value = counter[0]\n        time.sleep(delay)  # Simulate some processing\n        counter[0] = value + 1\n\ndef test_race_condition():\n    counter = [0]\n    threads = []\n    \n    for _ in range(2):\n        t = threading.Thread(target=increment_with_delay, args=(counter,))\n        threads.append(t)\n        t.start()\n    \n    for t in threads:\n        t.join()\n    \n    return counter[0]\n\nif __name__ == '__main__':\n    result = test_race_condition()\n    print(result)",
+      "options": {
+        "A": "100",
+        "B": "Between 51 and 99",
+        "C": "50",
+        "D": "It varies and could be any value between 1 and 100"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "topic": "N-ary trees",
+      "question": "What will be the output of the following code implementing a depth-first traversal of an N-ary tree?",
+      "code_example": "class TreeNode:\n    def __init__(self, val=0, children=None):\n        self.val = val\n        self.children = children if children else []\n\ndef depth_first_values(root):\n    if not root:\n        return []\n        \n    result = [root.val]\n    \n    for child in root.children:\n        result.extend(depth_first_values(child))\n        \n    return result\n\n# Construct the following N-ary tree:\n#       1\n#     / | \\\n#    2  3  4\n#   /|     |\n#  5 6     7\n\nnode5 = TreeNode(5)\nnode6 = TreeNode(6)\nnode7 = TreeNode(7)\nnode2 = TreeNode(2, [node5, node6])\nnode3 = TreeNode(3)\nnode4 = TreeNode(4, [node7])\nroot = TreeNode(1, [node2, node3, node4])\n\nprint(depth_first_values(root))",
+      "options": {
+        "A": "[1, 2, 5, 6, 3, 4, 7]",
+        "B": "[1, 2, 3, 4, 5, 6, 7]",
+        "C": "[1, 4, 7, 3, 2, 6, 5]",
+        "D": "[1, 3, 2, 5, 6, 4, 7]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "topic": "Ethical scraping practices",
+      "question": "Which of the following practices is NOT considered ethical when scraping websites?",
+      "options": {
+        "A": "Implementing rate limiting to avoid overloading the server",
+        "B": "Respecting the terms specified in the website's robots.txt",
+        "C": "Using multiple IP addresses to circumvent rate limits",
+        "D": "Identifying your scraper with an appropriate User-Agent header"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
