@@ -1,0 +1,615 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that demonstrates string slicing?",
+      "code_example": "text = \"Python Programming\"\nprint(text[7:14])",
+      "options": {
+        "A": "Programm",
+        "B": "Program",
+        "C": "rogramm",
+        "D": "rogra"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What file mode would you use to open a file for both reading and writing binary data?",
+      "options": {
+        "A": "'rw'",
+        "B": "'r+b'",
+        "C": "'rb+'",
+        "D": "'rwb'"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that demonstrates variable scope?",
+      "code_example": "x = 10\n\ndef modify_x():\n    x = 20\n    print(\"Inside function:\", x)\n    \nmodify_x()\nprint(\"Outside function:\", x)",
+      "options": {
+        "A": "Inside function: 20\nOutside function: 20",
+        "B": "Inside function: 10\nOutside function: 10",
+        "C": "Inside function: 20\nOutside function: 10",
+        "D": "Inside function: 10\nOutside function: 20"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Which of the following implements a correct linear search in Python?",
+      "code_example": "def linear_search(arr, target):\n    for i in range(len(arr)):\n        if arr[i] == target:\n            return i\n    return -1",
+      "options": {
+        "A": "The function will return the first index where the target is found, or -1 if not found",
+        "B": "The function will return all indices where the target is found",
+        "C": "The function will return True if the target is found, otherwise False",
+        "D": "The function has a logical error and will not correctly find the target"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that demonstrates an else clause in a loop?",
+      "code_example": "for i in range(3):\n    if i == 5:\n        break\nelse:\n    print(\"Loop completed without breaking\")",
+      "options": {
+        "A": "No output",
+        "B": "Loop completed without breaking",
+        "C": "SyntaxError: invalid syntax",
+        "D": "Break statement executed"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What is the correct way to handle multiple different exceptions in Python?",
+      "code_example": "try:\n    num = int(input(\"Enter a number: \"))\n    result = 10 / num\nexcept ValueError:\n    print(\"Invalid input\")\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero\")",
+      "options": {
+        "A": "The code will handle only the first exception that occurs",
+        "B": "The code will handle both ValueError and ZeroDivisionError appropriately",
+        "C": "The code should use a single except statement with multiple exceptions instead",
+        "D": "The code will raise a SyntaxError"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that demonstrates default parameters?",
+      "code_example": "def greet(name, greeting=\"Hello\"):\n    return f\"{greeting}, {name}!\"\n\nprint(greet(\"Alice\"))\nprint(greet(\"Bob\", \"Hi\"))",
+      "options": {
+        "A": "Hello, Alice!\nHi, Bob!",
+        "B": "Hello Alice!\nHi Bob!",
+        "C": "Alice, Hello!\nBob, Hi!",
+        "D": "Error: missing required parameter"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to create a custom exception in Python?",
+      "code_example": "class CustomError(Exception):\n    def __init__(self, message):\n        self.message = message\n        super().__init__(self.message)",
+      "options": {
+        "A": "Custom exceptions should inherit from Error, not Exception",
+        "B": "The code is correct for creating a custom exception",
+        "C": "A custom exception must implement __str__ method",
+        "D": "Custom exceptions cannot accept parameters in __init__"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that demonstrates string methods?",
+      "code_example": "text = \"  Python,Java,C++  \"\nclean_text = text.strip().replace(\" \", \"\")\nlanguages = clean_text.split(\",\")\nprint(\"-\".join(languages))",
+      "options": {
+        "A": "Python-Java-C++",
+        "B": "  Python-Java-C++  ",
+        "C": "Python,Java,C++",
+        "D": "PythonJavaC++"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "According to PEP 8, which of the following is the correct way to name a constant in Python?",
+      "options": {
+        "A": "maxSize",
+        "B": "MAX_SIZE",
+        "C": "MaxSize",
+        "D": "max_size"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that calculates the median of a list?",
+      "code_example": "def find_median(numbers):\n    sorted_numbers = sorted(numbers)\n    n = len(sorted_numbers)\n    if n % 2 == 0:\n        return (sorted_numbers[n//2 - 1] + sorted_numbers[n//2]) / 2\n    else:\n        return sorted_numbers[n//2]\n\nprint(find_median([7, 2, 5, 1, 9]))\nprint(find_median([4, 2, 6, 8, 5, 3]))",
+      "options": {
+        "A": "5\n4.5",
+        "B": "5\n5",
+        "C": "5.0\n4.5",
+        "D": "5\n5.5"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that demonstrates enumerate in a for loop?",
+      "code_example": "fruits = ['apple', 'banana', 'cherry']\nfor i, fruit in enumerate(fruits, 1):\n    print(f\"{i}: {fruit}\")",
+      "options": {
+        "A": "1: apple\n2: banana\n3: cherry",
+        "B": "0: apple\n1: banana\n2: cherry",
+        "C": "apple: 1\nbanana: 2\ncherry: 3",
+        "D": "apple: 0\nbanana: 1\ncherry: 2"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that demonstrates dictionary methods?",
+      "code_example": "student = {'name': 'Alice', 'age': 22}\nprint(student.get('grade', 'Not available'))\nstudent['grade'] = 'A'\nprint(sorted(student.keys()))",
+      "options": {
+        "A": "None\n['age', 'grade', 'name']",
+        "B": "Not available\n['age', 'grade', 'name']",
+        "C": "KeyError: 'grade'\n['age', 'grade', 'name']",
+        "D": "Not available\n{'age', 'grade', 'name'}"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that demonstrates conditional expressions?",
+      "code_example": "x = 15\nmessage = \"Even\" if x % 2 == 0 else \"Odd\"\nprint(message)",
+      "options": {
+        "A": "Even",
+        "B": "Odd",
+        "C": "True",
+        "D": "False"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that demonstrates while loops with break and continue?",
+      "code_example": "count = 0\nwhile count < 10:\n    count += 1\n    if count % 2 == 0:\n        continue\n    if count > 7:\n        break\n    print(count, end=\" \")",
+      "options": {
+        "A": "1 3 5 7",
+        "B": "1 3 5 7 9",
+        "C": "1 2 3 4 5 6 7",
+        "D": "2 4 6 8 10"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that demonstrates try/except/else/finally blocks?",
+      "code_example": "def divide(x, y):\n    try:\n        result = x / y\n    except ZeroDivisionError:\n        print(\"Division by zero!\")\n        return None\n    else:\n        print(\"Division successful\")\n        return result\n    finally:\n        print(\"Executing finally clause\")\n\nprint(divide(10, 2))",
+      "options": {
+        "A": "Division successful\nExecuting finally clause\n5.0",
+        "B": "Division successful\n5.0\nExecuting finally clause",
+        "C": "Division by zero!\nExecuting finally clause\nNone",
+        "D": "5.0"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What is the primary difference between class variables and instance variables in Python?",
+      "code_example": "class Counter:\n    count = 0  # Class variable\n    \n    def __init__(self, name):\n        self.name = name  # Instance variable\n        Counter.count += 1\n    \n    def get_count(self):\n        return Counter.count\n\nc1 = Counter(\"First\")\nc2 = Counter(\"Second\")\nprint(c1.name, c2.name)\nprint(c1.get_count(), c2.get_count())",
+      "options": {
+        "A": "Class variables are shared among all instances, while instance variables are unique to each instance",
+        "B": "Class variables cannot be modified, while instance variables can",
+        "C": "Instance variables are shared among all instances, while class variables are unique to each instance",
+        "D": "There is no difference; both are accessible through the class or instance"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is the primary benefit of lazy evaluation in Python?",
+      "options": {
+        "A": "It always executes faster than eager evaluation",
+        "B": "It improves code readability significantly",
+        "C": "It can handle potentially infinite sequences and defers computation until needed",
+        "D": "It automatically optimizes memory usage in all cases"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which of the following algorithms correctly detects cycles in a directed graph using depth-first search?",
+      "code_example": "def has_cycle(graph):\n    visited = set()\n    path = set()\n    \n    def visit(vertex):\n        if vertex in path:\n            return True\n        if vertex in visited:\n            return False\n            \n        visited.add(vertex)\n        path.add(vertex)\n        \n        for neighbor in graph.get(vertex, []):\n            if visit(neighbor):\n                return True\n                \n        path.remove(vertex)\n        return False\n    \n    return any(visit(vertex) for vertex in graph if vertex not in visited)",
+      "options": {
+        "A": "The algorithm incorrectly handles directed graphs",
+        "B": "The algorithm will detect cycles in directed graphs correctly",
+        "C": "The algorithm only works for undirected graphs",
+        "D": "The algorithm will always return True regardless of the graph structure"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that demonstrates JSON parsing and serialization?",
+      "code_example": "import json\n\nclass Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\ndef person_encoder(obj):\n    if isinstance(obj, Person):\n        return {\"name\": obj.name, \"age\": obj.age}\n    raise TypeError(f\"Object of type {type(obj)} is not JSON serializable\")\n\ndef person_decoder(obj):\n    if \"name\" in obj and \"age\" in obj:\n        return Person(obj[\"name\"], obj[\"age\"])\n    return obj\n\nperson = Person(\"Alice\", 30)\nencoded = json.dumps(person, default=person_encoder)\nprint(encoded)\ndecoded = json.loads(encoded, object_hook=person_decoder)\nprint(type(decoded).__name__)\nprint(decoded.name)",
+      "options": {
+        "A": "{\"name\": \"Alice\", \"age\": 30}\nPerson\nAlice",
+        "B": "{\"name\": \"Alice\", \"age\": 30}\ndict\nAttributeError: 'dict' object has no attribute 'name'",
+        "C": "TypeError: Object of type 'Person' is not JSON serializable",
+        "D": "{\"name\": \"Alice\", \"age\": 30}\ndict\nKeyError: 'name'"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What are the four main HTTP methods used in RESTful APIs and what principles guide their use?",
+      "options": {
+        "A": "GET, PUT, POST, DELETE - where GET reads, PUT updates, POST creates, and DELETE removes resources",
+        "B": "FIND, UPDATE, CREATE, REMOVE - corresponding to database operations",
+        "C": "READ, UPDATE, INSERT, DELETE - mirroring SQL operations",
+        "D": "FETCH, MODIFY, ADD, ERASE - representing the four basic data operations"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which authentication method is commonly used for API requests that doesn't require storing user credentials on the server?",
+      "options": {
+        "A": "Basic Authentication",
+        "B": "Token-based Authentication",
+        "C": "Session-based Authentication",
+        "D": "API Key Authentication"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that demonstrates a divide and conquer approach?",
+      "code_example": "def binary_search(arr, target):\n    def search(low, high):\n        if low > high:\n            return -1\n            \n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] > target:\n            return search(low, mid - 1)\n        else:\n            return search(mid + 1, high)\n            \n    return search(0, len(arr) - 1)\n\nprint(binary_search([1, 3, 5, 7, 9, 11, 13], 7))\nprint(binary_search([1, 3, 5, 7, 9, 11, 13], 6))",
+      "options": {
+        "A": "3\n-1",
+        "B": "3\nNone",
+        "C": "4\n-1",
+        "D": "7\n6"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that demonstrates a basic hash table implementation?",
+      "code_example": "class SimpleHashTable:\n    def __init__(self, size=10):\n        self.size = size\n        self.table = [None] * size\n        \n    def hash_function(self, key):\n        return hash(key) % self.size\n        \n    def insert(self, key, value):\n        index = self.hash_function(key)\n        if self.table[index] is None:\n            self.table[index] = []\n        \n        # Check if key already exists\n        for i, (k, v) in enumerate(self.table[index]):\n            if k == key:\n                self.table[index][i] = (key, value)\n                return\n        \n        self.table[index].append((key, value))\n        \n    def get(self, key):\n        index = self.hash_function(key)\n        if self.table[index] is None:\n            return None\n            \n        for k, v in self.table[index]:\n            if k == key:\n                return v\n                \n        return None\n\nht = SimpleHashTable(5)\nht.insert(\"name\", \"Alice\")\nht.insert(\"age\", 30)\nht.insert(\"email\", \"alice@example.com\")\nprint(ht.get(\"name\"))\nht.insert(\"name\", \"Bob\")\nprint(ht.get(\"name\"))",
+      "options": {
+        "A": "Alice\nBob",
+        "B": "Alice\nAlice",
+        "C": "None\nBob",
+        "D": "None\nNone"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What is the primary performance consideration when using regular expressions in Python?",
+      "options": {
+        "A": "Regular expressions always perform better than string methods",
+        "B": "Complex patterns with backtracking can lead to exponential time complexity",
+        "C": "Regular expressions use more memory but are always faster",
+        "D": "The re.match() function is significantly faster than re.search() in all cases"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What is the purpose of the __init__.py file in a Python package?",
+      "options": {
+        "A": "It's required to define class initializers for the package",
+        "B": "It must contain all package-level constants and configurations",
+        "C": "It marks a directory as a Python package and can initialize package-level variables",
+        "D": "It's required to define all public interfaces for the package"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that demonstrates a greedy algorithm approach?",
+      "code_example": "def min_coins(coins, amount):\n    coins.sort(reverse=True)\n    count = 0\n    result = []\n    \n    for coin in coins:\n        while amount >= coin:\n            amount -= coin\n            count += 1\n            result.append(coin)\n    \n    if amount == 0:\n        return count, result\n    else:\n        return -1, []\n\ncoins = [1, 5, 10, 25]\namount = 36\ncount, coins_used = min_coins(coins, amount)\nprint(f\"Number of coins: {count}\")\nprint(f\"Coins used: {coins_used}\")",
+      "options": {
+        "A": "Number of coins: 6\nCoins used: [25, 10, 1]",
+        "B": "Number of coins: 3\nCoins used: [25, 10, 1]",
+        "C": "Number of coins: 4\nCoins used: [25, 10, 1, 0]",
+        "D": "Number of coins: 4\nCoins used: [25, 10, 1, 1]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that uses named tuples and dataclasses?",
+      "code_example": "from collections import namedtuple\nfrom dataclasses import dataclass\n\n# Named tuple\nPoint = namedtuple('Point', ['x', 'y'])\np1 = Point(1, 2)\n\n# Dataclass\n@dataclass\nclass Rectangle:\n    width: int\n    height: int\n    \n    @property\n    def area(self):\n        return self.width * self.height\n\nr1 = Rectangle(3, 4)\n\nprint(f\"Point: {p1.x}, {p1.y}\")\nprint(f\"Rectangle: {r1.width}x{r1.height}, Area: {r1.area}\")",
+      "options": {
+        "A": "Point: 1, 2\nRectangle: 3x4, Area: 12",
+        "B": "Point: (1, 2)\nRectangle: width=3, height=4, Area: 12",
+        "C": "Point: x=1, y=2\nRectangle: 3x4, Area: 12",
+        "D": "Point: 1, 2\nRectangle: <Rectangle object>"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "In a web framework like Flask, what is the primary purpose of templates and static files?",
+      "options": {
+        "A": "Templates store data, while static files handle business logic",
+        "B": "Templates contain HTML with dynamic content placeholders, while static files include CSS, JavaScript, and images",
+        "C": "Templates are server-side code, while static files are client-side code",
+        "D": "Templates and static files both contain HTML, but templates are rendered on request"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that implements depth-first search (DFS)?",
+      "code_example": "def dfs(graph, start):\n    visited = set()\n    result = []\n    \n    def visit(node):\n        if node not in visited:\n            visited.add(node)\n            result.append(node)\n            for neighbor in graph[node]:\n                visit(neighbor)\n    \n    visit(start)\n    return result\n\ngraph = {\n    'A': ['B', 'C'],\n    'B': ['D', 'E'],\n    'C': ['F'],\n    'D': [],\n    'E': ['F'],\n    'F': []\n}\n\nprint(dfs(graph, 'A'))",
+      "options": {
+        "A": "['A', 'B', 'D', 'E', 'F', 'C']",
+        "B": "['A', 'B', 'D', 'E', 'C', 'F']",
+        "C": "['A', 'C', 'F', 'B', 'D', 'E']",
+        "D": "['A', 'B', 'C', 'D', 'E', 'F']"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that demonstrates the functools module?",
+      "code_example": "import functools\n\n@functools.lru_cache(maxsize=None)\ndef fibonacci(n):\n    if n < 2:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n\n# Partial function application\nbase_power = functools.partial(pow, 2)\n\nprint(fibonacci(10))\nprint(base_power(5))\nprint(fibonacci.cache_info())",
+      "options": {
+        "A": "55\n32\nCacheInfo(hits=18, misses=11, maxsize=None, currsize=11)",
+        "B": "89\n32\nCacheInfo(hits=8, misses=11, maxsize=None, currsize=11)",
+        "C": "55\n32\nCacheInfo(hits=9, misses=11, maxsize=None, currsize=11)",
+        "D": "55\n25\nCacheInfo(hits=9, misses=11, maxsize=None, currsize=11)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "Which of the following is a correct regex pattern to validate an email address in its simplest form?",
+      "code_example": "import re\n\ndef is_valid_email(email):\n    pattern = r'^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$'\n    return bool(re.match(pattern, email))\n\nprint(is_valid_email('user@example.com'))\nprint(is_valid_email('invalid-email'))\nprint(is_valid_email('user@domain'))",
+      "options": {
+        "A": "True\nFalse\nTrue",
+        "B": "True\nFalse\nFalse",
+        "C": "False\nFalse\nFalse",
+        "D": "True\nTrue\nFalse"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What does the following Python code using BeautifulSoup and requests accomplish?",
+      "options": {
+        "A": "Extracts all image URLs from a webpage",
+        "B": "Retrieves the title of a webpage",
+        "C": "Counts the number of links in a webpage",
+        "D": "Extracts all paragraph text from a webpage"
+      },
+      "correct_answer": "D",
+      "code_example": "import requests\nfrom bs4 import BeautifulSoup\n\ndef extract_content(url):\n    try:\n        response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})\n        soup = BeautifulSoup(response.text, 'html.parser')\n        content = [p.get_text().strip() for p in soup.find_all('p')]\n        return content\n    except Exception as e:\n        return f\"Error: {str(e)}\""
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What is the purpose of the following code, which implements a trie data structure?",
+      "options": {
+        "A": "Sorting strings alphabetically",
+        "B": "Efficient prefix searching",
+        "C": "Checking if two strings are anagrams",
+        "D": "Computing the edit distance between strings"
+      },
+      "correct_answer": "B",
+      "code_example": "class TrieNode:\n    def __init__(self):\n        self.children = {}\n        self.is_end_of_word = False\n\nclass Trie:\n    def __init__(self):\n        self.root = TrieNode()\n        \n    def insert(self, word):\n        node = self.root\n        for char in word:\n            if char not in node.children:\n                node.children[char] = TrieNode()\n            node = node.children[char]\n        node.is_end_of_word = True\n        \n    def search(self, word):\n        node = self.root\n        for char in word:\n            if char not in node.children:\n                return False\n            node = node.children[char]\n        return node.is_end_of_word\n    \n    def starts_with(self, prefix):\n        node = self.root\n        for char in prefix:\n            if char not in node.children:\n                return False\n            node = node.children[char]\n        return True"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates multithreading in Python?",
+      "options": {
+        "A": "Counter values will sum to exactly 20000",
+        "B": "Counter values will likely sum to less than 20000 due to race conditions",
+        "C": "The code will raise a threading.LockError",
+        "D": "The code will hang indefinitely"
+      },
+      "correct_answer": "B",
+      "code_example": "import threading\n\ncounter = 0\n\ndef increment_counter():\n    global counter\n    for _ in range(10000):\n        counter += 1\n\nif __name__ == \"__main__\":\n    thread1 = threading.Thread(target=increment_counter)\n    thread2 = threading.Thread(target=increment_counter)\n    \n    thread1.start()\n    thread2.start()\n    \n    thread1.join()\n    thread2.join()\n    \n    print(f\"Final counter value: {counter}\")"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of this unit test using pytest fixtures?",
+      "options": {
+        "A": "All tests pass successfully",
+        "B": "The test fails with AssertionError: assert 3 == 4",
+        "C": "The test fails with an ImportError for pytest.fixture",
+        "D": "SyntaxError: invalid syntax"
+      },
+      "correct_answer": "B",
+      "code_example": "import pytest\n\n@pytest.fixture\ndef data_fixture():\n    return [1, 2, 3]\n\ndef test_data_length(data_fixture):\n    assert len(data_fixture) == 3\n    \ndef test_data_sum(data_fixture):\n    assert sum(data_fixture) == 6\n    \ndef test_data_append(data_fixture):\n    data_fixture.append(4)\n    assert len(data_fixture) == 4\n    assert sum(data_fixture) == 10\n    \ndef test_data_incorrect(data_fixture):\n    assert len(data_fixture) == 4  # This will fail because fixture is recreated"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "In the context of Python database programming, which of the following transaction isolation levels provides the strongest protection against concurrency issues but potentially the lowest performance?",
+      "options": {
+        "A": "READ UNCOMMITTED",
+        "B": "READ COMMITTED",
+        "C": "REPEATABLE READ",
+        "D": "SERIALIZABLE"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What is the time complexity of the segment tree's range query operation in the following implementation?",
+      "options": {
+        "A": "O(n)",
+        "B": "O(log n)",
+        "C": "O(n log n)",
+        "D": "O(1)"
+      },
+      "correct_answer": "B",
+      "code_example": "class SegmentTree:\n    def __init__(self, arr):\n        self.n = len(arr)\n        self.tree = [0] * (4 * self.n)  # Size 4n is sufficient\n        self._build(arr, 1, 0, self.n - 1)\n    \n    def _build(self, arr, node, start, end):\n        if start == end:\n            self.tree[node] = arr[start]\n        else:\n            mid = (start + end) // 2\n            self._build(arr, 2 * node, start, mid)\n            self._build(arr, 2 * node + 1, mid + 1, end)\n            self.tree[node] = self.tree[2 * node] + self.tree[2 * node + 1]\n    \n    def query(self, left, right):\n        return self._query(1, 0, self.n - 1, left, right)\n    \n    def _query(self, node, start, end, left, right):\n        if left > end or right < start:\n            return 0\n        if left <= start and right >= end:\n            return self.tree[node]\n        mid = (start + end) // 2\n        left_sum = self._query(2 * node, start, mid, left, right)\n        right_sum = self._query(2 * node + 1, mid + 1, end, left, right)\n        return left_sum + right_sum"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a best practice for ethical web scraping in Python?",
+      "options": {
+        "A": "Respecting robots.txt directives",
+        "B": "Using a random User-Agent for each request to avoid detection",
+        "C": "Implementing rate limiting to avoid overloading the server",
+        "D": "Caching responses to reduce duplicate requests"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code which demonstrates multiprocessing in Python?",
+      "options": {
+        "A": "A list of integers from 0 to 9",
+        "B": "A list of squares of integers from 0 to 9",
+        "C": "A list of tuples with both the input and its square",
+        "D": "A list with empty values due to process isolation"
+      },
+      "correct_answer": "B",
+      "code_example": "import multiprocessing\n\ndef process_data(number):\n    return number ** 2\n\ndef main():\n    pool = multiprocessing.Pool(processes=4)\n    data = range(10)\n    result = pool.map(process_data, data)\n    pool.close()\n    pool.join()\n    print(result)\n\nif __name__ == \"__main__\":\n    main()"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What is the correct way to implement dependency injection in Python as shown in the following pattern?",
+      "options": {
+        "A": "Using global variables to share dependencies across modules",
+        "B": "Always importing required dependencies at the module level",
+        "C": "Passing dependencies as function parameters or class constructors",
+        "D": "Using monkey patching to replace dependencies at runtime"
+      },
+      "correct_answer": "C",
+      "code_example": "# Without dependency injection\nclass UserService:\n    def __init__(self):\n        self.db = Database()  # Tightly coupled\n    \n    def get_user(self, user_id):\n        return self.db.query(f\"SELECT * FROM users WHERE id = {user_id}\")\n\n# With dependency injection\nclass UserServiceWithDI:\n    def __init__(self, database):\n        self.db = database  # Dependency injected\n    \n    def get_user(self, user_id):\n        return self.db.query(f\"SELECT * FROM users WHERE id = {user_id}\")\n\n# Usage\ndb = Database()\nuser_service = UserServiceWithDI(db)\nuser = user_service.get_user(42)"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code which implements a GraphQL query using the graphene library?",
+      "options": {
+        "A": "A dictionary with employee data including name and salary",
+        "B": "A JSON object with 'data' and 'errors' fields",
+        "C": "A GraphQL schema definition",
+        "D": "A syntax error due to missing graphene import"
+      },
+      "correct_answer": "A",
+      "code_example": "import graphene\n\nclass Employee(graphene.ObjectType):\n    name = graphene.String()\n    department = graphene.String()\n    salary = graphene.Float()\n\nclass Query(graphene.ObjectType):\n    employee = graphene.Field(Employee, id=graphene.Int())\n    \n    def resolve_employee(self, info, id):\n        # In a real system, this would query a database\n        employees = {\n            1: Employee(name=\"Alice\", department=\"Engineering\", salary=85000.0),\n            2: Employee(name=\"Bob\", department=\"HR\", salary=65000.0)\n        }\n        return employees.get(id)\n\nschema = graphene.Schema(query=Query)\n\nquery = '''\n{\n  employee(id: 1) {\n    name\n    salary\n  }\n}\n'''\n\nresult = schema.execute(query)\nprint(result.data)"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What is the primary purpose of the following database indexing code?",
+      "options": {
+        "A": "Creating a unique constraint on a column",
+        "B": "Improving query performance for specific columns",
+        "C": "Setting up a foreign key relationship",
+        "D": "Implementing database-level triggers"
+      },
+      "correct_answer": "B",
+      "code_example": "# Using SQLAlchemy ORM\nfrom sqlalchemy import Column, Integer, String, create_engine, Index\nfrom sqlalchemy.ext.declarative import declarative_base\n\nBase = declarative_base()\n\nclass User(Base):\n    __tablename__ = 'users'\n    \n    id = Column(Integer, primary_key=True)\n    email = Column(String, nullable=False)\n    first_name = Column(String)\n    last_name = Column(String)\n    \n    # Creating an index for faster lookups by email\n    __table_args__ = (Index('idx_user_email', email),)"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which of these is NOT a key component of Test-Driven Development (TDD)?",
+      "options": {
+        "A": "Writing tests before implementation code",
+        "B": "Running tests frequently during development",
+        "C": "Refactoring code after tests pass",
+        "D": "Writing comprehensive documentation before testing"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the code coverage percentage for the following test on the given function?",
+      "options": {
+        "A": "50%",
+        "B": "75%",
+        "C": "66.67%",
+        "D": "100%"
+      },
+      "correct_answer": "C",
+      "code_example": "def process_data(data, strict=False):\n    if data is None:\n        return []\n    \n    result = []\n    for item in data:\n        if strict and item <= 0:\n            continue\n        result.append(item * 2)\n    \n    return result\n\nimport unittest\n\nclass TestProcessData(unittest.TestCase):\n    def test_none_input(self):\n        self.assertEqual(process_data(None), [])\n    \n    def test_normal_processing(self):\n        self.assertEqual(process_data([1, 2, 3]), [2, 4, 6])\n        \n# The test doesn't cover the strict=True code path"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "In the context of API gateway patterns, which of the following is NOT a common responsibility of an API gateway?",
+      "options": {
+        "A": "Request routing and load balancing",
+        "B": "Authentication and authorization",
+        "C": "Database transaction management",
+        "D": "Request/response transformation"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code, which demonstrates SQL query optimization techniques?",
+      "options": {
+        "A": "The optimized query runs significantly faster",
+        "B": "Both queries have identical execution times",
+        "C": "The second query will raise a syntax error",
+        "D": "The first query performs better due to simplicity"
+      },
+      "correct_answer": "A",
+      "code_example": "import time\nimport sqlite3\n\nconn = sqlite3.connect(':memory:')\ncursor = conn.cursor()\n\n# Create test tables and insert sample data\ncursor.execute('''CREATE TABLE customers \n               (id INTEGER PRIMARY KEY, name TEXT, email TEXT)''')\ncursor.execute('''CREATE TABLE orders \n               (id INTEGER PRIMARY KEY, customer_id INTEGER, \n                amount REAL, order_date TEXT)''')\n\n# Insert 1000 customers and 5000 orders\nfor i in range(1000):\n    cursor.execute(\"INSERT INTO customers VALUES (?, ?, ?)\", \n                  (i, f\"Customer {i}\", f\"customer{i}@example.com\"))\n    \nfor i in range(5000):\n    customer_id = i % 1000  # Distribute orders among customers\n    cursor.execute(\"INSERT INTO orders VALUES (?, ?, ?, ?)\", \n                  (i, customer_id, i * 10.5, f\"2023-03-{i % 28 + 1}\"))\n\n# Create an index for the foreign key to optimize joins\ncursor.execute(\"CREATE INDEX idx_customer_id ON orders(customer_id)\")\nconn.commit()\n\n# Unoptimized query (using SELECT *)\nstart = time.time()\ncursor.execute(\"\"\"\n    SELECT * \n    FROM customers c, orders o \n    WHERE c.id = o.customer_id AND c.name LIKE 'Customer 5%'\n\"\"\")\nunoptimized_results = cursor.fetchall()\nunoptimized_time = time.time() - start\n\n# Optimized query (selecting only needed columns and using JOIN syntax)\nstart = time.time()\ncursor.execute(\"\"\"\n    SELECT c.name, o.amount, o.order_date \n    FROM customers c\n    JOIN orders o ON c.id = o.customer_id\n    WHERE c.name LIKE 'Customer 5%'\n\"\"\")\noptimized_results = cursor.fetchall()\noptimized_time = time.time() - start\n\nprint(f\"Unoptimized query took {unoptimized_time:.6f} seconds and returned {len(unoptimized_results)} rows\")\nprint(f\"Optimized query took {optimized_time:.6f} seconds and returned {len(optimized_results)} rows\")\nprint(f\"Optimization improved performance by {(unoptimized_time - optimized_time) / unoptimized_time * 100:.2f}%\")"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT one of the OWASP Top 10 web application security vulnerabilities as of 2024?",
+      "options": {
+        "A": "Broken Authentication",
+        "B": "Cross-Site Scripting (XSS)",
+        "C": "DNS Cache Poisoning",
+        "D": "Injection Attacks"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
