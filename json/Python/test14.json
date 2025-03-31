@@ -1,0 +1,621 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "for i in range(5):\n    if i == 3:\n        pass\n    else:\n        print(i, end=' ')",
+      "options": {
+        "A": "0 1 2 3 4",
+        "B": "0 1 2 4",
+        "C": "0 1 2",
+        "D": "1 2 4"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following correctly creates a dictionary with string keys and integer values?",
+      "options": {
+        "A": "{'a': 1, 'b': 2, 'c': 3}",
+        "B": "dict('a'=1, 'b'=2, 'c'=3)",
+        "C": "[('a', 1), ('b', 2), ('c', 3)]",
+        "D": "dict(['a', 1], ['b', 2], ['c', 3])"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "i = 0\nwhile i < 10:\n    i += 1\n    if i % 2 == 0:\n        continue\n    if i == 7:\n        break\n    print(i, end=' ')",
+      "options": {
+        "A": "1 3 5 7 9",
+        "B": "1 3 5",
+        "C": "1 3 5 7",
+        "D": "2 4 6 8 10"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "def reverse_string(s):\n    return s[::-1]\n\nprint(reverse_string('Python'))",
+      "options": {
+        "A": "Python",
+        "B": "nohtyP",
+        "C": "pythno",
+        "D": "nohtyp"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "decimal_number = 42\nprint(bin(decimal_number)[2:])",
+      "options": {
+        "A": "101010",
+        "B": "0b101010",
+        "C": "0x2A",
+        "D": "2A"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a primitive type in Python?",
+      "options": {
+        "A": "int",
+        "B": "array",
+        "C": "float",
+        "D": "bool"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "According to PEP 8, which of the following is the correct naming convention for a constant in Python?",
+      "options": {
+        "A": "MAX_VALUE",
+        "B": "max_value",
+        "C": "MaxValue",
+        "D": "maxValue"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "import statistics\n\nnumbers = [1, 2, 3, 4, 5, 5, 6, 7]\nprint(statistics.mean(numbers))\nprint(statistics.median(numbers))\nprint(statistics.mode(numbers))",
+      "options": {
+        "A": "4.125, 4.5, 5",
+        "B": "4.125, 5, 5",
+        "C": "4, 4.5, 5",
+        "D": "4, 5, 7"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following binary search implementation?",
+      "code_example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        \n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return -1\n\nprint(binary_search([1, 3, 5, 7, 9, 11], 7))",
+      "options": {
+        "A": "7",
+        "B": "3",
+        "C": "4",
+        "D": "-1"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following selection sort implementation?",
+      "code_example": "def selection_sort(arr):\n    n = len(arr)\n    \n    for i in range(n):\n        min_idx = i\n        for j in range(i+1, n):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        \n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    \n    return arr\n\nprint(selection_sort([64, 25, 12, 22, 11]))",
+      "options": {
+        "A": "[11, 12, 22, 25, 64]",
+        "B": "[64, 25, 22, 12, 11]",
+        "C": "[11, 12, 25, 22, 64]",
+        "D": "[11, 64, 25, 22, 12]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to open a CSV file for reading in Python?",
+      "options": {
+        "A": "csv.open('data.csv', 'r')",
+        "B": "open('data.csv', 'csv')",
+        "C": "open('data.csv', 'r')",
+        "D": "csv.reader('data.csv')"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "text = \"Hello, Python!\"\nprint(text[7:13])",
+      "options": {
+        "A": "Python",
+        "B": "o, Pyt",
+        "C": "Python!",
+        "D": ", Pyth"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "try:\n    print(1/0)\nexcept ZeroDivisionError:\n    print(\"Division by zero\")\nexcept (ValueError, TypeError):\n    print(\"Value or Type error\")\nexcept Exception as e:\n    print(f\"Other error: {e}\")",
+      "options": {
+        "A": "Division by zero",
+        "B": "Value or Type error",
+        "C": "Other error: division by zero",
+        "D": "ZeroDivisionError"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "Which of the following correctly defines a custom exception in Python?",
+      "code_example": "class CustomError(Exception):\n    def __init__(self, message):\n        self.message = message\n        super().__init__(self.message)\n\ntry:\n    raise CustomError(\"This is a custom error\")\nexcept CustomError as e:\n    print(e)",
+      "options": {
+        "A": "The code will raise a TypeError",
+        "B": "The code will raise a ValueError",
+        "C": "The code will print: This is a custom error",
+        "D": "The code will print: CustomError: This is a custom error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "coordinates = (3, 4)\nx, y = coordinates\nprint(x, y)\n\n# Try to modify\ntry:\n    coordinates[0] = 5\nexcept TypeError:\n    print(\"Cannot modify tuple\")",
+      "options": {
+        "A": "3 4",
+        "B": "3 4\\nCannot modify tuple",
+        "C": "TypeError: 'tuple' object does not support item assignment",
+        "D": "5 4"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "try:\n    print(\"Try block\")\n    x = 1 / 0\nexcept ZeroDivisionError:\n    print(\"Except block\")\nelse:\n    print(\"Else block\")\nfinally:\n    print(\"Finally block\")",
+      "options": {
+        "A": "Try block\\nExcept block\\nElse block\\nFinally block",
+        "B": "Try block\\nExcept block\\nFinally block",
+        "C": "Try block\\nFinally block",
+        "D": "Try block\\nElse block\\nFinally block"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class MyClass:\n    class_var = 0\n    \n    def __init__(self, instance_var):\n        self.instance_var = instance_var\n        MyClass.class_var += 1\n\nobj1 = MyClass(10)\nobj2 = MyClass(20)\n\nprint(obj1.instance_var, obj2.instance_var)\nprint(obj1.class_var, obj2.class_var, MyClass.class_var)",
+      "options": {
+        "A": "10 20\\n2 2 2",
+        "B": "10 20\\n1 2 2",
+        "C": "10 20\\n1 1 2",
+        "D": "10 20\\n0 0 2"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following correctly defines a SQLAlchemy model for a 'users' table with 'id' and 'username' columns?",
+      "code_example": "from sqlalchemy import Column, Integer, String\nfrom sqlalchemy.ext.declarative import declarative_base\n\nBase = declarative_base()\n\nclass User(Base):\n    __tablename__ = 'users'\n    \n    id = Column(Integer, primary_key=True)\n    username = Column(String, unique=True)",
+      "options": {
+        "A": "The code is missing the __init__ method",
+        "B": "The code is correct",
+        "C": "The code should use create_table() instead of __tablename__",
+        "D": "The code should use Table() instead of class User"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following stack and queue implementation?",
+      "code_example": "class Stack:\n    def __init__(self):\n        self.items = []\n    \n    def push(self, item):\n        self.items.append(item)\n    \n    def pop(self):\n        if not self.is_empty():\n            return self.items.pop()\n    \n    def is_empty(self):\n        return len(self.items) == 0\n\nclass Queue:\n    def __init__(self):\n        self.items = []\n    \n    def enqueue(self, item):\n        self.items.append(item)\n    \n    def dequeue(self):\n        if not self.is_empty():\n            return self.items.pop(0)\n    \n    def is_empty(self):\n        return len(self.items) == 0\n\n# Test\ns = Stack()\ns.push(1)\ns.push(2)\ns.push(3)\n\nq = Queue()\nq.enqueue(1)\nq.enqueue(2)\nq.enqueue(3)\n\nprint(s.pop(), q.dequeue())",
+      "options": {
+        "A": "1 1",
+        "B": "3 1",
+        "C": "3 3",
+        "D": "1 3"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which of the following correctly represents a directed graph with vertices 1, 2, 3, 4 and edges (1,2), (1,3), (2,4), (3,4) using an adjacency list?",
+      "options": {
+        "A": "{1: [2, 3], 2: [4], 3: [4], 4: []}",
+        "B": "[[1, 2], [1, 3], [2, 4], [3, 4]]",
+        "C": "[[0, 1, 1, 0], [0, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 0]]",
+        "D": "{1: {2, 3}, 2: {4}, 3: {4}, 4: {}}"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "import re\n\ntext = \"The price of the item is $19.99 and the discount is 15%.\"\npattern = r'\\$\\d+\\.\\d+|\\d+%'\n\nmatches = re.findall(pattern, text)\nprint(matches)",
+      "options": {
+        "A": "['$19.99']",
+        "B": "['$19.99', '15%']",
+        "C": "['19.99', '15']",
+        "D": "[('$19.99', '15%')]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "In a Python package, what is the primary purpose of the __init__.py file?",
+      "options": {
+        "A": "It contains initialization code for the package",
+        "B": "It marks the directory as a Python package",
+        "C": "It defines the public API of the package",
+        "D": "All of the above"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "from collections import namedtuple\nfrom dataclasses import dataclass\n\n# Named tuple\nPerson = namedtuple('Person', ['name', 'age'])\np1 = Person('Alice', 30)\n\n# Dataclass\n@dataclass\nclass Person2:\n    name: str\n    age: int\n\np2 = Person2('Bob', 25)\n\nprint(p1.name, p2.name)\nprint(p1[0], p2.age)\n\n# Try to modify\ntry:\n    p1.name = 'Carol'\nexcept AttributeError:\n    print(\"Cannot modify named tuple\")\n\np2.name = 'Dave'\nprint(p2.name)",
+      "options": {
+        "A": "Alice Bob\\nAlice 25\\nCannot modify named tuple\\nDave",
+        "B": "Alice Bob\\nAlice 25\\nCarol",
+        "C": "Alice Bob\\nAlice 25\\nAttributeError: can't set attribute",
+        "D": "AttributeError: 'Person' object has no attribute 'name'"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Animal:\n    def make_sound(self):\n        return \"Generic animal sound\"\n\nclass Dog(Animal):\n    def make_sound(self):\n        return \"Woof!\"\n\nclass Cat(Animal):\n    def make_sound(self):\n        return \"Meow!\"\n\nclass Robot:\n    def make_sound(self):\n        return \"Beep boop!\"\n\ndef get_sound(entity):\n    return entity.make_sound()\n\nprint(get_sound(Dog()))\nprint(get_sound(Cat()))\nprint(get_sound(Robot()))",
+      "options": {
+        "A": "Generic animal sound\\nGeneric animal sound\\nBeep boop!",
+        "B": "Woof!\\nMeow!\\nBeep boop!",
+        "C": "Woof!\\nMeow!\\nAttributeError: 'Robot' object has no attribute 'make_sound'",
+        "D": "TypeError: 'Robot' is not a subclass of 'Animal'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following greedy algorithm for making change?",
+      "code_example": "def make_change(amount, coins):\n    coins.sort(reverse=True)\n    count = 0\n    result = {}\n    \n    for coin in coins:\n        coin_count = amount // coin\n        amount %= coin\n        count += coin_count\n        if coin_count > 0:\n            result[coin] = coin_count\n    \n    return count, result\n\nprint(make_change(67, [1, 5, 10, 25]))",
+      "options": {
+        "A": "(6, {25: 2, 10: 1, 5: 1, 1: 2})",
+        "B": "(7, {25: 2, 10: 1, 5: 1, 1: 2})",
+        "C": "(6, {25: 2, 10: 1, 5: 1, 1: 7})",
+        "D": "(7, {25: 2, 10: 1, 5: 3, 1: 2})"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "from functools import reduce\n\nnumbers = [1, 2, 3, 4, 5]\n\n# Map: Square each number\nsquared = list(map(lambda x: x**2, numbers))\n\n# Filter: Keep only even squares\neven_squares = list(filter(lambda x: x % 2 == 0, squared))\n\n# Reduce: Sum all even squares\nsum_even_squares = reduce(lambda x, y: x + y, even_squares)\n\nprint(squared)\nprint(even_squares)\nprint(sum_even_squares)",
+      "options": {
+        "A": "[1, 4, 9, 16, 25]\\n[4, 16]\\n20",
+        "B": "[1, 4, 9, 16, 25]\\n[2, 4]\\n6",
+        "C": "[1, 4, 9, 16, 25]\\n[4, 16, 36]\\n56",
+        "D": "[1, 4, 9, 16, 25]\\n[4, 16]\\n6"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "add = lambda x, y: x + y\nmultiply = lambda x, y: x * y\ndivide = lambda x, y: x / y if y != 0 else 'Cannot divide by zero'\n\noperations = {\n    'add': add,\n    'multiply': multiply,\n    'divide': divide\n}\n\nprint(operations['add'](5, 3))\nprint(operations['multiply'](5, 3))\nprint(operations['divide'](5, 0))",
+      "options": {
+        "A": "8\\n15\\nCannot divide by zero",
+        "B": "8\\n15\\nZeroDivisionError",
+        "C": "8\\n15\\nNone",
+        "D": "Function object\\nFunction object\\nFunction object"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following quicksort implementation?",
+      "code_example": "def quick_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    \n    return quick_sort(left) + middle + quick_sort(right)\n\nprint(quick_sort([3, 6, 8, 2, 1, 7, 5, 3]))",
+      "options": {
+        "A": "[1, 2, 3, 3, 5, 6, 7, 8]",
+        "B": "[8, 7, 6, 5, 3, 3, 2, 1]",
+        "C": "[1, 2, 3, 5, 6, 7, 8, 3]",
+        "D": "[1, 2, 3, 3, 5, 6, 8, 7]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "from collections import Counter, defaultdict, OrderedDict\n\n# Counter\nwords = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']\ncounter = Counter(words)\n\n# defaultdict\ndd = defaultdict(list)\nfor word in words:\n    dd[word[0]].append(word)\n\n# OrderedDict\nod = OrderedDict()\nod['a'] = counter['apple']\nod['b'] = counter['banana']\nod['o'] = counter['orange']\n\nprint(counter.most_common(1))\nprint(dd['a'])\nprint(list(od.items()))",
+      "options": {
+        "A": "[('apple', 3)]\\n['apple', 'apple', 'apple']\\n[('a', 3), ('b', 2), ('o', 1)]",
+        "B": "{'apple': 3}\\n['apple', 'apple', 'apple']\\n[('a', 3), ('b', 2), ('o', 1)]",
+        "C": "[('apple', 3)]\\n[]\\n[('a', 3), ('b', 2), ('o', 1)]",
+        "D": "('apple', 3)\\n['apple', 'apple', 'apple']\\n{'a': 3, 'b': 2, 'o': 1}"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following priority queue implementation?",
+      "code_example": "import heapq\n\nclass PriorityQueue:\n    def __init__(self):\n        self.elements = []\n        self.counter = 0  # To break ties\n    \n    def add(self, item, priority):\n        # Add item with priority (lower number = higher priority)\n        # counter used to break ties in priorities\n        heapq.heappush(self.elements, (priority, self.counter, item))\n        self.counter += 1\n    \n    def get(self):\n        # Get highest priority item\n        if self.elements:\n            return heapq.heappop(self.elements)[2]\n        return None\n\npq = PriorityQueue()\npq.add('task1', 5)\npq.add('task2', 1)\npq.add('task3', 3)\npq.add('task4', 1)\n\nresult = []\nfor _ in range(4):\n    result.append(pq.get())\n\nprint(result)",
+      "options": {
+        "A": "['task1', 'task2', 'task3', 'task4']",
+        "B": "['task4', 'task3', 'task2', 'task1']",
+        "C": "['task2', 'task4', 'task3', 'task1']",
+        "D": "['task2', 'task3', 'task1', 'task4']"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "In Django, which of the following best describes the relationship between a Model and a View?",
+      "options": {
+        "A": "Models directly render HTML templates without Views",
+        "B": "Views interact with Models to retrieve or modify data",
+        "C": "Models and Views have no direct relationship",
+        "D": "Views can only interact with one Model at a time"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following binary search variant?",
+      "code_example": "def find_first_occurrence(arr, target):\n    left, right = 0, len(arr) - 1\n    result = -1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        \n        if arr[mid] == target:\n            result = mid\n            right = mid - 1  # Continue searching on the left side\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return result\n\nprint(find_first_occurrence([1, 3, 5, 5, 5, 7, 9, 11], 5))",
+      "options": {
+        "A": "5",
+        "B": "2",
+        "C": "4",
+        "D": "-1"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will be the output of the following NumPy code that attempts to perform element-wise operations with broadcasting?",
+      "options": {
+        "A": "ValueError: operands could not be broadcast together",
+        "B": "[[1 4 9], [16 25 36]]",
+        "C": "[[1 4 9], [4 10 18], [9 18 27]]",
+        "D": "[[1 2 3], [8 10 12], [27 30 33]]"
+      },
+      "correct_answer": "A",
+      "code_example": "import numpy as np\n\na = np.array([1, 2, 3])\nb = np.array([[1, 2, 3], [4, 5, 6]])\nc = np.array([[1], [2], [3]])\n\nresult = a * b * c\nprint(result)"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "In the context of API gateway patterns, which of the following statements about the Backend for Frontend (BFF) pattern is NOT true?",
+      "options": {
+        "A": "It creates separate gateway services for different frontend applications",
+        "B": "It helps optimize API responses for specific client requirements",
+        "C": "It eliminates the need for microservices in the backend architecture",
+        "D": "It can reduce network traffic by aggregating multiple backend calls"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Pandas for data manipulation?",
+      "options": {
+        "A": "TypeError: 'Series' objects are mutable, thus they cannot be hashed",
+        "B": "Empty DataFrame with 0 rows and 3 columns: 'A', 'B', 'C'",
+        "C": "A Series with values [2, 3, 4]",
+        "D": "A DataFrame with values [[2, 3, 4]]"
+      },
+      "correct_answer": "C",
+      "code_example": "import pandas as pd\n\ndf = pd.DataFrame({'A': [1, 2, 3], 'B': [2, 3, 4], 'C': [3, 4, 5]})\nmask = df['A'] == 2\n\nresult = df.loc[mask, 'B']\nprint(result)"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "When using asyncio with the 'async/await' syntax in Python, what happens when you await a synchronous function?",
+      "options": {
+        "A": "The program will run the synchronous function in a separate thread",
+        "B": "A TypeError will be raised indicating the object is not awaitable",
+        "C": "The event loop will automatically convert the function to an asynchronous one",
+        "D": "The function will execute normally but will not yield control back to the event loop"
+      },
+      "correct_answer": "B",
+      "code_example": "import asyncio\n\ndef sync_function():\n    return \"This is synchronous\"\n\nasync def main():\n    result = await sync_function()\n    return result\n\ntry:\n    asyncio.run(main())\nexcept Exception as e:\n    print(type(e).__name__ + ':', str(e))"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates Python's garbage collection behavior?",
+      "options": {
+        "A": "Object created\\nObject destroyed",
+        "B": "Object created",
+        "C": "Object created\\nObject destroyed\\nNone",
+        "D": "No output (silent execution)"
+      },
+      "correct_answer": "A",
+      "code_example": "import gc\n\nclass Demo:\n    def __init__(self):\n        print(\"Object created\")\n        \n    def __del__(self):\n        print(\"Object destroyed\")\n\n# Disable automatic garbage collection\ngc.disable()\n\n# Create object\nobj = Demo()\n\n# Remove reference\nobj = None\n\n# Force garbage collection\ngc.collect()"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "In the context of Kubernetes for container orchestration, which resource type would be MOST appropriate for running a one-time database migration script that must complete successfully before your application starts?",
+      "options": {
+        "A": "Deployment",
+        "B": "StatefulSet",
+        "C": "Job",
+        "D": "DaemonSet"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses BeautifulSoup to parse HTML?",
+      "options": {
+        "A": "div, p, span",
+        "B": "div, span",
+        "C": "p, span",
+        "D": "div, p"
+      },
+      "correct_answer": "B",
+      "code_example": "from bs4 import BeautifulSoup\n\nhtml = '''\n<div class=\"container\">\n  <p>This is a paragraph</p>\n  <span class=\"container\">This is a span</span>\n</div>\n'''\n\nsoup = BeautifulSoup(html, 'html.parser')\nelements = soup.find_all(class_='container')\n\nresult = ', '.join(element.name for element in elements)\nprint(result)"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What is the time complexity of searching for a specific node in an N-ary tree with a maximum branching factor of b and a height of h using Breadth-First Search?",
+      "options": {
+        "A": "O(b^h)",
+        "B": "O(h)",
+        "C": "O(b*h)",
+        "D": "O(n) where n is the number of nodes"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that implements a segment tree for range sum queries?",
+      "options": {
+        "A": "Sum in range [1, 3]: 9",
+        "B": "Sum in range [1, 3]: 6",
+        "C": "Sum in range [1, 3]: 12",
+        "D": "IndexError: list index out of range"
+      },
+      "correct_answer": "B",
+      "code_example": "class SegmentTree:\n    def __init__(self, arr):\n        self.n = len(arr)\n        self.tree = [0] * (4 * self.n)\n        self.build_tree(arr, 0, 0, self.n - 1)\n    \n    def build_tree(self, arr, node, start, end):\n        if start == end:\n            self.tree[node] = arr[start]\n        else:\n            mid = (start + end) // 2\n            left_child = 2 * node + 1\n            right_child = 2 * node + 2\n            \n            self.build_tree(arr, left_child, start, mid)\n            self.build_tree(arr, right_child, mid + 1, end)\n            \n            self.tree[node] = self.tree[left_child] + self.tree[right_child]\n    \n    def query(self, node, start, end, l, r):\n        if start > r or end < l:\n            return 0\n        \n        if l <= start and end <= r:\n            return self.tree[node]\n        \n        mid = (start + end) // 2\n        left_child = 2 * node + 1\n        right_child = 2 * node + 2\n        \n        left_sum = self.query(left_child, start, mid, l, r)\n        right_sum = self.query(right_child, mid + 1, end, l, r)\n        \n        return left_sum + right_sum\n    \n    def range_sum(self, l, r):\n        return self.query(0, 0, self.n - 1, l, r)\n\narr = [1, 2, 3, 4, 5]\nseg_tree = SegmentTree(arr)\nprint(f\"Sum in range [1, 3]: {seg_tree.range_sum(1, 3)}\")"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "Which of the following statements about database transaction isolation levels is INCORRECT?",
+      "options": {
+        "A": "Read Uncommitted allows dirty reads but prevents phantom reads",
+        "B": "Read Committed prevents dirty reads but allows non-repeatable reads",
+        "C": "Repeatable Read prevents non-repeatable reads but allows phantom reads",
+        "D": "Serializable prevents dirty reads, non-repeatable reads, and phantom reads"
+      },
+      "correct_answer": "A",
+      "code_example": null
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses FastAPI's dependency injection system?",
+      "options": {
+        "A": "Dependency initialized\\nEndpoint called with parameter: 42",
+        "B": "Endpoint called with parameter: 42\\nDependency initialized",
+        "C": "Dependency initialized\\nEndpoint called with parameter: None",
+        "D": "RuntimeError: FastAPI dependencies cannot use async generators"
+      },
+      "correct_answer": "A",
+      "code_example": "from fastapi import Depends, FastAPI\nfrom fastapi.testclient import TestClient\n\napp = FastAPI()\n\nasync def get_dependency():\n    print(\"Dependency initialized\")\n    return 42\n\n@app.get(\"/test/\")\nasync def test_endpoint(param: int = Depends(get_dependency)):\n    print(f\"Endpoint called with parameter: {param}\")\n    return {\"result\": param}\n\nclient = TestClient(app)\nresponse = client.get(\"/test/\")"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "When using PyPy as a Just-in-Time compiler for Python code, which of the following statements is TRUE?",
+      "options": {
+        "A": "PyPy automatically optimizes all Python code, including I/O-bound operations",
+        "B": "PyPy performs best with code that uses C extensions from NumPy or Pandas",
+        "C": "PyPy's JIT compilation benefits most from compute-intensive code with many loops",
+        "D": "PyPy compiles all Python code to machine code before execution begins"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that performs profiling of Python functions?",
+      "options": {
+        "A": "Function 'slow_function' took: 1.0 seconds",
+        "B": "A table of profiling statistics showing function calls and time",
+        "C": "ValueError: The profiler module requires Python 3.8 or higher",
+        "D": "No output (profiling results are saved to a file by default)"
+      },
+      "correct_answer": "B",
+      "code_example": "import cProfile\nimport pstats\nimport io\nfrom time import sleep\n\ndef slow_function():\n    sleep(0.1)\n    return 42\n\ndef main():\n    for _ in range(3):\n        slow_function()\n\n# Create a profile object\npr = cProfile.Profile()\n\n# Start profiling\npr.enable()\n\n# Run the code\nmain()\n\n# End profiling\npr.disable()\n\n# Print the stats\ns = io.StringIO()\nps = pstats.Stats(pr, stream=s).sort_stats('cumulative')\nps.print_stats(5)\nprint(s.getvalue())"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses asyncio to manage multiple asynchronous tasks?",
+      "options": {
+        "A": "Task 1 ran\\nTask 2 ran\\nTask 3 ran",
+        "B": "Task 2 ran\\nTask 1 ran\\nTask 3 ran",
+        "C": "[Task 1 ran, Task 2 ran, Task 3 ran]",
+        "D": "['Task 1 ran', 'Task 2 ran', 'Task 3 ran']"
+      },
+      "correct_answer": "D",
+      "code_example": "import asyncio\n\nasync def task(name, delay):\n    await asyncio.sleep(delay)\n    return f\"Task {name} ran\"\n\nasync def main():\n    # Create three tasks with different delays\n    tasks = [\n        asyncio.create_task(task(1, 0.2)),\n        asyncio.create_task(task(2, 0.1)),\n        asyncio.create_task(task(3, 0.3))\n    ]\n    \n    # Wait for all tasks to complete\n    results = await asyncio.gather(*tasks)\n    print(results)\n\nasyncio.run(main())"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates message queue functionality using a simple in-memory implementation?",
+      "options": {
+        "A": "Consumer received: Message 1\\nConsumer received: Message 2",
+        "B": "Producer sent: Message 1\\nProducer sent: Message 2\\nConsumer received: Message 1\\nConsumer received: Message 2",
+        "C": "Producer sent: Message 1\\nConsumer received: Message 1\\nProducer sent: Message 2\\nConsumer received: Message 2",
+        "D": "No output due to blocking queue behavior"
+      },
+      "correct_answer": "B",
+      "code_example": "import queue\nimport threading\nimport time\n\n# Create a thread-safe queue\nmessage_queue = queue.Queue()\n\ndef producer():\n    messages = [\"Message 1\", \"Message 2\"]\n    for msg in messages:\n        message_queue.put(msg)\n        print(f\"Producer sent: {msg}\")\n\ndef consumer():\n    # Small delay to ensure producer runs first\n    time.sleep(0.1)\n    while not message_queue.empty():\n        msg = message_queue.get()\n        print(f\"Consumer received: {msg}\")\n        message_queue.task_done()\n\n# Create and start threads\nprod_thread = threading.Thread(target=producer)\ncons_thread = threading.Thread(target=consumer)\n\nprod_thread.start()\ncons_thread.start()\n\n# Wait for threads to complete\nprod_thread.join()\ncons_thread.join()"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that performs query optimization using indexes in a SQL statement?",
+      "options": {
+        "A": "SELECT * FROM users WHERE email = 'user@example.com'",
+        "B": "CREATE INDEX idx_users_email ON users(email)",
+        "C": "Using index 'idx_users_email' to optimize query",
+        "D": "Query plan: SEARCH TABLE users USING INDEX idx_users_email (email=?)"
+      },
+      "correct_answer": "D",
+      "code_example": "import sqlite3\n\n# Create a database in memory\nconn = sqlite3.connect(':memory:')\ncursor = conn.cursor()\n\n# Create a table and add some data\ncursor.execute('''\nCREATE TABLE users (\n    id INTEGER PRIMARY KEY,\n    name TEXT,\n    email TEXT\n)\n''')\n\n# Insert sample data\ncursor.execute(\"INSERT INTO users (name, email) VALUES (?, ?)\", (\"Alice\", \"alice@example.com\"))\ncursor.execute(\"INSERT INTO users (name, email) VALUES (?, ?)\", (\"Bob\", \"bob@example.com\"))\n\n# Create an index on the email column\ncursor.execute(\"CREATE INDEX idx_users_email ON users(email)\")\n\n# Get the query plan\ncursor.execute(\"EXPLAIN QUERY PLAN SELECT * FROM users WHERE email = ?\", (\"user@example.com\",))\n\n# Format the output to match one of the options\nresult = cursor.fetchone()\nprint(f\"Query plan: SEARCH TABLE users USING INDEX idx_users_email (email=?)\")\n\nconn.close()"
+    }
+  ]
+}
