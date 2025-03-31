@@ -1,0 +1,614 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "1 2 3",
+        "B": "1 2 3 4",
+        "C": "1 2",
+        "D": "Error: 'TypeError'"
+      },
+      "correct_answer": "C",
+      "code_example": "my_list = [1, 2, 3, 4]\ntry:\n    print(my_list[0], my_list[1])\n    my_list[5]\nexcept IndexError:\n    print(my_list[2], my_list[3])\nelse:\n    print('No exceptions occurred')"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the result of the following list comprehension?",
+      "options": {
+        "A": "[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]",
+        "B": "[0, 1, 4, 9, 16, 25, 36, 49]",
+        "C": "[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]",
+        "D": "[1, 4, 9, 16, 25, 36, 49, 64, 81]"
+      },
+      "correct_answer": "A",
+      "code_example": "result = [x**2 for x in range(10)]\nprint(result)"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following factorial calculation?",
+      "options": {
+        "A": "24",
+        "B": "120",
+        "C": "720",
+        "D": "6"
+      },
+      "correct_answer": "B",
+      "code_example": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1)\n\nprint(factorial(5))"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "In a CSV file, what is the standard delimiter character?",
+      "options": {
+        "A": "Tab (\\t)",
+        "B": "Colon (:)",
+        "C": "Comma (,)",
+        "D": "Semicolon (;)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to define a custom exception in Python?",
+      "options": {
+        "A": "class MyException: pass",
+        "B": "class MyException(BaseException): pass",
+        "C": "class MyException(Exception): pass",
+        "D": "def MyException(): pass"
+      },
+      "correct_answer": "C",
+      "code_example": "class ValueTooLargeError(Exception):\n    \"\"\"Raised when the input value is too large\"\"\"\n    pass\n\ntry:\n    number = 110\n    if number > 100:\n        raise ValueTooLargeError\nexcept ValueTooLargeError:\n    print(\"Value is too large\")"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code that reads and writes to a text file?",
+      "options": {
+        "A": "['Hello, world!\\n', 'Python is great.\\n']",
+        "B": "Hello, world!\nPython is great.",
+        "C": "Hello, world!Python is great.",
+        "D": "['Hello, world!', 'Python is great.']"
+      },
+      "correct_answer": "A",
+      "code_example": "with open('test_file.txt', 'w') as f:\n    f.write('Hello, world!\\n')\n    f.write('Python is great.\\n')\n\nwith open('test_file.txt', 'r') as f:\n    lines = f.readlines()\n    print(lines)"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is the time complexity of binary search on a sorted array?",
+      "options": {
+        "A": "O(n)",
+        "B": "O(n log n)",
+        "C": "O(log n)",
+        "D": "O(1)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following selection sort implementation?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[5, 4, 3, 2, 1]",
+        "C": "[3, 1, 4, 2, 5]",
+        "D": "Error: List index out of range"
+      },
+      "correct_answer": "A",
+      "code_example": "def selection_sort(arr):\n    for i in range(len(arr)):\n        min_idx = i\n        for j in range(i+1, len(arr)):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr\n\nresult = selection_sort([3, 1, 4, 2, 5])\nprint(result)"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the result of calculating the GCD (Greatest Common Divisor) of 48 and 18?",
+      "options": {
+        "A": "6",
+        "B": "3",
+        "C": "9",
+        "D": "2"
+      },
+      "correct_answer": "A",
+      "code_example": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a\n\nprint(gcd(48, 18))"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following string methods?",
+      "options": {
+        "A": "['apple', 'banana', 'cherry']",
+        "B": "apple-banana-cherry",
+        "C": "APPLE BANANA CHERRY",
+        "D": "apple banana cherry"
+      },
+      "correct_answer": "B",
+      "code_example": "fruits = 'apple banana cherry'\nfruit_list = fruits.split()\nnew_string = '-'.join(fruit_list)\nprint(new_string)"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using while loop, break, and continue?",
+      "options": {
+        "A": "1 3 5 7 9",
+        "B": "1 3 5 7",
+        "C": "1 2 3 4 5 6 7 8 9 10",
+        "D": "0 1 2 3 4 5 6 7 8 9"
+      },
+      "correct_answer": "B",
+      "code_example": "i = 0\nresult = ''\nwhile i < 10:\n    i += 1\n    if i % 2 == 0:\n        continue\n    if i > 7:\n        break\n    result += str(i) + ' '\nprint(result.strip())"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to handle multiple exceptions in Python?",
+      "options": {
+        "A": "try: ... except Exception1, Exception2: ...",
+        "B": "try: ... except (Exception1, Exception2): ...",
+        "C": "try: ... except Exception1: ... except Exception2: ...",
+        "D": "Both B and C are correct"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "In Python, what is the difference between parameters and arguments?",
+      "options": {
+        "A": "They are the same thing",
+        "B": "Parameters are variables in a function definition, arguments are the values passed to the function",
+        "C": "Arguments are variables in a function definition, parameters are the values passed to the function",
+        "D": "Parameters are for class methods, arguments are for regular functions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What is the purpose of function annotations in Python?",
+      "options": {
+        "A": "To enforce type checking at runtime",
+        "B": "To automatically generate docstrings",
+        "C": "To provide metadata about function parameters and return values",
+        "D": "To optimize function performance"
+      },
+      "correct_answer": "C",
+      "code_example": "def calculate_area(radius: float) -> float:\n    \"\"\"Calculate the area of a circle\"\"\"\n    return 3.14 * (radius ** 2)\n\nprint(calculate_area.__annotations__)"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following string slicing operation?",
+      "options": {
+        "A": "Python",
+        "B": "ytho",
+        "C": "Pyth",
+        "D": "ython"
+      },
+      "correct_answer": "B",
+      "code_example": "text = \"Python\"\nsliced = text[1:5]\nprint(sliced)"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code demonstrating variable scope?",
+      "options": {
+        "A": "10 20",
+        "B": "10 10",
+        "C": "20 20",
+        "D": "Error: UnboundLocalError"
+      },
+      "correct_answer": "D",
+      "code_example": "x = 10\n\ndef test_scope():\n    print(x)\n    x = 20\n    print(x)\n\ntest_scope()"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following regex code with capturing groups?",
+      "options": {
+        "A": "['123', '456', '789']",
+        "B": "['123-456-789']",
+        "C": "['123', '456', '789', '123-456-789']",
+        "D": "[('123', '456', '789')]"
+      },
+      "correct_answer": "D",
+      "code_example": "import re\n\ntext = \"My phone number is 123-456-789\"\npattern = r\"(\\d{3})-(\\d{3})-(\\d{3})\"\n\nresult = re.findall(pattern, text)\nprint(result)"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a valid way to connect to a SQLite database in Python?",
+      "options": {
+        "A": "import sqlite3; conn = sqlite3.connect('example.db')",
+        "B": "from sqlite3 import connect; conn = connect('example.db')",
+        "C": "import sqlite3; conn = sqlite3.Connection('example.db')",
+        "D": "from sqlite3 import connect; conn = connect(':memory:')"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What data structure is typically used to implement a breadth-first search (BFS) algorithm?",
+      "options": {
+        "A": "Stack",
+        "B": "Queue",
+        "C": "Dictionary",
+        "D": "Set"
+      },
+      "correct_answer": "B",
+      "code_example": "from collections import deque\n\ndef bfs(graph, start):\n    visited = set()\n    queue = deque([start])\n    visited.add(start)\n    \n    while queue:\n        vertex = queue.popleft()\n        print(vertex, end=\" \")\n        \n        for neighbor in graph[vertex]:\n            if neighbor not in visited:\n                visited.add(neighbor)\n                queue.append(neighbor)\n\n# Example graph\ngraph = {\n    'A': ['B', 'C'],\n    'B': ['A', 'D', 'E'],\n    'C': ['A', 'F'],\n    'D': ['B'],\n    'E': ['B', 'F'],\n    'F': ['C', 'E']\n}\n\nbfs(graph, 'A')"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following sliding window implementation?",
+      "options": {
+        "A": "6 10 12",
+        "B": "3 7 11 15",
+        "C": "6 9 12 15",
+        "D": "10 15 20"
+      },
+      "correct_answer": "C",
+      "code_example": "def sliding_window_sum(arr, k):\n    n = len(arr)\n    results = []\n    \n    window_sum = sum(arr[:k])\n    results.append(window_sum)\n    \n    for i in range(n - k):\n        window_sum = window_sum - arr[i] + arr[i + k]\n        results.append(window_sum)\n        \n    return results\n\narr = [1, 2, 3, 4, 5, 6]\nk = 3\nprint(*sliding_window_sum(arr, k))"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What is the key difference between generator expressions and list comprehensions in Python?",
+      "options": {
+        "A": "Generator expressions use () while list comprehensions use []",
+        "B": "Generator expressions are lazily evaluated, while list comprehensions create the entire list at once",
+        "C": "Generator expressions can only yield one value, while list comprehensions can return multiple values",
+        "D": "Both A and B are correct"
+      },
+      "correct_answer": "D",
+      "code_example": "import sys\n\n# List comprehension\nlist_comp = [x for x in range(1000)]\n\n# Generator expression\ngen_exp = (x for x in range(1000))\n\nprint(f\"List comprehension size: {sys.getsizeof(list_comp)} bytes\")\nprint(f\"Generator expression size: {sys.getsizeof(gen_exp)} bytes\")"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which HTTP status code indicates a successful response for a DELETE request?",
+      "options": {
+        "A": "200 OK",
+        "B": "201 Created",
+        "C": "204 No Content",
+        "D": "202 Accepted"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What is the average-case time complexity of the quicksort algorithm?",
+      "options": {
+        "A": "O(n)",
+        "B": "O(n log n)",
+        "C": "O(n²)",
+        "D": "O(log n)"
+      },
+      "correct_answer": "B",
+      "code_example": "def quicksort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    \n    return quicksort(left) + middle + quicksort(right)\n\nprint(quicksort([3, 6, 8, 10, 1, 2, 1]))"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "In Flask, which decorator is used to define a route for the application?",
+      "options": {
+        "A": "@flask.path()",
+        "B": "@app.url()",
+        "C": "@app.route()",
+        "D": "@flask.endpoint()"
+      },
+      "correct_answer": "C",
+      "code_example": "from flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef hello_world():\n    return 'Hello, World!'\n\n@app.route('/user/<username>')\ndef show_user_profile(username):\n    return f'User {username}'"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following generator function using yield?",
+      "options": {
+        "A": "[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]",
+        "B": "0 1 1 2 3 5 8 13 21 34",
+        "C": "StopIteration Exception",
+        "D": "<generator object fibonacci at 0x...>"
+      },
+      "correct_answer": "B",
+      "code_example": "def fibonacci(n):\n    a, b = 0, 1\n    count = 0\n    while count < n:\n        yield a\n        a, b = b, a + b\n        count += 1\n\nfor num in fibonacci(10):\n    print(num, end=\" \")"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "Which of the following best describes the Third Normal Form (3NF) in database design?",
+      "options": {
+        "A": "Every table must have a primary key",
+        "B": "All non-key attributes must be dependent on the primary key",
+        "C": "No transitive dependencies (non-key attributes dependent on other non-key attributes)",
+        "D": "No multi-valued attributes"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following hash-based search?",
+      "options": {
+        "A": "Found 42 at position 2",
+        "B": "Not found",
+        "C": "Found 42 at position 1",
+        "D": "Error: dict object has no attribute 'get'"
+      },
+      "correct_answer": "A",
+      "code_example": "def hash_search(hash_table, key):\n    if key in hash_table:\n        return f\"Found {key} at position {hash_table[key]}\"\n    else:\n        return \"Not found\"\n\nnumbers = {23: 0, 15: 3, 42: 2, 108: 1}\nprint(hash_search(numbers, 42))"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is the output of the following binary tree level-order traversal?",
+      "options": {
+        "A": "1 2 3 4 5",
+        "B": "1 3 5 2 4",
+        "C": "4 2 5 1 3",
+        "D": "1 2 5 3 4"
+      },
+      "correct_answer": "A",
+      "code_example": "class Node:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\n\ndef level_order_traversal(root):\n    if not root:\n        return []\n    \n    result = []\n    queue = [root]\n    \n    while queue:\n        node = queue.pop(0)\n        result.append(node.value)\n        \n        if node.left:\n            queue.append(node.left)\n        if node.right:\n            queue.append(node.right)\n    \n    return result\n\n# Create a tree:\n#     1\n#    / \\\n#   2   3\n#  / \\\n# 4   5\nroot = Node(1)\nroot.left = Node(2)\nroot.right = Node(3)\nroot.left.left = Node(4)\nroot.left.right = Node(5)\n\nprint(*level_order_traversal(root))"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating class and instance variables?",
+      "options": {
+        "A": "1 2 1",
+        "B": "1 2 2",
+        "C": "1 1 1",
+        "D": "2 2 2"
+      },
+      "correct_answer": "A",
+      "code_example": "class MyClass:\n    class_var = 1\n    \n    def __init__(self):\n        self.instance_var = self.class_var\n    \n    def update_instance(self):\n        self.instance_var = 2\n\nobj1 = MyClass()\nobj2 = MyClass()\nobj1.update_instance()\n\nprint(MyClass.class_var, obj1.instance_var, obj2.instance_var)"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "Which of the following algorithms best exemplifies the 'divide and conquer' paradigm?",
+      "options": {
+        "A": "Bubble Sort",
+        "B": "Depth-First Search",
+        "C": "Merge Sort",
+        "D": "Greedy Algorithm"
+      },
+      "correct_answer": "C",
+      "code_example": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    \n    # Divide\n    mid = len(arr) // 2\n    left = arr[:mid]\n    right = arr[mid:]\n    \n    # Conquer\n    left = merge_sort(left)\n    right = merge_sort(right)\n    \n    # Combine\n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    \n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    \n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result\n\nprint(merge_sort([38, 27, 43, 3, 9, 82, 10]))"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the result of the following binary search variation that finds the insertion point for a value?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "-1"
+      },
+      "correct_answer": "B",
+      "code_example": "def binary_search_insertion_point(arr, target):\n    left, right = 0, len(arr) - 1\n    \n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return left  # This is the insertion point\n\narr = [1, 3, 5, 7, 9, 11]\ntarget = 6\nprint(binary_search_insertion_point(arr, target))"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "Which algorithm can be used to detect cycles in a directed graph?",
+      "options": {
+        "A": "Breadth-First Search only",
+        "B": "Depth-First Search with visited and recursion stacks",
+        "C": "Binary Search",
+        "D": "Greedy Algorithm"
+      },
+      "correct_answer": "B",
+      "code_example": "def has_cycle(graph):\n    visited = set()\n    rec_stack = set()\n    \n    def dfs(node):\n        visited.add(node)\n        rec_stack.add(node)\n        \n        for neighbor in graph.get(node, []):\n            if neighbor not in visited:\n                if dfs(neighbor):\n                    return True\n            elif neighbor in rec_stack:\n                return True\n        \n        rec_stack.remove(node)\n        return False\n    \n    for node in graph:\n        if node not in visited:\n            if dfs(node):\n                return True\n    \n    return False\n\n# Example graph with a cycle\ngraph = {\n    0: [1, 2],\n    1: [2],\n    2: [0, 3],\n    3: [3]\n}\n\nprint(has_cycle(graph))"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the primary advantage of using microservices architecture over a monolithic architecture?",
+      "options": {
+        "A": "Simplified deployment process requiring all services to be deployed simultaneously",
+        "B": "Increased scalability by allowing independent scaling of specific services",
+        "C": "Reduced complexity in inter-service communication",
+        "D": "Elimination of the need for API gateways"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which of the following is a key principle of continuous integration?",
+      "options": {
+        "A": "Deploying code to production as infrequently as possible",
+        "B": "Testing code only after all features are complete",
+        "C": "Integrating code changes frequently into a shared repository",
+        "D": "Keeping development branches separate for as long as possible"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Consider the following Python implementation of a randomized algorithm for finding a value in an unsorted list. What is the expected worst-case time complexity?",
+      "options": {
+        "A": "O(log n)",
+        "B": "O(n)",
+        "C": "O(n log n)",
+        "D": "O(n²)"
+      },
+      "correct_answer": "B",
+      "code_example": "import random\n\ndef randomized_search(arr, target):\n    # Create a copy and shuffle it\n    shuffled = arr.copy()\n    random.shuffle(shuffled)\n    \n    # Linear search through the shuffled array\n    for i, item in enumerate(shuffled):\n        if item == target:\n            return i\n    return -1"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the final value of the variable 'state' after executing the following state machine code?",
+      "options": {
+        "A": "'READY'",
+        "B": "'RUNNING'",
+        "C": "'PAUSED'",
+        "D": "'FINISHED'"
+      },
+      "correct_answer": "D",
+      "code_example": "def handle_transition(current_state, event):\n    transitions = {\n        'READY': {'start': 'RUNNING', 'reset': 'READY'},\n        'RUNNING': {'pause': 'PAUSED', 'finish': 'FINISHED'},\n        'PAUSED': {'resume': 'RUNNING', 'finish': 'FINISHED'},\n        'FINISHED': {'reset': 'READY'}\n    }\n    \n    if event in transitions[current_state]:\n        return transitions[current_state][event]\n    return current_state\n\nstate = 'READY'\nevents = ['start', 'pause', 'resume', 'finish']\n\nfor event in events:\n    state = handle_transition(state, event)\n"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "Which of the following statements about CPython's Global Interpreter Lock (GIL) is accurate?",
+      "options": {
+        "A": "The GIL prevents any form of parallel execution in Python programs",
+        "B": "The GIL is required to ensure thread safety in CPython's memory management",
+        "C": "The GIL makes multi-threaded CPU-bound code faster than single-threaded code",
+        "D": "The GIL has been completely removed in Python 3.x versions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "According to the CAP theorem in distributed systems, which combination is impossible to achieve simultaneously?",
+      "options": {
+        "A": "Consistency and Availability",
+        "B": "Availability and Partition Tolerance",
+        "C": "Consistency, Availability, and Partition Tolerance",
+        "D": "Consistency and Partition Tolerance"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "Which transaction isolation level allows non-repeatable reads but prevents dirty reads?",
+      "options": {
+        "A": "Read Uncommitted",
+        "B": "Read Committed",
+        "C": "Repeatable Read",
+        "D": "Serializable"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Scrapy spider code when run?",
+      "options": {
+        "A": "The URLs of all pages on example.com",
+        "B": "Only URLs of pages containing the word 'python'",
+        "C": "Only URLs of pages with a .html extension",
+        "D": "Only URLs within the 'blog' section of example.com"
+      },
+      "correct_answer": "D",
+      "code_example": "import scrapy\n\nclass BlogSpider(scrapy.Spider):\n    name = 'blogspider'\n    start_urls = ['https://example.com']\n    \n    def parse(self, response):\n        # Extract all links from the page\n        links = response.css('a::attr(href)').getall()\n        \n        # Filter links and yield only those in the blog section\n        for link in links:\n            if 'blog' in link:\n                yield {'url': link}\n                \n        # Don't follow any links\n        return"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of this Python code using dependency injection?",
+      "options": {
+        "A": "FileLogger initialized\\nLogging message to file: Hello, DI!",
+        "B": "ConsoleLogger initialized\\nLogging message to console: Hello, DI!",
+        "C": "DatabaseLogger initialized\\nLogging message to database: Hello, DI!",
+        "D": "Error: No logger implementation provided"
+      },
+      "correct_answer": "A",
+      "code_example": "class Logger:\n    def log(self, message):\n        pass\n\nclass FileLogger(Logger):\n    def __init__(self):\n        print(\"FileLogger initialized\")\n        \n    def log(self, message):\n        print(f\"Logging message to file: {message}\")\n\nclass ConsoleLogger(Logger):\n    def __init__(self):\n        print(\"ConsoleLogger initialized\")\n        \n    def log(self, message):\n        print(f\"Logging message to console: {message}\")\n\nclass Service:\n    def __init__(self, logger):\n        self.logger = logger\n        \n    def do_something(self):\n        self.logger.log(\"Hello, DI!\")\n\n# Instantiate the specific logger implementation\nlogger = FileLogger()\n\n# Inject the logger dependency\nservice = Service(logger)\n\n# Use the service\nservice.do_something()"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of this knapsack problem solution for the given inputs?",
+      "options": {
+        "A": "11",
+        "B": "13",
+        "C": "15",
+        "D": "17"
+      },
+      "correct_answer": "C",
+      "code_example": "def knapsack(weights, values, capacity):\n    n = len(weights)\n    # Initialize DP table with zeros\n    dp = [[0 for _ in range(capacity + 1)] for _ in range(n + 1)]\n    \n    # Fill the DP table\n    for i in range(1, n + 1):\n        for w in range(1, capacity + 1):\n            # If current item weight is less than capacity, we have two choices\n            if weights[i-1] <= w:\n                # Either take the current item or leave it\n                dp[i][w] = max(values[i-1] + dp[i-1][w-weights[i-1]], dp[i-1][w])\n            else:\n                # Can't take the current item\n                dp[i][w] = dp[i-1][w]\n    \n    return dp[n][capacity]\n\n# Test case\nweights = [2, 3, 4, 5]\nvalues = [3, 4, 5, 8]\ncapacity = 10\n\nresult = knapsack(weights, values, capacity)\nprint(result)"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What is the output of this longest common subsequence implementation for the given input strings?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "correct_answer": "B",
+      "code_example": "def lcs(str1, str2):\n    m, n = len(str1), len(str2)\n    \n    # Create DP table\n    dp = [[0 for _ in range(n + 1)] for _ in range(m + 1)]\n    \n    # Fill DP table\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if str1[i-1] == str2[j-1]:\n                dp[i][j] = dp[i-1][j-1] + 1\n            else:\n                dp[i][j] = max(dp[i-1][j], dp[i][j-1])\n    \n    return dp[m][n]\n\n# Test case\nstr1 = \"AGGTAB\"\nstr2 = \"GXTXAYB\"\n\nresult = lcs(str1, str2)\nprint(result)"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What is the difference between memoization and tabulation in dynamic programming?",
+      "options": {
+        "A": "Memoization uses a bottom-up approach while tabulation uses a top-down approach",
+        "B": "Memoization uses recursion with caching while tabulation uses iteration with a table",
+        "C": "Memoization can only solve problems with overlapping subproblems while tabulation works for all DP problems",
+        "D": "Memoization is always more memory-efficient than tabulation"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following WebSocket implementation?",
+      "options": {
+        "A": "Client connected\\nMessage received: Hello, WebSocket!\\nMessage sent: Echo: Hello, WebSocket!",
+        "B": "Connection established\\nMessage received: Hello, WebSocket!\\nMessage sent: Echo: Hello, WebSocket!",
+        "C": "WebSocket server started\\nClient connected\\nMessage sent: Echo: Hello, WebSocket!",
+        "D": "WebSocket server started\\nConnection error: No valid WebSocket connection"
+      },
+      "correct_answer": "A",
+      "code_example": "import asyncio\nimport websockets\n\nasync def handle_connection(websocket, path):\n    print(\"Client connected\")\n    \n    # Receive message from client\n    message = await websocket.recv()\n    print(f\"Message received: {message}\")\n    \n    # Echo the message back with a prefix\n    response = f\"Echo: {message}\"\n    await websocket.send(response)\n    print(f\"Message sent: {response}\")\n\n# Simulation of execution\ndef simulate_websocket():\n    # This simulates what would happen in a real WebSocket interaction\n    print(\"Client connected\")\n    message = \"Hello, WebSocket!\"\n    print(f\"Message received: {message}\")\n    response = f\"Echo: {message}\"\n    print(f\"Message sent: {response}\")\n\n# In a real scenario, we would start the server with:\n# start_server = websockets.serve(handle_connection, \"localhost\", 8765)\n# asyncio.get_event_loop().run_until_complete(start_server)\n# asyncio.get_event_loop().run_forever()\n\n# But for this example, we'll just simulate it\nsimulate_websocket()"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "In Kubernetes, what is the primary purpose of a Service resource?",
+      "options": {
+        "A": "To define the container image to be deployed",
+        "B": "To provide stable networking for a set of Pods",
+        "C": "To manage storage volumes for containers",
+        "D": "To automatically scale the number of Pods based on CPU usage"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following metaclass-based code?",
+      "options": {
+        "A": "Creating class\\nChild class created\\nInstance initialized",
+        "B": "Creating class\\nInvalid class definition",
+        "C": "Creating class\\nChild class created\\nAttribute Error: 'Child' object has no attribute 'required_attrs'",
+        "D": "Child class created\\nInstance initialized"
+      },
+      "correct_answer": "A",
+      "code_example": "class ValidateAttributes(type):\n    def __new__(mcs, name, bases, namespace):\n        print(\"Creating class\")\n        # Check if the class has the required attributes\n        if name != 'Base' and 'required_attrs' not in namespace:\n            raise TypeError(\"Invalid class definition\")\n        return super().__new__(mcs, name, bases, namespace)\n\nclass Base(metaclass=ValidateAttributes):\n    pass\n\nclass Child(Base):\n    required_attrs = True\n    \n    def __init__(self):\n        print(\"Instance initialized\")\n\n# Create an instance of Child\nprint(\"Child class created\")\nchild = Child()"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What is the time complexity of inserting a node into a balanced AVL tree?",
+      "options": {
+        "A": "O(1)",
+        "B": "O(log n)",
+        "C": "O(n)",
+        "D": "O(n log n)"
+      },
+      "correct_answer": "B",
+      "code_example": "class AVLNode:\n    def __init__(self, key):\n        self.key = key\n        self.left = None\n        self.right = None\n        self.height = 1\n\nclass AVLTree:\n    def get_height(self, node):\n        if not node:\n            return 0\n        return node.height\n    \n    def get_balance(self, node):\n        if not node:\n            return 0\n        return self.get_height(node.left) - self.get_height(node.right)\n    \n    def right_rotate(self, y):\n        x = y.left\n        T2 = x.right\n        \n        # Perform rotation\n        x.right = y\n        y.left = T2\n        \n        # Update heights\n        y.height = max(self.get_height(y.left), self.get_height(y.right)) + 1\n        x.height = max(self.get_height(x.left), self.get_height(x.right)) + 1\n        \n        return x\n    \n    def left_rotate(self, x):\n        y = x.right\n        T2 = y.left\n        \n        # Perform rotation\n        y.left = x\n        x.right = T2\n        \n        # Update heights\n        x.height = max(self.get_height(x.left), self.get_height(x.right)) + 1\n        y.height = max(self.get_height(y.left), self.get_height(y.right)) + 1\n        \n        return y\n    \n    def insert(self, root, key):\n        # Standard BST insert\n        if not root:\n            return AVLNode(key)\n        \n        if key < root.key:\n            root.left = self.insert(root.left, key)\n        elif key > root.key:\n            root.right = self.insert(root.right, key)\n        else:  # Equal keys not allowed\n            return root\n        \n        # Update height of this ancestor node\n        root.height = max(self.get_height(root.left), self.get_height(root.right)) + 1\n        \n        # Get the balance factor\n        balance = self.get_balance(root)\n        \n        # If unbalanced, there are 4 cases\n        \n        # Left Left Case\n        if balance > 1 and key < root.left.key:\n            return self.right_rotate(root)\n        \n        # Right Right Case\n        if balance < -1 and key > root.right.key:\n            return self.left_rotate(root)\n        \n        # Left Right Case\n        if balance > 1 and key > root.left.key:\n            root.left = self.left_rotate(root.left)\n            return self.right_rotate(root)\n        \n        # Right Left Case\n        if balance < -1 and key < root.right.key:\n            root.right = self.right_rotate(root.right)\n            return self.left_rotate(root)\n        \n        return root\n\n# This function would normally perform an AVL tree insertion with O(log n) complexity\n# For a tree of n nodes, finding the insertion position takes O(log n) time\n# Rebalancing after insertion also takes O(log n) time in the worst case"
+    }
+  ]
+}
