@@ -1,0 +1,664 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "Four Pillars of OOP - Encapsulation",
+      "question": "Which of the following best demonstrates encapsulation in Java?",
+      "options": {
+        "A": "Creating multiple classes that inherit from a parent class",
+        "B": "Using private fields with public getter and setter methods",
+        "C": "Implementing the same method differently in child classes",
+        "D": "Using abstract methods in a parent class"
+      },
+      "correct_answer": "B",
+      "code_example": "class BankAccount {\n    private double balance;\n    \n    public double getBalance() {\n        return balance;\n    }\n    \n    public void deposit(double amount) {\n        if (amount > 0) {\n            balance += amount;\n        }\n    }\n}"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "Spring MVC Basics",
+      "question": "What is the primary role of a Controller in Spring MVC?",
+      "options": {
+        "A": "To manage database connections",
+        "B": "To handle HTTP requests and define view responses",
+        "C": "To create and initialize Spring beans",
+        "D": "To configure security for the application"
+      },
+      "correct_answer": "B",
+      "code_example": "@Controller\npublic class HomeController {\n    \n    @GetMapping(\"/home\")\n    public String homePage(Model model) {\n        model.addAttribute(\"message\", \"Welcome to Spring MVC\");\n        return \"home\";\n    }\n}"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "@RequestMapping vs @GetMapping vs @PostMapping",
+      "question": "What will be the output when this code is executed and a GET request is made to '/users/profile'?",
+      "options": {
+        "A": "Method Not Allowed (HTTP 405) error",
+        "B": "The method will be executed and return 'viewProfile'",
+        "C": "Compilation error",
+        "D": "No response will be generated"
+      },
+      "correct_answer": "A",
+      "code_example": "@Controller\npublic class UserController {\n    \n    @PostMapping(\"/users/profile\")\n    public String viewProfile() {\n        return \"viewProfile\";\n    }\n}"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "List, Set, and Map Interfaces Overview",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "[apple, banana, orange, apple]",
+        "B": "[apple, banana, orange]",
+        "C": "[apple, banana, orange] [apple, banana, orange]",
+        "D": "[apple, banana, orange] [orange, banana, apple]"
+      },
+      "correct_answer": "B",
+      "code_example": "import java.util.*;\n\npublic class CollectionDemo {\n    public static void main(String[] args) {\n        Set<String> fruits = new HashSet<>();\n        fruits.add(\"apple\");\n        fruits.add(\"banana\");\n        fruits.add(\"orange\");\n        fruits.add(\"apple\"); // Adding duplicate\n        \n        System.out.println(fruits);\n    }\n}"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "ApplicationContext vs BeanFactory",
+      "question": "Which statement about the relationship between ApplicationContext and BeanFactory is correct?",
+      "options": {
+        "A": "BeanFactory is a subinterface of ApplicationContext",
+        "B": "ApplicationContext is an extension of BeanFactory with additional enterprise-specific functionality",
+        "C": "BeanFactory and ApplicationContext are completely unrelated interfaces",
+        "D": "ApplicationContext can only be used in web applications while BeanFactory is for desktop applications"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "ResponseEntity and Exception Handling",
+      "question": "What will be the response status and content type of the following controller method?",
+      "options": {
+        "A": "200 OK, application/json",
+        "B": "201 Created, application/json",
+        "C": "200 OK, text/plain",
+        "D": "201 Created, text/plain"
+      },
+      "correct_answer": "B",
+      "code_example": "@RestController\npublic class UserController {\n    \n    @PostMapping(\"/users\")\n    public ResponseEntity<User> createUser(@RequestBody User user) {\n        // User creation logic\n        return ResponseEntity.status(HttpStatus.CREATED)\n                          .contentType(MediaType.APPLICATION_JSON)\n                          .body(user);\n    }\n}"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "wait(), notify(), notifyAll()",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Thread waiting\nThread notified",
+        "B": "Thread waiting\nThread waiting\nThread notified\nThread notified",
+        "C": "Thread notified\nThread waiting",
+        "D": "The code will result in an IllegalMonitorStateException"
+      },
+      "correct_answer": "D",
+      "code_example": "public class WaitNotifyDemo {\n    public static void main(String[] args) {\n        Object lock = new Object();\n        \n        Thread t1 = new Thread(() -> {\n            try {\n                System.out.println(\"Thread waiting\");\n                lock.wait();\n                System.out.println(\"Thread notified\");\n            } catch (Exception e) {\n                System.out.println(e.getClass().getSimpleName());\n            }\n        });\n        \n        t1.start();\n    }\n}"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "NullPointerException, ArrayIndexOutOfBoundsException",
+      "question": "What exception will be thrown when executing the following code?",
+      "options": {
+        "A": "ArrayIndexOutOfBoundsException",
+        "B": "NullPointerException",
+        "C": "IndexOutOfBoundsException",
+        "D": "No exception will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "public class ExceptionDemo {\n    public static void main(String[] args) {\n        String[] names = new String[3];\n        System.out.println(names[0].length());\n    }\n}"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Constructor Overloading",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "No-arg constructor\nConstructor with one parameter: 10",
+        "B": "Constructor with one parameter: 10\nNo-arg constructor",
+        "C": "No-arg constructor",
+        "D": "Constructor with one parameter: 10"
+      },
+      "correct_answer": "C",
+      "code_example": "public class ConstructorDemo {\n    public ConstructorDemo() {\n        System.out.println(\"No-arg constructor\");\n    }\n    \n    public ConstructorDemo(int value) {\n        System.out.println(\"Constructor with one parameter: \" + value);\n    }\n    \n    public static void main(String[] args) {\n        ConstructorDemo demo = new ConstructorDemo();\n    }\n}"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Type Casting (Implicit and Explicit)",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "65",
+        "B": "65.0",
+        "C": "A",
+        "D": "Compilation error"
+      },
+      "correct_answer": "C",
+      "code_example": "public class TypeCastDemo {\n    public static void main(String[] args) {\n        int intValue = 65;\n        char charValue = (char) intValue;\n        System.out.println(charValue);\n    }\n}"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "static Keyword",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "10 20",
+        "B": "10 10",
+        "C": "20 20",
+        "D": "20 10"
+      },
+      "correct_answer": "C",
+      "code_example": "public class StaticDemo {\n    static int count = 10;\n    \n    public static void main(String[] args) {\n        StaticDemo instance1 = new StaticDemo();\n        StaticDemo instance2 = new StaticDemo();\n        \n        instance1.count = 20;\n        System.out.print(instance1.count + \" \");\n        System.out.println(instance2.count);\n    }\n}"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "Authentication vs Authorization",
+      "question": "In the context of Spring Security, which statement correctly differentiates Authentication and Authorization?",
+      "options": {
+        "A": "Authentication is about permissions, while Authorization is about identity verification",
+        "B": "Authentication is handled by AuthenticationManager, while Authorization is managed by AccessDecisionManager",
+        "C": "Authentication occurs before a request is processed, while Authorization occurs after",
+        "D": "Authentication uses OAuth tokens, while Authorization uses basic username/password"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "throw vs throws Keywords",
+      "question": "What will be the result of compiling and running the following code?",
+      "options": {
+        "A": "The code will compile and print 'Method completed'",
+        "B": "The code will compile but throw a RuntimeException with message 'Error occurred'",
+        "C": "The code will not compile because the exception is not caught or declared",
+        "D": "The code will not compile because throw cannot be used with a String parameter"
+      },
+      "correct_answer": "C",
+      "code_example": "public class ThrowsDemo {\n    public static void main(String[] args) {\n        processFile(\"data.txt\");\n        System.out.println(\"Method completed\");\n    }\n    \n    public static void processFile(String filename) {\n        if (!filename.endsWith(\".csv\")) {\n            throw new RuntimeException(\"Error occurred\");\n        }\n    }\n}"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "Java Main Method",
+      "question": "Which statement about the Java main method is correct?",
+      "options": {
+        "A": "The main method must be declared as 'public static void main(String[] args)'",
+        "B": "The parameter name 'args' is mandatory for the main method",
+        "C": "The main method can be overloaded with different parameter types",
+        "D": "The main method cannot call other static methods from the same class"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "Exceptions - Checked vs Unchecked",
+      "question": "Which of the following is a checked exception in Java?",
+      "options": {
+        "A": "NullPointerException",
+        "B": "IllegalArgumentException",
+        "C": "IOException",
+        "D": "ArithmeticException"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "HashSet vs TreeSet vs LinkedHashSet",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "[5, 1, 3, 2, 4]",
+        "B": "[1, 2, 3, 4, 5]",
+        "C": "[5, 4, 3, 2, 1]",
+        "D": "[1, 3, 5, 2, 4]"
+      },
+      "correct_answer": "B",
+      "code_example": "import java.util.*;\n\npublic class SetDemo {\n    public static void main(String[] args) {\n        Set<Integer> numbers = new TreeSet<>();\n        numbers.add(5);\n        numbers.add(1);\n        numbers.add(3);\n        numbers.add(2);\n        numbers.add(4);\n        \n        System.out.println(numbers);\n    }\n}"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Immutable Strings in Java",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello World",
+        "B": "Hello",
+        "C": "Hello World Hello",
+        "D": "HelloHello World"
+      },
+      "correct_answer": "B",
+      "code_example": "public class StringImmutabilityDemo {\n    public static void main(String[] args) {\n        String s1 = \"Hello\";\n        String s2 = s1;\n        s1 += \" World\";\n        \n        System.out.println(s2);\n    }\n}"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "hashCode() and equals() Contract",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "true\nfalse",
+        "B": "false\nfalse",
+        "C": "true\ntrue",
+        "D": "false\ntrue"
+      },
+      "correct_answer": "A",
+      "code_example": "import java.util.*;\n\nclass Person {\n    private String name;\n    \n    public Person(String name) {\n        this.name = name;\n    }\n    \n    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) return true;\n        if (obj == null || getClass() != obj.getClass()) return false;\n        Person person = (Person) obj;\n        return Objects.equals(name, person.name);\n    }\n    \n    // No hashCode implementation\n}\n\npublic class HashCodeDemo {\n    public static void main(String[] args) {\n        Person p1 = new Person(\"John\");\n        Person p2 = new Person(\"John\");\n        \n        System.out.println(p1.equals(p2));\n        \n        Set<Person> personSet = new HashSet<>();\n        personSet.add(p1);\n        personSet.add(p2);\n        \n        System.out.println(personSet.size() == 1);\n    }\n}"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "clone() Method and Cloning",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Original: [1, 2, 3], Clone: [1, 2, 3, 4]",
+        "B": "Original: [1, 2, 3, 4], Clone: [1, 2, 3, 4]",
+        "C": "Original: [1, 2, 3], Clone: [1, 2, 3]",
+        "D": "A CloneNotSupportedException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "import java.util.ArrayList;\n\npublic class CloneDemo implements Cloneable {\n    private ArrayList<Integer> numbers;\n    \n    public CloneDemo() {\n        numbers = new ArrayList<>();\n        numbers.add(1);\n        numbers.add(2);\n        numbers.add(3);\n    }\n    \n    @Override\n    protected Object clone() throws CloneNotSupportedException {\n        return super.clone();\n    }\n    \n    public ArrayList<Integer> getNumbers() {\n        return numbers;\n    }\n    \n    public static void main(String[] args) {\n        try {\n            CloneDemo original = new CloneDemo();\n            CloneDemo clone = (CloneDemo) original.clone();\n            \n            clone.getNumbers().add(4);\n            \n            System.out.println(\"Original: \" + original.getNumbers() + \", Clone: \" + clone.getNumbers());\n        } catch (CloneNotSupportedException e) {\n            e.printStackTrace();\n        }\n    }\n}"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "Fail-Fast vs Fail-Safe Iterators",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "[1, 2, 3]",
+        "B": "[1, 2, 3, 4]",
+        "C": "ConcurrentModificationException will be thrown",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "C",
+      "code_example": "import java.util.*;\n\npublic class IteratorDemo {\n    public static void main(String[] args) {\n        List<Integer> numbers = new ArrayList<>();\n        numbers.add(1);\n        numbers.add(2);\n        numbers.add(3);\n        \n        Iterator<Integer> iterator = numbers.iterator();\n        while (iterator.hasNext()) {\n            Integer num = iterator.next();\n            if (num == 2) {\n                numbers.add(4);\n            }\n        }\n        \n        System.out.println(numbers);\n    }\n}"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "volatile Keyword Usage",
+      "question": "What is the primary purpose of the volatile keyword in Java?",
+      "options": {
+        "A": "To make a variable thread-safe",
+        "B": "To ensure visibility of changes to variables across threads",
+        "C": "To prevent a variable from being modified",
+        "D": "To make a variable's value persist between JVM restarts"
+      },
+      "correct_answer": "B",
+      "code_example": "public class VolatileDemo {\n    private volatile boolean flag = false;\n    \n    public void setFlag() {\n        flag = true;\n    }\n    \n    public boolean isReady() {\n        return flag;\n    }\n}"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "Abstract Classes vs Interfaces",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Drawing a circle\nDrawing a circle with color red",
+        "B": "Drawing a red circle\nDrawing a circle with color red",
+        "C": "Compilation error: interface method draw() is already defined in class RedCircle",
+        "D": "Compilation error: class RedCircle must override abstract method draw() in Colorable"
+      },
+      "correct_answer": "B",
+      "code_example": "abstract class Shape {\n    abstract void draw();\n}\n\ninterface Colorable {\n    default void draw() {\n        System.out.println(\"Drawing a circle with color \" + getColor());\n    }\n    \n    String getColor();\n}\n\nclass RedCircle extends Shape implements Colorable {\n    @Override\n    void draw() {\n        System.out.println(\"Drawing a red circle\");\n    }\n    \n    @Override\n    public String getColor() {\n        return \"red\";\n    }\n    \n    public static void main(String[] args) {\n        RedCircle circle = new RedCircle();\n        circle.draw();\n        ((Colorable)circle).draw();\n    }\n}"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "instanceof Operator Usage",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Fruit\nApple\nOrange",
+        "B": "Apple\nOrange\nFruit",
+        "C": "Fruit\nOrange\nApple",
+        "D": "Compilation error: class Fruit is not in scope"
+      },
+      "correct_answer": "A",
+      "code_example": "class Fruit {}\nclass Apple extends Fruit {}\nclass Orange extends Fruit {}\n\npublic class InstanceOfDemo {\n    public static void main(String[] args) {\n        Fruit fruit = new Fruit();\n        Apple apple = new Apple();\n        Orange orange = new Orange();\n        \n        printType(fruit);\n        printType(apple);\n        printType(orange);\n    }\n    \n    public static void printType(Object obj) {\n        if (obj instanceof Fruit) {\n            System.out.println(\"Fruit\");\n        } else if (obj instanceof Apple) {\n            System.out.println(\"Apple\");\n        } else if (obj instanceof Orange) {\n            System.out.println(\"Orange\");\n        }\n    }\n}"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "Bean Scopes",
+      "question": "When using the @Scope annotation in Spring, which of the following scope types allows a bean to be created only once per HTTP session?",
+      "options": {
+        "A": "prototype",
+        "B": "singleton",
+        "C": "request",
+        "D": "session"
+      },
+      "correct_answer": "D",
+      "code_example": "@Component\n@Scope(\"session\")\npublic class ShoppingCart {\n    private List<Product> items = new ArrayList<>();\n    \n    public void addItem(Product product) {\n        items.add(product);\n    }\n    \n    public List<Product> getItems() {\n        return items;\n    }\n}"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Chained Exceptions",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "java.io.IOException: File not found\nCaused by: java.lang.IllegalArgumentException: Invalid path",
+        "B": "java.lang.RuntimeException: Could not process file\nCaused by: java.io.IOException: File not found",
+        "C": "java.lang.IllegalArgumentException: Invalid path\nCaused by: java.io.IOException: File not found",
+        "D": "java.lang.RuntimeException: Could not process file"
+      },
+      "correct_answer": "B",
+      "code_example": "import java.io.IOException;\n\npublic class ChainedExceptionDemo {\n    public static void main(String[] args) {\n        try {\n            processFile(\"data.txt\");\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n    }\n    \n    public static void processFile(String filename) {\n        try {\n            readFile(filename);\n        } catch (IOException e) {\n            RuntimeException runtimeException = new RuntimeException(\"Could not process file\");\n            runtimeException.initCause(e);\n            throw runtimeException;\n        }\n    }\n    \n    public static void readFile(String filename) throws IOException {\n        throw new IOException(\"File not found\");\n    }\n}"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "Property Source (@PropertySource, @Value)",
+      "question": "What is the correct way to inject the value of 'app.message' from an application.properties file in Spring?",
+      "options": {
+        "A": "@PropertySource(\"classpath:application.properties\")\n@Value(\"app.message\")\nprivate String message;",
+        "B": "@PropertySource(\"application.properties\")\n@Value(\"${app.message}\")\nprivate String message;",
+        "C": "@PropertySource(value = \"classpath:application.properties\")\n@Value(\"${app.message}\")\nprivate String message;",
+        "D": "@PropertySource\n@Value(app.message)\nprivate String message;"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "Content Negotiation and Versioning",
+      "question": "Which approach to API versioning is demonstrated in the following Spring controller code?",
+      "options": {
+        "A": "URI path versioning",
+        "B": "Request parameter versioning",
+        "C": "Media type versioning (content negotiation)",
+        "D": "Header versioning"
+      },
+      "correct_answer": "C",
+      "code_example": "@RestController\npublic class UserController {\n    \n    @GetMapping(value = \"/users\", produces = \"application/vnd.company.app-v1+json\")\n    public List<UserV1> getUsersV1() {\n        // Return version 1 representation\n        return userService.getUsersV1();\n    }\n    \n    @GetMapping(value = \"/users\", produces = \"application/vnd.company.app-v2+json\")\n    public List<UserV2> getUsersV2() {\n        // Return version 2 representation\n        return userService.getUsersV2();\n    }\n}"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "Constructor Injection vs Setter Injection",
+      "question": "What advantage does Constructor Injection have over Setter Injection in Spring?",
+      "options": {
+        "A": "Constructor Injection is more concise and requires less code",
+        "B": "Constructor Injection allows for optional dependencies",
+        "C": "Constructor Injection enforces dependencies to be provided at initialization time",
+        "D": "Constructor Injection provides better performance"
+      },
+      "correct_answer": "C",
+      "code_example": "// Constructor Injection\n@Service\npublic class UserService {\n    private final UserRepository userRepository;\n    private final EmailService emailService;\n    \n    @Autowired\n    public UserService(UserRepository userRepository, EmailService emailService) {\n        this.userRepository = userRepository;\n        this.emailService = emailService;\n    }\n    \n    // Service methods\n}"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "JWT Authentication in Spring Security",
+      "question": "In JWT-based authentication, what is the primary purpose of the signature part of the token?",
+      "options": {
+        "A": "To encrypt the payload data",
+        "B": "To verify that the token hasn't been tampered with",
+        "C": "To encode user roles and permissions",
+        "D": "To store the token expiration time"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Exception Propagation Mechanism",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "RuntimeException: Error in method1",
+        "B": "RuntimeException: Error in method1\nMethod2 completed\nMethod3 completed",
+        "C": "RuntimeException: Error in method1\nMethod3 completed",
+        "D": "Method3 completed"
+      },
+      "correct_answer": "C",
+      "code_example": "public class ExceptionPropagationDemo {\n    public static void main(String[] args) {\n        try {\n            method3();\n        } catch (Exception e) {\n            System.out.println(e.toString());\n        } finally {\n            System.out.println(\"Method3 completed\");\n        }\n    }\n    \n    static void method3() {\n        method2();\n    }\n    \n    static void method2() {\n        method1();\n        System.out.println(\"Method2 completed\");\n    }\n    \n    static void method1() {\n        throw new RuntimeException(\"Error in method1\");\n    }\n}"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "Synchronization in Collections",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "ConcurrentModificationException will be thrown",
+        "C": "[1, 2, 3, 4, 5, 6]",
+        "D": "[1, 2, 3]"
+      },
+      "correct_answer": "A",
+      "code_example": "import java.util.*;\nimport java.util.concurrent.*;\n\npublic class ConcurrentCollectionDemo {\n    public static void main(String[] args) {\n        List<Integer> list = new CopyOnWriteArrayList<>();\n        list.add(1);\n        list.add(2);\n        list.add(3);\n        \n        for (Integer num : list) {\n            if (num == 3) {\n                list.add(4);\n                list.add(5);\n            }\n        }\n        \n        System.out.println(list);\n    }\n}"
+    },
+   {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "Method Hiding in Java",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Parent static method\nChild method",
+        "B": "Child static method\nChild method",
+        "C": "Parent static method\nParent method",
+        "D": "Child static method\nParent method"
+      },
+      "correct_answer": "A",
+      "code_example": "class Parent {\n    public static void staticMethod() {\n        System.out.println(\"Parent static method\");\n    }\n    \n    public void instanceMethod() {\n        System.out.println(\"Parent method\");\n    }\n}\n\nclass Child extends Parent {\n    public static void staticMethod() {\n        System.out.println(\"Child static method\");\n    }\n    \n    @Override\n    public void instanceMethod() {\n        System.out.println(\"Child method\");\n    }\n}\n\npublic class MethodHidingDemo {\n    public static void main(String[] args) {\n        Parent p = new Child();\n        p.staticMethod();\n        p.instanceMethod();\n    }\n}"
+	},
+{
+      "id": 33,
+      "difficulty": "hard",
+      "topic": "Dynamic Method Dispatch (Runtime Polymorphism)",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Parent {\n    void show() {\n        System.out.println(\"Parent's show\");\n    }\n}\n\nclass Child extends Parent {\n    void show() {\n        System.out.println(\"Child's show\");\n    }\n    \n    void childOnly() {\n        System.out.println(\"Child's specific method\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Parent obj = new Child();\n        obj.show();\n        \n        // Casting\n        ((Child)obj).childOnly();\n        \n        // New reference\n        Parent obj2 = new Parent();\n        obj2.show();\n    }\n}",
+      "options": {
+        "A": "Parent's show\nChild's specific method\nParent's show",
+        "B": "Child's show\nChild's specific method\nParent's show",
+        "C": "Child's show\nChild's specific method\nChild's show",
+        "D": "Compilation error because Parent reference cannot invoke childOnly()"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "topic": "CompletableFuture and Asynchronous Programming",
+      "question": "What will be the output of the following code assuming it runs without any external errors?",
+      "code_example": "import java.util.concurrent.CompletableFuture;\nimport java.util.concurrent.ExecutionException;\n\npublic class CompletableFutureTest {\n    public static void main(String[] args) throws ExecutionException, InterruptedException {\n        CompletableFuture<String> future1 = CompletableFuture.supplyAsync(() -> {\n            try {\n                Thread.sleep(100);\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n            return \"Future1\";\n        });\n        \n        CompletableFuture<String> future2 = CompletableFuture.supplyAsync(() -> {\n            try {\n                Thread.sleep(50);\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n            return \"Future2\";\n        });\n        \n        CompletableFuture<String> future3 = CompletableFuture.supplyAsync(() -> {\n            return \"Future3\";\n        });\n        \n        System.out.println(CompletableFuture.anyOf(future1, future2, future3).get());\n    }\n}",
+      "options": {
+        "A": "Future1",
+        "B": "Future2",
+        "C": "Future3",
+        "D": "The order is non-deterministic so it could be any of Future1, Future2, or Future3"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "topic": "instanceof Operator Usage",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Animal {}\nclass Dog extends Animal {}\nclass Cat extends Animal {}\n\npublic class InstanceOfTest {\n    public static void main(String[] args) {\n        Animal animal1 = new Dog();\n        Animal animal2 = new Cat();\n        Animal animal3 = new Animal();\n        \n        System.out.print(animal1 instanceof Dog ? \"D\" : \"_\");\n        System.out.print(animal1 instanceof Cat ? \"C\" : \"_\");\n        System.out.print(animal2 instanceof Animal ? \"A\" : \"_\");\n        System.out.print(animal3 instanceof Dog ? \"D\" : \"_\");\n        System.out.print(null instanceof Animal ? \"A\" : \"_\");\n    }\n}",
+      "options": {
+        "A": "D_A__",
+        "B": "D_A_A",
+        "C": "D_AD_",
+        "D": "D_A__"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "topic": "Dependency Injection and its Role in OOP",
+      "question": "Which of the following statements about Dependency Injection is FALSE?",
+      "options": {
+        "A": "Dependency Injection helps achieve loose coupling between objects",
+        "B": "Constructor injection is generally preferred over setter injection for mandatory dependencies",
+        "C": "Dependency Injection violates the principle of encapsulation since it exposes implementation details",
+        "D": "Field injection using @Autowired in Spring can make unit testing more difficult compared to constructor injection"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "topic": "Performance Optimization for REST APIs (Caching, GZip Compression)",
+      "question": "Which of the following HTTP headers would NOT be used for implementing client-side caching for a REST API response?",
+      "options": {
+        "A": "Cache-Control: max-age=3600",
+        "B": "ETag: \"33a64df551425fcc55e4d42a148795d9f25f89d4\"",
+        "C": "Content-Encoding: gzip",
+        "D": "Last-Modified: Wed, 21 Oct 2020 07:28:00 GMT"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "topic": "Abstract Classes vs Interfaces",
+      "question": "After the introduction of default methods in interfaces in Java 8, which of the following statements about abstract classes versus interfaces remains TRUE?",
+      "options": {
+        "A": "Interfaces cannot have constructor methods, while abstract classes can",
+        "B": "A class can implement multiple interfaces but can only extend one abstract class",
+        "C": "Abstract classes can have non-final instance variables, while interfaces can only have final static variables",
+        "D": "All of the above"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "topic": "Deep Copy vs Shallow Copy in Java",
+      "question": "What will be the output of the following code?",
+      "code_example": "import java.util.ArrayList;\n\nclass Department {\n    String name;\n    \n    Department(String name) {\n        this.name = name;\n    }\n}\n\nclass Employee implements Cloneable {\n    String name;\n    Department dept;\n    ArrayList<String> skills;\n    \n    Employee(String name, String deptName) {\n        this.name = name;\n        this.dept = new Department(deptName);\n        this.skills = new ArrayList<>();\n    }\n    \n    @Override\n    protected Object clone() throws CloneNotSupportedException {\n        Employee cloned = (Employee) super.clone();\n        cloned.skills = new ArrayList<>(this.skills);\n        return cloned;\n    }\n}\n\npublic class CopyTest {\n    public static void main(String[] args) throws CloneNotSupportedException {\n        Employee originalEmp = new Employee(\"John\", \"Engineering\");\n        originalEmp.skills.add(\"Java\");\n        \n        Employee clonedEmp = (Employee) originalEmp.clone();\n        clonedEmp.name = \"Jane\";\n        clonedEmp.dept.name = \"QA\";\n        clonedEmp.skills.add(\"Python\");\n        \n        System.out.println(originalEmp.name + \", \" + originalEmp.dept.name + \", \" + \n                           originalEmp.skills.size() + \" skills\");\n    }\n}",
+      "options": {
+        "A": "John, Engineering, 1 skills",
+        "B": "John, QA, 2 skills",
+        "C": "John, QA, 1 skills",
+        "D": "Jane, QA, 2 skills"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "topic": "hashCode() and equals() Contract",
+      "question": "What will be the output of the following code?",
+      "code_example": "import java.util.HashMap;\n\nclass Person {\n    private String name;\n    private int age;\n    \n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n    \n    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) return true;\n        if (obj == null || getClass() != obj.getClass()) return false;\n        Person person = (Person) obj;\n        return age == person.age && name.equals(person.name);\n    }\n    \n    // No hashCode method implementation\n}\n\npublic class HashContract {\n    public static void main(String[] args) {\n        HashMap<Person, String> map = new HashMap<>();\n        \n        Person person1 = new Person(\"Alice\", 30);\n        map.put(person1, \"Developer\");\n        \n        Person person2 = new Person(\"Alice\", 30);\n        \n        System.out.println(person1.equals(person2) + \", \" + map.containsKey(person2));\n    }\n}",
+      "options": {
+        "A": "true, true",
+        "B": "true, false",
+        "C": "false, false",
+        "D": "false, true"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "topic": "System.gc() and Its Impact",
+      "question": "Which of the following statements about System.gc() is correct?",
+      "options": {
+        "A": "System.gc() guarantees immediate garbage collection of all eligible objects",
+        "B": "System.gc() invokes the finalize() method on all objects that are no longer reachable",
+        "C": "Calling System.gc() is a best practice for critical sections of code where memory needs to be freed immediately",
+        "D": "System.gc() is merely a suggestion to the JVM that might be completely ignored depending on the JVM implementation"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "topic": "Circular Dependency Resolution in Spring",
+      "question": "Which of the following approaches is NOT a valid way to resolve circular dependencies in Spring?",
+      "options": {
+        "A": "Using setter injection instead of constructor injection",
+        "B": "Using @Lazy annotation to defer bean creation until it's actually needed",
+        "C": "Redesigning components to use interfaces and the dependency inversion principle",
+        "D": "Setting spring.circular.dependencies.allowed=true in application.properties"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "topic": "Custom Class Loaders in Java",
+      "question": "What will be the output of the following code?",
+      "code_example": "class CustomClassLoader extends ClassLoader {\n    @Override\n    public Class<?> loadClass(String name) throws ClassNotFoundException {\n        if (name.startsWith(\"java.\")) {\n            return super.loadClass(name);\n        }\n        // Custom implementation would go here but simplified for this question\n        return super.loadClass(name);\n    }\n}\n\npublic class ClassLoaderTest {\n    public static void main(String[] args) throws Exception {\n        CustomClassLoader loader1 = new CustomClassLoader();\n        CustomClassLoader loader2 = new CustomClassLoader();\n        \n        Class<?> class1 = loader1.loadClass(\"ClassLoaderTest\");\n        Class<?> class2 = loader2.loadClass(\"ClassLoaderTest\");\n        Class<?> class3 = ClassLoaderTest.class;\n        \n        System.out.print(class1 == class2 ? \"1\" : \"0\");\n        System.out.print(class1 == class3 ? \"1\" : \"0\");\n        System.out.print(class1.getClassLoader() == class2.getClassLoader() ? \"1\" : \"0\");\n        System.out.print(class1.getClassLoader() == ClassLoader.getSystemClassLoader() ? \"1\" : \"0\");\n    }\n}",
+      "options": {
+        "A": "0001",
+        "B": "0011",
+        "C": "0111",
+        "D": "1111"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "topic": "Custom Exception Hierarchy",
+      "question": "What will be the output of the following code?",
+      "code_example": "class BaseException extends Exception {}\nclass Level1Exception extends BaseException {}\nclass Level2Exception extends Level1Exception {}\n\npublic class ExceptionTest {\n    public static void method1() throws BaseException {\n        throw new Level2Exception();\n    }\n    \n    public static void method2() throws Level1Exception {\n        try {\n            method1();\n        } catch (BaseException e) {\n            throw new Level1Exception();\n        }\n    }\n    \n    public static void main(String[] args) {\n        try {\n            method2();\n        } catch (Level2Exception e) {\n            System.out.println(\"A\");\n        } catch (Level1Exception e) {\n            System.out.println(\"B\");\n        } catch (BaseException e) {\n            System.out.println(\"C\");\n        } catch (Exception e) {\n            System.out.println(\"D\");\n        }\n    }\n}",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "topic": "Atomic Variables (AtomicInteger, AtomicReference)",
+      "question": "What will be the output of the following code?",
+      "code_example": "import java.util.concurrent.atomic.AtomicInteger;\nimport java.util.concurrent.atomic.AtomicReference;\n\npublic class AtomicTest {\n    public static void main(String[] args) {\n        AtomicInteger atomicInt = new AtomicInteger(5);\n        int result1 = atomicInt.getAndIncrement() + atomicInt.incrementAndGet();\n        \n        AtomicReference<String> atomicRef = new AtomicReference<>(\"A\");\n        atomicRef.compareAndSet(\"A\", \"B\");\n        atomicRef.compareAndSet(\"A\", \"C\");\n        String result2 = atomicRef.get();\n        \n        System.out.println(result1 + \"-\" + result2);\n    }\n}",
+      "options": {
+        "A": "11-B",
+        "B": "12-B",
+        "C": "11-C",
+        "D": "12-C"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "topic": "Chained Exceptions in Java (initCause())",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class ChainedExceptionTest {\n    public static void main(String[] args) {\n        try {\n            try {\n                throw new IllegalArgumentException(\"Original\");\n            } catch (IllegalArgumentException e) {\n                IllegalStateException wrapper = new IllegalStateException(\"Wrapper\");\n                wrapper.initCause(e);\n                throw wrapper;\n            }\n        } catch (Exception e) {\n            System.out.println(e.getMessage());\n            Throwable cause = e.getCause();\n            if (cause != null) {\n                System.out.println(cause.getMessage());\n                System.out.println(cause.getClass().getSimpleName());\n            }\n        }\n    }\n}",
+      "options": {
+        "A": "Original\nWrapper\nIllegalStateException",
+        "B": "Wrapper\nOriginal\nIllegalArgumentException",
+        "C": "Wrapper\nIllegalStateException\nOriginal",
+        "D": "Original\nIllegalArgumentException\nWrapper"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "topic": "WeakHashMap, IdentityHashMap, EnumMap",
+      "question": "What will be the output of the following code?",
+      "code_example": "import java.util.*;\n\nenum Direction { NORTH, SOUTH, EAST, WEST }\n\npublic class MapTest {\n    public static void main(String[] args) {\n        // WeakHashMap test\n        WeakHashMap<Object, String> weakMap = new WeakHashMap<>();\n        Object weakKey = new Object();\n        weakMap.put(weakKey, \"Weak\");\n        weakKey = null;\n        System.gc();\n        \n        // IdentityHashMap test\n        IdentityHashMap<String, String> identityMap = new IdentityHashMap<>();\n        String key1 = new String(\"key\");\n        String key2 = new String(\"key\");\n        identityMap.put(key1, \"Value1\");\n        identityMap.put(key2, \"Value2\");\n        \n        // EnumMap test\n        EnumMap<Direction, String> enumMap = new EnumMap<>(Direction.class);\n        enumMap.put(Direction.NORTH, \"N\");\n        enumMap.put(Direction.SOUTH, \"S\");\n        \n        System.out.print(weakMap.size());\n        System.out.print(identityMap.size());\n        System.out.print(enumMap.size());\n    }\n}",
+      "options": {
+        "A": "022",
+        "B": "122",
+        "C": "012",
+        "D": "112"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "topic": "Multiple Inheritance in Java (Why Java Doesn't Support It)",
+      "question": "Which of the following is NOT a reason why Java doesn't support multiple implementation inheritance (extending multiple classes)?",
+      "options": {
+        "A": "The Diamond Problem: When a class inherits from two classes that have overridden the same method, it's ambiguous which implementation should be used",
+        "B": "Multiple inheritance increases coupling between classes, making the system more complex and harder to maintain",
+        "C": "The JVM architecture cannot efficiently handle the memory layout required for objects that inherit from multiple class hierarchies",
+        "D": "Interface implementation with default methods provides most of the benefits of multiple inheritance with fewer complications"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
