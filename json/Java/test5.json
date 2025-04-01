@@ -287,15 +287,15 @@
     {
       "id": 22,
       "difficulty": "medium",
-      "topic": "Multiple Inheritance",
-      "question": "Why doesn't Java support multiple inheritance of classes?",
+      "question": "What will be the output of the following code?",
       "options": {
-        "A": "It would make the language too complex for developers",
-        "B": "To avoid the 'diamond problem' and ambiguity",
-        "C": "Java was designed to be a simple language with limited features",
-        "D": "Multiple inheritance is never useful in object-oriented programming"
+        "A": "Service1\nService1\nService2",
+        "B": "Service2\nService1\nService2",
+        "C": "Service1\nService2\nService2",
+        "D": "Service2\nService2\nService2"
       },
-      "correct_answer": "B"
+      "correct_answer": "C",
+      "code_example": "import org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.beans.factory.annotation.Qualifier;\nimport org.springframework.context.annotation.AnnotationConfigApplicationContext;\nimport org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\nimport org.springframework.context.annotation.Primary;\nimport org.springframework.stereotype.Component;\n\ninterface MyService {\n    String getName();\n}\n\n@Component(\"service1\")\nclass Service1 implements MyService {\n    public String getName() { return \"Service1\"; }\n}\n\n@Primary\n@Component(\"service2\")\nclass Service2 implements MyService {\n    public String getName() { return \"Service2\"; }\n}\n\n@Configuration\nclass AppConfig {\n    @Autowired\n    private MyService defaultService; // will get @Primary\n\n    @Autowired\n    @Qualifier(\"service1\")\n    private MyService qualifiedService; // will get specifically service1\n\n    public void printServices() {\n        System.out.println(qualifiedService.getName());\n        System.out.println(defaultService.getName());\n        \n        // Will get @Primary service without qualifier\n        MyService anotherService = new AnnotationConfigApplicationContext(AppConfig.class)\n            .getBean(MyService.class);\n        System.out.println(anotherService.getName());\n    }\n}"
     },
     {
       "id": 23,
