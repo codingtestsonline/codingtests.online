@@ -1,0 +1,660 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "What is an Exception? Checked vs Unchecked Exceptions",
+      "question": "Which of the following statements about exceptions in Java is correct?",
+      "options": {
+        "A": "Checked exceptions extend RuntimeException and don't need to be declared in a method's throws clause",
+        "B": "Unchecked exceptions must be caught or declared in a method's throws clause",
+        "C": "Checked exceptions must be either caught or declared in a method's throws clause",
+        "D": "All exceptions in Java are checked by default"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "this Keyword Usage in Java",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "10, 20",
+        "B": "0, 20",
+        "C": "10, 0",
+        "D": "0, 0"
+      },
+      "correct_answer": "A",
+      "code_example": "public class ThisExample {\n    private int x = 10;\n    \n    public void printValues(int x) {\n        System.out.print(this.x + \", \");\n        System.out.print(x);\n    }\n    \n    public static void main(String[] args) {\n        ThisExample example = new ThisExample();\n        example.printValues(20);\n    }\n}"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "Inversion of Control (IoC) and Dependency Injection (DI)",
+      "question": "Which of the following best describes Inversion of Control (IoC) in Spring?",
+      "options": {
+        "A": "A design pattern where objects define their own dependencies",
+        "B": "A principle where the control of object creation and lifecycle is transferred to a container or framework",
+        "C": "A technique that allows direct instantiation of dependent objects using the new keyword",
+        "D": "A concept where business logic controls the flow of the application"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "Constructor Overloading",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Default constructor\nParameterized constructor: 10",
+        "B": "Parametrized constructor: 10",
+        "C": "Default constructor",
+        "D": "Compilation error: constructor ConstructorExample() is already defined"
+      },
+      "correct_answer": "A",
+      "code_example": "public class ConstructorExample {\n    public ConstructorExample() {\n        System.out.println(\"Default constructor\");\n    }\n    \n    public ConstructorExample(int value) {\n        this(); // Call the default constructor\n        System.out.println(\"Parametrized constructor: \" + value);\n    }\n    \n    public static void main(String[] args) {\n        ConstructorExample example = new ConstructorExample(10);\n    }\n}"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "UserDetailsService and Role-Based Authentication",
+      "question": "In Spring Security, what is the primary purpose of the UserDetailsService interface?",
+      "options": {
+        "A": "To encrypt user passwords",
+        "B": "To handle HTTP authentication requests",
+        "C": "To load user-specific data for authentication",
+        "D": "To manage user roles and permissions directly"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "Spring Boot Starters",
+      "question": "What is the main benefit of using Spring Boot Starters?",
+      "options": {
+        "A": "They provide a way to avoid using annotations in Spring applications",
+        "B": "They help in managing dependency versions and provide auto-configuration",
+        "C": "They automatically generate code for common functionalities",
+        "D": "They replace the need for a Spring application context"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "Operators in Java (Arithmetic, Logical, Bitwise, Ternary, Relational)",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "15",
+        "D": "16"
+      },
+      "correct_answer": "A",
+      "code_example": "public class OperatorsExample {\n    public static void main(String[] args) {\n        int a = 5;\n        int b = 10;\n        int c = (a > b) ? a + b : a + (b % 8); // 10 % 8 = 2\n        System.out.println(c);\n    }\n}"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "Java Beans and POJOs",
+      "question": "Which of the following is NOT a requirement for a class to be considered a JavaBean?",
+      "options": {
+        "A": "It must have a no-argument constructor",
+        "B": "Its properties must be accessible through getter and setter methods",
+        "C": "It must implement the Serializable interface",
+        "D": "It must extend the Bean class"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "JDK, JRE, and JVM – Differences and Roles",
+      "question": "What is the correct relationship between JDK, JRE, and JVM?",
+      "options": {
+        "A": "JDK contains JRE, which contains JVM",
+        "B": "JRE contains JDK, which contains JVM",
+        "C": "JVM contains JRE, which contains JDK",
+        "D": "JDK, JRE, and JVM are independent components with no containment relationship"
+      },
+      "correct_answer": "A",
+      "code_example": null
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Multiple Catch Blocks",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "ArithmeticException caught",
+        "B": "NullPointerException caught",
+        "C": "Compilation error: Exception 'java.lang.NullPointerException' has already been caught",
+        "D": "No exception caught"
+      },
+      "correct_answer": "A",
+      "code_example": "public class MultipleCatchExample {\n    public static void main(String[] args) {\n        try {\n            int result = 10 / 0;\n            String str = null;\n            System.out.println(str.length());\n        } catch (ArithmeticException e) {\n            System.out.println(\"ArithmeticException caught\");\n        } catch (NullPointerException e) {\n            System.out.println(\"NullPointerException caught\");\n        } catch (Exception e) {\n            System.out.println(\"Generic Exception caught\");\n        }\n    }\n}"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "static Keyword (Methods, Variables, Blocks)",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Static block\nStatic method\nInstance method",
+        "B": "Static block\nInstance method\nStatic method",
+        "C": "Instance method\nStatic method\nStatic block",
+        "D": "Static method\nStatic block\nInstance method"
+      },
+      "correct_answer": "A",
+      "code_example": "public class StaticExample {\n    static {\n        System.out.println(\"Static block\");\n    }\n    \n    public static void staticMethod() {\n        System.out.println(\"Static method\");\n    }\n    \n    public void instanceMethod() {\n        System.out.println(\"Instance method\");\n    }\n    \n    public static void main(String[] args) {\n        staticMethod();\n        StaticExample example = new StaticExample();\n        example.instanceMethod();\n    }\n}"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "NullPointerException, ArrayIndexOutOfBoundsException",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "ArrayIndexOutOfBoundsException caught",
+        "B": "NullPointerException caught",
+        "C": "No exception thrown",
+        "D": "The code will terminate with an uncaught exception"
+      },
+      "correct_answer": "B",
+      "code_example": "public class ExceptionExample {\n    public static void main(String[] args) {\n        try {\n            String[] array = null;\n            if (array.length > 0) {\n                System.out.println(array[5]);\n            }\n        } catch (ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"ArrayIndexOutOfBoundsException caught\");\n        } catch (NullPointerException e) {\n            System.out.println(\"NullPointerException caught\");\n        }\n    }\n}"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "Inner Classes (Regular, Static, Local, Anonymous)",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Outer class method\nInner class value: 10",
+        "B": "Inner class value: 10\nOuter class method",
+        "C": "Compilation error: non-static variable this cannot be referenced from a static context",
+        "D": "Compilation error: inner classes cannot access outer class methods"
+      },
+      "correct_answer": "A",
+      "code_example": "public class OuterClass {\n    private int value = 10;\n    \n    public void outerMethod() {\n        System.out.println(\"Outer class method\");\n        InnerClass inner = new InnerClass();\n        inner.innerMethod();\n    }\n    \n    class InnerClass {\n        public void innerMethod() {\n            System.out.println(\"Inner class value: \" + value);\n        }\n    }\n    \n    public static void main(String[] args) {\n        OuterClass outer = new OuterClass();\n        outer.outerMethod();\n    }\n}"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "try-with-resources (Java 7+)",
+      "question": "What is the advantage of using try-with-resources over traditional try-catch-finally blocks?",
+      "options": {
+        "A": "try-with-resources can handle checked exceptions without explicit catch blocks",
+        "B": "try-with-resources automatically closes resources that implement AutoCloseable, even if an exception occurs",
+        "C": "try-with-resources can only be used with Java IO classes",
+        "D": "try-with-resources blocks do not support catch or finally blocks"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "DispatcherServlet and Request Flow",
+      "question": "In Spring MVC, what is the role of the DispatcherServlet?",
+      "options": {
+        "A": "To compile JSP pages into servlets",
+        "B": "To manage database connections",
+        "C": "To authenticate and authorize users",
+        "D": "To dispatch requests to appropriate controllers and handle the response"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "Static vs Instance Methods",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Instance print\nStatic print: 10",
+        "B": "Static print: 10\nInstance print",
+        "C": "Compilation error: non-static method cannot be referenced from a static context",
+        "D": "Compilation error: static variable cannot be accessed from instance method"
+      },
+      "correct_answer": "B",
+      "code_example": "public class MethodExample {\n    private static int value = 10;\n    \n    public static void staticPrint() {\n        System.out.println(\"Static print: \" + value);\n    }\n    \n    public void instancePrint() {\n        System.out.println(\"Instance print\");\n    }\n    \n    public static void main(String[] args) {\n        staticPrint();\n        \n        MethodExample example = new MethodExample();\n        example.instancePrint();\n    }\n}"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Bean Scopes (singleton, prototype, request, session, etc.)",
+      "question": "What will be the output of the following Spring bean configuration?",
+      "options": {
+        "A": "true",
+        "B": "false",
+        "C": "Compilation error",
+        "D": "Runtime exception: No bean named 'prototypeBean' is defined"
+      },
+      "correct_answer": "B",
+      "code_example": "@Configuration\npublic class BeanScopeExample {\n    \n    @Bean\n    @Scope(\"prototype\")\n    public PrototypeBean prototypeBean() {\n        return new PrototypeBean();\n    }\n    \n    public static void main(String[] args) {\n        AnnotationConfigApplicationContext context = \n            new AnnotationConfigApplicationContext(BeanScopeExample.class);\n        \n        PrototypeBean bean1 = context.getBean(\"prototypeBean\", PrototypeBean.class);\n        PrototypeBean bean2 = context.getBean(\"prototypeBean\", PrototypeBean.class);\n        \n        System.out.println(bean1 == bean2); // Comparing references\n        \n        context.close();\n    }\n}\n\nclass PrototypeBean {}"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "@Qualifier and @Primary",
+      "question": "What will be the output of the following Spring configuration?",
+      "options": {
+        "A": "Primary service implementation",
+        "B": "Secondary service implementation",
+        "C": "Compilation error: multiple beans of type Service found",
+        "D": "Runtime exception: No qualifying bean of type Service available"
+      },
+      "correct_answer": "B",
+      "code_example": "@Configuration\npublic class QualifierExample {\n    \n    @Bean\n    @Primary\n    public Service primaryService() {\n        return new PrimaryServiceImpl();\n    }\n    \n    @Bean\n    public Service secondaryService() {\n        return new SecondaryServiceImpl();\n    }\n    \n    @Component\n    public static class ServiceConsumer {\n        private final Service service;\n        \n        @Autowired\n        public ServiceConsumer(@Qualifier(\"secondaryService\") Service service) {\n            this.service = service;\n        }\n        \n        public void printService() {\n            System.out.println(service.getMessage());\n        }\n    }\n    \n    public static void main(String[] args) {\n        AnnotationConfigApplicationContext context = \n            new AnnotationConfigApplicationContext(QualifierExample.class);\n        \n        ServiceConsumer consumer = context.getBean(ServiceConsumer.class);\n        consumer.printService();\n        \n        context.close();\n    }\n}\n\ninterface Service {\n    String getMessage();\n}\n\nclass PrimaryServiceImpl implements Service {\n    @Override\n    public String getMessage() {\n        return \"Primary service implementation\";\n    }\n}\n\nclass SecondaryServiceImpl implements Service {\n    @Override\n    public String getMessage() {\n        return \"Secondary service implementation\";\n    }\n}"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "volatile Keyword Usage",
+      "question": "What is the primary purpose of the volatile keyword in Java?",
+      "options": {
+        "A": "To prevent a variable from being modified",
+        "B": "To make a variable thread-safe for all operations",
+        "C": "To ensure visibility of a variable's changes across threads",
+        "D": "To allow a variable to be used in lambda expressions"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "Exception Propagation Mechanism in Java",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Method1\nMethod2\nMethod3\nCaught in main",
+        "B": "Method1\nMethod2\nCaught in main",
+        "C": "Method1\nCaught in main",
+        "D": "Compilation error: unreported exception must be caught or declared"
+      },
+      "correct_answer": "A",
+      "code_example": "public class ExceptionPropagation {\n    public static void main(String[] args) {\n        try {\n            method1();\n        } catch (Exception e) {\n            System.out.println(\"Caught in main\");\n        }\n    }\n    \n    static void method1() throws Exception {\n        System.out.println(\"Method1\");\n        method2();\n    }\n    \n    static void method2() throws Exception {\n        System.out.println(\"Method2\");\n        method3();\n    }\n    \n    static void method3() throws Exception {\n        System.out.println(\"Method3\");\n        throw new Exception(\"Exception in method3\");\n    }\n}"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "Varargs (... Syntax)",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Sum: 0",
+        "B": "Sum: 15",
+        "C": "Compilation error: varargs parameter must be the last parameter",
+        "D": "Runtime exception: NullPointerException"
+      },
+      "correct_answer": "B",
+      "code_example": "public class VarargsExample {\n    public static void main(String[] args) {\n        System.out.println(\"Sum: \" + sum(1, 2, 3, 4, 5));\n    }\n    \n    public static int sum(int... numbers) {\n        int total = 0;\n        for (int num : numbers) {\n            total += num;\n        }\n        return total;\n    }\n}"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "Externalized Configuration (YAML, Property Files, Environment Variables)",
+      "question": "In Spring Boot, which has the highest precedence when properties are defined in multiple places?",
+      "options": {
+        "A": "Properties defined in application.properties file",
+        "B": "Command line arguments",
+        "C": "YAML files in the classpath",
+        "D": "Default properties embedded in the jar"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "Exception Handling using @ControllerAdvice",
+      "question": "What is the primary purpose of @ControllerAdvice in Spring?",
+      "options": {
+        "A": "To define common exception handlers, model attributes, and data binders across multiple controllers",
+        "B": "To enable method-level security in controllers",
+        "C": "To handle HTTP request preprocessing before they reach controllers",
+        "D": "To intercept database operations and provide transaction management"
+      },
+      "correct_answer": "A",
+      "code_example": null
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "instanceof Operator Usage",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "false\ntrue\nfalse",
+        "B": "true\ntrue\nfalse",
+        "C": "false\ntrue\ntrue",
+        "D": "true\ntrue\ntrue"
+      },
+      "correct_answer": "B",
+      "code_example": "public class InstanceofExample {\n    public static void main(String[] args) {\n        Animal animal = new Animal();\n        Dog dog = new Dog();\n        Animal dogAsAnimal = new Dog();\n        \n        System.out.println(animal instanceof Dog);\n        System.out.println(dog instanceof Animal);\n        System.out.println(dogAsAnimal instanceof Cat);\n    }\n}\n\nclass Animal {}\nclass Dog extends Animal {}\nclass Cat extends Animal {}"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Concurrent Collections (ConcurrentHashMap, ConcurrentLinkedQueue)",
+      "question": "What is the key difference between HashMap and ConcurrentHashMap?",
+      "options": {
+        "A": "ConcurrentHashMap is synchronized by using a single lock for the entire map",
+        "B": "ConcurrentHashMap allows concurrent reads but exclusive writes",
+        "C": "ConcurrentHashMap uses segment-level locking or lock striping to allow multiple threads to modify the map concurrently",
+        "D": "ConcurrentHashMap is immutable once created"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "toString(), hashCode(), and equals() in Object Class",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "true\ntrue",
+        "B": "false\ntrue",
+        "C": "true\nfalse",
+        "D": "false\nfalse"
+      },
+      "correct_answer": "B",
+      "code_example": "public class ObjectMethodsExample {\n    public static void main(String[] args) {\n        Person p1 = new Person(\"John\", 25);\n        Person p2 = new Person(\"John\", 25);\n        \n        // Default Object.equals() compares references\n        System.out.println(p1 == p2);\n        // Our overridden equals() compares values\n        System.out.println(p1.equals(p2));\n    }\n}\n\nclass Person {\n    private String name;\n    private int age;\n    \n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n    \n    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) return true;\n        if (obj == null || getClass() != obj.getClass()) return false;\n        \n        Person person = (Person) obj;\n        return age == person.age && \n               name.equals(person.name);\n    }\n    \n    @Override\n    public int hashCode() {\n        return 31 * name.hashCode() + age;\n    }\n}"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "hashCode() and equals() Contract",
+      "question": "According to the hashCode() and equals() contract in Java, which statement is true?",
+      "options": {
+        "A": "If two objects are equal according to equals(), they must have different hashCode() values",
+        "B": "If two objects have the same hashCode() value, they must be equal according to equals()",
+        "C": "If two objects are equal according to equals(), they must have the same hashCode() value",
+        "D": "hashCode() and equals() methods are independent and have no contractual relationship"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "Fail-Fast vs Fail-Safe Iterators",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "1, 2, 3, 4, 5",
+        "B": "1, 2, 3, 4, 5, 6",
+        "C": "ConcurrentModificationException",
+        "D": "None of the above"
+      },
+      "correct_answer": "C",
+      "code_example": "import java.util.ArrayList;\nimport java.util.Iterator;\nimport java.util.List;\n\npublic class FailFastExample {\n    public static void main(String[] args) {\n        List<Integer> numbers = new ArrayList<>();\n        numbers.add(1);\n        numbers.add(2);\n        numbers.add(3);\n        numbers.add(4);\n        numbers.add(5);\n        \n        Iterator<Integer> iterator = numbers.iterator();\n        while (iterator.hasNext()) {\n            Integer number = iterator.next();\n            System.out.print(number + \", \");\n            \n            if (number == 3) {\n                // This will cause ConcurrentModificationException\n                numbers.add(6);\n            }\n        }\n    }\n}"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "ThreadLocal Variables",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Thread-0: 0\nThread-1: 0\nThread-2: 0",
+        "B": "Thread-0: 0\nThread-1: 1\nThread-2: 2",
+        "C": "Values will be random for each thread",
+        "D": "Compilation error: ThreadLocal cannot be initialized with a value"
+      },
+      "correct_answer": "B",
+      "code_example": "public class ThreadLocalExample {\n    private static final ThreadLocal<Integer> threadLocal = new ThreadLocal<Integer>() {\n        @Override\n        protected Integer initialValue() {\n            return 0;\n        }\n    };\n    \n    public static void main(String[] args) {\n        for (int i = 0; i < 3; i++) {\n            final int threadId = i;\n            new Thread(() -> {\n                threadLocal.set(threadId);\n                System.out.println(Thread.currentThread().getName() + \": \" + threadLocal.get());\n            }).start();\n        }\n    }\n}"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Customizing Auto-Configuration (@EnableAutoConfiguration)",
+      "question": "In Spring Boot, what is the purpose of @EnableAutoConfiguration?",
+      "options": {
+        "A": "To enable manual configuration only, disabling all automatic configuration",
+        "B": "To specify which configuration classes should be used",
+        "C": "To attempt to automatically configure Spring application based on the jar dependencies",
+        "D": "To configure Spring Security automatically"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "Thread Interruption Mechanism",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Thread running\nThread interrupted",
+        "B": "Thread running (repeated until manually stopped)",
+        "C": "Thread running\nInterruptedException caught",
+        "D": "No output, as the thread never starts"
+      },
+      "correct_answer": "C",
+      "code_example": "public class ThreadInterruptionExample {\n    public static void main(String[] args) {\n        Thread thread = new Thread(() -> {\n            try {\n                System.out.println(\"Thread running\");\n                Thread.sleep(10000); // Sleep for 10 seconds\n            } catch (InterruptedException e) {\n                System.out.println(\"InterruptedException caught\");\n            }\n        });\n        \n        thread.start();\n        \n        // Interrupt the thread after 1 second\n        try {\n            Thread.sleep(1000);\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n        \n        thread.interrupt();\n    }\n}"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "Secure REST APIs with Spring Security",
+      "question": "Which of the following is NOT a common way to secure REST APIs in Spring Security?",
+      "options": {
+        "A": "Using JWT (JSON Web Tokens) for authentication",
+        "B": "Using Basic Authentication with HTTPS",
+        "C": "Using OAuth2 with authorization server",
+        "D": "Using SSL/TLS encryption alone, without authentication"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the output of the following code that demonstrates a custom exception hierarchy?",
+      "options": {
+        "A": "DatabaseException: Connection failed | Caught in outer block",
+        "B": "DatabaseException: Connection failed | Caught in inner block",
+        "C": "SQLException: Connection failed | Caught in outer block",
+        "D": "SQLException: Connection failed | Caught in inner block"
+      },
+      "correct_answer": "B",
+      "code_example": "class ApplicationException extends Exception {\n    public ApplicationException(String message) {\n        super(message);\n    }\n}\n\nclass DatabaseException extends ApplicationException {\n    public DatabaseException(String message) {\n        super(message);\n    }\n}\n\nclass SQLException extends DatabaseException {\n    public SQLException(String message) {\n        super(message);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        try {\n            try {\n                throw new DatabaseException(\"Connection failed\");\n            } catch (DatabaseException e) {\n                System.out.print(e.getClass().getSimpleName() + \": \" + e.getMessage());\n                System.out.print(\" | Caught in inner block\");\n            }\n        } catch (ApplicationException e) {\n            System.out.print(e.getClass().getSimpleName() + \": \" + e.getMessage());\n            System.out.print(\" | Caught in outer block\");\n        }\n    }\n}"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a valid approach for performance optimization in Spring REST APIs?",
+      "options": {
+        "A": "Using @Cacheable annotation to cache method results",
+        "B": "Configuring GZip compression with CommonsRequestLoggingFilter",
+        "C": "Implementing HTTP/2 with server push capabilities",
+        "D": "Using ETag headers for conditional requests"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the hashCode() and equals() contract?",
+      "options": {
+        "A": "Contains student1: true\nContains student2: true\nSize of set: 1",
+        "B": "Contains student1: true\nContains student2: false\nSize of set: 2",
+        "C": "Contains student1: true\nContains student2: true\nSize of set: 2",
+        "D": "Contains student1: false\nContains student2: true\nSize of set: 1"
+      },
+      "correct_answer": "C",
+      "code_example": "import java.util.HashSet;\nimport java.util.Set;\n\nclass Student {\n    private int id;\n    private String name;\n    \n    public Student(int id, String name) {\n        this.id = id;\n        this.name = name;\n    }\n    \n    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) return true;\n        if (obj == null || getClass() != obj.getClass()) return false;\n        Student student = (Student) obj;\n        return id == student.id;\n    }\n    \n    // Note: hashCode is not properly overridden here\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Set<Student> students = new HashSet<>();\n        \n        Student student1 = new Student(1, \"John\");\n        Student student2 = new Student(1, \"John\");\n        \n        students.add(student1);\n        \n        System.out.println(\"Contains student1: \" + students.contains(student1));\n        System.out.println(\"Contains student2: \" + students.contains(student2));\n        System.out.println(\"Size of set: \" + students.size());\n    }\n}"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "When comparing Constructor Injection vs Setter Injection in Spring, which of the following statements is TRUE?",
+      "options": {
+        "A": "Setter injection always creates circular dependencies",
+        "B": "Constructor injection allows for easier unit testing with mock objects",
+        "C": "Setter injection is preferred for mandatory dependencies",
+        "D": "Constructor injection allows for changing dependencies at runtime"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates varargs usage?",
+      "options": {
+        "A": "[null]",
+        "B": "[]",
+        "C": "NullPointerException",
+        "D": "ArrayStoreException"
+      },
+      "correct_answer": "A",
+      "code_example": "import java.util.Arrays;\n\npublic class Main {\n    public static void main(String[] args) {\n        String[] result = concatenate(null);\n        System.out.println(Arrays.toString(result));\n    }\n    \n    public static String[] concatenate(String... strings) {\n        return strings;\n    }\n}"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates synchronized collections?",
+      "options": {
+        "A": "ConcurrentModificationException",
+        "B": "1 2 3 4 5",
+        "C": "1 2 3",
+        "D": "ArrayIndexOutOfBoundsException"
+      },
+      "correct_answer": "A",
+      "code_example": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> list = new ArrayList<>();\n        list.add(1);\n        list.add(2);\n        list.add(3);\n        \n        List<Integer> synchronizedList = Collections.synchronizedList(list);\n        \n        // Note: We're NOT synchronizing on the list during iteration\n        for (Integer number : synchronizedList) {\n            System.out.print(number + \" \");\n            synchronizedList.add(number + 3); // This will cause ConcurrentModificationException\n        }\n    }\n}"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "Which of the following statements about Dependency Injection and its role in OOP is FALSE?",
+      "options": {
+        "A": "Dependency Injection increases coupling between classes",
+        "B": "Dependency Injection helps in achieving the Dependency Inversion Principle",
+        "C": "Dependency Injection facilitates easier unit testing",
+        "D": "Dependency Injection promotes programming to interfaces"
+      },
+      "correct_answer": "A",
+      "code_example": null
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates WeakHashMap?",
+      "options": {
+        "A": "Size before GC: 1\nSize after GC: 1",
+        "B": "Size before GC: 1\nSize after GC: 0",
+        "C": "Size before GC: 0\nSize after GC: 0",
+        "D": "ReferenceQueueException"
+      },
+      "correct_answer": "B",
+      "code_example": "import java.util.WeakHashMap;\n\npublic class Main {\n    public static void main(String[] args) {\n        WeakHashMap<Key, String> map = new WeakHashMap<>();\n        \n        Key key = new Key(1);\n        map.put(key, \"WeakHashMap Example\");\n        \n        System.out.println(\"Size before GC: \" + map.size());\n        \n        key = null; // Remove strong reference to key\n        System.gc(); // Request garbage collection\n        \n        // Sleep to give GC time to run\n        try {\n            Thread.sleep(1000);\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n        \n        System.out.println(\"Size after GC: \" + map.size());\n    }\n}\n\nclass Key {\n    private int id;\n    \n    public Key(int id) {\n        this.id = id;\n    }\n    \n    @Override\n    public int hashCode() {\n        return id;\n    }\n    \n    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) return true;\n        if (obj == null || getClass() != obj.getClass()) return false;\n        Key other = (Key) obj;\n        return id == other.id;\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates HashMap's internal working?",
+      "options": {
+        "A": "key1 value: Value1\nkey2 value: Value2",
+        "B": "key1 value: Value1\nkey2 value: null",
+        "C": "key1 value: Value2\nkey2 value: Value2",
+        "D": "key1 value: null\nkey2 value: null"
+      },
+      "correct_answer": "B",
+      "code_example": "import java.util.HashMap;\n\nclass BrokenKey {\n    private String key;\n    \n    public BrokenKey(String key) {\n        this.key = key;\n    }\n    \n    @Override\n    public int hashCode() {\n        return key.hashCode();\n    }\n    \n    // equals method always returns false\n    @Override\n    public boolean equals(Object obj) {\n        return false;\n    }\n    \n    @Override\n    public String toString() {\n        return key;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        HashMap<BrokenKey, String> map = new HashMap<>();\n        \n        BrokenKey key1 = new BrokenKey(\"key1\");\n        BrokenKey key2 = new BrokenKey(\"key1\"); // Same hash code as key1\n        \n        map.put(key1, \"Value1\");\n        map.put(key2, \"Value2\");\n        \n        System.out.println(\"key1 value: \" + map.get(key1));\n        System.out.println(\"key2 value: \" + map.get(key2));\n    }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "Which of the following is the MOST effective way to implement global exception handling in a Spring REST API?",
+      "options": {
+        "A": "Using try-catch blocks in every controller method",
+        "B": "Creating a custom ErrorController that implements ErrorController interface",
+        "C": "Implementing @ExceptionHandler methods in every controller",
+        "D": "Using @ControllerAdvice with @ExceptionHandler methods"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates method hiding in Java?",
+      "options": {
+        "A": "Parent static method\nParent static method",
+        "B": "Parent static method\nChild static method",
+        "C": "Child static method\nChild static method",
+        "D": "Child static method\nParent static method"
+      },
+      "correct_answer": "B",
+      "code_example": "class Parent {\n    public static void staticMethod() {\n        System.out.println(\"Parent static method\");\n    }\n}\n\nclass Child extends Parent {\n    public static void staticMethod() {\n        System.out.println(\"Child static method\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Parent p = new Child();\n        p.staticMethod(); // Called through Parent reference\n        \n        Child c = new Child();\n        c.staticMethod(); // Called through Child reference\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the instanceof operator?",
+      "options": {
+        "A": "First instanceof check: true\nSecond instanceof check: true",
+        "B": "First instanceof check: true\nSecond instanceof check: false",
+        "C": "First instanceof check: false\nSecond instanceof check: true",
+        "D": "First instanceof check: false\nSecond instanceof check: false"
+      },
+      "correct_answer": "C",
+      "code_example": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> list = new ArrayList<>();\n        Object obj = list;\n        \n        // First check: is obj instanceof ArrayList<Integer>?\n        boolean firstCheck = obj instanceof ArrayList<?> && ((ArrayList<?>) obj).isEmpty();\n        System.out.println(\"First instanceof check: \" + firstCheck);\n        \n        // Second check: is null instanceof Object?\n        Object nullObj = null;\n        boolean secondCheck = nullObj instanceof Object;\n        System.out.println(\"Second instanceof check: \" + secondCheck);\n    }\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "Which statement about JWT authentication in Spring Security is FALSE?",
+      "options": {
+        "A": "JWTs eliminate the need for server-side session storage",
+        "B": "JWTs can be easily revoked before their expiration",
+        "C": "JWTs support signature verification to ensure integrity",
+        "D": "JWTs can contain custom claims with user information"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates exception propagation in Java?",
+      "options": {
+        "A": "ArithmeticException caught in method3",
+        "B": "ArithmeticException caught in method2",
+        "C": "ArithmeticException caught in method1",
+        "D": "ArithmeticException caught in main"
+      },
+      "correct_answer": "C",
+      "code_example": "public class Main {\n    public static void main(String[] args) {\n        try {\n            method1();\n        } catch (ArithmeticException e) {\n            System.out.println(\"ArithmeticException caught in main\");\n        }\n    }\n    \n    public static void method1() {\n        try {\n            method2();\n        } catch (ArithmeticException e) {\n            System.out.println(\"ArithmeticException caught in method1\");\n        }\n    }\n    \n    public static void method2() {\n        try {\n            method3();\n        } catch (ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"ArrayIndexOutOfBoundsException caught in method2\");\n        }\n    }\n    \n    public static void method3() {\n        int result = 10 / 0; // ArithmeticException\n    }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates dynamic proxies?",
+      "options": {
+        "A": "Before method execution\nHello, World!\nAfter method execution",
+        "B": "Proxy InvocationTargetException",
+        "C": "Hello, World!",
+        "D": "ClassCastException"
+      },
+      "correct_answer": "A",
+      "code_example": "import java.lang.reflect.InvocationHandler;\nimport java.lang.reflect.Method;\nimport java.lang.reflect.Proxy;\n\ninterface Greeting {\n    void sayHello(String name);\n}\n\nclass GreetingImpl implements Greeting {\n    @Override\n    public void sayHello(String name) {\n        System.out.println(\"Hello, \" + name + \"!\");\n    }\n}\n\nclass LoggingInvocationHandler implements InvocationHandler {\n    private final Object target;\n    \n    public LoggingInvocationHandler(Object target) {\n        this.target = target;\n    }\n    \n    @Override\n    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {\n        System.out.println(\"Before method execution\");\n        Object result = method.invoke(target, args);\n        System.out.println(\"After method execution\");\n        return result;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Greeting greeting = new GreetingImpl();\n        Greeting proxy = (Greeting) Proxy.newProxyInstance(\n            greeting.getClass().getClassLoader(),\n            greeting.getClass().getInterfaces(),\n            new LoggingInvocationHandler(greeting)\n        );\n        \n        proxy.sayHello(\"World\");\n    }\n}"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "When using SLF4J for logging exceptions, which approach is considered BEST practice?",
+      "options": {
+        "A": "logger.error(\"An error occurred: \" + exception.getMessage());",
+        "B": "logger.error(\"An error occurred\", exception);",
+        "C": "logger.error(exception.toString());",
+        "D": "logger.error(exception.getMessage());"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    }
+  ]
+}
