@@ -1,0 +1,608 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "10.5",
+        "B": "10",
+        "C": "10.0",
+        "D": "Compilation Error"
+      },
+      "correct_answer": "B",
+      "code_example": "double d = 10.5;\nint i = (int)d;\nSystem.out.println(i);"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which statement about the 'finally' block is correct?",
+      "options": {
+        "A": "It always executes, even if there is a return statement in the try block",
+        "B": "It only executes if an exception is caught",
+        "C": "It doesn't execute if System.exit() is called in the try block",
+        "D": "It executes before the catch block"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the difference between authentication and authorization?",
+      "options": {
+        "A": "Authentication verifies permissions, while authorization verifies identity",
+        "B": "Authentication is the process of verifying who a user is, while authorization is the process of verifying what they have access to",
+        "C": "Authentication and authorization are synonyms in security contexts",
+        "D": "Authentication happens after authorization in the security flow"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "ArithmeticException caught",
+        "B": "Finally block executed",
+        "C": "ArithmeticException caught\nFinally block executed",
+        "D": "No output, the program crashes"
+      },
+      "correct_answer": "C",
+      "code_example": "public class ExceptionDemo {\n    public static void main(String[] args) {\n        try {\n            int result = 5 / 0;\n        } catch (ArithmeticException e) {\n            System.out.println(\"ArithmeticException caught\");\n        } finally {\n            System.out.println(\"Finally block executed\");\n        }\n    }\n}"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Array index out of bounds",
+        "B": "Arithmetic Exception",
+        "C": "Other exception caught",
+        "D": "No output"
+      },
+      "correct_answer": "A",
+      "code_example": "public class MultipleCatchDemo {\n    public static void main(String[] args) {\n        int[] arr = new int[5];\n        try {\n            arr[10] = 50/0;\n        } catch (ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"Array index out of bounds\");\n        } catch (ArithmeticException e) {\n            System.out.println(\"Arithmetic Exception\");\n        } catch (Exception e) {\n            System.out.println(\"Other exception caught\");\n        }\n    }\n}"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a valid way to create a thread in Java?",
+      "options": {
+        "A": "Extending the Thread class",
+        "B": "Implementing the Runnable interface",
+        "C": "Using Callable with ExecutorService",
+        "D": "Directly instantiating a Thread with new Thread()"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "options": {
+        "A": "Car",
+        "B": "Vehicle",
+        "C": "null",
+        "D": "Compilation Error"
+      },
+      "correct_answer": "A",
+      "code_example": "class Vehicle {\n    String type = \"Vehicle\";\n}\n\nclass Car extends Vehicle {\n    String type = \"Car\";\n    \n    public void printType() {\n        System.out.println(this.type);\n    }\n}\n\npublic class ThisDemo {\n    public static void main(String[] args) {\n        Car car = new Car();\n        car.printType();\n    }\n}"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a pillar of Object-Oriented Programming?",
+      "options": {
+        "A": "Encapsulation",
+        "B": "Inheritance",
+        "C": "Polymorphism",
+        "D": "Compilation"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the correct way to access command line arguments in the main method?",
+      "options": {
+        "A": "args[0] gives the first command line argument",
+        "B": "args[0] gives the name of the program",
+        "C": "args[-1] gives the last command line argument",
+        "D": "args.length gives the name of the program"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the difference between @RequestMapping and @GetMapping in Spring?",
+      "options": {
+        "A": "There is no difference, they are synonyms",
+        "B": "@RequestMapping can be used for any HTTP method, while @GetMapping is specific to GET requests",
+        "C": "@GetMapping can be used for any HTTP method, while @RequestMapping is specific to GET requests",
+        "D": "@GetMapping can only be used at the class level, while @RequestMapping can be used at both class and method levels"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "java.lang.NullPointerException",
+        "B": "No output, the program completes successfully",
+        "C": "null",
+        "D": "Compilation Error"
+      },
+      "correct_answer": "A",
+      "code_example": "public class NPEDemo {\n    public static void main(String[] args) {\n        String str = null;\n        try {\n            System.out.println(str.length());\n        } catch (Exception e) {\n            System.out.println(e);\n        }\n    }\n}"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the state of a thread immediately after calling its start() method?",
+      "options": {
+        "A": "NEW",
+        "B": "RUNNABLE",
+        "C": "RUNNING",
+        "D": "READY"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "options": {
+        "A": "Received number: hello",
+        "B": "Invalid arguments",
+        "C": "ArrayIndexOutOfBoundsException",
+        "D": "Compilation Error"
+      },
+      "correct_answer": "B",
+      "code_example": "public class CommandLineArgs {\n    public static void main(String[] args) {\n        try {\n            int number = Integer.parseInt(args[0]);\n            System.out.println(\"Received number: \" + number);\n        } catch (NumberFormatException e) {\n            System.out.println(\"Invalid arguments\");\n        } catch (ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"No arguments provided\");\n        }\n    }\n}"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "Which of the following is true about Java Beans?",
+      "options": {
+        "A": "Java Beans must have a non-argument constructor",
+        "B": "Java Beans must be serializable, have a no-arg constructor, and use getters and setters for properties",
+        "C": "Java Beans are the same as POJOs",
+        "D": "Java Beans cannot have public fields"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What is the main difference between BeanFactory and ApplicationContext in Spring?",
+      "options": {
+        "A": "BeanFactory loads beans eagerly, while ApplicationContext loads beans lazily",
+        "B": "ApplicationContext is a superset of BeanFactory with more enterprise-specific functionality",
+        "C": "BeanFactory supports annotations, while ApplicationContext doesn't",
+        "D": "There is no difference, they are just alternative names for the same interface"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "options": {
+        "A": "int",
+        "B": "Integer",
+        "C": "Compilation Error",
+        "D": "int\nInteger"
+      },
+      "correct_answer": "D",
+      "code_example": "public class TypeDemo {\n    public static void main(String[] args) {\n        int i = 10;\n        Integer j = 20;\n        System.out.println(((Object)i).getClass().getSimpleName());\n        System.out.println(j.getClass().getSimpleName());\n    }\n}"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "true",
+        "B": "false",
+        "C": "Compilation Error",
+        "D": "Runtime Exception"
+      },
+      "correct_answer": "B",
+      "code_example": "import java.util.HashMap;\n\npublic class HashMapDemo {\n    static class Key {\n        private int id;\n        \n        public Key(int id) {\n            this.id = id;\n        }\n        \n        // No override for equals() and hashCode()\n    }\n    \n    public static void main(String[] args) {\n        HashMap<Key, String> map = new HashMap<>();\n        Key key1 = new Key(1);\n        Key key2 = new Key(1);\n        \n        map.put(key1, \"Value\");\n        System.out.println(map.containsKey(key2));\n    }\n}"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Exception: java.lang.CloneNotSupportedException",
+        "B": "Original: Person{name='John'}\nClone: Person{name='John'}",
+        "C": "Original: Person{name='John'}\nClone: Person{name='Jane'}",
+        "D": "Compilation Error"
+      },
+      "correct_answer": "A",
+      "code_example": "class Person {\n    String name;\n    \n    public Person(String name) {\n        this.name = name;\n    }\n    \n    @Override\n    public String toString() {\n        return \"Person{name='\" + name + \"'}\";\n    }\n}\n\npublic class CloneDemo {\n    public static void main(String[] args) {\n        try {\n            Person original = new Person(\"John\");\n            Person clone = (Person) original.clone();\n            \n            System.out.println(\"Original: \" + original);\n            System.out.println(\"Clone: \" + clone);\n        } catch (Exception e) {\n            System.out.println(\"Exception: \" + e);\n        }\n    }\n}"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the output of the following code?",
+      "options": {
+        "A": "Child Method",
+        "B": "Parent Method",
+        "C": "Compilation Error",
+        "D": "Runtime Exception"
+      },
+      "correct_answer": "A",
+      "code_example": "class Parent {\n    public static void display() {\n        System.out.println(\"Parent Method\");\n    }\n}\n\nclass Child extends Parent {\n    public static void display() {\n        System.out.println(\"Child Method\");\n    }\n}\n\npublic class MethodHidingDemo {\n    public static void main(String[] args) {\n        Child.display();\n    }\n}"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Inner try block\nFinally block of inner try",
+        "B": "Inner try block\nFinally block of inner try\nException caught: / by zero\nFinally block of outer try",
+        "C": "Inner try block\nException caught: / by zero\nFinally block of outer try",
+        "D": "Exception caught: / by zero\nFinally block of outer try"
+      },
+      "correct_answer": "B",
+      "code_example": "public class NestedTryDemo {\n    public static void main(String[] args) {\n        try {\n            try {\n                System.out.println(\"Inner try block\");\n                int result = 10 / 0;\n            } finally {\n                System.out.println(\"Finally block of inner try\");\n            }\n        } catch (Exception e) {\n            System.out.println(\"Exception caught: \" + e.getMessage());\n        } finally {\n            System.out.println(\"Finally block of outer try\");\n        }\n    }\n}"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What is the output of the following code?",
+      "options": {
+        "A": "SuperClass constructor\nSubClass constructor",
+        "B": "SubClass constructor\nSuperClass constructor",
+        "C": "SuperClass constructor",
+        "D": "Compilation Error"
+      },
+      "correct_answer": "A",
+      "code_example": "class SuperClass {\n    SuperClass() {\n        System.out.println(\"SuperClass constructor\");\n    }\n}\n\nclass SubClass extends SuperClass {\n    SubClass() {\n        super();\n        System.out.println(\"SubClass constructor\");\n    }\n}\n\npublic class SuperDemo {\n    public static void main(String[] args) {\n        SubClass obj = new SubClass();\n    }\n}"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Thread interrupted!",
+        "B": "Thread completed successfully",
+        "C": "No output",
+        "D": "InterruptedException: sleep interrupted"
+      },
+      "correct_answer": "A",
+      "code_example": "public class ThreadInterruptDemo {\n    public static void main(String[] args) {\n        Thread thread = new Thread(() -> {\n            try {\n                for (int i = 0; i < 5; i++) {\n                    Thread.sleep(1000);\n                    if (Thread.interrupted()) {\n                        System.out.println(\"Thread interrupted!\");\n                        return;\n                    }\n                }\n                System.out.println(\"Thread completed successfully\");\n            } catch (InterruptedException e) {\n                System.out.println(\"InterruptedException: \" + e.getMessage());\n            }\n        });\n        \n        thread.start();\n        try {\n            Thread.sleep(2000);\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n        thread.interrupt();\n    }\n}"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "true\ntrue",
+        "B": "false\nfalse",
+        "C": "true\nfalse",
+        "D": "false\ntrue"
+      },
+      "correct_answer": "C",
+      "code_example": "class Person {\n    private String name;\n    private int age;\n    \n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n    \n    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) return true;\n        if (obj == null || getClass() != obj.getClass()) return false;\n        Person person = (Person) obj;\n        return age == person.age && name.equals(person.name);\n    }\n    \n    // hashCode not overridden\n}\n\npublic class EqualsHashCodeDemo {\n    public static void main(String[] args) {\n        Person p1 = new Person(\"John\", 30);\n        Person p2 = new Person(\"John\", 30);\n        \n        System.out.println(p1.equals(p2));\n        System.out.println(p1.hashCode() == p2.hashCode());\n    }\n}"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Callable Future",
+        "B": "Future result: 42",
+        "C": "Exception in thread \"main\" java.util.concurrent.ExecutionException",
+        "D": "Compilation Error"
+      },
+      "correct_answer": "B",
+      "code_example": "import java.util.concurrent.*;\n\npublic class CallableFutureDemo {\n    public static void main(String[] args) throws ExecutionException, InterruptedException {\n        ExecutorService executor = Executors.newSingleThreadExecutor();\n        \n        Callable<Integer> callable = () -> {\n            // Simulate some work\n            Thread.sleep(1000);\n            return 42;\n        };\n        \n        Future<Integer> future = executor.submit(callable);\n        \n        System.out.println(\"Future result: \" + future.get());\n        \n        executor.shutdown();\n    }\n}"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Caught in handler: 404 - Resource not found",
+        "B": "Caught in controller: 404 - Resource not found",
+        "C": "No output, the program crashes",
+        "D": "Compilation Error"
+      },
+      "correct_answer": "A",
+      "code_example": "import org.springframework.http.HttpStatus;\nimport org.springframework.web.bind.annotation.*;\n\n@RestController\npublic class ResourceController {\n    \n    @GetMapping(\"/resource/{id}\")\n    public String getResource(@PathVariable String id) {\n        if (id.equals(\"404\")) {\n            throw new ResourceNotFoundException(\"Resource not found\");\n        }\n        return \"Resource found\";\n    }\n    \n    @ExceptionHandler(ResourceNotFoundException.class)\n    public String handleException(ResourceNotFoundException ex) {\n        System.out.println(\"Caught in controller: \" + ex.getMessage());\n        throw ex;\n    }\n}\n\n@ControllerAdvice\nclass GlobalExceptionHandler {\n    \n    @ExceptionHandler(ResourceNotFoundException.class)\n    @ResponseStatus(HttpStatus.NOT_FOUND)\n    public String handleException(ResourceNotFoundException ex) {\n        System.out.println(\"Caught in handler: \" + ex.getStatus() + \" - \" + ex.getMessage());\n        return \"error\";\n    }\n}\n\nclass ResourceNotFoundException extends RuntimeException {\n    private int status = 404;\n    \n    public ResourceNotFoundException(String message) {\n        super(message);\n    }\n    \n    public int getStatus() {\n        return status;\n    }\n}"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What is the main difference between an abstract class and an interface in Java?",
+      "options": {
+        "A": "Abstract classes can have fields with any access modifier, while interfaces can only have public static final fields",
+        "B": "Abstract classes cannot have constructors, while interfaces can",
+        "C": "A class can implement multiple abstract classes but only one interface",
+        "D": "Abstract classes cannot have method implementations, while interfaces can have default methods"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "Which of the following is true about the stack trace in Java?",
+      "options": {
+        "A": "printStackTrace() prints to System.in",
+        "B": "getMessage() returns the detailed cause of the exception",
+        "C": "toString() includes the exception type and the detail message but not the stack trace",
+        "D": "getStackTrace() cannot be used to programmatically access the stack trace elements"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is the key difference between constructor injection and setter injection in Spring?",
+      "options": {
+        "A": "Constructor injection helps in creating immutable objects, while setter injection allows for optional dependencies",
+        "B": "Constructor injection uses @Autowired, while setter injection uses @Inject",
+        "C": "Constructor injection is supported in newer versions of Spring, while setter injection is deprecated",
+        "D": "Constructor injection can only be used with XML configuration, while setter injection works with annotations"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a typical cause of deadlock in multithreaded Java applications?",
+      "options": {
+        "A": "Nested synchronized blocks acquiring locks in different orders",
+        "B": "Using thread pooling with ExecutorService",
+        "C": "Thread holding a lock indefinitely due to infinite loop",
+        "D": "Two threads each waiting for a resource held by the other"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Property Value: production",
+        "B": "Property Value: development",
+        "C": "Property Value: ${env.mode}",
+        "D": "No output, throws PropertySourcesException"
+      },
+      "correct_answer": "B",
+      "code_example": "import org.springframework.beans.factory.annotation.Value;\nimport org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\nimport org.springframework.context.annotation.PropertySource;\nimport org.springframework.context.support.PropertySourcesPlaceholderConfigurer;\n\n@Configuration\n@PropertySource(\"classpath:application.properties\")\npublic class AppConfig {\n\n    @Value(\"${env.mode:development}\")\n    private String environmentMode;\n    \n    @Bean\n    public PropertySourcesPlaceholderConfigurer propertyConfigurer() {\n        return new PropertySourcesPlaceholderConfigurer();\n    }\n    \n    @Bean\n    public EnvironmentService environmentService() {\n        return new EnvironmentService(environmentMode);\n    }\n}\n\nclass EnvironmentService {\n    private String mode;\n    \n    public EnvironmentService(String mode) {\n        this.mode = mode;\n        System.out.println(\"Property Value: \" + mode);\n    }\n}\n\n// Assume application.properties is empty"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is the difference between OAuth 2.0 and OpenID Connect?",
+      "options": {
+        "A": "OAuth 2.0 is for authentication, while OpenID Connect is for authorization",
+        "B": "OAuth 2.0 is for authorization, while OpenID Connect adds an identity layer on top of OAuth 2.0",
+        "C": "OAuth 2.0 uses JWT tokens, while OpenID Connect uses opaque tokens",
+        "D": "OAuth 2.0 is a newer version that replaced OpenID Connect"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "catch: java.lang.RuntimeException: / by zero",
+        "B": "catch: java.lang.RuntimeException: / by zero\nfinally!",
+        "C": "catch: java.lang.RuntimeException: / by zero\nfinally!\nmain completed",
+        "D": "finally!\nmain completed"
+      },
+      "correct_answer": "C",
+      "code_example": "public class ExceptionStackTrace {\n    public static void main(String[] args) {\n        try {\n            method1();\n        } catch (RuntimeException e) {\n            System.out.println(\"catch: \" + e);\n        } finally {\n            System.out.println(\"finally!\");\n        }\n        System.out.println(\"main completed\");\n    }\n    \n    public static void method1() {\n        method2();\n    }\n    \n    public static void method2() {\n        method3();\n    }\n    \n    public static void method3() {\n        throw new RuntimeException(\"/ by zero\");\n    }\n}"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which of the following correctly describes the OAuth2 scope concept?",
+      "options": {
+        "A": "OAuth2 scopes define which servers an application can connect to",
+        "B": "OAuth2 scopes define which resources a token has been granted access to",
+        "C": "OAuth2 scopes determine the encryption level of the authentication protocol",
+        "D": "OAuth2 scopes define the maximum duration a token can remain valid"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following ThreadLocal code?",
+      "options": {
+        "A": "Thread-A: null, Thread-B: 10",
+        "B": "Thread-A: 5, Thread-B: 10",
+        "C": "Thread-A: 5, Thread-B: 5",
+        "D": "Thread-A: 10, Thread-B: 10"
+      },
+      "correct_answer": "A",
+      "code_example": "public class ThreadLocalExample {\n    private static ThreadLocal<Integer> threadLocalValue = new ThreadLocal<>();\n    \n    public static void main(String[] args) throws InterruptedException {\n        Thread threadA = new Thread(() -> {\n            threadLocalValue.set(5);\n            try {\n                Thread.sleep(1000);\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n            System.out.println(\"Thread-A: \" + threadLocalValue.get());\n        });\n        \n        Thread threadB = new Thread(() -> {\n            try {\n                Thread.sleep(500);\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n            threadLocalValue.set(10);\n            System.out.println(\"Thread-B: \" + threadLocalValue.get());\n        });\n        \n        threadA.start();\n        threadB.start();\n        \n        threadA.join();\n        threadB.join();\n    }\n}"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "When using @ControllerAdvice for exception handling in Spring, which of the following statements is true?",
+      "options": {
+        "A": "Exception handlers in a @ControllerAdvice class only apply to controllers in the same package",
+        "B": "A @ControllerAdvice class can only handle one type of exception at a time",
+        "C": "@ControllerAdvice methods must return ResponseEntity objects",
+        "D": "@ControllerAdvice allows for global exception handling across all controllers"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code when the application starts with the system property 'app.version' set to '2.0'?",
+      "options": {
+        "A": "Version: 1.0",
+        "B": "Version: 2.0",
+        "C": "Version: ${app.version}",
+        "D": "A PropertySourcesPlaceholderConfigurer bean must be defined error"
+      },
+      "correct_answer": "B",
+      "code_example": "@Configuration\n@PropertySource(\"classpath:application.properties\")\npublic class PropertySourceExample {\n\n    @Value(\"${app.version:1.0}\")\n    private String version;\n    \n    @PostConstruct\n    public void init() {\n        System.out.println(\"Version: \" + version);\n    }\n    \n    public static void main(String[] args) {\n        System.setProperty(\"app.version\", \"2.0\");\n        AnnotationConfigApplicationContext context = \n            new AnnotationConfigApplicationContext(PropertySourceExample.class);\n        context.close();\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What is the result of the code below?",
+      "options": {
+        "A": "Original: name=Alice, address=123 Main St, Modified: name=Bob, address=456 Oak St",
+        "B": "Original: name=Alice, address=123 Main St, Modified: name=Alice, address=123 Main St",
+        "C": "Original: name=Alice, address=123 Main St, Modified: name=Bob, address=123 Main St",
+        "D": "Original: name=Bob, address=456 Oak St, Modified: name=Bob, address=456 Oak St"
+      },
+      "correct_answer": "C",
+      "code_example": "class Address {\n    private String street;\n    \n    public Address(String street) {\n        this.street = street;\n    }\n    \n    public String getStreet() {\n        return street;\n    }\n    \n    public void setStreet(String street) {\n        this.street = street;\n    }\n    \n    @Override\n    public String toString() {\n        return street;\n    }\n}\n\nclass Person implements Cloneable {\n    private String name;\n    private Address address;\n    \n    public Person(String name, Address address) {\n        this.name = name;\n        this.address = address;\n    }\n    \n    @Override\n    public Object clone() throws CloneNotSupportedException {\n        return super.clone();\n    }\n    \n    public String getName() {\n        return name;\n    }\n    \n    public void setName(String name) {\n        this.name = name;\n    }\n    \n    public Address getAddress() {\n        return address;\n    }\n    \n    @Override\n    public String toString() {\n        return \"name=\" + name + \", address=\" + address;\n    }\n}\n\npublic class ShallowCopyExample {\n    public static void main(String[] args) throws CloneNotSupportedException {\n        Person original = new Person(\"Alice\", new Address(\"123 Main St\"));\n        Person clone = (Person) original.clone();\n        \n        clone.setName(\"Bob\");\n        clone.getAddress().setStreet(\"456 Oak St\");\n        \n        System.out.println(\"Original: \" + original + \", Modified: \" + clone);\n    }\n}"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT an embedded server supported by Spring Boot?",
+      "options": {
+        "A": "Tomcat",
+        "B": "Jetty",
+        "C": "Undertow",
+        "D": "WebSphere"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output when the following Spring Boot application is run with the command 'java -jar app.jar --spring.profiles.active=prod'?",
+      "options": {
+        "A": "Using profile: dev",
+        "B": "Using profile: prod",
+        "C": "Using profile: default",
+        "D": "Profile not found exception"
+      },
+      "correct_answer": "B",
+      "code_example": "@SpringBootApplication\npublic class ProfilesExample {\n\n    public static void main(String[] args) {\n        SpringApplication.run(ProfilesExample.class, args);\n    }\n}\n\n@Component\n@Profile(\"dev\")\nclass DevProfileBean {\n    @PostConstruct\n    public void init() {\n        System.out.println(\"Using profile: dev\");\n    }\n}\n\n@Component\n@Profile(\"prod\")\nclass ProdProfileBean {\n    @PostConstruct\n    public void init() {\n        System.out.println(\"Using profile: prod\");\n    }\n}\n\n@Component\n@Profile(\"default\")\nclass DefaultProfileBean {\n    @PostConstruct\n    public void init() {\n        System.out.println(\"Using profile: default\");\n    }\n}"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code involving the volatile keyword?",
+      "options": {
+        "A": "The program terminates immediately",
+        "B": "The program prints 'Thread is still running' indefinitely",
+        "C": "The program prints 'Thread is still running' a few times, then 'Thread stopped'",
+        "D": "The program waits indefinitely and prints nothing"
+      },
+      "correct_answer": "C",
+      "code_example": "public class VolatileExample {\n    private static volatile boolean flag = true;\n    \n    public static void main(String[] args) throws InterruptedException {\n        Thread backgroundThread = new Thread(() -> {\n            while (flag) {\n                System.out.println(\"Thread is still running\");\n                try {\n                    Thread.sleep(100);\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n            System.out.println(\"Thread stopped\");\n        });\n        \n        backgroundThread.start();\n        Thread.sleep(300);\n        flag = false;\n        backgroundThread.join();\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What is the output of the instanceof operator code below?",
+      "options": {
+        "A": "null is a String: false\nEmpty string is a String: true\n\"Hello\" is a String: true",
+        "B": "null is a String: false\nEmpty string is a String: false\n\"Hello\" is a String: true",
+        "C": "null is a String: NullPointerException",
+        "D": "null is a String: true\nEmpty string is a String: true\n\"Hello\" is a String: true"
+      },
+      "correct_answer": "A",
+      "code_example": "public class InstanceofExample {\n    public static void main(String[] args) {\n        String nullStr = null;\n        String emptyStr = \"\";\n        String helloStr = \"Hello\";\n        \n        System.out.println(\"null is a String: \" + (nullStr instanceof String));\n        System.out.println(\"Empty string is a String: \" + (emptyStr instanceof String));\n        System.out.println(\"\\\"Hello\\\" is a String: \" + (helloStr instanceof String));\n    }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "Which of the following statements about Java memory areas is incorrect?",
+      "options": {
+        "A": "The Method Area stores class structures like runtime constants and field information",
+        "B": "The Stack contains primitive values and references to objects",
+        "C": "The Heap is used for dynamic memory allocation of objects",
+        "D": "The PC Register contains the physical memory address of the executed instruction"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code related to interfaces and abstract classes?",
+      "options": {
+        "A": "Interface method called\nAbstract class method called\nConcrete class method called",
+        "B": "Abstract class method called\nInterface method called\nConcrete class method called",
+        "C": "Concrete class method called\nInterface method called\nAbstract class method called",
+        "D": "Compilation error: abstract methods cannot have bodies"
+      },
+      "correct_answer": "A",
+      "code_example": "interface MyInterface {\n    default void method() {\n        System.out.println(\"Interface method called\");\n    }\n}\n\nabstract class MyAbstractClass implements MyInterface {\n    @Override\n    public void method() {\n        MyInterface.super.method();\n        System.out.println(\"Abstract class method called\");\n    }\n    \n    public abstract void abstractMethod();\n}\n\nclass ConcreteClass extends MyAbstractClass {\n    @Override\n    public void abstractMethod() {\n        // Implementation\n    }\n    \n    @Override\n    public void method() {\n        super.method();\n        System.out.println(\"Concrete class method called\");\n    }\n}\n\npublic class InterfaceVsAbstractExample {\n    public static void main(String[] args) {\n        ConcreteClass instance = new ConcreteClass();\n        instance.method();\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which statement about the JVM (Java Virtual Machine) internals is NOT correct?",
+      "options": {
+        "A": "The Class Loader Subsystem is responsible for loading, linking, and initializing classes",
+        "B": "The Method Area contains class-level data such as static variables and method bytecode",
+        "C": "Garbage Collection runs in the heap area to reclaim memory from objects no longer in use",
+        "D": "Stack memory is shared among all threads in a JVM instance"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following CompletableFuture code?",
+      "options": {
+        "A": "Step 1: Processing data\nStep 2: Transforming data\nFinal result: PROCESSED DATA",
+        "B": "Step 2: Transforming data\nStep 1: Processing data\nFinal result: PROCESSED DATA",
+        "C": "Final result: PROCESSED DATA\nStep 1: Processing data\nStep 2: Transforming data",
+        "D": "The code will throw a CompletionException"
+      },
+      "correct_answer": "B",
+      "code_example": "import java.util.concurrent.CompletableFuture;\n\npublic class CompletableFutureExample {\n    public static void main(String[] args) throws Exception {\n        CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {\n            try {\n                Thread.sleep(100); // Simulate longer processing\n                System.out.println(\"Step 1: Processing data\");\n                return \"processed data\";\n            } catch (InterruptedException e) {\n                throw new RuntimeException(e);\n            }\n        }).thenApply(data -> {\n            System.out.println(\"Step 2: Transforming data\");\n            return data.toUpperCase();\n        });\n        \n        System.out.println(\"Final result: \" + future.get());\n    }\n}"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "When configuring a Spring Boot application with multiple externalized configuration sources, which option has the highest precedence?",
+      "options": {
+        "A": "Default properties specified using SpringApplication.setDefaultProperties",
+        "B": "Properties in application.properties or application.yml files in the classpath",
+        "C": "Command line arguments passed to the Spring Boot application",
+        "D": "Profile-specific properties in application-{profile}.properties files"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will the following code using the super keyword output?",
+      "options": {
+        "A": "Parent calculate: 10\nChild calculate: 20",
+        "B": "Child calculate: 20\nParent calculate: 10",
+        "C": "Stack overflow error due to infinite recursion",
+        "D": "Parent calculate: 20\nChild calculate: 20"
+      },
+      "correct_answer": "A",
+      "code_example": "class Parent {\n    protected int value = 10;\n    \n    public void calculate() {\n        System.out.println(\"Parent calculate: \" + value);\n    }\n}\n\nclass Child extends Parent {\n    protected int value = 20;\n    \n    @Override\n    public void calculate() {\n        super.calculate();\n        System.out.println(\"Child calculate: \" + value);\n    }\n}\n\npublic class SuperKeywordExample {\n    public static void main(String[] args) {\n        Child child = new Child();\n        child.calculate();\n    }\n}"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will happen when the following code is executed?",
+      "options": {
+        "A": "It will print 'Exception in method1', 'Exception in method2', 'Exception in method3'",
+        "B": "It will print 'Exception in method3' only",
+        "C": "It will throw an uncaught exception and terminate",
+        "D": "It will print 'Exception in method1' only"
+      },
+      "correct_answer": "B",
+      "code_example": "public class ExceptionPropagationExample {\n    public static void main(String[] args) {\n        try {\n            method1();\n        } catch (Exception e) {\n            System.out.println(\"Exception in method3\");\n        }\n    }\n    \n    static void method1() throws Exception {\n        try {\n            method2();\n        } catch (NullPointerException e) {\n            System.out.println(\"Exception in method1\");\n        }\n    }\n    \n    static void method2() throws Exception {\n        try {\n            method3();\n        } catch (ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"Exception in method2\");\n        }\n    }\n    \n    static void method3() throws Exception {\n        throw new Exception(\"Custom exception\");\n    }\n}"
+    }
+  ]
+}
