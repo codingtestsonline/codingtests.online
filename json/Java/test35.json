@@ -1,0 +1,607 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is the main purpose of the @SpringBootApplication annotation?",
+      "options": {
+        "A": "It only enables Spring MVC",
+        "B": "It indicates the main method that will run the application",
+        "C": "It combines @Configuration, @EnableAutoConfiguration, and @ComponentScan",
+        "D": "It is used to inject dependencies"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "class CustomException extends Exception {\n    public CustomException(String message) {\n        super(message);\n    }\n}\n\npublic class ExceptionTest {\n    public static void main(String[] args) {\n        try {\n            throw new CustomException(\"Custom error\");\n        } catch (CustomException e) {\n            System.out.println(e.getMessage());\n        } catch (Exception e) {\n            System.out.println(\"Generic error\");\n        }\n    }\n}",
+      "options": {
+        "A": "Custom error",
+        "B": "Generic error",
+        "C": "Compilation error: exception CustomException has already been caught",
+        "D": "No output"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "Which of the following statements about method overloading is correct?",
+      "options": {
+        "A": "Overloaded methods must have different return types",
+        "B": "Overloaded methods must have different parameter types or number of parameters",
+        "C": "Overloaded methods cannot be in the same class",
+        "D": "Method overloading is a type of runtime polymorphism"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is the primary difference between @RequestMapping and @GetMapping?",
+      "options": {
+        "A": "@RequestMapping can only handle POST requests while @GetMapping handles GET requests",
+        "B": "@GetMapping is a specialized version of @RequestMapping that specifically handles HTTP GET requests",
+        "C": "@RequestMapping can only be applied at class level while @GetMapping can be applied at method level",
+        "D": "@GetMapping is deprecated in newer versions of Spring"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "import java.util.ArrayList;\nimport java.util.LinkedList;\nimport java.util.List;\n\npublic class ListPerformance {\n    public static void main(String[] args) {\n        List<Integer> arrayList = new ArrayList<>();\n        List<Integer> linkedList = new LinkedList<>();\n        \n        // Add elements\n        long startTime = System.nanoTime();\n        for (int i = 0; i < 100000; i++) {\n            arrayList.add(0, i);\n        }\n        long arrayListTime = System.nanoTime() - startTime;\n        \n        startTime = System.nanoTime();\n        for (int i = 0; i < 100000; i++) {\n            linkedList.add(0, i);\n        }\n        long linkedListTime = System.nanoTime() - startTime;\n        \n        System.out.println(linkedListTime < arrayListTime ? \"LinkedList faster\" : \"ArrayList faster\");\n    }\n}",
+      "options": {
+        "A": "ArrayList faster",
+        "B": "LinkedList faster",
+        "C": "Both have equal performance",
+        "D": "Compilation error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which Spring Boot starter would you use to include Spring Web MVC in your project?",
+      "options": {
+        "A": "spring-boot-starter-mvc",
+        "B": "spring-boot-starter-web",
+        "C": "spring-boot-starter-webmvc",
+        "D": "spring-boot-starter-webapp"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT one of the four pillars of Object-Oriented Programming?",
+      "options": {
+        "A": "Encapsulation",
+        "B": "Inheritance",
+        "C": "Instantiation",
+        "D": "Polymorphism"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "code_example": "public class StaticTest {\n    static int x = 10;\n    \n    static {\n        x += 5;\n    }\n    \n    static void updateX() {\n        x *= 2;\n    }\n    \n    public static void main(String[] args) {\n        StaticTest t1 = new StaticTest();\n        StaticTest t2 = new StaticTest();\n        t1.updateX();\n        System.out.println(t2.x);\n    }\n}",
+      "options": {
+        "A": "10",
+        "B": "15",
+        "C": "20",
+        "D": "30"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the main difference between ApplicationContext and BeanFactory in Spring?",
+      "options": {
+        "A": "BeanFactory is the most advanced implementation while ApplicationContext is basic",
+        "B": "ApplicationContext is a sub-interface of BeanFactory with additional enterprise-specific functionality",
+        "C": "BeanFactory loads beans lazily while ApplicationContext always loads beans eagerly",
+        "D": "ApplicationContext can handle XML configurations while BeanFactory cannot"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class ThreadStates {\n    public static void main(String[] args) {\n        Thread thread = new Thread(() -> {\n            try {\n                Thread.sleep(1000);\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n        });\n        \n        System.out.println(thread.getState());\n        thread.start();\n        System.out.println(thread.getState());\n        try {\n            Thread.sleep(100);\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n        System.out.println(thread.getState());\n    }\n}",
+      "options": {
+        "A": "NEW, RUNNABLE, TIMED_WAITING",
+        "B": "NEW, RUNNABLE, TERMINATED",
+        "C": "RUNNABLE, RUNNABLE, TIMED_WAITING",
+        "D": "NEW, RUNNING, WAITING"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What is the primary purpose of ResponseEntity in Spring?",
+      "options": {
+        "A": "To validate incoming request data",
+        "B": "To handle database transactions",
+        "C": "To represent the entire HTTP response including headers, body, and status code",
+        "D": "To map request parameters to Java objects"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a key feature of Spring Boot?",
+      "options": {
+        "A": "Auto-configuration",
+        "B": "Standalone applications",
+        "C": "Opinionated defaults",
+        "D": "Manual XML configuration required for basic setup"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Person {\n    private String name;\n    private int age;\n    \n    // Default constructor\n    public Person() {\n        this.name = \"Unknown\";\n        this.age = 0;\n    }\n    \n    // Parameterized constructor\n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n    \n    // Copy constructor\n    public Person(Person other) {\n        this.name = other.name;\n        this.age = other.age;\n    }\n    \n    @Override\n    public String toString() {\n        return name + \", \" + age;\n    }\n    \n    public static void main(String[] args) {\n        Person p1 = new Person(\"Alice\", 30);\n        Person p2 = new Person(p1);\n        Person p3 = new Person();\n        System.out.println(p1);\n        System.out.println(p2);\n        System.out.println(p3);\n    }\n}",
+      "options": {
+        "A": "Alice, 30\nAlice, 30\nUnknown, 0",
+        "B": "Alice, 30\nAlice, 30\nnull, 0",
+        "C": "Alice, 30\nUnknown, 0\nUnknown, 0",
+        "D": "Alice, 30\nAlice, 30\nPerson@<hash>"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class SynchronizedTest {\n    private int count = 0;\n    \n    public synchronized void increment() {\n        count++;\n    }\n    \n    public int getCount() {\n        return count;\n    }\n    \n    public static void main(String[] args) throws InterruptedException {\n        SynchronizedTest test = new SynchronizedTest();\n        Thread t1 = new Thread(() -> {\n            for (int i = 0; i < 1000; i++) {\n                test.increment();\n            }\n        });\n        \n        Thread t2 = new Thread(() -> {\n            for (int i = 0; i < 1000; i++) {\n                test.increment();\n            }\n        });\n        \n        t1.start();\n        t2.start();\n        \n        t1.join();\n        t2.join();\n        \n        System.out.println(test.getCount());\n    }\n}",
+      "options": {
+        "A": "Less than 2000 due to race conditions",
+        "B": "Exactly 2000",
+        "C": "A value between 1000 and 2000",
+        "D": "The output is unpredictable"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What is the main purpose of the UserDetailsService interface in Spring Security?",
+      "options": {
+        "A": "To encrypt user passwords",
+        "B": "To create new user accounts",
+        "C": "To load user-specific data for authentication",
+        "D": "To manage user sessions"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Parent {\n    void show() {\n        System.out.println(\"Parent\");\n    }\n}\n\nclass Child extends Parent {\n    @Override\n    void show() {\n        System.out.println(\"Child\");\n    }\n    \n    void display() {\n        System.out.println(\"Child Display\");\n    }\n}\n\npublic class PolymorphismTest {\n    public static void main(String[] args) {\n        Parent obj = new Child();\n        obj.show();\n        ((Child)obj).display();\n    }\n}",
+      "options": {
+        "A": "Parent\nChild Display",
+        "B": "Child\nChild Display",
+        "C": "Child\nParent",
+        "D": "Runtime error: ClassCastException"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What is the primary purpose of HandlerInterceptors in Spring MVC?",
+      "options": {
+        "A": "To validate form submissions",
+        "B": "To intercept requests before and after handler execution and view rendering",
+        "C": "To convert HTTP requests to Java objects",
+        "D": "To handle authentication only"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;\nimport org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\n\n@Configuration\npublic class CustomConfig {\n    \n    @Bean\n    @ConditionalOnProperty(name = \"custom.feature.enabled\", havingValue = \"true\")\n    public String featureEnabled() {\n        return \"Feature is enabled\";\n    }\n    \n    @Bean\n    @ConditionalOnProperty(name = \"custom.feature.enabled\", havingValue = \"false\", matchIfMissing = true)\n    public String featureDisabled() {\n        return \"Feature is disabled\";\n    }\n    \n    // Assume this method runs in an application with no properties set\n    public static void main(String[] args) {\n        // What would be registered in the application context?\n        System.out.println(\"Which bean would be created?\");\n    }\n}",
+      "options": {
+        "A": "Only featureEnabled bean",
+        "B": "Only featureDisabled bean",
+        "C": "Both beans",
+        "D": "Neither bean"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "import java.util.HashMap;\nimport java.util.Map;\nimport java.util.Objects;\n\nclass Product {\n    private String name;\n    private double price;\n    \n    public Product(String name, double price) {\n        this.name = name;\n        this.price = price;\n    }\n    \n    @Override\n    public boolean equals(Object o) {\n        if (this == o) return true;\n        if (o == null || getClass() != o.getClass()) return false;\n        Product product = (Product) o;\n        return Double.compare(product.price, price) == 0 &&\n               Objects.equals(name, product.name);\n    }\n    \n    // hashCode method intentionally missing\n    \n    public static void main(String[] args) {\n        Map<Product, String> productMap = new HashMap<>();\n        Product p1 = new Product(\"Laptop\", 999.99);\n        Product p2 = new Product(\"Laptop\", 999.99);\n        \n        productMap.put(p1, \"In stock\");\n        System.out.println(productMap.get(p2));\n    }\n}",
+      "options": {
+        "A": "In stock",
+        "B": "null",
+        "C": "Compilation error",
+        "D": "Runtime exception"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What is the main difference between @Qualifier and @Primary in Spring?",
+      "options": {
+        "A": "@Qualifier is used at injection points while @Primary is used at bean definition",
+        "B": "@Primary always takes precedence over @Qualifier",
+        "C": "@Qualifier can only be used with constructor injection while @Primary works with any injection type",
+        "D": "@Primary can only be used once per application context while @Qualifier can be used multiple times"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "import java.util.HashMap;\nimport java.util.Map;\nimport java.util.concurrent.ConcurrentHashMap;\n\npublic class ConcurrentMapTest {\n    public static void main(String[] args) {\n        Map<String, Integer> regularMap = new HashMap<>();\n        Map<String, Integer> concurrentMap = new ConcurrentHashMap<>();\n        \n        for (int i = 0; i < 10; i++) {\n            regularMap.put(\"Key\" + i, i);\n            concurrentMap.put(\"Key\" + i, i);\n        }\n        \n        try {\n            for (String key : regularMap.keySet()) {\n                if (key.equals(\"Key5\")) {\n                    regularMap.remove(key);\n                }\n            }\n            System.out.println(\"Regular map OK\");\n        } catch (Exception e) {\n            System.out.println(\"Regular map: \" + e.getClass().getSimpleName());\n        }\n        \n        try {\n            for (String key : concurrentMap.keySet()) {\n                if (key.equals(\"Key5\")) {\n                    concurrentMap.remove(key);\n                }\n            }\n            System.out.println(\"Concurrent map OK\");\n        } catch (Exception e) {\n            System.out.println(\"Concurrent map: \" + e.getClass().getSimpleName());\n        }\n    }\n}",
+      "options": {
+        "A": "Regular map: ConcurrentModificationException\nConcurrent map OK",
+        "B": "Regular map OK\nConcurrent map OK",
+        "C": "Regular map: ConcurrentModificationException\nConcurrent map: ConcurrentModificationException",
+        "D": "Regular map OK\nConcurrent map: IllegalStateException"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "When implementing JWT-based authentication in Spring Security, what component is responsible for validating the signature of incoming tokens?",
+      "options": {
+        "A": "JwtAuthenticationFilter",
+        "B": "JwtTokenProvider",
+        "C": "AuthenticationManager",
+        "D": "UserDetailsService"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class DeadlockExample {\n    private static final Object LOCK_1 = new Object();\n    private static final Object LOCK_2 = new Object();\n    \n    public static void main(String[] args) {\n        Thread thread1 = new Thread(() -> {\n            synchronized (LOCK_1) {\n                System.out.println(\"Thread 1: Holding lock 1...\");\n                try { Thread.sleep(100); } catch (InterruptedException e) {}\n                System.out.println(\"Thread 1: Waiting for lock 2...\");\n                synchronized (LOCK_2) {\n                    System.out.println(\"Thread 1: Holding lock 1 & 2...\");\n                }\n            }\n        });\n        \n        Thread thread2 = new Thread(() -> {\n            synchronized (LOCK_2) {\n                System.out.println(\"Thread 2: Holding lock 2...\");\n                try { Thread.sleep(100); } catch (InterruptedException e) {}\n                System.out.println(\"Thread 2: Waiting for lock 1...\");\n                synchronized (LOCK_1) {\n                    System.out.println(\"Thread 2: Holding lock 1 & 2...\");\n                }\n            }\n        });\n        \n        thread1.start();\n        thread2.start();\n        \n        System.out.println(\"What happens when this code runs?\");\n    }\n}",
+      "options": {
+        "A": "The program executes successfully and terminates",
+        "B": "A deadlock occurs and the program hangs indefinitely",
+        "C": "A thread starvation occurs with Thread 1 dominating execution time",
+        "D": "A runtime exception is thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "Which of the following statements about constructor injection vs setter injection in Spring is correct?",
+      "options": {
+        "A": "Setter injection is always preferred over constructor injection",
+        "B": "Constructor injection forces dependencies to be available at instantiation time and promotes immutability",
+        "C": "Setter injection is the only way to resolve circular dependencies",
+        "D": "Constructor injection cannot be used with optional dependencies"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class ChainedExceptionExample {\n    public static void main(String[] args) {\n        try {\n            processFile(\"missing.txt\");\n        } catch (Exception e) {\n            System.out.println(\"Main: \" + e.getMessage());\n            System.out.println(\"Cause: \" + e.getCause().getMessage());\n        }\n    }\n    \n    public static void processFile(String filename) throws Exception {\n        try {\n            readFile(filename);\n        } catch (Exception e) {\n            Exception wrapper = new Exception(\"Could not process file\");\n            wrapper.initCause(e);\n            throw wrapper;\n        }\n    }\n    \n    public static void readFile(String filename) throws Exception {\n        throw new Exception(\"File not found: \" + filename);\n    }\n}",
+      "options": {
+        "A": "Main: Could not process file\nCause: File not found: missing.txt",
+        "B": "Main: File not found: missing.txt\nCause: Could not process file",
+        "C": "Main: Could not process file\nCause: null",
+        "D": "NullPointerException"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "Which approach is NOT a valid strategy for API versioning in a Spring REST application?",
+      "options": {
+        "A": "URI versioning (e.g., /api/v1/users)",
+        "B": "Request parameter versioning (e.g., /api/users?version=1)",
+        "C": "Header versioning (e.g., Custom-API-Version: 1)",
+        "D": "Automatic version detection based on request content"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Animal {\n    public Animal get() {\n        System.out.println(\"Animal\");\n        return new Animal();\n    }\n}\n\nclass Dog extends Animal {\n    @Override\n    public Dog get() {\n        System.out.println(\"Dog\");\n        return new Dog();\n    }\n    \n    public static void main(String[] args) {\n        Animal animal = new Dog();\n        animal.get();\n    }\n}",
+      "options": {
+        "A": "Animal",
+        "B": "Dog",
+        "C": "Compilation error: incompatible return types",
+        "D": "Runtime error: ClassCastException"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is the primary purpose of using @ControllerAdvice for exception handling in Spring?",
+      "options": {
+        "A": "To log exceptions only",
+        "B": "To provide centralized exception handling across multiple controllers",
+        "C": "To replace the need for try-catch blocks in the code",
+        "D": "To handle exceptions only for REST controllers"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class FinallyTest {\n    public static void main(String[] args) {\n        System.out.println(getNumber());\n    }\n    \n    public static int getNumber() {\n        try {\n            return 1;\n        } catch (Exception e) {\n            return 2;\n        } finally {\n            return 3;\n        }\n    }\n}",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "Compilation error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class StackTraceTest {\n    public static void main(String[] args) {\n        try {\n            method1();\n        } catch (Exception e) {\n            System.out.println(\"getMessage(): \" + e.getMessage());\n            System.out.println(\"toString(): \" + e.toString());\n            \n            StackTraceElement[] stack = e.getStackTrace();\n            if (stack.length > 0) {\n                System.out.println(\"Method: \" + stack[0].getMethodName());\n            }\n        }\n    }\n    \n    static void method1() throws Exception {\n        method2();\n    }\n    \n    static void method2() throws Exception {\n        throw new Exception(\"Custom error message\");\n    }\n}",
+      "options": {
+        "A": "getMessage(): Custom error message\ntoString(): java.lang.Exception: Custom error message\nMethod: method1",
+        "B": "getMessage(): Custom error message\ntoString(): java.lang.Exception: Custom error message\nMethod: method2",
+        "C": "getMessage(): Custom error message\ntoString(): Custom error message\nMethod: main",
+        "D": "getMessage(): java.lang.Exception\ntoString(): java.lang.Exception: Custom error message\nMethod: method2"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class VarargsTest {\n    public static void printNames(String... names) {\n        System.out.println(\"Number of names: \" + names.length);\n        for (String name : names) {\n            System.out.print(name + \" \");\n        }\n        System.out.println();\n    }\n    \n    public static void main(String[] args) {\n        printNames();\n        printNames(\"Alice\");\n        printNames(\"Bob\", \"Charlie\", \"Dave\");\n        \n        String[] team = {\"Eve\", \"Frank\"};\n        printNames(team);\n    }\n}",
+      "options": {
+        "A": "Compilation error: cannot convert from String[] to String...",
+        "B": "Number of names: 0\nNumber of names: 1\nAlice \nNumber of names: 3\nBob Charlie Dave \nNumber of names: 2\nEve Frank",
+        "C": "Number of names: 0\n\nNumber of names: 1\nAlice\nNumber of names: 3\nBob Charlie Dave\nNumber of names: 1\n[Eve, Frank]",
+        "D": "Runtime error: incompatible types"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a valid claim type in a JWT token for Spring Security?",
+      "options": {
+        "A": "sub (subject)",
+        "B": "iat (issued at)",
+        "C": "role (roles)",
+        "D": "exp (expiration time)"
+      },
+      "correct_answer": "C"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the Thread Interruption Mechanism?",
+      "code_example": "public class InterruptExample {\n    public static void main(String[] args) {\n        Thread thread = new Thread(() -> {\n            try {\n                System.out.print(\"A\");\n                Thread.sleep(5000);\n                System.out.print(\"B\");\n            } catch (InterruptedException e) {\n                System.out.print(\"C\");\n                return;\n            }\n            System.out.print(\"D\");\n        });\n        \n        thread.start();\n        System.out.print(\"E\");\n        thread.interrupt();\n        System.out.print(\"F\");\n    }\n}",
+      "options": {
+        "A": "AECFD",
+        "B": "EACFD",
+        "C": "EAFC",
+        "D": "EFAC"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What is the result of the following code demonstrating method hiding in Java?",
+      "code_example": "class Parent {\n    public static void display() {\n        System.out.println(\"Parent's static method\");\n    }\n}\n\nclass Child extends Parent {\n    public static void display() {\n        System.out.println(\"Child's static method\");\n    }\n}\n\npublic class MethodHidingTest {\n    public static void main(String[] args) {\n        Parent p = new Child();\n        p.display();\n    }\n}",
+      "options": {
+        "A": "Parent's static method",
+        "B": "Child's static method",
+        "C": "Compilation error: static methods cannot be overridden",
+        "D": "Runtime error: ClassCastException"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Consider the following code that compares String, StringBuffer, and StringBuilder. What will be the output?",
+      "code_example": "public class StringPerformanceTest {\n    public static void main(String[] args) {\n        long startTime, endTime;\n        \n        // String concatenation\n        String str = \"\";\n        startTime = System.nanoTime();\n        for (int i = 0; i < 1000; i++) {\n            str = str + \"x\";\n        }\n        endTime = System.nanoTime();\n        long stringTime = endTime - startTime;\n        \n        // StringBuffer append\n        StringBuffer sbuf = new StringBuffer();\n        startTime = System.nanoTime();\n        for (int i = 0; i < 1000; i++) {\n            sbuf.append(\"x\");\n        }\n        endTime = System.nanoTime();\n        long bufferTime = endTime - startTime;\n        \n        // StringBuilder append\n        StringBuilder sbuild = new StringBuilder();\n        startTime = System.nanoTime();\n        for (int i = 0; i < 1000; i++) {\n            sbuild.append(\"x\");\n        }\n        endTime = System.nanoTime();\n        long builderTime = endTime - startTime;\n        \n        System.out.println(stringTime > bufferTime && bufferTime > builderTime ? \"A\" :\n                         stringTime > builderTime && builderTime > bufferTime ? \"B\" :\n                         bufferTime > stringTime && stringTime > builderTime ? \"C\" : \"D\");\n    }\n}",
+      "options": {
+        "A": "String is slowest, StringBuffer is in the middle, StringBuilder is fastest",
+        "B": "String is slowest, StringBuilder is in the middle, StringBuffer is fastest",
+        "C": "StringBuffer is slowest, String is in the middle, StringBuilder is fastest",
+        "D": "They all perform roughly the same for small operations"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "Which of the following statements about Dependency Injection and its role in OOP is false?",
+      "options": {
+        "A": "Dependency Injection helps achieve loose coupling in OOP designs",
+        "B": "Dependency Injection violates the Open-Closed Principle of SOLID",
+        "C": "Constructor injection is generally preferred over setter injection for mandatory dependencies",
+        "D": "Dependency Injection makes unit testing easier by allowing mock objects to be injected"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using CompletableFuture for asynchronous programming?",
+      "code_example": "import java.util.concurrent.CompletableFuture;\n\npublic class CompletableFutureExample {\n    public static void main(String[] args) throws Exception {\n        CompletableFuture<String> future1 = CompletableFuture.supplyAsync(() -> \"A\");\n        CompletableFuture<String> future2 = future1.thenApply(s -> s + \"B\");\n        CompletableFuture<String> future3 = future2.thenApply(s -> s + \"C\");\n        CompletableFuture<Void> combined = CompletableFuture.allOf(future1, future2, future3);\n        \n        combined.get(); // Wait for all to complete\n        System.out.println(future1.isDone() + \" \" + future2.isDone() + \" \" + future3.isDone());\n        System.out.println(future1.get() + future2.get() + future3.get());\n    }\n}",
+      "options": {
+        "A": "true true true\nABC",
+        "B": "true true true\nAABABC",
+        "C": "false true true\nAABABC",
+        "D": "true false false\nABC"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Which statement about Spring Boot Profiles is incorrect?",
+      "options": {
+        "A": "Spring Boot allows you to define profile-specific properties files with naming pattern: application-{profile}.properties",
+        "B": "Multiple active profiles can be specified using spring.profiles.active property",
+        "C": "The @Profile annotation can be applied at class level but not at method level",
+        "D": "Spring Boot profiles can be activated using command-line arguments with --spring.profiles.active"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the output of the following code testing various bean scopes?",
+      "code_example": "import org.springframework.context.annotation.AnnotationConfigApplicationContext;\nimport org.springframework.context.annotation.Scope;\nimport org.springframework.stereotype.Component;\n\npublic class BeanScopesExample {\n    public static void main(String[] args) {\n        AnnotationConfigApplicationContext context =\n            new AnnotationConfigApplicationContext(BeanScopesExample.class.getPackage().getName());\n        \n        // Test singleton beans\n        SingletonBean singleton1 = context.getBean(SingletonBean.class);\n        SingletonBean singleton2 = context.getBean(SingletonBean.class);\n        singleton1.setValue(10);\n        \n        // Test prototype beans\n        PrototypeBean prototype1 = context.getBean(PrototypeBean.class);\n        PrototypeBean prototype2 = context.getBean(PrototypeBean.class);\n        prototype1.setValue(20);\n        \n        System.out.println(singleton2.getValue() + \" \" + prototype2.getValue());\n        context.close();\n    }\n}\n\n@Component\nclass SingletonBean {\n    private int value;\n    public void setValue(int value) { this.value = value; }\n    public int getValue() { return value; }\n}\n\n@Component\n@Scope(\"prototype\")\nclass PrototypeBean {\n    private int value;\n    public void setValue(int value) { this.value = value; }\n    public int getValue() { return value; }\n}",
+      "options": {
+        "A": "10 20",
+        "B": "10 0",
+        "C": "0 0",
+        "D": "Compilation error: cannot use AnnotationConfigApplicationContext this way"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What is the result of the following code that demonstrates the resizing mechanism of HashMap?",
+      "code_example": "import java.util.HashMap;\n\npublic class HashMapResizeTest {\n    public static void main(String[] args) {\n        HashMap<Integer, String> map = new HashMap<>(4, 0.75f);\n        System.out.print(\"Initial capacity bits: \" + getCapacityBits(map) + \", \");\n        \n        // Add elements to trigger resize\n        for (int i = 0; i < 4; i++) {\n            map.put(i, \"Value\" + i);\n        }\n        \n        System.out.print(\"After adding 4 elements: \" + getCapacityBits(map) + \", \");\n        \n        // Add more elements to trigger another resize\n        for (int i = 4; i < 12; i++) {\n            map.put(i, \"Value\" + i);\n        }\n        \n        System.out.print(\"After adding 12 elements: \" + getCapacityBits(map));\n    }\n    \n    // Helper method to get capacity through reflection\n    private static int getCapacityBits(HashMap<?, ?> map) {\n        try {\n            java.lang.reflect.Field tableField = HashMap.class.getDeclaredField(\"table\");\n            tableField.setAccessible(true);\n            Object[] table = (Object[]) tableField.get(map);\n            return table == null ? 0 : Integer.numberOfTrailingZeros(table.length);\n        } catch (Exception e) {\n            return -1; // Cannot determine\n        }\n    }\n}",
+      "options": {
+        "A": "Initial capacity bits: 2, After adding 4 elements: 2, After adding 12 elements: 4",
+        "B": "Initial capacity bits: 2, After adding 4 elements: 3, After adding 12 elements: 4",
+        "C": "Initial capacity bits: 2, After adding 4 elements: 3, After adding 12 elements: 5",
+        "D": "Initial capacity bits: 4, After adding 4 elements: 4, After adding 12 elements: 5"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates suppressed exceptions using addSuppressed()?",
+      "code_example": "public class SuppressedExceptionDemo {\n    public static void main(String[] args) {\n        try {\n            executeWithException();\n        } catch (Exception e) {\n            System.out.println(\"Main exception: \" + e.getMessage());\n            Throwable[] suppressed = e.getSuppressed();\n            System.out.println(\"Number of suppressed exceptions: \" + suppressed.length);\n            for (Throwable t : suppressed) {\n                System.out.println(\"Suppressed: \" + t.getMessage());\n            }\n        }\n    }\n    \n    static void executeWithException() throws Exception {\n        Exception mainException = new Exception(\"Primary exception\");\n        try {\n            throw new RuntimeException(\"Resource closing exception 1\");\n        } catch (Exception e) {\n            mainException.addSuppressed(e);\n        }\n        try {\n            throw new RuntimeException(\"Resource closing exception 2\");\n        } catch (Exception e) {\n            mainException.addSuppressed(e);\n        }\n        throw mainException;\n    }\n}",
+      "options": {
+        "A": "Main exception: Primary exception\nNumber of suppressed exceptions: 0",
+        "B": "Main exception: Primary exception\nNumber of suppressed exceptions: 1\nSuppressed: Resource closing exception 2",
+        "C": "Main exception: Primary exception\nNumber of suppressed exceptions: 2\nSuppressed: Resource closing exception 1\nSuppressed: Resource closing exception 2",
+        "D": "RuntimeException: Resource closing exception 1"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a best practice when using log4j or SLF4J for logging exceptions?",
+      "options": {
+        "A": "Using parameterized logging to avoid string concatenation when the log level is disabled",
+        "B": "Always using e.printStackTrace() along with logger.error() to ensure exceptions are visible",
+        "C": "Including contextual information in log messages to aid debugging",
+        "D": "Using different log levels appropriately (debug, info, warn, error) based on the severity"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What is the output of the following code that demonstrates System.gc() and its impact?",
+      "code_example": "public class GCImpactDemo {\n    public static void main(String[] args) {\n        Object obj = new Object() {\n            private int data = 100;\n            \n            @Override\n            protected void finalize() throws Throwable {\n                System.out.print(\"Finalize called. \");\n                super.finalize();\n            }\n        };\n        \n        obj = null; // Make object eligible for garbage collection\n        \n        System.out.print(\"Before GC. \");\n        System.gc(); // Request garbage collection\n        System.runFinalization(); // Request finalization of all pending finalizers\n        System.out.print(\"After GC and finalization. \");\n        \n        // Create memory pressure to increase likelihood of GC\n        for (int i = 0; i < 1000; i++) {\n            byte[] array = new byte[10000];\n        }\n        \n        System.out.print(\"After memory pressure.\");\n    }\n}",
+      "options": {
+        "A": "Before GC. After GC and finalization. After memory pressure.",
+        "B": "Before GC. Finalize called. After GC and finalization. After memory pressure.",
+        "C": "Before GC. After GC and finalization. Finalize called. After memory pressure.",
+        "D": "The output varies because System.gc() is just a hint and may not be honored by the JVM"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which statement about @Qualifier and @Primary annotations in Spring is false?",
+      "options": {
+        "A": "@Primary defines a default bean to be injected when multiple candidates exist",
+        "B": "@Qualifier takes precedence over @Primary when both are present",
+        "C": "@Qualifier can only be used on fields and parameters, not on bean definitions",
+        "D": "Multiple @Qualifier annotations can be composed into a custom qualifier annotation"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates property source injection?",
+      "code_example": "import org.springframework.beans.factory.annotation.Value;\nimport org.springframework.context.annotation.AnnotationConfigApplicationContext;\nimport org.springframework.context.annotation.Configuration;\nimport org.springframework.context.annotation.PropertySource;\nimport org.springframework.core.env.ConfigurableEnvironment;\nimport org.springframework.core.env.MapPropertySource;\n\nimport java.util.HashMap;\nimport java.util.Map;\n\n@Configuration\n@PropertySource(\"classpath:app.properties\") // app.properties contains: app.name=MyApp\npublic class PropertySourceDemo {\n    \n    @Value(\"${app.name:DefaultApp}\")\n    private String appName;\n    \n    @Value(\"${app.version:1.0}\")\n    private String appVersion;\n    \n    public static void main(String[] args) {\n        AnnotationConfigApplicationContext context = \n            new AnnotationConfigApplicationContext();\n        \n        // Add a property source programmatically\n        ConfigurableEnvironment env = context.getEnvironment();\n        Map<String, Object> props = new HashMap<>();\n        props.put(\"app.version\", \"2.0\");\n        env.getPropertySources().addFirst(new MapPropertySource(\"programmatic\", props));\n        \n        // Register and refresh\n        context.register(PropertySourceDemo.class);\n        context.refresh();\n        \n        PropertySourceDemo demo = context.getBean(PropertySourceDemo.class);\n        System.out.println(demo.appName + \" \" + demo.appVersion);\n        context.close();\n    }\n}",
+      "options": {
+        "A": "MyApp 1.0",
+        "B": "MyApp 2.0",
+        "C": "DefaultApp 2.0",
+        "D": "DefaultApp 1.0"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates hash collisions and load factor?",
+      "code_example": "import java.util.HashMap;\nimport java.util.Map;\n\npublic class HashCollisionDemo {\n    public static void main(String[] args) {\n        // Create a map with custom objects that will have hash collisions\n        Map<Key, String> map = new HashMap<>(16, 0.75f);\n        \n        // Add entries with colliding keys\n        map.put(new Key(1), \"Value1\");\n        map.put(new Key(17), \"Value2\"); // Will collide with Key(1)\n        map.put(new Key(33), \"Value3\"); // Will collide with Key(1) and Key(17)\n        map.put(new Key(2), \"Value4\");\n        \n        System.out.println(\"Map size: \" + map.size());\n        System.out.println(\"Value for Key(17): \" + map.get(new Key(17)));\n        System.out.println(\"Collision evaluation: \" + (map.get(new Key(17)).equals(\"Value2\") ? \"working correctly\" : \"failure\"));\n    }\n    \n    // Custom key class with predictable hash collisions\n    static class Key {\n        private final int id;\n        \n        public Key(int id) {\n            this.id = id;\n        }\n        \n        @Override\n        public int hashCode() {\n            return id % 16; // Will cause collisions for id values that differ by multiples of 16\n        }\n        \n        @Override\n        public boolean equals(Object obj) {\n            if (this == obj) return true;\n            if (obj == null || getClass() != obj.getClass()) return false;\n            Key other = (Key) obj;\n            return id == other.id;\n        }\n    }\n}",
+      "options": {
+        "A": "Map size: 1\nValue for Key(17): Value3\nCollision evaluation: failure",
+        "B": "Map size: 4\nValue for Key(17): Value2\nCollision evaluation: working correctly",
+        "C": "Map size: 4\nValue for Key(17): null\nCollision evaluation: failure",
+        "D": "Map size: 2\nValue for Key(17): Value1\nCollision evaluation: failure"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "Which statement about lazy initialization of beans with @Lazy in Spring is incorrect?",
+      "options": {
+        "A": "@Lazy annotation can be used at the class level for component scanning",
+        "B": "@Lazy annotation can be used at the method level in configuration classes",
+        "C": "Lazy-initialized beans are always initialized after the Spring context has fully started",
+        "D": "Setting default-lazy-init=\"true\" in XML configuration makes all beans lazy by default"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the Fork/Join Framework?",
+      "code_example": "import java.util.concurrent.ForkJoinPool;\nimport java.util.concurrent.RecursiveTask;\n\npublic class ForkJoinSumExample {\n    public static void main(String[] args) {\n        int[] numbers = new int[100];\n        for (int i = 0; i < numbers.length; i++) {\n            numbers[i] = i + 1; // 1 to 100\n        }\n        \n        ForkJoinPool pool = new ForkJoinPool(2); // Use 2 threads\n        SumTask task = new SumTask(numbers, 0, numbers.length);\n        long result = pool.invoke(task);\n        \n        System.out.println(\"Result: \" + result);\n        System.out.println(\"Thread count: \" + pool.getPoolSize());\n        System.out.println(\"Steal count: \" + pool.getStealCount());\n    }\n    \n    static class SumTask extends RecursiveTask<Long> {\n        private static final int THRESHOLD = 10;\n        private final int[] array;\n        private final int start;\n        private final int end;\n        \n        SumTask(int[] array, int start, int end) {\n            this.array = array;\n            this.start = start;\n            this.end = end;\n        }\n        \n        @Override\n        protected Long compute() {\n            int length = end - start;\n            if (length <= THRESHOLD) {\n                long sum = 0;\n                for (int i = start; i < end; i++) {\n                    sum += array[i];\n                }\n                return sum;\n            }\n            \n            int mid = start + length / 2;\n            SumTask leftTask = new SumTask(array, start, mid);\n            SumTask rightTask = new SumTask(array, mid, end);\n            \n            leftTask.fork();\n            long rightResult = rightTask.compute();\n            long leftResult = leftTask.join();\n            \n            return leftResult + rightResult;\n        }\n    }\n}",
+      "options": {
+        "A": "Result: 5050\nThread count: 1\nSteal count: 0",
+        "B": "Result: 5050\nThread count: 2\nSteal count: 0",
+        "C": "Result: 5050\nThread count: 2\nSteal count varies (could be greater than 0)",
+        "D": "Result: 5050\nThread count: 4\nSteal count varies (could be greater than 0)"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
