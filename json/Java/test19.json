@@ -1,0 +1,653 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "Multiple Catch Blocks",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class MultipleCatchExample {\n    public static void main(String[] args) {\n        try {\n            int[] arr = new int[5];\n            arr[6] = 10 / 0;\n            System.out.println(\"Try Block\");\n        } catch (ArithmeticException e) {\n            System.out.println(\"Arithmetic Exception\");\n        } catch (ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"Array Index Exception\");\n        } catch (Exception e) {\n            System.out.println(\"Generic Exception\");\n        }\n        System.out.println(\"After try-catch\");\n    }\n}",
+      "options": {
+        "A": "Arithmetic Exception\nAfter try-catch",
+        "B": "Array Index Exception\nAfter try-catch",
+        "C": "Generic Exception\nAfter try-catch",
+        "D": "Try Block\nAfter try-catch"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "Java Naming Conventions",
+      "question": "Which of the following Java naming conventions is INCORRECT?",
+      "options": {
+        "A": "Class names should start with an uppercase letter and follow CamelCase (e.g., MyClass)",
+        "B": "Method names should start with a lowercase letter and follow camelCase (e.g., calculateArea)",
+        "C": "Constants should be all uppercase with words separated by underscores (e.g., MAX_VALUE)",
+        "D": "Package names should start with an uppercase letter (e.g., Com.company.project)"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "Command Line Arguments in Java",
+      "question": "What will be the output of the following code when executed with the command: java CommandLineArgs hello world",
+      "code_example": "public class CommandLineArgs {\n    public static void main(String[] args) {\n        System.out.println(\"Number of arguments: \" + args.length);\n        if (args.length > 0) {\n            System.out.println(\"First argument: \" + args[0]);\n        }\n    }\n}",
+      "options": {
+        "A": "Number of arguments: 0",
+        "B": "Number of arguments: 1\nFirst argument: CommandLineArgs",
+        "C": "Number of arguments: 2\nFirst argument: hello",
+        "D": "Number of arguments: 3\nFirst argument: java"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "Constructors (Default, Parameterized, Copy Constructor)",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Person {\n    private String name;\n    private int age;\n    \n    // Default constructor\n    public Person() {\n        this.name = \"Unknown\";\n        this.age = 0;\n    }\n    \n    // Parameterized constructor\n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n    \n    // Copy constructor\n    public Person(Person other) {\n        this.name = other.name;\n        this.age = other.age + 1;\n    }\n    \n    @Override\n    public String toString() {\n        return name + \", \" + age;\n    }\n}\n\npublic class ConstructorDemo {\n    public static void main(String[] args) {\n        Person p1 = new Person(\"Alice\", 25);\n        Person p2 = new Person(p1);\n        System.out.println(p2);\n    }\n}",
+      "options": {
+        "A": "Unknown, 0",
+        "B": "Alice, 25",
+        "C": "Alice, 26",
+        "D": "null, 0"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "Configuration in application.properties",
+      "question": "In a Spring Boot application, which of the following is the CORRECT way to access a property named 'app.message' defined in application.properties?",
+      "options": {
+        "A": "@Value(\"app.message\")\nprivate String message;",
+        "B": "@Value(\"${app.message}\")\nprivate String message;",
+        "C": "@Property(\"app.message\")\nprivate String message;",
+        "D": "@Config(\"app.message\")\nprivate String message;"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "Comments in Java (Single-line, Multi-line, Javadoc)",
+      "question": "Which of the following is NOT a valid comment in Java?",
+      "code_example": "public class CommentExample {\n    // This is a single-line comment\n    \n    /*\n     * This is a\n     * multi-line comment\n     */\n    \n    /**\n     * This is a Javadoc comment\n     * @param args command line arguments\n     */\n    public static void main(String[] args) {\n        System.out.println(\"Hello\"); #This is another comment\n    }\n}",
+      "options": {
+        "A": "// This is a single-line comment",
+        "B": "/* This is a\n * multi-line comment\n */",
+        "C": "/** This is a Javadoc comment\n * @param args command line arguments\n */",
+        "D": "# This is another comment"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "ApplicationContext vs BeanFactory",
+      "question": "Which of the following statements about ApplicationContext and BeanFactory in Spring is FALSE?",
+      "options": {
+        "A": "ApplicationContext is a subinterface of BeanFactory",
+        "B": "ApplicationContext provides more enterprise-specific functionality than BeanFactory",
+        "C": "BeanFactory loads beans lazily, while ApplicationContext loads beans eagerly by default",
+        "D": "BeanFactory provides more functionality than ApplicationContext"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "Java Beans and POJOs",
+      "question": "Which of the following is NOT a requirement for a class to be a valid JavaBean?",
+      "code_example": "public class MyClass {\n    private String name;\n    private int age;\n    \n    public MyClass() {\n        // Default constructor\n    }\n    \n    public String getName() {\n        return name;\n    }\n    \n    public void setName(String name) {\n        this.name = name;\n    }\n    \n    public int getAge() {\n        return age;\n    }\n    \n    // No setter for age\n}",
+      "options": {
+        "A": "It must have a public default (no-argument) constructor",
+        "B": "It must implement the Serializable interface",
+        "C": "It must have private properties accessible via getter and setter methods",
+        "D": "It must follow a specific naming convention for getter and setter methods"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Spring Boot Introduction",
+      "question": "Which annotation is used to mark the main class of a Spring Boot application?",
+      "code_example": "import org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\n\n@SpringBootApplication\npublic class MyApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(MyApplication.class, args);\n    }\n}",
+      "options": {
+        "A": "@SpringBootMain",
+        "B": "@SpringApplication",
+        "C": "@SpringBootApplication",
+        "D": "@SpringMain"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Custom Exception Handling (User-Defined Exceptions)",
+      "question": "What will be the output of the following code?",
+      "code_example": "class InsufficientBalanceException extends Exception {\n    public InsufficientBalanceException(String message) {\n        super(message);\n    }\n}\n\nclass Account {\n    private double balance;\n    \n    public Account(double initialBalance) {\n        this.balance = initialBalance;\n    }\n    \n    public void withdraw(double amount) throws InsufficientBalanceException {\n        if (amount > balance) {\n            throw new InsufficientBalanceException(\"Not enough funds\");\n        }\n        balance -= amount;\n        System.out.println(\"Withdrawal successful\");\n    }\n}\n\npublic class ExceptionDemo {\n    public static void main(String[] args) {\n        Account account = new Account(100);\n        try {\n            account.withdraw(150);\n        } catch (InsufficientBalanceException e) {\n            System.out.println(\"Exception caught: \" + e.getMessage());\n        } finally {\n            System.out.println(\"Transaction completed\");\n        }\n    }\n}",
+      "options": {
+        "A": "Withdrawal successful\nTransaction completed",
+        "B": "Exception caught: Not enough funds\nTransaction completed",
+        "C": "InsufficientBalanceException: Not enough funds",
+        "D": "Transaction completed"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "wait(), notify(), notifyAll()",
+      "question": "Which statement about wait(), notify(), and notifyAll() methods in Java is CORRECT?",
+      "options": {
+        "A": "These methods can be called on any Java object",
+        "B": "These methods must be called from a non-synchronized context",
+        "C": "A thread can call wait() without owning the monitor of the object",
+        "D": "notify() wakes up all threads waiting on the object's monitor"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "Creating Threads (Thread Class vs Runnable Interface)",
+      "question": "What will be the output of the following code?",
+      "code_example": "class MyThread extends Thread {\n    public void run() {\n        System.out.println(\"Thread class\");\n    }\n}\n\nclass MyRunnable implements Runnable {\n    public void run() {\n        System.out.println(\"Runnable interface\");\n    }\n}\n\npublic class ThreadDemo {\n    public static void main(String[] args) {\n        Thread t1 = new MyThread();\n        Thread t2 = new Thread(new MyRunnable());\n        \n        t2.start();\n        t1.start();\n        \n        System.out.println(\"Main thread\");\n    }\n}",
+      "options": {
+        "A": "Thread class\nRunnable interface\nMain thread",
+        "B": "Main thread\nThread class\nRunnable interface",
+        "C": "The output will vary as thread execution order is non-deterministic",
+        "D": "Compile-time error because we cannot mix Thread class and Runnable interface"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "Type Casting (Implicit and Explicit)",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class TypeCastingDemo {\n    public static void main(String[] args) {\n        int i = 100;\n        long l = i;          // Line 1\n        float f = l;         // Line 2\n        double d = f;        // Line 3\n        \n        System.out.println(\"int value: \" + i);\n        System.out.println(\"long value: \" + l);\n        System.out.println(\"float value: \" + f);\n        System.out.println(\"double value: \" + d);\n        \n        double d2 = 100.04;\n        float f2 = (float) d2;  // Line 4\n        long l2 = (long) f2;    // Line 5\n        int i2 = (int) l2;      // Line 6\n        \n        System.out.println(\"double value: \" + d2);\n        System.out.println(\"float value: \" + f2);\n        System.out.println(\"long value: \" + l2);\n        System.out.println(\"int value: \" + i2);\n    }\n}",
+      "options": {
+        "A": "Compilation error at Line 3",
+        "B": "int value: 100\nlong value: 100\nfloat value: 100.0\ndouble value: 100.0\ndouble value: 100.04\nfloat value: 100.04\nlong value: 100\nint value: 100",
+        "C": "Runtime error at Line 5",
+        "D": "int value: 100\nlong value: 100\nfloat value: 100.0\ndouble value: 100.0\ndouble value: 100.04\nfloat value: 100.03999\nlong value: 100\nint value: 100"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "this Keyword Usage in Java",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class ThisKeywordDemo {\n    private int value;\n    \n    public ThisKeywordDemo() {\n        this(10);\n        System.out.println(\"Default constructor\");\n    }\n    \n    public ThisKeywordDemo(int value) {\n        this.value = value;\n        System.out.println(\"Parameterized constructor\");\n    }\n    \n    public void setValue(int value) {\n        this.value = value;\n    }\n    \n    public int getValue() {\n        return this.value;\n    }\n    \n    public static void main(String[] args) {\n        ThisKeywordDemo demo = new ThisKeywordDemo();\n        System.out.println(\"Value: \" + demo.getValue());\n    }\n}",
+      "options": {
+        "A": "Default constructor\nParameterized constructor\nValue: 10",
+        "B": "Parameterized constructor\nDefault constructor\nValue: 10",
+        "C": "Default constructor\nValue: 0",
+        "D": "Parameterized constructor\nValue: 10"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "ResponseEntity and Exception Handling",
+      "question": "In Spring MVC, which of the following is the BEST approach to return a 404 Not Found response with a custom message?",
+      "options": {
+        "A": "return new ResponseEntity<>(\"Resource not found\", 404);",
+        "B": "return new ResponseEntity<>(\"Resource not found\", HttpStatus.NOT_FOUND);",
+        "C": "throw new NotFoundException(\"Resource not found\");",
+        "D": "response.setStatus(404);\nreturn \"Resource not found\";"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "UserDetailsService and Role-Based Authentication",
+      "question": "In Spring Security, which of the following correctly defines a method that must be implemented when implementing the UserDetailsService interface?",
+      "code_example": "import org.springframework.security.core.userdetails.UserDetails;\nimport org.springframework.security.core.userdetails.UserDetailsService;\nimport org.springframework.security.core.userdetails.UsernameNotFoundException;\n\npublic class CustomUserDetailsService implements UserDetailsService {\n    @Override\n    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {\n        // Implementation\n        if (userNotFound) {\n            throw new UsernameNotFoundException(\"User not found\");\n        }\n        return userDetails;\n    }\n}",
+      "options": {
+        "A": "public UserDetails findByUsername(String username) throws UsernameNotFoundException",
+        "B": "public User getUserByUsername(String username) throws UsernameNotFoundException",
+        "C": "public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException",
+        "D": "public Optional<UserDetails> loadUserByUsername(String username)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Immutable Strings in Java – Why and How?",
+      "question": "Which of the following statements about String immutability in Java is CORRECT?",
+      "code_example": "public class StringDemo {\n    public static void main(String[] args) {\n        String s1 = \"Hello\";\n        String s2 = \"Hello\";\n        \n        System.out.println(s1 == s2);\n        \n        s1 += \" World\";\n        System.out.println(s1);\n        System.out.println(s2);\n        \n        String s3 = new String(\"Hello\");\n        System.out.println(s2 == s3);\n        System.out.println(s2.equals(s3));\n    }\n}",
+      "options": {
+        "A": "String objects are mutable but String literals are immutable",
+        "B": "String immutability only applies when strings are created using the 'new' keyword",
+        "C": "String immutability helps in thread safety and security, and enables string interning",
+        "D": "The += operator modifies the original String object rather than creating a new one"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "Stack Trace Analysis (printStackTrace(), getMessage(), toString())",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class StackTraceDemo {\n    public static void main(String[] args) {\n        try {\n            method1();\n        } catch (Exception e) {\n            System.out.println(\"getMessage(): \" + e.getMessage());\n            System.out.println(\"toString(): \" + e.toString());\n            // e.printStackTrace(); // Commented out to focus on specific outputs\n        }\n    }\n    \n    public static void method1() throws Exception {\n        method2();\n    }\n    \n    public static void method2() throws Exception {\n        throw new IllegalArgumentException(\"Invalid argument\");\n    }\n}",
+      "options": {
+        "A": "getMessage(): null\ntoString(): java.lang.IllegalArgumentException",
+        "B": "getMessage(): Invalid argument\ntoString(): java.lang.IllegalArgumentException",
+        "C": "getMessage(): Invalid argument\ntoString(): java.lang.IllegalArgumentException: Invalid argument",
+        "D": "getMessage(): method2\ntoString(): java.lang.IllegalArgumentException: Invalid argument"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "Multiple Inheritance in Java (Why Java Doesn't Support It)",
+      "question": "Which of the following BEST explains why Java doesn't support multiple inheritance of classes?",
+      "code_example": "class A {\n    public void display() {\n        System.out.println(\"Class A\");\n    }\n}\n\nclass B {\n    public void display() {\n        System.out.println(\"Class B\");\n    }\n}\n\n// If Java supported multiple inheritance:\n// class C extends A, B {\n//     public static void main(String[] args) {\n//         C c = new C();\n//         c.display(); // Which display method would be called?\n//     }\n// }",
+      "options": {
+        "A": "Multiple inheritance was deemed unnecessary since interfaces and composition can achieve similar results",
+        "B": "Java's Virtual Machine architecture makes multiple inheritance technically impossible to implement",
+        "C": "Multiple inheritance leads to ambiguity problems like the 'diamond problem' where the inheritance hierarchy forms a diamond shape",
+        "D": "Multiple inheritance is supported in Java through the use of multiple interfaces, but not through classes"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "Exception Handling using @ControllerAdvice",
+      "question": "Which of the following is the CORRECT implementation of a global exception handler using @ControllerAdvice in Spring?",
+      "code_example": "import org.springframework.http.HttpStatus;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.web.bind.annotation.ControllerAdvice;\nimport org.springframework.web.bind.annotation.ExceptionHandler;\n\n@ControllerAdvice\npublic class GlobalExceptionHandler {\n    \n    @ExceptionHandler(ResourceNotFoundException.class)\n    public ResponseEntity<ErrorResponse> handleResourceNotFoundException(ResourceNotFoundException ex) {\n        ErrorResponse error = new ErrorResponse();\n        error.setStatus(HttpStatus.NOT_FOUND.value());\n        error.setMessage(ex.getMessage());\n        error.setTimestamp(System.currentTimeMillis());\n        \n        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);\n    }\n    \n    @ExceptionHandler(Exception.class)\n    public ResponseEntity<ErrorResponse> handleGlobalException(Exception ex) {\n        ErrorResponse error = new ErrorResponse();\n        error.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());\n        error.setMessage(\"An unexpected error occurred\");\n        error.setTimestamp(System.currentTimeMillis());\n        \n        return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);\n    }\n}",
+      "options": {
+        "A": "The code is incorrect because @ControllerAdvice should be placed on individual controller methods, not at the class level",
+        "B": "The code is incorrect because @ExceptionHandler cannot be used with @ControllerAdvice",
+        "C": "The code is correct and demonstrates a proper global exception handling implementation",
+        "D": "The code is incorrect because the methods should return void and use the HttpServletResponse directly"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "Spring Profiles and Environment Configuration",
+      "question": "Which of the following correctly activates the 'development' profile in a Spring Boot application?",
+      "options": {
+        "A": "Adding spring.profiles=development to application.properties",
+        "B": "Adding spring.profiles.active=development to application.properties",
+        "C": "Using @Profile(\"development\") on the main application class",
+        "D": "Adding @ActiveProfile(\"development\") on the main application class"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "@Qualifier and @Primary",
+      "question": "What will be the output of the following Spring Boot application?",
+      "code_example": "import org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.beans.factory.annotation.Qualifier;\nimport org.springframework.boot.CommandLineRunner;\nimport org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\nimport org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Primary;\nimport org.springframework.stereotype.Service;\n\ninterface MessageService {\n    String getMessage();\n}\n\n@Service(\"emailService\")\nclass EmailService implements MessageService {\n    @Override\n    public String getMessage() {\n        return \"Email Service\";\n    }\n}\n\n@Service(\"smsService\")\n@Primary\nclass SmsService implements MessageService {\n    @Override\n    public String getMessage() {\n        return \"SMS Service\";\n    }\n}\n\n@SpringBootApplication\npublic class QualifierDemoApplication implements CommandLineRunner {\n    \n    @Autowired\n    private MessageService defaultService;\n    \n    @Autowired\n    @Qualifier(\"emailService\")\n    private MessageService qualifiedService;\n    \n    public static void main(String[] args) {\n        SpringApplication.run(QualifierDemoApplication.class, args);\n    }\n    \n    @Override\n    public void run(String... args) {\n        System.out.println(\"Default: \" + defaultService.getMessage());\n        System.out.println(\"Qualified: \" + qualifiedService.getMessage());\n    }\n}",
+      "options": {
+        "A": "Default: Email Service\nQualified: Email Service",
+        "B": "Default: SMS Service\nQualified: Email Service",
+        "C": "Default: Email Service\nQualified: SMS Service",
+        "D": "Compilation error due to ambiguous autowiring"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "Memory Allocation (Heap, Stack, Method Area, PC Register, Native Method Stack)",
+      "question": "Which of the following statements about JVM memory areas is INCORRECT?",
+      "options": {
+        "A": "Stack memory stores method frames, local variables, and partial results, and plays a role in method invocation and return",
+        "B": "Heap memory stores all objects and arrays, and is shared among all threads",
+        "C": "Method Area stores class structures, method and constructor code, and special methods used in class initialization",
+        "D": "PC (Program Counter) Register is shared among all threads and keeps track of the instruction being executed"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "Chained Exceptions in Java (initCause())",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class ChainedExceptionDemo {\n    public static void main(String[] args) {\n        try {\n            processFile();\n        } catch (Exception e) {\n            System.out.println(\"Main exception: \" + e.getMessage());\n            System.out.println(\"Cause: \" + e.getCause().getMessage());\n        }\n    }\n    \n    private static void processFile() throws Exception {\n        try {\n            readFile();\n        } catch (NullPointerException e) {\n            Exception newException = new Exception(\"Error processing file\");\n            newException.initCause(e);\n            throw newException;\n        }\n    }\n    \n    private static void readFile() {\n        throw new NullPointerException(\"File not found\");\n    }\n}",
+      "options": {
+        "A": "Main exception: Error processing file\nCause: File not found",
+        "B": "Main exception: File not found\nCause: Error processing file",
+        "C": "Main exception: Error processing file\nCause: null",
+        "D": "Main exception: java.lang.NullPointerException: File not found\nCause: null"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Property Source (@PropertySource, @Value)",
+      "question": "What will be the output of the following Spring Boot application?",
+      "code_example": "import org.springframework.beans.factory.annotation.Value;\nimport org.springframework.boot.CommandLineRunner;\nimport org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\nimport org.springframework.context.annotation.PropertySource;\n\n@SpringBootApplication\n@PropertySource(\"classpath:custom.properties\")\npublic class PropertySourceDemo implements CommandLineRunner {\n    \n    @Value(\"${app.name:DefaultApp}\")\n    private String appName;\n    \n    @Value(\"${app.version:1.0}\")\n    private String appVersion;\n    \n    public static void main(String[] args) {\n        SpringApplication.run(PropertySourceDemo.class, args);\n    }\n    \n    @Override\n    public void run(String... args) {\n        System.out.println(\"App Name: \" + appName);\n        System.out.println(\"App Version: \" + appVersion);\n    }\n}\n\n// Assume custom.properties contains:\n// app.name=MyCustomApp",
+      "options": {
+        "A": "App Name: DefaultApp\nApp Version: 1.0",
+        "B": "App Name: MyCustomApp\nApp Version: 1.0",
+        "C": "App Name: ${app.name}\nApp Version: ${app.version}",
+        "D": "App Name: \nApp Version: "
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "Constructor Injection vs Setter Injection",
+      "question": "Which of the following statements about constructor injection versus setter injection in Spring is CORRECT?",
+      "code_example": "// Constructor Injection\nclass MovieService {\n    private final MovieRepository repository;\n    \n    @Autowired\n    public MovieService(MovieRepository repository) {\n        this.repository = repository;\n    }\n}\n\n// Setter Injection\nclass UserService {\n    private UserRepository repository;\n    \n    @Autowired\n    public void setRepository(UserRepository repository) {\n        this.repository = repository;\n    }\n}",
+      "options": {
+        "A": "Setter injection is preferred over constructor injection for mandatory dependencies",
+        "B": "Constructor injection helps to implement immutable objects and makes dependencies clear at initialization time",
+        "C": "Spring recommends setter injection as the primary method for dependency injection",
+        "D": "Constructor injection cannot be used for circular dependencies, while setter injection can"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "hashCode() and equals() Contract",
+      "question": "What will be the output of the following code?",
+      "code_example": "import java.util.HashSet;\nimport java.util.Set;\n\nclass Employee {\n    private int id;\n    private String name;\n    \n    public Employee(int id, String name) {\n        this.id = id;\n        this.name = name;\n    }\n    \n    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) return true;\n        if (obj == null || getClass() != obj.getClass()) return false;\n        Employee employee = (Employee) obj;\n        return id == employee.id;\n    }\n    \n    // hashCode method is not overridden\n    \n    @Override\n    public String toString() {\n        return \"Employee{id=\" + id + \", name='\" + name + \"'}\";\n    }\n}\n\npublic class HashCodeEqualsDemo {\n    public static void main(String[] args) {\n        Set<Employee> employees = new HashSet<>();\n        employees.add(new Employee(1, \"Alice\"));\n        employees.add(new Employee(1, \"Bob\"));\n        \n        System.out.println(\"Size: \" + employees.size());\n        System.out.println(employees);\n    }\n}",
+      "options": {
+        "A": "Size: 1\n[Employee{id=1, name='Alice'}]",
+        "B": "Size: 2\n[Employee{id=1, name='Alice'}, Employee{id=1, name='Bob'}]",
+        "C": "CompileTimeError: equals() must be implemented with hashCode()",
+        "D": "Size: 1\n[Employee{id=1, name='Bob'}]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "File Upload in Spring MVC",
+      "question": "What will be the output of the following Spring MVC file upload controller if the file 'sample.txt' exists?",
+      "code_example": "import org.springframework.http.HttpStatus;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.web.bind.annotation.PostMapping;\nimport org.springframework.web.bind.annotation.RequestParam;\nimport org.springframework.web.bind.annotation.RestController;\nimport org.springframework.web.multipart.MultipartFile;\n\nimport java.io.File;\nimport java.io.IOException;\n\n@RestController\npublic class FileUploadController {\n\n    @PostMapping(\"/upload\")\n    public ResponseEntity<String> handleFileUpload(\n            @RequestParam(\"file\") MultipartFile file,\n            @RequestParam(value = \"overwrite\", defaultValue = \"false\") boolean overwrite) {\n\n        if (file.isEmpty()) {\n            return new ResponseEntity<>(\"File is empty\", HttpStatus.BAD_REQUEST);\n        }\n\n        try {\n            String fileName = file.getOriginalFilename();\n            File dest = new File(\"uploads/\" + fileName);\n            \n            if (dest.exists() && !overwrite) {\n                return new ResponseEntity<>(\"File already exists\", HttpStatus.CONFLICT);\n            }\n            \n            if (!dest.getParentFile().exists()) {\n                dest.getParentFile().mkdirs();\n            }\n            \n            file.transferTo(dest);\n            return new ResponseEntity<>(\"File uploaded successfully\", HttpStatus.OK);\n            \n        } catch (IOException e) {\n            return new ResponseEntity<>(\"Upload failed: \" + e.getMessage(), \n                                      HttpStatus.INTERNAL_SERVER_ERROR);\n        }\n    }\n}",
+      "options": {
+        "A": "A response with status 200 and body 'File uploaded successfully'",
+        "B": "A response with status 409 and body 'File already exists'",
+        "C": "A response with status 500 and body 'Upload failed: [error message]'",
+        "D": "A response with status 404 because the uploads directory doesn't exist"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "Spring Boot Testing (@SpringBootTest, @MockBean)",
+      "question": "What is wrong with the following Spring Boot integration test?",
+      "code_example": "import org.junit.jupiter.api.Test;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;\nimport org.springframework.boot.test.mock.mockito.MockBean;\nimport org.springframework.http.MediaType;\nimport org.springframework.test.web.servlet.MockMvc;\n\nimport java.util.Arrays;\nimport java.util.List;\n\nimport static org.mockito.Mockito.when;\nimport static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;\nimport static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;\n\n@WebMvcTest(ProductController.class)\npublic class ProductControllerTest {\n\n    @Autowired\n    private MockMvc mockMvc;\n    \n    @MockBean\n    private ProductService productService;\n    \n    @Autowired\n    private ProductRepository productRepository;\n    \n    @Test\n    public void testGetAllProducts() throws Exception {\n        // Given\n        List<Product> products = Arrays.asList(\n            new Product(1L, \"Laptop\", 999.99),\n            new Product(2L, \"Phone\", 599.99)\n        );\n        \n        when(productService.getAllProducts()).thenReturn(products);\n        \n        // When/Then\n        mockMvc.perform(get(\"/api/products\")\n                .contentType(MediaType.APPLICATION_JSON))\n                .andExpect(status().isOk())\n                .andExpect(jsonPath(\"$[0].name\").value(\"Laptop\"))\n                .andExpect(jsonPath(\"$[1].name\").value(\"Phone\"));\n    }\n}",
+      "options": {
+        "A": "The code is incorrect because @SpringBootTest should be replaced with @WebMvcTest for service tests",
+        "B": "The code is incorrect because @MockBean cannot be used with @SpringBootTest",
+        "C": "The code is incorrect because you cannot mock the repository layer in a service test",
+        "D": "The code is correct and demonstrates a proper Spring Boot service test using @MockBean"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Thread Interruption Mechanism",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class InterruptionDemo {\n    public static void main(String[] args) {\n        Thread workerThread = new Thread(() -> {\n            try {\n                System.out.println(\"Worker thread started\");\n                while (!Thread.currentThread().isInterrupted()) {\n                    // Simulating some work\n                    System.out.println(\"Working...\");\n                    Thread.sleep(1000);\n                }\n            } catch (InterruptedException e) {\n                System.out.println(\"Worker thread was interrupted while sleeping\");\n                return; // Exit the thread\n            }\n            System.out.println(\"Worker thread stopped normally\");\n        });\n        \n        workerThread.start();\n        \n        try {\n            Thread.sleep(3500); // Let worker thread run for a while\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n        \n        workerThread.interrupt();\n        System.out.println(\"Main thread sent interrupt signal\");\n        \n        try {\n            workerThread.join();\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n        \n        System.out.println(\"Main thread exiting\");\n    }\n}",
+      "options": {
+        "A": "Worker thread started\nWorking...\nWorking...\nWorking...\nMain thread sent interrupt signal\nWorker thread was interrupted while sleeping\nMain thread exiting",
+        "B": "Worker thread started\nWorking...\nWorking...\nWorking...\nWorking...\nMain thread sent interrupt signal\nWorker thread stopped normally\nMain thread exiting",
+        "C": "Worker thread started\nWorking...\nWorking...\nWorking...\nMain thread sent interrupt signal\nWorker thread stopped normally\nMain thread exiting",
+        "D": "Worker thread started\nWorking...\nWorking...\nWorking...\nMain thread sent interrupt signal\nWorking...\nWorker thread stopped normally\nMain thread exiting"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "Exception Propagation Mechanism in Java",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class ExceptionPropagationDemo {\n    public static void main(String[] args) {\n        try {\n            System.out.println(\"Main method starts\");\n            methodA();\n            System.out.println(\"Main method ends\");\n        } catch (RuntimeException e) {\n            System.out.println(\"Caught in main: \" + e.getMessage());\n        }\n    }\n    \n    private static void methodA() {\n        System.out.println(\"Method A starts\");\n        try {\n            methodB();\n        } catch (IllegalArgumentException e) {\n            System.out.println(\"Caught in A: \" + e.getMessage());\n        }\n        System.out.println(\"Method A ends\");\n    }\n    \n    private static void methodB() {\n        System.out.println(\"Method B starts\");\n        methodC();\n        System.out.println(\"Method B ends\");\n    }\n    \n    private static void methodC() {\n        System.out.println(\"Method C starts\");\n        throw new NullPointerException(\"Error in C\");\n        // Unreachable code: System.out.println(\"Method C ends\");\n    }\n}",
+      "options": {
+        "A": "Main method starts\nMethod A starts\nMethod B starts\nMethod C starts\nMethod B ends\nMethod A ends\nMain method ends",
+        "B": "Main method starts\nMethod A starts\nMethod B starts\nMethod C starts\nCaught in A: Error in C\nMethod A ends\nMain method ends",
+        "C": "Main method starts\nMethod A starts\nMethod B starts\nMethod C starts\nCaught in main: Error in C",
+        "D": "Main method starts\nMethod A starts\nMethod B starts\nMethod C starts\nMethod B ends\nMain method ends"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "super Keyword and Its Uses",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Parent {\n    protected int value = 10;\n    \n    public Parent() {\n        System.out.println(\"Parent constructor\");\n    }\n    \n    public void display() {\n        System.out.println(\"Parent value: \" + value);\n    }\n    \n    public void show() {\n        System.out.println(\"Parent show method\");\n    }\n}\n\nclass Child extends Parent {\n    protected int value = 20;\n    \n    public Child() {\n        super();\n        System.out.println(\"Child constructor\");\n    }\n    \n    @Override\n    public void display() {\n        System.out.println(\"Child value: \" + value);\n        System.out.println(\"Parent value: \" + super.value);\n    }\n    \n    public void show() {\n        super.show();\n        System.out.println(\"Child show method\");\n    }\n}\n\npublic class SuperKeywordDemo {\n    public static void main(String[] args) {\n        Child child = new Child();\n        child.display();\n        child.show();\n    }\n}",
+      "options": {
+        "A": "Parent constructor\nChild constructor\nChild value: 20\nParent value: 10\nParent show method\nChild show method",
+        "B": "Child constructor\nParent value: 10\nParent show method",
+        "C": "Parent constructor\nChild constructor\nChild value: 20\nParent value: 20\nParent show method\nChild show method",
+        "D": "Parent constructor\nChild constructor\nParent value: 10\nChild show method"
+      },
+      "correct_answer": "A"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will be the output of the following CompletableFuture code?",
+      "options": {
+        "A": "Result: 6",
+        "B": "Result: 15",
+        "C": "Result: 11",
+        "D": "A CompletionException will be thrown"
+      },
+      "correct_answer": "C",
+      "code_example": "import java.util.concurrent.CompletableFuture;\n\npublic class CompletableFutureExample {\n    public static void main(String[] args) {\n        CompletableFuture<Integer> future1 = CompletableFuture.supplyAsync(() -> 5);\n        CompletableFuture<Integer> future2 = CompletableFuture.supplyAsync(() -> 6);\n        \n        CompletableFuture<Integer> combinedFuture = future1\n            .thenCombine(future2, (result1, result2) -> result1 + result2);\n        \n        System.out.println(\"Result: \" + combinedFuture.join());\n    }\n}"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "According to the equals() and hashCode() contract, which of the following statements is INCORRECT?",
+      "options": {
+        "A": "If two objects are equal according to equals(), they must have the same hashCode() value",
+        "B": "If two objects have the same hashCode() value, they must be equal according to equals()",
+        "C": "The hashCode() of an object must not change during its lifecycle in a HashSet",
+        "D": "For any non-null reference x, x.equals(x) should return true"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "When using Spring Profiles, what will be the output of the following code if the application runs with '-Dspring.profiles.active=prod' profile?",
+      "options": {
+        "A": "Using development configuration",
+        "B": "Using production configuration",
+        "C": "No profile selected",
+        "D": "A BeanCreationException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "import org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\nimport org.springframework.context.annotation.Profile;\n\n@Configuration\npublic class AppConfig {\n    \n    @Bean\n    @Profile(\"dev\")\n    public MessageService devMessageService() {\n        return new MessageService(\"Using development configuration\");\n    }\n    \n    @Bean\n    @Profile(\"prod\")\n    public MessageService prodMessageService() {\n        return new MessageService(\"Using production configuration\");\n    }\n    \n    @Bean\n    @Profile(\"default\")\n    public MessageService defaultMessageService() {\n        return new MessageService(\"No profile selected\");\n    }\n}\n\nclass MessageService {\n    private String message;\n    \n    public MessageService(String message) {\n        this.message = message;\n    }\n    \n    public void printMessage() {\n        System.out.println(message);\n    }\n}"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using ConcurrentHashMap?",
+      "options": {
+        "A": "10",
+        "B": "9",
+        "C": "8",
+        "D": "ConcurrentModificationException will be thrown"
+      },
+      "correct_answer": "A",
+      "code_example": "import java.util.concurrent.ConcurrentHashMap;\nimport java.util.Map;\n\npublic class ConcurrentMapExample {\n    public static void main(String[] args) {\n        Map<String, Integer> map = new ConcurrentHashMap<>();\n        \n        for (int i = 0; i < 10; i++) {\n            map.put(\"Key\" + i, i);\n        }\n        \n        int count = 0;\n        for (Map.Entry<String, Integer> entry : map.entrySet()) {\n            count++;\n            if (entry.getValue() == 5) {\n                map.remove(\"Key8\");\n                map.put(\"NewKey\", 100);\n            }\n        }\n        \n        System.out.println(count);\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What is the result of executing the following code that uses a synchronized list?",
+      "options": {
+        "A": "ConcurrentModificationException will be thrown",
+        "B": "[1, 3, 5, 7, 9]",
+        "C": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+        "D": "[1, 3, 5, 7, 9, 2, 4, 6, 8, 10]"
+      },
+      "correct_answer": "A",
+      "code_example": "import java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.List;\n\npublic class SynchronizedListExample {\n    public static void main(String[] args) {\n        List<Integer> synchronizedList = Collections.synchronizedList(new ArrayList<>());\n        \n        for (int i = 1; i <= 10; i++) {\n            synchronizedList.add(i);\n        }\n        \n        // Note: We're not using the synchronized block here deliberately to demonstrate the issue\n        for (Integer number : synchronizedList) {\n            if (number % 2 == 0) {\n                synchronizedList.remove(number);\n            }\n        }\n        \n        System.out.println(synchronizedList);\n    }\n}"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a common way to avoid deadlocks in Java?",
+      "options": {
+        "A": "Always acquire locks in a fixed global order",
+        "B": "Use tryLock() with timeout instead of lock()",
+        "C": "Set thread priorities to ensure high-priority threads acquire locks first",
+        "D": "Use concurrent collections instead of explicit locking where possible"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating the difference between fail-fast and fail-safe iterators?",
+      "options": {
+        "A": "ConcurrentModificationException will be thrown",
+        "B": "1, 2, 3, 4, 5",
+        "C": "1, 2, 4, 5",
+        "D": "1, 2, 4, 5, 6"
+      },
+      "correct_answer": "C",
+      "code_example": "import java.util.concurrent.CopyOnWriteArrayList;\nimport java.util.List;\nimport java.util.Iterator;\n\npublic class IteratorExample {\n    public static void main(String[] args) {\n        List<Integer> list = new CopyOnWriteArrayList<>();\n        list.add(1);\n        list.add(2);\n        list.add(3);\n        list.add(4);\n        list.add(5);\n        \n        Iterator<Integer> iterator = list.iterator();\n        \n        while (iterator.hasNext()) {\n            Integer num = iterator.next();\n            System.out.print(num + \", \");\n            \n            if (num == 3) {\n                // This will modify the list but won't affect the iterator\n                list.remove(2); // Remove the number 3\n                list.add(6);    // Add a new number\n            }\n        }\n    }\n}"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "In a Spring Boot application with the following configuration, what will be the value of 'defaultTimeout' when the application starts?",
+      "options": {
+        "A": "5000",
+        "B": "3000",
+        "C": "10000",
+        "D": "A BeanCreationException will be thrown"
+      },
+      "correct_answer": "A",
+      "code_example": "import org.springframework.beans.factory.annotation.Value;\nimport org.springframework.context.annotation.Configuration;\nimport org.springframework.context.annotation.PropertySource;\n\n@Configuration\n@PropertySource(\"classpath:application.properties\")\n@PropertySource(value = \"classpath:timeout.properties\", ignoreResourceNotFound = true)\npublic class TimeoutConfig {\n    \n    @Value(\"${service.timeout:5000}\")\n    private int defaultTimeout;\n    \n    // application.properties contains: service.timeout=3000\n    // timeout.properties is not present\n    \n    public int getDefaultTimeout() {\n        return defaultTimeout;\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the time complexity of the following code segment?",
+      "options": {
+        "A": "O(n)",
+        "B": "O(n²)",
+        "C": "O(1)",
+        "D": "O(n log n)"
+      },
+      "correct_answer": "B",
+      "code_example": "String str1 = \"Hello\";\nString str2 = \"World\";\nString result = \"\";\n\nfor (int i = 0; i < 1000; i++) {\n    for (int j = 0; j < str1.length(); j++) {\n        result += str1.charAt(j) + str2.charAt(j % str2.length());\n    }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What is the primary difference between customizing auto-configuration using @EnableAutoConfiguration excludes and using application.properties?",
+      "options": {
+        "A": "The @EnableAutoConfiguration excludes work only during application startup",
+        "B": "The application.properties approach allows for dynamic changes at runtime",
+        "C": "The @EnableAutoConfiguration excludes approach is compile-time binding, while properties are runtime binding",
+        "D": "There is no difference; they both exclude configurations at application startup"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating custom exception hierarchy?",
+      "options": {
+        "A": "ServiceException: Data processing failed: Database connection failed",
+        "B": "DatabaseException: Database connection failed",
+        "C": "Data processing failed: Database connection failed",
+        "D": "A stack trace with DatabaseException as the root cause"
+      },
+      "correct_answer": "A",
+      "code_example": "public class ExceptionHierarchyExample {\n    public static void main(String[] args) {\n        try {\n            processData();\n        } catch (ServiceException e) {\n            System.out.println(e.getMessage());\n        }\n    }\n    \n    public static void processData() throws ServiceException {\n        try {\n            connectToDatabase();\n        } catch (DatabaseException e) {\n            throw new ServiceException(\"Data processing failed: \" + e.getMessage(), e);\n        }\n    }\n    \n    public static void connectToDatabase() throws DatabaseException {\n        throw new DatabaseException(\"Database connection failed\");\n    }\n}\n\nclass ServiceException extends Exception {\n    public ServiceException(String message, Throwable cause) {\n        super(message, cause);\n    }\n}\n\nclass DatabaseException extends Exception {\n    public DatabaseException(String message) {\n        super(message);\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be printed when the following code using dynamic method dispatch is executed?",
+      "options": {
+        "A": "Parent implementation of method1, Parent implementation of method2",
+        "B": "Child implementation of method1, Child implementation of method2",
+        "C": "Child implementation of method1, Parent implementation of method2",
+        "D": "Parent implementation of method1, Child implementation of method2"
+      },
+      "correct_answer": "C",
+      "code_example": "class Parent {\n    public void method1() {\n        System.out.print(\"Parent implementation of method1, \");\n        method2();\n    }\n    \n    public void method2() {\n        System.out.print(\"Parent implementation of method2\");\n    }\n}\n\nclass Child extends Parent {\n    @Override\n    public void method1() {\n        System.out.print(\"Child implementation of method1, \");\n        super.method2();\n    }\n    \n    @Override\n    public void method2() {\n        System.out.print(\"Child implementation of method2\");\n    }\n}\n\npublic class DynamicMethodDispatchExample {\n    public static void main(String[] args) {\n        Parent obj = new Child();\n        obj.method1();\n    }\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "Which of the following statements is TRUE regarding OAuth2 scopes in Spring Security?",
+      "options": {
+        "A": "Scopes can only be defined at the resource server level, not at the client level",
+        "B": "A client can request any scope, even if not pre-configured for that client",
+        "C": "Scopes define what access tokens can be used for, not what clients can request",
+        "D": "When using JWT tokens, scopes can only be stored in the 'aud' claim"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates thread interruption?",
+      "options": {
+        "A": "Thread interrupted: true",
+        "B": "Thread interrupted: false\nThread interrupted: true",
+        "C": "Thread interrupted: false\nThread interrupted: false",
+        "D": "The code will hang indefinitely"
+      },
+      "correct_answer": "B",
+      "code_example": "public class ThreadInterruptionExample {\n    public static void main(String[] args) throws InterruptedException {\n        Thread thread = new Thread(() -> {\n            System.out.println(\"Thread interrupted: \" + Thread.currentThread().isInterrupted());\n            \n            try {\n                Thread.sleep(5000);\n            } catch (InterruptedException e) {\n                System.out.println(\"Thread interrupted: \" + Thread.currentThread().isInterrupted());\n            }\n        });\n        \n        thread.start();\n        Thread.sleep(1000);\n        thread.interrupt();\n        thread.join();\n    }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "In the JVM memory structure, which of the following statements is INCORRECT?",
+      "options": {
+        "A": "Method Area is used to store class structures, methods, and constant pool",
+        "B": "Every thread has its own program counter register and JVM stack",
+        "C": "Objects created with 'new' are always allocated in the heap regardless of escape analysis",
+        "D": "G1 Garbage Collector divides the heap into regions to improve collection efficiency"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will happen when you try to run the following Spring Boot application configuration?",
+      "options": {
+        "A": "The application will start with Tomcat on port 8443",
+        "B": "The application will start with Undertow on port 8443",
+        "C": "The application will fail to start due to conflicting server configurations",
+        "D": "The application will start with Jetty on port 8080"
+      },
+      "correct_answer": "B",
+      "code_example": "import org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\nimport org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration;\nimport org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;\nimport org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory;\nimport org.springframework.boot.web.servlet.server.ServletWebServerFactory;\nimport org.springframework.context.annotation.Bean;\n\n@SpringBootApplication(exclude = ServletWebServerFactoryAutoConfiguration.class)\npublic class ServerConfigurationExample {\n\n    public static void main(String[] args) {\n        SpringApplication.run(ServerConfigurationExample.class, args);\n    }\n    \n    @Bean\n    public ServletWebServerFactory tomcatFactory() {\n        TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();\n        factory.setPort(8080);\n        return factory;\n    }\n    \n    @Bean(name = \"servletWebServerFactory\")\n    public ServletWebServerFactory undertowFactory() {\n        UndertowServletWebServerFactory factory = new UndertowServletWebServerFactory();\n        factory.setPort(8443);\n        return factory;\n    }\n}"
+    }
+  ]
+}
