@@ -1,0 +1,643 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "Custom Exception Handling",
+      "question": "What is the output of the following code?",
+      "code_example": "class CustomException extends Exception {\n    public CustomException(String message) {\n        super(message);\n    }\n}\n\npublic class ExceptionTest {\n    public static void main(String[] args) {\n        try {\n            throw new CustomException(\"Error occurred\");\n        } catch (CustomException e) {\n            System.out.println(e.getMessage());\n        } catch (Exception e) {\n            System.out.println(\"Generic exception: \" + e.getMessage());\n        }\n    }\n}",
+      "options": {
+        "A": "Generic exception: Error occurred",
+        "B": "Error occurred",
+        "C": "CustomException: Error occurred",
+        "D": "Compilation error: Exception CustomException has already been caught"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "Access Modifiers",
+      "question": "Which statement about access modifiers is incorrect?",
+      "options": {
+        "A": "Protected members are accessible within the same package and by subclasses in any package",
+        "B": "Private members are only accessible within the same class",
+        "C": "Default (package-private) members are accessible within the same package",
+        "D": "Public members can be accessed from any other class, even in different packages"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "Constructors",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Person {\n    private String name;\n    private int age;\n    \n    // Default constructor\n    public Person() {\n        this(\"Unknown\", 0);\n        System.out.print(\"1\");\n    }\n    \n    // Parameterized constructor\n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n        System.out.print(\"2\");\n    }\n    \n    // Copy constructor\n    public Person(Person other) {\n        this(other.name, other.age);\n        System.out.print(\"3\");\n    }\n}\n\npublic class ConstructorTest {\n    public static void main(String[] args) {\n        Person p1 = new Person();\n        Person p2 = new Person(\"Alice\", 25);\n        Person p3 = new Person(p2);\n    }\n}",
+      "options": {
+        "A": "123",
+        "B": "213",
+        "C": "121",
+        "D": "212"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "Java Naming Conventions",
+      "question": "Which of the following follows the correct Java naming conventions?",
+      "options": {
+        "A": "class myClass { void Do_Something() {} }",
+        "B": "class MyClass { void doSomething() {} }",
+        "C": "class my_class { void doSomething() {} }",
+        "D": "class MyClass { void DoSomething() {} }"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "try-with-resources",
+      "question": "What is the output of the following code?",
+      "code_example": "import java.io.Closeable;\n\nclass Resource implements Closeable {\n    private String name;\n    \n    public Resource(String name) {\n        this.name = name;\n        System.out.print(\"Open:\" + name + \" \");\n    }\n    \n    @Override\n    public void close() {\n        System.out.print(\"Close:\" + name + \" \");\n    }\n}\n\npublic class TryWithResourcesTest {\n    public static void main(String[] args) {\n        try (Resource r1 = new Resource(\"A\");\n             Resource r2 = new Resource(\"B\")) {\n            System.out.print(\"Try \");\n            throw new RuntimeException();\n        } catch (Exception e) {\n            System.out.print(\"Catch \");\n        } finally {\n            System.out.print(\"Finally\");\n        }\n    }\n}",
+      "options": {
+        "A": "Open:A Open:B Try Close:A Close:B Catch Finally",
+        "B": "Open:A Open:B Try Catch Finally Close:A Close:B",
+        "C": "Open:A Open:B Try Catch Close:B Close:A Finally",
+        "D": "Open:A Open:B Try Catch Close:A Close:B Finally"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "Spring Beans and Bean Lifecycle",
+      "question": "In which order are Spring bean lifecycle methods called?",
+      "options": {
+        "A": "Constructor → @PostConstruct → InitializingBean → init-method → @PreDestroy → DisposableBean → destroy-method",
+        "B": "Constructor → InitializingBean → @PostConstruct → init-method → DisposableBean → @PreDestroy → destroy-method",
+        "C": "Constructor → @PostConstruct → InitializingBean → init-method → DisposableBean → @PreDestroy → destroy-method",
+        "D": "Constructor → InitializingBean → init-method → @PostConstruct → @PreDestroy → destroy-method → DisposableBean"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "Static vs Instance Methods",
+      "question": "What is the output of the following code?",
+      "code_example": "public class StaticTest {\n    private int value = 10;\n    \n    public static void main(String[] args) {\n        StaticTest test1 = new StaticTest();\n        test1.value = 20;\n        StaticTest test2 = new StaticTest();\n        test1.print();\n        test2.print();\n        StaticTest.staticPrint();\n    }\n    \n    public void print() {\n        System.out.print(value + \" \");\n    }\n    \n    public static void staticPrint() {\n        System.out.print(\"Static \");\n        // System.out.print(value); // This would cause a compilation error\n    }\n}",
+      "options": {
+        "A": "20 10 Static",
+        "B": "20 20 Static",
+        "C": "10 10 Static",
+        "D": "10 20 Static"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "ApplicationContext vs BeanFactory",
+      "question": "Which of the following statements about ApplicationContext and BeanFactory is NOT true?",
+      "options": {
+        "A": "ApplicationContext extends BeanFactory",
+        "B": "BeanFactory lazily initializes beans by default",
+        "C": "ApplicationContext eagerly initializes singleton beans by default",
+        "D": "BeanFactory provides more features than ApplicationContext"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Comments in Java",
+      "question": "Which of the following is NOT a valid comment in Java?",
+      "code_example": "/* Example 1 */\n\n// Example 2\n\n/** Example 3 */\n\n/*/ Example 4 /*/",
+      "options": {
+        "A": "Example 1",
+        "B": "Example 2",
+        "C": "Example 3",
+        "D": "Example 4"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Java Beans and POJOs",
+      "question": "Which of the following classes follows the JavaBean specification?",
+      "code_example": "// Class A\npublic class UserA {\n    private String name;\n    private int age;\n    \n    public String getName() { return name; }\n    public void setName(String name) { this.name = name; }\n    public int getAge() { return age; }\n    public void setAge(int age) { this.age = age; }\n}\n\n// Class B\npublic class UserB {\n    public String name;\n    public int age;\n}\n\n// Class C\npublic class UserC {\n    private String name;\n    private int age;\n    \n    public UserC(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n    \n    public String getName() { return name; }\n    public int getAge() { return age; }\n}\n\n// Class D\npublic class UserD {\n    private String name;\n    private int age;\n    \n    public UserD() {}\n    \n    public String getName() { return name; }\n    public void setName(String name) { this.name = name; }\n    public int getAge() { return age; }\n    public void setAge(int age) { this.age = age; }\n}",
+      "options": {
+        "A": "UserA",
+        "B": "UserB",
+        "C": "UserC",
+        "D": "UserD"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "Spring Boot Starters",
+      "question": "What is the primary purpose of Spring Boot starters?",
+      "options": {
+        "A": "To provide a faster runtime environment for Spring applications",
+        "B": "To simplify dependency management by bundling related dependencies together",
+        "C": "To replace the need for an application context in Spring",
+        "D": "To generate boilerplate code for common application features"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "static Keyword",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class StaticBlockTest {\n    static {\n        System.out.print(\"Static block 1 \");\n    }\n    \n    public static void main(String[] args) {\n        System.out.print(\"Main \");\n        new StaticBlockTest();\n        new StaticBlockTest();\n    }\n    \n    static {\n        System.out.print(\"Static block 2 \");\n    }\n    \n    {\n        System.out.print(\"Instance block \");\n    }\n    \n    public StaticBlockTest() {\n        System.out.print(\"Constructor \");\n    }\n}",
+      "options": {
+        "A": "Static block 1 Static block 2 Main Instance block Constructor Instance block Constructor",
+        "B": "Main Static block 1 Static block 2 Instance block Constructor Instance block Constructor",
+        "C": "Static block 1 Main Static block 2 Instance block Constructor Instance block Constructor",
+        "D": "Static block 1 Static block 2 Main Constructor Constructor"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "HashMap vs TreeMap vs LinkedHashMap",
+      "question": "Which of the following statements about Java Map implementations is correct?",
+      "code_example": "import java.util.*;\n\npublic class MapTest {\n    public static void main(String[] args) {\n        Map<String, Integer> hashMap = new HashMap<>();\n        Map<String, Integer> treeMap = new TreeMap<>();\n        Map<String, Integer> linkedHashMap = new LinkedHashMap<>();\n        \n        // Add elements in the same order to all maps\n        hashMap.put(\"C\", 3);\n        hashMap.put(\"A\", 1);\n        hashMap.put(\"B\", 2);\n        \n        treeMap.put(\"C\", 3);\n        treeMap.put(\"A\", 1);\n        treeMap.put(\"B\", 2);\n        \n        linkedHashMap.put(\"C\", 3);\n        linkedHashMap.put(\"A\", 1);\n        linkedHashMap.put(\"B\", 2);\n        \n        // Print keys\n        System.out.println(\"HashMap keys: \" + hashMap.keySet());\n        System.out.println(\"TreeMap keys: \" + treeMap.keySet());\n        System.out.println(\"LinkedHashMap keys: \" + linkedHashMap.keySet());\n    }\n}",
+      "options": {
+        "A": "HashMap maintains insertion order, TreeMap sorts by natural ordering, LinkedHashMap maintains access order",
+        "B": "HashMap has no ordering guarantee, TreeMap sorts by natural ordering, LinkedHashMap maintains insertion order",
+        "C": "HashMap sorts by hash code, TreeMap has no ordering guarantee, LinkedHashMap maintains access order",
+        "D": "HashMap sorts by hash code, TreeMap maintains insertion order, LinkedHashMap sorts by natural ordering"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "Auto-Configuration in Spring Boot",
+      "question": "How can you disable a specific auto-configuration class in Spring Boot?",
+      "options": {
+        "A": "By adding @DisableAutoConfiguration annotation to your main application class",
+        "B": "By removing the related starter dependency from your build file",
+        "C": "By using @EnableAutoConfiguration(exclude={SpecificAutoConfiguration.class})",
+        "D": "By defining a bean of the same type in your configuration class"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "Inversion of Control (IoC) and Dependency Injection (DI)",
+      "question": "Which of the following is NOT a type of dependency injection in Spring?",
+      "options": {
+        "A": "Constructor Injection",
+        "B": "Setter Injection",
+        "C": "Field Injection",
+        "D": "Method Return Injection"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "JDK, JRE, and JVM",
+      "question": "Which statement about JDK, JRE, and JVM is correct?",
+      "options": {
+        "A": "JDK contains JRE, which contains JVM",
+        "B": "JRE contains JDK, which contains JVM",
+        "C": "JVM contains JRE, which contains JDK",
+        "D": "JDK, JRE, and JVM are independent components with no containment relationship"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Method Hiding in Java",
+      "question": "What is the output of the following code?",
+      "code_example": "class Parent {\n    public static void display() {\n        System.out.print(\"Parent's static method \");\n    }\n    \n    public void show() {\n        System.out.print(\"Parent's instance method \");\n    }\n}\n\nclass Child extends Parent {\n    public static void display() {\n        System.out.print(\"Child's static method \");\n    }\n    \n    @Override\n    public void show() {\n        System.out.print(\"Child's instance method \");\n    }\n}\n\npublic class MethodHidingTest {\n    public static void main(String[] args) {\n        Parent p = new Child();\n        p.display();\n        p.show();\n    }\n}",
+      "options": {
+        "A": "Parent's static method Parent's instance method",
+        "B": "Child's static method Child's instance method",
+        "C": "Parent's static method Child's instance method",
+        "D": "Child's static method Parent's instance method"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "instanceof Operator and Type Checking",
+      "question": "What will be the output of the following code?",
+      "code_example": "interface Animal {}\nclass Mammal implements Animal {}\nclass Dog extends Mammal {}\nclass Cat extends Mammal {}\n\npublic class InstanceofTest {\n    public static void main(String[] args) {\n        Animal animal = new Dog();\n        Mammal mammal = new Cat();\n        \n        System.out.print(animal instanceof Animal ? \"A\" : \"\");\n        System.out.print(animal instanceof Mammal ? \"B\" : \"\");\n        System.out.print(animal instanceof Dog ? \"C\" : \"\");\n        System.out.print(animal instanceof Cat ? \"D\" : \"\");\n        \n        System.out.print(mammal instanceof Animal ? \"E\" : \"\");\n        System.out.print(mammal instanceof Cat ? \"F\" : \"\");\n        System.out.print(mammal instanceof Dog ? \"G\" : \"\");\n    }\n}",
+      "options": {
+        "A": "ABCEF",
+        "B": "ABCEFG",
+        "C": "ABCDEF",
+        "D": "ABCE"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "hashCode() and equals() Contract",
+      "question": "What is the expected output of the following code?",
+      "code_example": "import java.util.HashSet;\nimport java.util.Set;\n\nclass Person {\n    private String name;\n    private int age;\n    \n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n    \n    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) return true;\n        if (!(obj instanceof Person)) return false;\n        Person other = (Person) obj;\n        return name.equals(other.name) && age == other.age;\n    }\n    \n    // No hashCode method implementation\n}\n\npublic class HashCodeEqualsTest {\n    public static void main(String[] args) {\n        Set<Person> set = new HashSet<>();\n        Person p1 = new Person(\"John\", 30);\n        Person p2 = new Person(\"John\", 30);\n        \n        set.add(p1);\n        set.add(p2);\n        \n        System.out.println(p1.equals(p2) + \" \" + set.size());\n    }\n}",
+      "options": {
+        "A": "true 1",
+        "B": "true 2",
+        "C": "false 1",
+        "D": "false 2"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "Chained Exceptions in Java",
+      "question": "What is the output of the following code?",
+      "code_example": "public class ChainedExceptionTest {\n    public static void main(String[] args) {\n        try {\n            method1();\n        } catch (Exception e) {\n            System.out.print(e.getMessage() + \" \");\n            Throwable cause = e.getCause();\n            if (cause != null) {\n                System.out.print(cause.getMessage());\n            }\n        }\n    }\n    \n    public static void method1() throws Exception {\n        try {\n            method2();\n        } catch (IllegalArgumentException e) {\n            Exception wrapper = new Exception(\"Method1 failed\");\n            wrapper.initCause(e);\n            throw wrapper;\n        }\n    }\n    \n    public static void method2() {\n        throw new IllegalArgumentException(\"Invalid argument in Method2\");\n    }\n}",
+      "options": {
+        "A": "Method1 failed",
+        "B": "Invalid argument in Method2",
+        "C": "Method1 failed Invalid argument in Method2",
+        "D": "Invalid argument in Method2 Method1 failed"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "toString(), hashCode(), and equals() in Object Class",
+      "question": "What is the output of the following code?",
+      "code_example": "class CustomObject {\n    private int id;\n    \n    public CustomObject(int id) {\n        this.id = id;\n    }\n    \n    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) return true;\n        if (!(obj instanceof CustomObject)) return false;\n        return id == ((CustomObject)obj).id;\n    }\n    \n    // No hashCode or toString override\n}\n\npublic class ObjectMethodsTest {\n    public static void main(String[] args) {\n        CustomObject obj1 = new CustomObject(100);\n        CustomObject obj2 = new CustomObject(100);\n        \n        System.out.print(obj1.equals(obj2) + \" \");\n        System.out.print((obj1.hashCode() == obj2.hashCode()) + \" \");\n        System.out.print(obj1.toString().equals(obj2.toString()));\n    }\n}",
+      "options": {
+        "A": "true true true",
+        "B": "true false false",
+        "C": "false false false",
+        "D": "true true false"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "Secure REST APIs with Spring Security",
+      "question": "Which of the following is NOT a valid method to secure a REST API endpoint in Spring Security?",
+      "options": {
+        "A": "Using the @Secured annotation",
+        "B": "Using the @RolesAllowed annotation",
+        "C": "Using method security with @PreAuthorize and SpEL expressions",
+        "D": "Using the @SecureEndpoint annotation"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "Property Source",
+      "question": "What will be the value of 'message' in the following Spring Boot application?",
+      "code_example": "// application.properties\n// app.message=Default message\n\n// custom.properties\n// app.message=Custom message\n\nimport org.springframework.beans.factory.annotation.Value;\nimport org.springframework.context.annotation.PropertySource;\nimport org.springframework.stereotype.Component;\n\n@Component\n@PropertySource(\"classpath:custom.properties\")\npublic class MessagePrinter {\n    @Value(\"${app.message:Fallback message}\")\n    private String message;\n    \n    public void printMessage() {\n        System.out.println(message);\n    }\n}",
+      "options": {
+        "A": "Default message",
+        "B": "Custom message",
+        "C": "Fallback message",
+        "D": "The application won't start due to conflicting property definitions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "Covariant Return Types",
+      "question": "What is the output of the following code?",
+      "code_example": "class Animal {\n    public Animal reproduce() {\n        System.out.print(\"Animal reproduced \");\n        return new Animal();\n    }\n}\n\nclass Dog extends Animal {\n    @Override\n    public Dog reproduce() {\n        System.out.print(\"Dog reproduced \");\n        return new Dog();\n    }\n}\n\npublic class CovariantReturnTest {\n    public static void main(String[] args) {\n        Animal animal = new Animal();\n        Animal dog = new Dog();\n        \n        Animal newAnimal = animal.reproduce();\n        Animal newDog = dog.reproduce();\n        \n        System.out.print(newAnimal.getClass().getSimpleName() + \" \");\n        System.out.print(newDog.getClass().getSimpleName());\n    }\n}",
+      "options": {
+        "A": "Animal reproduced Dog reproduced Animal Animal",
+        "B": "Animal reproduced Dog reproduced Animal Dog",
+        "C": "Animal reproduced Animal reproduced Animal Animal",
+        "D": "Dog reproduced Dog reproduced Dog Dog"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Exception Propagation Mechanism in Java",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class ExceptionPropagationTest {\n    public static void main(String[] args) {\n        try {\n            System.out.print(\"1 \");\n            method1();\n            System.out.print(\"2 \");\n        } catch (RuntimeException e) {\n            System.out.print(\"3 \");\n        } finally {\n            System.out.print(\"4 \");\n        }\n        System.out.print(\"5\");\n    }\n    \n    public static void method1() {\n        try {\n            System.out.print(\"6 \");\n            method2();\n            System.out.print(\"7 \");\n        } catch (IllegalArgumentException e) {\n            System.out.print(\"8 \");\n            throw new RuntimeException();\n        } finally {\n            System.out.print(\"9 \");\n        }\n    }\n    \n    public static void method2() {\n        throw new IllegalArgumentException();\n    }\n}",
+      "options": {
+        "A": "1 6 8 9 3 4 5",
+        "B": "1 6 7 8 9 3 4 5",
+        "C": "1 6 8 9 4 5",
+        "D": "1 6 8 9 3 5"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "Immutable Strings in Java",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class StringTest {\n    public static void main(String[] args) {\n        String s1 = \"Java\";\n        String s2 = \"Java\";\n        String s3 = new String(\"Java\");\n        String s4 = s3.intern();\n        \n        System.out.print((s1 == s2) + \" \");\n        System.out.print((s1 == s3) + \" \");\n        System.out.print((s1 == s4) + \" \");\n        System.out.print(s1.equals(s3));\n    }\n}",
+      "options": {
+        "A": "false false false true",
+        "B": "true false true true",
+        "C": "true false false true",
+        "D": "true true true true"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "instanceof Operator Usage",
+      "question": "Which statement about the instanceof operator is correct?",
+      "code_example": "interface I1 {}\ninterface I2 {}\nclass A implements I1 {}\nclass B extends A implements I2 {}\n\npublic class InstanceofTest {\n    public static void main(String[] args) {\n        A a = new A();\n        B b = new B();\n        Object o = b;\n        \n        boolean test1 = null instanceof A;\n        boolean test2 = a instanceof I1;\n        boolean test3 = b instanceof I1;\n        boolean test4 = o instanceof B;\n        boolean test5 = a instanceof B;\n        \n        System.out.println(test1 + \" \" + test2 + \" \" + test3 + \" \" + test4 + \" \" + test5);\n    }\n}",
+      "options": {
+        "A": "instanceof always returns false for null references",
+        "B": "instanceof can only be used with concrete classes, not interfaces",
+        "C": "instanceof returns true only if the object and the type have the same class",
+        "D": "instanceof can only be used with reference types that are in the same inheritance hierarchy"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "JWT Authentication in Spring Security",
+      "question": "Which of the following is NOT a standard JWT claim?",
+      "options": {
+        "A": "iss (issuer)",
+        "B": "exp (expiration time)",
+        "C": "uid (user identifier)",
+        "D": "sub (subject)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "Nested try Blocks",
+      "question": "What is the output of the following code?",
+      "code_example": "public class NestedTryTest {\n    public static void main(String[] args) {\n        try {\n            System.out.print(\"Outer try - \");\n            try {\n                System.out.print(\"Inner try - \");\n                throw new IllegalArgumentException();\n            } catch (RuntimeException e) {\n                System.out.print(\"Inner catch - \");\n                throw new Exception();\n            } finally {\n                System.out.print(\"Inner finally - \");\n            }\n        } catch (Exception e) {\n            System.out.print(\"Outer catch - \");\n        } finally {\n            System.out.print(\"Outer finally\");\n        }\n    }\n}",
+      "options": {
+        "A": "Outer try - Inner try - Inner catch - Inner finally - Outer catch - Outer finally",
+        "B": "Outer try - Inner try - Inner catch - Outer catch - Inner finally - Outer finally",
+        "C": "Outer try - Inner try - Inner catch - Inner finally - Outer finally",
+        "D": "Outer try - Inner try - Inner finally - Outer catch - Outer finally"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Abstract Classes vs Interfaces",
+      "question": "Which of the following statements is FALSE regarding abstract classes and interfaces in Java?",
+      "code_example": "abstract class AbstractShape {\n    protected String color;\n    \n    public AbstractShape(String color) {\n        this.color = color;\n    }\n    \n    public abstract double area();\n    \n    public final String getColor() {\n        return color;\n    }\n}\n\ninterface Drawable {\n    void draw();\n    \n    default void displayInfo() {\n        System.out.println(\"Drawing a shape\");\n    }\n    \n    static String getToolType() {\n        return \"Pencil\";\n    }\n}",
+      "options": {
+        "A": "Abstract classes can have constructors, while interfaces cannot",
+        "B": "Interfaces can have static and default methods since Java 8",
+        "C": "A class can implement multiple interfaces but extend only one abstract class",
+        "D": "Abstract classes cannot have final methods, while interfaces can have final methods"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "Spring Profiles and Environment Configuration",
+      "question": "What is the correct way to activate multiple Spring profiles programmatically?",
+      "code_example": "import org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\nimport org.springframework.core.env.ConfigurableEnvironment;\n\n@SpringBootApplication\npublic class ProfilesApplication {\n    public static void main(String[] args) {\n        SpringApplication app = new SpringApplication(ProfilesApplication.class);\n        \n        // How to activate both 'dev' and 'local' profiles?\n        \n        app.run(args);\n    }\n}",
+      "options": {
+        "A": "app.setAdditionalProfiles(\"dev,local\");",
+        "B": "app.setAdditionalProfiles(\"dev\", \"local\");",
+        "C": "app.setActiveProfiles(new String[]{\"dev\", \"local\"});",
+        "D": "ConfigurableEnvironment env = app.run(args).getEnvironment();\nenv.addActiveProfile(\"dev\");\nenv.addActiveProfile(\"local\");"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "super Keyword and Its Uses",
+      "question": "What is the output of the following code?",
+      "code_example": "class Base {\n    int value = 10;\n    \n    public void display() {\n        System.out.print(\"Base: \" + value + \" \");\n    }\n    \n    public void show() {\n        display();\n    }\n}\n\nclass Derived extends Base {\n    int value = 20;\n    \n    @Override\n    public void display() {\n        System.out.print(\"Derived: \" + value + \" \");\n    }\n    \n    public void show() {\n        display();\n        super.display();\n        System.out.print(value + \" \");\n        System.out.print(super.value);\n    }\n}\n\npublic class SuperKeywordTest {\n    public static void main(String[] args) {\n        Base base = new Derived();\n        base.show();\n    }\n}",
+      "options": {
+        "A": "Derived: 20 Base: 10 20 10",
+        "B": "Derived: 20 Base: 20 20 10",
+        "C": "Derived: 20 Base: 10 10 10",
+        "D": "Derived: 20 Derived: 20 20 10"
+      },
+      "correct_answer": "A"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates Dynamic Method Dispatch?",
+      "options": {
+        "A": "Parent method",
+        "B": "Child method",
+        "C": "Compilation error",
+        "D": "Runtime error"
+      },
+      "correct_answer": "B",
+      "code_example": "class Parent {\n    void display() {\n        System.out.println(\"Parent method\");\n    }\n}\n\nclass Child extends Parent {\n    @Override\n    void display() {\n        System.out.println(\"Child method\");\n    }\n}\n\npublic class DynamicDispatchTest {\n    public static void main(String[] args) {\n        Parent p = new Child();\n        p.display();\n    }\n}"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "When implementing a custom exception handling middleware in Spring Boot, which annotation would you use to create a global exception handler?",
+      "options": {
+        "A": "@ExceptionHandler",
+        "B": "@ControllerAdvice",
+        "C": "@GlobalExceptionHandler",
+        "D": "@ErrorController"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the behavior of WeakHashMap?",
+      "options": {
+        "A": "1",
+        "B": "0",
+        "C": "Compilation error",
+        "D": "Runtime exception"
+      },
+      "correct_answer": "B",
+      "code_example": "import java.util.WeakHashMap;\n\npublic class WeakHashMapTest {\n    public static void main(String[] args) {\n        WeakHashMap<Key, String> map = new WeakHashMap<>();\n        Key key = new Key(\"test\");\n        map.put(key, \"WeakReference\");\n        System.out.println(map.size());\n        \n        key = null;\n        System.gc();\n        try {\n            // Give GC some time to work\n            Thread.sleep(1000);\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n        \n        System.out.println(map.size());\n    }\n}\n\nclass Key {\n    private String id;\n    \n    public Key(String id) {\n        this.id = id;\n    }\n    \n    @Override\n    public String toString() {\n        return id;\n    }\n}"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "In a RESTful API built with Spring Boot, which of the following is the most appropriate way to implement API versioning?",
+      "options": {
+        "A": "Using different URLs (e.g., /api/v1/resource, /api/v2/resource)",
+        "B": "Using content negotiation with custom media types (e.g., application/vnd.company.app-v1+json)",
+        "C": "Using query parameters (e.g., /api/resource?version=1)",
+        "D": "Using HTTP headers (e.g., X-API-Version: 1)"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating method hiding in Java?",
+      "options": {
+        "A": "BaseClass.staticMethod\nChildClass.staticMethod",
+        "B": "ChildClass.staticMethod\nChildClass.staticMethod",
+        "C": "BaseClass.staticMethod\nBaseClass.staticMethod",
+        "D": "Compilation error: static methods cannot be overridden"
+      },
+      "correct_answer": "A",
+      "code_example": "class BaseClass {\n    public static void staticMethod() {\n        System.out.println(\"BaseClass.staticMethod\");\n    }\n}\n\nclass ChildClass extends BaseClass {\n    public static void staticMethod() {\n        System.out.println(\"ChildClass.staticMethod\");\n    }\n}\n\npublic class MethodHidingTest {\n    public static void main(String[] args) {\n        BaseClass reference1 = new BaseClass();\n        BaseClass reference2 = new ChildClass();\n        \n        reference1.staticMethod();\n        reference2.staticMethod();\n    }\n}"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What is the difference between shallow copy and deep copy in Java?",
+      "options": {
+        "A": "Shallow copy creates a new object with references to the same nested objects, while deep copy creates a new object with copies of nested objects",
+        "B": "Shallow copy creates a new object with copies of nested objects, while deep copy creates a new object with references to the same nested objects",
+        "C": "Shallow copy only copies primitive fields, deep copy copies both primitive and reference fields",
+        "D": "Shallow copy is performed using the assignment operator (=), while deep copy is performed using Object.clone()"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the behavior of the clone() method?",
+      "options": {
+        "A": "true\nfalse",
+        "B": "false\nfalse",
+        "C": "true\ntrue",
+        "D": "CloneNotSupportedException will be thrown"
+      },
+      "correct_answer": "A",
+      "code_example": "class Address {\n    String city;\n    \n    public Address(String city) {\n        this.city = city;\n    }\n}\n\nclass Person implements Cloneable {\n    String name;\n    Address address;\n    \n    public Person(String name, String city) {\n        this.name = name;\n        this.address = new Address(city);\n    }\n    \n    @Override\n    protected Object clone() throws CloneNotSupportedException {\n        return super.clone();\n    }\n}\n\npublic class CloneTest {\n    public static void main(String[] args) {\n        try {\n            Person original = new Person(\"John\", \"New York\");\n            Person cloned = (Person) original.clone();\n            \n            // Test if objects are different\n            System.out.println(original != cloned);\n            \n            // Test if nested objects are the same (shallow copy)\n            System.out.println(original.address != cloned.address);\n            \n        } catch (CloneNotSupportedException e) {\n            e.printStackTrace();\n        }\n    }\n}"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What is the key difference between final, finally, and finalize() in Java?",
+      "options": {
+        "A": "final is a keyword for constants, finally is an optional block in exception handling, finalize() is a method called before garbage collection",
+        "B": "final is a block of code, finally is a method, finalize() is a keyword",
+        "C": "final means the variable must be initialized, finally means a method must be overridden, finalize() means an object must be destroyed explicitly",
+        "D": "final, finally, and finalize() are all used in exception handling but at different stages"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the behavior of the volatile keyword?",
+      "options": {
+        "A": "The program will run indefinitely",
+        "B": "The program will terminate after printing 'Thread terminated'",
+        "C": "The program will terminate but won't print anything",
+        "D": "Compilation error: volatile cannot be used with a boolean"
+      },
+      "correct_answer": "B",
+      "code_example": "public class VolatileTest {\n    private static volatile boolean flag = false;\n    \n    public static void main(String[] args) throws InterruptedException {\n        Thread backgroundThread = new Thread(() -> {\n            while (!flag) {\n                // Busy waiting\n            }\n            System.out.println(\"Thread terminated\");\n        });\n        \n        backgroundThread.start();\n        \n        // Give some time for the background thread to start\n        Thread.sleep(100);\n        \n        // Set the flag to true, which should be visible to the background thread\n        flag = true;\n        \n        // Wait for the background thread to finish\n        backgroundThread.join(1000);\n    }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What security best practice should be followed when storing passwords in a Spring Boot application?",
+      "options": {
+        "A": "Store passwords encrypted with AES in the database",
+        "B": "Store passwords as plain text in environment variables",
+        "C": "Use Spring Security's BCryptPasswordEncoder to hash passwords before storing",
+        "D": "Store passwords in a properties file with restricted access"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the difference between == and equals()?",
+      "options": {
+        "A": "true\nfalse",
+        "B": "false\ntrue",
+        "C": "true\ntrue",
+        "D": "false\nfalse"
+      },
+      "correct_answer": "B",
+      "code_example": "public class EqualityTest {\n    public static void main(String[] args) {\n        String s1 = \"Java\";\n        String s2 = new String(\"Java\");\n        \n        System.out.println(s1 == s2);      // Reference equality\n        System.out.println(s1.equals(s2)); // Value equality\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What is the primary use of the super keyword in Java?",
+      "options": {
+        "A": "To access static methods of the parent class",
+        "B": "To access the parent class constructor, fields, and methods",
+        "C": "To prevent method overriding in subclasses",
+        "D": "To mark a class as being a superclass"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates CompletableFuture?",
+      "options": {
+        "A": "First task\nSecond task\nCombined result: First task Second task",
+        "B": "Second task\nFirst task\nCombined result: First task Second task",
+        "C": "The output order is non-deterministic",
+        "D": "Compilation error: CompletableFuture cannot be used with lambda expressions"
+      },
+      "correct_answer": "C",
+      "code_example": "import java.util.concurrent.CompletableFuture;\n\npublic class CompletableFutureTest {\n    public static void main(String[] args) throws Exception {\n        CompletableFuture<String> future1 = CompletableFuture.supplyAsync(() -> {\n            try { Thread.sleep((long)(Math.random() * 1000)); } catch (Exception e) {}\n            String result = \"First task\";\n            System.out.println(result);\n            return result;\n        });\n        \n        CompletableFuture<String> future2 = CompletableFuture.supplyAsync(() -> {\n            try { Thread.sleep((long)(Math.random() * 1000)); } catch (Exception e) {}\n            String result = \"Second task\";\n            System.out.println(result);\n            return result;\n        });\n        \n        CompletableFuture<String> combinedFuture = future1.thenCombine(future2, \n            (result1, result2) -> \"Combined result: \" + result1 + \" \" + result2);\n        \n        System.out.println(combinedFuture.get());\n    }\n}"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "When creating a custom exception hierarchy in Java, which of the following is a best practice?",
+      "options": {
+        "A": "All custom exceptions should directly extend Exception to ensure they are checked exceptions",
+        "B": "All custom exceptions should directly extend RuntimeException to ensure they are unchecked exceptions",
+        "C": "Create a base application exception that extends either Exception or RuntimeException, then extend specific exceptions from this base",
+        "D": "Exceptions should not be organized in a hierarchy but should be standalone classes"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates a custom class loader?",
+      "options": {
+        "A": "Parent ClassLoader: sun.misc.Launcher$AppClassLoader",
+        "B": "Parent ClassLoader: sun.misc.Launcher$ExtClassLoader",
+        "C": "Parent ClassLoader: CustomClassLoader",
+        "D": "NullPointerException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "public class CustomClassLoaderTest {\n    public static void main(String[] args) {\n        CustomClassLoader loader = new CustomClassLoader();\n        System.out.println(\"Parent ClassLoader: \" + loader.getParent().getClass().getName());\n    }\n}\n\nclass CustomClassLoader extends ClassLoader {\n    public CustomClassLoader() {\n        super(null); // Specify the parent class loader explicitly as null\n    }\n    \n    @Override\n    public Class<?> loadClass(String name) throws ClassNotFoundException {\n        // Implementation omitted for brevity\n        return super.loadClass(name);\n    }\n}"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the contract between hashCode() and equals()?",
+      "options": {
+        "A": "true\nfalse",
+        "B": "false\nfalse",
+        "C": "true\ntrue",
+        "D": "false\ntrue"
+      },
+      "correct_answer": "B",
+      "code_example": "import java.util.HashMap;\n\nclass Person {\n    private String name;\n    private int age;\n    \n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n    \n    // Only overriding equals, not hashCode\n    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) return true;\n        if (obj == null || getClass() != obj.getClass()) return false;\n        Person other = (Person) obj;\n        return age == other.age && name.equals(other.name);\n    }\n}\n\npublic class HashCodeEqualsTest {\n    public static void main(String[] args) {\n        HashMap<Person, String> map = new HashMap<>();\n        \n        Person person1 = new Person(\"John\", 30);\n        Person person2 = new Person(\"John\", 30);\n        \n        map.put(person1, \"Developer\");\n        \n        // Test if objects are equal\n        System.out.println(person1 == person2);\n        \n        // Test if we can retrieve from HashMap with an equal object\n        System.out.println(map.get(person2) != null);\n    }\n}"
+    }
+  ]
+}
