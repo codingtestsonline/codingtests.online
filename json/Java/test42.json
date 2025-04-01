@@ -1,0 +1,603 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is the primary difference between @RequestMapping and @GetMapping in Spring?",
+      "options": {
+        "A": "@GetMapping is limited to GET requests while @RequestMapping can handle all HTTP methods",
+        "B": "@RequestMapping is deprecated in newer Spring versions",
+        "C": "@GetMapping supports path variables while @RequestMapping doesn't",
+        "D": "@RequestMapping is specific to controller methods while @GetMapping can be used at class level"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class ExceptionTest {\n    public static void main(String[] args) {\n        try {\n            System.out.print(\"A\");\n            throw new RuntimeException();\n        } catch (Exception e) {\n            System.out.print(\"B\");\n        } finally {\n            System.out.print(\"C\");\n        }\n    }\n}",
+      "options": {
+        "A": "A",
+        "B": "AC",
+        "C": "ABC",
+        "D": "BC"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the key difference between checked and unchecked exceptions in Java?",
+      "options": {
+        "A": "Checked exceptions are detected at compile-time, unchecked exceptions at runtime",
+        "B": "Unchecked exceptions must be handled with try-catch blocks",
+        "C": "Checked exceptions extend RuntimeException, unchecked exceptions extend Exception",
+        "D": "Unchecked exceptions are deprecated in modern Java"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What happens when you mark a method as synchronized in Java?",
+      "options": {
+        "A": "The method becomes static automatically",
+        "B": "The method can only be called once during program execution",
+        "C": "Only one thread can execute the method on the same object at a time",
+        "D": "The method's performance is automatically optimized by the JVM"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class SynchronizedTest {\n    private int count = 0;\n    \n    public synchronized void increment() {\n        count++;\n    }\n    \n    public static void main(String[] args) {\n        SynchronizedTest test1 = new SynchronizedTest();\n        SynchronizedTest test2 = new SynchronizedTest();\n        \n        test1.increment();\n        test2.increment();\n        \n        System.out.println(test1.count + \" \" + test2.count);\n    }\n}",
+      "options": {
+        "A": "1 1",
+        "B": "2 0",
+        "C": "1 0",
+        "D": "2 2"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What is the primary purpose of Spring Boot Starters?",
+      "options": {
+        "A": "To optimize application performance",
+        "B": "To simplify dependency management by providing pre-configured dependencies",
+        "C": "To generate boilerplate code for Spring applications",
+        "D": "To provide security features for Spring applications"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is the difference between static and instance methods in Java?",
+      "options": {
+        "A": "Static methods are faster than instance methods",
+        "B": "Instance methods can access static variables but not vice versa",
+        "C": "Static methods belong to the class and don't require an instance, while instance methods belong to objects",
+        "D": "Instance methods are inherited but static methods are not"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class MethodTest {\n    private int value = 10;\n    private static int staticValue = 20;\n    \n    public void instanceMethod() {\n        System.out.print(value + \" \");\n        System.out.print(staticValue + \" \");\n    }\n    \n    public static void staticMethod() {\n        // System.out.print(value + \" \"); // This would cause a compilation error\n        System.out.print(staticValue);\n    }\n    \n    public static void main(String[] args) {\n        MethodTest test = new MethodTest();\n        test.instanceMethod();\n        staticMethod();\n    }\n}",
+      "options": {
+        "A": "10 20",
+        "B": "10 20 20",
+        "C": "20 10 20",
+        "D": "Compilation error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the primary difference between authentication and authorization in the context of Spring Security?",
+      "options": {
+        "A": "Authentication is only for web applications, while authorization is for all application types",
+        "B": "Authentication verifies who you are, while authorization determines what you can do",
+        "C": "Authorization comes before authentication in the security filter chain",
+        "D": "Authentication is handled by Spring Security, authorization must be implemented manually"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a valid type of comment in Java?",
+      "options": {
+        "A": "// Single line comment",
+        "B": "/* Multi-line comment */",
+        "C": "/** Javadoc comment */",
+        "D": "<<< Descriptive comment >>>"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class CommentTest {\n    public static void main(String[] args) {\n        // This is a comment\n        System.out.print(\"A\");\n        /* This is a multi-line\n           comment */\n        System.out.print(\"B\");\n        /** \n         * This is a Javadoc comment\n         */\n        System.out.print(\"C\");\n    }\n}",
+      "options": {
+        "A": "A",
+        "B": "AB",
+        "C": "ABC",
+        "D": "No output"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What is the primary role of the DispatcherServlet in Spring MVC?",
+      "options": {
+        "A": "To handle database connections",
+        "B": "To manage application security",
+        "C": "To act as a front controller that dispatches requests to appropriate handlers",
+        "D": "To compile JSP files into servlets"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a core feature of the Spring Framework?",
+      "options": {
+        "A": "Dependency Injection",
+        "B": "Aspect-Oriented Programming",
+        "C": "Built-in ORM functionality",
+        "D": "Native mobile app development"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class ThreadMethodsTest {\n    public static void main(String[] args) {\n        final Object lock = new Object();\n        \n        Thread t1 = new Thread(() -> {\n            synchronized (lock) {\n                System.out.print(\"A\");\n                try {\n                    lock.wait();\n                    System.out.print(\"B\");\n                } catch (InterruptedException e) {\n                    e.printStackTrace();\n                }\n            }\n        });\n        \n        Thread t2 = new Thread(() -> {\n            try {\n                Thread.sleep(100); // Ensure t1 starts first\n                synchronized (lock) {\n                    System.out.print(\"C\");\n                    lock.notify();\n                }\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n        });\n        \n        t1.start();\n        t2.start();\n        \n        try {\n            t1.join();\n            t2.join();\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+      "options": {
+        "A": "ACB",
+        "B": "ABC",
+        "C": "CAB",
+        "D": "ACBC"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What is the primary advantage of using Spring Boot over traditional Spring Framework?",
+      "options": {
+        "A": "Spring Boot has better performance than Spring Framework",
+        "B": "Spring Boot simplifies configuration with auto-configuration and starters",
+        "C": "Spring Boot can only be used for REST APIs while Spring Framework is for all applications",
+        "D": "Spring Boot offers backward compatibility with Java 6"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class TryCatchFinallyTest {\n    public static void main(String[] args) {\n        System.out.print(test());\n    }\n    \n    public static String test() {\n        try {\n            return \"A\";\n        } catch (Exception e) {\n            return \"B\";\n        } finally {\n            System.out.print(\"C\");\n        }\n    }\n}",
+      "options": {
+        "A": "C",
+        "B": "CA",
+        "C": "A",
+        "D": "AC"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "import java.util.concurrent.*;\n\npublic class ExecutorServiceTest {\n    public static void main(String[] args) throws Exception {\n        ExecutorService executor = Executors.newSingleThreadExecutor();\n        \n        Future<String> future = executor.submit(() -> {\n            Thread.sleep(100);\n            return \"Result\";\n        });\n        \n        System.out.print(\"A\");\n        String result = future.get();\n        System.out.print(\"B\" + result);\n        \n        executor.shutdown();\n    }\n}",
+      "options": {
+        "A": "AResult",
+        "B": "ABResult",
+        "C": "A\"Result\"",
+        "D": "ResultAB"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following statements about the ExecutorService interface is NOT true?",
+      "options": {
+        "A": "It provides methods to manage termination of threads",
+        "B": "It can execute tasks that return a Future object",
+        "C": "It automatically closes all resources when tasks complete",
+        "D": "It allows you to submit Callable tasks that can throw checked exceptions"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class ChainedExceptionTest {\n    public static void main(String[] args) {\n        try {\n            method1();\n        } catch (Exception e) {\n            System.out.print(e.getMessage());\n            System.out.print(\" - \");\n            System.out.print(e.getCause().getMessage());\n        }\n    }\n    \n    static void method1() throws Exception {\n        try {\n            method2();\n        } catch (NullPointerException e) {\n            Exception wrapper = new Exception(\"Wrapper\");\n            wrapper.initCause(e);\n            throw wrapper;\n        }\n    }\n    \n    static void method2() {\n        throw new NullPointerException(\"Original\");\n    }\n}",
+      "options": {
+        "A": "Original",
+        "B": "Original - Wrapper",
+        "C": "Wrapper - Original",
+        "D": "Wrapper Original"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What is the primary advantage of using ConcurrentHashMap over a synchronized HashMap?",
+      "options": {
+        "A": "ConcurrentHashMap allows null keys and values",
+        "B": "ConcurrentHashMap provides better memory usage",
+        "C": "ConcurrentHashMap allows finer-grained locking, increasing concurrent access",
+        "D": "ConcurrentHashMap has built-in sorting capabilities"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "import java.util.concurrent.ConcurrentHashMap;\nimport java.util.HashMap;\nimport java.util.Map;\n\npublic class ConcurrentMapTest {\n    public static void main(String[] args) {\n        Map<String, Integer> concurrentMap = new ConcurrentHashMap<>();\n        concurrentMap.put(\"A\", 1);\n        concurrentMap.put(\"B\", 2);\n        \n        try {\n            concurrentMap.put(null, 3);\n            System.out.print(\"1\");\n        } catch (Exception e) {\n            System.out.print(\"2\");\n        }\n        \n        Map<String, Integer> hashMap = new HashMap<>();\n        hashMap.put(\"A\", 1);\n        hashMap.put(null, 3);\n        System.out.print(hashMap.get(null));\n    }\n}",
+      "options": {
+        "A": "12",
+        "B": "13",
+        "C": "23",
+        "D": "1null"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What happens when you interrupt a thread that is blocked on I/O operations?",
+      "options": {
+        "A": "The thread will immediately terminate",
+        "B": "The thread will ignore the interruption and continue the I/O operation",
+        "C": "The I/O operation will throw an InterruptedException",
+        "D": "The I/O operation will throw an IOException and the interrupted flag will be set"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class InterruptionTest {\n    public static void main(String[] args) {\n        Thread t = new Thread(() -> {\n            try {\n                while (!Thread.currentThread().isInterrupted()) {\n                    System.out.print(\"A\");\n                    Thread.sleep(100);\n                }\n            } catch (InterruptedException e) {\n                System.out.print(\"B\");\n                return;\n            }\n            System.out.print(\"C\");\n        });\n        \n        t.start();\n        t.interrupt();\n        \n        try {\n            t.join();\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+      "options": {
+        "A": "AB",
+        "B": "ABC",
+        "C": "AC",
+        "D": "B"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What is the primary use of the 'super' keyword in Java?",
+      "options": {
+        "A": "To call static methods of the parent class",
+        "B": "To mark a class as inheritable",
+        "C": "To refer to the parent class object and access its members",
+        "D": "To define abstract methods in a concrete class"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Animal {\n    String type = \"Animal\";\n    \n    Animal() {\n        System.out.print(\"Animal-\");\n    }\n    \n    void makeSound() {\n        System.out.print(\"Generic-\");\n    }\n}\n\nclass Dog extends Animal {\n    String type = \"Dog\";\n    \n    Dog() {\n        super();\n        System.out.print(\"Dog-\");\n    }\n    \n    void makeSound() {\n        System.out.print(\"Bark-\");\n    }\n    \n    void printTypes() {\n        System.out.print(type + \"-\" + super.type + \"-\");\n        makeSound();\n        super.makeSound();\n    }\n}\n\npublic class SuperTest {\n    public static void main(String[] args) {\n        Dog dog = new Dog();\n        dog.printTypes();\n    }\n}",
+      "options": {
+        "A": "Animal-Dog-Dog-Animal-Generic-Bark-",
+        "B": "Animal-Dog-Dog-Animal-Bark-Generic-",
+        "C": "Dog-Animal-Dog-Animal-Bark-Generic-",
+        "D": "Dog-Animal-Animal-Dog-Generic-Bark-"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "Why are Strings immutable in Java?",
+      "options": {
+        "A": "For better memory management with the string pool",
+        "B": "To allow equality comparison with ==",
+        "C": "To support multi-threading without synchronization",
+        "D": "All of the above"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class StringTest {\n    public static void main(String[] args) {\n        String s1 = \"Hello\";\n        String s2 = \"Hello\";\n        String s3 = new String(\"Hello\");\n        \n        System.out.print(s1 == s2 ? \"A\" : \"B\");\n        System.out.print(s1 == s3 ? \"C\" : \"D\");\n        System.out.print(s1.equals(s3) ? \"E\" : \"F\");\n    }\n}",
+      "options": {
+        "A": "ADE",
+        "B": "BDF",
+        "C": "ACE",
+        "D": "BDE"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is the purpose of using the addSuppressed() method in Java exception handling?",
+      "options": {
+        "A": "To prevent specific exceptions from being thrown",
+        "B": "To add secondary exceptions that were suppressed in order to deliver the primary exception",
+        "C": "To filter stack traces in production environments",
+        "D": "To mark exceptions as handled without logging them"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "import java.util.HashMap;\nimport java.util.Map;\n\nclass Person {\n    private String name;\n    private int age;\n    \n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n    \n    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) return true;\n        if (obj == null || getClass() != obj.getClass()) return false;\n        Person person = (Person) obj;\n        return age == person.age && name.equals(person.name);\n    }\n    \n    // No hashCode method overridden\n}\n\npublic class HashCodeEqualsTest {\n    public static void main(String[] args) {\n        Map<Person, String> map = new HashMap<>();\n        Person p1 = new Person(\"John\", 30);\n        Person p2 = new Person(\"John\", 30);\n        \n        map.put(p1, \"Person One\");\n        \n        System.out.print(p1.equals(p2) ? \"A\" : \"B\");\n        System.out.print(map.get(p2) != null ? \"C\" : \"D\");\n    }\n}",
+      "options": {
+        "A": "AC",
+        "B": "AD",
+        "C": "BC",
+        "D": "BD"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What causes a deadlock in Java?",
+      "options": {
+        "A": "When a thread holds a resource and requests another while a second thread holds the second resource and requests the first",
+        "B": "When a thread is interrupted while holding a lock",
+        "C": "When too many threads are created in an application",
+        "D": "When a thread's priority is set too low"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class DeadlockExample {\n    private static Object lock1 = new Object();\n    private static Object lock2 = new Object();\n    \n    public static void main(String[] args) {\n        Thread t1 = new Thread(() -> {\n            synchronized (lock1) {\n                System.out.print(\"A\");\n                synchronized (lock2) {\n                    System.out.print(\"B\");\n                }\n            }\n        });\n        \n        // Commenting this out to avoid actual deadlock\n        /*\n        Thread t2 = new Thread(() -> {\n            synchronized (lock2) {\n                System.out.print(\"C\");\n                synchronized (lock1) {\n                    System.out.print(\"D\");\n                }\n            }\n        });\n        */\n        \n        // Instead, we'll use a thread that doesn't cause deadlock\n        Thread t2 = new Thread(() -> {\n            try {\n                Thread.sleep(100); // Ensure t1 gets lock1 first\n            } catch (InterruptedException e) {}\n            \n            synchronized (lock1) {\n                System.out.print(\"C\");\n                synchronized (lock2) {\n                    System.out.print(\"D\");\n                }\n            }\n        });\n        \n        t1.start();\n        t2.start();\n        \n        try {\n            t1.join();\n            t2.join();\n        } catch (InterruptedException e) {}\n    }\n}",
+      "options": {
+        "A": "ABCD",
+        "B": "ACBD",
+        "C": "AB",
+        "D": "ADBC"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What is the difference between shallow copy and deep copy in Java?",
+      "options": {
+        "A": "Shallow copy is faster while deep copy is more memory-efficient",
+        "B": "Shallow copy duplicates object references while deep copy duplicates the objects themselves",
+        "C": "Shallow copy works only with primitive types while deep copy works with objects",
+        "D": "Shallow copy is used for immutable objects while deep copy is for mutable objects"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which of the following statements about embedded servers in Spring Boot is correct?",
+      "options": {
+        "A": "Tomcat is the only embedded server supported by Spring Boot",
+        "B": "When using Jetty instead of Tomcat, you need to explicitly configure all connection parameters",
+        "C": "Undertow generally provides better performance for high-concurrency scenarios than Tomcat",
+        "D": "You cannot have multiple embedded server dependencies in your classpath at once"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code example?",
+      "code_example": "public class ThreadLocalExample {\n    private static final ThreadLocal<Integer> threadLocalValue = ThreadLocal.withInitial(() -> 100);\n    \n    public static void main(String[] args) {\n        System.out.println(\"Main thread initial value: \" + threadLocalValue.get());\n        \n        threadLocalValue.set(200);\n        System.out.println(\"Main thread modified value: \" + threadLocalValue.get());\n        \n        Thread childThread = new Thread(() -> {\n            System.out.println(\"Child thread value: \" + threadLocalValue.get());\n            threadLocalValue.set(300);\n            System.out.println(\"Child thread modified value: \" + threadLocalValue.get());\n        });\n        \n        childThread.start();\n        try {\n            childThread.join();\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n        }\n        \n        System.out.println(\"Main thread final value: \" + threadLocalValue.get());\n    }\n}",
+      "options": {
+        "A": "Main thread initial value: 100\nMain thread modified value: 200\nChild thread value: 100\nChild thread modified value: 300\nMain thread final value: 300",
+        "B": "Main thread initial value: 100\nMain thread modified value: 200\nChild thread value: 200\nChild thread modified value: 300\nMain thread final value: 300",
+        "C": "Main thread initial value: 100\nMain thread modified value: 200\nChild thread value: 100\nChild thread modified value: 300\nMain thread final value: 200",
+        "D": "Main thread initial value: 100\nMain thread modified value: 200\nChild thread value: 0\nChild thread modified value: 300\nMain thread final value: 200"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "When using @SpringBootTest annotation, which of the following statements is NOT true?",
+      "options": {
+        "A": "By default, it starts a fully running application context",
+        "B": "You can specify a different port using properties like @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)",
+        "C": "When using @SpringBootTest, you must always specify the primary configuration class",
+        "D": "It can be used to test slices of your application using annotations like @WebMvcTest or @DataJpaTest"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code involving suppressed exceptions?",
+      "code_example": "public class SuppressedExceptionDemo {\n    public static void main(String[] args) {\n        try {\n            trySuppressedExceptions();\n        } catch (Exception e) {\n            System.out.println(\"Main exception: \" + e.getMessage());\n            Throwable[] suppressed = e.getSuppressed();\n            System.out.println(\"Number of suppressed exceptions: \" + suppressed.length);\n            for (Throwable t : suppressed) {\n                System.out.println(\"Suppressed: \" + t.getMessage());\n            }\n        }\n    }\n    \n    static void trySuppressedExceptions() throws Exception {\n        Exception mainException = new Exception(\"Primary Exception\");\n        try {\n            throw new NullPointerException(\"Resource operation failed\");\n        } catch (Exception e) {\n            mainException.addSuppressed(e);\n        }\n        try {\n            throw new IllegalArgumentException(\"Invalid resource state\");\n        } catch (Exception e) {\n            mainException.addSuppressed(e);\n        }\n        throw mainException;\n    }\n}",
+      "options": {
+        "A": "Main exception: Primary Exception\nNumber of suppressed exceptions: 0",
+        "B": "Main exception: Primary Exception\nNumber of suppressed exceptions: 2\nSuppressed: Resource operation failed\nSuppressed: Invalid resource state",
+        "C": "Main exception: Primary Exception\nResource operation failed\nInvalid resource state",
+        "D": "Main exception: Resource operation failed\nNumber of suppressed exceptions: 1\nSuppressed: Invalid resource state"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What is the primary difference between deep copy and shallow copy in Java?",
+      "options": {
+        "A": "Shallow copy duplicates only primitive fields, while deep copy duplicates both primitive and reference fields",
+        "B": "Shallow copy creates a new reference to the same object, while deep copy creates a completely new object with the same property values",
+        "C": "Shallow copy duplicates the object but not the objects it refers to, while deep copy duplicates both the object and the objects it refers to",
+        "D": "Shallow copy uses the clone() method, while deep copy uses serialization"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Consider the following code that uses the volatile keyword. What statement about this code is correct?",
+      "code_example": "public class VolatileExample {\n    private static volatile boolean flag = false;\n    private static int counter = 0;\n    \n    public static void main(String[] args) throws InterruptedException {\n        Thread writerThread = new Thread(() -> {\n            counter = 100;\n            flag = true;\n            System.out.println(\"Writer thread: flag set to true\");\n        });\n        \n        Thread readerThread = new Thread(() -> {\n            while (!flag) {\n                // busy-wait\n            }\n            System.out.println(\"Reader thread: detected flag change, counter = \" + counter);\n        });\n        \n        readerThread.start();\n        Thread.sleep(100); // Give reader thread time to start\n        writerThread.start();\n        \n        writerThread.join();\n        readerThread.join();\n    }\n}",
+      "options": {
+        "A": "The code may never terminate because the readerThread might not see the flag change",
+        "B": "The program will always print counter as 100 because flag is volatile",
+        "C": "The program might print counter as 0 sometimes despite flag being true",
+        "D": "The volatile keyword ensures that both flag and counter changes are immediately visible to all threads"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the main benefit of using covariant return types in Java?",
+      "options": {
+        "A": "It allows methods in subclasses to return objects of subclass types",
+        "B": "It improves performance by reducing the need for type casting",
+        "C": "It enables automatic type conversion between primitive types",
+        "D": "It helps the compiler to better optimize the code"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the super keyword?",
+      "code_example": "class Parent {\n    private int value = 10;\n    \n    public Parent() {\n        print();\n    }\n    \n    public void print() {\n        System.out.println(\"Parent value: \" + value);\n    }\n}\n\nclass Child extends Parent {\n    private int value = 20;\n    \n    public Child() {\n        super();\n        print();\n    }\n    \n    @Override\n    public void print() {\n        System.out.println(\"Child value: \" + value);\n        super.print();\n    }\n    \n    public static void main(String[] args) {\n        new Child();\n    }\n}",
+      "options": {
+        "A": "Parent value: 10\nChild value: 20\nParent value: 10",
+        "B": "Child value: 0\nParent value: 10\nChild value: 20\nParent value: 10",
+        "C": "Child value: 20\nParent value: 10\nChild value: 20\nParent value: 10",
+        "D": "Child value: 0\nParent value: 10\nChild value: 20"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What is the correct way to implement chained exceptions in Java using initCause()?",
+      "options": {
+        "A": "Exception e1 = new Exception(); Exception e2 = new Exception(); e2.initCause(e1); throw e2;",
+        "B": "try { throw new Exception(); } catch (Exception e1) { Exception e2 = new Exception(); e2.initCause(e1); throw e1; }",
+        "C": "try { throw new Exception(); } catch (Exception e1) { throw new Exception().initCause(e1); }",
+        "D": "Exception e1 = new Exception(); try { e1.initCause(new Exception()); throw e1; } catch (Exception e2) { throw e2.getCause(); }"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the difference between final, finally, and finalize()?",
+      "code_example": "public class FinalExample {\n    public static void main(String[] args) {\n        try {\n            final int x = 10;\n            // x = 20; // Uncommenting this would cause a compilation error\n            System.out.println(\"Inside try: \" + x);\n            return;\n        } catch (Exception e) {\n            System.out.println(\"Inside catch\");\n        } finally {\n            System.out.println(\"Inside finally\");\n        }\n        System.out.println(\"After try-catch-finally\");\n    }\n    \n    @Override\n    protected void finalize() throws Throwable {\n        System.out.println(\"Inside finalize\");\n        super.finalize();\n    }\n}",
+      "options": {
+        "A": "Inside try: 10\nInside finally\nInside finalize",
+        "B": "Inside try: 10\nInside finally\nAfter try-catch-finally",
+        "C": "Inside try: 10\nInside finally",
+        "D": "Inside try: 10\nInside finally\nInside finalize\nAfter try-catch-finally"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "Which of the following statements about Fail-Fast and Fail-Safe iterators is NOT correct?",
+      "options": {
+        "A": "ConcurrentHashMap provides fail-safe iterators",
+        "B": "Fail-fast iterators throw ConcurrentModificationException if the collection is modified during iteration",
+        "C": "Fail-safe iterators always provide a guaranteed accurate view of the collection at the time of iteration",
+        "D": "Fail-safe iterators typically operate on a copy of the collection's data structure"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What is the output of the following code related to String immutability?",
+      "code_example": "public class StringImmutabilityTest {\n    public static void main(String[] args) {\n        String s1 = \"Hello\";\n        String s2 = \"Hello\";\n        String s3 = new String(\"Hello\");\n        \n        System.out.println(s1 == s2);\n        System.out.println(s1 == s3);\n        System.out.println(s1.equals(s3));\n        \n        s1 = s1 + \" World\";\n        String s4 = \"Hello World\";\n        String s5 = \"Hello\" + \" World\";\n        \n        System.out.println(s1 == s4);\n        System.out.println(s4 == s5);\n    }\n}",
+      "options": {
+        "A": "true\nfalse\ntrue\nfalse\ntrue",
+        "B": "true\nfalse\ntrue\ntrue\nfalse",
+        "C": "true\ntrue\ntrue\nfalse\ntrue",
+        "D": "false\nfalse\ntrue\nfalse\nfalse"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the hashCode() and equals() contract?",
+      "code_example": "import java.util.HashMap;\nimport java.util.Map;\n\nclass CustomKey {\n    private int id;\n    \n    public CustomKey(int id) {\n        this.id = id;\n    }\n    \n    @Override\n    public boolean equals(Object obj) {\n        if (this == obj) return true;\n        if (obj == null || getClass() != obj.getClass()) return false;\n        CustomKey other = (CustomKey) obj;\n        return id == other.id;\n    }\n    \n    // Uncomment to fix: @Override public int hashCode() { return id; }\n}\n\npublic class HashCodeEqualsTest {\n    public static void main(String[] args) {\n        Map<CustomKey, String> map = new HashMap<>();\n        \n        CustomKey key1 = new CustomKey(1);\n        CustomKey key2 = new CustomKey(1);\n        \n        map.put(key1, \"Value1\");\n        \n        System.out.println(key1.equals(key2));\n        System.out.println(map.get(key2));\n    }\n}",
+      "options": {
+        "A": "true\nValue1",
+        "B": "true\nnull",
+        "C": "false\nnull",
+        "D": "false\nValue1"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a best practice for securing REST APIs with Spring Security?",
+      "options": {
+        "A": "Use OAuth2 or JWT for stateless authentication",
+        "B": "Store plaintext passwords in the database for quick authentication",
+        "C": "Implement method-level security using @PreAuthorize annotations",
+        "D": "Apply the principle of least privilege by restricting endpoints to specific roles"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses BeanPostProcessor?",
+      "code_example": "import org.springframework.beans.BeansException;\nimport org.springframework.beans.factory.InitializingBean;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.beans.factory.config.BeanPostProcessor;\nimport org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\nimport org.springframework.context.annotation.Bean;\nimport org.springframework.stereotype.Component;\n\n@SpringBootApplication\npublic class BeanLifecycleDemo {\n\n    public static void main(String[] args) {\n        SpringApplication.run(BeanLifecycleDemo.class, args);\n    }\n    \n    @Bean\n    public MyBean myBean() {\n        MyBean bean = new MyBean();\n        System.out.println(\"1. Bean created by factory method\");\n        return bean;\n    }\n    \n    @Bean\n    public BeanPostProcessor customBeanPostProcessor() {\n        return new CustomBeanPostProcessor();\n    }\n}\n\nclass MyBean implements InitializingBean {\n    \n    public MyBean() {\n        System.out.println(\"2. Bean constructor called\");\n    }\n    \n    @Override\n    public void afterPropertiesSet() throws Exception {\n        System.out.println(\"4. InitializingBean's afterPropertiesSet called\");\n    }\n    \n    public void init() {\n        System.out.println(\"5. Custom init method called\");\n    }\n}\n\nclass CustomBeanPostProcessor implements BeanPostProcessor {\n    \n    @Override\n    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {\n        if (bean instanceof MyBean) {\n            System.out.println(\"3. BeanPostProcessor before initialization\");\n        }\n        return bean;\n    }\n    \n    @Override\n    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {\n        if (bean instanceof MyBean) {\n            System.out.println(\"6. BeanPostProcessor after initialization\");\n        }\n        return bean;\n    }\n}",
+      "options": {
+        "A": "1. Bean created by factory method\n2. Bean constructor called\n3. BeanPostProcessor before initialization\n4. InitializingBean's afterPropertiesSet called\n5. Custom init method called\n6. BeanPostProcessor after initialization",
+        "B": "2. Bean constructor called\n1. Bean created by factory method\n3. BeanPostProcessor before initialization\n4. InitializingBean's afterPropertiesSet called\n6. BeanPostProcessor after initialization",
+        "C": "1. Bean created by factory method\n2. Bean constructor called\n3. BeanPostProcessor before initialization\n4. InitializingBean's afterPropertiesSet called\n6. BeanPostProcessor after initialization",
+        "D": "2. Bean constructor called\n3. BeanPostProcessor before initialization\n4. InitializingBean's afterPropertiesSet called\n5. Custom init method called\n6. BeanPostProcessor after initialization"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates Atomic Variables?",
+      "code_example": "import java.util.concurrent.ExecutorService;\nimport java.util.concurrent.Executors;\nimport java.util.concurrent.TimeUnit;\nimport java.util.concurrent.atomic.AtomicInteger;\n\npublic class AtomicVariableExample {\n    private static int regularCounter = 0;\n    private static final AtomicInteger atomicCounter = new AtomicInteger(0);\n    \n    public static void main(String[] args) throws InterruptedException {\n        ExecutorService executor = Executors.newFixedThreadPool(5);\n        \n        for (int i = 0; i < 1000; i++) {\n            executor.submit(() -> {\n                regularCounter++;\n                atomicCounter.incrementAndGet();\n            });\n        }\n        \n        executor.shutdown();\n        executor.awaitTermination(1, TimeUnit.MINUTES);\n        \n        System.out.println(\"Regular counter: \" + regularCounter);\n        System.out.println(\"Atomic counter: \" + atomicCounter.get());\n    }\n}",
+      "options": {
+        "A": "Regular counter: 1000\nAtomic counter: 1000",
+        "B": "Values will vary each run but atomic counter will always be 1000",
+        "C": "Regular counter will always be less than atomic counter",
+        "D": "Regular counter and atomic counter will always have identical values"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
