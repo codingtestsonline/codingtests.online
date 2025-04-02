@@ -1,0 +1,638 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "How Node.js differs from browser JavaScript",
+      "question": "Which of the following is NOT available in Node.js but is available in browser JavaScript?",
+      "options": {
+        "A": "require()",
+        "B": "setTimeout()",
+        "C": "document",
+        "D": "process"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "Default parameters",
+      "question": "What will be the output of the following code?",
+      "code_example": "function greet(name = 'Guest') {\n  return `Hello, ${name}!`;\n}\n\nconsole.log(greet());\nconsole.log(greet(undefined));\nconsole.log(greet(null));",
+      "options": {
+        "A": "Hello, Guest!, Hello, Guest!, Hello, null!",
+        "B": "Hello, undefined!, Hello, undefined!, Hello, null!",
+        "C": "Hello, Guest!, Hello, Guest!, Hello, Guest!",
+        "D": "Hello, !, Hello, !, Hello, null!"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "Arrow functions (=>)",
+      "question": "What will be the output of the following code?",
+      "code_example": "const obj = {\n  name: 'John',\n  greet: function() {\n    return `Hello, ${this.name}`;\n  },\n  greetArrow: () => {\n    return `Hello, ${this.name}`;\n  }\n};\n\nconsole.log(obj.greet());\nconsole.log(obj.greetArrow());",
+      "options": {
+        "A": "Hello, John, Hello, John",
+        "B": "Hello, John, Hello, undefined",
+        "C": "Hello, undefined, Hello, undefined",
+        "D": "Hello, undefined, Hello, John"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "module.exports and export",
+      "question": "Which statement is TRUE about module.exports and export in Node.js?",
+      "options": {
+        "A": "export default is available in CommonJS modules",
+        "B": "module.exports = {} and exports = {} are equivalent",
+        "C": "exports is a reference to module.exports",
+        "D": "ES modules and CommonJS modules can be freely mixed"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "Function hoisting",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(add(2, 3));\nconsole.log(subtract(5, 2));\n\nfunction add(a, b) {\n  return a + b;\n}\n\nconst subtract = function(a, b) {\n  return a - b;\n};",
+      "options": {
+        "A": "5, 3",
+        "B": "5, TypeError",
+        "C": "TypeError, TypeError",
+        "D": "undefined, undefined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "require() vs import()",
+      "question": "Which statement about require() and import() is TRUE?",
+      "options": {
+        "A": "require() is asynchronous while import() is synchronous",
+        "B": "require() can be called conditionally anywhere in a file",
+        "C": "import() always needs to be at the top of a file",
+        "D": "import() can only import ES modules, not CommonJS modules"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "Implicit type conversion (== vs ===)",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log('5' == 5);\nconsole.log('5' === 5);\nconsole.log(0 == false);\nconsole.log(0 === false);\nconsole.log(null == undefined);\nconsole.log(null === undefined);",
+      "options": {
+        "A": "true, false, true, false, true, false",
+        "B": "true, true, true, true, true, true",
+        "C": "false, false, false, false, false, false",
+        "D": "true, false, true, false, false, false"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "async/await",
+      "question": "What will be the output of the following code?",
+      "code_example": "async function getData() {\n  return 'Data';\n}\n\nasync function test() {\n  const data = getData();\n  console.log(data);\n  \n  const awaitedData = await getData();\n  console.log(awaitedData);\n}\n\ntest();",
+      "options": {
+        "A": "Data, Data",
+        "B": "Data, Promise { 'Data' }",
+        "C": "Promise { 'Data' }, Data",
+        "D": "Promise { <pending> }, Promise { <pending> }"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Function scope (global, local, block)",
+      "question": "What will be the output of the following code?",
+      "code_example": "let x = 10;\n\nfunction test() {\n  let x = 20;\n  \n  if (true) {\n    let x = 30;\n    console.log('A:', x);\n  }\n  \n  console.log('B:', x);\n}\n\ntest();\nconsole.log('C:', x);",
+      "options": {
+        "A": "A: 10, B: 20, C: 10",
+        "B": "A: 30, B: 20, C: 10",
+        "C": "A: 30, B: 30, C: 10",
+        "D": "A: 30, B: 30, C: 30"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Prevent default behavior (event.preventDefault())",
+      "question": "What is the primary purpose of event.preventDefault() in browser JavaScript?",
+      "options": {
+        "A": "It stops event propagation to parent elements",
+        "B": "It prevents the browser from executing the default action of an element",
+        "C": "It prevents event listeners from being attached to an element",
+        "D": "It cancels all timeouts and intervals on a page"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "Changing content (innerHTML, textContent, value)",
+      "question": "Which statement about innerHTML, textContent, and value is TRUE?",
+      "options": {
+        "A": "innerHTML is safer than textContent for displaying user input",
+        "B": "value is a property that applies to all HTML elements",
+        "C": "textContent will preserve HTML tags as text content rather than parsing them",
+        "D": "innerHTML and textContent perform identically if there are no HTML tags"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "Template literals",
+      "question": "What will be the output of the following code?",
+      "code_example": "const name = 'John';\nconst age = 30;\n\nconst regularString = 'My name is ' + name + ' and I am ' + age + ' years old.';\nconst templateLiteral = `My name is ${name} and I am ${age} years old.`;\n\nconsole.log(regularString === templateLiteral);",
+      "options": {
+        "A": "false",
+        "B": "true",
+        "C": "undefined",
+        "D": "Error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "Promises (.then, .catch, .finally)",
+      "question": "What will be the output of the following code?",
+      "code_example": "function test() {\n  return new Promise((resolve, reject) => {\n    reject('Error');\n  })\n  .then(data => {\n    console.log('Success:', data);\n    return 'Success Result';\n  })\n  .catch(err => {\n    console.log('Error:', err);\n    return 'Error Result';\n  })\n  .then(result => {\n    console.log('Result:', result);\n  });\n}\n\ntest();",
+      "options": {
+        "A": "Error: Error",
+        "B": "Success: Error, Result: Success Result",
+        "C": "Error: Error, Result: Error Result",
+        "D": "Result: Error Result"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "Callbacks",
+      "question": "What is the primary challenge with using deeply nested callbacks in JavaScript?",
+      "options": {
+        "A": "They execute too quickly and can overwhelm the call stack",
+        "B": "They make code harder to read, understand, and maintain (callback hell)",
+        "C": "They cannot handle asynchronous operations effectively",
+        "D": "They consume more memory than promises or async/await"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "Arrays: declaration, access, manipulation",
+      "question": "What will be the output of the following code?",
+      "code_example": "const arr1 = [1, 2, 3];\nconst arr2 = [4, 5, 6];\n\nconst combined = arr1.concat(arr2);\narr1.push(4);\n\nconsole.log(arr1);\nconsole.log(combined);",
+      "options": {
+        "A": "[1, 2, 3, 4], [1, 2, 3, 4, 5, 6]",
+        "B": "[1, 2, 3, 4], [1, 2, 3, 4]",
+        "C": "[1, 2, 3, 4], [1, 2, 3, 4, 5, 6]",
+        "D": "[1, 2, 3, 4], [1, 2, 3, 4, 5, 6]"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "Event propagation (bubbling, capturing, stopPropagation())",
+      "question": "Which statement about event propagation in the browser is TRUE?",
+      "options": {
+        "A": "Event capturing occurs after event bubbling",
+        "B": "stopPropagation() prevents the default behavior of an element",
+        "C": "By default, addEventListener listens for events during the bubbling phase",
+        "D": "Once stopPropagation() is called, no more event handlers will execute for any elements"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Spread/rest operators (...)",
+      "question": "What will be the output of the following code?",
+      "code_example": "function sum(...numbers) {\n  return numbers.reduce((total, num) => total + num, 0);\n}\n\nconst numbers = [1, 2, 3];\nconst moreNumbers = [4, 5];\n\nconsole.log(sum(...numbers, ...moreNumbers));",
+      "options": {
+        "A": "Error",
+        "B": "[1, 2, 3, 4, 5]",
+        "C": "15",
+        "D": "0"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "Working with large files efficiently",
+      "question": "Which approach is most memory-efficient for processing a large file in Node.js?",
+      "options": {
+        "A": "Reading the entire file with fs.readFileSync()",
+        "B": "Using streams with fs.createReadStream()",
+        "C": "Reading the file with the promises API: fs.promises.readFile()",
+        "D": "Using async/await with fs.readFile()"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "Debouncing & throttling (lodash.debounce(), lodash.throttle())",
+      "question": "What is the primary difference between debouncing and throttling?",
+      "options": {
+        "A": "Debouncing executes the function immediately, throttling delays execution",
+        "B": "Throttling ensures function execution at a regular interval, debouncing waits until activity stops",
+        "C": "Debouncing can only be used with mouse events, throttling works with any event",
+        "D": "Throttling is server-side only, debouncing is client-side only"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "Explicit binding (call, apply, bind)",
+      "question": "What will be the output of the following code?",
+      "code_example": "function greet() {\n  return `Hello, ${this.name}`;\n}\n\nconst person1 = { name: 'Alice' };\nconst person2 = { name: 'Bob' };\n\nconst greetAlice = greet.bind(person1);\nconst greetBob = greet.bind(person2);\n\nconsole.log(greetAlice());\nconsole.log(greetAlice.call(person2));",
+      "options": {
+        "A": "Hello, Alice, Hello, Bob",
+        "B": "Hello, Alice, Hello, Alice",
+        "C": "Hello, undefined, Hello, undefined",
+        "D": "Error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "Promises (resolve(), reject(), finally())",
+      "question": "What will be the output of the following code?",
+      "code_example": "const promise = new Promise((resolve, reject) => {\n  resolve('Initial');\n});\n\npromise\n  .then(value => {\n    console.log(value);\n    throw new Error('Error in first then');\n    return 'After error';\n  })\n  .then(value => {\n    console.log(value);\n  })\n  .catch(error => {\n    console.log(error.message);\n    return 'After catch';\n  })\n  .then(value => {\n    console.log(value);\n  })\n  .finally(() => {\n    console.log('Finally');\n  });",
+      "options": {
+        "A": "Initial, Error in first then, After catch, Finally",
+        "B": "Initial, Error in first then, Finally",
+        "C": "Initial, After error, Finally",
+        "D": "Initial, Finally"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "Symbols and unique property keys",
+      "question": "What will be the output of the following code?",
+      "code_example": "const obj = {};\nconst a = Symbol('a');\nconst b = Symbol('a');\n\nobj[a] = 'Symbol a';\nobj[b] = 'Symbol b';\nobj.a = 'String a';\n\nconsole.log(obj[a]);\nconsole.log(obj[b]);\nconsole.log(obj.a);\nconsole.log(Object.keys(obj).length);",
+      "options": {
+        "A": "Symbol a, Symbol b, String a, 3",
+        "B": "Symbol a, Symbol b, String a, 1",
+        "C": "Symbol a, Symbol a, String a, 1",
+        "D": "undefined, undefined, String a, 1"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "Lazy loading images",
+      "question": "Which approach is NOT typically used for lazy loading images in a web application?",
+      "options": {
+        "A": "Using the IntersectionObserver API",
+        "B": "Setting the loading='lazy' attribute on img elements",
+        "C": "Using event.stopPropagation() on img elements",
+        "D": "Dynamically changing the src attribute when the image enters the viewport"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "API versioning",
+      "question": "Which is the most commonly used approach for API versioning in RESTful APIs?",
+      "options": {
+        "A": "Including the version in the request body",
+        "B": "Using a version parameter in query string",
+        "C": "Including the version in the URL path (e.g., /api/v1/resources)",
+        "D": "Using custom HTTP headers for versioning"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Closure scope chain",
+      "question": "What will be the output of the following code?",
+      "code_example": "function createCounter() {\n  let count = 0;\n  \n  function increment() {\n    count++;\n    return count;\n  }\n  \n  function decrement() {\n    count--;\n    return count;\n  }\n  \n  return {\n    increment,\n    decrement,\n    getCount: function() { return count; }\n  };\n}\n\nconst counter1 = createCounter();\nconst counter2 = createCounter();\n\ncounter1.increment();\ncounter1.increment();\ncounter2.increment();\n\nconsole.log(counter1.getCount(), counter2.getCount());",
+      "options": {
+        "A": "3, 3",
+        "B": "2, 1",
+        "C": "2, 2",
+        "D": "3, 1"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "Middleware (req, res, next)",
+      "question": "What happens if you don't call next() in an Express middleware function?",
+      "options": {
+        "A": "The request will be automatically forwarded to the next middleware after 30 seconds",
+        "B": "An error will be thrown",
+        "C": "The request will continue to the next middleware anyway",
+        "D": "The request will hang and never reach subsequent middleware or route handlers"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "Status codes (200, 400, 401, 403, 404, 500)",
+      "question": "Which status code would be most appropriate when a user attempts to access a resource they don't have permission to view, but is authenticated?",
+      "options": {
+        "A": "400 Bad Request",
+        "B": "401 Unauthorized",
+        "C": "403 Forbidden",
+        "D": "404 Not Found"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "HTTP methods (GET, POST, PUT, DELETE)",
+      "question": "Which HTTP method is idempotent, meaning multiple identical requests will have the same effect as a single request?",
+      "options": {
+        "A": "POST",
+        "B": "GET",
+        "C": "PATCH",
+        "D": "OPTIONS"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "Recursion",
+      "question": "What will be the output of the following code?",
+      "code_example": "function factorial(n) {\n  if (n <= 1) {\n    return 1;\n  }\n  return n * factorial(n - 1);\n}\n\nconsole.log(factorial(4));\n\nfunction fibonacci(n) {\n  if (n <= 1) {\n    return n;\n  }\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\nconsole.log(fibonacci(5));",
+      "options": {
+        "A": "24, 5",
+        "B": "24, 8",
+        "C": "24, 3",
+        "D": "24, 5"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Sending JSON responses (res.json())",
+      "question": "What will be the output of the following Express.js route handler code?",
+      "code_example": "app.get('/api/data', (req, res) => {\n  const data = { message: 'Success' };\n  res.set('Content-Type', 'application/json');\n  res.send(JSON.stringify(data));\n  res.json(data);\n});",
+      "options": {
+        "A": "{ message: 'Success' } sent once with correct Content-Type",
+        "B": "{ message: 'Success' } sent twice",
+        "C": "Error: Cannot set headers after they are sent to the client",
+        "D": "{ message: 'Success' } as a string, followed by the object"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "Memory management and garbage collection impact",
+      "question": "Which scenario is most likely to cause a memory leak in a Node.js application?",
+      "options": {
+        "A": "Using global variables for configuration",
+        "B": "Adding event listeners without removing them when no longer needed",
+        "C": "Using async/await for API calls",
+        "D": "Creating new objects inside functions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "Rate limiting (express-rate-limit)",
+      "question": "What will be the output of the following code using express-rate-limit?",
+      "code_example": "const rateLimit = require('express-rate-limit');\n\nconst limiter = rateLimit({\n  windowMs: 1000, // 1 second\n  max: 2,\n  message: 'Too many requests'\n});\n\napp.get('/api/limited', limiter, (req, res) => {\n  res.json({ message: 'Success' });\n});\n\n// Assuming 3 rapid requests to /api/limited\n// What will the 3rd request return?",
+      "options": {
+        "A": "{ message: 'Success' } with status 200",
+        "B": "{ message: 'Too many requests' } with status 429",
+        "C": "Error: Cannot set headers after they are sent to the client",
+        "D": "Empty response with status 429"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "When implementing WebSockets with socket.io, which of the following statements about rooms is correct?",
+      "options": {
+        "A": "A client can only be in one room at a time",
+        "B": "Rooms are automatically created when a client joins and deleted when empty",
+        "C": "Rooms must be explicitly created before clients can join them",
+        "D": "Rooms can only contain a maximum of 100 clients by default"
+      },
+      "correct_answer": "B",
+      "code_example": "const io = require('socket.io')(server);\n\nio.on('connection', (socket) => {\n  socket.join('room1'); // Client joins room1\n  socket.join('room2'); // Same client joins room2\n  \n  // Broadcast to all clients in room1\n  io.to('room1').emit('message', 'Hello room1');\n  \n  // Broadcast to all clients in room2\n  io.to('room2').emit('message', 'Hello room2');\n});"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What is the difference between horizontal and vertical scaling in Node.js applications?",
+      "options": {
+        "A": "Horizontal scaling increases CPU and RAM on a single server; vertical scaling adds more server instances",
+        "B": "Horizontal scaling adds more server instances; vertical scaling increases CPU and RAM on a single server",
+        "C": "Horizontal scaling refers to adding more database connections; vertical scaling refers to adding more application servers",
+        "D": "There is no difference; both terms refer to increasing application capacity"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following EventEmitter code?",
+      "options": {
+        "A": "Event: connection\nEvent: data\nValue: example data",
+        "B": "Event: connection\nEvent: error\nError: Something went wrong!",
+        "C": "Event: connection\nEvent: data\nValue: example data\nEvent: error\nError: Something went wrong!",
+        "D": "Error: Something went wrong!"
+      },
+      "correct_answer": "C",
+      "code_example": "const EventEmitter = require('events');\n\nclass MyEmitter extends EventEmitter {}\n\nconst myEmitter = new MyEmitter();\n\n// Event listeners\nmyEmitter.on('connection', () => {\n  console.log('Event: connection');\n});\n\nmyEmitter.on('data', (data) => {\n  console.log('Event: data');\n  console.log(`Value: ${data}`);\n});\n\nmyEmitter.on('error', (err) => {\n  console.log('Event: error');\n  console.log(`Error: ${err.message}`);\n});\n\n// Emit events\nmyEmitter.emit('connection');\nmyEmitter.emit('data', 'example data');\nmyEmitter.emit('error', new Error('Something went wrong!'));"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "Which statement about Cross-Site Request Forgery (CSRF) protection is FALSE?",
+      "options": {
+        "A": "CSRF tokens should be included in GET requests to prevent attacks",
+        "B": "The Same-Origin policy alone is not sufficient to prevent CSRF attacks",
+        "C": "CSRF attacks rely on the victim's authenticated session with the target website",
+        "D": "SameSite cookie attribute can help mitigate CSRF attacks"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "When implementing refresh and access tokens for authentication, which approach is most secure?",
+      "options": {
+        "A": "Store both access token and refresh token in localStorage for persistence",
+        "B": "Store the access token in memory and the refresh token in an HTTP-only cookie",
+        "C": "Store both tokens in sessionStorage to ensure they're cleared when the browser closes",
+        "D": "Send both tokens in every API request to maintain authentication"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be logged by the following code that demonstrates handling a stream in Node.js?",
+      "options": {
+        "A": "Data chunk: hello\nData chunk: world\nAll data received",
+        "B": "Data chunk: hello world\nAll data received",
+        "C": "Data chunk: Buffer<68 65 6c 6c 6f>\nData chunk: Buffer<77 6f 72 6c 64>\nAll data received",
+        "D": "hello world\nAll data received"
+      },
+      "correct_answer": "A",
+      "code_example": "const { Readable } = require('stream');\n\n// Create a custom readable stream\nconst myStream = new Readable({\n  read() {}\n});\n\n// Set up data handler\nmyStream.on('data', (chunk) => {\n  console.log(`Data chunk: ${chunk}`);\n});\n\n// Set up end handler\nmyStream.on('end', () => {\n  console.log('All data received');\n});\n\n// Push data to the stream\nmyStream.push('hello');\nmyStream.push('world');\nmyStream.push(null); // Signal the end of the stream"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the output of this bcrypt password verification code?",
+      "options": {
+        "A": "Password is valid",
+        "B": "Password is invalid",
+        "C": "Error: bcrypt.compare is not a function",
+        "D": "The code will throw a synchronous error"
+      },
+      "correct_answer": "A",
+      "code_example": "const bcrypt = require('bcrypt');\n\nasync function verifyPassword() {\n  const plainPassword = 'mySecurePassword';\n  \n  // Hash the password with 10 salt rounds\n  const hashedPassword = await bcrypt.hash(plainPassword, 10);\n  \n  // Attempt to compare with correct password\n  const isValid1 = await bcrypt.compare(plainPassword, hashedPassword);\n  \n  // Attempt to compare with incorrect password\n  const isValid2 = await bcrypt.compare('wrongPassword', hashedPassword);\n  \n  if (isValid1 && !isValid2) {\n    console.log('Password is valid');\n  } else {\n    console.log('Password is invalid');\n  }\n}\n\nverifyPassword();"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "When using Nginx as a reverse proxy for a Node.js application, which configuration directive is essential for properly forwarding client IP addresses to the Node.js server?",
+      "options": {
+        "A": "proxy_pass_request_headers on;",
+        "B": "proxy_set_header Host $host;",
+        "C": "proxy_set_header X-Real-IP $remote_addr;",
+        "D": "proxy_http_version 1.1;"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of this code that demonstrates parallel processing in Node.js?",
+      "options": {
+        "A": "Starting tasks...\nTask 1 completed\nTask 2 completed\nTask 3 completed\nAll tasks completed",
+        "B": "Starting tasks...\nAll tasks completed\nTask 1 completed\nTask 2 completed\nTask 3 completed",
+        "C": "Starting tasks...\nTask 1 completed after 1000ms\nTask 2 completed after 500ms\nTask 3 completed after 1500ms\nAll tasks completed",
+        "D": "Starting tasks...\nTask 2 completed\nTask 1 completed\nTask 3 completed\nAll tasks completed"
+      },
+      "correct_answer": "D",
+      "code_example": "async function runTasks() {\n  console.log('Starting tasks...');\n  \n  const task1 = new Promise((resolve) => {\n    setTimeout(() => {\n      console.log('Task 1 completed');\n      resolve();\n    }, 1000);\n  });\n  \n  const task2 = new Promise((resolve) => {\n    setTimeout(() => {\n      console.log('Task 2 completed');\n      resolve();\n    }, 500);\n  });\n  \n  const task3 = new Promise((resolve) => {\n    setTimeout(() => {\n      console.log('Task 3 completed');\n      resolve();\n    }, 1500);\n  });\n  \n  await Promise.all([task1, task2, task3]);\n  console.log('All tasks completed');\n}\n\nrunTasks();"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "Which of the following statements about OAuth 2.0 with PKCE (Proof Key for Code Exchange) is TRUE?",
+      "options": {
+        "A": "PKCE can only be used with the Implicit Grant flow",
+        "B": "PKCE requires the client to generate a code_verifier and a code_challenge",
+        "C": "PKCE eliminates the need for client authentication entirely",
+        "D": "PKCE was designed primarily for server-side web applications"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What is the output of this code that demonstrates a common memory leak pattern with event listeners?",
+      "options": {
+        "A": "Subscribing to event...\nSubscribing to event...\nSubscribing to event...",
+        "B": "Subscribing to event...\nEvent fired: update\nSubscribing to event...\nEvent fired: update\nEvent fired: update\nSubscribing to event...\nEvent fired: update\nEvent fired: update\nEvent fired: update",
+        "C": "Subscribing to event...\nEvent fired: update\nSubscribing to event...\nEvent fired: update\nSubscribing to event...\nEvent fired: update",
+        "D": "Error: Too many event listeners added. Use emitter.setMaxListeners() to increase limit"
+      },
+      "correct_answer": "B",
+      "code_example": "const EventEmitter = require('events');\nconst emitter = new EventEmitter();\n\nfunction createSubscriber(id) {\n  console.log('Subscribing to event...');\n  \n  // This listener is added but never removed\n  emitter.on('update', (data) => {\n    console.log(`Event fired: ${data}`);\n  });\n  \n  return { id };\n}\n\n// Create subscribers and trigger events\nlet sub1 = createSubscriber(1);\nemitter.emit('update', 'update');\n\nlet sub2 = createSubscriber(2);\nemitter.emit('update', 'update');\n\nlet sub3 = createSubscriber(3);\nemitter.emit('update', 'update');\n\n// Subscriber objects go out of scope, but listeners remain\nsub1 = null;\nsub2 = null;\nsub3 = null;"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "When setting up a CI/CD pipeline for a Node.js application, which of the following is a best practice?",
+      "options": {
+        "A": "Running all tests in the production environment to ensure they pass in the actual deployment environment",
+        "B": "Storing environment variables directly in the repository for easy access during deployment",
+        "C": "Using semantic versioning and tagging releases to track which version is deployed",
+        "D": "Rebuilding node_modules on every deployment rather than using a package-lock.json file"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will this code using custom event listeners output?",
+      "options": {
+        "A": "User logged in: john123\nNew notification: You have a message",
+        "B": "User logged in: john123",
+        "C": "New notification: You have a message",
+        "D": "User logged in: john123\nUser logged in: john123\nNew notification: You have a message"
+      },
+      "correct_answer": "A",
+      "code_example": "class UserService {\n  constructor() {\n    this.listeners = {};\n  }\n  \n  addEventListener(event, callback) {\n    if (!this.listeners[event]) {\n      this.listeners[event] = [];\n    }\n    this.listeners[event].push(callback);\n  }\n  \n  removeEventListener(event, callback) {\n    if (this.listeners[event]) {\n      this.listeners[event] = this.listeners[event].filter(cb => cb !== callback);\n    }\n  }\n  \n  dispatchEvent(event, data) {\n    if (this.listeners[event]) {\n      this.listeners[event].forEach(callback => callback(data));\n    }\n  }\n  \n  login(username) {\n    // Simulate login process\n    setTimeout(() => {\n      this.dispatchEvent('login', username);\n    }, 100);\n  }\n  \n  sendNotification(message) {\n    this.dispatchEvent('notification', message);\n  }\n}\n\nconst userService = new UserService();\n\n// Add login listener\nconst loginListener = (username) => {\n  console.log(`User logged in: ${username}`);\n};\nuserService.addEventListener('login', loginListener);\n\n// Add notification listener\nuserService.addEventListener('notification', (message) => {\n  console.log(`New notification: ${message}`);\n});\n\n// Trigger events\nuserService.login('john123');\n\n// Wait for login to complete, then send notification\nsetTimeout(() => {\n  userService.sendNotification('You have a message');\n}, 200);"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "Which of the following best describes the primary difference between WebSockets, REST, and GraphQL in handling real-time data?",
+      "options": {
+        "A": "REST maintains a persistent connection while WebSockets and GraphQL use request-response cycles",
+        "B": "GraphQL allows clients to specify exactly what data they need, while REST and WebSockets send predefined data structures",
+        "C": "WebSockets provide full-duplex communication, while REST and GraphQL primarily use unidirectional client-initiated requests",
+        "D": "REST and GraphQL are protocols, while WebSockets is an architectural style"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of this code that reads a large file with streams?",
+      "options": {
+        "A": "Started reading file\nFile content: <entire file content>\nFinished reading file",
+        "B": "Started reading file\nChunk received: <first chunk of data>\nChunk received: <second chunk of data>\n...\nFinished reading file",
+        "C": "Started reading file\nChunk received: <Buffer object>\nChunk received: <Buffer object>\n...\nFinished reading file",
+        "D": "Started reading file\nFinished reading file"
+      },
+      "correct_answer": "B",
+      "code_example": "const fs = require('fs');\nconst path = require('path');\n\nfunction readLargeFile(filePath) {\n  console.log('Started reading file');\n  \n  // Create a readable stream\n  const readStream = fs.createReadStream(filePath, {\n    encoding: 'utf8',\n    highWaterMark: 1024 // Read in chunks of 1KB\n  });\n  \n  // Listen for data events\n  readStream.on('data', (chunk) => {\n    console.log(`Chunk received: ${chunk.substring(0, 20)}...`);\n  });\n  \n  // Listen for the end event\n  readStream.on('end', () => {\n    console.log('Finished reading file');\n  });\n  \n  // Listen for errors\n  readStream.on('error', (err) => {\n    console.error(`Error reading file: ${err.message}`);\n  });\n}\n\n// Assume we have a large file called 'data.txt'\nreadLargeFile(path.join(__dirname, 'data.txt'));"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "When configuring load balancing with PM2 for a Node.js application, which of the following statements is TRUE?",
+      "options": {
+        "A": "PM2 can only run a maximum of 4 instances per application",
+        "B": "PM2 automatically shares memory between instances using its built-in Redis store",
+        "C": "The 'cluster' mode in PM2 allows the application to handle more concurrent connections by utilizing all available CPU cores",
+        "D": "PM2 requires Nginx as a front-end load balancer to work properly"
+      },
+      "correct_answer": "C",
+      "code_example": "// ecosystem.config.js\nmodule.exports = {\n  apps: [{\n    name: 'my-api',\n    script: 'server.js',\n    instances: 'max',    // Use maximum number of CPU cores\n    exec_mode: 'cluster', // Run in cluster mode\n    watch: false,\n    env: {\n      NODE_ENV: 'production',\n      PORT: 3000\n    },\n    // Load balancing configuration\n    instance_var: 'INSTANCE_ID',\n    listen_timeout: 3000,\n    wait_ready: true\n  }]\n};"
+    }
+  ]
+}
