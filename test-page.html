@@ -307,194 +307,187 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
     <script>
-	    function generateQuiz(questions) {
-    const quizForm = document.getElementById('quizForm');
-    quizForm.innerHTML = '';
+    // Load and display test questions
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const levelValue = urlParams.get('level');
+        const testLevel = parseInt(levelValue, 10);
+        const language = urlParams.get('diff');
+        // Declare questions at a higher scope so it's accessible in the event listener
+        let questions = [];
 
-    questions.forEach(q => {
-        const questionDiv = document.createElement('div');
-        questionDiv.className = 'question';
-        questionDiv.dataset.difficulty = q.difficulty;
-
-        // Create difficulty badge
-        const difficultySpan = document.createElement('span');
-        difficultySpan.className = `difficulty ${q.difficulty}`;
-        difficultySpan.textContent = q.difficulty.charAt(0).toUpperCase() + q.difficulty.slice(1);
-
-        // Create question title
-        const questionTitle = document.createElement('h3');
-        questionTitle.appendChild(difficultySpan);
-        questionTitle.appendChild(document.createTextNode(` ${q.id}. ${q.question}`));
-        
-        questionDiv.appendChild(questionTitle);
-
-if (q.code_example) {
-    const codeBlock = document.createElement('pre');
-    const codeElement = document.createElement('code');
-    codeElement.className = 'language-python';
-    codeBlock.borderRadius = '5px';
-    codeElement.textContent = q.code_example;
-    codeBlock.appendChild(codeElement);
-    questionDiv.appendChild(codeBlock);
-    
-    if (Prism) {
-        Prism.highlightElement(codeElement);
-    }
-}
-
-        // Add answer options
-        for (const [key, value] of Object.entries(q.options)) {
-            const optionLabel = document.createElement('label');
-            optionLabel.style.display = 'block';
-            optionLabel.style.margin = '10px 0';
-            
-            const optionInput = document.createElement('input');
-            optionInput.type = 'radio';
-            optionInput.name = `q${q.id}`;
-            optionInput.value = key;
-            optionInput.id = `q${q.id}${key}`;
-            
-            optionLabel.appendChild(optionInput);
-            optionLabel.appendChild(document.createTextNode(` ${key}. ${value}`));
-            
-            questionDiv.appendChild(optionLabel);
+        if(language === 'CSharp') {
+            document.querySelector('h2').textContent = `C# — test ${testLevel}`;
+        }
+        else {
+            document.querySelector('h2').textContent = `${language} — test ${testLevel}`;
         }
 
-        quizForm.appendChild(questionDiv);
-    });
-}
-
-// Load and display test questions
-document.addEventListener('DOMContentLoaded', function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const levelValue = urlParams.get('level');
-    const testLevel = parseInt(levelValue, 10);
-    const language = urlParams.get('diff');
-    let questions;
-    if(language === 'CSharp') {
-	document.querySelector('h2').textContent = `C# — test ${testLevel}`;
-    }
-    else {
-	document.querySelector('h2').textContent = `${language} — test ${testLevel}`;
-    }
-
-    fetch(`json/${language}/test${testLevel}.json`) // Path to your JSON file
-        .then(response => {
-            console.log("Response Status:", response.status);
-            return response.json();
-        })
-        .then(data => {
-            console.log("JSON Data:", data);
-            
-            // Initialize the quiz with the loaded questions
-            generateQuiz(data.questions);
-	    questions = data.questions;
-            
-            if (Prism) {
-                setTimeout(function() {
-                    Prism.highlightAll();
-                }, 100);
-            }
-        })
-        .catch(error => {
-            console.error('Error loading questions:', error);
-            console.error("Fetch Error Details:", error);
-        });
-
-    // Process form submission
-    document.getElementById("submitBtn").addEventListener("click", function(event) {
-        event.preventDefault();
-        
-        let score = 0;
-        let total = 0;
-        let resultText = "<h3>Results:</h3>";
-        
-        // Create categories for detailed results
-        let easyCorrect = 0, mediumCorrect = 0, hardCorrect = 0;
-        let easyTotal = 0, mediumTotal = 0, hardTotal = 0;
-        
-        const questions = document.querySelectorAll('.question');
-        total = questions.length;
-        
-        questions.forEach(questionDiv => {
-            const qIdText = questionDiv.querySelector('h3').textContent;
-            const qId = parseInt(qIdText.match(/\d+/)[0]);
-            const difficulty = questionDiv.dataset.difficulty;
-            
-            // Count by difficulty
-            if (difficulty === 'easy') easyTotal++;
-            else if (difficulty === 'medium') mediumTotal++;
-            else if (difficulty === 'hard') hardTotal++;
-            
-            const selected = questionDiv.querySelector(`input[name="q${qId}"]:checked`);
-            
-            if (selected) {
-                // Find the correct answer by checking all radio buttons for this question
-                const allOptions = questionDiv.querySelectorAll(`input[name="q${qId}"]`);
-                let correctOption;
-		    
-                allOptions.forEach(option => {
-                    if (option.value === questions.find(q => q.id === qId).correct_answer) {
-                        correctOption = option;
-                    }
-                });
+        fetch(`json/${language}/test${testLevel}.json`) // Path to your JSON file
+            .then(response => {
+                console.log("Response Status:", response.status);
+                return response.json();
+            })
+            .then(data => {
+                console.log("JSON Data:", data);
                 
-                if (selected.value === correctOption.value) {
-                    score++;
-                    
-                    // Count correct by difficulty
-                    if (difficulty === 'easy') easyCorrect++;
-                    else if (difficulty === 'medium') mediumCorrect++;
-                    else if (difficulty === 'hard') hardCorrect++;
-                    
-                    resultText += `<p>Question ${qId}: Correct ✅</p>`;
-                } else {
-                    resultText += `<p>Question ${qId}: Incorrect ❌ (Your answer: ${selected.value}, Correct: ${correctOption.value})</p>`;
+                // Store the questions in the higher-scoped variable
+                questions = data.questions;
+                
+                // Initialize the quiz with the loaded questions
+                generateQuiz(questions);
+                
+                if (Prism) {
+                    setTimeout(function() {
+                        Prism.highlightAll();
+                    }, 100);
                 }
-            } else {
-                // Find correct answer for display
-                const correctAnswer = questions.find(q => q.id === qId).correct_answer;
-                resultText += `<p>Question ${qId}: No answer selected ❌ (Correct: ${correctAnswer})</p>`;
+            })
+            .catch(error => {
+                console.error('Error loading questions:', error);
+                console.error("Fetch Error Details:", error);
+            });
+
+        // Process form submission
+        document.getElementById("submitBtn").addEventListener("click", function(event) {
+            event.preventDefault();
+            
+            if (questions.length === 0) {
+                alert("Test data is still loading. Please try again in a moment.");
+                return;
             }
+            
+            let score = 0;
+            let total = questions.length;
+            let resultText = "<h3>Results:</h3>";
+            
+            // Create categories for detailed results
+            let easyCorrect = 0, mediumCorrect = 0, hardCorrect = 0;
+            let easyTotal = 0, mediumTotal = 0, hardTotal = 0;
+            
+            // Count totals by difficulty
+            questions.forEach(q => {
+                if (q.difficulty === 'easy') easyTotal++;
+                else if (q.difficulty === 'medium') mediumTotal++;
+                else if (q.difficulty === 'hard') hardTotal++;
+            });
+            
+            questions.forEach(q => {
+                const qId = q.id;
+                const selected = document.querySelector(`input[name="q${qId}"]:checked`);
+                
+                if (selected) {
+                    if (selected.value === q.correct_answer) {
+                        score++;
+                        
+                        // Count correct by difficulty
+                        if (q.difficulty === 'easy') easyCorrect++;
+                        else if (q.difficulty === 'medium') mediumCorrect++;
+                        else if (q.difficulty === 'hard') hardCorrect++;
+                        
+                        resultText += `<p>Question ${qId}: Correct ✅</p>`;
+                    } else {
+                        resultText += `<p>Question ${qId}: Incorrect ❌ (Your answer: ${selected.value}, Correct: ${q.correct_answer})</p>`;
+                    }
+                } else {
+                    resultText += `<p>Question ${qId}: No answer selected ❌ (Correct: ${q.correct_answer})</p>`;
+                }
+            });
+            
+            // Add summary
+            resultText += `<h3>Summary:</h3>`;
+            resultText += `<p>Easy: ${easyCorrect}/${easyTotal}</p>`;
+            resultText += `<p>Medium: ${mediumCorrect}/${mediumTotal}</p>`;
+            resultText += `<p>Hard: ${hardCorrect}/${hardTotal}</p>`;
+            resultText += `<p><strong>Total Score: ${score}/${total}</strong></p>`;
+            
+            document.getElementById("result").innerHTML = resultText;
+            
+            // Show score display
+            const scoreDisplay = document.getElementById("scoreDisplay");
+            scoreDisplay.style.display = "block";
+            document.getElementById("scoreValue").textContent = score;
+            document.getElementById("totalQuestions").textContent = total;
+            
+            // Update progress bar
+            const percentage = Math.round((score / total) * 100);
+            const progressBar = document.getElementById("progressBar");
+            progressBar.style.width = `${percentage}%`;
+            progressBar.textContent = `${percentage}%`;
+            
+            // Color code the progress bar
+            if (score < 28) {
+                progressBar.style.backgroundColor = "#dc3545"; // Red
+            } else if (score < 38) {
+                progressBar.style.backgroundColor = "#ffc107"; // Yellow
+            } else {
+                progressBar.style.backgroundColor = "#28a745"; // Green
+            }
+            
+            // Create a unique key for this test
+            const testKey = `${language}-test-${testLevel}`;
+            
+            // Save the score
+            localStorage.setItem(testKey, score);
         });
-        
-        // Add summary
-        resultText += `<h3>Summary:</h3>`;
-        resultText += `<p>Easy: ${easyCorrect}/${easyTotal}</p>`;
-        resultText += `<p>Medium: ${mediumCorrect}/${mediumTotal}</p>`;
-        resultText += `<p>Hard: ${hardCorrect}/${hardTotal}</p>`;
-        resultText += `<p><strong>Total Score: ${score}/${total}</strong></p>`;
-        
-        document.getElementById("result").innerHTML = resultText;
-        
-        // Show score display
-        const scoreDisplay = document.getElementById("scoreDisplay");
-        scoreDisplay.style.display = "block";
-        document.getElementById("scoreValue").textContent = score;
-        document.getElementById("totalQuestions").textContent = total;
-        
-        // Update progress bar
-        const percentage = Math.round((score / total) * 100);
-        const progressBar = document.getElementById("progressBar");
-        progressBar.style.width = `${percentage}%`;
-        progressBar.textContent = `${percentage}%`;
-        
-        // Color code the progress bar
-        if (score < 28) {
-            progressBar.style.backgroundColor = "#dc3545"; // Red
-        } else if (score < 38) {
-            progressBar.style.backgroundColor = "#ffc107"; // Yellow
-        } else {
-            progressBar.style.backgroundColor = "#28a745"; // Green
-        }
-        
-        // Create a unique key for this test
-        const testKey = `${language}-test-${testLevel}`;
-        
-        // Save the score
-        localStorage.setItem(testKey, score);
     });
-});
+
+    function generateQuiz(questions) {
+        const quizForm = document.getElementById('quizForm');
+        quizForm.innerHTML = '';
+
+        questions.forEach(q => {
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'question';
+            questionDiv.dataset.difficulty = q.difficulty;
+
+            // Create difficulty badge
+            const difficultySpan = document.createElement('span');
+            difficultySpan.className = `difficulty ${q.difficulty}`;
+            difficultySpan.textContent = q.difficulty.charAt(0).toUpperCase() + q.difficulty.slice(1);
+
+            // Create question title
+            const questionTitle = document.createElement('h3');
+            questionTitle.appendChild(difficultySpan);
+            questionTitle.appendChild(document.createTextNode(` ${q.id}. ${q.question}`));
+            
+            questionDiv.appendChild(questionTitle);
+
+            if (q.code_example) {
+                const codeBlock = document.createElement('pre');
+                const codeElement = document.createElement('code');
+                codeElement.className = 'language-python';
+                codeBlock.borderRadius = '5px';
+                codeElement.textContent = q.code_example;
+                codeBlock.appendChild(codeElement);
+                questionDiv.appendChild(codeBlock);
+                
+                if (Prism) {
+                    Prism.highlightElement(codeElement);
+                }
+            }
+
+            // Add answer options
+            for (const [key, value] of Object.entries(q.options)) {
+                const optionLabel = document.createElement('label');
+                optionLabel.style.display = 'block';
+                optionLabel.style.margin = '10px 0';
+                
+                const optionInput = document.createElement('input');
+                optionInput.type = 'radio';
+                optionInput.name = `q${q.id}`;
+                optionInput.value = key;
+                optionInput.id = `q${q.id}${key}`;
+                
+                optionLabel.appendChild(optionInput);
+                optionLabel.appendChild(document.createTextNode(` ${key}. ${value}`));
+                
+                questionDiv.appendChild(optionLabel);
+            }
+
+            quizForm.appendChild(questionDiv);
+        });
+    }
     </script>
 </body>
 </html>
