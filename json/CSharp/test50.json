@@ -1,0 +1,613 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "int result = 15 % 4 + 2 * 3;\nConsole.WriteLine(result);",
+      "options": {
+        "A": "9",
+        "B": "11",
+        "C": "7",
+        "D": "6"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "int a = 5;\nif (a > 3)\n    Console.WriteLine(\"Greater\");\nelse if (a < 3)\n    Console.WriteLine(\"Lesser\");\nelse\n    Console.WriteLine(\"Equal\");",
+      "options": {
+        "A": "Lesser",
+        "B": "Equal",
+        "C": "Greater",
+        "D": "No output"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "Which of the following demonstrates correct constructor overloading in C#?",
+      "options": {
+        "A": "public class Person { public Person() { } public Person() { Name = \"John\"; } }",
+        "B": "public class Person { public Person() { } public Person(string name = \"John\") { } }",
+        "C": "public class Person { public Person() { } public Person(string name) { Name = name; } }",
+        "D": "public class Person { public void Person() { } public void Person(string name) { } }"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Car {\n    public string Model;\n    public Car() {\n        Model = \"Unknown\";\n    }\n    public Car(string model) {\n        Model = model;\n    }\n}\n\nCar myCar = new Car(\"Tesla\");\nConsole.WriteLine(myCar.Model);",
+      "options": {
+        "A": "Unknown",
+        "B": "Tesla",
+        "C": "null",
+        "D": "Compilation error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a value type in C#?",
+      "options": {
+        "A": "int",
+        "B": "char",
+        "C": "string",
+        "D": "struct"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "class CustomException : Exception {\n    public CustomException(string message) : base(message) { }\n}\n\ntry {\n    throw new CustomException(\"Error occurred\");\n}\ncatch (CustomException ex) {\n    Console.WriteLine(ex.Message);\n}\ncatch (Exception ex) {\n    Console.WriteLine(\"General exception\");\n}",
+      "options": {
+        "A": "Error occurred",
+        "B": "General exception",
+        "C": "No output",
+        "D": "Compilation error"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What's the difference between 'ref' and 'out' parameters in C#?",
+      "options": {
+        "A": "ref requires the variable to be initialized before passing, out does not",
+        "B": "out requires the variable to be initialized before passing, ref does not",
+        "C": "ref passes by value, out passes by reference",
+        "D": "There is no difference, they're identical"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "void ModifyValues(ref int x, out int y) {\n    x = x * 2;\n    y = 10;\n}\n\nint a = 5;\nint b;\nModifyValues(ref a, out b);\nConsole.WriteLine($\"{a}, {b}\");",
+      "options": {
+        "A": "5, 10",
+        "B": "10, 5",
+        "C": "10, 10",
+        "D": "Compilation error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "try {\n    Console.Write(\"A\");\n    throw new Exception();\n    Console.Write(\"B\");\n}\ncatch {\n    Console.Write(\"C\");\n}\nfinally {\n    Console.Write(\"D\");\n}",
+      "options": {
+        "A": "ABCD",
+        "B": "ACD",
+        "C": "ABD",
+        "D": "AD"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "bool a = true;\nbool b = false;\nbool c = true;\nConsole.WriteLine(a && b || c);",
+      "options": {
+        "A": "true",
+        "B": "false",
+        "C": "Compilation error",
+        "D": "Runtime error"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "Which of the following correctly writes text to a file in C#?",
+      "options": {
+        "A": "File.CreateText(\"file.txt\", \"Hello World\");",
+        "B": "File.WriteAllText(\"file.txt\", \"Hello World\");",
+        "C": "File.AppendText(\"file.txt\", \"Hello World\");",
+        "D": "File.SaveText(\"file.txt\", \"Hello World\");"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "using (StreamWriter writer = new StreamWriter(\"temp.txt\")) {\n    writer.WriteLine(\"Line 1\");\n    writer.WriteLine(\"Line 2\");\n}\n\nusing (StreamReader reader = new StreamReader(\"temp.txt\")) {\n    string content = reader.ReadLine();\n    Console.WriteLine(content);\n}",
+      "options": {
+        "A": "Line 1\\nLine 2",
+        "B": "Line 1",
+        "C": "Line 2",
+        "D": "FileNotFoundException"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Person {\n    private int age = 25;\n    \n    public int Age {\n        get { return age; }\n        set { \n            if (value >= 0) \n                age = value; \n        }\n    }\n}\n\nPerson p = new Person();\np.Age = -5;\nConsole.WriteLine(p.Age);",
+      "options": {
+        "A": "-5",
+        "B": "25",
+        "C": "0",
+        "D": "Compilation error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "int day = 3;\nstring dayName = day switch {\n    1 => \"Monday\",\n    2 => \"Tuesday\",\n    3 => \"Wednesday\",\n    4 => \"Thursday\",\n    5 => \"Friday\",\n    _ => \"Weekend\"\n};\nConsole.WriteLine(dayName);",
+      "options": {
+        "A": "Tuesday",
+        "B": "Wednesday",
+        "C": "Thursday",
+        "D": "Weekend"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "Which of the following correctly checks if a file exists and creates a directory if it doesn't exist?",
+      "options": {
+        "A": "if (!File.Exists(path)) Directory.Create(directory);",
+        "B": "if (!Directory.Exists(directory)) File.Create(path);",
+        "C": "if (!File.Exists(path)) Directory.CreateDirectory(directory);",
+        "D": "if (!Directory.Exists(directory)) Directory.CreateDirectory(directory);"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string text = \"Hello, World!\";\nConsole.WriteLine(text.Substring(7, 5));",
+      "options": {
+        "A": "Hello",
+        "B": "World",
+        "C": "World!",
+        "D": "lo, Wo"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "public interface IProcessor\n{\n    void Process();\n    void Run();\n}\n\npublic class DataProcessor : IProcessor\n{\n    public void Process()\n    {\n        Console.Write(\"Processing data\");\n    }\n\n    void IProcessor.Run()\n    {\n        Console.Write(\"Running processor\");\n    }\n}\n\nDataProcessor processor = new DataProcessor();\nIProcessor iProcessor = processor;\n\nprocessor.Process();\ntry\n{\n    processor.Run();\n}\ncatch (Exception)\n{\n    Console.Write(\" | Error\");\n}\niProcessor.Run();",
+      "options": {
+        "A": "Processing data | Error",
+        "B": "Processing data | Error Running processor",
+        "C": "Processing dataRunning processor",
+        "D": "Compilation error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement about GC.Collect() is TRUE?",
+      "options": {
+        "A": "It should be called frequently to ensure optimal memory usage",
+        "B": "It forces immediate collection of all generations of memory",
+        "C": "It only collects objects in generation 0",
+        "D": "It's a suggestion to the garbage collector and may not have immediate effect"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the difference between Lazy and Eager Loading in C#?",
+      "options": {
+        "A": "Lazy loading loads data only when it's needed, eager loading loads data in advance",
+        "B": "Lazy loading is used with ORM frameworks, eager loading isn't supported",
+        "C": "Eager loading is a .NET 5+ feature, lazy loading is deprecated",
+        "D": "Lazy loading uses less memory than eager loading in all scenarios"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "List<int> list = new List<int> { 1, 2, 3, 4, 5 };\nLinkedList<int> linkedList = new LinkedList<int>(list);\n\nlist.RemoveAt(2);\nlinkedList.Remove(3);\n\nConsole.WriteLine($\"List count: {list.Count}, LinkedList count: {linkedList.Count}\");",
+      "options": {
+        "A": "List count: 5, LinkedList count: 5",
+        "B": "List count: 4, LinkedList count: 4",
+        "C": "List count: 4, LinkedList count: 5",
+        "D": "List count: 5, LinkedList count: 4"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What is the correct way to create custom middleware in ASP.NET Core?",
+      "code_example": "public class CustomMiddleware\n{\n    private readonly RequestDelegate _next;\n\n    public CustomMiddleware(RequestDelegate next)\n    {\n        _next = next;\n    }\n\n    public async Task InvokeAsync(HttpContext context)\n    {\n        // Do something before\n        await _next(context);\n        // Do something after\n    }\n}\n\n// In Startup.cs or Program.cs\n// Which is the correct way to use this middleware?",
+      "options": {
+        "A": "app.Use(CustomMiddleware);",
+        "B": "app.UseMiddleware<CustomMiddleware>();",
+        "C": "app.AddMiddleware<CustomMiddleware>();",
+        "D": "app.AddTransient<CustomMiddleware>();"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "In ASP.NET Core dependency injection, which service lifetime is NOT correctly described?",
+      "options": {
+        "A": "Transient: A new instance is created each time the service is requested",
+        "B": "Scoped: A single instance is created per HTTP request",
+        "C": "Singleton: A single instance is created for the entire application lifetime",
+        "D": "Singleton: A new instance is created for each client connection"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "SortedList<int, string> sortedList = new SortedList<int, string>();\nsortedList.Add(3, \"Three\");\nsortedList.Add(1, \"One\");\nsortedList.Add(2, \"Two\");\n\nforeach (var item in sortedList)\n{\n    Console.Write($\"{item.Key}:{item.Value} \");\n}",
+      "options": {
+        "A": "3:Three 1:One 2:Two",
+        "B": "1:One 2:Two 3:Three",
+        "C": "Three One Two",
+        "D": "The keys will be sorted in descending order: 3:Three 2:Two 1:One"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "Action<string> printMessage;\n\nprintMessage = delegate(string message) { \n    Console.WriteLine($\"Message: {message}\"); \n};\n\nprintMessage(\"Hello\");",
+      "options": {
+        "A": "Message: Hello",
+        "B": "Hello",
+        "C": "System.Action`1[System.String]",
+        "D": "Compilation error"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What is the primary purpose of using ConfigureAwait(false) in async methods?",
+      "options": {
+        "A": "To prevent deadlocks in UI applications",
+        "B": "To improve performance by forcing immediate execution",
+        "C": "To guarantee the method will run on a background thread",
+        "D": "To catch exceptions that occur during async operations"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "public interface ILogger\n{\n    void Log(string message);\n}\n\npublic class ConsoleLogger : ILogger\n{\n    public ConsoleLogger()\n    {\n        Console.WriteLine(\"ConsoleLogger created\");\n    }\n\n    public void Log(string message)\n    {\n        Console.WriteLine($\"Log: {message}\");\n    }\n}\n\npublic class LoggingService\n{\n    private readonly ILogger _logger;\n\n    public LoggingService(ILogger logger)\n    {\n        _logger = logger;\n        Console.WriteLine(\"LoggingService created\");\n    }\n\n    public void DoWork()\n    {\n        _logger.Log(\"Work done\");\n    }\n}\n\nvar logger = new ConsoleLogger();\nvar service = new LoggingService(logger);\nservice.DoWork();",
+      "options": {
+        "A": "ConsoleLogger created\nLoggingService created\nLog: Work done",
+        "B": "LoggingService created\nConsoleLogger created\nLog: Work done",
+        "C": "ConsoleLogger created\nLog: Work done",
+        "D": "Compilation error: missing dependency registration"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "Func<int, int> square = x => x * x;\nFunc<int, int, int> multiply = (x, y) => x * y;\n\nConsole.WriteLine(square(4));\nConsole.WriteLine(multiply(2, 3));",
+      "options": {
+        "A": "16\n6",
+        "B": "16\n5",
+        "C": "8\n6",
+        "D": "16\nCompilation error"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "List<int> numbers = new List<int> { 1, 2, 3 };\nint result1 = numbers.FirstOrDefault(x => x > 5);\nint result2 = numbers.SingleOrDefault(x => x == 2);\n\nConsole.WriteLine($\"{result1}, {result2}\");",
+      "options": {
+        "A": "null, 2",
+        "B": "0, 2",
+        "C": "Exception, 2",
+        "D": "1, 2"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using Entity Framework Core?",
+      "code_example": "// Assuming a standard DbContext and User entity\nvar users = dbContext.Users\n    .Where(u => u.Age > 18)\n    .OrderBy(u => u.LastName)\n    .Select(u => new { u.FirstName, u.LastName });\n\nforeach (var user in users)\n{\n    Console.WriteLine($\"{user.FirstName} {user.LastName}\");\n}\n\n// When is the SQL query executed?",
+      "options": {
+        "A": "When the 'users' variable is declared",
+        "B": "When the Where() method is called",
+        "C": "When the Select() method is called",
+        "D": "When the foreach loop begins iterating"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "Which of the following is a correct way to write a basic xUnit test?",
+      "code_example": "public class Calculator\n{\n    public int Add(int a, int b) => a + b;\n}\n\n// Which of these would be a proper xUnit test?",
+      "options": {
+        "A": "[Test]\npublic void Add_TwoNumbers_ReturnsCorrectSum()\n{\n    var calc = new Calculator();\n    Assert.AreEqual(5, calc.Add(2, 3));\n}",
+        "B": "[Fact]\npublic void Add_TwoNumbers_ReturnsCorrectSum()\n{\n    var calc = new Calculator();\n    Assert.Equal(5, calc.Add(2, 3));\n}",
+        "C": "[TestMethod]\npublic void Add_TwoNumbers_ReturnsCorrectSum()\n{\n    var calc = new Calculator();\n    Assert.Equal(5, calc.Add(2, 3));\n}",
+        "D": "public void TestAdd()\n{\n    var calc = new Calculator();\n    Assert.Equal(5, calc.Add(2, 3));\n}"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Animal\n{\n    public Animal()\n    {\n        Console.Write(\"A\");\n    }\n}\n\nclass Dog : Animal\n{\n    public Dog() : base()\n    {\n        Console.Write(\"D\");\n    }\n}\n\nDog dog = new Dog();",
+      "options": {
+        "A": "A",
+        "B": "D",
+        "C": "AD",
+        "D": "DA"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What does 'deferred execution' mean in LINQ?",
+      "options": {
+        "A": "The query is executed immediately but results are returned in batches",
+        "B": "The query is only executed when the results are actually iterated or enumerated",
+        "C": "The query is executed on a background thread to improve performance",
+        "D": "The query is cached and only re-executed when the source data changes"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which of the following correctly implements the Observer pattern in C#?",
+      "options": {
+        "A": "Using events and delegates with += to subscribe and -= to unsubscribe",
+        "B": "Using a static List<T> to store references to all classes that need notification",
+        "C": "Using reflection to automatically detect classes that implement an observer interface",
+        "D": "Using the async/await pattern to notify observers asynchronously"
+      },
+      "correct_answer": "A",
+      "code_example": "public class StockTicker {\n    // Event declaration using a delegate\n    public event EventHandler<StockChangedEventArgs> StockChanged;\n\n    private void OnStockChanged(string stock, decimal price) {\n        // Notify all observers\n        StockChanged?.Invoke(this, new StockChangedEventArgs(stock, price));\n    }\n\n    public void UpdateStock(string stock, decimal price) {\n        // Business logic here\n        Console.WriteLine($\"Stock {stock} updated to {price}\");\n        OnStockChanged(stock, price);\n    }\n}\n\n// Observer subscribes to the subject\npublic class StockDisplay {\n    public StockDisplay(StockTicker ticker) {\n        // Subscribe to the event (attach observer)\n        ticker.StockChanged += OnStockChanged;\n    }\n\n    private void OnStockChanged(object sender, StockChangedEventArgs e) {\n        Console.WriteLine($\"DISPLAY: {e.Stock} changed to {e.Price}\");\n    }\n\n    public void Detach(StockTicker ticker) {\n        // Unsubscribe from the event (detach observer)\n        ticker.StockChanged -= OnStockChanged;\n    }\n}"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using semaphores?",
+      "options": {
+        "A": "TaskA started, TaskB started, TaskA finished, TaskB finished",
+        "B": "TaskA started, TaskA finished, TaskB started, TaskB finished",
+        "C": "TaskB started, TaskB finished, TaskA started, TaskA finished",
+        "D": "Either TaskA or TaskB will start first, but only one will run at a time"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program {\n    static SemaphoreSlim semaphore = new SemaphoreSlim(1, 1);\n    \n    static async Task Main() {\n        Task taskA = RunTaskA();\n        Task taskB = RunTaskB();\n        \n        await Task.WhenAll(taskA, taskB);\n    }\n    \n    static async Task RunTaskA() {\n        await semaphore.WaitAsync();\n        try {\n            Console.WriteLine(\"TaskA started\");\n            await Task.Delay(1000); // Simulating work\n            Console.WriteLine(\"TaskA finished\");\n        }\n        finally {\n            semaphore.Release();\n        }\n    }\n    \n    static async Task RunTaskB() {\n        await semaphore.WaitAsync();\n        try {\n            Console.WriteLine(\"TaskB started\");\n            await Task.Delay(1000); // Simulating work\n            Console.WriteLine(\"TaskB finished\");\n        }\n        finally {\n            semaphore.Release();\n        }\n    }\n}"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using MethodInfo.Invoke()?",
+      "options": {
+        "A": "Hello, World!",
+        "B": "Hello, John!",
+        "C": "An InvalidOperationException will be thrown",
+        "D": "A TargetParameterCountException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Reflection;\n\nclass Program {\n    static void Main() {\n        Type type = typeof(Messenger);\n        Messenger instance = new Messenger();\n        \n        MethodInfo methodInfo = type.GetMethod(\"SayHello\", \n            BindingFlags.Public | BindingFlags.Instance);\n            \n        object result = methodInfo.Invoke(instance, new object[] { \"John\" });\n        Console.WriteLine(result);\n    }\n}\n\nclass Messenger {\n    public string SayHello(string name) {\n        return $\"Hello, {name}!\";\n    }\n}"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "Which statement about the Adapter pattern in C# is incorrect?",
+      "options": {
+        "A": "The Adapter pattern allows incompatible interfaces to work together",
+        "B": "In C#, the Adapter pattern can be implemented using inheritance or composition",
+        "C": "The Adapter pattern requires modifying the source code of the adapted class",
+        "D": "The Adapter pattern is useful when integrating with third-party libraries"
+      },
+      "correct_answer": "C",
+      "code_example": "// Target interface that the client expects to use\npublic interface ITarget {\n    string Request();\n}\n\n// The existing class with incompatible interface\npublic class Adaptee {\n    public string SpecificRequest() {\n        return \"Specific request from adaptee\";\n    }\n}\n\n// Adapter class that makes Adaptee compatible with ITarget\npublic class Adapter : ITarget {\n    private readonly Adaptee _adaptee;\n    \n    public Adapter(Adaptee adaptee) {\n        _adaptee = adaptee;\n    }\n    \n    // Implementing the expected interface by delegating to Adaptee\n    public string Request() {\n        // Translate the Target interface to Adaptee interface\n        return $\"Adapter: {_adaptee.SpecificRequest()}\";\n    }\n}\n\n// Client code works with ITarget interface\npublic class Client {\n    public void Process(ITarget target) {\n        Console.WriteLine(target.Request());\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "In token-based authentication with JWT in ASP.NET Core, which of the following is NOT a recommended practice?",
+      "options": {
+        "A": "Storing sensitive user information in the JWT payload",
+        "B": "Including an expiration time (exp) claim in the token",
+        "C": "Validating the token signature on every request",
+        "D": "Using HTTPS to transmit the token"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Singleton implementation?",
+      "options": {
+        "A": "Instance1: TheSingletonClass, Instance2: TheSingletonClass",
+        "B": "Instance1: TheSingletonClass, Instance2: TheSingletonClass, Both instances are the same: True",
+        "C": "Instance1: TheSingletonClass, Instance2: TheSingletonClass, Both instances are the same: False",
+        "D": "A NullReferenceException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic sealed class Singleton {\n    private static readonly Lazy<Singleton> _instance = \n        new Lazy<Singleton>(() => new Singleton());\n        \n    private Singleton() {\n        // Private constructor prevents external instantiation\n    }\n    \n    public static Singleton Instance => _instance.Value;\n    \n    public override string ToString() {\n        return \"TheSingletonClass\";\n    }\n}\n\nclass Program {\n    static void Main() {\n        var instance1 = Singleton.Instance;\n        var instance2 = Singleton.Instance;\n        \n        Console.WriteLine($\"Instance1: {instance1}\");\n        Console.WriteLine($\"Instance2: {instance2}\");\n        Console.WriteLine($\"Both instances are the same: {ReferenceEquals(instance1, instance2)}\");\n    }\n}"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "When implementing role-based authentication in ASP.NET Core, which approach is NOT correct?",
+      "options": {
+        "A": "Using the [Authorize(Roles = \"Admin\")] attribute on controller classes or methods",
+        "B": "Checking User.IsInRole(\"Admin\") in controller methods",
+        "C": "Storing role information directly in the database without hashing",
+        "D": "Using policy-based authorization with requirements and handlers"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will the following code using Monitor print?",
+      "options": {
+        "A": "Starting Task 1, Starting Task 2, Task 1 completed, Task 2 completed",
+        "B": "Starting Task 1, Task 1 completed, Starting Task 2, Task 2 completed",
+        "C": "Starting Task 2, Starting Task 1, Task 2 completed, Task 1 completed",
+        "D": "The order of output is non-deterministic due to threading, but the tasks will not run concurrently"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program {\n    private static readonly object _lockObject = new object();\n    \n    static void Main() {\n        Task task1 = Task.Run(() => DoWork(\"Task 1\"));\n        Task task2 = Task.Run(() => DoWork(\"Task 2\"));\n        \n        Task.WaitAll(task1, task2);\n    }\n    \n    static void DoWork(string taskName) {\n        Monitor.Enter(_lockObject);\n        try {\n            Console.WriteLine($\"Starting {taskName}\");\n            // Simulate work\n            Thread.Sleep(1000);\n            Console.WriteLine($\"{taskName} completed\");\n        }\n        finally {\n            Monitor.Exit(_lockObject);\n        }\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "Which approach to API versioning in ASP.NET Core is NOT recommended for RESTful APIs?",
+      "options": {
+        "A": "URI versioning (e.g., /api/v1/products)",
+        "B": "Query string versioning (e.g., /api/products?api-version=1.0)",
+        "C": "Header versioning (using a custom HTTP header)",
+        "D": "Changing the endpoint URL for each change without version indicators"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "When deploying .NET applications in Kubernetes, which statement is FALSE?",
+      "options": {
+        "A": "Container images for .NET applications should be built using multi-stage Docker builds to reduce image size",
+        "B": "Health checks can be implemented using ASP.NET Core's health check middleware and exposed to Kubernetes",
+        "C": "Kubernetes automatically handles transactions and rollbacks for Entity Framework Core database migrations",
+        "D": "Environment-specific configuration can be injected using Kubernetes ConfigMaps and Secrets"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using ArrayPool<T>?",
+      "options": {
+        "A": "Array length: 5, Values: 10, 20, 30, 0, 0",
+        "B": "Array length: 5, Values: 10, 20, 30, 40, 50",
+        "C": "Array length: 8, Values: 10, 20, 30, 0, 0, 0, 0, 0",
+        "D": "Array length: 8, Values: 10, 20, 30, 40, 50, 0, 0, 0"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Buffers;\n\nclass Program {\n    static void Main() {\n        // Rent an array from the shared pool\n        int[] rentedArray = ArrayPool<int>.Shared.Rent(5);\n        \n        try {\n            // Fill the first 3 elements\n            rentedArray[0] = 10;\n            rentedArray[1] = 20;\n            rentedArray[2] = 30;\n            \n            // Print the array length and values\n            Console.WriteLine($\"Array length: {rentedArray.Length}\");\n            Console.Write(\"Values: \");\n            foreach (var value in rentedArray) {\n                Console.Write($\"{value}, \");\n            }\n        }\n        finally {\n            // Return the array to the pool\n            ArrayPool<int>.Shared.Return(rentedArray);\n        }\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What is the correct way to handle errors in P/Invoke (DllImport) calls in C#?",
+      "options": {
+        "A": "Use try-catch blocks with a specific Win32Exception",
+        "B": "Check the return value and then call Marshal.GetLastWin32Error()",
+        "C": "Use the [PreserveSig] attribute to preserve HRESULTs from COM methods",
+        "D": "All of the above depending on the API being called"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\nusing System.ComponentModel;\nusing System.Runtime.InteropServices;\n\nclass Program {\n    // Import the MessageBox function from user32.dll\n    [DllImport(\"user32.dll\", SetLastError = true, CharSet = CharSet.Unicode)]\n    private static extern int MessageBox(IntPtr hWnd, string lpText, string lpCaption, uint uType);\n    \n    // Import GetFileAttributes with SetLastError\n    [DllImport(\"kernel32.dll\", SetLastError = true, CharSet = CharSet.Unicode)]\n    private static extern uint GetFileAttributes(string lpFileName);\n    \n    static void Main() {\n        // Example 1: Check return value\n        int result = MessageBox(IntPtr.Zero, \"Hello from P/Invoke\", \"P/Invoke Example\", 0);\n        if (result == 0) {\n            int errorCode = Marshal.GetLastWin32Error();\n            Console.WriteLine($\"MessageBox failed with error code: {errorCode}\");\n        }\n        \n        // Example 2: Using try-catch with Win32Exception\n        try {\n            const uint INVALID_FILE_ATTRIBUTES = 0xFFFFFFFF;\n            uint attributes = GetFileAttributes(\"NonExistentFile.txt\");\n            \n            if (attributes == INVALID_FILE_ATTRIBUTES) {\n                int error = Marshal.GetLastWin32Error();\n                throw new Win32Exception(error);\n            }\n        }\n        catch (Win32Exception ex) {\n            Console.WriteLine($\"Error: {ex.Message} (Error code: {ex.NativeErrorCode})\");\n        }\n    }\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "In RabbitMQ with C#, which of the following is NOT a valid exchange type?",
+      "options": {
+        "A": "Direct",
+        "B": "Fanout",
+        "C": "Topic",
+        "D": "Pipeline"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Mediator pattern implementation?",
+      "options": {
+        "A": "Sending message...\nMessage sent\nNotification: The message was sent",
+        "B": "Sending message...\nReceiving message...\nMessage received: Hello World!",
+        "C": "Sending message...\nMessage received by Colleague1\nMessage received by Colleague2",
+        "D": "An InvalidOperationException will be thrown because both colleagues try to receive the message"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Collections.Generic;\n\nclass Program {\n    static void Main() {\n        // Create mediator\n        ConcreteMediator mediator = new ConcreteMediator();\n        \n        // Create colleagues\n        Colleague colleague1 = new Colleague1(mediator);\n        Colleague colleague2 = new Colleague2(mediator);\n        \n        // Register colleagues with mediator\n        mediator.Register(colleague1);\n        mediator.Register(colleague2);\n        \n        // Send message through mediator\n        Console.WriteLine(\"Sending message...\");\n        colleague1.Send(\"Hello World!\");\n    }\n}\n\n// Mediator interface\nabstract class Mediator {\n    public abstract void Send(string message, Colleague colleague);\n    public abstract void Register(Colleague colleague);\n}\n\n// Concrete Mediator\nclass ConcreteMediator : Mediator {\n    private List<Colleague> _colleagues = new List<Colleague>();\n    \n    public override void Register(Colleague colleague) {\n        _colleagues.Add(colleague);\n    }\n    \n    public override void Send(string message, Colleague sender) {\n        foreach (var colleague in _colleagues) {\n            // Don't send message back to sender\n            if (colleague != sender) {\n                colleague.Receive(message);\n            }\n        }\n    }\n}\n\n// Colleague abstract class\nabstract class Colleague {\n    protected Mediator _mediator;\n    \n    public Colleague(Mediator mediator) {\n        _mediator = mediator;\n    }\n    \n    public void Send(string message) {\n        _mediator.Send(message, this);\n    }\n    \n    public abstract void Receive(string message);\n}\n\n// Concrete Colleagues\nclass Colleague1 : Colleague {\n    public Colleague1(Mediator mediator) : base(mediator) { }\n    \n    public override void Receive(string message) {\n        Console.WriteLine($\"Message received by Colleague1\");\n    }\n}\n\nclass Colleague2 : Colleague {\n    public Colleague2(Mediator mediator) : base(mediator) { }\n    \n    public override void Receive(string message) {\n        Console.WriteLine($\"Message received by Colleague2\");\n    }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "When implementing REST API error handling in ASP.NET Core, which status code is INCORRECT for the described scenario?",
+      "options": {
+        "A": "404 Not Found - The requested resource doesn't exist",
+        "B": "400 Bad Request - The request payload is invalid",
+        "C": "401 Unauthorized - The client isn't authenticated",
+        "D": "500 Internal Server Error - The client provided invalid credentials"
+      },
+      "correct_answer": "D",
+      "code_example": "// Example ASP.NET Core controller with proper HTTP status code usage\npublic class ProductsController : ControllerBase {\n    private readonly IProductRepository _repository;\n    \n    public ProductsController(IProductRepository repository) {\n        _repository = repository;\n    }\n    \n    [HttpGet(\"{id}\")]\n    public ActionResult<Product> GetById(int id) {\n        var product = _repository.GetById(id);\n        \n        if (product == null) {\n            // 404 - Resource not found\n            return NotFound();\n        }\n        \n        // 200 - Success\n        return Ok(product);\n    }\n    \n    [HttpPost]\n    [Authorize] // Requires authentication\n    public ActionResult<Product> Create(ProductCreateDto dto) {\n        if (!ModelState.IsValid) {\n            // 400 - Client error\n            return BadRequest(ModelState);\n        }\n        \n        try {\n            var product = _repository.Create(dto);\n            // 201 - Resource created\n            return CreatedAtAction(\n                nameof(GetById), \n                new { id = product.Id }, \n                product);\n        }\n        catch (Exception ex) {\n            // 500 - Server error\n            return StatusCode(500, new {\n                error = \"An unexpected error occurred\",\n                // Don't include exception details in production\n                details = Environment.IsDevelopment() ? ex.Message : null\n            });\n        }\n    }\n}"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following SignalR code when a client connects?",
+      "options": {
+        "A": "The server will throw an exception because OnConnectedAsync is not properly implemented",
+        "B": "New connection with id: [connection-id], Active connections: 1",
+        "C": "The server will broadcast a welcome message to all connected clients",
+        "D": "The client will automatically receive all messages from the 'notifications' group"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Collections.Generic;\nusing System.Threading.Tasks;\nusing Microsoft.AspNetCore.SignalR;\n\npublic class NotificationHub : Hub {\n    private static int _connectionCount = 0;\n    \n    public override async Task OnConnectedAsync() {\n        // Increment connection counter\n        Interlocked.Increment(ref _connectionCount);\n        \n        // Log connection\n        Console.WriteLine($\"New connection with id: {Context.ConnectionId}, \" + \n                         $\"Active connections: {_connectionCount}\");\n        \n        await base.OnConnectedAsync();\n    }\n    \n    public override async Task OnDisconnectedAsync(Exception exception) {\n        // Decrement connection counter\n        Interlocked.Decrement(ref _connectionCount);\n        \n        // Log disconnection\n        Console.WriteLine($\"Connection {Context.ConnectionId} disconnected. \" + \n                         $\"Active connections: {_connectionCount}\");\n        \n        await base.OnDisconnectedAsync(exception);\n    }\n    \n    public async Task SendMessage(string message) {\n        // Send message to all clients\n        await Clients.All.SendAsync(\"ReceiveMessage\", \n                                   Context.ConnectionId, \n                                   message);\n    }\n    \n    public async Task JoinGroup(string groupName) {\n        await Groups.AddToGroupAsync(Context.ConnectionId, groupName);\n        await Clients.Group(groupName).SendAsync(\"ReceiveGroupMessage\", \n                                               $\"{Context.ConnectionId} joined {groupName}\");\n    }\n}"
+    }
+  ]
+}
