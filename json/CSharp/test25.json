@@ -1,0 +1,614 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string name = null;\nConsole.WriteLine(name ?? \"Unknown\");",
+      "options": {
+        "A": "null",
+        "B": "Unknown",
+        "C": "\" \"",
+        "D": "NullReferenceException will be thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which statement about value types in C# is correct?",
+      "options": {
+        "A": "Value types are always allocated on the heap",
+        "B": "Value types can be nullable by default",
+        "C": "Value types are copied when passed to methods",
+        "D": "Value types must implement IDisposable"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "try {\n    throw new ArgumentException(\"Invalid argument\");\n}\ncatch (Exception ex) {\n    Console.WriteLine(ex.GetType().Name);\n}",
+      "options": {
+        "A": "Exception",
+        "B": "ArgumentException",
+        "C": "InvalidArgumentException",
+        "D": "SystemException"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "int[] numbers = new int[3];\nnumbers[0] = 10;\nnumbers[1] = 20;\nnumbers[2] = 30;\n\nint sum = 0;\nfor (int i = 0; i < numbers.Length; i++) {\n    sum += numbers[i];\n}\n\nConsole.WriteLine(sum);",
+      "options": {
+        "A": "30",
+        "B": "60",
+        "C": "10",
+        "D": "IndexOutOfRangeException will be thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Person {\n    private string _name;\n    public string Name {\n        get { return _name ?? \"No name\"; }\n        set { _name = value; }\n    }\n}\n\nPerson p = new Person();\nConsole.WriteLine(p.Name);",
+      "options": {
+        "A": "\"\"",
+        "B": "null",
+        "C": "No name",
+        "D": "NullReferenceException will be thrown"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What is the key difference between var and dynamic in C#?",
+      "options": {
+        "A": "var is resolved at runtime, dynamic is resolved at compile time",
+        "B": "var is resolved at compile time, dynamic is resolved at runtime",
+        "C": "var can only be used with primitive types, dynamic can be used with any type",
+        "D": "var requires explicit type conversion, dynamic does not"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "int count = 0;\nwhile (count < 5) {\n    if (count == 3)\n        break;\n    count++;\n}\nConsole.WriteLine(count);",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "0"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a benefit of cross-platform development in .NET?",
+      "options": {
+        "A": "Code reuse across different operating systems",
+        "B": "Single codebase for multiple platforms",
+        "C": "Native performance on all platforms without any optimization",
+        "D": "Consistent development experience"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will happen when the following code is executed?",
+      "code_example": "try {\n    string content = File.ReadAllText(\"nonexistent.txt\");\n    Console.WriteLine(content);\n}\ncatch (FileNotFoundException) {\n    Console.WriteLine(\"File not found\");\n}",
+      "options": {
+        "A": "The program will crash with an unhandled exception",
+        "B": "The console will display the contents of nonexistent.txt",
+        "C": "The console will display \"File not found\"",
+        "D": "Nothing will be displayed on the console"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "try {\n    Console.Write(\"A\");\n    throw new Exception();\n    Console.Write(\"B\");\n}\ncatch {\n    Console.Write(\"C\");\n}\nfinally {\n    Console.Write(\"D\");\n}",
+      "options": {
+        "A": "ACD",
+        "B": "ABD",
+        "C": "ABCD",
+        "D": "AD"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What is the result of the following code?",
+      "code_example": "int i = 10;\ndouble d = i;\nConsole.WriteLine(d.GetType().Name);",
+      "options": {
+        "A": "Int32",
+        "B": "Double",
+        "C": "Object",
+        "D": "A compilation error will occur"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the type of variable x in the following code?",
+      "code_example": "var x = \"Hello\";",
+      "options": {
+        "A": "var",
+        "B": "object",
+        "C": "string",
+        "D": "dynamic"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "try {\n    throw new Exception(\"Error\");\n}\ncatch (ArgumentException) {\n    Console.WriteLine(\"A\");\n}\ncatch (Exception) {\n    Console.WriteLine(\"B\");\n}\nfinally {\n    Console.WriteLine(\"C\");\n}",
+      "options": {
+        "A": "A C",
+        "B": "B C",
+        "C": "C",
+        "D": "An unhandled exception will be thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "var numbers = new List<int>();\nnumbers.Add(1);\nnumbers.Add(2);\nConsole.WriteLine(numbers.FirstOrDefault(n => n > 5) == 0);",
+      "options": {
+        "A": "false",
+        "B": "true",
+        "C": "Compilation error",
+        "D": "Runtime exception"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What is the primary purpose of the 'using' statement in C#?",
+      "options": {
+        "A": "To include namespaces in the current file",
+        "B": "To automatically dispose of resources when they go out of scope",
+        "C": "To create a new thread for resource-intensive operations",
+        "D": "To enable garbage collection for specific objects"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string input = \"123\";\nint result;\nif (int.TryParse(input, out result)) {\n    Console.WriteLine(\"Success: \" + result);\n} else {\n    Console.WriteLine(\"Failed\");\n}",
+      "options": {
+        "A": "Success: 123",
+        "B": "Failed",
+        "C": "123",
+        "D": "Success: 0"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "delegate int MathOperation(int x, int y);\n\nclass Program {\n    static int Add(int a, int b) => a + b;\n    static int Multiply(int a, int b) => a * b;\n    \n    static void Main() {\n        MathOperation operation = Add;\n        Console.WriteLine(operation(3, 4));\n        operation = Multiply;\n        Console.WriteLine(operation(3, 4));\n    }\n}",
+      "options": {
+        "A": "7 7",
+        "B": "7 12",
+        "C": "12 12",
+        "D": "3 4"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is the primary effect of calling GC.Collect()?",
+      "options": {
+        "A": "It forces the garbage collector to release all memory",
+        "B": "It forces the garbage collector to run, but doesn't guarantee all objects will be collected",
+        "C": "It prevents the garbage collector from running until explicitly called again",
+        "D": "It only collects objects in generation 0"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "In ASP.NET Core, which middleware component is responsible for routing requests to the appropriate controller and action?",
+      "options": {
+        "A": "UseStaticFiles",
+        "B": "UseRouting",
+        "C": "UseEndpoints",
+        "D": "UseAuthentication"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What is the primary difference between List<T> and LinkedList<T> in terms of performance?",
+      "options": {
+        "A": "LinkedList<T> provides faster random access to elements",
+        "B": "List<T> provides faster insertion and deletion at the beginning of the collection",
+        "C": "LinkedList<T> provides faster insertion and deletion in the middle of the collection",
+        "D": "List<T> uses less memory per element"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Person {\n    public string Name { get; private set; }\n    \n    public Person(string name) {\n        Name = name;\n    }\n}\n\nclass Program {\n    static void Main() {\n        var person = new Person(\"John\");\n        Console.WriteLine(person.Name);\n        // person.Name = \"Jane\"; // This line would cause a compilation error\n    }\n}",
+      "options": {
+        "A": "Compilation error",
+        "B": "Runtime exception",
+        "C": "John",
+        "D": "null"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which generation of the garbage collector is most expensive to collect?",
+      "options": {
+        "A": "Gen0",
+        "B": "Gen1",
+        "C": "Gen2",
+        "D": "All generations have the same collection cost"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "delegate void Notifier(string message);\n\nclass Program {\n    static void Main() {\n        Notifier notifier = SendEmail;\n        notifier += SendSMS;\n        notifier(\"Hello\");\n    }\n    \n    static void SendEmail(string message) {\n        Console.WriteLine($\"Email sent: {message}\");\n    }\n    \n    static void SendSMS(string message) {\n        Console.WriteLine($\"SMS sent: {message}\");\n    }\n}",
+      "options": {
+        "A": "Email sent: Hello",
+        "B": "SMS sent: Hello",
+        "C": "Email sent: Hello\nSMS sent: Hello",
+        "D": "No output will be displayed"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "When using Dependency Injection in testing, which of the following is NOT a common benefit?",
+      "options": {
+        "A": "Makes it easier to replace real implementations with mocks or stubs",
+        "B": "Allows testing components in isolation",
+        "C": "Increases the compilation speed of the test project",
+        "D": "Makes test setup and configuration more explicit"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "async Task<int> GetValueAsync() {\n    await Task.Delay(100);\n    return 42;\n}\n\nvoid PrintValue() {\n    var task = GetValueAsync();\n    Console.WriteLine(task.Result);\n}\n\n// Assume PrintValue() is called from somewhere",
+      "options": {
+        "A": "The program will hang indefinitely",
+        "B": "0",
+        "C": "42",
+        "D": "A TaskCanceledException will be thrown"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Base {\n    public Base() {\n        Console.Write(\"A\");\n    }\n}\n\nclass Derived : Base {\n    public Derived() : base() {\n        Console.Write(\"B\");\n    }\n}\n\nclass Program {\n    static void Main() {\n        new Derived();\n    }\n}",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "AB",
+        "D": "BA"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Program {\n    static T Max<T>(T a, T b) where T : IComparable<T> {\n        return a.CompareTo(b) >= 0 ? a : b;\n    }\n    \n    static void Main() {\n        Console.WriteLine(Max(5, 10));\n        Console.WriteLine(Max(\"apple\", \"banana\"));\n    }\n}",
+      "options": {
+        "A": "5 apple",
+        "B": "10 apple",
+        "C": "5 banana",
+        "D": "10 banana"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is the key difference between Dispose() and Finalize() methods?",
+      "options": {
+        "A": "Dispose() is called automatically by the garbage collector, Finalize() must be called explicitly",
+        "B": "Dispose() is called explicitly by the developer, Finalize() is called automatically by the garbage collector",
+        "C": "Dispose() can only release managed resources, Finalize() can release both managed and unmanaged resources",
+        "D": "Dispose() can only be implemented once per class hierarchy, Finalize() can be implemented multiple times"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "interface ILogger {\n    void Log(string message);\n}\n\nclass FileLogger : ILogger {\n    public void Log(string message) {\n        Console.WriteLine($\"File: {message}\");\n    }\n    \n    void ILogger.Log(string message) {\n        Console.WriteLine($\"ILogger File: {message}\");\n    }\n}\n\nclass Program {\n    static void Main() {\n        FileLogger logger = new FileLogger();\n        logger.Log(\"Test\");\n        \n        ILogger iLogger = logger;\n        iLogger.Log(\"Test\");\n    }\n}",
+      "options": {
+        "A": "File: Test\nFile: Test",
+        "B": "ILogger File: Test\nILogger File: Test",
+        "C": "File: Test\nILogger File: Test",
+        "D": "Compilation error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Button {\n    public event EventHandler Clicked;\n    \n    public void Click() {\n        Clicked?.Invoke(this, EventArgs.Empty);\n    }\n}\n\nclass Program {\n    static void Main() {\n        Button button = new Button();\n        button.Clicked += (sender, e) => Console.WriteLine(\"Button clicked!\");\n        button.Click();\n    }\n}",
+      "options": {
+        "A": "No output",
+        "B": "Button clicked!",
+        "C": "Compilation error",
+        "D": "NullReferenceException will be thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Cache<T> {\n    private T _value;\n    \n    public Cache(T initialValue) {\n        _value = initialValue;\n    }\n    \n    public T Value => _value;\n}\n\nclass Program {\n    static void Main() {\n        var stringCache = new Cache<string>(\"Hello\");\n        var intCache = new Cache<int>(42);\n        \n        Console.WriteLine($\"{stringCache.Value}, {intCache.Value}\");\n    }\n}",
+      "options": {
+        "A": "Hello, 42",
+        "B": "System.String, System.Int32",
+        "C": "Hello, System.Int32",
+        "D": "Compilation error"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3 };\nConsole.WriteLine(numbers.SingleOrDefault(n => n > 2));\nConsole.WriteLine(numbers.SingleOrDefault(n => n > 3) == 0);",
+      "options": {
+        "A": "3\nfalse",
+        "B": "3\ntrue",
+        "C": "InvalidOperationException will be thrown",
+        "D": "3\nInvalidOperationException will be thrown"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which of the following correctly implements the Mediator pattern in C#?",
+      "options": {
+        "A": "A pattern where objects directly reference each other for communication",
+        "B": "A pattern where a central mediator object handles communication between other objects, reducing direct dependencies",
+        "C": "A pattern where objects communicate through a queue system",
+        "D": "A pattern that enables single inheritance emulation through interfaces"
+      },
+      "correct_answer": "B",
+      "code_example": "public interface IMediator {\n    void Notify(object sender, string ev);\n}\n\npublic class ConcreteMediator : IMediator {\n    private Component1 _component1;\n    private Component2 _component2;\n\n    public ConcreteMediator(Component1 component1, Component2 component2) {\n        _component1 = component1;\n        _component1.SetMediator(this);\n        _component2 = component2;\n        _component2.SetMediator(this);\n    }\n\n    public void Notify(object sender, string ev) {\n        if (ev == \"A\") {\n            _component2.DoC();\n        }\n        if (ev == \"D\") {\n            _component1.DoB();\n            _component2.DoC();\n        }\n    }\n}"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What is the primary benefit of using ArrayPool<T> in .NET?",
+      "options": {
+        "A": "It provides synchronized access to arrays in a multithreaded environment",
+        "B": "It encrypts array data to improve security",
+        "C": "It reduces memory allocation overhead by reusing arrays",
+        "D": "It automatically sorts array elements"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Buffers;\n\npublic class ArrayPoolExample {\n    public static void Main() {\n        // Rent an array of int with at least 1000 elements\n        int[] array = ArrayPool<int>.Shared.Rent(1000);\n        \n        try {\n            // Use the array...\n            array[0] = 42;\n            array[1] = 84;\n            Console.WriteLine($\"First two elements: {array[0]}, {array[1]}\");\n        }\n        finally {\n            // Return the array back to the pool\n            ArrayPool<int>.Shared.Return(array);\n        }\n    }\n}"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Which of the following Dockerfile instructions is NOT typically used when containerizing a .NET application?",
+      "options": {
+        "A": "FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build",
+        "B": "RUN dotnet publish -c Release -o /app/publish",
+        "C": "ENTRYPOINT [\"dotnet\", \"MyApp.dll\"]",
+        "D": "EXPOSE 8080:8080"
+      },
+      "correct_answer": "D",
+      "code_example": "# Sample .NET Dockerfile\nFROM mcr.microsoft.com/dotnet/sdk:8.0 AS build\nWORKDIR /src\n\n# Copy csproj and restore dependencies\nCOPY *.csproj ./\nRUN dotnet restore\n\n# Copy everything else and build\nCOPY . ./\nRUN dotnet publish -c Release -o /app/publish\n\n# Build runtime image\nFROM mcr.microsoft.com/dotnet/aspnet:8.0\nWORKDIR /app\nCOPY --from=build /app/publish .\nEXPOSE 80\nENTRYPOINT [\"dotnet\", \"MyApp.dll\"]"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using CancellationToken?",
+      "options": {
+        "A": "Task started but never completed due to cancellation",
+        "B": "Task completed successfully: Result is 100",
+        "C": "OperationCanceledException will be thrown",
+        "D": "Task completed successfully: Result is 0"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\npublic class CancellationExample {\n    public static async Task Main() {\n        var cts = new CancellationTokenSource();\n        var token = cts.Token;\n        \n        var task = Task.Run(() => {\n            Console.WriteLine(\"Task started\");\n            // Cancel the task immediately\n            cts.Cancel();\n            \n            // Check cancellation before doing work\n            token.ThrowIfCancellationRequested();\n            \n            // This work will never be reached\n            int result = 0;\n            for (int i = 0; i < 100; i++) {\n                result += i;\n            }\n            return result;\n        }, token);\n        \n        try {\n            var result = await task;\n            Console.WriteLine($\"Task completed successfully: Result is {result}\");\n        }\n        catch (OperationCanceledException) {\n            Console.WriteLine(\"OperationCanceledException will be thrown\");\n        }\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "Which of the following correctly describes the Adapter Pattern in C#?",
+      "options": {
+        "A": "A pattern that allows incompatible interfaces to work together by creating a wrapper class",
+        "B": "A pattern that restricts instantiation of a class to a single object",
+        "C": "A pattern that defines a family of algorithms and makes them interchangeable",
+        "D": "A pattern that separates construction of a complex object from its representation"
+      },
+      "correct_answer": "A",
+      "code_example": "// Target interface that client expects to use\npublic interface ITarget {\n    string Request();\n}\n\n// Existing class with incompatible interface\npublic class Adaptee {\n    public string SpecificRequest() {\n        return \"Specific behavior from Adaptee\";\n    }\n}\n\n// Adapter class that makes Adaptee compatible with ITarget\npublic class Adapter : ITarget {\n    private readonly Adaptee _adaptee;\n    \n    public Adapter(Adaptee adaptee) {\n        _adaptee = adaptee;\n    }\n    \n    public string Request() {\n        // Call the adaptee's method and adapt the result\n        return $\"Adapter: {_adaptee.SpecificRequest()}\";\n    }\n}"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "In OAuth2, what is the primary purpose of a refresh token?",
+      "options": {
+        "A": "To validate the user's identity during the initial authentication",
+        "B": "To authorize API access without requiring user credentials",
+        "C": "To obtain a new access token when the current one expires",
+        "D": "To encrypt data transmitted between client and resource server"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following JWT validation code?",
+      "options": {
+        "A": "Valid Token - Claim Value: admin",
+        "B": "Valid Token - Claim Value: user",
+        "C": "SecurityTokenExpiredException will be thrown",
+        "D": "Invalid signature exception will be thrown"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.IdentityModel.Tokens.Jwt;\nusing System.Security.Claims;\nusing Microsoft.IdentityModel.Tokens;\n\npublic class JwtExample {\n    public static void Main() {\n        // Create security key and credentials\n        var securityKey = new SymmetricSecurityKey(\n            System.Text.Encoding.UTF8.GetBytes(\"ThisIsMySupersecretKeyForJwtAuth12345\"));\n        var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);\n        \n        // Create claims\n        var claims = new[] {\n            new Claim(ClaimTypes.Role, \"admin\"),\n            new Claim(JwtRegisteredClaimNames.Sub, \"user123\")\n        };\n        \n        // Create token\n        var token = new JwtSecurityToken(\n            issuer: \"myapp.com\",\n            audience: \"myapp.com\",\n            claims: claims,\n            expires: DateTime.Now.AddHours(1),\n            signingCredentials: credentials);\n        \n        var tokenString = new JwtSecurityTokenHandler().WriteToken(token);\n        \n        // Validate token\n        var tokenHandler = new JwtSecurityTokenHandler();\n        var validationParameters = new TokenValidationParameters {\n            ValidateIssuer = true,\n            ValidIssuer = \"myapp.com\",\n            ValidateAudience = true,\n            ValidAudience = \"myapp.com\",\n            ValidateIssuerSigningKey = true,\n            IssuerSigningKey = securityKey,\n            ValidateLifetime = true\n        };\n        \n        try {\n            var principal = tokenHandler.ValidateToken(tokenString, validationParameters, out _);\n            var roleClaim = principal.FindFirst(ClaimTypes.Role);\n            Console.WriteLine($\"Valid Token - Claim Value: {roleClaim?.Value}\");\n        }\n        catch (Exception ex) {\n            Console.WriteLine($\"{ex.GetType().Name} will be thrown\");\n        }\n    }\n}"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What is the main advantage of using a 'readonly struct' in C#?",
+      "options": {
+        "A": "It allows for inheritance of struct types",
+        "B": "It provides thread safety for reference types",
+        "C": "It improves performance by preventing defensive copies",
+        "D": "It enables automatic garbage collection for struct types"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\npublic class ReadonlyStructExample {\n    public static void Main() {\n        // Create an instance of the readonly struct\n        var point = new Point(10, 20);\n        \n        // This would cause a compiler error because X is readonly\n        // point.X = 30;\n        \n        Console.WriteLine($\"Point: ({point.X}, {point.Y})\");\n        \n        // The struct is passed by value (copy) but the compiler\n        // can optimize this since it knows the struct is immutable\n        PrintPoint(point);\n    }\n    \n    static void PrintPoint(Point p) {\n        Console.WriteLine($\"Point in method: ({p.X}, {p.Y})\");\n    }\n}\n\n// Readonly struct definition\npublic readonly struct Point {\n    public readonly int X { get; }\n    public readonly int Y { get; }\n    \n    public Point(int x, int y) {\n        X = x;\n        Y = y;\n    }\n    \n    // All methods must be readonly to prevent modification of struct state\n    public readonly double Distance() {\n        return Math.Sqrt(X * X + Y * Y);\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Assembly.Load() and Type.GetType()?",
+      "options": {
+        "A": "Type found: True, Value: 42",
+        "B": "Type found: False, Value: 0",
+        "C": "FileNotFoundException will be thrown",
+        "D": "Type found: True, Value: 0"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Reflection;\n\npublic class DynamicTypeExample {\n    public static void Main() {\n        try {\n            // Load the current executing assembly\n            var assembly = Assembly.GetExecutingAssembly();\n            \n            // Get the full name of the DynamicClass type\n            string typeName = typeof(DynamicClass).FullName;\n            \n            // Get the type from the assembly\n            Type type = assembly.GetType(typeName);\n            \n            Console.Write($\"Type found: {type != null}\");\n            \n            if (type != null) {\n                // Create an instance of the type\n                object instance = Activator.CreateInstance(type);\n                \n                // Get the GetValue method using reflection\n                MethodInfo method = type.GetMethod(\"GetValue\");\n                \n                // Invoke the method\n                object result = method.Invoke(instance, null);\n                \n                Console.WriteLine($\", Value: {result}\");\n            }\n            else {\n                Console.WriteLine($\", Value: 0\");\n            }\n        }\n        catch (Exception ex) {\n            Console.WriteLine($\"{ex.GetType().Name} will be thrown\");\n        }\n    }\n}\n\npublic class DynamicClass {\n    public int GetValue() {\n        return 42;\n    }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "Which of the following implementations of the Singleton pattern in C# is thread-safe and uses lazy initialization?",
+      "options": {
+        "A": "Using a static constructor to initialize the instance",
+        "B": "Using double-check locking with a volatile field",
+        "C": "Using the Lazy<T> class",
+        "D": "Using a simple static field with no locks"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\npublic class SingletonExample {\n    public static void Main() {\n        // Access the singleton instance\n        Singleton instance1 = Singleton.Instance;\n        Singleton instance2 = Singleton.Instance;\n        \n        // Check if both references point to the same instance\n        Console.WriteLine($\"Same instance: {ReferenceEquals(instance1, instance2)}\");\n        \n        // Use the singleton\n        instance1.DoSomething();\n    }\n}\n\npublic class Singleton {\n    // Private static field that holds the lazy-initialized instance\n    private static readonly Lazy<Singleton> _lazyInstance = \n        new Lazy<Singleton>(() => new Singleton());\n    \n    // Private constructor prevents instantiation from outside\n    private Singleton() {\n        Console.WriteLine(\"Singleton instance created\");\n    }\n    \n    // Public property to access the singleton instance\n    public static Singleton Instance => _lazyInstance.Value;\n    \n    // Some method of the singleton\n    public void DoSomething() {\n        Console.WriteLine(\"Singleton method executed\");\n    }\n}"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "In SignalR, what is the primary difference between a Hub and a HubContext?",
+      "options": {
+        "A": "Hubs can only broadcast messages while HubContext can send targeted messages",
+        "B": "HubContext allows sending messages from outside the Hub class, such as from controllers or services",
+        "C": "Hubs use WebSockets while HubContext uses Server-Sent Events",
+        "D": "HubContext is used for client-to-server communication while Hubs are for server-to-client only"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What is the correct way to release COM objects in C# to prevent memory leaks?",
+      "options": {
+        "A": "Call Dispose() on the COM object reference",
+        "B": "Set the COM object reference to null",
+        "C": "Call Marshal.ReleaseComObject() on the COM object reference",
+        "D": "Call GC.Collect() after using the COM object"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Runtime.InteropServices;\n\npublic class ComInteropExample {\n    public static void Main() {\n        // Example using Excel COM object\n        object excelApp = null;\n        object workbooks = null;\n        object workbook = null;\n        \n        try {\n            // Create COM object for Excel\n            excelApp = Activator.CreateInstance(Type.GetTypeFromProgID(\"Excel.Application\"));\n            Console.WriteLine(\"Excel application created\");\n            \n            // Use COM object - this is just for demonstration\n            // In a real scenario, we would set properties and call methods\n            Console.WriteLine(\"Using Excel COM object...\");\n        }\n        catch (Exception ex) {\n            Console.WriteLine($\"Error: {ex.Message}\");\n        }\n        finally {\n            // Clean up COM objects in reverse order of creation\n            if (workbook != null) {\n                Marshal.ReleaseComObject(workbook);\n                workbook = null;\n            }\n            \n            if (workbooks != null) {\n                Marshal.ReleaseComObject(workbooks);\n                workbooks = null;\n            }\n            \n            if (excelApp != null) {\n                Marshal.ReleaseComObject(excelApp);\n                excelApp = null;\n            }\n            \n            // Force garbage collection to clean up any remaining COM references\n            GC.Collect();\n            GC.WaitForPendingFinalizers();\n            \n            Console.WriteLine(\"COM objects released properly\");\n        }\n    }\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "Which of the following is the most appropriate way to implement API versioning in ASP.NET Core?",
+      "options": {
+        "A": "Use different endpoints with version numbers in the URL path (e.g., /api/v1/products)",
+        "B": "Include version information in query parameters (e.g., /api/products?version=1)",
+        "C": "Add version headers in HTTP requests and configure API versioning middleware",
+        "D": "All of the above are valid approaches depending on requirements"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a valid approach for deploying .NET applications in Kubernetes?",
+      "options": {
+        "A": "Using a multi-stage Dockerfile to build and package the application",
+        "B": "Creating deployment and service YAML files to define the application's Kubernetes resources",
+        "C": "Using Helm charts to package and deploy the application with its dependencies",
+        "D": "Running the application as a Windows service inside Kubernetes pods"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following role-based authentication code?",
+      "options": {
+        "A": "Access Granted to Admin Area",
+        "B": "Access Denied: Requires Admin Role",
+        "C": "Access Granted to User Area",
+        "D": "InvalidOperationException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Collections.Generic;\nusing System.Security.Claims;\n\npublic class RoleBasedAuthExample {\n    public static void Main() {\n        // Create a ClaimsIdentity with roles\n        var claims = new List<Claim>\n        {\n            new Claim(ClaimTypes.Name, \"john.doe\"),\n            new Claim(ClaimTypes.Role, \"User\"),\n            // Uncomment to add Admin role\n            // new Claim(ClaimTypes.Role, \"Admin\"),\n        };\n        \n        var identity = new ClaimsIdentity(claims, \"TestAuthType\");\n        var principal = new ClaimsPrincipal(identity);\n        \n        // Check access to different areas\n        if (IsInRole(principal, \"User\")) {\n            Console.WriteLine(\"Access Granted to User Area\");\n        }\n        \n        if (IsInRole(principal, \"Admin\")) {\n            Console.WriteLine(\"Access Granted to Admin Area\");\n        }\n        else {\n            Console.WriteLine(\"Access Denied: Requires Admin Role\");\n        }\n    }\n    \n    private static bool IsInRole(ClaimsPrincipal principal, string role) {\n        if (principal == null)\n            throw new ArgumentNullException(nameof(principal));\n        \n        return principal.IsInRole(role);\n    }\n}"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Semaphore and Mutex?",
+      "options": {
+        "A": "Mutex: 1, 2, 3, Semaphore: 1, 2, 3",
+        "B": "Mutex: 1, 2, 3, Semaphore: 1, 2, 3, 1, 2, 3",
+        "C": "SemaphoreFullException will be thrown",
+        "D": "Mutex: 1, 2, 3, Semaphore: 1, 2, 3, 1, 2"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\npublic class SynchronizationExample {\n    public static void Main() {\n        // Create a mutex that can be held by only one thread at a time\n        using (var mutex = new Mutex())\n        {\n            Console.Write(\"Mutex: \");\n            \n            // Create 3 tasks that each try to acquire the mutex\n            for (int i = 1; i <= 3; i++) {\n                int num = i;\n                Task.Run(() => {\n                    // Wait for the mutex to be available\n                    mutex.WaitOne();\n                    \n                    // Critical section - only one thread can be here at a time\n                    Console.Write($\"{num}, \");\n                    \n                    // Release the mutex\n                    mutex.ReleaseMutex();\n                });\n            }\n            \n            // Wait for all tasks to complete\n            Thread.Sleep(500);\n        }\n        \n        // Create a semaphore that can be held by up to 3 threads at once\n        using (var semaphore = new SemaphoreSlim(3, 3))\n        {\n            Console.Write(\"Semaphore: \");\n            \n            // First round - create 3 tasks that each try to acquire the semaphore\n            for (int i = 1; i <= 3; i++) {\n                int num = i;\n                Task.Run(() => {\n                    // Wait for the semaphore to be available\n                    semaphore.Wait();\n                    \n                    // This section can have up to 3 threads at once\n                    Console.Write($\"{num}, \");\n                    \n                    // Release the semaphore\n                    semaphore.Release();\n                });\n            }\n            \n            // Wait a bit for first batch to complete\n            Thread.Sleep(500);\n            \n            // Second round - create 3 more tasks\n            for (int i = 1; i <= 3; i++) {\n                int num = i;\n                Task.Run(() => {\n                    // Wait for the semaphore to be available\n                    semaphore.Wait();\n                    \n                    // This section can have up to 3 threads at once\n                    Console.Write($\"{num}, \");\n                    \n                    // Release the semaphore, but one task won't release\n                    if (num < 3) {\n                        semaphore.Release();\n                    }\n                });\n            }\n            \n            // Wait for all tasks to complete\n            Thread.Sleep(500);\n        }\n    }\n}"
+    }
+  ]
+}
