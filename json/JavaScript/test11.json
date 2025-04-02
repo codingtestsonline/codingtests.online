@@ -1,611 +1,611 @@
 {
-  "questions": [
-    {
-      "id": 1,
-      "difficulty": "easy",
-      "question": "What is Node.js?",
-      "options": {
-        "A": "A JavaScript library for DOM manipulation",
-        "B": "A runtime environment that executes JavaScript outside the browser",
-        "C": "A JavaScript framework for building user interfaces",
-        "D": "A database management system for JavaScript applications"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 2,
-      "difficulty": "easy",
-      "question": "What will be the output of the following code?",
-      "code_example": "const button = document.createElement('button');\nbutton.addEventListener('click', () => {\n  console.log('Button clicked!');\n});\n\nbutton.onclick = function() {\n  console.log('Onclick triggered!');\n};\n\n// What will be logged when the button is clicked?",
-      "options": {
-        "A": "Only 'Button clicked!'",
-        "B": "Only 'Onclick triggered!'",
-        "C": "Both messages in order: 'Button clicked!' then 'Onclick triggered!'",
-        "D": "Both messages in order: 'Onclick triggered!' then 'Button clicked!'"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 3,
-      "difficulty": "easy",
-      "question": "How does Node.js differ from browser JavaScript?",
-      "options": {
-        "A": "Node.js doesn't support JavaScript objects",
-        "B": "Node.js has access to the document object and DOM API",
-        "C": "Node.js has direct access to the file system via the fs module",
-        "D": "Node.js cannot use the JSON.parse() method"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 4,
-      "difficulty": "easy",
-      "question": "What will be the output of the following code?",
-      "code_example": "console.log(parseInt('42px'));\nconsole.log(parseFloat('3.14hello'));\nconsole.log(Number('123abc'));",
-      "options": {
-        "A": "42, 3.14, 123",
-        "B": "42, 3.14, NaN",
-        "C": "'42px', '3.14hello', '123abc'",
-        "D": "NaN, NaN, NaN"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 5,
-      "difficulty": "easy",
-      "question": "What will be the output of the following code?",
-      "code_example": "const parent = document.createElement('div');\nconst child = document.createElement('button');\n\nparent.appendChild(child);\n\nparent.addEventListener('click', () => {\n  console.log('Parent clicked');\n});\n\nchild.addEventListener('click', (event) => {\n  console.log('Child clicked');\n  event.stopPropagation();\n});\n\n// What happens when the child button is clicked?",
-      "options": {
-        "A": "Only 'Child clicked' is logged",
-        "B": "Only 'Parent clicked' is logged",
-        "C": "'Child clicked' is logged, then 'Parent clicked'",
-        "D": "'Parent clicked' is logged, then 'Child clicked'"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 6,
-      "difficulty": "easy",
-      "question": "What will be the output of the following code?",
-      "code_example": "const promise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve('Success!');\n  }, 100);\n});\n\npromise\n  .then(result => {\n    console.log(result);\n    return 'Next step';\n  })\n  .then(result => {\n    console.log(result);\n  })\n  .catch(error => {\n    console.log('Error:', error);\n  })\n  .finally(() => {\n    console.log('Completed');\n  });",
-      "options": {
-        "A": "'Success!', 'Completed'",
-        "B": "'Success!', 'Next step', 'Error: undefined', 'Completed'",
-        "C": "'Success!', 'Next step', 'Completed'",
-        "D": "'Next step', 'Completed'"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 7,
-      "difficulty": "easy",
-      "question": "What will be the output of the following code?",
-      "code_example": "const element = document.createElement('div');\nelement.textContent = 'Hello';\nconsole.log(element.textContent);\n\nelement.innerHTML = '<span>World</span>';\nconsole.log(element.textContent);",
-      "options": {
-        "A": "'Hello', 'Hello'",
-        "B": "'Hello', '<span>World</span>'",
-        "C": "'Hello', 'World'",
-        "D": "'<span>Hello</span>', 'World'"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 8,
-      "difficulty": "easy",
-      "question": "What will be the output of the following code?",
-      "code_example": "const regular = function(x) {\n  this.value = x;\n};\n\nconst arrow = (x) => {\n  this.value = x;\n};\n\nconst obj1 = new regular(10);\nconst obj2 = new arrow(20);\n\nconsole.log(obj1.value);",
-      "options": {
-        "A": "10",
-        "B": "20",
-        "C": "undefined",
-        "D": "TypeError: arrow is not a constructor"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 9,
-      "difficulty": "easy",
-      "question": "What will be the output of the following code?",
-      "code_example": "const obj1 = {};\nobj1.name = 'Object 1';\n\nconst obj2 = new Object();\nobj2.name = 'Object 2';\n\nconsole.log(typeof obj1, typeof obj2, obj1.name === 'Object 1' && obj2.name === 'Object 2');",
-      "options": {
-        "A": "'object' 'Object' false",
-        "B": "'object' 'object' true",
-        "C": "'Object' 'Object' true",
-        "D": "'object' 'function' true"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 10,
-      "difficulty": "easy",
-      "question": "What will be the output of the following code in a Node.js environment?",
-      "code_example": "// Assuming the environment variable API_KEY='secret123'\nprocess.env.DEBUG = 'true';\n\nfunction checkConfig() {\n  console.log(process.env.DEBUG === 'true');\n  console.log(process.env.API_KEY === 'secret123');\n  console.log(typeof process.env.DEBUG);\n}\n\ncheckConfig();",
-      "options": {
-        "A": "true, true, 'boolean'",
-        "B": "true, true, 'string'",
-        "C": "'true', 'secret123', 'object'",
-        "D": "true, undefined, 'string'"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 11,
-      "difficulty": "easy",
-      "question": "What will be the output of the following code?",
-      "code_example": "const user = {\n  name: 'John',\n  details: {\n    age: 30,\n    role: 'Developer'\n  },\n  skills: ['JavaScript', 'Node.js']\n};\n\nconst { name, details: { age }, skills: [primarySkill] } = user;\n\nconsole.log(name, age, primarySkill);",
-      "options": {
-        "A": "'John' undefined undefined",
-        "B": "'John' 30 ['JavaScript', 'Node.js']",
-        "C": "'John' 30 'JavaScript'",
-        "D": "'John' { age: 30, role: 'Developer' } 'JavaScript'"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 12,
-      "difficulty": "easy",
-      "question": "What will be the output of the following code?",
-      "code_example": "async function fetchData() {\n  return 'Data';\n}\n\nasync function processData() {\n  const data = await fetchData();\n  return `Processed ${data}`;\n}\n\nprocessData().then(result => console.log(result));",
-      "options": {
-        "A": "Promise { 'Processed Data' }",
-        "B": "Processed Data",
-        "C": "Promise { 'Data' }",
-        "D": "undefined"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 13,
-      "difficulty": "easy",
-      "question": "What will be the output of the following code?",
-      "code_example": "(function() {\n  var message = 'Inside IIFE';\n  console.log(message);\n})();\n\ntry {\n  console.log(message);\n} catch (e) {\n  console.log('Error: message is not defined');\n}",
-      "options": {
-        "A": "'Inside IIFE' only",
-        "B": "'Inside IIFE' followed by undefined",
-        "C": "'Inside IIFE' followed by 'Error: message is not defined'",
-        "D": "SyntaxError"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 14,
-      "difficulty": "easy",
-      "question": "What is the correct statement about require() and import() in Node.js?",
-      "options": {
-        "A": "require() is asynchronous, while import() is synchronous",
-        "B": "require() is part of CommonJS, while import() is part of ES Modules",
-        "C": "require() can only be used in the browser, while import() is only for Node.js",
-        "D": "require() and import() are identical and can be used interchangeably"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 15,
-      "difficulty": "easy",
-      "question": "What will be the output of the following code?",
-      "code_example": "const a = 5;      // 101 in binary\nconst b = 3;      // 011 in binary\n\nconsole.log(a & b);  // Bitwise AND\nconsole.log(a | b);  // Bitwise OR\nconsole.log(a ^ b);  // Bitwise XOR",
-      "options": {
-        "A": "15, 8, 6",
-        "B": "1, 7, 6",
-        "C": "8, 8, 8",
-        "D": "5, 3, 2"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 16,
-      "difficulty": "easy",
-      "question": "What is the difference between var, let, and const?",
-      "options": {
-        "A": "var and let are block-scoped, while const is function-scoped",
-        "B": "var is function-scoped, while let and const are block-scoped",
-        "C": "var, let, and const are all block-scoped, but only const cannot be reassigned",
-        "D": "There is no difference; they are interchangeable"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 17,
-      "difficulty": "medium",
-      "question": "What will be the output of the following code?",
-      "code_example": "const promise1 = Promise.resolve('First');\nconst promise2 = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    reject(new Error('Failed'));\n  }, 100);\n});\nconst promise3 = new Promise((resolve) => {\n  setTimeout(() => {\n    resolve('Third');\n  }, 200);\n});\n\nPromise.all([promise1, promise2, promise3])\n  .then(results => console.log('Results:', results))\n  .catch(error => console.log('Caught:', error.message))\n  .finally(() => console.log('Done'));",
-      "options": {
-        "A": "'Results: ['First', Error: Failed, 'Third']' followed by 'Done'",
-        "B": "'Results: ['First', undefined, 'Third']' followed by 'Done'",
-        "C": "'Caught: Failed' followed by 'Done'",
-        "D": "'First', 'Failed', 'Third', 'Done'"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 18,
-      "difficulty": "medium",
-      "question": "What will be the output of the following recursive function?",
-      "code_example": "function factorial(n) {\n  if (n <= 1) return 1;\n  return n * factorial(n - 1);\n}\n\nconsole.log(factorial(4));\nconst result = factorial(0);\nconsole.log(result);",
-      "options": {
-        "A": "24, 0",
-        "B": "24, 1",
-        "C": "Error: Maximum call stack size exceeded",
-        "D": "4, 1"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 19,
-      "difficulty": "medium",
-      "question": "What will be the output of the following code?",
-      "code_example": "function Car(make, model) {\n  this.make = make;\n  this.model = model;\n  this.fullName = function() {\n    return `${this.make} ${this.model}`;\n  };\n}\n\nconst vehicle = { type: 'car' };\nconst honda = new Car('Honda', 'Civic');\nconst toyota = Car('Toyota', 'Corolla');\n\nconsole.log(honda.make, typeof honda);\nconsole.log(toyota, window.make);",
-      "options": {
-        "A": "'Honda' 'object', undefined undefined",
-        "B": "'Honda' 'object', undefined 'Toyota'",
-        "C": "'Honda' 'function', Error",
-        "D": "Error: 'Car' is not a constructor"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 20,
-      "difficulty": "medium",
-      "question": "Which approach best reduces redundant database queries in a Node.js application?",
-      "options": {
-        "A": "Using global variables to store data",
-        "B": "Implementing a caching layer with TTL (Time To Live)",
-        "C": "Querying the database more frequently with smaller result sets",
-        "D": "Restarting the server after each query"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 21,
-      "difficulty": "medium",
-      "question": "How does JavaScript inheritance differ from classical OOP inheritance?",
-      "options": {
-        "A": "JavaScript uses classes just like classical OOP languages",
-        "B": "JavaScript inheritance uses mixins instead of inheritance chains",
-        "C": "JavaScript uses prototype-based inheritance rather than class-based inheritance",
-        "D": "JavaScript doesn't support inheritance"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 22,
-      "difficulty": "medium",
-      "question": "What is the best way to handle CORS in a Node.js Express application?",
-      "options": {
-        "A": "Disable all security features in the browser",
-        "B": "Use the cors middleware with appropriate configurations",
-        "C": "CORS is a client-side concept and cannot be handled on the server",
-        "D": "Implement custom headers on each response manually"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 23,
-      "difficulty": "medium",
-      "question": "What will be the output of the following code?",
-      "code_example": "const parent = {\n  name: 'Parent',\n  greet() {\n    return `Hello from ${this.name}`;\n  }\n};\n\nconst child = Object.create(parent);\nchild.name = 'Child';\n\nconst grandchild = Object.create(child);\n\nconsole.log(parent.greet());\nconsole.log(child.greet());\nconsole.log(grandchild.greet());\nconsole.log('greet' in grandchild, grandchild.hasOwnProperty('greet'));",
-      "options": {
-        "A": "'Hello from Parent', 'Hello from Child', 'Hello from undefined', true false",
-        "B": "'Hello from Parent', 'Hello from Child', 'Hello from Child', true true",
-        "C": "'Hello from Parent', 'Hello from Child', 'Hello from undefined', true true",
-        "D": "'Hello from Parent', 'Hello from Child', 'Hello from undefined', true false"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 24,
-      "difficulty": "medium",
-      "question": "What will be the output of the following pure function?",
-      "code_example": "function addToList(list, item) {\n  return [...list, item];\n}\n\nconst originalList = ['apple', 'banana'];\nconst newList = addToList(originalList, 'cherry');\n\nconsole.log(originalList);\nconsole.log(newList);\nconsole.log(originalList === newList);",
-      "options": {
-        "A": "['apple', 'banana'], ['apple', 'banana', 'cherry'], true",
-        "B": "['apple', 'banana', 'cherry'], ['apple', 'banana', 'cherry'], true",
-        "C": "['apple', 'banana'], ['apple', 'banana', 'cherry'], false",
-        "D": "['apple', 'banana', 'cherry'], ['apple', 'banana'], false"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 25,
-      "difficulty": "medium",
-      "question": "What will be the output of the following code?",
-      "code_example": "const data = {\n  user: {\n    name: 'Alice',\n    roles: ['admin', 'editor'],\n    contact: {\n      email: 'alice@example.com',\n      phone: {\n        home: '123-456-7890',\n        work: null\n      }\n    }\n  }\n};\n\nconst { user: { contact: { phone: { home, work = 'N/A' } } } } = data;\nconst { user: { roles: [primaryRole, secondaryRole = 'viewer'] } } = data;\n\nconsole.log(home, work, primaryRole, secondaryRole);",
-      "options": {
-        "A": "'123-456-7890' null 'admin' 'editor'",
-        "B": "'123-456-7890' 'N/A' 'admin' 'editor'",
-        "C": "'123-456-7890' 'N/A' 'admin' 'viewer'",
-        "D": "undefined undefined undefined undefined"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 26,
-      "difficulty": "medium",
-      "question": "What will be the output of the following code?",
-      "code_example": "function createCounter() {\n  let count = 0;\n  \n  function increment() {\n    count++;\n    return count;\n  }\n  \n  function getCount() {\n    return count;\n  }\n  \n  return {\n    increment,\n    getCount\n  };\n}\n\nconst counter1 = createCounter();\nconst counter2 = createCounter();\n\ncounter1.increment();\ncounter1.increment();\ncounter2.increment();\n\nconsole.log(counter1.getCount(), counter2.getCount());",
-      "options": {
-        "A": "2 2",
-        "B": "3 3",
-        "C": "2 1",
-        "D": "1 1"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 27,
-      "difficulty": "medium",
-      "question": "What will be the output of the following function composition?",
-      "code_example": "const add = x => y => x + y;\nconst multiply = x => y => x * y;\n\nconst compose = (f, g) => x => f(g(x));\nconst pipe = (f, g) => x => g(f(x));\n\nconst add5 = add(5);\nconst multiply3 = multiply(3);\n\nconst composed = compose(add5, multiply3);\nconst piped = pipe(add5, multiply3);\n\nconsole.log(composed(2), piped(2));",
-      "options": {
-        "A": "17 21",
-        "B": "11 11",
-        "C": "21 17",
-        "D": "15 15"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 28,
-      "difficulty": "medium",
-      "question": "What will be the output of the following Node.js file system code?",
-      "code_example": "const fs = require('fs');\n\nconst data = 'Hello, world!';\n\n// Assume these operations are executed in sequence\nfs.writeFileSync('test.txt', data);\n\nconst contents = fs.readFileSync('test.txt', 'utf8');\nconsole.log(contents);\n\nfs.appendFileSync('test.txt', '\\nAppended text');\n\nconst newContents = fs.readFileSync('test.txt', 'utf8');\nconsole.log(newContents === data);",
-      "options": {
-        "A": "'Hello, world!' true",
-        "B": "'Hello, world!' false",
-        "C": "'Hello, world!\\nAppended text' false",
-        "D": "Error: file not found"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 29,
-      "difficulty": "medium",
-      "question": "Which approach is most effective at preventing SQL injection in a Node.js application?",
-      "options": {
-        "A": "Using console.log to debug SQL queries",
-        "B": "Using string concatenation to build queries",
-        "C": "Using parameterized queries with prepared statements",
-        "D": "Using eval() to execute SQL strings"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 30,
-      "difficulty": "medium",
-      "question": "What will be the output of the following code using streams?",
-      "code_example": "const { Readable, Transform } = require('stream');\n\nconst readableStream = new Readable({\n  read() {}\n});\n\nconst transformStream = new Transform({\n  transform(chunk, encoding, callback) {\n    const uppercase = chunk.toString().toUpperCase();\n    callback(null, uppercase);\n  }\n});\n\nreadableStream.pipe(transformStream);\n\ntransformStream.on('data', (chunk) => {\n  console.log(chunk.toString());\n});\n\nreadableStream.push('hello');\nreadableStream.push(' world');\nreadableStream.push(null);",
-      "options": {
-        "A": "'hello world'",
-        "B": "'HELLO WORLD'",
-        "C": "'HELLO' 'WORLD'",
-        "D": "'HELLO' ' WORLD'"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 31,
-      "difficulty": "medium",
-      "question": "What is the key difference between CommonJS and ES Modules in Node.js?",
-      "options": {
-        "A": "CommonJS modules are asynchronous, while ES Modules are synchronous",
-        "B": "CommonJS modules are statically loaded, while ES Modules are dynamically loaded",
-        "C": "CommonJS modules support circular dependencies, while ES Modules don't",
-        "D": "CommonJS modules are loaded synchronously, while ES Modules are loaded asynchronously"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 32,
-      "difficulty": "medium",
-      "question": "What is the correct way to define a MongoDB schema with validation in Mongoose?",
-      "code_example": "const mongoose = require('mongoose');\nconst { Schema } = mongoose;\n\nconst userSchema = new Schema({\n  username: {\n    type: String,\n    required: true,\n    minlength: 3,\n    maxlength: 20\n  },\n  email: {\n    type: String,\n    required: true,\n    unique: true,\n    match: /^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$/\n  },\n  createdAt: {\n    type: Date,\n    default: Date.now\n  }\n});\n\nconst User = mongoose.model('User', userSchema);\n\n// What will happen when we try to save this user?\nconst invalidUser = new User({\n  username: 'jo',\n  email: 'invalid-email'\n});\n\ninvalidUser.save(err => {\n  if (err) console.log('Validation failed');\n  else console.log('User saved');\n});",
-      "options": {
-        "A": "'User saved' will be logged as validation is only a warning",
-        "B": "'Validation failed' will be logged due to both username and email validation errors",
-        "C": "TypeError: Schema validation is not supported in Mongoose",
-        "D": "'Validation failed' will be logged only for the email validation error"
-      },
-      "correct_answer": "B"
-    },
-{
-      "id": 33,
-      "difficulty": "hard",
-      "question": "Which of the following is the most effective way to prevent Cross-Site Request Forgery (CSRF) attacks in a Node.js Express application?",
-      "options": {
-        "A": "Store session data in localStorage instead of cookies",
-        "B": "Use the 'SameSite=Strict' attribute on cookies and implement CSRF tokens",
-        "C": "Disable CORS in the application",
-        "D": "Only accept requests with the Content-Type header set to 'application/json'"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 34,
-      "difficulty": "hard",
-      "question": "What will be the output of the following code related to unhandled Promise rejections?",
-      "code_example": "process.on('unhandledRejection', (reason, promise) => {\n  console.log('Logged rejection:', reason);\n});\n\nfunction asyncOperation() {\n  return new Promise((resolve, reject) => {\n    reject(new Error('Operation failed'));\n  });\n}\n\nasyncOperation();\nconsole.log('After async operation');",
-      "options": {
-        "A": "After async operation",
-        "B": "Error: Operation failed",
-        "C": "After async operation\nLogged rejection: Error: Operation failed",
-        "D": "Logged rejection: Error: Operation failed\nAfter async operation"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 35,
-      "difficulty": "hard",
-      "question": "Which of the following lines in a Dockerfile is INCORRECT for a Node.js application?",
-      "options": {
-        "A": "COPY package*.json ./",
-        "B": "RUN npm ci --only=production",
-        "C": "EXPOSE 3000",
-        "D": "ENTRYPOINT [\"node.exe\", \"index.js\"]"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 36,
-      "difficulty": "hard",
-      "question": "What will be logged in the console when executing the following code?",
-      "code_example": "// Example of JavaScript memory allocation\nlet a = { value: 1 };\nlet b = a;\n\nb.value = 2;\n\nconsole.log(a.value);\n\na = null;\nconsole.log(b.value);\n\nb = null;\n\n// Create a large array\nlet largeArray = new Array(1000000).fill('x');",
-      "options": {
-        "A": "1\n2",
-        "B": "2\n2",
-        "C": "2\nnull",
-        "D": "1\nnull"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 37,
-      "difficulty": "hard",
-      "question": "Which statement about V8's hidden classes and inline caching is correct?",
-      "options": {
-        "A": "Adding properties to an object in a different order creates different hidden classes",
-        "B": "Hidden classes are only created for array objects",
-        "C": "Inline caching works best when object properties are accessed in random order",
-        "D": "Deleting properties from an object improves V8's optimization capabilities"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 38,
-      "difficulty": "hard",
-      "question": "What will be the output of the following Node.js crypto module code?",
-      "code_example": "const crypto = require('crypto');\n\nconst secret = 'abcdefg';\nconst hash1 = crypto.createHash('sha256').update(secret).digest('hex');\n\n// Generate another hash with the same input\nconst hash2 = crypto.createHash('sha256').update(secret).digest('hex');\n\nconsole.log(hash1 === hash2);\n\n// Create a randomized hash\nconst salt = crypto.randomBytes(16).toString('hex');\nconst hash3 = crypto.createHash('sha256').update(secret + salt).digest('hex');\nconst hash4 = crypto.createHash('sha256').update(secret + salt).digest('hex');\n\nconsole.log(hash3 === hash4);",
-      "options": {
-        "A": "false\nfalse",
-        "B": "false\ntrue",
-        "C": "true\nfalse",
-        "D": "true\ntrue"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 39,
-      "difficulty": "hard",
-      "question": "When using Node.js debugging with 'node --inspect', which of the following statements is TRUE?",
-      "options": {
-        "A": "The debugger automatically pauses execution at the beginning of the script",
-        "B": "The debugger only works with Google Chrome and not other Chromium-based browsers",
-        "C": "The debugger listens on 127.0.0.1:9229 by default and can be accessed via Chrome DevTools",
-        "D": "You can only debug synchronous code, not asynchronous operations"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 40,
-      "difficulty": "hard",
-      "question": "What will be the result of running the following transform stream code?",
-      "code_example": "const { Transform } = require('stream');\nconst { pipeline } = require('stream/promises');\nconst fs = require('fs');\n\nclass ReverseStream extends Transform {\n  constructor(options) {\n    super(options);\n  }\n  \n  _transform(chunk, encoding, callback) {\n    const reversed = chunk.toString().split('').reverse().join('');\n    this.push(reversed);\n    callback();\n  }\n}\n\nasync function processFile() {\n  try {\n    const readStream = fs.createReadStream('./sample.txt');\n    const writeStream = fs.createWriteStream('./output.txt');\n    const reverseStream = new ReverseStream();\n    \n    await pipeline(\n      readStream,\n      reverseStream,\n      writeStream\n    );\n    \n    console.log('Processing complete');\n  } catch (err) {\n    console.error('Pipeline error:', err);\n  }\n}\n\n// If sample.txt contains: \"Hello World\"",
-      "options": {
-        "A": "output.txt will contain: \"Hello World\"",
-        "B": "output.txt will contain: \"dlroW olleH\"",
-        "C": "A pipeline error will occur because readStream and writeStream are incompatible",
-        "D": "The code will throw an error because pipeline is not a Promise-based function"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 41,
-      "difficulty": "hard",
-      "question": "Which of the following statements about deploying Node.js applications to cloud platforms is FALSE?",
-      "options": {
-        "A": "Heroku requires a Procfile to specify the command to start your application",
-        "B": "Vercel automatically detects and optimizes for Next.js applications",
-        "C": "DigitalOcean Droplets require manual configuration of the Node.js environment",
-        "D": "All three platforms (Heroku, Vercel, DigitalOcean) automatically handle SSL certificate provisioning without any configuration"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 42,
-      "difficulty": "hard",
-      "question": "What will be the result of running the following Node.js clustering code?",
-      "code_example": "const cluster = require('cluster');\nconst http = require('http');\nconst numCPUs = require('os').cpus().length;\n\nif (cluster.isMaster) {\n  console.log(`Master ${process.pid} is running`);\n\n  // Fork workers based on CPU cores\n  for (let i = 0; i < 2; i++) {\n    cluster.fork();\n  }\n\n  cluster.on('exit', (worker, code, signal) => {\n    console.log(`Worker ${worker.process.pid} died`);\n    // Don't replace the worker\n  });\n\n  let requestCount = 0;\n  Object.values(cluster.workers).forEach(worker => {\n    worker.on('message', message => {\n      if (message.cmd === 'REQUEST_PROCESSED') {\n        requestCount++;\n        console.log(`Total requests processed: ${requestCount}`);\n      }\n    });\n  });\n} else {\n  // Workers share the TCP connection\n  http.createServer((req, res) => {\n    res.writeHead(200);\n    res.end(`Worker ${process.pid} processed request\\n`);\n    process.send({ cmd: 'REQUEST_PROCESSED' });\n  }).listen(8000);\n\n  console.log(`Worker ${process.pid} started`);\n}",
-      "options": {
-        "A": "The master process will create workers equal to the number of CPUs",
-        "B": "The master process will create exactly 2 worker processes regardless of CPU count",
-        "C": "The server will automatically restart workers when they die",
-        "D": "Workers cannot communicate with the master process using process.send()"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 43,
-      "difficulty": "hard",
-      "question": "What is the output of the following WebSocket code using socket.io?",
-      "code_example": "// Server code (server.js)\nconst express = require('express');\nconst http = require('http');\nconst { Server } = require('socket.io');\n\nconst app = express();\nconst server = http.createServer(app);\nconst io = new Server(server);\n\nio.on('connection', (socket) => {\n  console.log('A user connected');\n  \n  socket.join('room1');\n  \n  socket.on('message', (data) => {\n    console.log('Message received:', data);\n    socket.emit('response', 'Received your message');\n    io.to('room1').emit('roomMessage', 'Broadcast to room1');\n  });\n});\n\nserver.listen(3000, () => {\n  console.log('Server is running on port 3000');\n});\n\n// Client code\n// Assuming a client sends a 'message' event with data 'Hello Server'",
-      "options": {
-        "A": "The client that sent 'Hello Server' will receive both 'Received your message' and 'Broadcast to room1'",
-        "B": "All clients will receive 'Broadcast to room1', but only the sender will receive 'Received your message'",
-        "C": "Only clients in room1 will receive any messages",
-        "D": "The server will emit 'Broadcast to room1' to all connected clients except the sender"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 44,
-      "difficulty": "hard",
-      "question": "Which of the following statements about the docker-compose.yml file is INCORRECT?",
-      "options": {
-        "A": "It allows defining and running multi-container Docker applications",
-        "B": "The 'depends_on' attribute ensures that services start in dependency order",
-        "C": "It automatically scales containers based on CPU usage without additional configuration",
-        "D": "Environment variables can be passed to containers using the 'environment' or 'env_file' attributes"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 45,
-      "difficulty": "hard",
-      "question": "Which statement correctly distinguishes between horizontal and vertical scaling in the context of Node.js applications?",
-      "options": {
-        "A": "Horizontal scaling means adding more CPU cores to a single server, while vertical scaling means adding more servers",
-        "B": "Horizontal scaling uses cluster module internally, while vertical scaling requires Docker",
-        "C": "Vertical scaling means adding more resources to a single server, while horizontal scaling means adding more servers",
-        "D": "Horizontal scaling is only possible with stateless applications, while vertical scaling works for both stateful and stateless applications"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 46,
-      "difficulty": "hard",
-      "question": "What will the following code output regarding V8 engine optimizations?",
-      "code_example": "function add(x, y) {\n  return x + y;\n}\n\n// Call the function multiple times with the same type\nconsole.time('optimized');\nfor (let i = 0; i < 1000000; i++) {\n  add(1, 2);\n}\nconsole.timeEnd('optimized');\n\n// Now call with mixed types\nconsole.time('deoptimized');\nfor (let i = 0; i < 1000000; i++) {\n  if (i % 2 === 0) {\n    add(1, 2);\n  } else {\n    add('a', 'b');\n  }\n}\nconsole.timeEnd('deoptimized');\n\n// Which statement is true about the execution time?",
-      "options": {
-        "A": "Both loops will have nearly identical execution times due to V8's JIT compilation",
-        "B": "The 'optimized' loop will be significantly faster because V8 can optimize monomorphic operations",
-        "C": "The 'deoptimized' loop will be faster because V8 optimizes for mixed-type operations",
-        "D": "The execution time difference will be negligible because V8 doesn't optimize simple addition operations"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 47,
-      "difficulty": "hard",
-      "question": "What will be logged to the console in the following code that demonstrates a potential memory leak?",
-      "code_example": "const memoryUsage = [];\nlet previousMemory = process.memoryUsage().heapUsed;\nconst leakyData = [];\n\nclass LeakyClass {\n  constructor(data) {\n    this.data = data;\n  }\n  \n  process() {\n    return this.data.map(item => item * 2);\n  }\n}\n\nfunction simulateMemoryLeak() {\n  // Create a large array and add it to our global container\n  const largeData = new Array(100000).fill(1);\n  leakyData.push(new LeakyClass(largeData));\n  \n  // Record memory usage\n  const currentMemory = process.memoryUsage().heapUsed;\n  const diff = currentMemory - previousMemory;\n  previousMemory = currentMemory;\n  memoryUsage.push(diff);\n  \n  // Log every 5th iteration\n  if (memoryUsage.length % 5 === 0) {\n    console.log(\n      `Memory change pattern: ${memoryUsage.slice(-5).map(m => m > 0 ? '+' : '-').join('')}`\n    );\n  }\n}\n\n// Run a few iterations\nfor (let i = 0; i < 10; i++) {\n  simulateMemoryLeak();\n}\n\n// What pattern is most likely to be observed?",
-      "options": {
-        "A": "Memory change pattern: -----",
-        "B": "Memory change pattern: +-+-+",
-        "C": "Memory change pattern: +++++",
-        "D": "Memory change pattern: -+-+-",
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 48,
-      "difficulty": "hard",
-      "question": "Which statement about Kubernetes pods for Node.js applications is INCORRECT?",
-      "options": {
-        "A": "A Pod can contain multiple Node.js containers that share the same network namespace",
-        "B": "Pod scaling can be automated using Horizontal Pod Autoscaler (HPA) based on CPU or memory usage",
-        "C": "When a Pod is deleted, Kubernetes automatically preserves its filesystem data without additional configuration",
-        "D": "Init containers in a Pod can be used to run setup tasks before the main Node.js application container starts"
-      },
-      "correct_answer": "C"
-    }
-  ]
+    "questions": [
+        {
+            "id": 1,
+            "difficulty": "easy",
+            "question": "What is Node.js?",
+            "options": {
+                "A": "A JavaScript library for DOM manipulation",
+                "B": "A runtime environment that executes JavaScript outside the browser",
+                "C": "A JavaScript framework for building user interfaces",
+                "D": "A database management system for JavaScript applications"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 2,
+            "difficulty": "easy",
+            "question": "What will be the output of the following code?",
+            "code_example": "const button = document.createElement('button');\nbutton.addEventListener('click', () => {\n  console.log('Button clicked!');\n});\n\nbutton.onclick = function() {\n  console.log('Onclick triggered!');\n};\n\n// What will be logged when the button is clicked?",
+            "options": {
+                "A": "Only 'Button clicked!'",
+                "B": "Only 'Onclick triggered!'",
+                "C": "Both messages in order: 'Button clicked!' then 'Onclick triggered!'",
+                "D": "Both messages in order: 'Onclick triggered!' then 'Button clicked!'"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 3,
+            "difficulty": "easy",
+            "question": "How does Node.js differ from browser JavaScript?",
+            "options": {
+                "A": "Node.js doesn't support JavaScript objects",
+                "B": "Node.js has access to the document object and DOM API",
+                "C": "Node.js has direct access to the file system via the fs module",
+                "D": "Node.js cannot use the JSON.parse() method"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 4,
+            "difficulty": "easy",
+            "question": "What will be the output of the following code?",
+            "code_example": "console.log(parseInt('42px'));\nconsole.log(parseFloat('3.14hello'));\nconsole.log(Number('123abc'));",
+            "options": {
+                "A": "42, 3.14, 123",
+                "B": "42, 3.14, NaN",
+                "C": "'42px', '3.14hello', '123abc'",
+                "D": "NaN, NaN, NaN"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 5,
+            "difficulty": "easy",
+            "question": "What will be the output of the following code?",
+            "code_example": "const parent = document.createElement('div');\nconst child = document.createElement('button');\n\nparent.appendChild(child);\n\nparent.addEventListener('click', () => {\n  console.log('Parent clicked');\n});\n\nchild.addEventListener('click', (event) => {\n  console.log('Child clicked');\n  event.stopPropagation();\n});\n\n// What happens when the child button is clicked?",
+            "options": {
+                "A": "Only 'Child clicked' is logged",
+                "B": "Only 'Parent clicked' is logged",
+                "C": "'Child clicked' is logged, then 'Parent clicked'",
+                "D": "'Parent clicked' is logged, then 'Child clicked'"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 6,
+            "difficulty": "easy",
+            "question": "What will be the output of the following code?",
+            "code_example": "const promise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve('Success!');\n  }, 100);\n});\n\npromise\n  .then(result => {\n    console.log(result);\n    return 'Next step';\n  })\n  .then(result => {\n    console.log(result);\n  })\n  .catch(error => {\n    console.log('Error:', error);\n  })\n  .finally(() => {\n    console.log('Completed');\n  });",
+            "options": {
+                "A": "'Success!', 'Completed'",
+                "B": "'Success!', 'Next step', 'Error: undefined', 'Completed'",
+                "C": "'Success!', 'Next step', 'Completed'",
+                "D": "'Next step', 'Completed'"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 7,
+            "difficulty": "easy",
+            "question": "What will be the output of the following code?",
+            "code_example": "const element = document.createElement('div');\nelement.textContent = 'Hello';\nconsole.log(element.textContent);\n\nelement.innerHTML = '<span>World</span>';\nconsole.log(element.textContent);",
+            "options": {
+                "A": "'Hello', 'Hello'",
+                "B": "'Hello', '<span>World</span>'",
+                "C": "'Hello', 'World'",
+                "D": "'<span>Hello</span>', 'World'"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 8,
+            "difficulty": "easy",
+            "question": "What will be the output of the following code?",
+            "code_example": "const regular = function(x) {\n  this.value = x;\n};\n\nconst arrow = (x) => {\n  this.value = x;\n};\n\nconst obj1 = new regular(10);\nconst obj2 = new arrow(20);\n\nconsole.log(obj1.value);",
+            "options": {
+                "A": "10",
+                "B": "20",
+                "C": "undefined",
+                "D": "TypeError: arrow is not a constructor"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 9,
+            "difficulty": "easy",
+            "question": "What will be the output of the following code?",
+            "code_example": "const obj1 = {};\nobj1.name = 'Object 1';\n\nconst obj2 = new Object();\nobj2.name = 'Object 2';\n\nconsole.log(typeof obj1, typeof obj2, obj1.name === 'Object 1' && obj2.name === 'Object 2');",
+            "options": {
+                "A": "'object' 'Object' false",
+                "B": "'object' 'object' true",
+                "C": "'Object' 'Object' true",
+                "D": "'object' 'function' true"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 10,
+            "difficulty": "easy",
+            "question": "What will be the output of the following code in a Node.js environment?",
+            "code_example": "// Assuming the environment variable API_KEY='secret123'\nprocess.env.DEBUG = 'true';\n\nfunction checkConfig() {\n  console.log(process.env.DEBUG === 'true');\n  console.log(process.env.API_KEY === 'secret123');\n  console.log(typeof process.env.DEBUG);\n}\n\ncheckConfig();",
+            "options": {
+                "A": "true, true, 'boolean'",
+                "B": "true, true, 'string'",
+                "C": "'true', 'secret123', 'object'",
+                "D": "true, undefined, 'string'"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 11,
+            "difficulty": "easy",
+            "question": "What will be the output of the following code?",
+            "code_example": "const user = {\n  name: 'John',\n  details: {\n    age: 30,\n    role: 'Developer'\n  },\n  skills: ['JavaScript', 'Node.js']\n};\n\nconst { name, details: { age }, skills: [primarySkill] } = user;\n\nconsole.log(name, age, primarySkill);",
+            "options": {
+                "A": "'John' undefined undefined",
+                "B": "'John' 30 ['JavaScript', 'Node.js']",
+                "C": "'John' 30 'JavaScript'",
+                "D": "'John' { age: 30, role: 'Developer' } 'JavaScript'"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 12,
+            "difficulty": "easy",
+            "question": "What will be the output of the following code?",
+            "code_example": "async function fetchData() {\n  return 'Data';\n}\n\nasync function processData() {\n  const data = await fetchData();\n  return `Processed ${data}`;\n}\n\nprocessData().then(result => console.log(result));",
+            "options": {
+                "A": "Promise { 'Processed Data' }",
+                "B": "Processed Data",
+                "C": "Promise { 'Data' }",
+                "D": "undefined"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 13,
+            "difficulty": "easy",
+            "question": "What will be the output of the following code?",
+            "code_example": "(function() {\n  var message = 'Inside IIFE';\n  console.log(message);\n})();\n\ntry {\n  console.log(message);\n} catch (e) {\n  console.log('Error: message is not defined');\n}",
+            "options": {
+                "A": "'Inside IIFE' only",
+                "B": "'Inside IIFE' followed by undefined",
+                "C": "'Inside IIFE' followed by 'Error: message is not defined'",
+                "D": "SyntaxError"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 14,
+            "difficulty": "easy",
+            "question": "What is the correct statement about require() and import() in Node.js?",
+            "options": {
+                "A": "require() is asynchronous, while import() is synchronous",
+                "B": "require() is part of CommonJS, while import() is part of ES Modules",
+                "C": "require() can only be used in the browser, while import() is only for Node.js",
+                "D": "require() and import() are identical and can be used interchangeably"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 15,
+            "difficulty": "easy",
+            "question": "What will be the output of the following code?",
+            "code_example": "const a = 5;      // 101 in binary\nconst b = 3;      // 011 in binary\n\nconsole.log(a & b);  // Bitwise AND\nconsole.log(a | b);  // Bitwise OR\nconsole.log(a ^ b);  // Bitwise XOR",
+            "options": {
+                "A": "15, 8, 6",
+                "B": "1, 7, 6",
+                "C": "8, 8, 8",
+                "D": "5, 3, 2"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 16,
+            "difficulty": "easy",
+            "question": "What is the difference between var, let, and const?",
+            "options": {
+                "A": "var and let are block-scoped, while const is function-scoped",
+                "B": "var is function-scoped, while let and const are block-scoped",
+                "C": "var, let, and const are all block-scoped, but only const cannot be reassigned",
+                "D": "There is no difference; they are interchangeable"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 17,
+            "difficulty": "medium",
+            "question": "What will be the output of the following code?",
+            "code_example": "const promise1 = Promise.resolve('First');\nconst promise2 = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    reject(new Error('Failed'));\n  }, 100);\n});\nconst promise3 = new Promise((resolve) => {\n  setTimeout(() => {\n    resolve('Third');\n  }, 200);\n});\n\nPromise.all([promise1, promise2, promise3])\n  .then(results => console.log('Results:', results))\n  .catch(error => console.log('Caught:', error.message))\n  .finally(() => console.log('Done'));",
+            "options": {
+                "A": "'Results: ['First', Error: Failed, 'Third']' followed by 'Done'",
+                "B": "'Results: ['First', undefined, 'Third']' followed by 'Done'",
+                "C": "'Caught: Failed' followed by 'Done'",
+                "D": "'First', 'Failed', 'Third', 'Done'"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 18,
+            "difficulty": "medium",
+            "question": "What will be the output of the following recursive function?",
+            "code_example": "function factorial(n) {\n  if (n <= 1) return 1;\n  return n * factorial(n - 1);\n}\n\nconsole.log(factorial(4));\nconst result = factorial(0);\nconsole.log(result);",
+            "options": {
+                "A": "24, 0",
+                "B": "24, 1",
+                "C": "Error: Maximum call stack size exceeded",
+                "D": "4, 1"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 19,
+            "difficulty": "medium",
+            "question": "What will be the output of the following code?",
+            "code_example": "function Car(make, model) {\n  this.make = make;\n  this.model = model;\n  this.fullName = function() {\n    return `${this.make} ${this.model}`;\n  };\n}\n\nconst vehicle = { type: 'car' };\nconst honda = new Car('Honda', 'Civic');\nconst toyota = Car('Toyota', 'Corolla');\n\nconsole.log(honda.make, typeof honda);\nconsole.log(toyota, window.make);",
+            "options": {
+                "A": "'Honda' 'object', undefined undefined",
+                "B": "'Honda' 'object', undefined 'Toyota'",
+                "C": "'Honda' 'function', Error",
+                "D": "Error: 'Car' is not a constructor"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 20,
+            "difficulty": "medium",
+            "question": "Which approach best reduces redundant database queries in a Node.js application?",
+            "options": {
+                "A": "Using global variables to store data",
+                "B": "Implementing a caching layer with TTL (Time To Live)",
+                "C": "Querying the database more frequently with smaller result sets",
+                "D": "Restarting the server after each query"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 21,
+            "difficulty": "medium",
+            "question": "How does JavaScript inheritance differ from classical OOP inheritance?",
+            "options": {
+                "A": "JavaScript uses classes just like classical OOP languages",
+                "B": "JavaScript inheritance uses mixins instead of inheritance chains",
+                "C": "JavaScript uses prototype-based inheritance rather than class-based inheritance",
+                "D": "JavaScript doesn't support inheritance"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 22,
+            "difficulty": "medium",
+            "question": "What is the best way to handle CORS in a Node.js Express application?",
+            "options": {
+                "A": "Disable all security features in the browser",
+                "B": "Use the cors middleware with appropriate configurations",
+                "C": "CORS is a client-side concept and cannot be handled on the server",
+                "D": "Implement custom headers on each response manually"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 23,
+            "difficulty": "medium",
+            "question": "What will be the output of the following code?",
+            "code_example": "const parent = {\n  name: 'Parent',\n  greet() {\n    return `Hello from ${this.name}`;\n  }\n};\n\nconst child = Object.create(parent);\nchild.name = 'Child';\n\nconst grandchild = Object.create(child);\n\nconsole.log(parent.greet());\nconsole.log(child.greet());\nconsole.log(grandchild.greet());\nconsole.log('greet' in grandchild, grandchild.hasOwnProperty('greet'));",
+            "options": {
+                "A": "'Hello from Parent', 'Hello from Child', 'Hello from undefined', true false",
+                "B": "'Hello from Parent', 'Hello from Child', 'Hello from Child', true true",
+                "C": "'Hello from Parent', 'Hello from Child', 'Hello from undefined', true true",
+                "D": "'Hello from Parent', 'Hello from Child', 'Hello from undefined', true false"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 24,
+            "difficulty": "medium",
+            "question": "What will be the output of the following pure function?",
+            "code_example": "function addToList(list, item) {\n  return [...list, item];\n}\n\nconst originalList = ['apple', 'banana'];\nconst newList = addToList(originalList, 'cherry');\n\nconsole.log(originalList);\nconsole.log(newList);\nconsole.log(originalList === newList);",
+            "options": {
+                "A": "['apple', 'banana'], ['apple', 'banana', 'cherry'], true",
+                "B": "['apple', 'banana', 'cherry'], ['apple', 'banana', 'cherry'], true",
+                "C": "['apple', 'banana'], ['apple', 'banana', 'cherry'], false",
+                "D": "['apple', 'banana', 'cherry'], ['apple', 'banana'], false"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 25,
+            "difficulty": "medium",
+            "question": "What will be the output of the following code?",
+            "code_example": "const data = {\n  user: {\n    name: 'Alice',\n    roles: ['admin', 'editor'],\n    contact: {\n      email: 'alice@example.com',\n      phone: {\n        home: '123-456-7890',\n        work: null\n      }\n    }\n  }\n};\n\nconst { user: { contact: { phone: { home, work = 'N/A' } } } } = data;\nconst { user: { roles: [primaryRole, secondaryRole = 'viewer'] } } = data;\n\nconsole.log(home, work, primaryRole, secondaryRole);",
+            "options": {
+                "A": "'123-456-7890' null 'admin' 'editor'",
+                "B": "'123-456-7890' 'N/A' 'admin' 'editor'",
+                "C": "'123-456-7890' 'N/A' 'admin' 'viewer'",
+                "D": "undefined undefined undefined undefined"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 26,
+            "difficulty": "medium",
+            "question": "What will be the output of the following code?",
+            "code_example": "function createCounter() {\n  let count = 0;\n  \n  function increment() {\n    count++;\n    return count;\n  }\n  \n  function getCount() {\n    return count;\n  }\n  \n  return {\n    increment,\n    getCount\n  };\n}\n\nconst counter1 = createCounter();\nconst counter2 = createCounter();\n\ncounter1.increment();\ncounter1.increment();\ncounter2.increment();\n\nconsole.log(counter1.getCount(), counter2.getCount());",
+            "options": {
+                "A": "2 2",
+                "B": "3 3",
+                "C": "2 1",
+                "D": "1 1"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 27,
+            "difficulty": "medium",
+            "question": "What will be the output of the following function composition?",
+            "code_example": "const add = x => y => x + y;\nconst multiply = x => y => x * y;\n\nconst compose = (f, g) => x => f(g(x));\nconst pipe = (f, g) => x => g(f(x));\n\nconst add5 = add(5);\nconst multiply3 = multiply(3);\n\nconst composed = compose(add5, multiply3);\nconst piped = pipe(add5, multiply3);\n\nconsole.log(composed(2), piped(2));",
+            "options": {
+                "A": "17 21",
+                "B": "11 11",
+                "C": "21 17",
+                "D": "15 15"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 28,
+            "difficulty": "medium",
+            "question": "What will be the output of the following Node.js file system code?",
+            "code_example": "const fs = require('fs');\n\nconst data = 'Hello, world!';\n\n// Assume these operations are executed in sequence\nfs.writeFileSync('test.txt', data);\n\nconst contents = fs.readFileSync('test.txt', 'utf8');\nconsole.log(contents);\n\nfs.appendFileSync('test.txt', '\nAppended text');\n\nconst newContents = fs.readFileSync('test.txt', 'utf8');\nconsole.log(newContents === data);",
+            "options": {
+                "A": "'Hello, world!' true",
+                "B": "'Hello, world!' false",
+                "C": "'Hello, world!\nAppended text' false",
+                "D": "Error: file not found"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 29,
+            "difficulty": "medium",
+            "question": "Which approach is most effective at preventing SQL injection in a Node.js application?",
+            "options": {
+                "A": "Using console.log to debug SQL queries",
+                "B": "Using string concatenation to build queries",
+                "C": "Using parameterized queries with prepared statements",
+                "D": "Using eval() to execute SQL strings"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 30,
+            "difficulty": "medium",
+            "question": "What will be the output of the following code using streams?",
+            "code_example": "const { Readable, Transform } = require('stream');\n\nconst readableStream = new Readable({\n  read() {}\n});\n\nconst transformStream = new Transform({\n  transform(chunk, encoding, callback) {\n    const uppercase = chunk.toString().toUpperCase();\n    callback(null, uppercase);\n  }\n});\n\nreadableStream.pipe(transformStream);\n\ntransformStream.on('data', (chunk) => {\n  console.log(chunk.toString());\n});\n\nreadableStream.push('hello');\nreadableStream.push(' world');\nreadableStream.push(null);",
+            "options": {
+                "A": "'hello world'",
+                "B": "'HELLO WORLD'",
+                "C": "'HELLO' 'WORLD'",
+                "D": "'HELLO' ' WORLD'"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 31,
+            "difficulty": "medium",
+            "question": "What is the key difference between CommonJS and ES Modules in Node.js?",
+            "options": {
+                "A": "CommonJS modules are asynchronous, while ES Modules are synchronous",
+                "B": "CommonJS modules are statically loaded, while ES Modules are dynamically loaded",
+                "C": "CommonJS modules support circular dependencies, while ES Modules don't",
+                "D": "CommonJS modules are loaded synchronously, while ES Modules are loaded asynchronously"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 32,
+            "difficulty": "medium",
+            "question": "What is the correct way to define a MongoDB schema with validation in Mongoose?",
+            "code_example": "const mongoose = require('mongoose');\nconst { Schema } = mongoose;\n\nconst userSchema = new Schema({\n  username: {\n    type: String,\n    required: true,\n    minlength: 3,\n    maxlength: 20\n  },\n  email: {\n    type: String,\n    required: true,\n    unique: true,\n    match: /^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$/\n  },\n  createdAt: {\n    type: Date,\n    default: Date.now\n  }\n});\n\nconst User = mongoose.model('User', userSchema);\n\n// What will happen when we try to save this user?\nconst invalidUser = new User({\n  username: 'jo',\n  email: 'invalid-email'\n});\n\ninvalidUser.save(err => {\n  if (err) console.log('Validation failed');\n  else console.log('User saved');\n});",
+            "options": {
+                "A": "'User saved' will be logged as validation is only a warning",
+                "B": "'Validation failed' will be logged due to both username and email validation errors",
+                "C": "TypeError: Schema validation is not supported in Mongoose",
+                "D": "'Validation failed' will be logged only for the email validation error"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 33,
+            "difficulty": "hard",
+            "question": "Which of the following is the most effective way to prevent Cross-Site Request Forgery (CSRF) attacks in a Node.js Express application?",
+            "options": {
+                "A": "Store session data in localStorage instead of cookies",
+                "B": "Use the 'SameSite=Strict' attribute on cookies and implement CSRF tokens",
+                "C": "Disable CORS in the application",
+                "D": "Only accept requests with the Content-Type header set to 'application/json'"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 34,
+            "difficulty": "hard",
+            "question": "What will be the output of the following code related to unhandled Promise rejections?",
+            "code_example": "process.on('unhandledRejection', (reason, promise) => {\n  console.log('Logged rejection:', reason);\n});\n\nfunction asyncOperation() {\n  return new Promise((resolve, reject) => {\n    reject(new Error('Operation failed'));\n  });\n}\n\nasyncOperation();\nconsole.log('After async operation');",
+            "options": {
+                "A": "After async operation",
+                "B": "Error: Operation failed",
+                "C": "After async operation\nLogged rejection: Error: Operation failed",
+                "D": "Logged rejection: Error: Operation failed\nAfter async operation"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 35,
+            "difficulty": "hard",
+            "question": "Which of the following lines in a Dockerfile is INCORRECT for a Node.js application?",
+            "options": {
+                "A": "COPY package*.json ./",
+                "B": "RUN npm ci --only=production",
+                "C": "EXPOSE 3000",
+                "D": "ENTRYPOINT [\"node.exe\", \"index.js\"]"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 36,
+            "difficulty": "hard",
+            "question": "What will be logged in the console when executing the following code?",
+            "code_example": "// Example of JavaScript memory allocation\nlet a = { value: 1 };\nlet b = a;\n\nb.value = 2;\n\nconsole.log(a.value);\n\na = null;\nconsole.log(b.value);\n\nb = null;\n\n// Create a large array\nlet largeArray = new Array(1000000).fill('x');",
+            "options": {
+                "A": "1\n2",
+                "B": "2\n2",
+                "C": "2\nnull",
+                "D": "1\nnull"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 37,
+            "difficulty": "hard",
+            "question": "Which statement about V8's hidden classes and inline caching is correct?",
+            "options": {
+                "A": "Adding properties to an object in a different order creates different hidden classes",
+                "B": "Hidden classes are only created for array objects",
+                "C": "Inline caching works best when object properties are accessed in random order",
+                "D": "Deleting properties from an object improves V8's optimization capabilities"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 38,
+            "difficulty": "hard",
+            "question": "What will be the output of the following Node.js crypto module code?",
+            "code_example": "const crypto = require('crypto');\n\nconst secret = 'abcdefg';\nconst hash1 = crypto.createHash('sha256').update(secret).digest('hex');\n\n// Generate another hash with the same input\nconst hash2 = crypto.createHash('sha256').update(secret).digest('hex');\n\nconsole.log(hash1 === hash2);\n\n// Create a randomized hash\nconst salt = crypto.randomBytes(16).toString('hex');\nconst hash3 = crypto.createHash('sha256').update(secret + salt).digest('hex');\nconst hash4 = crypto.createHash('sha256').update(secret + salt).digest('hex');\n\nconsole.log(hash3 === hash4);",
+            "options": {
+                "A": "false\nfalse",
+                "B": "false\ntrue",
+                "C": "true\nfalse",
+                "D": "true\ntrue"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 39,
+            "difficulty": "hard",
+            "question": "When using Node.js debugging with 'node --inspect', which of the following statements is TRUE?",
+            "options": {
+                "A": "The debugger automatically pauses execution at the beginning of the script",
+                "B": "The debugger only works with Google Chrome and not other Chromium-based browsers",
+                "C": "The debugger listens on 127.0.0.1:9229 by default and can be accessed via Chrome DevTools",
+                "D": "You can only debug synchronous code, not asynchronous operations"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 40,
+            "difficulty": "hard",
+            "question": "What will be the result of running the following transform stream code?",
+            "code_example": "const { Transform } = require('stream');\nconst { pipeline } = require('stream/promises');\nconst fs = require('fs');\n\nclass ReverseStream extends Transform {\n  constructor(options) {\n    super(options);\n  }\n  \n  _transform(chunk, encoding, callback) {\n    const reversed = chunk.toString().split('').reverse().join('');\n    this.push(reversed);\n    callback();\n  }\n}\n\nasync function processFile() {\n  try {\n    const readStream = fs.createReadStream('./sample.txt');\n    const writeStream = fs.createWriteStream('./output.txt');\n    const reverseStream = new ReverseStream();\n    \n    await pipeline(\n      readStream,\n      reverseStream,\n      writeStream\n    );\n    \n    console.log('Processing complete');\n  } catch (err) {\n    console.error('Pipeline error:', err);\n  }\n}\n\n// If sample.txt contains: \"Hello World\"",
+            "options": {
+                "A": "output.txt will contain: \"Hello World\"",
+                "B": "output.txt will contain: \"dlroW olleH\"",
+                "C": "A pipeline error will occur because readStream and writeStream are incompatible",
+                "D": "The code will throw an error because pipeline is not a Promise-based function"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 41,
+            "difficulty": "hard",
+            "question": "Which of the following statements about deploying Node.js applications to cloud platforms is FALSE?",
+            "options": {
+                "A": "Heroku requires a Procfile to specify the command to start your application",
+                "B": "Vercel automatically detects and optimizes for Next.js applications",
+                "C": "DigitalOcean Droplets require manual configuration of the Node.js environment",
+                "D": "All three platforms (Heroku, Vercel, DigitalOcean) automatically handle SSL certificate provisioning without any configuration"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 42,
+            "difficulty": "hard",
+            "question": "What will be the result of running the following Node.js clustering code?",
+            "code_example": "const cluster = require('cluster');\nconst http = require('http');\nconst numCPUs = require('os').cpus().length;\n\nif (cluster.isMaster) {\n  console.log(`Master ${process.pid} is running`);\n\n  // Fork workers based on CPU cores\n  for (let i = 0; i < 2; i++) {\n    cluster.fork();\n  }\n\n  cluster.on('exit', (worker, code, signal) => {\n    console.log(`Worker ${worker.process.pid} died`);\n    // Don't replace the worker\n  });\n\n  let requestCount = 0;\n  Object.values(cluster.workers).forEach(worker => {\n    worker.on('message', message => {\n      if (message.cmd === 'REQUEST_PROCESSED') {\n        requestCount++;\n        console.log(`Total requests processed: ${requestCount}`);\n      }\n    });\n  });\n} else {\n  // Workers share the TCP connection\n  http.createServer((req, res) => {\n    res.writeHead(200);\n    res.end(`Worker ${process.pid} processed request\n`);\n    process.send({ cmd: 'REQUEST_PROCESSED' });\n  }).listen(8000);\n\n  console.log(`Worker ${process.pid} started`);\n}",
+            "options": {
+                "A": "The master process will create workers equal to the number of CPUs",
+                "B": "The master process will create exactly 2 worker processes regardless of CPU count",
+                "C": "The server will automatically restart workers when they die",
+                "D": "Workers cannot communicate with the master process using process.send()"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 43,
+            "difficulty": "hard",
+            "question": "What is the output of the following WebSocket code using socket.io?",
+            "code_example": "// Server code (server.js)\nconst express = require('express');\nconst http = require('http');\nconst { Server } = require('socket.io');\n\nconst app = express();\nconst server = http.createServer(app);\nconst io = new Server(server);\n\nio.on('connection', (socket) => {\n  console.log('A user connected');\n  \n  socket.join('room1');\n  \n  socket.on('message', (data) => {\n    console.log('Message received:', data);\n    socket.emit('response', 'Received your message');\n    io.to('room1').emit('roomMessage', 'Broadcast to room1');\n  });\n});\n\nserver.listen(3000, () => {\n  console.log('Server is running on port 3000');\n});\n\n// Client code\n// Assuming a client sends a 'message' event with data 'Hello Server'",
+            "options": {
+                "A": "The client that sent 'Hello Server' will receive both 'Received your message' and 'Broadcast to room1'",
+                "B": "All clients will receive 'Broadcast to room1', but only the sender will receive 'Received your message'",
+                "C": "Only clients in room1 will receive any messages",
+                "D": "The server will emit 'Broadcast to room1' to all connected clients except the sender"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 44,
+            "difficulty": "hard",
+            "question": "Which of the following statements about the docker-compose.yml file is INCORRECT?",
+            "options": {
+                "A": "It allows defining and running multi-container Docker applications",
+                "B": "The 'depends_on' attribute ensures that services start in dependency order",
+                "C": "It automatically scales containers based on CPU usage without additional configuration",
+                "D": "Environment variables can be passed to containers using the 'environment' or 'env_file' attributes"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 45,
+            "difficulty": "hard",
+            "question": "Which statement correctly distinguishes between horizontal and vertical scaling in the context of Node.js applications?",
+            "options": {
+                "A": "Horizontal scaling means adding more CPU cores to a single server, while vertical scaling means adding more servers",
+                "B": "Horizontal scaling uses cluster module internally, while vertical scaling requires Docker",
+                "C": "Vertical scaling means adding more resources to a single server, while horizontal scaling means adding more servers",
+                "D": "Horizontal scaling is only possible with stateless applications, while vertical scaling works for both stateful and stateless applications"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 46,
+            "difficulty": "hard",
+            "question": "What will the following code output regarding V8 engine optimizations?",
+            "code_example": "function add(x, y) {\n  return x + y;\n}\n\n// Call the function multiple times with the same type\nconsole.time('optimized');\nfor (let i = 0; i < 1000000; i++) {\n  add(1, 2);\n}\nconsole.timeEnd('optimized');\n\n// Now call with mixed types\nconsole.time('deoptimized');\nfor (let i = 0; i < 1000000; i++) {\n  if (i % 2 === 0) {\n    add(1, 2);\n  } else {\n    add('a', 'b');\n  }\n}\nconsole.timeEnd('deoptimized');\n\n// Which statement is true about the execution time?",
+            "options": {
+                "A": "Both loops will have nearly identical execution times due to V8's JIT compilation",
+                "B": "The 'optimized' loop will be significantly faster because V8 can optimize monomorphic operations",
+                "C": "The 'deoptimized' loop will be faster because V8 optimizes for mixed-type operations",
+                "D": "The execution time difference will be negligible because V8 doesn't optimize simple addition operations"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 47,
+            "difficulty": "hard",
+            "question": "What will be logged to the console in the following code that demonstrates a potential memory leak?",
+            "code_example": "const memoryUsage = [];\nlet previousMemory = process.memoryUsage().heapUsed;\nconst leakyData = [];\n\nclass LeakyClass {\n  constructor(data) {\n    this.data = data;\n  }\n  \n  process() {\n    return this.data.map(item => item * 2);\n  }\n}\n\nfunction simulateMemoryLeak() {\n  // Create a large array and add it to our global container\n  const largeData = new Array(100000).fill(1);\n  leakyData.push(new LeakyClass(largeData));\n  \n  // Record memory usage\n  const currentMemory = process.memoryUsage().heapUsed;\n  const diff = currentMemory - previousMemory;\n  previousMemory = currentMemory;\n  memoryUsage.push(diff);\n  \n  // Log every 5th iteration\n  if (memoryUsage.length % 5 === 0) {\n    console.log(\n      `Memory change pattern: ${memoryUsage.slice(-5).map(m => m > 0 ? '+' : '-').join('')}`\n    );\n  }\n}\n\n// Run a few iterations\nfor (let i = 0; i < 10; i++) {\n  simulateMemoryLeak();\n}\n\n// What pattern is most likely to be observed?",
+            "options": {
+                "A": "Memory change pattern: -----",
+                "B": "Memory change pattern: +-+-+",
+                "C": "Memory change pattern: +++++",
+                "D": "Memory change pattern: -+-+-"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 48,
+            "difficulty": "hard",
+            "question": "Which statement about Kubernetes pods for Node.js applications is INCORRECT?",
+            "options": {
+                "A": "A Pod can contain multiple Node.js containers that share the same network namespace",
+                "B": "Pod scaling can be automated using Horizontal Pod Autoscaler (HPA) based on CPU or memory usage",
+                "C": "When a Pod is deleted, Kubernetes automatically preserves its filesystem data without additional configuration",
+                "D": "Init containers in a Pod can be used to run setup tasks before the main Node.js application container starts"
+            },
+            "correct_answer": "C"
+        }
+    ]
 }
