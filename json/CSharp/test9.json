@@ -1,0 +1,642 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "File.ReadAllText(), File.WriteAllText()",
+      "question": "What will happen when the following code is executed?",
+      "code_example": "using System;\nusing System.IO;\n\nstring path = \"test.txt\";\nFile.WriteAllText(path, \"Hello World\");\nstring content = File.ReadAllText(path);\nFile.WriteAllText(path, content + \"!\");\ncontent = File.ReadAllText(path);",
+      "options": {
+        "A": "The file will contain 'Hello World'",
+        "B": "The file will contain 'Hello World!'",
+        "C": "A FileNotFoundException will be thrown",
+        "D": "The file will be empty"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "ref vs. out parameters",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        int a = 5;\n        int b;\n        \n        ModifyValues(ref a, out b);\n        \n        Console.WriteLine($\"a = {a}, b = {b}\");\n    }\n    \n    static void ModifyValues(ref int x, out int y)\n    {\n        x = x * 2;\n        y = 10;\n    }\n}",
+      "options": {
+        "A": "a = 5, b = 10",
+        "B": "a = 10, b = 10",
+        "C": "a = 5, b = 0",
+        "D": "a = 10, b = 0"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "Type inference",
+      "question": "What is the type of the variable 'result' in the following code?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar result = numbers.Where(n => n > 2);",
+      "options": {
+        "A": "List<int>",
+        "B": "IEnumerable<int>",
+        "C": "IQueryable<int>",
+        "D": "int[]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "File.Exists(), Directory.CreateDirectory()",
+      "question": "What is the correct way to ensure a directory exists before creating a file in it?",
+      "options": {
+        "A": "if (!File.Exists(dirPath)) Directory.CreateDirectory(dirPath);",
+        "B": "if (!Directory.Exists(dirPath)) File.Create(dirPath);",
+        "C": "if (!Directory.Exists(dirPath)) Directory.CreateDirectory(dirPath);",
+        "D": "Directory.CreateDirectory(dirPath); // Creates only if it doesn't exist"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "Local functions (inside another method)",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        int result = Calculate(5);\n        Console.WriteLine(result);\n        \n        int Calculate(int x)\n        {\n            return x * x;\n        }\n    }\n}",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "25",
+        "D": "Compilation error: cannot define a function inside another function"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "try-catch-finally",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        try\n        {\n            Console.Write(\"A\");\n            throw new Exception();\n            Console.Write(\"B\");\n        }\n        catch\n        {\n            Console.Write(\"C\");\n            return;\n        }\n        finally\n        {\n            Console.Write(\"D\");\n        }\n        \n        Console.Write(\"E\");\n    }\n}",
+      "options": {
+        "A": "ACDE",
+        "B": "ACD",
+        "C": "ACE",
+        "D": "AC"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "FirstOrDefault(), SingleOrDefault()",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\npublic class Program\n{\n    public static void Main()\n    {\n        List<int> numbers = new List<int>();\n        \n        int first = numbers.FirstOrDefault();\n        int single = numbers.SingleOrDefault();\n        \n        Console.WriteLine($\"First: {first}, Single: {single}\");\n    }\n}",
+      "options": {
+        "A": "First: null, Single: null",
+        "B": "First: 0, Single: 0",
+        "C": "Exception will be thrown on FirstOrDefault()",
+        "D": "Exception will be thrown on SingleOrDefault()"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "Single-dimensional arrays",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        int[] arr = new int[3];\n        arr[0] = 5;\n        \n        Console.WriteLine($\"{arr[0]}, {arr[1]}, {arr.Length}\");\n    }\n}",
+      "options": {
+        "A": "5, null, 3",
+        "B": "5, 0, 3",
+        "C": "5, , 3",
+        "D": "5, undefined, 3"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "StreamReader, StreamWriter",
+      "question": "Which statement about StreamReader and StreamWriter is correct?",
+      "options": {
+        "A": "StreamReader and StreamWriter automatically close their underlying streams when disposed",
+        "B": "StreamReader.ReadLine() throws an exception when it reaches the end of the file",
+        "C": "StreamWriter only writes to a file when Flush() or Close() is called",
+        "D": "You cannot use a StreamReader and StreamWriter on the same file simultaneously"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Where(), Select(), OrderBy(), GroupBy()",
+      "question": "What will be the output of the following LINQ query?",
+      "code_example": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\npublic class Program\n{\n    public static void Main()\n    {\n        var numbers = new List<int> { 3, 1, 4, 1, 5, 9, 2, 6 };\n        \n        var result = numbers\n            .Where(n => n % 2 == 1)\n            .OrderBy(n => n)\n            .Select(n => n * 2);\n            \n        Console.WriteLine(string.Join(\", \", result));\n    }\n}",
+      "options": {
+        "A": "6, 2, 8, 2, 10, 18, 4, 12",
+        "B": "2, 2, 6, 10, 18",
+        "C": "2, 2, 10, 18",
+        "D": "3, 1, 5, 9"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "Function Overloading",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        Console.WriteLine(Add(3, 5));\n        Console.WriteLine(Add(3.5, 5.2));\n    }\n    \n    static int Add(int a, int b)\n    {\n        return a + b;\n    }\n    \n    static double Add(double a, double b)\n    {\n        return a + b;\n    }\n}",
+      "options": {
+        "A": "8, 8",
+        "B": "8, 8.7",
+        "C": "8, Cannot convert double to int",
+        "D": "Ambiguous call to Add()"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "String Interpolation",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        string name = \"Alice\";\n        int age = 30;\n        \n        string message = $\"{name} is {age} years old.\";\n        Console.WriteLine(message);\n    }\n}",
+      "options": {
+        "A": "{name} is {age} years old.",
+        "B": "name is age years old.",
+        "C": "Alice is 30 years old.",
+        "D": "Compilation error: invalid string format"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "Using using for resource management",
+      "question": "What is the primary benefit of using the 'using' statement with disposable objects?",
+      "options": {
+        "A": "It makes the code more readable",
+        "B": "It automatically calls Dispose() even if an exception occurs",
+        "C": "It makes garbage collection faster",
+        "D": "It prevents memory leaks in all scenarios"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "Bitwise operators",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        int a = 5;  // 101 in binary\n        int b = 3;  // 011 in binary\n        \n        Console.WriteLine(a & b); // AND\n        Console.WriteLine(a | b); // OR\n        Console.WriteLine(a ^ b); // XOR\n    }\n}",
+      "options": {
+        "A": "1, 7, 6",
+        "B": "0, 8, 8",
+        "C": "0, 8, 7",
+        "D": "1, 7, 8"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "Queue<T>, Stack<T>",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\nusing System.Collections.Generic;\n\npublic class Program\n{\n    public static void Main()\n    {\n        Queue<int> queue = new Queue<int>();\n        queue.Enqueue(1);\n        queue.Enqueue(2);\n        queue.Enqueue(3);\n        \n        Stack<int> stack = new Stack<int>();\n        stack.Push(1);\n        stack.Push(2);\n        stack.Push(3);\n        \n        Console.WriteLine($\"Queue: {queue.Dequeue()}, Stack: {stack.Pop()}\");\n    }\n}",
+      "options": {
+        "A": "Queue: 1, Stack: 1",
+        "B": "Queue: 3, Stack: 3",
+        "C": "Queue: 1, Stack: 3",
+        "D": "Queue: 3, Stack: 1"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "Value types",
+      "question": "Which of the following is NOT a value type in C#?",
+      "options": {
+        "A": "int",
+        "B": "double",
+        "C": "string",
+        "D": "char"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Generic methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        Console.WriteLine(Add(3, 5));\n        Console.WriteLine(Add(\"Hello\", \"World\"));\n    }\n    \n    static T Add<T>(T a, T b) where T : IConvertible\n    {\n        if (typeof(T) == typeof(string))\n        {\n            return (T)(object)(a.ToString() + b.ToString());\n        }\n        else\n        {\n            dynamic x = a;\n            dynamic y = b;\n            return x + y;\n        }\n    }\n}",
+      "options": {
+        "A": "8, HelloWorld",
+        "B": "Compilation error: operator '+' cannot be applied to type 'T'",
+        "C": "8, Runtime error for string concatenation",
+        "D": "Runtime error: cannot convert string to IConvertible"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "Property Injection",
+      "question": "Which of the following is true about property injection in dependency injection?",
+      "options": {
+        "A": "It's the recommended approach over constructor injection",
+        "B": "It allows for optional dependencies that may not be available at object creation time",
+        "C": "It requires the use of a DI container",
+        "D": "It's not supported in ASP.NET Core"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "ConfigureAwait(false)",
+      "question": "What is the primary purpose of using ConfigureAwait(false) in an async method?",
+      "options": {
+        "A": "To improve performance by running faster",
+        "B": "To prevent the continuation from being executed on the original synchronization context",
+        "C": "To ensure the continuation always runs on a background thread",
+        "D": "To allow exceptions to be handled by the global exception handler"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "Subscribing & unsubscribing (+=, -=)",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        Publisher publisher = new Publisher();\n        Subscriber subscriber = new Subscriber(publisher);\n        \n        publisher.DoSomething();\n        subscriber.Unsubscribe();\n        publisher.DoSomething();\n    }\n}\n\npublic class Publisher\n{\n    public event EventHandler SomethingHappened;\n    \n    public void DoSomething()\n    {\n        Console.WriteLine(\"Publisher doing something...\");\n        SomethingHappened?.Invoke(this, EventArgs.Empty);\n    }\n}\n\npublic class Subscriber\n{\n    private Publisher _publisher;\n    \n    public Subscriber(Publisher publisher)\n    {\n        _publisher = publisher;\n        _publisher.SomethingHappened += OnSomethingHappened;\n    }\n    \n    public void Unsubscribe()\n    {\n        _publisher.SomethingHappened -= OnSomethingHappened;\n    }\n    \n    private void OnSomethingHappened(object sender, EventArgs e)\n    {\n        Console.WriteLine(\"Subscriber notified!\");\n    }\n}",
+      "options": {
+        "A": "Publisher doing something...\nPublisher doing something...",
+        "B": "Publisher doing something...\nSubscriber notified!\nPublisher doing something...",
+        "C": "Publisher doing something...\nSubscriber notified!\nPublisher doing something...\nSubscriber notified!",
+        "D": "Compilation error: cannot add/remove event handlers outside the declaring class"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "Constraints (where T : class, where T : new())",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        var factory = new Factory<Person>();\n        var person = factory.Create();\n        Console.WriteLine(person.Name);\n    }\n}\n\npublic class Factory<T> where T : class, new()\n{\n    public T Create()\n    {\n        return new T();\n    }\n}\n\npublic class Person\n{\n    public string Name { get; set; } = \"Unknown\";\n}",
+      "options": {
+        "A": "null",
+        "B": "\"\" (empty string)",
+        "C": "Unknown",
+        "D": "Compilation error: cannot use new() with class constraint"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "Join(), GroupJoin()",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\npublic class Program\n{\n    public static void Main()\n    {\n        var departments = new List<Department>\n        {\n            new Department { Id = 1, Name = \"HR\" },\n            new Department { Id = 2, Name = \"IT\" }\n        };\n        \n        var employees = new List<Employee>\n        {\n            new Employee { Id = 1, Name = \"Alice\", DepartmentId = 1 },\n            new Employee { Id = 2, Name = \"Bob\", DepartmentId = 2 },\n            new Employee { Id = 3, Name = \"Charlie\", DepartmentId = 2 }\n        };\n        \n        var result = departments.GroupJoin(\n            employees,\n            dept => dept.Id,\n            emp => emp.DepartmentId,\n            (dept, emps) => $\"{dept.Name}: {emps.Count()}\"\n        );\n        \n        foreach (var item in result)\n        {\n            Console.WriteLine(item);\n        }\n    }\n}\n\npublic class Department\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n}\n\npublic class Employee\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n    public int DepartmentId { get; set; }\n}",
+      "options": {
+        "A": "HR: Alice\nIT: Bob, Charlie",
+        "B": "HR: 1\nIT: 2",
+        "C": "Department HR has 1 employees\nDepartment IT has 2 employees",
+        "D": "HR: Alice\nIT: Bob\nIT: Charlie"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "Deferred Execution",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\npublic class Program\n{\n    public static void Main()\n    {\n        var numbers = new List<int> { 1, 2, 3, 4 };\n        \n        var query = numbers.Where(n => n > 2);\n        Console.Write(\"Before: \");\n        Console.WriteLine(string.Join(\", \", query));\n        \n        numbers.Add(5);\n        Console.Write(\"After: \");\n        Console.WriteLine(string.Join(\", \", query));\n    }\n}",
+      "options": {
+        "A": "Before: \nAfter: ",
+        "B": "Before: 3, 4\nAfter: 3, 4",
+        "C": "Before: 3, 4\nAfter: 3, 4, 5",
+        "D": "Before: 3, 4, 5\nAfter: 3, 4, 5"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "Migrations (Add-Migration, Update-Database)",
+      "question": "Which of the following statements about Entity Framework Core migrations is correct?",
+      "options": {
+        "A": "Migrations can only be created through the Visual Studio Package Manager Console",
+        "B": "Running 'Update-Database' without parameters will always apply all pending migrations",
+        "C": "Migrations can only be applied in the order they were created",
+        "D": "You must manually add a migration ID to each migration class"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Anonymous methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\nusing System.Collections.Generic;\n\npublic class Program\n{\n    public static void Main()\n    {\n        List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };\n        \n        int factor = 2;\n        Func<int, int> multiplier = delegate(int x) { return x * factor; };\n        \n        factor = 3;\n        \n        foreach (var num in numbers)\n        {\n            Console.Write(multiplier(num) + \" \");\n        }\n    }\n}",
+      "options": {
+        "A": "2 4 6 8 10",
+        "B": "3 6 9 12 15",
+        "C": "2 4 6 8 10 followed by 3 6 9 12 15",
+        "D": "Compilation error: cannot access outside variable in anonymous method"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "Code-first approach",
+      "question": "Which of the following is NOT a key component of Entity Framework's Code-First approach?",
+      "options": {
+        "A": "Migration scripts",
+        "B": "Data annotations",
+        "C": "Fluent API",
+        "D": "Database-first EDMX files"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "Thread-safe collections",
+      "question": "What will be the output of the following code when executed in a multi-threaded environment?",
+      "code_example": "using System;\nusing System.Collections.Generic;\nusing System.Collections.Concurrent;\nusing System.Threading.Tasks;\n\npublic class Program\n{\n    public static void Main()\n    {\n        // This is a simplified example to demonstrate concepts\n        // In practice, multi-threaded behavior can be non-deterministic\n        \n        Dictionary<string, int> dict = new Dictionary<string, int>();\n        ConcurrentDictionary<string, int> concurrentDict = new ConcurrentDictionary<string, int>();\n        \n        // Simulate parallel updates to regular Dictionary (would normally throw exception)\n        // and to ConcurrentDictionary\n        try\n        {\n            Parallel.Invoke(\n                () => {\n                    if (!dict.ContainsKey(\"key\"))\n                        dict[\"key\"] = 1;\n                },\n                () => {\n                    if (!dict.ContainsKey(\"key\"))\n                        dict[\"key\"] = 2;\n                }\n            );\n            Console.WriteLine(\"Dictionary completed without errors\");\n        }\n        catch (Exception)\n        {\n            Console.WriteLine(\"Dictionary threw an exception\");\n        }\n        \n        // Use ConcurrentDictionary's thread-safe methods\n        Parallel.Invoke(\n            () => concurrentDict.TryAdd(\"key\", 1),\n            () => concurrentDict.TryAdd(\"key\", 2)\n        );\n        \n        Console.WriteLine($\"ConcurrentDictionary value: {concurrentDict[\"key\"]}\");\n    }\n}",
+      "options": {
+        "A": "Dictionary completed without errors\nConcurrentDictionary value: 1 or 2 (non-deterministic)",
+        "B": "Dictionary threw an exception\nConcurrentDictionary value: 1 or 2 (non-deterministic)",
+        "C": "Dictionary completed without errors\nConcurrentDictionary value: 3",
+        "D": "Dictionary threw an exception\nConcurrentDictionary value: 3"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "Multicast delegates",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\n\npublic class Program\n{\n    public delegate int MathOperation(int x, int y);\n    \n    public static void Main()\n    {\n        MathOperation add = (a, b) => a + b;\n        MathOperation multiply = (a, b) => a * b;\n        \n        MathOperation combined = add + multiply;\n        \n        int result = combined(3, 4);\n        Console.WriteLine(result);\n    }\n}",
+      "options": {
+        "A": "7 (3 + 4)",
+        "B": "12 (3 * 4)",
+        "C": "19 (7 + 12)",
+        "D": "12 (result of the last delegate in the chain)"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "HashSet<T> vs. Dictionary<TKey, TValue>",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\nusing System.Collections.Generic;\n\npublic class Program\n{\n    public static void Main()\n    {\n        var hashSet = new HashSet<string>(StringComparer.OrdinalIgnoreCase);\n        hashSet.Add(\"apple\");\n        hashSet.Add(\"APPLE\");\n        \n        var dictionary = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);\n        dictionary.Add(\"apple\", 1);\n        try\n        {\n            dictionary.Add(\"APPLE\", 2);\n        }\n        catch (ArgumentException)\n        {\n            dictionary[\"APPLE\"] = 2;\n        }\n        \n        Console.WriteLine($\"HashSet count: {hashSet.Count}, Dictionary count: {dictionary.Count}\");\n        Console.WriteLine($\"Dictionary value: {dictionary[\"apple\"]}\");\n    }\n}",
+      "options": {
+        "A": "HashSet count: 2, Dictionary count: 2\nDictionary value: 1",
+        "B": "HashSet count: 1, Dictionary count: 1\nDictionary value: 1",
+        "C": "HashSet count: 1, Dictionary count: 1\nDictionary value: 2",
+        "D": "HashSet count: 2, Dictionary count: 2\nDictionary value: 2"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "LINQ Queries with EF Core",
+      "question": "Which of the following statements about LINQ queries with Entity Framework Core is correct?",
+      "options": {
+        "A": "All LINQ queries are immediately executed as soon as they're defined",
+        "B": "The .ToList() method forces immediate execution of a LINQ query",
+        "C": "EF Core always translates all C# methods to SQL",
+        "D": "Using AsEnumerable() guarantees the query will execute on the database server"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "SortedList<T>, SortedDictionary<T, T>",
+      "question": "What is the primary difference between SortedList<TKey, TValue> and SortedDictionary<TKey, TValue>?",
+      "options": {
+        "A": "SortedList uses binary search for lookups while SortedDictionary uses hash codes",
+        "B": "SortedList uses less memory but has slower insertion/removal for large collections",
+        "C": "SortedDictionary supports custom equality comparers but SortedList doesn't",
+        "D": "SortedDictionary guarantees insertion order but SortedList doesn't"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What is the output of the following code using SingleOrDefault?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3 };\n\ntry\n{\n    var singleEven = numbers.SingleOrDefault(n => n % 2 == 0);\n    var singleGreaterThan2 = numbers.SingleOrDefault(n => n > 2);\n    var singleGreaterThan10 = numbers.SingleOrDefault(n => n > 10);\n    \n    Console.WriteLine($\"{singleEven}, {singleGreaterThan2}, {singleGreaterThan10}\");\n}\ncatch (InvalidOperationException)\n{\n    Console.WriteLine(\"Exception thrown\");\n}",
+      "options": {
+        "A": "2, 3, 0",
+        "B": "2, Exception thrown",
+        "C": "2, 3, ",
+        "D": "Exception thrown"
+      },
+      "correct_answer": "A"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the primary purpose of Kafka's consumer group mechanism?",
+      "options": {
+        "A": "To ensure that each message is processed by exactly one consumer in a cluster",
+        "B": "To distribute load across multiple brokers in the Kafka cluster",
+        "C": "To ensure that each message is processed by all consumers in a group",
+        "D": "To manage message queuing priorities within a single topic"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "The code will not compile due to invalid use of Assembly.Load()",
+        "B": "System.IO.FileNotFoundException will be thrown",
+        "C": "MyNamespace.MyClass",
+        "D": "null"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\nusing System.Reflection;\n\nnamespace AssemblyLoadDemo\n{\n    class Program\n    {\n        static void Main()\n        {\n            Assembly assembly = Assembly.Load(\"System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\");\n            Type type = assembly.GetType(\"MyNamespace.MyClass\");\n            Console.WriteLine(type?.FullName);\n        }\n    }\n}"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "In RabbitMQ, what is the primary difference between 'direct' and 'topic' exchanges?",
+      "options": {
+        "A": "Direct exchanges use message headers for routing while topic exchanges use routing keys",
+        "B": "Topic exchanges support pattern matching on routing keys while direct exchanges require exact matches",
+        "C": "Direct exchanges have higher throughput than topic exchanges",
+        "D": "Topic exchanges store messages persistently while direct exchanges only store in memory"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will the following code print to the console?",
+      "options": {
+        "A": "\"Operation started\" followed by \"Operation completed\" after 5 seconds",
+        "B": "\"Operation started\" followed by \"Operation cancelled\" immediately",
+        "C": "\"Operation started\" followed by \"Operation cancelled\" after 5 seconds",
+        "D": "\"Operation started\" followed by an OperationCanceledException"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static async Task Main()\n    {\n        var cts = new CancellationTokenSource();\n        cts.Cancel(); // Cancel immediately\n        \n        try\n        {\n            Console.WriteLine(\"Operation started\");\n            await Task.Delay(5000, cts.Token);\n            Console.WriteLine(\"Operation completed\");\n        }\n        catch (OperationCanceledException)\n        {\n            Console.WriteLine(\"Operation cancelled\");\n        }\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Factory Pattern implementation?",
+      "options": {
+        "A": "Creating Car\nCreating Bike\nStarting Car\nStarting Bike",
+        "B": "Starting Car\nStarting Bike",
+        "C": "Car created\nBike created\nCar started\nBike started",
+        "D": "Car created and started\nBike created and started"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic interface IVehicle\n{\n    void Start();\n}\n\npublic class Car : IVehicle\n{\n    public Car()\n    {\n        Console.WriteLine(\"Creating Car\");\n    }\n    \n    public void Start()\n    {\n        Console.WriteLine(\"Starting Car\");\n    }\n}\n\npublic class Bike : IVehicle\n{\n    public Bike()\n    {\n        Console.WriteLine(\"Creating Bike\");\n    }\n    \n    public void Start()\n    {\n        Console.WriteLine(\"Starting Bike\");\n    }\n}\n\npublic static class VehicleFactory\n{\n    public static IVehicle CreateVehicle(string vehicleType)\n    {\n        return vehicleType.ToLower() switch\n        {\n            \"car\" => new Car(),\n            \"bike\" => new Bike(),\n            _ => throw new ArgumentException(\"Unknown vehicle type\")\n        };\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        var vehicles = new IVehicle[]\n        {\n            VehicleFactory.CreateVehicle(\"car\"),\n            VehicleFactory.CreateVehicle(\"bike\")\n        };\n        \n        foreach (var vehicle in vehicles)\n        {\n            vehicle.Start();\n        }\n    }\n}"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be output by the following code using ExpandoObject?",
+      "options": {
+        "A": "Name: John\nAge: 30\nCalculated: False",
+        "B": "Name: John\nAge: 30\nName: John Age: 30",
+        "C": "Name: John\nAge: 30\nOccupation: Developer",
+        "D": "A compilation error because dynamic objects cannot be iterated through"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Dynamic;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        dynamic person = new ExpandoObject();\n        person.Name = \"John\";\n        person.Age = 30;\n        \n        Console.WriteLine($\"Name: {person.Name}\");\n        Console.WriteLine($\"Age: {person.Age}\");\n        \n        // Add a new property dynamically\n        person.Occupation = \"Developer\";\n        \n        // Access the last added property\n        Console.WriteLine($\"Occupation: {person.Occupation}\");\n    }\n}"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "In the Observer Pattern, which of the following statements is TRUE?",
+      "options": {
+        "A": "Observers must implement a specific interface defined by the subject",
+        "B": "The Observer Pattern is only suitable for one-to-one relationships",
+        "C": "Subjects can only notify observers when they are destroyed",
+        "D": "Observers are responsible for polling the subject for state changes"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Singleton Pattern implementation?",
+      "options": {
+        "A": "Logger instance created\nFirst log message\nLogger instance created\nSecond log message",
+        "B": "Logger instance created\nFirst log message\nSecond log message",
+        "C": "First log message\nSecond log message",
+        "D": "A threading exception due to improper synchronization"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic sealed class Logger\n{\n    private static Logger _instance;\n    private static readonly object _lock = new object();\n    \n    private Logger()\n    {\n        Console.WriteLine(\"Logger instance created\");\n    }\n    \n    public static Logger Instance\n    {\n        get\n        {\n            if (_instance == null)\n            {\n                lock (_lock)\n                {\n                    if (_instance == null)\n                    {\n                        _instance = new Logger();\n                    }\n                }\n            }\n            return _instance;\n        }\n    }\n    \n    public void Log(string message)\n    {\n        Console.WriteLine(message);\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        Logger logger1 = Logger.Instance;\n        logger1.Log(\"First log message\");\n        \n        Logger logger2 = Logger.Instance;\n        logger2.Log(\"Second log message\");\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What is the key benefit of using a `readonly struct` compared to a regular struct in C#?",
+      "options": {
+        "A": "It allows for better encapsulation by preventing modification of struct fields",
+        "B": "It improves performance by enabling the compiler to make optimizations based on immutability guarantees",
+        "C": "It ensures thread safety by preventing race conditions on struct instances",
+        "D": "It reduces memory usage by storing readonly structs on the stack instead of the heap"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "In the Repository Pattern, which statement is FALSE?",
+      "options": {
+        "A": "The Repository Pattern acts as an abstraction layer between business logic and data access",
+        "B": "Repositories typically return domain entities rather than database-specific objects",
+        "C": "Multiple repositories can be implemented for a single domain entity",
+        "D": "The Repository Pattern requires the use of an ORM framework like Entity Framework"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Span<T>?",
+      "options": {
+        "A": "1 2 3 1 2 3",
+        "B": "1 2 3 5 2 3",
+        "C": "1 2 3 5 6 7",
+        "D": "1 2 3 5 6 3"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int[] array = { 1, 2, 3, 4, 5, 6 };\n        \n        Span<int> span1 = array.AsSpan(0, 3); // First 3 elements\n        Span<int> span2 = array.AsSpan(3, 3); // Last 3 elements\n        \n        // Modify the original array through span2\n        span2[0] = 5;\n        span2[1] = 6;\n        span2[2] = 7;\n        \n        // Print both spans\n        foreach (var item in span1)\n        {\n            Console.Write($\"{item} \");\n        }\n        \n        foreach (var item in span2)\n        {\n            Console.Write($\"{item} \");\n        }\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will the following code using Parallel.Invoke() print to the console?",
+      "options": {
+        "A": "Task 1\nTask 2\nTask 3",
+        "B": "The output order is non-deterministic, but all three tasks will complete",
+        "C": "The output will always be in a random order",
+        "D": "A deadlock will occur because Parallel.Invoke() blocks the main thread"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static void Main()\n    {\n        Parallel.Invoke(\n            () => { Thread.Sleep(100); Console.WriteLine(\"Task 1\"); },\n            () => { Thread.Sleep(200); Console.WriteLine(\"Task 2\"); },\n            () => { Thread.Sleep(50); Console.WriteLine(\"Task 3\"); }\n        );\n    }\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Mediator Pattern implementation?",
+      "options": {
+        "A": "OrderCreated event received by: EmailService\nOrderCreated event received by: InventoryService",
+        "B": "EmailService sending order confirmation\nInventoryService updating stock",
+        "C": "OrderService sending OrderCreated event\nEmailService handling OrderCreated\nInventoryService handling OrderCreated",
+        "D": "A runtime exception will be thrown due to missing mediator registration"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Collections.Generic;\n\n// Event base class\npublic abstract class Event { }\n\n// Concrete event\npublic class OrderCreatedEvent : Event\n{\n    public int OrderId { get; set; }\n}\n\n// Mediator interface\npublic interface IMediator\n{\n    void Publish<T>(T eventData) where T : Event;\n    void Register<T>(IEventHandler<T> handler) where T : Event;\n}\n\n// Event handler interface\npublic interface IEventHandler<T> where T : Event\n{\n    void Handle(T eventData);\n}\n\n// Concrete mediator\npublic class EventMediator : IMediator\n{\n    private readonly Dictionary<Type, List<object>> _handlers = new Dictionary<Type, List<object>>();\n\n    public void Register<T>(IEventHandler<T> handler) where T : Event\n    {\n        var eventType = typeof(T);\n        if (!_handlers.ContainsKey(eventType))\n        {\n            _handlers[eventType] = new List<object>();\n        }\n        _handlers[eventType].Add(handler);\n    }\n\n    public void Publish<T>(T eventData) where T : Event\n    {\n        var eventType = typeof(T);\n        if (!_handlers.ContainsKey(eventType))\n        {\n            return;\n        }\n\n        foreach (var handler in _handlers[eventType])\n        {\n            ((IEventHandler<T>)handler).Handle(eventData);\n        }\n    }\n}\n\n// Service classes\npublic class OrderService\n{\n    private readonly IMediator _mediator;\n\n    public OrderService(IMediator mediator)\n    {\n        _mediator = mediator;\n    }\n\n    public void CreateOrder(int orderId)\n    {\n        // Order creation logic would go here\n        Console.WriteLine(\"OrderService sending OrderCreated event\");\n        _mediator.Publish(new OrderCreatedEvent { OrderId = orderId });\n    }\n}\n\npublic class EmailService : IEventHandler<OrderCreatedEvent>\n{\n    public void Handle(OrderCreatedEvent eventData)\n    {\n        Console.WriteLine(\"EmailService handling OrderCreated\");\n        // Logic to send order confirmation email\n    }\n}\n\npublic class InventoryService : IEventHandler<OrderCreatedEvent>\n{\n    public void Handle(OrderCreatedEvent eventData)\n    {\n        Console.WriteLine(\"InventoryService handling OrderCreated\");\n        // Logic to update inventory\n    }\n}\n\n// Program\npublic class Program\n{\n    public static void Main()\n    {\n        var mediator = new EventMediator();\n        \n        var emailService = new EmailService();\n        var inventoryService = new InventoryService();\n        var orderService = new OrderService(mediator);\n        \n        mediator.Register<OrderCreatedEvent>(emailService);\n        mediator.Register<OrderCreatedEvent>(inventoryService);\n        \n        orderService.CreateOrder(12345);\n    }\n}"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "Which of the following statements about Stack vs. Heap allocation in C# is FALSE?",
+      "options": {
+        "A": "Reference types are allocated on the heap, while value types are typically allocated on the stack",
+        "B": "Value types declared as fields within reference types are allocated on the heap",
+        "C": "Stack memory allocation is always faster than heap memory allocation",
+        "D": "Local variables of value types can be allocated on the heap when captured by a lambda expression"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a recommended approach for API versioning in ASP.NET Core?",
+      "options": {
+        "A": "URL path versioning (e.g., /api/v1/products)",
+        "B": "Query string versioning (e.g., /api/products?api-version=1.0)",
+        "C": "HTTP header versioning (e.g., X-API-Version: 1.0)",
+        "D": "Using different namespaces for each API version to automatically handle versioning"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Adapter Pattern implementation?",
+      "options": {
+        "A": "NotImplementedException: Method not implemented",
+        "B": "Legacy XML output: <name>Product</name>",
+        "C": "Converting JSON to XML\nLegacy XML output: <name>Product</name>",
+        "D": "Modern API returning JSON\nLegacy XML output: <product><name>Product</name></product>"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\n// Modern service interface that returns JSON\npublic interface IJsonService\n{\n    string GetJsonData();\n}\n\n// Concrete implementation of modern JSON service\npublic class ModernJsonService : IJsonService\n{\n    public string GetJsonData()\n    {\n        return \"{\\\"name\\\":\\\"Product\\\"}\";\n    }\n}\n\n// Legacy interface expecting XML\npublic interface ILegacyXmlService\n{\n    string GetXmlData();\n}\n\n// Adapter to make JSON service work with XML interface\npublic class JsonToXmlAdapter : ILegacyXmlService\n{\n    private readonly IJsonService _jsonService;\n    \n    public JsonToXmlAdapter(IJsonService jsonService)\n    {\n        _jsonService = jsonService;\n    }\n    \n    public string GetXmlData()\n    {\n        Console.WriteLine(\"Converting JSON to XML\");\n        string jsonData = _jsonService.GetJsonData();\n        \n        // Simple conversion from JSON to XML (in a real scenario, you would use a proper JSON parser)\n        return jsonData.Replace(\"{\", \"\").Replace(\"}\", \"\")\n                      .Replace(\"\\\"name\\\":\\\"Product\\\"\", \"<name>Product</name>\");\n    }\n}\n\n// Legacy consumer that expects XML\npublic class LegacySystem\n{\n    private readonly ILegacyXmlService _xmlService;\n    \n    public LegacySystem(ILegacyXmlService xmlService)\n    {\n        _xmlService = xmlService;\n    }\n    \n    public void ProcessData()\n    {\n        string xmlData = _xmlService.GetXmlData();\n        Console.WriteLine($\"Legacy XML output: {xmlData}\");\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        // Create the modern service\n        IJsonService jsonService = new ModernJsonService();\n        \n        // Create the adapter\n        ILegacyXmlService adapter = new JsonToXmlAdapter(jsonService);\n        \n        // Create the legacy system with the adapter\n        LegacySystem legacySystem = new LegacySystem(adapter);\n        \n        // Process data using the legacy system\n        legacySystem.ProcessData();\n    }\n}"
+    }
+  ]
+}
