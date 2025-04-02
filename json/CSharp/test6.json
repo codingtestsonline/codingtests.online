@@ -1,0 +1,610 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What does the following code do?",
+      "code_example": "string path = \"example.txt\";\nstring content = \"Hello, World!\";\nFile.WriteAllText(path, content);",
+      "options": {
+        "A": "Reads text from a file named 'example.txt'",
+        "B": "Writes 'Hello, World!' to a file named 'example.txt'",
+        "C": "Appends 'Hello, World!' to a file named 'example.txt'",
+        "D": "Creates a directory named 'example.txt'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which statement correctly describes cross-platform development in .NET?",
+      "options": {
+        "A": ".NET applications can only run on Windows operating systems",
+        "B": ".NET Core was designed specifically for Linux only",
+        "C": ".NET 6+ allows applications to be built and run on Windows, macOS, and Linux",
+        "D": "Cross-platform development requires a separate code base for each platform"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "using (var writer = new StreamWriter(\"test.txt\"))\n{\n    writer.WriteLine(\"Test\");\n}\nConsole.WriteLine(\"File created\");",
+      "options": {
+        "A": "The code will throw an exception",
+        "B": "The code will create a file but not print anything",
+        "C": "File created",
+        "D": "Test"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string name = \"John\";\nConsole.WriteLine($\"Hello {name}!\");",
+      "options": {
+        "A": "Hello name!",
+        "B": "Hello {name}!",
+        "C": "Hello John!",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will happen when the following code is executed?",
+      "code_example": "void ProcessData(int value)\n{\n    if (value < 0)\n    {\n        throw new ArgumentException(\"Value cannot be negative\");\n    }\n    Console.WriteLine(value);\n}\n\ntry\n{\n    ProcessData(-5);\n}\ncatch (ArgumentException ex)\n{\n    Console.WriteLine(ex.Message);\n}",
+      "options": {
+        "A": "The code will print -5",
+        "B": "The code will print 'Value cannot be negative'",
+        "C": "The code will crash with an unhandled exception",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string name = null;\nConsole.WriteLine(name ?? \"Unknown\");",
+      "options": {
+        "A": "null",
+        "B": "\"\"",
+        "C": "Unknown",
+        "D": "The code will throw a NullReferenceException"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "bool a = true;\nbool b = false;\nConsole.WriteLine(a && b);",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "1",
+        "D": "0"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What does the following code define?",
+      "code_example": "public class Person\n{\n    public string Name { get; set; }\n    public int Age { get; set; }\n}",
+      "options": {
+        "A": "A class with two private fields and no properties",
+        "B": "A class with two auto-implemented properties",
+        "C": "A class with read-only properties",
+        "D": "A class with two methods: GetName and SetAge"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "void Swap(ref int a, ref int b)\n{\n    int temp = a;\n    a = b;\n    b = temp;\n}\n\nint x = 5, y = 10;\nSwap(ref x, ref y);\nConsole.WriteLine($\"{x}, {y}\");",
+      "options": {
+        "A": "5, 10",
+        "B": "10, 5",
+        "C": "5, 5",
+        "D": "10, 10"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will the following code output?",
+      "code_example": "using (StreamReader reader = new StreamReader(new MemoryStream(System.Text.Encoding.UTF8.GetBytes(\"Hello\"))))\n{\n    Console.WriteLine(reader.ReadToEnd());\n}",
+      "options": {
+        "A": "Nothing, it will throw an exception",
+        "B": "The memory address of the stream",
+        "C": "Hello",
+        "D": "System.IO.MemoryStream"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string path = \"nonexistent.txt\";\nConsole.WriteLine(File.Exists(path));",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "null",
+        "D": "The code will throw a FileNotFoundException"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a value type in C#?",
+      "options": {
+        "A": "int",
+        "B": "double",
+        "C": "string",
+        "D": "char"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "int[,] matrix = new int[2, 3];\nConsole.WriteLine(matrix.GetLength(0) + \", \" + matrix.GetLength(1));",
+      "options": {
+        "A": "2, 3",
+        "B": "3, 2",
+        "C": "6, 0",
+        "D": "0, 0"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "int a = 10;\nint b = 3;\nConsole.WriteLine(a % b);",
+      "options": {
+        "A": "3",
+        "B": "3.33",
+        "C": "1",
+        "D": "0"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class Car\n{\n    public string Model { get; set; }\n    \n    public Car(string model)\n    {\n        Model = model;\n    }\n}\n\nCar myCar = new Car(\"Tesla\");\nConsole.WriteLine(myCar.Model);",
+      "options": {
+        "A": "Car",
+        "B": "Tesla",
+        "C": "null",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string text = \"Hello, World!\";\nstring result = text.Substring(7, 5);\nConsole.WriteLine(result);",
+      "options": {
+        "A": "Hello",
+        "B": "World",
+        "C": "World!",
+        "D": ", Wor"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar squared = numbers.Select(x => x * x);\nConsole.WriteLine(string.Join(\", \", squared));",
+      "options": {
+        "A": "1, 2, 3, 4, 5",
+        "B": "1, 4, 9, 16, 25",
+        "C": "System.Linq.Enumerable+SelectEnumerableIterator`2[System.Int32,System.Int32]",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a principle of Test-Driven Development (TDD)?",
+      "options": {
+        "A": "Write a failing test before writing implementation code",
+        "B": "Write the minimum amount of code to make the test pass",
+        "C": "Refactor code after tests pass",
+        "D": "Write comprehensive documentation before writing tests"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the difference between { get; set; } and { get; private set; } for a property?",
+      "options": {
+        "A": "{ get; set; } allows reading the property but not writing to it",
+        "B": "{ get; private set; } can only be used with static properties",
+        "C": "{ get; private set; } allows reading from any code but writing only from within the class",
+        "D": "There is no difference between them"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "In ASP.NET MVC or ASP.NET Core, what is Model Binding primarily used for?",
+      "options": {
+        "A": "Creating database models from controller actions",
+        "B": "Mapping request data to action method parameters",
+        "C": "Binding view models to database models",
+        "D": "Converting model objects to JSON"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "delegate int Calculator(int a, int b);\n\nCalculator add = (a, b) => a + b;\nCalculator multiply = (a, b) => a * b;\n\nConsole.WriteLine(add(3, 4));\nConsole.WriteLine(multiply(3, 4));",
+      "options": {
+        "A": "3, 4",
+        "B": "7, 12",
+        "C": "7, 7",
+        "D": "12, 12"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What is the main difference between Lazy and Eager Loading?",
+      "options": {
+        "A": "Lazy Loading loads data only when it is needed, while Eager Loading loads data immediately",
+        "B": "Eager Loading is more memory efficient than Lazy Loading",
+        "C": "Lazy Loading is only available in .NET Core, while Eager Loading is available in all .NET versions",
+        "D": "Eager Loading refers to loading data asynchronously, while Lazy Loading is always synchronous"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What is the primary benefit of using a ConcurrentDictionary<TKey, TValue> instead of a regular Dictionary<TKey, TValue>?",
+      "options": {
+        "A": "ConcurrentDictionary is faster for single-threaded applications",
+        "B": "ConcurrentDictionary uses less memory",
+        "C": "ConcurrentDictionary provides thread-safe operations",
+        "D": "ConcurrentDictionary allows null keys"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class Box<T>\n{\n    private T _value;\n    \n    public Box(T value)\n    {\n        _value = value;\n    }\n    \n    public T GetValue()\n    {\n        return _value;\n    }\n}\n\nBox<string> stringBox = new Box<string>(\"Hello\");\nBox<int> intBox = new Box<int>(42);\n\nConsole.WriteLine($\"{stringBox.GetValue()}, {intBox.GetValue()}\");",
+      "options": {
+        "A": "The code will not compile",
+        "B": "T, T",
+        "C": "Hello, 42",
+        "D": "System.String, System.Int32"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "In ASP.NET Core, what is the primary purpose of the request pipeline?",
+      "options": {
+        "A": "To manage database connections",
+        "B": "To handle HTTP requests by passing them through a series of middleware components",
+        "C": "To generate HTML responses from controller actions",
+        "D": "To authenticate users before they can access the application"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "List<string> names = new List<string> { \"Alice\", \"Bob\", \"Charlie\" };\nnames.Add(\"David\");\nGC.Collect();\nConsole.WriteLine(names.Count);",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "0",
+        "D": "The code will throw an exception"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "When using Moq for unit testing, what is the purpose of the Setup method?",
+      "options": {
+        "A": "To create a new instance of the class being tested",
+        "B": "To configure a mock object to return specific values or perform specific actions when its methods are called",
+        "C": "To verify that certain methods were called on the mock object",
+        "D": "To reset the mock object to its initial state"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "T Max<T>(T a, T b) where T : IComparable<T>\n{\n    return a.CompareTo(b) > 0 ? a : b;\n}\n\nConsole.WriteLine(Max(5, 10));\nConsole.WriteLine(Max(\"apple\", \"banana\"));",
+      "options": {
+        "A": "5, apple",
+        "B": "10, apple",
+        "C": "10, banana",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Base\n{\n    public virtual void Display()\n    {\n        Console.WriteLine(\"Base class display\");\n    }\n}\n\nclass Derived : Base\n{\n    public new void Display()\n    {\n        Console.WriteLine(\"Derived class display\");\n    }\n}\n\nBase obj = new Derived();\nobj.Display();",
+      "options": {
+        "A": "Base class display",
+        "B": "Derived class display",
+        "C": "Both messages will be displayed",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What is the key difference between Dispose() and Finalize() methods?",
+      "options": {
+        "A": "Dispose() is called explicitly by the developer, while Finalize() is called by the garbage collector",
+        "B": "Finalize() is called explicitly by the developer, while Dispose() is called automatically",
+        "C": "Dispose() can only be used with value types, while Finalize() is for reference types",
+        "D": "There is no difference; they are two names for the same method"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class Button\n{\n    public event EventHandler Clicked;\n    \n    public void Click()\n    {\n        Clicked?.Invoke(this, EventArgs.Empty);\n    }\n}\n\nButton button = new Button();\nint clickCount = 0;\n\nbutton.Clicked += (sender, e) => { clickCount++; };\nbutton.Click();\nbutton.Click();\n\nConsole.WriteLine(clickCount);",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "The code will throw an exception"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What is the main difference between Task<T> and void as return types?",
+      "code_example": "// Method A\npublic void ProcessData(string data)\n{\n    // processing logic\n}\n\n// Method B\npublic Task<bool> ProcessDataAsync(string data)\n{\n    // processing logic\n    return Task.FromResult(true);\n}",
+      "options": {
+        "A": "Task<T> allows returning multiple values, while void doesn't return any value",
+        "B": "void methods can't be called from async methods, but Task<T> methods can",
+        "C": "Task<T> allows for asynchronous execution and can be awaited, while void doesn't",
+        "D": "There is no significant difference between them"
+      },
+      "correct_answer": "C"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which HTTP status code is most appropriate to return when an API endpoint receives a valid request but is unable to process it due to a server-side issue?",
+      "options": {
+        "A": "400 Bad Request",
+        "B": "404 Not Found",
+        "C": "500 Internal Server Error",
+        "D": "503 Service Unavailable"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using ExpandoObject?",
+      "options": {
+        "A": "Name: John, Age: 30, IsEmployee: True",
+        "B": "Name: John, Age: 30",
+        "C": "Runtime error: Cannot add property 'IsEmployee' to ExpandoObject",
+        "D": "Compilation error: Cannot access dynamic property through indexer"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Dynamic;\n\nclass Program\n{\n    static void Main()\n    {\n        dynamic person = new ExpandoObject();\n        person.Name = \"John\";\n        person.Age = 30;\n        \n        // Add a property dynamically at runtime\n        person.IsEmployee = true;\n        \n        Console.WriteLine($\"Name: {person.Name}, Age: {person.Age}, IsEmployee: {person.IsEmployee}\");\n    }\n}"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "When implementing versioning in a RESTful API, which approach ensures backward compatibility while allowing clients to request specific API versions?",
+      "options": {
+        "A": "Including the version in the URL path (e.g., /api/v1/users)",
+        "B": "Using a query parameter (e.g., /api/users?version=1)",
+        "C": "Adding a custom HTTP header (e.g., 'API-Version: 1')",
+        "D": "All of the above are valid approaches for API versioning"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using ArrayPool<T>?",
+      "options": {
+        "A": "10, 20, 30, 0, 0",
+        "B": "10, 20, 30, 0, 0, 0, 0, 0",
+        "C": "10, 20, 30",
+        "D": "System.ArgumentOutOfRangeException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Buffers;\n\nclass Program\n{\n    static void Main()\n    {\n        // Rent an array from the shared pool\n        ArrayPool<int> pool = ArrayPool<int>.Shared;\n        int[] numbers = pool.Rent(8); // Request an array of at least size 8\n        \n        try\n        {\n            // Use only the first 3 elements\n            numbers[0] = 10;\n            numbers[1] = 20;\n            numbers[2] = 30;\n            \n            // Print all elements in the rented array\n            for (int i = 0; i < numbers.Length; i++)\n            {\n                Console.Write(numbers[i]);\n                if (i < numbers.Length - 1)\n                    Console.Write(\", \");\n            }\n        }\n        finally\n        {\n            // Return the array back to the pool\n            pool.Return(numbers);\n        }\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "Which of the following statements about SQL Server clustered indexes is correct?",
+      "options": {
+        "A": "A table can have multiple clustered indexes",
+        "B": "A clustered index determines the physical order of data in a table",
+        "C": "Clustered indexes are always created automatically on primary key columns",
+        "D": "Clustered indexes are typically slower than non-clustered indexes for retrieving large ranges of data"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing the Observer Pattern?",
+      "options": {
+        "A": "Observer 1 received: Price changed to 110.5\nObserver 2 received: Price changed to 110.5",
+        "B": "Observer 1 received: Price changed to 110.5",
+        "C": "Price changed to 110.5\nPrice changed to 110.5",
+        "D": "No output because the observers are not notified"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Collections.Generic;\n\n// Observer interface\npublic interface IObserver\n{\n    void Update(string message);\n}\n\n// Concrete Observer\npublic class PriceObserver : IObserver\n{\n    private string _name;\n    \n    public PriceObserver(string name)\n    {\n        _name = name;\n    }\n    \n    public void Update(string message)\n    {\n        Console.WriteLine($\"{_name} received: {message}\");\n    }\n}\n\n// Subject\npublic class StockMarket\n{\n    private List<IObserver> _observers = new List<IObserver>();\n    private double _price;\n    \n    public void Attach(IObserver observer)\n    {\n        _observers.Add(observer);\n    }\n    \n    public void Detach(IObserver observer)\n    {\n        _observers.Remove(observer);\n    }\n    \n    public void SetPrice(double price)\n    {\n        _price = price;\n        Notify();\n    }\n    \n    private void Notify()\n    {\n        foreach (var observer in _observers)\n        {\n            observer.Update($\"Price changed to {_price}\");\n        }\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        // Create subject\n        StockMarket market = new StockMarket();\n        \n        // Create observers\n        PriceObserver observer1 = new PriceObserver(\"Observer 1\");\n        PriceObserver observer2 = new PriceObserver(\"Observer 2\");\n        \n        // Register observers\n        market.Attach(observer1);\n        market.Attach(observer2);\n        \n        // Change price to trigger notifications\n        market.SetPrice(110.5);\n    }\n}"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "When implementing role-based authentication in ASP.NET Core, which of the following approaches is the most secure for validating a user's role?",
+      "options": {
+        "A": "Storing role information in client-side cookies",
+        "B": "Using the [Authorize(Roles = \"Admin\")] attribute on controller actions",
+        "C": "Allowing the client to pass role information in the request headers",
+        "D": "Checking User.IsInRole() only on critical endpoints"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing the Singleton Pattern?",
+      "options": {
+        "A": "Instance 1 Hash: [some hash]\nInstance 2 Hash: [different hash]",
+        "B": "Instance 1 Hash: [some hash]\nInstance 2 Hash: [same hash]",
+        "C": "NullReferenceException will be thrown",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic sealed class Singleton\n{\n    private static readonly Lazy<Singleton> _instance = \n        new Lazy<Singleton>(() => new Singleton());\n    \n    // Private constructor\n    private Singleton()\n    {\n    }\n    \n    public static Singleton Instance\n    {\n        get { return _instance.Value; }\n    }\n    \n    public void DoSomething()\n    {\n        Console.WriteLine(\"Singleton is doing something.\");\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        // Try to get two instances of the singleton\n        Singleton instance1 = Singleton.Instance;\n        Singleton instance2 = Singleton.Instance;\n        \n        // Compare hash codes to check if they are the same instance\n        Console.WriteLine($\"Instance 1 Hash: {instance1.GetHashCode()}\");\n        Console.WriteLine($\"Instance 2 Hash: {instance2.GetHashCode()}\");\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "Which statement about JWT (JSON Web Token) authentication is true?",
+      "options": {
+        "A": "JWTs must be stored server-side to validate user sessions",
+        "B": "A JWT can be safely modified by the client since it uses encryption",
+        "C": "JWTs are self-contained and can include user claims without server-side lookup",
+        "D": "JWTs cannot expire and must be manually invalidated"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing an In-memory cache?",
+      "options": {
+        "A": "Current time (cached)\nCurrent time (cached)",
+        "B": "Current time (first call)\nCurrent time (cached)",
+        "C": "Current time (first call)\nCurrent time (new value)",
+        "D": "The code will throw InvalidOperationException"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Threading;\nusing Microsoft.Extensions.Caching.Memory;\n\nclass Program\n{\n    static void Main()\n    {\n        // Create cache options with expiration\n        var cacheOptions = new MemoryCacheOptions();\n        IMemoryCache cache = new MemoryCache(cacheOptions);\n        \n        string cacheKey = \"currentTime\";\n        \n        // First call - not in cache\n        DateTime cachedTime = cache.GetOrCreate(cacheKey, entry =>\n        {\n            entry.SlidingExpiration = TimeSpan.FromSeconds(10);\n            Console.WriteLine(\"Current time (first call)\");\n            return DateTime.Now;\n        });\n        \n        // Sleep for a short time (less than expiration)\n        Thread.Sleep(2000);\n        \n        // Second call - should be in cache\n        cachedTime = cache.GetOrCreate(cacheKey, entry =>\n        {\n            entry.SlidingExpiration = TimeSpan.FromSeconds(10);\n            Console.WriteLine(\"Current time (new value)\");\n            return DateTime.Now;\n        });\n        \n        Console.WriteLine(\"Current time (cached)\");\n    }\n}"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "In the context of OAuth 2.0, what is the primary purpose of the 'authorization code' grant type?",
+      "options": {
+        "A": "To enable client-side JavaScript applications to obtain tokens directly",
+        "B": "To allow server-side applications to exchange a temporary code for an access token",
+        "C": "To refresh expired tokens without user interaction",
+        "D": "To authenticate users within the same organization"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using the Adapter Pattern?",
+      "options": {
+        "A": "Playing MP3: song.mp3\nConverting WMA to MP3: song.wma\nPlaying MP3: song.wma.mp3",
+        "B": "Playing MP3: song.mp3\nPlaying WMA: song.wma",
+        "C": "FormatException: Incompatible format 'WMA'",
+        "D": "The code will not compile due to interface mismatch"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\n// Target interface\npublic interface IMediaPlayer\n{\n    void PlayMp3(string filename);\n}\n\n// Concrete implementation of the target interface\npublic class Mp3Player : IMediaPlayer\n{\n    public void PlayMp3(string filename)\n    {\n        Console.WriteLine($\"Playing MP3: {filename}\");\n    }\n}\n\n// Adaptee (incompatible interface)\npublic class WmaPlayer\n{\n    public void PlayWma(string filename)\n    {\n        Console.WriteLine($\"Playing WMA: {filename}\");\n    }\n}\n\n// Adapter that makes the incompatible interface compatible\npublic class WmaToMp3Adapter : IMediaPlayer\n{\n    private readonly WmaPlayer _wmaPlayer;\n    \n    public WmaToMp3Adapter(WmaPlayer wmaPlayer)\n    {\n        _wmaPlayer = wmaPlayer;\n    }\n    \n    public void PlayMp3(string filename)\n    {\n        // Convert WMA to MP3 first\n        string convertedFilename = filename + \".mp3\";\n        Console.WriteLine($\"Converting WMA to MP3: {filename}\");\n        \n        // Then play the converted file\n        Console.WriteLine($\"Playing MP3: {convertedFilename}\");\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        // Create an MP3 player\n        IMediaPlayer mp3Player = new Mp3Player();\n        mp3Player.PlayMp3(\"song.mp3\");\n        \n        // Create a WMA player\n        WmaPlayer wmaPlayer = new WmaPlayer();\n        \n        // Use the adapter to make the WMA player compatible with the MP3 player interface\n        IMediaPlayer adaptedPlayer = new WmaToMp3Adapter(wmaPlayer);\n        adaptedPlayer.PlayMp3(\"song.wma\");\n    }\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "When deploying a .NET application to Kubernetes, which of the following is NOT a recommended practice?",
+      "options": {
+        "A": "Using health checks to ensure container readiness",
+        "B": "Storing application secrets directly in deployment YAML files",
+        "C": "Implementing horizontal pod autoscaling based on CPU/memory usage",
+        "D": "Using ConfigMaps for application configuration"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using ObjectPool<T>?",
+      "options": {
+        "A": "Object created\nUsing object with value: 0\nUsing object with value: 10",
+        "B": "Object created\nUsing object with value: 0\nObject created\nUsing object with value: 0",
+        "C": "Using object with value: 0\nUsing object with value: 10",
+        "D": "Object created\nUsing object with value: 10\nUsing object with value: 10"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing Microsoft.Extensions.ObjectPool;\n\nclass Program\n{\n    public class PooledObject\n    {\n        public int Value { get; set; }\n        \n        public PooledObject()\n        {\n            Console.WriteLine(\"Object created\");\n        }\n    }\n    \n    public class PooledObjectPolicy : IPooledObjectPolicy<PooledObject>\n    {\n        public PooledObject Create()\n        {\n            // Create a new instance\n            return new PooledObject();\n        }\n        \n        public bool Return(PooledObject obj)\n        {\n            // Reset the object before returning to pool\n            obj.Value = 0;\n            return true;\n        }\n    }\n    \n    static void Main()\n    {\n        // Create a pool with our custom policy\n        var provider = new DefaultObjectPoolProvider();\n        var pool = provider.Create(new PooledObjectPolicy());\n        \n        // Get an object from the pool (should create a new one)\n        var obj1 = pool.Get();\n        Console.WriteLine($\"Using object with value: {obj1.Value}\");\n        \n        // Modify the object\n        obj1.Value = 10;\n        \n        // Return to the pool\n        pool.Return(obj1);\n        \n        // Get another object (should reuse the one we just returned)\n        var obj2 = pool.Get();\n        Console.WriteLine($\"Using object with value: {obj2.Value}\");\n    }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "Which of the following best describes the Repository Pattern in a .NET application?",
+      "options": {
+        "A": "A pattern that enables caching of database results to improve performance",
+        "B": "A design pattern that uses Entity Framework directly in controllers for simplicity",
+        "C": "An abstraction layer between domain logic and data access that provides collection-like interface",
+        "D": "A pattern for organizing controllers by their associated entity type"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing a Semaphore?",
+      "options": {
+        "A": "Thread 0 enters the semaphore\nThread 1 enters the semaphore\nThread 2 enters the semaphore",
+        "B": "Thread 0 enters the semaphore\nThread 0 releases the semaphore\nThread 1 enters the semaphore\nThread 1 releases the semaphore\nThread 2 enters the semaphore\nThread 2 releases the semaphore",
+        "C": "Thread 0 enters the semaphore\nThread 1 enters the semaphore\nThread 0 releases the semaphore\nThread 1 releases the semaphore\nThread 2 enters the semaphore\nThread 2 releases the semaphore",
+        "D": "The exact order of thread execution cannot be determined"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\nusing System.Threading;\n\nclass Program\n{\n    // Create a semaphore that allows 2 concurrent threads\n    private static SemaphoreSlim semaphore = new SemaphoreSlim(2, 2);\n    \n    static void Main()\n    {\n        // Create and start 3 threads\n        for (int i = 0; i < 3; i++)\n        {\n            int threadId = i;\n            Thread thread = new Thread(() => WorkerThread(threadId));\n            thread.Start();\n        }\n        \n        // Allow time for all threads to complete\n        Thread.Sleep(1000);\n    }\n    \n    static void WorkerThread(int id)\n    {\n        // Wait until we can enter the semaphore\n        semaphore.Wait();\n        \n        try\n        {\n            Console.WriteLine($\"Thread {id} enters the semaphore\");\n            \n            // Simulate some work\n            Thread.Sleep(new Random().Next(100, 500));\n            \n            Console.WriteLine($\"Thread {id} releases the semaphore\");\n        }\n        finally\n        {\n            // Exit the semaphore\n            semaphore.Release();\n        }\n    }\n}"
+    }
+  ]
+}
