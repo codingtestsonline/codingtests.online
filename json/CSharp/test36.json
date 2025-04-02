@@ -1,640 +1,640 @@
 {
-  "questions": [
-    {
-      "id": 1,
-      "difficulty": "easy",
-      "topic": "Function Overloading",
-      "question": "What is the output of the following code?",
-      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.WriteLine(Add(5, 3));\n        Console.WriteLine(Add(5.2, 3.8));\n    }\n\n    static int Add(int a, int b)\n    {\n        return a + b;\n    }\n\n    static double Add(double a, double b)\n    {\n        return a * b;\n    }\n}",
-      "options": {
-        "A": "8, 9.0",
-        "B": "8, 19.76",
-        "C": "5, 5.2",
-        "D": "Error: ambiguous method call"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 2,
-      "difficulty": "easy",
-      "topic": "Nullable types",
-      "question": "What is the output of the following code?",
-      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int? nullableInt = null;\n        int regularInt = nullableInt ?? 10;\n        Console.WriteLine(regularInt);\n        \n        nullableInt = 5;\n        regularInt = nullableInt ?? 10;\n        Console.WriteLine(regularInt);\n    }\n}",
-      "options": {
-        "A": "null, 5",
-        "B": "10, 5",
-        "C": "Error: Cannot convert null to int",
-        "D": "0, 5"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 3,
-      "difficulty": "easy",
-      "topic": "Local functions",
-      "question": "What will be the output of the following code?",
-      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        CalculateAndPrint(3, 4);\n    }\n\n    static void CalculateAndPrint(int a, int b)\n    {\n        int result = Multiply(a, b);\n        Console.WriteLine(result);\n        \n        int Multiply(int x, int y)\n        {\n            return x * y;\n        }\n    }\n}",
-      "options": {
-        "A": "7",
-        "B": "12",
-        "C": "Error: Cannot define a method inside another method",
-        "D": "3, 4"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 4,
-      "difficulty": "easy",
-      "topic": "StringBuilder vs string",
-      "question": "Which of the following statements about StringBuilder and string is correct?",
-      "options": {
-        "A": "StringBuilder is immutable while string is mutable",
-        "B": "Both StringBuilder and string are immutable",
-        "C": "StringBuilder is mutable while string is immutable",
-        "D": "Both StringBuilder and string are mutable"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 5,
-      "difficulty": "easy",
-      "topic": "if-else",
-      "question": "What is the output of the following code?",
-      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int x = 10;\n        if (x > 5)\n            Console.Write(\"A\");\n        else if (x > 7)\n            Console.Write(\"B\");\n        \n        if (x > 8)\n            Console.Write(\"C\");\n        else\n            Console.Write(\"D\");\n    }\n}",
-      "options": {
-        "A": "AC",
-        "B": "AD",
-        "C": "BC",
-        "D": "BD"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 6,
-      "difficulty": "easy",
-      "topic": "Access Modifiers",
-      "question": "Which access modifier allows a class member to be accessed from the same assembly or from derived classes in other assemblies?",
-      "options": {
-        "A": "public",
-        "B": "private",
-        "C": "protected internal",
-        "D": "internal"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 7,
-      "difficulty": "easy",
-      "topic": "StreamReader, StreamWriter",
-      "question": "What does the following code do?",
-      "code_example": "using System;\nusing System.IO;\n\nclass Program\n{\n    static void Main()\n    {\n        using (StreamWriter writer = new StreamWriter(\"example.txt\"))\n        {\n            writer.WriteLine(\"Hello, World!\");\n        }\n        \n        using (StreamReader reader = new StreamReader(\"example.txt\"))\n        {\n            Console.WriteLine(reader.ReadToEnd());\n        }\n    }\n}",
-      "options": {
-        "A": "Reads \"Hello, World!\" from a file and displays it on the console",
-        "B": "Writes \"Hello, World!\" to a file and then reads and displays it on the console",
-        "C": "Creates an empty file called \"example.txt\"",
-        "D": "Throws a FileNotFoundException"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 8,
-      "difficulty": "easy",
-      "topic": "Logical operators",
-      "question": "What is the output of the following code?",
-      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        bool a = true;\n        bool b = false;\n        bool c = true;\n        \n        Console.WriteLine(a || b && !c);\n        Console.WriteLine(!(a && b) || c);\n    }\n}",
-      "options": {
-        "A": "True, False",
-        "B": "False, True",
-        "C": "True, True",
-        "D": "False, False"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 9,
-      "difficulty": "easy",
-      "topic": "Dictionary, HashSet",
-      "question": "What will be the output of the following code?",
-      "code_example": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        Dictionary<string, int> ages = new Dictionary<string, int>();\n        ages[\"Alice\"] = 30;\n        ages[\"Bob\"] = 25;\n        ages[\"Alice\"] = 31;\n        \n        foreach (var kvp in ages)\n        {\n            Console.WriteLine($\"{kvp.Key}: {kvp.Value}\");\n        }\n    }\n}",
-      "options": {
-        "A": "Alice: 30\nBob: 25\nAlice: 31",
-        "B": "Alice: 31\nBob: 25",
-        "C": "Error: Dictionary cannot have duplicate keys",
-        "D": "Alice: 30\nAlice: 31\nBob: 25"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 10,
-      "difficulty": "easy",
-      "topic": "ArrayList, List<T>",
-      "question": "What is the primary difference between ArrayList and List<T>?",
-      "options": {
-        "A": "ArrayList can store only one type of element while List<T> can store multiple types",
-        "B": "List<T> is type-safe while ArrayList is not",
-        "C": "ArrayList is faster than List<T> for all operations",
-        "D": "List<T> can only store reference types while ArrayList can store value types"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 11,
-      "difficulty": "easy",
-      "topic": "File.Exists(), Directory.CreateDirectory()",
-      "question": "What is the correct order of operations for safely creating a file in a directory that may not exist?",
-      "options": {
-        "A": "Check if file exists, create directory, create file",
-        "B": "Create directory, create file, check if file exists",
-        "C": "Create file, check if file exists, create directory",
-        "D": "Check if file exists, create file, create directory"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 12,
-      "difficulty": "easy",
-      "topic": "Reference types",
-      "question": "Which of the following is NOT a reference type in C#?",
-      "options": {
-        "A": "string",
-        "B": "int",
-        "C": "interface",
-        "D": "delegate"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 13,
-      "difficulty": "easy",
-      "topic": "Type inference",
-      "question": "What will be the output of the following code?",
-      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        var number = 10;\n        var text = \"Hello\";\n        var isValid = true;\n        \n        Console.WriteLine($\"{number.GetType().Name}, {text.GetType().Name}, {isValid.GetType().Name}\");\n    }\n}",
-      "options": {
-        "A": "Int32, String, Boolean",
-        "B": "var, var, var",
-        "C": "Object, Object, Object",
-        "D": "Int, String, Bool"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 14,
-      "difficulty": "easy",
-      "topic": "Jagged arrays",
-      "question": "What is the output of the following code?",
-      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int[][] jaggedArray = new int[3][];\n        jaggedArray[0] = new int[] { 1, 2, 3 };\n        jaggedArray[1] = new int[] { 4, 5 };\n        jaggedArray[2] = new int[] { 6 };\n        \n        Console.WriteLine(jaggedArray[1][0]);\n    }\n}",
-      "options": {
-        "A": "1",
-        "B": "2",
-        "C": "4",
-        "D": "6"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 15,
-      "difficulty": "easy",
-      "topic": "Bitwise operators",
-      "question": "What is the output of the following code?",
-      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int a = 5;  // 101 in binary\n        int b = 3;  // 011 in binary\n        \n        Console.WriteLine(a & b);  // AND\n        Console.WriteLine(a | b);  // OR\n        Console.WriteLine(a ^ b);  // XOR\n    }\n}",
-      "options": {
-        "A": "1, 7, 6",
-        "B": "0, 8, 8",
-        "C": "15, 8, 7",
-        "D": "3, 1, 2"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 16,
-      "difficulty": "easy",
-      "topic": "Cross-platform development",
-      "question": "Which of the following is NOT a valid way to develop cross-platform applications in .NET?",
-      "options": {
-        "A": "Using .NET MAUI",
-        "B": "Using ASP.NET Core",
-        "C": "Using .NET Framework 4.8",
-        "D": "Using Blazor WebAssembly"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 17,
-      "difficulty": "medium",
-      "topic": "Custom Middleware",
-      "question": "What is the correct order of execution in ASP.NET Core middleware?",
-      "code_example": "using Microsoft.AspNetCore.Builder;\nusing Microsoft.AspNetCore.Http;\n\npublic class Startup\n{\n    public void Configure(IApplicationBuilder app)\n    {\n        app.Use(async (context, next) =>\n        {\n            Console.WriteLine(\"Middleware 1 - Before\");\n            await next();\n            Console.WriteLine(\"Middleware 1 - After\");\n        });\n        \n        app.Use(async (context, next) =>\n        {\n            Console.WriteLine(\"Middleware 2 - Before\");\n            await next();\n            Console.WriteLine(\"Middleware 2 - After\");\n        });\n        \n        app.Run(async context =>\n        {\n            Console.WriteLine(\"Terminal Middleware\");\n            await context.Response.WriteAsync(\"Hello World\");\n        });\n    }\n}",
-      "options": {
-        "A": "Middleware 1 - Before, Middleware 2 - Before, Terminal Middleware, Middleware 2 - After, Middleware 1 - After",
-        "B": "Middleware 1 - Before, Middleware 1 - After, Middleware 2 - Before, Middleware 2 - After, Terminal Middleware",
-        "C": "Middleware 1 - Before, Middleware 2 - Before, Terminal Middleware, Middleware 1 - After, Middleware 2 - After",
-        "D": "Terminal Middleware, Middleware 2 - Before, Middleware 2 - After, Middleware 1 - Before, Middleware 1 - After"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 18,
-      "difficulty": "medium",
-      "topic": "Interface segregation principle",
-      "question": "Which of the following best describes the Interface Segregation Principle?",
-      "options": {
-        "A": "Classes should depend on abstractions, not concrete implementations",
-        "B": "A class should have only one reason to change",
-        "C": "Clients should not be forced to depend on interfaces they do not use",
-        "D": "Software entities should be open for extension but closed for modification"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 19,
-      "difficulty": "medium",
-      "topic": "Join(), GroupJoin()",
-      "question": "What will be the output of the following LINQ query?",
-      "code_example": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var employees = new List<Employee>\n        {\n            new Employee { Id = 1, Name = \"Alice\", DepartmentId = 1 },\n            new Employee { Id = 2, Name = \"Bob\", DepartmentId = 2 },\n            new Employee { Id = 3, Name = \"Charlie\", DepartmentId = 1 },\n            new Employee { Id = 4, Name = \"Dave\", DepartmentId = 3 }\n        };\n        \n        var departments = new List<Department>\n        {\n            new Department { Id = 1, Name = \"HR\" },\n            new Department { Id = 2, Name = \"IT\" }\n        };\n        \n        var query = employees.Join(\n            departments,\n            e => e.DepartmentId,\n            d => d.Id,\n            (e, d) => new { EmployeeName = e.Name, DepartmentName = d.Name }\n        );\n        \n        foreach (var item in query)\n        {\n            Console.WriteLine($\"{item.EmployeeName} - {item.DepartmentName}\");\n        }\n    }\n}\n\nclass Employee\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n    public int DepartmentId { get; set; }\n}\n\nclass Department\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n}",
-      "options": {
-        "A": "Alice - HR\nBob - IT\nCharlie - HR\nDave - null",
-        "B": "Alice - HR\nBob - IT\nCharlie - HR",
-        "C": "Alice - HR\nBob - IT",
-        "D": "Alice - HR\nBob - IT\nCharlie - HR\nDave - IT"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 20,
-      "difficulty": "medium",
-      "topic": "Explicit interface implementation",
-      "question": "What is the output of the following code?",
-      "code_example": "using System;\n\ninterface IDrawable\n{\n    void Draw();\n}\n\ninterface IPrintable\n{\n    void Draw();\n}\n\nclass Document : IDrawable, IPrintable\n{\n    public void Draw()\n    {\n        Console.WriteLine(\"Default Draw\");\n    }\n    \n    void IDrawable.Draw()\n    {\n        Console.WriteLine(\"IDrawable Draw\");\n    }\n    \n    void IPrintable.Draw()\n    {\n        Console.WriteLine(\"IPrintable Draw\");\n    }\n    \n    static void Main()\n    {\n        Document doc = new Document();\n        doc.Draw();\n        \n        IDrawable drawable = doc;\n        drawable.Draw();\n        \n        IPrintable printable = doc;\n        printable.Draw();\n    }\n}",
-      "options": {
-        "A": "Default Draw\nDefault Draw\nDefault Draw",
-        "B": "Default Draw\nIDrawable Draw\nIPrintable Draw",
-        "C": "IDrawable Draw\nIPrintable Draw\nDefault Draw",
-        "D": "Error: Interface method 'Draw' has multiple implementations"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 21,
-      "difficulty": "medium",
-      "topic": "Generic classes",
-      "question": "What will be the output of the following code?",
-      "code_example": "using System;\n\nclass Container<T>\n{\n    private T _item;\n    \n    public Container(T item)\n    {\n        _item = item;\n    }\n    \n    public void PrintType()\n    {\n        Console.WriteLine(_item.GetType().Name);\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var intContainer = new Container<int>(42);\n        var doubleContainer = new Container<double>(3.14);\n        var derivedContainer = new Container<DerivedClass>(new DerivedClass());\n        \n        intContainer.PrintType();\n        doubleContainer.PrintType();\n        derivedContainer.PrintType();\n    }\n}\n\nclass BaseClass { }\nclass DerivedClass : BaseClass { }",
-      "options": {
-        "A": "Int32\nDouble\nDerivedClass",
-        "B": "Int32\nDouble\nBaseClass",
-        "C": "System.Int32\nSystem.Double\nSystem.Object",
-        "D": "Int\nDouble\nObject"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 22,
-      "difficulty": "medium",
-      "topic": "Dispose() vs. Finalize()",
-      "question": "Which of the following statements about Dispose() and Finalize() is correct?",
-      "options": {
-        "A": "Finalize() is called automatically by the garbage collector, while Dispose() must be called explicitly",
-        "B": "Dispose() is called automatically by the garbage collector, while Finalize() must be called explicitly",
-        "C": "Both Dispose() and Finalize() must be called explicitly",
-        "D": "Both Dispose() and Finalize() are called automatically by the garbage collector"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 23,
-      "difficulty": "medium",
-      "topic": "Migrations",
-      "question": "Which of the following statements about EF Core migrations is NOT correct?",
-      "options": {
-        "A": "Add-Migration creates a new migration based on changes detected in the model",
-        "B": "Update-Database applies pending migrations to the database",
-        "C": "Remove-Migration removes the latest migration",
-        "D": "Migrations automatically update stored procedures and functions in the database"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 24,
-      "difficulty": "medium",
-      "topic": "Base class initialization",
-      "question": "What is the output of the following code?",
-      "code_example": "using System;\n\nclass Base\n{\n    public Base()\n    {\n        Console.Write(\"Base constructor. \");\n        Initialize();\n    }\n    \n    public virtual void Initialize()\n    {\n        Console.Write(\"Base Initialize. \");\n    }\n}\n\nclass Derived : Base\n{\n    private int _value = 10;\n    \n    public Derived()\n    {\n        Console.Write(\"Derived constructor. \");\n    }\n    \n    public override void Initialize()\n    {\n        Console.Write($\"Derived Initialize: {_value}. \");\n    }\n    \n    static void Main()\n    {\n        Derived d = new Derived();\n    }\n}",
-      "options": {
-        "A": "Base constructor. Base Initialize. Derived constructor.",
-        "B": "Base constructor. Derived Initialize: 10. Derived constructor.",
-        "C": "Base constructor. Derived Initialize: 0. Derived constructor.",
-        "D": "Derived constructor. Base constructor. Derived Initialize: 10."
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 25,
-      "difficulty": "medium",
-      "topic": "Deferred Execution",
-      "question": "What will be the output of the following code?",
-      "code_example": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var numbers = new List<int> { 1, 2, 3, 4 };\n        \n        var query = numbers.Where(n => {\n            Console.WriteLine($\"Filtering {n}\");\n            return n > 2;\n        });\n        \n        Console.WriteLine(\"Query defined\");\n        numbers.Add(5);\n        \n        var result = query.ToList();\n        Console.WriteLine(\"Query executed\");\n        \n        foreach (var num in result)\n        {\n            Console.WriteLine($\"Result: {num}\");\n        }\n    }\n}",
-      "options": {
-        "A": "Query defined\nQuery executed\nResult: 3\nResult: 4",
-        "B": "Filtering 1\nFiltering 2\nFiltering 3\nFiltering 4\nQuery defined\nQuery executed\nResult: 3\nResult: 4",
-        "C": "Query defined\nFiltering 1\nFiltering 2\nFiltering 3\nFiltering 4\nFiltering 5\nQuery executed\nResult: 3\nResult: 4\nResult: 5",
-        "D": "Filtering 1\nFiltering 2\nFiltering 3\nFiltering 4\nQuery defined\nFiltering 1\nFiltering 2\nFiltering 3\nFiltering 4\nFiltering 5\nQuery executed\nResult: 3\nResult: 4\nResult: 5"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 26,
-      "difficulty": "medium",
-      "topic": "Multicast delegates",
-      "question": "What is the output of the following code?",
-      "code_example": "using System;\n\nclass Program\n{\n    delegate void MyDelegate(string message);\n    \n    static void Main()\n    {\n        MyDelegate del1 = (msg) => Console.WriteLine($\"Del1: {msg}\");\n        MyDelegate del2 = (msg) => Console.WriteLine($\"Del2: {msg}\");\n        \n        MyDelegate combined = del1 + del2;\n        combined(\"Hello\");\n        \n        combined -= del1;\n        combined?.Invoke(\"World\");\n        \n        combined -= del2;\n        combined?.Invoke(\"!");\n    }\n}",
-      "options": {
-        "A": "Del1: Hello\nDel2: Hello\nDel2: World",
-        "B": "Del1: Hello\nDel2: Hello\nDel2: World\nError: NullReferenceException",
-        "C": "Del1: Hello\nDel2: Hello\nDel1: World\nDel2: World",
-        "D": "Del1: Hello Del2: Hello\nDel2: World\nNull delegate"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 27,
-      "difficulty": "medium",
-      "topic": "Parallel.ForEach()",
-      "question": "What is the main advantage of using Parallel.ForEach() over a regular foreach loop?",
-      "options": {
-        "A": "It guarantees that iterations are processed in the original order",
-        "B": "It automatically handles thread synchronization for all shared variables",
-        "C": "It can improve performance for CPU-bound operations on multi-core systems",
-        "D": "It prevents exceptions from occurring during iteration"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 28,
-      "difficulty": "medium",
-      "topic": "LINQ Queries with EF Core",
-      "question": "Which of the following LINQ operations does NOT trigger immediate query execution in Entity Framework Core?",
-      "code_example": "using Microsoft.EntityFrameworkCore;\nusing System.Linq;\n\npublic class MyDbContext : DbContext\n{\n    public DbSet<Customer> Customers { get; set; }\n    \n    // DbContext configuration omitted for brevity\n}\n\npublic class Customer\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n    public int Age { get; set; }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        using (var context = new MyDbContext())\n        {\n            // Query A\n            var query1 = context.Customers.Where(c => c.Age > 18);\n            \n            // Query B\n            var query2 = context.Customers.Where(c => c.Age > 18).ToList();\n            \n            // Query C\n            var query3 = context.Customers.Where(c => c.Age > 18).Count();\n            \n            // Query D\n            var query4 = context.Customers.Where(c => c.Age > 18).OrderBy(c => c.Name);\n        }\n    }\n}",
-      "options": {
-        "A": "Query A",
-        "B": "Query B",
-        "C": "Query C",
-        "D": "Query D"
-      },
-      "correct_answer": "A"
-    },
-    {
-      "id": 29,
-      "difficulty": "medium",
-      "topic": "xUnit / NUnit Basics",
-      "question": "Which of the following is NOT a valid attribute in xUnit for test methods?",
-      "options": {
-        "A": "[Fact]",
-        "B": "[Theory]",
-        "C": "[InlineData]",
-        "D": "[TestCase]"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 30,
-      "difficulty": "medium",
-      "topic": "Test-driven development",
-      "question": "What is the correct order of steps in the Test-Driven Development (TDD) cycle?",
-      "options": {
-        "A": "Write Code, Write Test, Refactor",
-        "B": "Write Test, Write Code, Refactor",
-        "C": "Design, Code, Test, Refactor",
-        "D": "Refactor, Write Test, Write Code"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 31,
-      "difficulty": "medium",
-      "topic": "Conventional Routing vs. Attribute Routing",
-      "question": "What is the main advantage of Attribute Routing over Conventional Routing in ASP.NET Core?",
-      "options": {
-        "A": "Attribute Routing is always faster than Conventional Routing",
-        "B": "Attribute Routing allows for more complex route patterns and constraints",
-        "C": "Attribute Routing is the only option available in ASP.NET Core 3.0+",
-        "D": "Attribute Routing automatically generates Swagger documentation"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 32,
-      "difficulty": "medium",
-      "question": "What will be the output of the following LINQ code using Aggregate, Any, and All?",
-      "options": {
-        "A": "Sum: 55\nAny even numbers? True\nAll numbers > 5? False",
-        "B": "Sum: 15\nAny even numbers? True\nAll numbers > 5? False",
-        "C": "Sum: 55\nAny even numbers? False\nAll numbers > 5? False",
-        "D": "Sum: 55\nAny even numbers? True\nAll numbers > 5? True"
-      },
-      "correct_answer": "A",
-      "code_example": "void Main()\n{\n    var numbers = Enumerable.Range(1, 10);\n    \n    int sum = numbers.Aggregate(0, (acc, n) => acc + n);\n    bool hasEven = numbers.Any(n => n % 2 == 0);\n    bool allGreaterThan5 = numbers.All(n => n > 5);\n    \n    Console.WriteLine($\"Sum: {sum}\");\n    Console.WriteLine($\"Any even numbers? {hasEven}\");\n    Console.WriteLine($\"All numbers > 5? {allGreaterThan5}\");\n}"
-    },
-{
-      "id": 33,
-      "difficulty": "hard",
-      "question": "What is the correct way to set up a Dockerfile for a .NET 8 Web API application?",
-      "options": {
-        "A": "Use the 'FROM mcr.microsoft.com/dotnet/sdk:8.0' image for both build and runtime stages",
-        "B": "Use the 'FROM mcr.microsoft.com/dotnet/aspnet:8.0' image for both build and runtime stages",
-        "C": "Use a multi-stage build with 'sdk:8.0' for building and 'aspnet:8.0' for runtime",
-        "D": "Use a multi-stage build with 'aspnet:8.0' for building and 'sdk:8.0' for runtime"
-      },
-      "correct_answer": "C",
-      "code_example": "# First stage - Build\nFROM mcr.microsoft.com/dotnet/sdk:8.0 AS build\nWORKDIR /src\nCOPY [\"MyApi.csproj\", \"./\"]\nRUN dotnet restore \"MyApi.csproj\"\nCOPY . .\nRUN dotnet build \"MyApi.csproj\" -c Release -o /app/build\n\n# Publish stage\nFROM build AS publish\nRUN dotnet publish \"MyApi.csproj\" -c Release -o /app/publish\n\n# Final stage - Runtime\nFROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final\nWORKDIR /app\nCOPY --from=publish /app/publish .\nENTRYPOINT [\"dotnet\", \"MyApi.dll\"]"
-    },
-    {
-      "id": 34,
-      "difficulty": "hard",
-      "question": "Which statement about string interning in C# is correct?",
-      "options": {
-        "A": "String interning means all string literals in your code will automatically share the same memory location if they have the same value",
-        "B": "The string.Intern() method creates a new copy of a string in memory",
-        "C": "Strings created at runtime using string concatenation or constructor are automatically interned",
-        "D": "String interning is only enabled when compiling with the /optimize flag"
-      },
-      "correct_answer": "A",
-      "code_example": "string s1 = \"hello\";\nstring s2 = \"hello\";\nstring s3 = new string(new char[] { 'h', 'e', 'l', 'l', 'o' });\nstring s4 = string.Intern(s3);\n\nConsole.WriteLine(object.ReferenceEquals(s1, s2)); // Output: True\nConsole.WriteLine(object.ReferenceEquals(s1, s3)); // Output: False\nConsole.WriteLine(object.ReferenceEquals(s1, s4)); // Output: True"
-    },
-    {
-      "id": 35,
-      "difficulty": "hard",
-      "question": "In the Repository Pattern, which of the following best describes the correct implementation of a generic repository with Entity Framework Core?",
-      "options": {
-        "A": "Create a repository for each database table, with each repository exposing LINQ directly to the controllers",
-        "B": "Implement IRepository<T> interface with methods like GetAll(), GetById(), Add(), Update(), and Delete(), where T is the entity type",
-        "C": "Create a single repository that handles all entities and exposes the DbContext directly to the business logic layer",
-        "D": "Repository pattern should not be used with Entity Framework Core as it adds an unnecessary abstraction layer"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 36,
-      "difficulty": "hard",
-      "question": "What will be the output of the following code which demonstrates the dynamic type in C#?",
-      "options": {
-        "A": "Method called: PrintValue with type: System.Int32",
-        "B": "Method called: PrintValue with type: System.String",
-        "C": "RuntimeBinderException: Cannot implicitly convert type 'string' to 'int'",
-        "D": "Method called: PrintValue with type: System.Object"
-      },
-      "correct_answer": "A",
-      "code_example": "public class DynamicExample\n{\n    public static void Main()\n    {\n        dynamic value = 42;\n        PrintValue(value);\n    }\n    \n    public static void PrintValue(int value)\n    {\n        Console.WriteLine($\"Method called: PrintValue with type: {value.GetType()}\");\n    }\n    \n    public static void PrintValue(string value)\n    {\n        Console.WriteLine($\"Method called: PrintValue with type: {value.GetType()}\");\n    }\n}"
-    },
-    {
-      "id": 37,
-      "difficulty": "hard",
-      "question": "In the context of CQRS (Command Query Responsibility Segregation), which of the following statements is correct?",
-      "options": {
-        "A": "CQRS requires using separate databases for reads and writes",
-        "B": "Commands and queries must use the same data model to maintain consistency",
-        "C": "CQRS separates the responsibility of handling command operations (create, update, delete) from query operations (read)",
-        "D": "CQRS is always implemented with Event Sourcing"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 38,
-      "difficulty": "hard",
-      "question": "What will be the output of the following code using Activator.CreateInstance()?",
-      "options": {
-        "A": "True",
-        "B": "False",
-        "C": "Compilation error: Cannot convert type 'object' to 'Person'",
-        "D": "Runtime exception: MissingMethodException"
-      },
-      "correct_answer": "B",
-      "code_example": "public class Person\n{\n    public string Name { get; set; }\n    \n    public Person(string name)\n    {\n        Name = name;\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        Type type = typeof(Person);\n        object obj = Activator.CreateInstance(type);\n        Person person = obj as Person;\n        Console.WriteLine(person != null);\n    }\n}"
-    },
-    {
-      "id": 39,
-      "difficulty": "hard",
-      "question": "When using MethodInfo.Invoke() to call a method dynamically, which of the following is true?",
-      "options": {
-        "A": "MethodInfo.Invoke() cannot be used to call private methods",
-        "B": "MethodInfo.Invoke() wraps any exceptions thrown by the method in a TargetInvocationException",
-        "C": "MethodInfo.Invoke() requires the declaring type to implement IInvokable interface",
-        "D": "MethodInfo.Invoke() performs better than direct method calls for frequently called methods"
-      },
-      "correct_answer": "B",
-      "code_example": "public class Calculator\n{\n    public int Add(int a, int b) => a + b;\n    \n    private int Divide(int a, int b) => a / b;\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        Calculator calc = new Calculator();\n        Type type = calc.GetType();\n        \n        // Call public method\n        MethodInfo addMethod = type.GetMethod(\"Add\");\n        object result1 = addMethod.Invoke(calc, new object[] { 5, 3 });\n        Console.WriteLine(result1); // Output: 8\n        \n        // Call private method that will throw exception\n        MethodInfo divideMethod = type.GetMethod(\"Divide\", \n            BindingFlags.Instance | BindingFlags.NonPublic);\n        try\n        {\n            object result2 = divideMethod.Invoke(calc, new object[] { 5, 0 });\n        }\n        catch (Exception ex)\n        {\n            Console.WriteLine(ex.GetType().Name); // Output: TargetInvocationException\n            Console.WriteLine(ex.InnerException?.GetType().Name); // Output: DivideByZeroException\n        }\n    }\n}"
-    },
-    {
-      "id": 40,
-      "difficulty": "hard",
-      "question": "Which of the following is a key benefit of using Redis as a distributed cache in a .NET application?",
-      "options": {
-        "A": "Redis can only store simple string values",
-        "B": "Redis provides automatic data synchronization with the SQL Server database",
-        "C": "Redis allows for high-performance, scalable caching across multiple application instances",
-        "D": "Redis cache entries never expire unless manually removed"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 41,
-      "difficulty": "hard",
-      "question": "What will be the result of the following code that uses SignalR?",
-      "options": {
-        "A": "The server will send messages to specific client with ID 'user123'",
-        "B": "The server will broadcast messages to all connected clients except the caller",
-        "C": "The server will send messages only to clients in the 'admin' group",
-        "D": "The code will throw a compilation error due to incorrect SignalR method usage"
-      },
-      "correct_answer": "B",
-      "code_example": "using Microsoft.AspNetCore.SignalR;\n\npublic class ChatHub : Hub\n{\n    public async Task SendMessage(string message)\n    {\n        await Clients.Others.SendAsync(\"ReceiveMessage\", Context.ConnectionId, message);\n    }\n}"
-    },
-    {
-      "id": 42,
-      "difficulty": "hard",
-      "question": "When working with COM Interop in C#, which of the following is correct?",
-      "options": {
-        "A": "COM objects automatically get garbage collected just like regular .NET objects",
-        "B": "The [ComVisible(true)] attribute is required on .NET classes that use COM objects",
-        "C": "RCW (Runtime Callable Wrapper) is used to expose .NET objects to COM clients",
-        "D": "Marshal.ReleaseComObject() should be called to properly release COM objects when finished using them"
-      },
-      "correct_answer": "D"
-    },
-    {
-      "id": 43,
-      "difficulty": "hard",
-      "question": "When creating a clustered index in SQL Server, which of the following statements is true?",
-      "options": {
-        "A": "A table can have multiple clustered indexes",
-        "B": "A clustered index determines the physical order of data storage in a table",
-        "C": "Clustered indexes are always automatically created on primary key columns",
-        "D": "Clustered indexes require more storage space than nonclustered indexes on the same columns"
-      },
-      "correct_answer": "B"
-    },
-    {
-      "id": 44,
-      "difficulty": "hard",
-      "question": "What will be the output of the following Parallel.Invoke() code?",
-      "options": {
-        "A": "The numbers will always be printed in sequential order: 1, 2, 3",
-        "B": "The numbers will be printed in an unpredictable order due to parallel execution",
-        "C": "A ParallelException will be thrown because Task 3 throws an exception",
-        "D": "The code will compile but will throw a runtime exception due to incorrect Parallel.Invoke() usage"
-      },
-      "correct_answer": "B",
-      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\npublic class Program\n{\n    public static void Main()\n    {\n        Parallel.Invoke(\n            () => { Thread.Sleep(100); Console.WriteLine(\"1\"); },\n            () => { Thread.Sleep(10); Console.WriteLine(\"2\"); },\n            () => { Console.WriteLine(\"3\"); }\n        );\n    }\n}"
-    },
-    {
-      "id": 45,
-      "difficulty": "hard",
-      "question": "Which Kubernetes resource is most appropriate for deploying a stateless .NET Web API application?",
-      "options": {
-        "A": "StatefulSet",
-        "B": "DaemonSet",
-        "C": "Deployment",
-        "D": "Job"
-      },
-      "correct_answer": "C"
-    },
-    {
-      "id": 46,
-      "difficulty": "hard",
-      "question": "What will be the output of the following code that uses the lock statement and Monitor class?",
-      "options": {
-        "A": "A deadlock will occur",
-        "B": "Thread A acquired lock, Thread B acquired lock",
-        "C": "Thread A acquired lock, Thread B waiting for lock",
-        "D": "A ThreadStateException will be thrown"
-      },
-      "correct_answer": "C",
-      "code_example": "using System;\nusing System.Threading;\n\npublic class Program\n{\n    private static readonly object _lockObj = new object();\n    \n    public static void Main()\n    {\n        var threadA = new Thread(() =>\n        {\n            lock (_lockObj)\n            {\n                Console.WriteLine(\"Thread A acquired lock\");\n                Thread.Sleep(2000);\n            }\n        });\n        \n        var threadB = new Thread(() =>\n        {\n            Thread.Sleep(500); // Give threadA time to acquire the lock\n            \n            bool lockTaken = false;\n            try\n            {\n                Monitor.TryEnter(_lockObj, 100, ref lockTaken);\n                if (lockTaken)\n                {\n                    Console.WriteLine(\"Thread B acquired lock\");\n                }\n                else\n                {\n                    Console.WriteLine(\"Thread B waiting for lock\");\n                }\n            }\n            finally\n            {\n                if (lockTaken)\n                {\n                    Monitor.Exit(_lockObj);\n                }\n            }\n        });\n        \n        threadA.Start();\n        threadB.Start();\n        \n        threadA.Join();\n        threadB.Join();\n    }\n}"
-    },
-    {
-      "id": 47,
-      "difficulty": "hard",
-      "question": "When configuring CORS in an ASP.NET Core application, which of the following code snippets correctly allows cross-origin requests from a specific origin with credentials?",
-      "options": {
-        "A": "app.UseCors(builder => builder.AllowAnyOrigin().AllowCredentials());",
-        "B": "app.UseCors(builder => builder.WithOrigins(\"https://example.com\").AllowAnyMethod().AllowAnyHeader().AllowCredentials());",
-        "C": "app.UseCors(builder => builder.SetIsOriginAllowed(_ => true).AllowCredentials());",
-        "D": "app.UseCors(\"CustomPolicy\");\nservices.AddCors(options => { options.DefaultPolicyName = \"CustomPolicy\"; });"
-      },
-      "correct_answer": "B",
-      "code_example": "public void ConfigureServices(IServiceCollection services)\n{\n    services.AddCors(options =>\n    {\n        options.AddDefaultPolicy(\n            builder =>\n            {\n                builder.WithOrigins(\"https://example.com\")\n                    .AllowAnyMethod()\n                    .AllowAnyHeader()\n                    .AllowCredentials();\n            });\n    });\n\n    services.AddControllers();\n}\n\npublic void Configure(IApplicationBuilder app, IWebHostEnvironment env)\n{\n    // Other middleware...\n    \n    app.UseRouting();\n    \n    app.UseCors();\n    \n    app.UseAuthorization();\n    \n    app.UseEndpoints(endpoints =>\n    {\n        endpoints.MapControllers();\n    });\n}"
-    },
-    {
-      "id": 48,
-      "difficulty": "hard",
-      "question": "Which of the following is the correct way to implement API versioning in ASP.NET Core Web API?",
-      "options": {
-        "A": "Implement different Controller classes with the same name in different namespaces",
-        "B": "Use the [ApiVersion(\"1.0\")] attribute on controller classes and configure ApiVersioning in Startup",
-        "C": "Add a version query parameter to all API endpoints manually",
-        "D": "Create separate projects for each API version"
-      },
-      "correct_answer": "B",
-      "code_example": "// In Startup.cs\npublic void ConfigureServices(IServiceCollection services)\n{\n    services.AddControllers();\n    \n    services.AddApiVersioning(options =>\n    {\n        options.DefaultApiVersion = new ApiVersion(1, 0);\n        options.AssumeDefaultVersionWhenUnspecified = true;\n        options.ReportApiVersions = true;\n    });\n    \n    services.AddVersionedApiExplorer(options =>\n    {\n        options.GroupNameFormat = \"'v'VVV\";\n        options.SubstituteApiVersionInUrl = true;\n    });\n}\n\n// In controllers\n[ApiController]\n[Route(\"api/v{version:apiVersion}/[controller]\")]\n[ApiVersion(\"1.0\")]\npublic class ProductsController : ControllerBase\n{\n    [HttpGet]\n    public IActionResult GetProducts()\n    {\n        return Ok(\"Version 1.0 Products\");\n    }\n}\n\n[ApiController]\n[Route(\"api/v{version:apiVersion}/[controller]\")]\n[ApiVersion(\"2.0\")]\npublic class ProductsController : ControllerBase\n{\n    [HttpGet]\n    public IActionResult GetProducts()\n    {\n        return Ok(\"Version 2.0 Products\");\n    }\n}"
-    }
-  ]
+    "questions": [
+        {
+            "id": 1,
+            "difficulty": "easy",
+            "topic": "Function Overloading",
+            "question": "What is the output of the following code?",
+            "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.WriteLine(Add(5, 3));\n        Console.WriteLine(Add(5.2, 3.8));\n    }\n\n    static int Add(int a, int b)\n    {\n        return a + b;\n    }\n\n    static double Add(double a, double b)\n    {\n        return a * b;\n    }\n}",
+            "options": {
+                "A": "8, 9.0",
+                "B": "8, 19.76",
+                "C": "5, 5.2",
+                "D": "Error: ambiguous method call"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 2,
+            "difficulty": "easy",
+            "topic": "Nullable types",
+            "question": "What is the output of the following code?",
+            "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int? nullableInt = null;\n        int regularInt = nullableInt ?? 10;\n        Console.WriteLine(regularInt);\n        \n        nullableInt = 5;\n        regularInt = nullableInt ?? 10;\n        Console.WriteLine(regularInt);\n    }\n}",
+            "options": {
+                "A": "null, 5",
+                "B": "10, 5",
+                "C": "Error: Cannot convert null to int",
+                "D": "0, 5"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 3,
+            "difficulty": "easy",
+            "topic": "Local functions",
+            "question": "What will be the output of the following code?",
+            "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        CalculateAndPrint(3, 4);\n    }\n\n    static void CalculateAndPrint(int a, int b)\n    {\n        int result = Multiply(a, b);\n        Console.WriteLine(result);\n        \n        int Multiply(int x, int y)\n        {\n            return x * y;\n        }\n    }\n}",
+            "options": {
+                "A": "7",
+                "B": "12",
+                "C": "Error: Cannot define a method inside another method",
+                "D": "3, 4"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 4,
+            "difficulty": "easy",
+            "topic": "StringBuilder vs string",
+            "question": "Which of the following statements about StringBuilder and string is correct?",
+            "options": {
+                "A": "StringBuilder is immutable while string is mutable",
+                "B": "Both StringBuilder and string are immutable",
+                "C": "StringBuilder is mutable while string is immutable",
+                "D": "Both StringBuilder and string are mutable"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 5,
+            "difficulty": "easy",
+            "topic": "if-else",
+            "question": "What is the output of the following code?",
+            "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int x = 10;\n        if (x > 5)\n            Console.Write(\"A\");\n        else if (x > 7)\n            Console.Write(\"B\");\n        \n        if (x > 8)\n            Console.Write(\"C\");\n        else\n            Console.Write(\"D\");\n    }\n}",
+            "options": {
+                "A": "AC",
+                "B": "AD",
+                "C": "BC",
+                "D": "BD"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 6,
+            "difficulty": "easy",
+            "topic": "Access Modifiers",
+            "question": "Which access modifier allows a class member to be accessed from the same assembly or from derived classes in other assemblies?",
+            "options": {
+                "A": "public",
+                "B": "private",
+                "C": "protected internal",
+                "D": "internal"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 7,
+            "difficulty": "easy",
+            "topic": "StreamReader, StreamWriter",
+            "question": "What does the following code do?",
+            "code_example": "using System;\nusing System.IO;\n\nclass Program\n{\n    static void Main()\n    {\n        using (StreamWriter writer = new StreamWriter(\"example.txt\"))\n        {\n            writer.WriteLine(\"Hello, World!\");\n        }\n        \n        using (StreamReader reader = new StreamReader(\"example.txt\"))\n        {\n            Console.WriteLine(reader.ReadToEnd());\n        }\n    }\n}",
+            "options": {
+                "A": "Reads \"Hello, World!\" from a file and displays it on the console",
+                "B": "Writes \"Hello, World!\" to a file and then reads and displays it on the console",
+                "C": "Creates an empty file called \"example.txt\"",
+                "D": "Throws a FileNotFoundException"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 8,
+            "difficulty": "easy",
+            "topic": "Logical operators",
+            "question": "What is the output of the following code?",
+            "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        bool a = true;\n        bool b = false;\n        bool c = true;\n        \n        Console.WriteLine(a || b && !c);\n        Console.WriteLine(!(a && b) || c);\n    }\n}",
+            "options": {
+                "A": "True, False",
+                "B": "False, True",
+                "C": "True, True",
+                "D": "False, False"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 9,
+            "difficulty": "easy",
+            "topic": "Dictionary, HashSet",
+            "question": "What will be the output of the following code?",
+            "code_example": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        Dictionary<string, int> ages = new Dictionary<string, int>();\n        ages[\"Alice\"] = 30;\n        ages[\"Bob\"] = 25;\n        ages[\"Alice\"] = 31;\n        \n        foreach (var kvp in ages)\n        {\n            Console.WriteLine($\"{kvp.Key}: {kvp.Value}\");\n        }\n    }\n}",
+            "options": {
+                "A": "Alice: 30\nBob: 25\nAlice: 31",
+                "B": "Alice: 31\nBob: 25",
+                "C": "Error: Dictionary cannot have duplicate keys",
+                "D": "Alice: 30\nAlice: 31\nBob: 25"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 10,
+            "difficulty": "easy",
+            "topic": "ArrayList, List<T>",
+            "question": "What is the primary difference between ArrayList and List<T>?",
+            "options": {
+                "A": "ArrayList can store only one type of element while List<T> can store multiple types",
+                "B": "List<T> is type-safe while ArrayList is not",
+                "C": "ArrayList is faster than List<T> for all operations",
+                "D": "List<T> can only store reference types while ArrayList can store value types"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 11,
+            "difficulty": "easy",
+            "topic": "File.Exists(), Directory.CreateDirectory()",
+            "question": "What is the correct order of operations for safely creating a file in a directory that may not exist?",
+            "options": {
+                "A": "Check if file exists, create directory, create file",
+                "B": "Create directory, create file, check if file exists",
+                "C": "Create file, check if file exists, create directory",
+                "D": "Check if file exists, create file, create directory"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 12,
+            "difficulty": "easy",
+            "topic": "Reference types",
+            "question": "Which of the following is NOT a reference type in C#?",
+            "options": {
+                "A": "string",
+                "B": "int",
+                "C": "interface",
+                "D": "delegate"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 13,
+            "difficulty": "easy",
+            "topic": "Type inference",
+            "question": "What will be the output of the following code?",
+            "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        var number = 10;\n        var text = \"Hello\";\n        var isValid = true;\n        \n        Console.WriteLine($\"{number.GetType().Name}, {text.GetType().Name}, {isValid.GetType().Name}\");\n    }\n}",
+            "options": {
+                "A": "Int32, String, Boolean",
+                "B": "var, var, var",
+                "C": "Object, Object, Object",
+                "D": "Int, String, Bool"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 14,
+            "difficulty": "easy",
+            "topic": "Jagged arrays",
+            "question": "What is the output of the following code?",
+            "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int[][] jaggedArray = new int[3][];\n        jaggedArray[0] = new int[] { 1, 2, 3 };\n        jaggedArray[1] = new int[] { 4, 5 };\n        jaggedArray[2] = new int[] { 6 };\n        \n        Console.WriteLine(jaggedArray[1][0]);\n    }\n}",
+            "options": {
+                "A": "1",
+                "B": "2",
+                "C": "4",
+                "D": "6"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 15,
+            "difficulty": "easy",
+            "topic": "Bitwise operators",
+            "question": "What is the output of the following code?",
+            "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int a = 5;  // 101 in binary\n        int b = 3;  // 011 in binary\n        \n        Console.WriteLine(a & b);  // AND\n        Console.WriteLine(a | b);  // OR\n        Console.WriteLine(a ^ b);  // XOR\n    }\n}",
+            "options": {
+                "A": "1, 7, 6",
+                "B": "0, 8, 8",
+                "C": "15, 8, 7",
+                "D": "3, 1, 2"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 16,
+            "difficulty": "easy",
+            "topic": "Cross-platform development",
+            "question": "Which of the following is NOT a valid way to develop cross-platform applications in .NET?",
+            "options": {
+                "A": "Using .NET MAUI",
+                "B": "Using ASP.NET Core",
+                "C": "Using .NET Framework 4.8",
+                "D": "Using Blazor WebAssembly"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 17,
+            "difficulty": "medium",
+            "topic": "Custom Middleware",
+            "question": "What is the correct order of execution in ASP.NET Core middleware?",
+            "code_example": "using Microsoft.AspNetCore.Builder;\nusing Microsoft.AspNetCore.Http;\n\npublic class Startup\n{\n    public void Configure(IApplicationBuilder app)\n    {\n        app.Use(async (context, next) =>\n        {\n            Console.WriteLine(\"Middleware 1 - Before\");\n            await next();\n            Console.WriteLine(\"Middleware 1 - After\");\n        });\n        \n        app.Use(async (context, next) =>\n        {\n            Console.WriteLine(\"Middleware 2 - Before\");\n            await next();\n            Console.WriteLine(\"Middleware 2 - After\");\n        });\n        \n        app.Run(async context =>\n        {\n            Console.WriteLine(\"Terminal Middleware\");\n            await context.Response.WriteAsync(\"Hello World\");\n        });\n    }\n}",
+            "options": {
+                "A": "Middleware 1 - Before, Middleware 2 - Before, Terminal Middleware, Middleware 2 - After, Middleware 1 - After",
+                "B": "Middleware 1 - Before, Middleware 1 - After, Middleware 2 - Before, Middleware 2 - After, Terminal Middleware",
+                "C": "Middleware 1 - Before, Middleware 2 - Before, Terminal Middleware, Middleware 1 - After, Middleware 2 - After",
+                "D": "Terminal Middleware, Middleware 2 - Before, Middleware 2 - After, Middleware 1 - Before, Middleware 1 - After"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 18,
+            "difficulty": "medium",
+            "topic": "Interface segregation principle",
+            "question": "Which of the following best describes the Interface Segregation Principle?",
+            "options": {
+                "A": "Classes should depend on abstractions, not concrete implementations",
+                "B": "A class should have only one reason to change",
+                "C": "Clients should not be forced to depend on interfaces they do not use",
+                "D": "Software entities should be open for extension but closed for modification"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 19,
+            "difficulty": "medium",
+            "topic": "Join(), GroupJoin()",
+            "question": "What will be the output of the following LINQ query?",
+            "code_example": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var employees = new List<Employee>\n        {\n            new Employee { Id = 1, Name = \"Alice\", DepartmentId = 1 },\n            new Employee { Id = 2, Name = \"Bob\", DepartmentId = 2 },\n            new Employee { Id = 3, Name = \"Charlie\", DepartmentId = 1 },\n            new Employee { Id = 4, Name = \"Dave\", DepartmentId = 3 }\n        };\n        \n        var departments = new List<Department>\n        {\n            new Department { Id = 1, Name = \"HR\" },\n            new Department { Id = 2, Name = \"IT\" }\n        };\n        \n        var query = employees.Join(\n            departments,\n            e => e.DepartmentId,\n            d => d.Id,\n            (e, d) => new { EmployeeName = e.Name, DepartmentName = d.Name }\n        );\n        \n        foreach (var item in query)\n        {\n            Console.WriteLine($\"{item.EmployeeName} - {item.DepartmentName}\");\n        }\n    }\n}\n\nclass Employee\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n    public int DepartmentId { get; set; }\n}\n\nclass Department\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n}",
+            "options": {
+                "A": "Alice - HR\nBob - IT\nCharlie - HR\nDave - null",
+                "B": "Alice - HR\nBob - IT\nCharlie - HR",
+                "C": "Alice - HR\nBob - IT",
+                "D": "Alice - HR\nBob - IT\nCharlie - HR\nDave - IT"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 20,
+            "difficulty": "medium",
+            "topic": "Explicit interface implementation",
+            "question": "What is the output of the following code?",
+            "code_example": "using System;\n\ninterface IDrawable\n{\n    void Draw();\n}\n\ninterface IPrintable\n{\n    void Draw();\n}\n\nclass Document : IDrawable, IPrintable\n{\n    public void Draw()\n    {\n        Console.WriteLine(\"Default Draw\");\n    }\n    \n    void IDrawable.Draw()\n    {\n        Console.WriteLine(\"IDrawable Draw\");\n    }\n    \n    void IPrintable.Draw()\n    {\n        Console.WriteLine(\"IPrintable Draw\");\n    }\n    \n    static void Main()\n    {\n        Document doc = new Document();\n        doc.Draw();\n        \n        IDrawable drawable = doc;\n        drawable.Draw();\n        \n        IPrintable printable = doc;\n        printable.Draw();\n    }\n}",
+            "options": {
+                "A": "Default Draw\nDefault Draw\nDefault Draw",
+                "B": "Default Draw\nIDrawable Draw\nIPrintable Draw",
+                "C": "IDrawable Draw\nIPrintable Draw\nDefault Draw",
+                "D": "Error: Interface method 'Draw' has multiple implementations"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 21,
+            "difficulty": "medium",
+            "topic": "Generic classes",
+            "question": "What will be the output of the following code?",
+            "code_example": "using System;\n\nclass Container<T>\n{\n    private T _item;\n    \n    public Container(T item)\n    {\n        _item = item;\n    }\n    \n    public void PrintType()\n    {\n        Console.WriteLine(_item.GetType().Name);\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var intContainer = new Container<int>(42);\n        var doubleContainer = new Container<double>(3.14);\n        var derivedContainer = new Container<DerivedClass>(new DerivedClass());\n        \n        intContainer.PrintType();\n        doubleContainer.PrintType();\n        derivedContainer.PrintType();\n    }\n}\n\nclass BaseClass { }\nclass DerivedClass : BaseClass { }",
+            "options": {
+                "A": "Int32\nDouble\nDerivedClass",
+                "B": "Int32\nDouble\nBaseClass",
+                "C": "System.Int32\nSystem.Double\nSystem.Object",
+                "D": "Int\nDouble\nObject"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 22,
+            "difficulty": "medium",
+            "topic": "Dispose() vs. Finalize()",
+            "question": "Which of the following statements about Dispose() and Finalize() is correct?",
+            "options": {
+                "A": "Finalize() is called automatically by the garbage collector, while Dispose() must be called explicitly",
+                "B": "Dispose() is called automatically by the garbage collector, while Finalize() must be called explicitly",
+                "C": "Both Dispose() and Finalize() must be called explicitly",
+                "D": "Both Dispose() and Finalize() are called automatically by the garbage collector"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 23,
+            "difficulty": "medium",
+            "topic": "Migrations",
+            "question": "Which of the following statements about EF Core migrations is NOT correct?",
+            "options": {
+                "A": "Add-Migration creates a new migration based on changes detected in the model",
+                "B": "Update-Database applies pending migrations to the database",
+                "C": "Remove-Migration removes the latest migration",
+                "D": "Migrations automatically update stored procedures and functions in the database"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 24,
+            "difficulty": "medium",
+            "topic": "Base class initialization",
+            "question": "What is the output of the following code?",
+            "code_example": "using System;\n\nclass Base\n{\n    public Base()\n    {\n        Console.Write(\"Base constructor. \");\n        Initialize();\n    }\n    \n    public virtual void Initialize()\n    {\n        Console.Write(\"Base Initialize. \");\n    }\n}\n\nclass Derived : Base\n{\n    private int _value = 10;\n    \n    public Derived()\n    {\n        Console.Write(\"Derived constructor. \");\n    }\n    \n    public override void Initialize()\n    {\n        Console.Write($\"Derived Initialize: {_value}. \");\n    }\n    \n    static void Main()\n    {\n        Derived d = new Derived();\n    }\n}",
+            "options": {
+                "A": "Base constructor. Base Initialize. Derived constructor.",
+                "B": "Base constructor. Derived Initialize: 10. Derived constructor.",
+                "C": "Base constructor. Derived Initialize: 0. Derived constructor.",
+                "D": "Derived constructor. Base constructor. Derived Initialize: 10."
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 25,
+            "difficulty": "medium",
+            "topic": "Deferred Execution",
+            "question": "What will be the output of the following code?",
+            "code_example": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var numbers = new List<int> { 1, 2, 3, 4 };\n        \n        var query = numbers.Where(n => {\n            Console.WriteLine($\"Filtering {n}\");\n            return n > 2;\n        });\n        \n        Console.WriteLine(\"Query defined\");\n        numbers.Add(5);\n        \n        var result = query.ToList();\n        Console.WriteLine(\"Query executed\");\n        \n        foreach (var num in result)\n        {\n            Console.WriteLine($\"Result: {num}\");\n        }\n    }\n}",
+            "options": {
+                "A": "Query defined\nQuery executed\nResult: 3\nResult: 4",
+                "B": "Filtering 1\nFiltering 2\nFiltering 3\nFiltering 4\nQuery defined\nQuery executed\nResult: 3\nResult: 4",
+                "C": "Query defined\nFiltering 1\nFiltering 2\nFiltering 3\nFiltering 4\nFiltering 5\nQuery executed\nResult: 3\nResult: 4\nResult: 5",
+                "D": "Filtering 1\nFiltering 2\nFiltering 3\nFiltering 4\nQuery defined\nFiltering 1\nFiltering 2\nFiltering 3\nFiltering 4\nFiltering 5\nQuery executed\nResult: 3\nResult: 4\nResult: 5"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 26,
+            "difficulty": "medium",
+            "topic": "Multicast delegates",
+            "question": "What is the output of the following code?",
+            "code_example": "using System;\n\nclass Program\n{\n    delegate void MyDelegate(string message);\n    \n    static void Main()\n    {\n        MyDelegate del1 = (msg) => Console.WriteLine($\"Del1: {msg}\");\n        MyDelegate del2 = (msg) => Console.WriteLine($\"Del2: {msg}\");\n        \n        MyDelegate combined = del1 + del2;\n        combined(\"Hello\");\n        \n        combined -= del1;\n        combined?.Invoke(\"World\");\n        \n        combined -= del2;\n        combined?.Invoke(\"!\");\n    }\n}",
+            "options": {
+                "A": "Del1: Hello\nDel2: Hello\nDel2: World",
+                "B": "Del1: Hello\nDel2: Hello\nDel2: World\nError: NullReferenceException",
+                "C": "Del1: Hello\nDel2: Hello\nDel1: World\nDel2: World",
+                "D": "Del1: Hello Del2: Hello\nDel2: World\nNull delegate"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 27,
+            "difficulty": "medium",
+            "topic": "Parallel.ForEach()",
+            "question": "What is the main advantage of using Parallel.ForEach() over a regular foreach loop?",
+            "options": {
+                "A": "It guarantees that iterations are processed in the original order",
+                "B": "It automatically handles thread synchronization for all shared variables",
+                "C": "It can improve performance for CPU-bound operations on multi-core systems",
+                "D": "It prevents exceptions from occurring during iteration"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 28,
+            "difficulty": "medium",
+            "topic": "LINQ Queries with EF Core",
+            "question": "Which of the following LINQ operations does NOT trigger immediate query execution in Entity Framework Core?",
+            "code_example": "using Microsoft.EntityFrameworkCore;\nusing System.Linq;\n\npublic class MyDbContext : DbContext\n{\n    public DbSet<Customer> Customers { get; set; }\n    \n    // DbContext configuration omitted for brevity\n}\n\npublic class Customer\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n    public int Age { get; set; }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        using (var context = new MyDbContext())\n        {\n            // Query A\n            var query1 = context.Customers.Where(c => c.Age > 18);\n            \n            // Query B\n            var query2 = context.Customers.Where(c => c.Age > 18).ToList();\n            \n            // Query C\n            var query3 = context.Customers.Where(c => c.Age > 18).Count();\n            \n            // Query D\n            var query4 = context.Customers.Where(c => c.Age > 18).OrderBy(c => c.Name);\n        }\n    }\n}",
+            "options": {
+                "A": "Query A",
+                "B": "Query B",
+                "C": "Query C",
+                "D": "Query D"
+            },
+            "correct_answer": "A"
+        },
+        {
+            "id": 29,
+            "difficulty": "medium",
+            "topic": "xUnit / NUnit Basics",
+            "question": "Which of the following is NOT a valid attribute in xUnit for test methods?",
+            "options": {
+                "A": "[Fact]",
+                "B": "[Theory]",
+                "C": "[InlineData]",
+                "D": "[TestCase]"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 30,
+            "difficulty": "medium",
+            "topic": "Test-driven development",
+            "question": "What is the correct order of steps in the Test-Driven Development (TDD) cycle?",
+            "options": {
+                "A": "Write Code, Write Test, Refactor",
+                "B": "Write Test, Write Code, Refactor",
+                "C": "Design, Code, Test, Refactor",
+                "D": "Refactor, Write Test, Write Code"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 31,
+            "difficulty": "medium",
+            "topic": "Conventional Routing vs. Attribute Routing",
+            "question": "What is the main advantage of Attribute Routing over Conventional Routing in ASP.NET Core?",
+            "options": {
+                "A": "Attribute Routing is always faster than Conventional Routing",
+                "B": "Attribute Routing allows for more complex route patterns and constraints",
+                "C": "Attribute Routing is the only option available in ASP.NET Core 3.0+",
+                "D": "Attribute Routing automatically generates Swagger documentation"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 32,
+            "difficulty": "medium",
+            "question": "What will be the output of the following LINQ code using Aggregate, Any, and All?",
+            "options": {
+                "A": "Sum: 55\nAny even numbers? True\nAll numbers > 5? False",
+                "B": "Sum: 15\nAny even numbers? True\nAll numbers > 5? False",
+                "C": "Sum: 55\nAny even numbers? False\nAll numbers > 5? False",
+                "D": "Sum: 55\nAny even numbers? True\nAll numbers > 5? True"
+            },
+            "correct_answer": "A",
+            "code_example": "void Main()\n{\n    var numbers = Enumerable.Range(1, 10);\n    \n    int sum = numbers.Aggregate(0, (acc, n) => acc + n);\n    bool hasEven = numbers.Any(n => n % 2 == 0);\n    bool allGreaterThan5 = numbers.All(n => n > 5);\n    \n    Console.WriteLine($\"Sum: {sum}\");\n    Console.WriteLine($\"Any even numbers? {hasEven}\");\n    Console.WriteLine($\"All numbers > 5? {allGreaterThan5}\");\n}"
+        },
+        {
+            "id": 33,
+            "difficulty": "hard",
+            "question": "What is the correct way to set up a Dockerfile for a .NET 8 Web API application?",
+            "options": {
+                "A": "Use the 'FROM mcr.microsoft.com/dotnet/sdk:8.0' image for both build and runtime stages",
+                "B": "Use the 'FROM mcr.microsoft.com/dotnet/aspnet:8.0' image for both build and runtime stages",
+                "C": "Use a multi-stage build with 'sdk:8.0' for building and 'aspnet:8.0' for runtime",
+                "D": "Use a multi-stage build with 'aspnet:8.0' for building and 'sdk:8.0' for runtime"
+            },
+            "correct_answer": "C",
+            "code_example": "# First stage - Build\nFROM mcr.microsoft.com/dotnet/sdk:8.0 AS build\nWORKDIR /src\nCOPY [\"MyApi.csproj\", \"./\"]\nRUN dotnet restore \"MyApi.csproj\"\nCOPY . .\nRUN dotnet build \"MyApi.csproj\" -c Release -o /app/build\n\n# Publish stage\nFROM build AS publish\nRUN dotnet publish \"MyApi.csproj\" -c Release -o /app/publish\n\n# Final stage - Runtime\nFROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final\nWORKDIR /app\nCOPY --from=publish /app/publish .\nENTRYPOINT [\"dotnet\", \"MyApi.dll\"]"
+        },
+        {
+            "id": 34,
+            "difficulty": "hard",
+            "question": "Which statement about string interning in C# is correct?",
+            "options": {
+                "A": "String interning means all string literals in your code will automatically share the same memory location if they have the same value",
+                "B": "The string.Intern() method creates a new copy of a string in memory",
+                "C": "Strings created at runtime using string concatenation or constructor are automatically interned",
+                "D": "String interning is only enabled when compiling with the /optimize flag"
+            },
+            "correct_answer": "A",
+            "code_example": "string s1 = \"hello\";\nstring s2 = \"hello\";\nstring s3 = new string(new char[] { 'h', 'e', 'l', 'l', 'o' });\nstring s4 = string.Intern(s3);\n\nConsole.WriteLine(object.ReferenceEquals(s1, s2)); // Output: True\nConsole.WriteLine(object.ReferenceEquals(s1, s3)); // Output: False\nConsole.WriteLine(object.ReferenceEquals(s1, s4)); // Output: True"
+        },
+        {
+            "id": 35,
+            "difficulty": "hard",
+            "question": "In the Repository Pattern, which of the following best describes the correct implementation of a generic repository with Entity Framework Core?",
+            "options": {
+                "A": "Create a repository for each database table, with each repository exposing LINQ directly to the controllers",
+                "B": "Implement IRepository<T> interface with methods like GetAll(), GetById(), Add(), Update(), and Delete(), where T is the entity type",
+                "C": "Create a single repository that handles all entities and exposes the DbContext directly to the business logic layer",
+                "D": "Repository pattern should not be used with Entity Framework Core as it adds an unnecessary abstraction layer"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 36,
+            "difficulty": "hard",
+            "question": "What will be the output of the following code which demonstrates the dynamic type in C#?",
+            "options": {
+                "A": "Method called: PrintValue with type: System.Int32",
+                "B": "Method called: PrintValue with type: System.String",
+                "C": "RuntimeBinderException: Cannot implicitly convert type 'string' to 'int'",
+                "D": "Method called: PrintValue with type: System.Object"
+            },
+            "correct_answer": "A",
+            "code_example": "public class DynamicExample\n{\n    public static void Main()\n    {\n        dynamic value = 42;\n        PrintValue(value);\n    }\n    \n    public static void PrintValue(int value)\n    {\n        Console.WriteLine($\"Method called: PrintValue with type: {value.GetType()}\");\n    }\n    \n    public static void PrintValue(string value)\n    {\n        Console.WriteLine($\"Method called: PrintValue with type: {value.GetType()}\");\n    }\n}"
+        },
+        {
+            "id": 37,
+            "difficulty": "hard",
+            "question": "In the context of CQRS (Command Query Responsibility Segregation), which of the following statements is correct?",
+            "options": {
+                "A": "CQRS requires using separate databases for reads and writes",
+                "B": "Commands and queries must use the same data model to maintain consistency",
+                "C": "CQRS separates the responsibility of handling command operations (create, update, delete) from query operations (read)",
+                "D": "CQRS is always implemented with Event Sourcing"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 38,
+            "difficulty": "hard",
+            "question": "What will be the output of the following code using Activator.CreateInstance()?",
+            "options": {
+                "A": "True",
+                "B": "False",
+                "C": "Compilation error: Cannot convert type 'object' to 'Person'",
+                "D": "Runtime exception: MissingMethodException"
+            },
+            "correct_answer": "B",
+            "code_example": "public class Person\n{\n    public string Name { get; set; }\n    \n    public Person(string name)\n    {\n        Name = name;\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        Type type = typeof(Person);\n        object obj = Activator.CreateInstance(type);\n        Person person = obj as Person;\n        Console.WriteLine(person != null);\n    }\n}"
+        },
+        {
+            "id": 39,
+            "difficulty": "hard",
+            "question": "When using MethodInfo.Invoke() to call a method dynamically, which of the following is true?",
+            "options": {
+                "A": "MethodInfo.Invoke() cannot be used to call private methods",
+                "B": "MethodInfo.Invoke() wraps any exceptions thrown by the method in a TargetInvocationException",
+                "C": "MethodInfo.Invoke() requires the declaring type to implement IInvokable interface",
+                "D": "MethodInfo.Invoke() performs better than direct method calls for frequently called methods"
+            },
+            "correct_answer": "B",
+            "code_example": "public class Calculator\n{\n    public int Add(int a, int b) => a + b;\n    \n    private int Divide(int a, int b) => a / b;\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        Calculator calc = new Calculator();\n        Type type = calc.GetType();\n        \n        // Call public method\n        MethodInfo addMethod = type.GetMethod(\"Add\");\n        object result1 = addMethod.Invoke(calc, new object[] { 5, 3 });\n        Console.WriteLine(result1); // Output: 8\n        \n        // Call private method that will throw exception\n        MethodInfo divideMethod = type.GetMethod(\"Divide\", \n            BindingFlags.Instance | BindingFlags.NonPublic);\n        try\n        {\n            object result2 = divideMethod.Invoke(calc, new object[] { 5, 0 });\n        }\n        catch (Exception ex)\n        {\n            Console.WriteLine(ex.GetType().Name); // Output: TargetInvocationException\n            Console.WriteLine(ex.InnerException?.GetType().Name); // Output: DivideByZeroException\n        }\n    }\n}"
+        },
+        {
+            "id": 40,
+            "difficulty": "hard",
+            "question": "Which of the following is a key benefit of using Redis as a distributed cache in a .NET application?",
+            "options": {
+                "A": "Redis can only store simple string values",
+                "B": "Redis provides automatic data synchronization with the SQL Server database",
+                "C": "Redis allows for high-performance, scalable caching across multiple application instances",
+                "D": "Redis cache entries never expire unless manually removed"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 41,
+            "difficulty": "hard",
+            "question": "What will be the result of the following code that uses SignalR?",
+            "options": {
+                "A": "The server will send messages to specific client with ID 'user123'",
+                "B": "The server will broadcast messages to all connected clients except the caller",
+                "C": "The server will send messages only to clients in the 'admin' group",
+                "D": "The code will throw a compilation error due to incorrect SignalR method usage"
+            },
+            "correct_answer": "B",
+            "code_example": "using Microsoft.AspNetCore.SignalR;\n\npublic class ChatHub : Hub\n{\n    public async Task SendMessage(string message)\n    {\n        await Clients.Others.SendAsync(\"ReceiveMessage\", Context.ConnectionId, message);\n    }\n}"
+        },
+        {
+            "id": 42,
+            "difficulty": "hard",
+            "question": "When working with COM Interop in C#, which of the following is correct?",
+            "options": {
+                "A": "COM objects automatically get garbage collected just like regular .NET objects",
+                "B": "The [ComVisible(true)] attribute is required on .NET classes that use COM objects",
+                "C": "RCW (Runtime Callable Wrapper) is used to expose .NET objects to COM clients",
+                "D": "Marshal.ReleaseComObject() should be called to properly release COM objects when finished using them"
+            },
+            "correct_answer": "D"
+        },
+        {
+            "id": 43,
+            "difficulty": "hard",
+            "question": "When creating a clustered index in SQL Server, which of the following statements is true?",
+            "options": {
+                "A": "A table can have multiple clustered indexes",
+                "B": "A clustered index determines the physical order of data storage in a table",
+                "C": "Clustered indexes are always automatically created on primary key columns",
+                "D": "Clustered indexes require more storage space than nonclustered indexes on the same columns"
+            },
+            "correct_answer": "B"
+        },
+        {
+            "id": 44,
+            "difficulty": "hard",
+            "question": "What will be the output of the following Parallel.Invoke() code?",
+            "options": {
+                "A": "The numbers will always be printed in sequential order: 1, 2, 3",
+                "B": "The numbers will be printed in an unpredictable order due to parallel execution",
+                "C": "A ParallelException will be thrown because Task 3 throws an exception",
+                "D": "The code will compile but will throw a runtime exception due to incorrect Parallel.Invoke() usage"
+            },
+            "correct_answer": "B",
+            "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\npublic class Program\n{\n    public static void Main()\n    {\n        Parallel.Invoke(\n            () => { Thread.Sleep(100); Console.WriteLine(\"1\"); },\n            () => { Thread.Sleep(10); Console.WriteLine(\"2\"); },\n            () => { Console.WriteLine(\"3\"); }\n        );\n    }\n}"
+        },
+        {
+            "id": 45,
+            "difficulty": "hard",
+            "question": "Which Kubernetes resource is most appropriate for deploying a stateless .NET Web API application?",
+            "options": {
+                "A": "StatefulSet",
+                "B": "DaemonSet",
+                "C": "Deployment",
+                "D": "Job"
+            },
+            "correct_answer": "C"
+        },
+        {
+            "id": 46,
+            "difficulty": "hard",
+            "question": "What will be the output of the following code that uses the lock statement and Monitor class?",
+            "options": {
+                "A": "A deadlock will occur",
+                "B": "Thread A acquired lock, Thread B acquired lock",
+                "C": "Thread A acquired lock, Thread B waiting for lock",
+                "D": "A ThreadStateException will be thrown"
+            },
+            "correct_answer": "C",
+            "code_example": "using System;\nusing System.Threading;\n\npublic class Program\n{\n    private static readonly object _lockObj = new object();\n    \n    public static void Main()\n    {\n        var threadA = new Thread(() =>\n        {\n            lock (_lockObj)\n            {\n                Console.WriteLine(\"Thread A acquired lock\");\n                Thread.Sleep(2000);\n            }\n        });\n        \n        var threadB = new Thread(() =>\n        {\n            Thread.Sleep(500); // Give threadA time to acquire the lock\n            \n            bool lockTaken = false;\n            try\n            {\n                Monitor.TryEnter(_lockObj, 100, ref lockTaken);\n                if (lockTaken)\n                {\n                    Console.WriteLine(\"Thread B acquired lock\");\n                }\n                else\n                {\n                    Console.WriteLine(\"Thread B waiting for lock\");\n                }\n            }\n            finally\n            {\n                if (lockTaken)\n                {\n                    Monitor.Exit(_lockObj);\n                }\n            }\n        });\n        \n        threadA.Start();\n        threadB.Start();\n        \n        threadA.Join();\n        threadB.Join();\n    }\n}"
+        },
+        {
+            "id": 47,
+            "difficulty": "hard",
+            "question": "When configuring CORS in an ASP.NET Core application, which of the following code snippets correctly allows cross-origin requests from a specific origin with credentials?",
+            "options": {
+                "A": "app.UseCors(builder => builder.AllowAnyOrigin().AllowCredentials());",
+                "B": "app.UseCors(builder => builder.WithOrigins(\"https://example.com\").AllowAnyMethod().AllowAnyHeader().AllowCredentials());",
+                "C": "app.UseCors(builder => builder.SetIsOriginAllowed(_ => true).AllowCredentials());",
+                "D": "app.UseCors(\"CustomPolicy\");\nservices.AddCors(options => { options.DefaultPolicyName = \"CustomPolicy\"; });"
+            },
+            "correct_answer": "B",
+            "code_example": "public void ConfigureServices(IServiceCollection services)\n{\n    services.AddCors(options =>\n    {\n        options.AddDefaultPolicy(\n            builder =>\n            {\n                builder.WithOrigins(\"https://example.com\")\n                    .AllowAnyMethod()\n                    .AllowAnyHeader()\n                    .AllowCredentials();\n            });\n    });\n\n    services.AddControllers();\n}\n\npublic void Configure(IApplicationBuilder app, IWebHostEnvironment env)\n{\n    // Other middleware...\n    \n    app.UseRouting();\n    \n    app.UseCors();\n    \n    app.UseAuthorization();\n    \n    app.UseEndpoints(endpoints =>\n    {\n        endpoints.MapControllers();\n    });\n}"
+        },
+        {
+            "id": 48,
+            "difficulty": "hard",
+            "question": "Which of the following is the correct way to implement API versioning in ASP.NET Core Web API?",
+            "options": {
+                "A": "Implement different Controller classes with the same name in different namespaces",
+                "B": "Use the [ApiVersion(\"1.0\")] attribute on controller classes and configure ApiVersioning in Startup",
+                "C": "Add a version query parameter to all API endpoints manually",
+                "D": "Create separate projects for each API version"
+            },
+            "correct_answer": "B",
+            "code_example": "// In Startup.cs\npublic void ConfigureServices(IServiceCollection services)\n{\n    services.AddControllers();\n    \n    services.AddApiVersioning(options =>\n    {\n        options.DefaultApiVersion = new ApiVersion(1, 0);\n        options.AssumeDefaultVersionWhenUnspecified = true;\n        options.ReportApiVersions = true;\n    });\n    \n    services.AddVersionedApiExplorer(options =>\n    {\n        options.GroupNameFormat = \"'v'VVV\";\n        options.SubstituteApiVersionInUrl = true;\n    });\n}\n\n// In controllers\n[ApiController]\n[Route(\"api/v{version:apiVersion}/[controller]\")]\n[ApiVersion(\"1.0\")]\npublic class ProductsController : ControllerBase\n{\n    [HttpGet]\n    public IActionResult GetProducts()\n    {\n        return Ok(\"Version 1.0 Products\");\n    }\n}\n\n[ApiController]\n[Route(\"api/v{version:apiVersion}/[controller]\")]\n[ApiVersion(\"2.0\")]\npublic class ProductsController : ControllerBase\n{\n    [HttpGet]\n    public IActionResult GetProducts()\n    {\n        return Ok(\"Version 2.0 Products\");\n    }\n}"
+        }
+    ]
 }
