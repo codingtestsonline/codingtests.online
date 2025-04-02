@@ -1,0 +1,611 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string name = null;\nConsole.WriteLine($\"Hello, {name ?? \"Guest\"}!\");",
+      "options": {
+        "A": "Hello, null!",
+        "B": "Hello, Guest!",
+        "C": "Hello, !",
+        "D": "NullReferenceException will be thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following LINQ query?",
+      "code_example": "var numbers = new List<int> { 5, 10, 15, 20, 25 };\nvar result = numbers.Where(n => n > 10).Select(n => n * 2);\nforeach (var num in result)\n{\n    Console.Write(num + \" \");\n}",
+      "options": {
+        "A": "20 30 40 50",
+        "B": "10 20 30 40 50",
+        "C": "30 40 50",
+        "D": "15 20 25"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using named parameters?",
+      "code_example": "void PrintCoordinates(int x, int y)\n{\n    Console.WriteLine($\"X: {x}, Y: {y}\");\n}\n\nPrintCoordinates(y: 20, x: 10);",
+      "options": {
+        "A": "X: 20, Y: 10",
+        "B": "X: 10, Y: 20",
+        "C": "y: 20, x: 10",
+        "D": "Compiler error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Which of the following is the correct way to write a text file using StreamWriter?",
+      "options": {
+        "A": "var writer = new StreamWriter(\"file.txt\"); writer.WriteLine(\"Hello\"); writer.Dispose();",
+        "B": "using (var writer = File.CreateText(\"file.txt\")) { writer.WriteLine(\"Hello\"); }",
+        "C": "var writer = File.OpenText(\"file.txt\"); writer.WriteLine(\"Hello\");",
+        "D": "StreamWriter writer = null; try { writer = new StreamWriter(\"file.txt\"); } finally { writer.WriteLine(\"Hello\"); }"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "var queue = new Queue<int>();\nqueue.Enqueue(1);\nqueue.Enqueue(2);\nqueue.Enqueue(3);\n\nConsole.Write(queue.Dequeue() + \" \");\nConsole.Write(queue.Peek() + \" \");\nConsole.Write(queue.Dequeue());",
+      "options": {
+        "A": "1 2 2",
+        "B": "3 2 2",
+        "C": "1 3 3",
+        "D": "3 2 1"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a value type in C#?",
+      "options": {
+        "A": "double",
+        "B": "char",
+        "C": "string",
+        "D": "struct"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "using (var counter = new System.Timers.Timer())\n{\n    Console.WriteLine(\"Timer created\");\n}\nConsole.WriteLine(\"Done\");",
+      "options": {
+        "A": "Timer created",
+        "B": "Done",
+        "C": "Timer created\nDone",
+        "D": "Nothing, the code won't compile"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "try\n{\n    Console.Write(\"Try \");\n    return;\n}\ncatch\n{\n    Console.Write(\"Catch \");\n}\nfinally\n{\n    Console.Write(\"Finally\");\n}",
+      "options": {
+        "A": "Try",
+        "B": "Try Finally",
+        "C": "Try Catch Finally",
+        "D": "Try Catch"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string original = \"Hello\";\nstring modified = original;\nmodified += \" World\";\nConsole.WriteLine(original);",
+      "options": {
+        "A": "Hello World",
+        "B": "Hello",
+        "C": "World",
+        "D": "HelloHello World"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following string manipulation code?",
+      "code_example": "string text = \"  C# Programming  \";\nstring result = text.Trim().Substring(0, 2).Replace(\"#\", \"Sharp\");\nConsole.WriteLine(result);",
+      "options": {
+        "A": "C#",
+        "B": "C Sharp",
+        "C": "CSharp",
+        "D": "C"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using logical operators?",
+      "code_example": "bool a = true;\nbool b = false;\nbool c = true;\nConsole.WriteLine(!(a || b) && c);",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Compiler error",
+        "D": "Runtime error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string input = \"123\";\nint result;\nif (int.TryParse(input, out result))\n{\n    Console.WriteLine(result + 7);\n}\nelse\n{\n    Console.WriteLine(\"Failed to parse\");\n}",
+      "options": {
+        "A": "123",
+        "B": "1237",
+        "C": "130",
+        "D": "Failed to parse"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code with a local function?",
+      "code_example": "void OuterMethod()\n{\n    int x = 10;\n    \n    int AddFive(int num)\n    {\n        return num + 5;\n    }\n    \n    Console.WriteLine(AddFive(x));\n}\n\nOuterMethod();",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "Compiler error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "StringBuilder sb = new StringBuilder(\"Hello\");\nsb.Append(\" World\");\nsb.Replace(\"World\", \"C#\");\nConsole.WriteLine(sb.ToString());",
+      "options": {
+        "A": "Hello World",
+        "B": "Hello",
+        "C": "Hello C#",
+        "D": "Hello World C#"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following LINQ code?",
+      "code_example": "var numbers = new List<int>();\nvar first = numbers.FirstOrDefault();\nvar single = numbers.SingleOrDefault();\nConsole.WriteLine($\"{first}, {single}\");",
+      "options": {
+        "A": "null, null",
+        "B": "0, 0",
+        "C": "Exception will be thrown",
+        "D": "0, Exception will be thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "Which of the following methods is best for reading a small text file completely into memory?",
+      "options": {
+        "A": "File.ReadAllText()",
+        "B": "File.OpenText()",
+        "C": "StreamReader.ReadToEnd()",
+        "D": "File.ReadAllBytes()"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code with explicit interface implementation?",
+      "code_example": "interface ILogger\n{\n    void Log(string message);\n}\n\nclass FileLogger : ILogger\n{\n    public void Log(string message)\n    {\n        Console.WriteLine($\"File: {message}\");\n    }\n    \n    void ILogger.Log(string message)\n    {\n        Console.WriteLine($\"ILogger: {message}\");\n    }\n}\n\nFileLogger logger = new FileLogger();\nlogger.Log(\"Test\");\n((ILogger)logger).Log(\"Test\");",
+      "options": {
+        "A": "File: Test\nFile: Test",
+        "B": "ILogger: Test\nILogger: Test",
+        "C": "File: Test\nILogger: Test",
+        "D": "Compiler error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following LINQ query?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar query = numbers.Select(n => n * n).Where(n => n > 10);\nConsole.WriteLine(query.Count());",
+      "options": {
+        "A": "5",
+        "B": "3",
+        "C": "2",
+        "D": "0"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will happen when the following code is executed?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar query = numbers.Where(n => n > 2);\nnumbers.Add(6);\nConsole.WriteLine(query.Count());",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which generation of the garbage collector is most expensive to collect?",
+      "options": {
+        "A": "Gen0",
+        "B": "Gen1",
+        "C": "Gen2",
+        "D": "All generations have the same collection cost"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a valid assertion in xUnit?",
+      "options": {
+        "A": "Assert.Equal(expected, actual)",
+        "B": "Assert.True(condition)",
+        "C": "Assert.IsInstanceOf<Type>(object)",
+        "D": "Assert.Contains(expectedSubstring, actualString)"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "var list = new List<int> { 1, 2, 3 };\nvar linkedList = new LinkedList<int>(new[] { 1, 2, 3 });\n\nlist.Insert(1, 10);\nlinkedList.AddAfter(linkedList.First, 10);\n\nConsole.WriteLine($\"List: {string.Join(\", \", list)}\");\nConsole.WriteLine($\"LinkedList: {string.Join(\", \", linkedList)}\");",
+      "options": {
+        "A": "List: 1, 10, 2, 3\nLinkedList: 1, 10, 2, 3",
+        "B": "List: 1, 2, 10, 3\nLinkedList: 1, 10, 2, 3",
+        "C": "List: 1, 10, 2, 3\nLinkedList: 1, 2, 10, 3",
+        "D": "List: 10, 1, 2, 3\nLinkedList: 10, 1, 2, 3"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code with an anonymous method?",
+      "code_example": "delegate int Calculator(int a, int b);\n\nvoid TestCalculator()\n{\n    Calculator add = delegate(int x, int y) { return x + y; };\n    Calculator multiply = delegate(int x, int y) { return x * y; };\n    \n    Console.WriteLine(add(5, 3));\n    Console.WriteLine(multiply(5, 3));\n}\n\nTestCalculator();",
+      "options": {
+        "A": "8\n15",
+        "B": "8\n8",
+        "C": "15\n15",
+        "D": "5\n3"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What is constructor injection in the context of dependency injection?",
+      "options": {
+        "A": "A technique where dependencies are injected through class properties",
+        "B": "A technique where dependencies are injected through constructor parameters",
+        "C": "A technique where dependencies are injected through method parameters",
+        "D": "A technique where dependencies are created inside the constructor"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "var hashSet = new HashSet<int> { 1, 2, 3, 1, 2 };\nvar dictionary = new Dictionary<int, string> { {1, \"One\"}, {2, \"Two\"}, {3, \"Three\"} };\n\nConsole.WriteLine($\"HashSet count: {hashSet.Count}\");\nConsole.WriteLine($\"Dictionary count: {dictionary.Count}\");",
+      "options": {
+        "A": "HashSet count: 5\nDictionary count: 3",
+        "B": "HashSet count: 3\nDictionary count: 3",
+        "C": "HashSet count: 3\nDictionary count: 5",
+        "D": "HashSet count: 5\nDictionary count: 5"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What is the purpose of ConfigureAwait(false) in async/await operations?",
+      "options": {
+        "A": "It prevents the method from being executed asynchronously",
+        "B": "It forces the method to run on a background thread",
+        "C": "It prevents the continuation from being captured in the current context",
+        "D": "It cancels the async operation if it takes too long"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code with method hiding?",
+      "code_example": "class Base\n{\n    public virtual void Show()\n    {\n        Console.WriteLine(\"Base Show\");\n    }\n}\n\nclass Derived : Base\n{\n    public new void Show()\n    {\n        Console.WriteLine(\"Derived Show\");\n    }\n}\n\nBase b = new Derived();\nb.Show();\nDerived d = new Derived();\nd.Show();",
+      "options": {
+        "A": "Base Show\nBase Show",
+        "B": "Derived Show\nDerived Show",
+        "C": "Base Show\nDerived Show",
+        "D": "Derived Show\nBase Show"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using delegates?",
+      "code_example": "delegate void Printer(string message);\n\nvoid TestDelegate()\n{\n    Printer p = PrintToConsole;\n    p += PrintUpperCase;\n    p(\"Hello\");\n}\n\nvoid PrintToConsole(string message)\n{\n    Console.WriteLine($\"Regular: {message}\");\n}\n\nvoid PrintUpperCase(string message)\n{\n    Console.WriteLine($\"Upper: {message.ToUpper()}\");\n}\n\nTestDelegate();",
+      "options": {
+        "A": "Regular: Hello",
+        "B": "Upper: HELLO",
+        "C": "Regular: Hello\nUpper: HELLO",
+        "D": "Hello\nHELLO"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What is the main advantage of using the 'using' statement in C#?",
+      "options": {
+        "A": "It improves code readability by grouping related code",
+        "B": "It ensures proper disposal of resources even if exceptions occur",
+        "C": "It allows importing multiple namespaces at once",
+        "D": "It optimizes memory usage by compressing objects"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What is the key difference between Dispose() and Finalize() in C#?",
+      "options": {
+        "A": "Dispose() is called explicitly by code, while Finalize() is called by the garbage collector",
+        "B": "Dispose() can only be used with value types, while Finalize() works with reference types",
+        "C": "Dispose() releases managed resources, while Finalize() only releases unmanaged resources",
+        "D": "Dispose() is part of the IDisposable interface, while Finalize() is part of the IDestructible interface"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is property injection in the context of dependency injection?",
+      "options": {
+        "A": "A technique where dependencies are injected through constructor parameters",
+        "B": "A technique where dependencies are injected through public properties",
+        "C": "A technique where dependencies are injected through method parameters",
+        "D": "A technique where dependencies are created inside the property getter"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What can be a potential issue with calling GC.Collect() explicitly in application code?",
+      "code_example": "void ProcessLargeData()\n{\n    var data = LoadVeryLargeDataSet();\n    ProcessData(data);\n    data = null;\n    GC.Collect();\n}",
+      "options": {
+        "A": "It can lead to memory leaks",
+        "B": "It can cause application crashes",
+        "C": "It can negatively impact performance",
+        "D": "It will throw an exception in release builds"
+      },
+      "correct_answer": "C"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the primary purpose of the CQRS (Command Query Responsibility Segregation) pattern?",
+      "options": {
+        "A": "To ensure all database operations happen in a single transaction",
+        "B": "To separate read and write operations into different models",
+        "C": "To create a domain-specific language for database queries",
+        "D": "To implement a repository pattern with dependency injection"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Consider the following code that demonstrates string interning. What will be the output?",
+      "options": {
+        "A": "True False",
+        "B": "False False",
+        "C": "True True",
+        "D": "False True"
+      },
+      "correct_answer": "A",
+      "code_example": "string a = \"hello\";\nstring b = \"hello\";\nstring c = new string(new char[] { 'h', 'e', 'l', 'l', 'o' });\nstring d = string.Intern(c);\n\nConsole.WriteLine(Object.ReferenceEquals(a, b));\nConsole.WriteLine(Object.ReferenceEquals(a, c));"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Singleton implementation?",
+      "options": {
+        "A": "Same Instance: True",
+        "B": "Same Instance: False",
+        "C": "A runtime exception will be thrown",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "A",
+      "code_example": "public sealed class Singleton\n{\n    private static readonly Singleton _instance = new Singleton();\n    private static int _counter = 0;\n\n    private Singleton()\n    {\n        _counter++;\n        Console.WriteLine($\"Constructor called {_counter} time(s)\");\n    }\n\n    public static Singleton Instance => _instance;\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var instance1 = Singleton.Instance;\n        var instance2 = Singleton.Instance;\n        \n        Console.WriteLine($\"Same Instance: {Object.ReferenceEquals(instance1, instance2)}\");\n    }\n}"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "Which of the following statements about the MemoryCache in .NET is incorrect?",
+      "options": {
+        "A": "MemoryCache items can be automatically removed when system memory is under pressure",
+        "B": "MemoryCache supports both absolute and sliding expiration policies",
+        "C": "MemoryCache is thread-safe for concurrent access",
+        "D": "MemoryCache requires explicit disposal after use, even for the default instance"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using MemoryCache?",
+      "options": {
+        "A": "Value: CachedValue\nValue: CachedValue",
+        "B": "Value: CachedValue\nValue: null",
+        "C": "Value: CachedValue\nValue: ",
+        "D": "The code will throw an exception"
+      },
+      "correct_answer": "B",
+      "code_example": "using Microsoft.Extensions.Caching.Memory;\n\nvar cache = new MemoryCache(new MemoryCacheOptions());\n\nvar cacheEntryOptions = new MemoryCacheEntryOptions()\n    .SetAbsoluteExpiration(TimeSpan.FromSeconds(1));\n\ncache.Set(\"key\", \"CachedValue\", cacheEntryOptions);\n\nConsole.WriteLine($\"Value: {cache.Get(\"key\")}\");\n\n// Simulate waiting for expiration\nThread.Sleep(1500);\n\nConsole.WriteLine($\"Value: {cache.Get(\"key\")}\");"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Which statement about RabbitMQ is incorrect?",
+      "options": {
+        "A": "RabbitMQ implements the Advanced Message Queuing Protocol (AMQP)",
+        "B": "RabbitMQ supports publish/subscribe messaging patterns",
+        "C": "RabbitMQ guarantees ordered delivery of messages within a single queue",
+        "D": "RabbitMQ requires all consumers to process messages at the same rate"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating memory allocation?",
+      "options": {
+        "A": "True True",
+        "B": "False False", 
+        "C": "True False",
+        "D": "False True"
+      },
+      "correct_answer": "C",
+      "code_example": "class StackTest\n{\n    public int Value;\n}\n\nstruct HeapTest\n{\n    public int Value;\n}\n\nclass Program\n{\n    static void Main()\n    {\n        StackTest st1 = new StackTest();\n        StackTest st2 = st1;\n        st1.Value = 10;\n        \n        HeapTest ht1 = new HeapTest();\n        HeapTest ht2 = ht1;\n        ht1.Value = 10;\n        \n        Console.WriteLine(st2.Value == 10);\n        Console.WriteLine(ht2.Value == 10);\n    }\n}"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "Which of the following best describes the Adapter Pattern in software design?",
+      "options": {
+        "A": "It ensures only one instance of a class is created throughout the application",
+        "B": "It allows classes with incompatible interfaces to work together by creating a wrapper",
+        "C": "It defines a family of algorithms and makes them interchangeable at runtime",
+        "D": "It separates object construction from its representation"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating the lock keyword?",
+      "options": {
+        "A": "All numbers from 0 to 4 will be printed, but the order is unpredictable",
+        "B": "The numbers 0 to 4 will always be printed in sequence",
+        "C": "The code will deadlock and produce no output",
+        "D": "A ThreadStateException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "class Program\n{\n    private static readonly object _lock = new object();\n    \n    static void Main()\n    {\n        for (int i = 0; i < 5; i++)\n        {\n            int local = i;\n            Task.Run(() => PrintNumber(local));\n        }\n        \n        Thread.Sleep(1000); // Give tasks time to complete\n    }\n    \n    static void PrintNumber(int num)\n    {\n        lock (_lock)\n        {\n            Console.WriteLine(num);\n        }\n    }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "In a Dockerfile for a .NET application, what is the purpose of using multi-stage builds?",
+      "options": {
+        "A": "To provide backward compatibility with older Docker versions",
+        "B": "To enable the application to run on multiple operating systems",
+        "C": "To reduce the final image size by excluding build dependencies",
+        "D": "To automatically scale the application based on load"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "Which approach is NOT a recommended way to implement API versioning in ASP.NET Core?",
+      "options": {
+        "A": "URL Path Versioning (e.g., /api/v1/products)",
+        "B": "Query String Versioning (e.g., /api/products?api-version=1.0)",
+        "C": "Header Versioning (e.g., using a custom HTTP header)",
+        "D": "Using different controller names for each version (e.g., ProductsV1Controller, ProductsV2Controller)"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing a Factory Pattern?",
+      "options": {
+        "A": "Created Circle\nCreated Rectangle",
+        "B": "Created Rectangle\nCreated Circle", 
+        "C": "The code will not compile",
+        "D": "A runtime exception will be thrown"
+      },
+      "correct_answer": "A",
+      "code_example": "interface IShape\n{\n    void Draw();\n}\n\nclass Circle : IShape\n{\n    public Circle()\n    {\n        Console.WriteLine(\"Created Circle\");\n    }\n    \n    public void Draw() { }\n}\n\nclass Rectangle : IShape\n{\n    public Rectangle()\n    {\n        Console.WriteLine(\"Created Rectangle\");\n    }\n    \n    public void Draw() { }\n}\n\nclass ShapeFactory\n{\n    public IShape CreateShape(string shapeType)\n    {\n        return shapeType.ToLower() switch\n        {\n            \"circle\" => new Circle(),\n            \"rectangle\" => new Rectangle(),\n            _ => throw new ArgumentException(\"Invalid shape type\")\n        };\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var factory = new ShapeFactory();\n        var shape1 = factory.CreateShape(\"circle\");\n        var shape2 = factory.CreateShape(\"rectangle\");\n    }\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a key concept when deploying .NET applications in Kubernetes?",
+      "options": {
+        "A": "ConfigMaps for application configuration",
+        "B": "Pods as the smallest deployable units",
+        "C": "Direct file system access to update application binaries",
+        "D": "Readiness and liveness probes for monitoring"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using P/Invoke (DllImport)?",
+      "options": {
+        "A": "The current system time",
+        "B": "A formatted date string",
+        "C": "The number of milliseconds since the system was started",
+        "D": "An error message"
+      },
+      "correct_answer": "C",
+      "code_example": "using System.Runtime.InteropServices;\n\nclass Program\n{\n    [DllImport(\"kernel32.dll\")]\n    static extern uint GetTickCount();\n    \n    static void Main()\n    {\n        uint ticks = GetTickCount();\n        Console.WriteLine(ticks);\n    }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using dynamic type?",
+      "options": {
+        "A": "10 Hello",
+        "B": "10 System.String",
+        "C": "System.Int32 Hello",
+        "D": "System.Int32 System.String"
+      },
+      "correct_answer": "A",
+      "code_example": "class Program\n{\n    static void Main()\n    {\n        dynamic a = 10;\n        dynamic b = \"Hello\";\n        \n        Console.WriteLine($\"{a} {b}\");\n    }\n}"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Span<T> and Memory<T>?",
+      "options": {
+        "A": "1,2,3,4,5\n1,2,3,4,5",
+        "B": "1,2,3,4,5\n1,2,99,4,5",
+        "C": "1,2,99,4,5\n1,2,99,4,5",
+        "D": "1,2,99,4,5\n1,2,3,4,5"
+      },
+      "correct_answer": "C",
+      "code_example": "class Program\n{\n    static void Main()\n    {\n        int[] array = { 1, 2, 3, 4, 5 };\n        \n        Span<int> span = array;\n        Memory<int> memory = array;\n        \n        span[2] = 99;\n        \n        Console.WriteLine(string.Join(\",\", array));\n        Console.WriteLine(string.Join(\",\", memory.Span.ToArray()));\n    }\n}"
+    }
+  ]
+}
