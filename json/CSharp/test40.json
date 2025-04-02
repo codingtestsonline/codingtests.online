@@ -1,0 +1,614 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string name = null;\nConsole.WriteLine($\"Hello, {name ?? \"Guest\"}!\");",
+      "options": {
+        "A": "Hello, null!",
+        "B": "Hello, Guest!",
+        "C": "Hello, !",
+        "D": "NullReferenceException will be thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which statement correctly checks if a file exists and creates a directory if it doesn't exist?",
+      "options": {
+        "A": "if (!File.Exists(path)) { Directory.CreateDirectory(path); }",
+        "B": "if (!Directory.Exists(directoryPath)) { Directory.CreateDirectory(directoryPath); }",
+        "C": "if (File.Exists(path)) { Directory.Create(directoryPath); }",
+        "D": "if (!File.Exists(directoryPath)) { Directory.Create(directoryPath); }"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string input = \"42\";\nint.TryParse(input, out int result);\nConsole.WriteLine(result * 2);",
+      "options": {
+        "A": "42",
+        "B": "84",
+        "C": "0",
+        "D": "FormatException will be thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is the key difference between ArrayList and List<T>?",
+      "options": {
+        "A": "ArrayList is thread-safe, while List<T> is not",
+        "B": "List<T> is type-safe, while ArrayList is not",
+        "C": "ArrayList can only store reference types, while List<T> can store both value and reference types",
+        "D": "List<T> was deprecated in .NET Core and is no longer recommended for use"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "static void Calculate(int x, int y = 5)\n{\n    Console.WriteLine($\"x: {x}, y: {y}\");\n}\n\nstatic void Main()\n{\n    Calculate(y: 10, x: 20);\n}",
+      "options": {
+        "A": "x: 10, y: 20",
+        "B": "x: 20, y: 10",
+        "C": "x: 20, y: 5",
+        "D": "Compiler error: named arguments must appear after all fixed arguments"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "for (int i = 0; i < 5; i++)\n{\n    if (i == 2)\n        continue;\n    if (i == 4)\n        break;\n    Console.Write(i);\n}",
+      "options": {
+        "A": "0123",
+        "B": "01234",
+        "C": "013",
+        "D": "0134"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string text = \"Hello, C# World!\";\nConsole.WriteLine(text.Substring(7, 2));",
+      "options": {
+        "A": "C#",
+        "B": "C# ",
+        "C": ", C",
+        "D": "# W"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Which statement about StringBuilder vs string is true?",
+      "options": {
+        "A": "StringBuilder is immutable, while string is mutable",
+        "B": "StringBuilder is more efficient for a small number of string operations",
+        "C": "StringBuilder is more memory-efficient for many string concatenations",
+        "D": "StringBuilder can only append strings, not insert or remove"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "try\n{\n    throw new Exception(\"Base exception\");\n}\ncatch (InvalidOperationException ex)\n{\n    Console.WriteLine(\"A\");\n}\ncatch (Exception ex)\n{\n    Console.WriteLine(\"B\");\n}\nfinally\n{\n    Console.WriteLine(\"C\");\n}",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "BC",
+        "D": "AC"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "object value = \"5\";\n\nswitch (value)\n{\n    case int i when i > 10:\n        Console.WriteLine(\"A\");\n        break;\n    case string s when s.Length > 0:\n        Console.WriteLine(\"B\");\n        break;\n    case 5:\n        Console.WriteLine(\"C\");\n        break;\n    default:\n        Console.WriteLine(\"D\");\n        break;\n}",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Person\n{\n    public string Name;\n    \n    public Person(string name)\n    {\n        this.Name = name;\n    }\n}\n\nvar person = new Person(\"Alice\");\nConsole.WriteLine(person.Name);",
+      "options": {
+        "A": "null",
+        "B": "Alice",
+        "C": "this.Name",
+        "D": "Compiler error: this cannot be used in a constructor"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "var myDictionary = new Dictionary<string, int>();\nvar myObject = new object();\nvar myList = new List<string> { \"apple\", \"banana\" };\n\nConsole.WriteLine(myDictionary.GetType().IsClass);\nConsole.WriteLine(myObject.GetType().IsClass);\nConsole.WriteLine(myList.GetType().IsClass);",
+      "options": {
+        "A": "True\\nFalse\\nTrue",
+        "B": "True\\nTrue\\nTrue",
+        "C": "True\\nTrue\\nFalse",
+        "D": "False\\nTrue\\nTrue"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "void UpdateValues(ref int x, out int y)\n{\n    x = x + 5;\n    y = 10;\n}\n\nint a = 5;\nint b;\nUpdateValues(ref a, out b);\nConsole.WriteLine($\"a: {a}, b: {b}\");",
+      "options": {
+        "A": "a: 5, b: 10",
+        "B": "a: 10, b: 10",
+        "C": "a: 5, b: 0",
+        "D": "Compiler error: variable 'b' must be initialized before passing as out parameter"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "int a = 5;\nint b = 3;\nConsole.WriteLine(a & b);\nConsole.WriteLine(a | b);\nConsole.WriteLine(a ^ b);\nConsole.WriteLine(a << 1);\nConsole.WriteLine(a >> 1);",
+      "options": {
+        "A": "1\\n7\\n6\\n10\\n2",
+        "B": "15\\n8\\n2\\n25\\n1",
+        "C": "0\\n8\\n7\\n25\\n2",
+        "D": "1\\n7\\n6\\n10\\n3"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "Which of the following are reference types in C#?",
+      "options": {
+        "A": "int, string, bool, char",
+        "B": "class, struct, enum, interface",
+        "C": "string, class, object, delegate",
+        "D": "object, enum, string, interface"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string path = \"example.txt\";\n\nusing (StreamWriter writer = new StreamWriter(path))\n{\n    writer.WriteLine(\"Line 1\");\n    writer.WriteLine(\"Line 2\");\n}\n\nusing (StreamReader reader = new StreamReader(path))\n{\n    string content = reader.ReadToEnd();\n    Console.WriteLine(content.Contains(\"Line 1\"));\n}",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "FileNotFoundException will be thrown",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\n\nParallel.ForEach(numbers, number =>\n{\n    Console.Write(number * 2);\n});\n",
+      "options": {
+        "A": "246810",
+        "B": "2468102468102468102468102468",
+        "C": "The output order is non-deterministic",
+        "D": "ThreadLockException will be thrown"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is the main purpose of using ConcurrentDictionary<TKey, TValue> instead of Dictionary<TKey, TValue>?",
+      "options": {
+        "A": "ConcurrentDictionary provides better performance in single-threaded scenarios",
+        "B": "ConcurrentDictionary supports atomic operations for thread-safe access",
+        "C": "ConcurrentDictionary allows null keys, while Dictionary does not",
+        "D": "ConcurrentDictionary automatically sorts entries by key"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "In ASP.NET Core, what is the primary difference between [HttpGet] and [HttpPost] attributes?",
+      "options": {
+        "A": "[HttpGet] supports query string parameters, while [HttpPost] does not",
+        "B": "[HttpGet] is used for secure operations, while [HttpPost] is used for non-secure operations",
+        "C": "[HttpGet] is used to request data, while [HttpPost] is typically used to submit data",
+        "D": "[HttpGet] can only return views, while [HttpPost] can return any action result"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "abstract class Shape\n{\n    public virtual string GetDescription() => \"This is a shape\";\n    public abstract double CalculateArea();\n}\n\nclass Circle : Shape\n{\n    public override string GetDescription() => \"This is a circle\";\n    public sealed override double CalculateArea() => 0;\n}\n\nclass SpecialCircle : Circle\n{\n    public override string GetDescription() => \"This is a special circle\";\n    //public override double CalculateArea() => 10;\n}\n\nvar circle = new Circle();\nvar specialCircle = new SpecialCircle();\nConsole.WriteLine(circle.GetDescription());\nConsole.WriteLine(specialCircle.GetDescription());",
+      "options": {
+        "A": "This is a shape\\nThis is a special circle",
+        "B": "This is a circle\\nThis is a circle",
+        "C": "This is a circle\\nThis is a special circle",
+        "D": "Compilation error: cannot override sealed method CalculateArea"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Base\n{\n    public virtual void Display()\n    {\n        Console.WriteLine(\"Base display\");\n    }\n}\n\nclass Derived : Base\n{\n    public new void Display()\n    {\n        Console.WriteLine(\"Derived display\");\n    }\n}\n\nBase b = new Derived();\nb.Display();\n\nDerived d = new Derived();\nd.Display();",
+      "options": {
+        "A": "Base display\\nDerived display",
+        "B": "Derived display\\nDerived display",
+        "C": "Base display\\nBase display",
+        "D": "Derived display\\nBase display"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "Func<int, int> square = delegate(int x) { return x * x; };\nAction<string> greet = delegate(string name) { Console.WriteLine($\"Hello, {name}\"); };\n\nvar result = square(5);\ngreet(\"Alice\");\nConsole.WriteLine(result);",
+      "options": {
+        "A": "25\\nHello, Alice",
+        "B": "Hello, Alice\\n25",
+        "C": "25",
+        "D": "Hello, Alice"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar empty = new List<int>();\n\nConsole.WriteLine(numbers.FirstOrDefault());\nConsole.WriteLine(empty.FirstOrDefault());\nConsole.WriteLine(numbers.SingleOrDefault(n => n > 4));\nConsole.WriteLine(numbers.SingleOrDefault(n => n > 5));",
+      "options": {
+        "A": "1\\n0\\n5\\n0",
+        "B": "1\\nnull\\n5\\nnull",
+        "C": "1\\n0\\n5\\nInvalidOperationException",
+        "D": "1\\nInvalidOperationException\\n5\\n0"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "using (var resource = new MyResource())\n{\n    Console.WriteLine(\"Using resource\");\n}\n\nclass MyResource : IDisposable\n{\n    public MyResource()\n    {\n        Console.WriteLine(\"Resource created\");\n    }\n\n    public void Dispose()\n    {\n        Console.WriteLine(\"Resource disposed\");\n    }\n}",
+      "options": {
+        "A": "Resource created\\nUsing resource",
+        "B": "Using resource\\nResource disposed",
+        "C": "Resource created\\nUsing resource\\nResource disposed",
+        "D": "The code will throw an exception because MyResource is not properly implemented"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "static T Add<T>(T a, T b) where T : struct\n{\n    dynamic da = a;\n    dynamic db = b;\n    return da + db;\n}\n\nvar result1 = Add(5, 10);\nvar result2 = Add(2.5, 3.5);\nConsole.WriteLine($\"{result1}, {result2}\");",
+      "options": {
+        "A": "15, 6",
+        "B": "15, 6.0",
+        "C": "15.0, 6.0",
+        "D": "The code will throw a RuntimeBinderException"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Publisher\n{\n    public event EventHandler<CustomEventArgs> CustomEvent;\n\n    public void RaiseEvent(string message)\n    {\n        CustomEvent?.Invoke(this, new CustomEventArgs(message));\n    }\n}\n\nclass CustomEventArgs : EventArgs\n{\n    public string Message { get; }\n\n    public CustomEventArgs(string message)\n    {\n        Message = message;\n    }\n}\n\nvar publisher = new Publisher();\npublisher.CustomEvent += (sender, e) => Console.WriteLine(e.Message);\npublisher.RaiseEvent(\"Hello World\");",
+      "options": {
+        "A": "Hello World",
+        "B": "System.EventArgs",
+        "C": "CustomEventArgs",
+        "D": "No output, the event is not triggered"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "var numbers = new[] { 1, 2, 3, 4, 5 };\n\nvar sum = numbers.Aggregate(0, (acc, n) => acc + n);\nvar product = numbers.Aggregate(1, (acc, n) => acc * n);\n\nvar allEven = numbers.All(n => n % 2 == 0);\nvar anyEven = numbers.Any(n => n % 2 == 0);\n\nConsole.WriteLine($\"{sum}, {product}, {allEven}, {anyEven}\");",
+      "options": {
+        "A": "15, 120, False, True",
+        "B": "15, 120, True, False",
+        "C": "10, 120, False, True",
+        "D": "15, 60, False, True"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is the key difference between HashSet<T> and Dictionary<TKey, TValue>?",
+      "options": {
+        "A": "HashSet<T> allows duplicate elements, while Dictionary<TKey, TValue> does not allow duplicate keys",
+        "B": "HashSet<T> stores only unique elements without associated values, while Dictionary<TKey, TValue> stores key-value pairs",
+        "C": "HashSet<T> has O(n) lookup time, while Dictionary<TKey, TValue> has O(1) lookup time",
+        "D": "HashSet<T> is thread-safe, while Dictionary<TKey, TValue> is not"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "In ASP.NET Core, what is the correct order of middleware execution in the request pipeline?",
+      "options": {
+        "A": "The order of execution is fixed and cannot be changed",
+        "B": "Middleware is executed in random order",
+        "C": "Middleware is executed in the order it is added to the pipeline",
+        "D": "Middleware is executed based on priority settings"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Button\n{\n    public event EventHandler Clicked;\n\n    public void Click()\n    {\n        Console.WriteLine(\"Button clicked\");\n        Clicked?.Invoke(this, EventArgs.Empty);\n    }\n}\n\nvar button = new Button();\nbutton.Clicked += (sender, e) => Console.WriteLine(\"Event handled\");\nbutton.Click();",
+      "options": {
+        "A": "Button clicked",
+        "B": "Event handled",
+        "C": "Button clicked\\nEvent handled",
+        "D": "No output, events must be public to be invoked"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is the primary purpose of custom middleware in ASP.NET Core?",
+      "options": {
+        "A": "To handle exceptions that occur during request processing",
+        "B": "To intercept HTTP requests and responses for custom processing",
+        "C": "To validate user authentication and authorization",
+        "D": "To manage database connections and transactions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "Which statement about garbage collection generations in .NET is correct?",
+      "options": {
+        "A": "Objects in Gen2 are collected more frequently than objects in Gen0",
+        "B": "Objects start in Gen0 and can be promoted to Gen1 and then Gen2 if they survive collections",
+        "C": "Gen0 is reserved for large objects that need special handling",
+        "D": "The generational design decreases the efficiency of garbage collection"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which of the following correctly implements the Observer pattern in C#?",
+      "options": {
+        "A": "Using delegates to subscribe to events",
+        "B": "Using inheritance to override methods in derived classes",
+        "C": "Using interface composition to implement common behaviors",
+        "D": "Using static methods to notify registered objects"
+      },
+      "correct_answer": "A",
+      "code_example": "public class StockMarket\n{\n    // Event delegate signature\n    public delegate void StockChangeHandler(decimal oldPrice, decimal newPrice);\n    \n    // Event for stock price changes\n    public event StockChangeHandler StockPriceChanged;\n    \n    private decimal _currentPrice;\n    \n    public decimal CurrentPrice\n    {\n        get { return _currentPrice; }\n        set\n        {\n            if (_currentPrice != value)\n            {\n                decimal oldPrice = _currentPrice;\n                _currentPrice = value;\n                // Notify all observers\n                StockPriceChanged?.Invoke(oldPrice, _currentPrice);\n            }\n        }\n    }\n}"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which of the following code snippets correctly configures CORS in ASP.NET Core to allow requests from 'https://example.com' with credentials and specific headers?",
+      "options": {
+        "A": "app.UseCors(builder => builder.WithOrigins(\"https://example.com\"));",
+        "B": "app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());",
+        "C": "app.UseCors(builder => builder.WithOrigins(\"https://example.com\").AllowCredentials().WithHeaders(\"Authorization\", \"Content-Type\").WithMethods(\"GET\", \"POST\"));",
+        "D": "app.UseCors(policy => { policy.AllowAnyOrigin(); policy.AllowCredentials(); });"
+      },
+      "correct_answer": "C",
+      "code_example": "public void ConfigureServices(IServiceCollection services)\n{\n    services.AddCors(options =>\n    {\n        options.AddPolicy(\"ExamplePolicy\", builder =>\n        {\n            builder.WithOrigins(\"https://example.com\")\n                   .AllowCredentials()\n                   .WithHeaders(\"Authorization\", \"Content-Type\")\n                   .WithMethods(\"GET\", \"POST\");\n        });\n    });\n    \n    services.AddControllers();\n}\n\npublic void Configure(IApplicationBuilder app, IWebHostEnvironment env)\n{\n    // Other middleware\n    \n    app.UseCors(\"ExamplePolicy\");\n    \n    app.UseRouting();\n    app.UseEndpoints(endpoints =>\n    {\n        endpoints.MapControllers();\n    });\n}"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Parallel.Invoke()?",
+      "options": {
+        "A": "Task1, Task2, Task3 (always in this order)",
+        "B": "Task3, Task2, Task1 (always in this order)",
+        "C": "The order is non-deterministic and may vary between executions",
+        "D": "All tasks will be executed synchronously in the order they appear"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.WriteLine(\"Starting parallel tasks...\");\n        \n        Parallel.Invoke(\n            () => { Thread.Sleep(100); Console.WriteLine(\"Task1\"); },\n            () => { Thread.Sleep(200); Console.WriteLine(\"Task2\"); },\n            () => { Thread.Sleep(50); Console.WriteLine(\"Task3\"); }\n        );\n        \n        Console.WriteLine(\"All tasks completed.\");\n    }\n}"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "In ASP.NET Core, which attribute is used to restrict access to controller actions based on user roles?",
+      "options": {
+        "A": "[RoleBasedAuth(Roles = \"Admin, Manager\")]",
+        "B": "[RequireRoles(\"Admin, Manager\")]",
+        "C": "[Authorize(Roles = \"Admin, Manager\")]",
+        "D": "[HasRoles(\"Admin, Manager\")]"
+      },
+      "correct_answer": "C",
+      "code_example": "using Microsoft.AspNetCore.Authorization;\nusing Microsoft.AspNetCore.Mvc;\n\nnamespace MyApp.Controllers\n{\n    [ApiController]\n    [Route(\"api/[controller]\")]\n    public class AdminController : ControllerBase\n    {\n        [HttpGet(\"reports\")]\n        [Authorize(Roles = \"Admin, Manager\")]\n        public IActionResult GetReports()\n        {\n            // Only users in Admin or Manager roles can access this endpoint\n            return Ok(new { message = \"Restricted reports data\" });\n        }\n        \n        [HttpGet(\"publicinfo\")]\n        [AllowAnonymous]\n        public IActionResult GetPublicInfo()\n        {\n            // Anyone can access this endpoint\n            return Ok(new { message = \"Public information\" });\n        }\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using ExpandoObject?",
+      "options": {
+        "A": "Name: John, Age: 30, Address: 123 Main St",
+        "B": "Name: John, Age: 30",
+        "C": "A compilation error because you cannot add properties dynamically",
+        "D": "A runtime exception because Address property does not exist"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Dynamic;\n\nclass Program\n{\n    static void Main()\n    {\n        dynamic person = new ExpandoObject();\n        \n        // Add properties dynamically\n        person.Name = \"John\";\n        person.Age = 30;\n        \n        // Create a dictionary from ExpandoObject\n        var dictionary = (IDictionary<string, object>)person;\n        \n        // Check if property exists and print all properties\n        if (dictionary.ContainsKey(\"Address\"))\n        {\n            Console.WriteLine($\"Name: {person.Name}, Age: {person.Age}, Address: {person.Address}\");\n        }\n        else\n        {\n            Console.WriteLine($\"Name: {person.Name}, Age: {person.Age}\");\n        }\n    }\n}"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What is the difference between Semaphore and Mutex in C#?",
+      "options": {
+        "A": "Semaphore allows multiple threads to access a resource concurrently while Mutex allows only one thread",
+        "B": "Mutex can be used across processes while Semaphore is limited to a single process",
+        "C": "Mutex must be released by the same thread that acquired it while Semaphore can be released by any thread",
+        "D": "Semaphore is faster but less reliable than Mutex"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "Which of the following statements about the Repository Pattern in C# is NOT true?",
+      "options": {
+        "A": "It helps to decouple business logic from data access logic",
+        "B": "It makes unit testing easier by allowing you to mock the repository",
+        "C": "It requires using an ORM like Entity Framework",
+        "D": "It centralizes data access logic for an entity or aggregate"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "In OAuth2, what is the purpose of the 'refresh_token'?",
+      "options": {
+        "A": "To validate the client's identity during the initial authentication",
+        "B": "To obtain a new access token when the current one expires, without requiring user re-authentication",
+        "C": "To encrypt the user credentials during the authentication process",
+        "D": "To store user preferences across multiple authentication sessions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using MemoryCache?",
+      "options": {
+        "A": "Found: InitialValue, Found: UpdatedValue",
+        "B": "Found: InitialValue, Not found in cache",
+        "C": "Found: InitialValue, Found: InitialValue",
+        "D": "Not found in cache, Found: UpdatedValue"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing Microsoft.Extensions.Caching.Memory;\n\nclass Program\n{\n    static void Main()\n    {\n        var cacheOptions = new MemoryCacheOptions();\n        var cache = new MemoryCache(cacheOptions);\n        \n        // Create cache entry with absolute expiration\n        var cacheEntryOptions = new MemoryCacheEntryOptions()\n            .SetAbsoluteExpiration(TimeSpan.FromSeconds(1));\n            \n        // Add initial value to cache\n        cache.Set(\"myKey\", \"InitialValue\", cacheEntryOptions);\n        \n        // Check if key exists and retrieve value\n        if (cache.TryGetValue(\"myKey\", out string cachedValue1))\n        {\n            Console.WriteLine($\"Found: {cachedValue1}\");\n        }\n        \n        // Wait for cache entry to expire\n        System.Threading.Thread.Sleep(1100);\n        \n        // Update value after expiration\n        cache.Set(\"myKey\", \"UpdatedValue\", cacheEntryOptions);\n        \n        // Wait again for cache entry to expire\n        System.Threading.Thread.Sleep(1100);\n        \n        // Try to get value after expiration\n        if (cache.TryGetValue(\"myKey\", out string cachedValue2))\n        {\n            Console.WriteLine($\"Found: {cachedValue2}\");\n        }\n        else\n        {\n            Console.WriteLine(\"Not found in cache\");\n        }\n    }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code related to token-based authentication?",
+      "options": {
+        "A": "Valid token, Invalid token",
+        "B": "Invalid token, Valid token",
+        "C": "Valid token, Valid token",
+        "D": "Invalid token, Invalid token"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing Microsoft.IdentityModel.Tokens;\nusing System.IdentityModel.Tokens.Jwt;\nusing System.Security.Claims;\nusing System.Text;\n\nclass Program\n{\n    static void Main()\n    {\n        var secretKey = Encoding.ASCII.GetBytes(\"ThisIsMySecretKeyForJwtTokenGeneration\");\n        \n        // Generate token with short expiration\n        var token = GenerateJwtToken(\"user123\", TimeSpan.FromSeconds(1), secretKey);\n        \n        // Validate token immediately\n        ValidateToken(token, secretKey);\n        \n        // Wait for token to expire\n        System.Threading.Thread.Sleep(1100);\n        \n        // Validate token after expiration\n        ValidateToken(token, secretKey);\n    }\n    \n    static string GenerateJwtToken(string userId, TimeSpan expiration, byte[] key)\n    {\n        var tokenHandler = new JwtSecurityTokenHandler();\n        var tokenDescriptor = new SecurityTokenDescriptor\n        {\n            Subject = new ClaimsIdentity(new[] { new Claim(\"id\", userId) }),\n            Expires = DateTime.UtcNow.Add(expiration),\n            SigningCredentials = new SigningCredentials(\n                new SymmetricSecurityKey(key),\n                SecurityAlgorithms.HmacSha256Signature)\n        };\n        \n        var token = tokenHandler.CreateToken(tokenDescriptor);\n        return tokenHandler.WriteToken(token);\n    }\n    \n    static void ValidateToken(string token, byte[] key)\n    {\n        try\n        {\n            var tokenHandler = new JwtSecurityTokenHandler();\n            tokenHandler.ValidateToken(token, new TokenValidationParameters\n            {\n                ValidateIssuerSigningKey = true,\n                IssuerSigningKey = new SymmetricSecurityKey(key),\n                ValidateIssuer = false,\n                ValidateAudience = false,\n                ClockSkew = TimeSpan.Zero\n            }, out _);\n            \n            Console.WriteLine(\"Valid token\");\n        }\n        catch\n        {\n            Console.WriteLine(\"Invalid token\");\n        }\n    }\n}"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Assembly.Load() and Type.GetType()?",
+      "options": {
+        "A": "Found: TestClass",
+        "B": "Not found",
+        "C": "A System.IO.FileNotFoundException will be thrown",
+        "D": "A System.TypeLoadException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Reflection;\n\nnamespace DynamicTypeLoading\n{\n    class Program\n    {\n        static void Main()\n        {\n            try\n            {\n                // Load the executing assembly\n                var assembly = Assembly.GetExecutingAssembly();\n                \n                // Try to get type with incorrect namespace\n                var typeName = \"WrongNamespace.TestClass\";\n                var type = assembly.GetType(typeName);\n                \n                if (type != null)\n                {\n                    Console.WriteLine($\"Found: {type.Name}\");\n                    \n                    // Create instance and invoke method\n                    var instance = Activator.CreateInstance(type);\n                    var method = type.GetMethod(\"SayHello\");\n                    method?.Invoke(instance, null);\n                }\n                else\n                {\n                    Console.WriteLine(\"Not found\");\n                }\n            }\n            catch (Exception ex)\n            {\n                Console.WriteLine($\"Exception: {ex.GetType().Name}\");\n            }\n        }\n    }\n    \n    // Correct namespace is DynamicTypeLoading, not WrongNamespace\n    public class TestClass\n    {\n        public void SayHello()\n        {\n            Console.WriteLine(\"Hello from TestClass\");\n        }\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using P/Invoke to call a native Windows function?",
+      "options": {
+        "A": "Current directory: C:\\Windows\\System32",
+        "B": "Error: The parameter is incorrect",
+        "C": "Current directory: [full path of current directory]",
+        "D": "A platform-dependent exception will be thrown"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Runtime.InteropServices;\nusing System.Text;\n\nclass Program\n{\n    // Import the GetCurrentDirectory function from kernel32.dll\n    [DllImport(\"kernel32.dll\", SetLastError = true, CharSet = CharSet.Auto)]\n    static extern uint GetCurrentDirectory(uint bufferLength, StringBuilder buffer);\n    \n    // Import the GetLastError function from kernel32.dll\n    [DllImport(\"kernel32.dll\")]\n    static extern uint GetLastError();\n    \n    static void Main()\n    {\n        // Create a buffer to receive the current directory path\n        StringBuilder buffer = new StringBuilder(260); // MAX_PATH = 260\n        \n        // Call the native function\n        uint result = GetCurrentDirectory((uint)buffer.Capacity, buffer);\n        \n        if (result == 0)\n        {\n            // An error occurred\n            uint error = GetLastError();\n            Console.WriteLine($\"Error: {error}\");\n        }\n        else if (result > buffer.Capacity)\n        {\n            // Buffer too small\n            Console.WriteLine($\"Buffer too small. Need {result} characters.\");\n        }\n        else\n        {\n            // Success\n            Console.WriteLine($\"Current directory: {buffer}\");\n        }\n    }\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "Which of the following statements about stack and heap allocation in C# is correct?",
+      "options": {
+        "A": "Value types are always allocated on the stack, and reference types are always allocated on the heap",
+        "B": "Value types are allocated on the stack when used as local variables and on the heap when they are instance variables of a class",
+        "C": "Stack allocation is slower but more memory-efficient than heap allocation",
+        "D": "The heap is cleaned up automatically after each method execution by the garbage collector"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What is the purpose of the 'basicQos' method in RabbitMQ .NET client?",
+      "options": {
+        "A": "To set the maximum size of messages that can be processed",
+        "B": "To limit the number of unacknowledged messages that a consumer can have at a time",
+        "C": "To define the quality of service for establishing connections to the broker",
+        "D": "To set the minimum processing time required for each message"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing RabbitMQ.Client;\nusing RabbitMQ.Client.Events;\nusing System.Text;\n\nclass Program\n{\n    static void Main()\n    {\n        var factory = new ConnectionFactory() { HostName = \"localhost\" };\n        using (var connection = factory.CreateConnection())\n        using (var channel = connection.CreateModel())\n        {\n            // Declare a queue\n            channel.QueueDeclare(queue: \"task_queue\",\n                                durable: true,\n                                exclusive: false,\n                                autoDelete: false,\n                                arguments: null);\n            \n            // Set QoS - prefetch count of 1\n            // This tells RabbitMQ not to give more than one message to\n            // a worker at a time\n            channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);\n            \n            // Create a consumer\n            var consumer = new EventingBasicConsumer(channel);\n            \n            // Set up the consumer callback\n            consumer.Received += (model, ea) =>\n            {\n                var body = ea.Body.ToArray();\n                var message = Encoding.UTF8.GetString(body);\n                Console.WriteLine($\" [x] Received {message}\");\n                \n                // Simulate work\n                int dots = message.Split('.').Length - 1;\n                System.Threading.Thread.Sleep(dots * 1000);\n                \n                Console.WriteLine(\" [x] Done\");\n                \n                // Manual acknowledgment\n                channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);\n            };\n            \n            // Start consuming\n            channel.BasicConsume(queue: \"task_queue\",\n                               autoAck: false,\n                               consumer: consumer);\n            \n            Console.WriteLine(\"Press [enter] to exit.\");\n            Console.ReadLine();\n        }\n    }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Span<T> and Memory<T>?",
+      "options": {
+        "A": "123, 456",
+        "B": "123, 123",
+        "C": "456, 456",
+        "D": "Compilation error: Cannot convert Memory<T> to Span<T>"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        // Create an array of integers\n        int[] numbers = { 1, 2, 3 };\n        \n        // Create a Memory<int> from the array\n        Memory<int> memory = numbers;\n        \n        // Create a Span<int> from the Memory<int>\n        Span<int> span1 = memory.Span;\n        \n        // Print the sum of the elements\n        Console.Write(Sum(span1));\n        \n        // Modify the original array\n        numbers[0] = 4;\n        numbers[1] = 5;\n        numbers[2] = 6;\n        \n        // Create a new Span<int> from the Memory<int>\n        Span<int> span2 = memory.Span;\n        \n        // Print the sum of the elements again\n        Console.Write(\", \" + Sum(span1));\n    }\n    \n    static int Sum(Span<int> span)\n    {\n        int sum = 0;\n        for (int i = 0; i < span.Length; i++)\n        {\n            sum += span[i];\n        }\n        return sum;\n    }\n}"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using CancellationToken?",
+      "options": {
+        "A": "Task started, Task completed",
+        "B": "Task started, Task was canceled",
+        "C": "Task started, Task will be canceled soon, Task was canceled",
+        "D": "Task will be canceled soon, Task was canceled"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static async Task Main()\n    {\n        // Create a cancellation token source\n        using (var cts = new CancellationTokenSource())\n        {\n            // Get the token\n            CancellationToken token = cts.Token;\n            \n            // Start a task that checks for cancellation\n            Task task = DoWorkAsync(token);\n            \n            // Wait for 500ms before requesting cancellation\n            await Task.Delay(500);\n            Console.WriteLine(\"Task will be canceled soon\");\n            \n            // Request cancellation\n            cts.Cancel();\n            \n            try\n            {\n                // Wait for the task to complete or be canceled\n                await task;\n                Console.WriteLine(\"Task completed\");\n            }\n            catch (OperationCanceledException)\n            {\n                Console.WriteLine(\"Task was canceled\");\n            }\n            catch (Exception ex)\n            {\n                Console.WriteLine($\"Task failed: {ex.Message}\");\n            }\n        }\n    }\n    \n    static async Task DoWorkAsync(CancellationToken token)\n    {\n        Console.WriteLine(\"Task started\");\n        \n        // Simulate a long-running operation\n        for (int i = 0; i < 10; i++)\n        {\n            // Check for cancellation\n            token.ThrowIfCancellationRequested();\n            \n            // Simulate work\n            await Task.Delay(200, token);\n        }\n    }\n}"
+    }
+  ]
+}
