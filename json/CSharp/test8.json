@@ -1,0 +1,610 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "10 9 8 7 6",
+        "B": "10 9 8 7 6 5",
+        "C": "9 8 7 6 5",
+        "D": "10 9 8 7 6 5 4 3 2 1"
+      },
+      "correct_answer": "B",
+      "code_example": "for (int i = 10; i > 4; i--)\n{\n    Console.Write(i + \" \");\n}"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following LINQ query?",
+      "options": {
+        "A": "2 4 6 8 10",
+        "B": "1 2 3 4 5",
+        "C": "10 8 6 4 2",
+        "D": "2 4 6 8"
+      },
+      "correct_answer": "A",
+      "code_example": "int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };\nvar result = numbers.Where(n => n % 2 == 0);\nforeach (var n in result)\n{\n    Console.Write(n + \" \");\n}"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the correct way to call a method with named parameters where the order differs from the parameter declaration?",
+      "options": {
+        "A": "Calculate(b: 5, a: 10);",
+        "B": "Calculate(5, b: 10);",
+        "C": "Calculate(a = 10, b = 5);",
+        "D": "Calculate(\"b\": 5, \"a\": 10);"
+      },
+      "correct_answer": "A",
+      "code_example": "void Calculate(int a, int b)\n{\n    Console.WriteLine($\"a = {a}, b = {b}\");\n}"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Which code correctly reads the entire content of a text file named 'data.txt' in the current directory?",
+      "options": {
+        "A": "var content = File.Open(\"data.txt\");",
+        "B": "var content = File.ReadAllText(\"data.txt\");",
+        "C": "var content = File.ReadAllBytes(\"data.txt\");",
+        "D": "var content = File.ReadLines(\"data.txt\");"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Resource in use\nResource disposed",
+        "B": "Resource in use",
+        "C": "Resource disposed",
+        "D": "No output, the code will throw an exception"
+      },
+      "correct_answer": "A",
+      "code_example": "using (var resource = new Resource())\n{\n    Console.WriteLine(\"Resource in use\");\n}\n\nclass Resource : IDisposable\n{\n    public void Dispose()\n    {\n        Console.WriteLine(\"Resource disposed\");\n    }\n}"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which access modifier allows a class member to be accessed only from within the same assembly or from a derived class in another assembly?",
+      "options": {
+        "A": "private",
+        "B": "protected",
+        "C": "protected internal",
+        "D": "internal"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "A compilation error occurs"
+      },
+      "correct_answer": "B",
+      "code_example": "List<int> numbers = new List<int> { 1, 2, 3 };\nnumbers.Add(4);\nConsole.WriteLine(numbers.Count);"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Name: John, Age: 30",
+        "B": "Name: Alice, Age: 25",
+        "C": "Name: Alice, Age: 30",
+        "D": "A compilation error occurs"
+      },
+      "correct_answer": "C",
+      "code_example": "Person person = new Person(\"John\", 30);\nperson = new Person(\"Alice\");\nConsole.WriteLine($\"Name: {person.Name}, Age: {person.Age}\");\n\nclass Person\n{\n    public string Name { get; set; }\n    public int Age { get; set; }\n\n    public Person(string name, int age = 30)\n    {\n        Name = name;\n        Age = age;\n    }\n}"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a value type in C#?",
+      "options": {
+        "A": "int",
+        "B": "double",
+        "C": "string",
+        "D": "char"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "6",
+        "B": "3",
+        "C": "2",
+        "D": "7"
+      },
+      "correct_answer": "C",
+      "code_example": "int a = 5;\nint b = 3;\nint result = a & b;\nConsole.WriteLine(result);"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "A compilation error occurs",
+        "D": "An exception is thrown at runtime"
+      },
+      "correct_answer": "A",
+      "code_example": "Dictionary<string, int> ages = new Dictionary<string, int>\n{\n    { \"Alice\", 25 },\n    { \"Bob\", 30 },\n    { \"Charlie\", 35 }\n};\n\nHashSet<string> names = new HashSet<string> { \"Alice\", \"Bob\", \"David\" };\n\nConsole.WriteLine(names.Contains(\"Alice\"));"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "Which of the following correctly defines a custom exception class in C#?",
+      "options": {
+        "A": "public class MyException : Error { }",
+        "B": "public class MyException implements Exception { }",
+        "C": "public class MyException : Exception { }",
+        "D": "public class MyException extends Exception { }"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "3 elements",
+        "B": "6 elements",
+        "C": "A compilation error occurs",
+        "D": "An exception is thrown at runtime"
+      },
+      "correct_answer": "D",
+      "code_example": "int[][] jaggedArray = new int[3][];\njaggedArray[0] = new int[] { 1, 2, 3 };\njaggedArray[1] = new int[] { 4, 5 };\n\nConsole.WriteLine(jaggedArray[2].Length + \" elements\");"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "A compilation error occurs",
+        "D": "An exception is thrown at runtime"
+      },
+      "correct_answer": "B",
+      "code_example": "Person person = new Person();\nperson.Age = 20;\nConsole.WriteLine(person.Age);\n\nclass Person\n{\n    private int _age;\n    public int Age\n    {\n        get { return _age; }\n        set { _age = value; }\n    }\n}"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "Which of the following statements about .NET is correct?",
+      "options": {
+        "A": ".NET Framework is cross-platform while .NET Core is Windows-only",
+        "B": ".NET 5+ is a continuation of .NET Framework while .NET Core has been discontinued",
+        "C": ".NET Core was designed to be cross-platform, while .NET Framework is primarily for Windows",
+        "D": ".NET 5+ is a completely new framework unrelated to either .NET Framework or .NET Core"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "5",
+        "B": "2",
+        "C": "1",
+        "D": "3"
+      },
+      "correct_answer": "B",
+      "code_example": "int x = 7;\nint y = 3;\nint result = x % y;\nConsole.WriteLine(result);"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following LINQ query with Entity Framework Core?",
+      "options": {
+        "A": "A list of all students, including those without courses",
+        "B": "A list of all courses, including those without students",
+        "C": "A list of students who are enrolled in at least one course",
+        "D": "A list of courses that have at least one student enrolled"
+      },
+      "correct_answer": "C",
+      "code_example": "var query = context.Students\n    .Where(s => s.Enrollments.Any())\n    .Select(s => new\n    {\n        StudentName = s.Name,\n        CourseCount = s.Enrollments.Count\n    });"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which statement about Garbage Collection generations in .NET is correct?",
+      "options": {
+        "A": "Gen0 objects are the oldest objects in memory",
+        "B": "Objects that survive a Gen1 collection are promoted to Gen0",
+        "C": "Gen2 contains long-lived objects that have survived multiple garbage collections",
+        "D": "The garbage collector always collects all generations at once"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "1 4 9 16 25",
+        "B": "1 2 3 4 5",
+        "C": "2 4 6 8 10",
+        "D": "0 1 4 9 16"
+      },
+      "correct_answer": "A",
+      "code_example": "Func<int, int> square = x => x * x;\n\nvar numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar squares = numbers.Select(square);\n\nforeach (var num in squares)\n{\n    Console.Write(num + \" \");\n}"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "3",
+        "B": "2",
+        "C": "1",
+        "D": "A runtime exception will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System.Collections.Concurrent;\n\nvar dict = new ConcurrentDictionary<string, int>();\ndict.TryAdd(\"A\", 1);\ndict.TryAdd(\"B\", 2);\n\nParallel.ForEach(new[] { \"B\", \"C\" }, key =>\n{\n    dict.TryAdd(key, 3);\n});\n\nConsole.WriteLine(dict.Count);"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Which dependency injection lifetime is most appropriate for a service that maintains state for a specific HTTP request?",
+      "options": {
+        "A": "Transient",
+        "B": "Singleton",
+        "C": "Scoped",
+        "D": "Static"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which of the following best demonstrates the Interface Segregation Principle?",
+      "options": {
+        "A": "Creating a single interface with all possible methods that a class might need",
+        "B": "Splitting large interfaces into smaller, more specific ones so clients only need to know about methods they use",
+        "C": "Having all interfaces inherit from a common base interface",
+        "D": "Making all methods in an interface public"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following LINQ query?",
+      "options": {
+        "A": "Alice: 25\nBob: 30\nCharlie: 22\nDavid: 28",
+        "B": "Alice: 25\nBob: 30\nCharlie: 22",
+        "C": "Bob: 30\nDavid: 28\nAlice: 25\nCharlie: 22",
+        "D": "Bob: 30\nDavid: 28\nAlice: 25"
+      },
+      "correct_answer": "D",
+      "code_example": "var people = new List<Person>\n{\n    new Person { Name = \"Alice\", Age = 25 },\n    new Person { Name = \"Bob\", Age = 30 },\n    new Person { Name = \"Charlie\", Age = 22 },\n    new Person { Name = \"David\", Age = 28 }\n};\n\nvar result = people\n    .Where(p => p.Age > 23)\n    .OrderByDescending(p => p.Age)\n    .Select(p => $\"{p.Name}: {p.Age}\");\n\nforeach (var item in result)\n{\n    Console.WriteLine(item);\n}\n\nclass Person\n{\n    public string Name { get; set; }\n    public int Age { get; set; }\n}"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "Which approach in Entity Framework Core allows you to define your database schema in code first and then generate the database from it?",
+      "options": {
+        "A": "Database-First",
+        "B": "Model-First",
+        "C": "Code-First",
+        "D": "Schema-First"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following LINQ query?",
+      "options": {
+        "A": "Course: Math, Students: 3\nCourse: Physics, Students: 2\nCourse: Chemistry, Students: 1",
+        "B": "Course: Math, Students: Alice,Bob,Charlie\nCourse: Physics, Students: Alice,David\nCourse: Chemistry, Students: Bob",
+        "C": "An exception will be thrown at runtime",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B",
+      "code_example": "var students = new List<Student>\n{\n    new Student { Id = 1, Name = \"Alice\" },\n    new Student { Id = 2, Name = \"Bob\" },\n    new Student { Id = 3, Name = \"Charlie\" },\n    new Student { Id = 4, Name = \"David\" }\n};\n\nvar enrollments = new List<Enrollment>\n{\n    new Enrollment { StudentId = 1, CourseId = 101 },\n    new Enrollment { StudentId = 1, CourseId = 102 },\n    new Enrollment { StudentId = 2, CourseId = 101 },\n    new Enrollment { StudentId = 2, CourseId = 103 },\n    new Enrollment { StudentId = 3, CourseId = 101 },\n    new Enrollment { StudentId = 4, CourseId = 102 }\n};\n\nvar courses = new List<Course>\n{\n    new Course { Id = 101, Name = \"Math\" },\n    new Course { Id = 102, Name = \"Physics\" },\n    new Course { Id = 103, Name = \"Chemistry\" }\n};\n\nvar query = courses.GroupJoin(\n    enrollments,\n    c => c.Id,\n    e => e.CourseId,\n    (course, courseEnrollments) =>\n    {\n        var studentNames = courseEnrollments\n            .Join(\n                students,\n                e => e.StudentId,\n                s => s.Id,\n                (e, s) => s.Name\n            );\n\n        return $\"Course: {course.Name}, Students: {string.Join(\",\", studentNames)}\";\n    });\n\nforeach (var result in query)\n{\n    Console.WriteLine(result);\n}\n\nclass Student\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n}\n\nclass Course\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n}\n\nclass Enrollment\n{\n    public int StudentId { get; set; }\n    public int CourseId { get; set; }\n}"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "In ASP.NET Core, which attribute is used to specify that a controller action should respond to HTTP POST requests?",
+      "options": {
+        "A": "[Post]",
+        "B": "[HttpPost]",
+        "C": "[PostMethod]",
+        "D": "[PostAction]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "10",
+        "B": "Hello10",
+        "C": "Hello 10",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B",
+      "code_example": "class Program\n{\n    static void Main()\n    {\n        Console.WriteLine(Combine(\"Hello\", 10));\n    }\n\n    static string Combine<T>(string text, T value)\n    {\n        return text + value.ToString();\n    }\n}"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is the key difference between Task<T> and void return types in asynchronous methods?",
+      "options": {
+        "A": "Task<T> methods can be awaited while void methods cannot",
+        "B": "Task<T> methods can return values while void methods cannot",
+        "C": "Task<T> methods run synchronously while void methods run asynchronously",
+        "D": "Task<T> methods can be cancelled while void methods cannot"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Compilation error: Cannot set Name property",
+        "B": "John\n30",
+        "C": "John\nCompilation error: Cannot set Age property",
+        "D": "Compilation error: Properties must have both getter and setter"
+      },
+      "correct_answer": "B",
+      "code_example": "var person = new Person\n{\n    Name = \"John\",\n    Age = 30\n};\n\nConsole.WriteLine(person.Name);\nConsole.WriteLine(person.Age);\n\nclass Person\n{\n    public string Name { get; set; }\n    public int Age { get; set; }\n}"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "In ASP.NET Core, what is the correct order of middleware execution in the request pipeline?",
+      "options": {
+        "A": "The order doesn't matter",
+        "B": "Middleware is executed in reverse order of registration",
+        "C": "Middleware is executed in the same order it is registered in the Configure method",
+        "D": "Middleware is executed based on priority settings"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Base.DoWork()\nDerived.DoWork()",
+        "B": "Derived.DoWork()",
+        "C": "Base.DoWork()",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B",
+      "code_example": "class Program\n{\n    static void Main()\n    {\n        Base b = new Derived();\n        b.DoWork();\n    }\n}\n\nclass Base\n{\n    public virtual void DoWork()\n    {\n        Console.WriteLine(\"Base.DoWork()\");\n    }\n}\n\nclass Derived : Base\n{\n    public new void DoWork()\n    {\n        Console.WriteLine(\"Derived.DoWork()\");\n    }\n}"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "The code will not compile",
+        "B": "Button clicked!",
+        "C": "No output, the event is never triggered",
+        "D": "An exception is thrown at runtime"
+      },
+      "correct_answer": "B",
+      "code_example": "class Program\n{\n    static void Main()\n    {\n        var button = new Button();\n        button.OnClick += (sender, e) => Console.WriteLine(\"Button clicked!\");\n        button.Click();\n    }\n}\n\nclass Button\n{\n    public event EventHandler OnClick;\n    \n    public void Click()\n    {\n        OnClick?.Invoke(this, EventArgs.Empty);\n    }\n}"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which Kubernetes resource is most appropriate for deploying a stateless .NET web application that needs to scale horizontally based on CPU utilization?",
+      "options": {
+        "A": "StatefulSet",
+        "B": "Deployment",
+        "C": "DaemonSet",
+        "D": "Job"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using role-based authentication?",
+      "options": {
+        "A": "Access granted",
+        "B": "Access denied",
+        "C": "Authorization failed",
+        "D": "The code will throw a SecurityException"
+      },
+      "correct_answer": "B",
+      "code_example": "using Microsoft.AspNetCore.Authorization;\nusing Microsoft.AspNetCore.Mvc;\n\n[ApiController]\n[Route(\"api/[controller]\")]\npublic class SecretController : ControllerBase\n{\n    [HttpGet]\n    [Authorize(Roles = \"Admin\")]\n    public IActionResult GetSecret()\n    {\n        return Ok(\"Secret data\");\n    }\n}\n\n// Assuming the user has only the 'User' role and not 'Admin'\n// What happens when they make a GET request to api/Secret?"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using P/Invoke?",
+      "options": {
+        "A": "The code will compile but throw a DllNotFoundException at runtime",
+        "B": "The code will compile and print 'File exists: True'",
+        "C": "The code will not compile due to incorrect P/Invoke signature",
+        "D": "The code will compile but throw an EntryPointNotFoundException at runtime"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Runtime.InteropServices;\n\nclass Program\n{\n    [DllImport(\"kernel32.dll\", SetLastError = true, CharSet = CharSet.Unicode)]\n    [return: MarshalAs(UnmanagedType.Bool)]\n    static extern bool FileExists(string lpFileName);\n\n    static void Main()\n    {\n        bool exists = FileExists(\"C:\\\\Windows\\\\System32\\\\kernel32.dll\");\n        Console.WriteLine($\"File exists: {exists}\");\n    }\n}"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using CancellationToken?",
+      "options": {
+        "A": "Processing completed!",
+        "B": "Operation was canceled",
+        "C": "The code will hang indefinitely",
+        "D": "TaskCanceledException will be thrown but not caught"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static async Task Main()\n    {\n        var cts = new CancellationTokenSource();\n        var token = cts.Token;\n        \n        var task = LongRunningOperation(token);\n        \n        // Cancel after 100ms\n        await Task.Delay(100);\n        cts.Cancel();\n        \n        try\n        {\n            await task;\n            Console.WriteLine(\"Processing completed!\");\n        }\n        catch (OperationCanceledException)\n        {\n            Console.WriteLine(\"Operation was canceled\");\n        }\n    }\n    \n    static async Task LongRunningOperation(CancellationToken token)\n    {\n        await Task.Delay(5000, token); // This will be canceled\n        Console.WriteLine(\"This won't be reached\");\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "Which of the following statements about distributed caching with Redis in .NET applications is FALSE?",
+      "options": {
+        "A": "Redis can be used as a distributed lock mechanism for coordinating access to shared resources",
+        "B": "Redis automatically handles connection failover when configured in a high-availability setup",
+        "C": "The IDistributedCache interface in ASP.NET Core supports both Redis and SQL Server as backing stores",
+        "D": "Redis can only store string values, making it necessary to serialize complex objects before caching"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing the Singleton pattern?",
+      "options": {
+        "A": "Same instance: True",
+        "B": "Same instance: False",
+        "C": "The code will throw a MemberAccessException",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\npublic sealed class Singleton\n{\n    private static readonly Lazy<Singleton> instance =\n        new Lazy<Singleton>(() => new Singleton());\n    \n    private Singleton() { }\n    \n    public static Singleton Instance => instance.Value;\n    \n    public Guid Id { get; } = Guid.NewGuid();\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var instance1 = Singleton.Instance;\n        var instance2 = Singleton.Instance;\n        \n        Console.WriteLine($\"Same instance: {instance1.Id == instance2.Id}\");\n    }\n}"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "When implementing the Repository Pattern, which of the following approaches is considered a best practice?",
+      "options": {
+        "A": "Exposing IQueryable<T> from repository methods to allow callers to build and optimize their own queries",
+        "B": "Implementing a generic repository interface for all entity types to minimize code duplication",
+        "C": "Creating specific repository interfaces for each domain entity with methods that reflect domain-specific operations",
+        "D": "Including business logic within repository implementations to ensure consistent application of business rules"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Parallel.Invoke()?",
+      "options": {
+        "A": "The numbers 1 through 5 in sequential order: 1 2 3 4 5",
+        "B": "The numbers 1 through 5 in a potentially random order",
+        "C": "The code will throw an AggregateException",
+        "D": "The code will hang indefinitely due to a deadlock"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static void Main()\n    {\n        Parallel.Invoke(\n            () => PrintWithDelay(1),\n            () => PrintWithDelay(2),\n            () => PrintWithDelay(3),\n            () => PrintWithDelay(4),\n            () => PrintWithDelay(5)\n        );\n    }\n    \n    static void PrintWithDelay(int num)\n    {\n        // Random delay between 10-100ms\n        Thread.Sleep(new Random().Next(10, 100));\n        Console.Write($\"{num} \");\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Activator.CreateInstance()?",
+      "options": {
+        "A": "42",
+        "B": "Hello from CustomClass!",
+        "C": "The code will throw a MissingMethodException",
+        "D": "The code will throw an ArgumentException"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Type type = typeof(CustomClass);\n        // Attempting to create an instance using a non-existent constructor\n        var instance = Activator.CreateInstance(type, new object[] { \"test\" });\n        Console.WriteLine(instance);\n    }\n}\n\npublic class CustomClass\n{\n    // Only has a parameterless constructor\n    public CustomClass()\n    {\n        Console.WriteLine(\"Hello from CustomClass!\");\n    }\n    \n    public override string ToString()\n    {\n        return \"42\";\n    }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "In token-based authentication with JWT (JSON Web Tokens), which of the following statements is TRUE?",
+      "options": {
+        "A": "The server needs to maintain session state for each authenticated user",
+        "B": "JWTs cannot contain user claims or permissions",
+        "C": "Sensitive information like passwords should be stored in the JWT payload",
+        "D": "JWT validation can be performed without making a database query"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using COM Interop?",
+      "options": {
+        "A": "The code will not compile due to missing COM references",
+        "B": "Hello, World!",
+        "C": "The code will throw a COMException at runtime",
+        "D": "Microsoft Word will open but no text will be inserted"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Runtime.InteropServices;\n\nclass Program\n{\n    [ComImport]\n    [Guid(\"00020970-0000-0000-C000-000000000046\")]\n    [InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]\n    public interface ITextDocument\n    {\n        void SetText(string text);\n        string GetText();\n    }\n\n    static void Main()\n    {\n        // In a real scenario, this would be a COM object\n        // Here we'll simulate it for demonstration purposes\n        var mockDocument = new MockTextDocument();\n        ITextDocument document = mockDocument;\n        \n        document.SetText(\"Hello, World!\");\n        Console.WriteLine(document.GetText());\n    }\n}\n\n// This is a mock implementation for testing purposes\npublic class MockTextDocument : ITextDocument\n{\n    private string text;\n    \n    public void SetText(string text)\n    {\n        this.text = text;\n    }\n    \n    public string GetText()\n    {\n        return text;\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using ArrayPool<T>?",
+      "options": {
+        "A": "5 5 5 0 0",
+        "B": "5 5 5 5 5",
+        "C": "5 5 5 5 0",
+        "D": "The code will throw an ArgumentOutOfRangeException"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Buffers;\n\nclass Program\n{\n    static void Main()\n    {\n        // Get an array with at least 5 elements from the pool\n        int[] rentedArray = ArrayPool<int>.Shared.Rent(5);\n        \n        try\n        {\n            // Fill only the first 3 elements\n            for (int i = 0; i < 3; i++)\n            {\n                rentedArray[i] = 5;\n            }\n            \n            // Print the first 5 elements\n            for (int i = 0; i < 5; i++)\n            {\n                Console.Write($\"{rentedArray[i]} \");\n            }\n        }\n        finally\n        {\n            // Return the array to the pool\n            ArrayPool<int>.Shared.Return(rentedArray);\n        }\n    }\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using the dynamic type?",
+      "options": {
+        "A": "10",
+        "B": "RuntimeBinderException will be thrown",
+        "C": "The code will not compile",
+        "D": "\"10\""
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        dynamic obj = new { Name = \"Test\", Value = 10 };\n        \n        try\n        {\n            // Attempting to access a non-existent member\n            Console.WriteLine(obj.Count);\n        }\n        catch (Exception ex)\n        {\n            Console.WriteLine(ex.GetType().Name);\n        }\n    }\n}"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating string interning?",
+      "options": {
+        "A": "True True",
+        "B": "True False",
+        "C": "False True",
+        "D": "False False"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Text;\n\nclass Program\n{\n    static void Main()\n    {\n        // First test: literal strings\n        string s1 = \"Hello\";\n        string s2 = \"Hello\";\n        bool test1 = Object.ReferenceEquals(s1, s2);\n        \n        // Second test: dynamically constructed strings\n        StringBuilder sb = new StringBuilder();\n        sb.Append(\"Hel\");\n        sb.Append(\"lo\");\n        string s3 = sb.ToString();\n        bool test2 = Object.ReferenceEquals(s1, s3);\n        \n        Console.WriteLine($\"{test1} {test2}\");\n    }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "According to HTTP standards, which HTTP status code would be most appropriate to return when a user attempts to access a resource they don't have permission to view?",
+      "options": {
+        "A": "400 Bad Request",
+        "B": "401 Unauthorized",
+        "C": "403 Forbidden",
+        "D": "404 Not Found"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which of the following statements about CQRS (Command Query Responsibility Segregation) is FALSE?",
+      "options": {
+        "A": "CQRS necessarily requires implementing event sourcing",
+        "B": "CQRS separates read operations from write operations",
+        "C": "CQRS can improve performance by optimizing read and write models separately",
+        "D": "CQRS can be implemented gradually in specific parts of an application"
+      },
+      "correct_answer": "A"
+    }
+  ]
+}
