@@ -1,0 +1,612 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "Which method will select the first element with the class 'user-profile' from the DOM?",
+      "options": {
+        "A": "document.getElementByClass('user-profile')",
+        "B": "document.querySelector('.user-profile')",
+        "C": "document.getElementById('user-profile')",
+        "D": "document.getElementsByClassName('user-profile')[0]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const fruits = ['apple', 'banana', 'cherry', 'date'];\nconst result = fruits.filter(fruit => fruit.length > 5);\nconsole.log(result);",
+      "options": {
+        "A": "['apple', 'cherry']",
+        "B": "['banana', 'cherry']",
+        "C": "['banana']",
+        "D": "['banana', 'cherry', 'date']"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What's the correct way to create a new object in JavaScript?",
+      "options": {
+        "A": "let obj = Object.create()",
+        "B": "let obj = new Object",
+        "C": "let obj = {}",
+        "D": "let obj = Object.new()"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const numbers = [5, 10, 15, 20];\nconst sum = numbers.reduce((total, num) => total + num, 0);\nconsole.log(sum);",
+      "options": {
+        "A": "5",
+        "B": "50",
+        "C": "25",
+        "D": "30"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "let promise = new Promise((resolve, reject) => {\n  setTimeout(() => resolve('Success!'), 100);\n});\n\npromise\n  .then(result => console.log(result))\n  .catch(error => console.log('Error:', error))\n  .finally(() => console.log('Finished'));",
+      "options": {
+        "A": "Success! Error: undefined Finished",
+        "B": "Success! Finished",
+        "C": "Error: undefined Finished",
+        "D": "Finished Success!"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "function greet(name = 'Guest') {\n  return `Hello, ${name}!`;\n}\n\nconsole.log(greet());\nconsole.log(greet('John'));",
+      "options": {
+        "A": "Hello, undefined! Hello, John!",
+        "B": "Hello, Guest! Hello, John!",
+        "C": "Hello, ! Hello, John!",
+        "D": "Error: name is not defined Hello, John!"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(true && false);",
+      "options": {
+        "A": "true",
+        "B": "false",
+        "C": "undefined",
+        "D": "null"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const originals = [1, 2, 3];\nconst copied = [...originals, 4, 5];\nconsole.log(copied);",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[...originals, 4, 5]",
+        "C": "[1, 2, 3, [4, 5]]",
+        "D": "Error: Spread operator cannot be used with arrays"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the correct way to export a function from a module in Node.js?",
+      "options": {
+        "A": "export function myFunction() {}",
+        "B": "exports.myFunction = function() {}",
+        "C": "module.export = myFunction;",
+        "D": "exports = { myFunction: function() {} }"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const element = document.getElementById('demo');\nelement.textContent = 'Hello';\nelement.innerHTML = '<strong>World</strong>';",
+      "options": {
+        "A": "The element will display 'Hello' in bold text",
+        "B": "The element will display 'HelloWorld' with 'World' in bold text",
+        "C": "The element will display 'World' in bold text",
+        "D": "The element will display '<strong>World</strong>' as plain text"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const http = require('http');\nconst server = http.createServer((req, res) => {\n  res.statusCode = 200;\n  res.setHeader('Content-Type', 'text/plain');\n  res.end('Hello World');\n});\nserver.listen(3000, 'localhost');\nconsole.log('Server running at http://localhost:3000/');",
+      "options": {
+        "A": "The code will open a browser displaying 'Hello World'",
+        "B": "The code will log 'Server running at http://localhost:3000/' to the console and start a server",
+        "C": "The code will throw an error because 'http' is not a valid module",
+        "D": "The code will only log the server URL but not actually start a server"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const person = {\n  name: 'John',\n  age: 30,\n  job: 'Developer'\n};\n\nconst { name, job } = person;\nconsole.log(name, job);",
+      "options": {
+        "A": "John Developer",
+        "B": "undefined undefined",
+        "C": "{ name: 'John', job: 'Developer' }",
+        "D": "Error: Invalid destructuring assignment"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "function processValues([first, , third]) {\n  return [first, third];\n}\n\nconst values = [10, 20, 30, 40];\nconsole.log(processValues(values));",
+      "options": {
+        "A": "[10, 20]",
+        "B": "[10, 30]",
+        "C": "[10, 20, 30]",
+        "D": "[10, undefined]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const numbers = [1, 2, 3, 4, 5];\nlet sum = 0;\n\nnumbers.forEach(number => {\n  if (number % 2 === 0) {\n    sum += number;\n  }\n});\n\nconsole.log(sum);",
+      "options": {
+        "A": "15",
+        "B": "9",
+        "C": "6",
+        "D": "0"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(Boolean('false'));",
+      "options": {
+        "A": "false",
+        "B": "true",
+        "C": "undefined",
+        "D": "NaN"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log('5' == 5);\nconsole.log('5' === 5);",
+      "options": {
+        "A": "true true",
+        "B": "false false",
+        "C": "true false",
+        "D": "false true"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What is the best practice for versioning a RESTful API?",
+      "options": {
+        "A": "Include the version in the URL path, like /api/v1/users",
+        "B": "Use a custom HTTP header like 'API-Version: 1'",
+        "C": "Include the version as a query parameter, like /api/users?version=1",
+        "D": "All of the above are valid approaches depending on the requirements"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "let value1 = null;\nlet value2 = undefined;\nlet value3 = '';\n\nconsole.log(value1 ?? 'default');\nconsole.log(value2 ?? 'default');\nconsole.log(value3 ?? 'default');",
+      "options": {
+        "A": "null default default",
+        "B": "default default default",
+        "C": "default default ''",
+        "D": "null undefined ''"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "In the JavaScript Event Loop, which of the following is processed first?",
+      "options": {
+        "A": "setTimeout callback with 0ms delay",
+        "B": "Promise.resolve().then callback",
+        "C": "requestAnimationFrame callback",
+        "D": "setImmediate callback"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following Express middleware code?",
+      "code_example": "const express = require('express');\nconst app = express();\n\napp.use((req, res, next) => {\n  console.log('Middleware 1');\n  next();\n});\n\napp.use((req, res, next) => {\n  console.log('Middleware 2');\n  // No next() call\n});\n\napp.get('/', (req, res) => {\n  console.log('Route handler');\n  res.send('Hello World');\n});\n\n// When a request is made to '/'",
+      "options": {
+        "A": "Middleware 1 Middleware 2 Route handler",
+        "B": "Middleware 1 Middleware 2",
+        "C": "Middleware 1 Route handler",
+        "D": "Route handler"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "const person = {\n  name: 'John',\n  greet: function() {\n    return `Hello, ${this.name}`;\n  }\n};\n\nconst greetFn = person.greet;\nconsole.log(greetFn());",
+      "options": {
+        "A": "Hello, John",
+        "B": "Hello, undefined",
+        "C": "Hello, null",
+        "D": "TypeError: Cannot read property 'name' of undefined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following Express server code?",
+      "code_example": "const express = require('express');\nconst app = express();\n\napp.get('/api/users', (req, res) => {\n  res.json({ users: ['Alice', 'Bob'] });\n});\n\napp.listen(3000, () => {\n  console.log('Server running on port 3000');\n});\n\n// What is sent to the client when making a GET request to /api/users?",
+      "options": {
+        "A": "A plain text response with 'users: Alice, Bob'",
+        "B": "A JSON response with { users: ['Alice', 'Bob'] }",
+        "C": "A 404 error because no content type is specified",
+        "D": "An empty response with a 200 status code"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "When using morgan middleware in Express, what does the 'combined' format log?",
+      "options": {
+        "A": "Only the HTTP method and URL",
+        "B": "HTTP method, URL, status code, and response time",
+        "C": "Apache-style logs including remote address, date, method, URL, status, and more",
+        "D": "Only errors and warnings"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the result when the following rate limiter middleware is applied to an Express app?",
+      "code_example": "const rateLimit = require('express-rate-limit');\n\nconst limiter = rateLimit({\n  windowMs: 15 * 60 * 1000, // 15 minutes\n  max: 100 // limit each IP to 100 requests per windowMs\n});\n\napp.use('/api/', limiter);",
+      "options": {
+        "A": "Each IP can make unlimited requests to routes not starting with '/api/'",
+        "B": "Each IP can make a maximum of 100 requests every 15 minutes to any route",
+        "C": "Each IP can make a maximum of 100 requests every 15 minutes to routes starting with '/api/'",
+        "D": "The server will automatically block all IPs that exceed 100 total requests"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "When using node-cache for API response caching, what's the correct way to retrieve a cached value with a fallback?",
+      "code_example": "const NodeCache = require('node-cache');\nconst cache = new NodeCache({ stdTTL: 600 });\n\nfunction getData(key) {\n  // Check the cache first\n  const value = cache.get(key);\n  if (value) {\n    return Promise.resolve(value);\n  }\n  \n  // If not in cache, fetch from API and store\n  return fetchFromAPI(key)\n    .then(data => {\n      cache.set(key, data);\n      return data;\n    });\n}",
+      "options": {
+        "A": "The code has an error: 'cache.get' is asynchronous and needs a callback",
+        "B": "The code is inefficient: it should use cache.mget for better performance",
+        "C": "The code is correct and implements a proper cache-aside pattern",
+        "D": "The code has a race condition: multiple identical requests will trigger multiple API calls"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the result of the following code?",
+      "code_example": "const buttonClick = () => {\n  console.log('Button clicked');\n};\n\nconst debouncedClick = _.debounce(buttonClick, 300);\nconst throttledClick = _.throttle(buttonClick, 300);\n\n// User clicks the button 5 times within 200ms\n// How many times will each function log to console?",
+      "options": {
+        "A": "Debounced: 0, Throttled: 1",
+        "B": "Debounced: 1, Throttled: 1",
+        "C": "Debounced: 1, Throttled: 2",
+        "D": "Debounced: 5, Throttled: 5"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "Which HTTP method should be used to update a specific resource when you need to replace it entirely?",
+      "options": {
+        "A": "POST",
+        "B": "PUT",
+        "C": "PATCH",
+        "D": "UPDATE"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following nested callback code?",
+      "code_example": "function getData(callback) {\n  setTimeout(() => {\n    callback('Data');\n  }, 100);\n}\n\nfunction processData(data, callback) {\n  setTimeout(() => {\n    callback(`Processed ${data}`);\n  }, 100);\n}\n\ngetData(data => {\n  console.log(data);\n  processData(data, result => {\n    console.log(result);\n  });\n});\n\nconsole.log('Starting');",
+      "options": {
+        "A": "Starting Data Processed Data",
+        "B": "Data Processed Data Starting",
+        "C": "Starting Processed Data Data",
+        "D": "Data Starting Processed Data"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "const fs = require('fs');\n\ntry {\n  const data = fs.readFileSync('example.txt', 'utf8');\n  console.log('File read successfully');\n  process.nextTick(() => {\n    console.log('Next tick');\n  });\n  console.log('After next tick');\n} catch (err) {\n  console.error('Error reading file');\n}",
+      "options": {
+        "A": "File read successfully Next tick After next tick",
+        "B": "File read successfully After next tick Next tick",
+        "C": "Error reading file",
+        "D": "Next tick File read successfully After next tick"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What's the most efficient way to process a large file line by line in Node.js?",
+      "options": {
+        "A": "Use fs.readFile() to load the entire file into memory first",
+        "B": "Use fs.createReadStream() with the 'line' event",
+        "C": "Use fs.createReadStream() with 'data' events and process each chunk",
+        "D": "Use fs.createReadStream() with readline.createInterface() for line-by-line processing"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following Express Router code?",
+      "code_example": "const express = require('express');\nconst app = express();\nconst router = express.Router();\n\nrouter.get('/users', (req, res) => {\n  res.send('User list');\n});\n\nrouter.get('/users/:id', (req, res) => {\n  res.send(`User: ${req.params.id}`);\n});\n\napp.use('/api', router);\napp.listen(3000);\n\n// Which URL would return 'User: 123'?",
+      "options": {
+        "A": "http://localhost:3000/users/123",
+        "B": "http://localhost:3000/api/users/123",
+        "C": "http://localhost:3000/api/users?id=123",
+        "D": "http://localhost:3000/users?id=123"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following Express error handling middleware?",
+      "code_example": "const express = require('express');\nconst app = express();\n\napp.get('/data', (req, res, next) => {\n  try {\n    // Simulate an error\n    throw new Error('Something went wrong');\n  } catch (err) {\n    next(err);\n  }\n});\n\napp.use((err, req, res, next) => {\n  console.error(err.message);\n  res.status(500).json({ error: 'Server error' });\n});\n\n// When a request is made to /data",
+      "options": {
+        "A": "The server crashes with an uncaught exception",
+        "B": "The server responds with status 500 and { error: 'Server error' }",
+        "C": "The server responds with status 200 and the error message",
+        "D": "The request hangs because the route handler doesn't call res.send()"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which statement about Just-In-Time (JIT) compilation in JavaScript engines is correct?",
+      "options": {
+        "A": "JIT compilation always produces slower code than interpreted execution",
+        "B": "JIT compilation translates JavaScript directly to machine code before execution begins",
+        "C": "JIT compilation identifies hot code paths and optimizes them during runtime",
+        "D": "JIT compilation eliminates the need for garbage collection in JavaScript"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates WeakMap behavior?",
+      "options": {
+        "A": "true, true",
+        "B": "true, false",
+        "C": "Object, undefined",
+        "D": "{}, {}"
+      },
+      "correct_answer": "B",
+      "code_example": "let obj = { name: 'example' };\nlet map = new Map();\nlet weakMap = new WeakMap();\n\nmap.set(obj, 'stored in map');\nweakMap.set(obj, 'stored in weakMap');\n\nconsole.log(map.has(obj), weakMap.has(obj));\n\n// Remove the reference to the object\nobj = null;\n\n// Force garbage collection (note: this is just for illustration, \n// actual GC can't be forced reliably in JavaScript)\nsetTimeout(() => {\n  console.log(map.has({ name: 'example' }), weakMap.has({ name: 'example' }));\n}, 0);"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Which of the following is the correct Dockerfile for a Node.js application that needs to run as a non-root user for security?",
+      "options": {
+        "A": "FROM node:18-alpine\nWORKDIR /app\nCOPY package*.json ./\nRUN npm install\nCOPY . .\nEXPOSE 3000\nCMD [\"node\", \"app.js\"]",
+        "B": "FROM node:18-alpine\nWORKDIR /app\nCOPY . .\nRUN npm install\nEXPOSE 3000\nUSER node\nCMD [\"node\", \"app.js\"]",
+        "C": "FROM node:18-alpine\nWORKDIR /app\nCOPY package*.json ./\nRUN npm install\nCOPY --chown=node:node . .\nUSER node\nEXPOSE 3000\nCMD [\"node\", \"app.js\"]",
+        "D": "FROM node:18-alpine\nWORKDIR /app\nUSER node\nCOPY . .\nRUN npm install\nEXPOSE 3000\nCMD [\"npm\", \"start\"]"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be logged to the console when executing this code that demonstrates WeakSet behavior?",
+      "options": {
+        "A": "true true",
+        "B": "true false",
+        "C": "false false",
+        "D": "Error: Invalid value used in WeakSet"
+      },
+      "correct_answer": "B",
+      "code_example": "const regularSet = new Set();\nconst weakSet = new WeakSet();\n\n// Create objects\nlet obj1 = { name: 'object1' };\nlet obj2 = { name: 'object2' };\n\n// Add to sets\nregularSet.add(obj1);\nweakSet.add(obj2);\n\n// Check membership\nconsole.log(regularSet.has(obj1), weakSet.has(obj2));\n\n// Remove reference to obj2\nobj2 = null;\n\n// Force garbage collection would happen here in real environment\n\n// Check membership again (immediately, though in practice would need to wait for GC)\nconsole.log(regularSet.has(obj1), weakSet.has({ name: 'object2' }));"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "Which of the following docker-compose.yml configurations correctly sets up a Node.js application with MongoDB and Redis, including proper networking and volume persistence?",
+      "options": {
+        "A": "version: '3'\nservices:\n  app:\n    build: .\n    ports:\n      - '3000:3000'\n    environment:\n      - MONGO_URI=mongodb://mongo:27017/myapp\n      - REDIS_URI=redis://redis:6379\n    depends_on:\n      - mongo\n      - redis\n  mongo:\n    image: mongo:latest\n    volumes:\n      - mongo-data:/data/db\n  redis:\n    image: redis:alpine\n    volumes:\n      - redis-data:/data\nvolumes:\n  mongo-data:\n  redis-data:",
+        "B": "version: '3'\nservices:\n  app:\n    build: .\n    ports:\n      - '3000:3000'\n    links:\n      - mongo\n      - redis\n  mongo:\n    image: mongo:latest\n  redis:\n    image: redis:alpine",
+        "C": "version: '3'\nservices:\n  app:\n    build: .\n    ports:\n      - '3000:3000'\n    environment:\n      - MONGO_URI=mongodb://localhost:27017/myapp\n      - REDIS_URI=redis://localhost:6379\n    network_mode: host\n  mongo:\n    image: mongo:latest\n    network_mode: host\n  redis:\n    image: redis:alpine\n    network_mode: host",
+        "D": "version: '3'\nservices:\n  app:\n    build: .\n    ports:\n      - '3000:3000'\n    environment:\n      - MONGO_URI=mongodb://mongo:27017/myapp\n      - REDIS_URI=redis://redis:6379\n  mongo:\n    image: mongo:latest\n    volumes:\n      - ./data/mongo:/data/db\n  redis:\n    image: redis:alpine\n    volumes:\n      - ./data/redis:/data"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of this code that demonstrates streams for handling large files in Node.js?",
+      "options": {
+        "A": "Memory usage exceeded",
+        "B": "Data processing complete: 10485760",
+        "C": "Data processing complete: 1048576",
+        "D": "Error: Stream not readable"
+      },
+      "correct_answer": "B",
+      "code_example": "const fs = require('fs');\nconst { Transform } = require('stream');\n\n// Create a mock file of approximately 10MB\nconst writeStream = fs.createWriteStream('large-file.txt');\nfor (let i = 0; i < 10 * 1024; i++) {\n  writeStream.write('X'.repeat(1024));\n}\nwriteStream.end();\n\n// Process the file with streams\nlet totalBytes = 0;\n\nconst countBytes = new Transform({\n  transform(chunk, encoding, callback) {\n    totalBytes += chunk.length;\n    callback(null, chunk);\n  }\n});\n\nfs.createReadStream('large-file.txt')\n  .pipe(countBytes)\n  .pipe(fs.createWriteStream('large-file-copy.txt'))\n  .on('finish', () => {\n    console.log(`Data processing complete: ${totalBytes}`);\n    // Clean up temporary files\n    fs.unlinkSync('large-file.txt');\n    fs.unlinkSync('large-file-copy.txt');\n  });"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "Which OAuth 2.0 flow would be most appropriate for a Single Page Application (SPA) that needs to access a protected API?",
+      "options": {
+        "A": "Authorization Code Flow without PKCE",
+        "B": "Client Credentials Flow",
+        "C": "Authorization Code Flow with PKCE",
+        "D": "Resource Owner Password Credentials Flow"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output when executing the following code that demonstrates cluster module usage in Node.js?",
+      "options": {
+        "A": "Master process started, Worker 1 started, Worker 2 started, Worker 3 started, Worker 4 started",
+        "B": "Master process started, followed by Worker started repeated a variable number of times based on available CPU cores",
+        "C": "Error: Cannot call fork() in worker process",
+        "D": "Master process started, Worker process started (printed only once)"
+      },
+      "correct_answer": "B",
+      "code_example": "const cluster = require('cluster');\nconst os = require('os');\n\nif (cluster.isMaster) {\n  console.log('Master process started');\n  \n  // Fork workers based on CPU cores\n  const numCPUs = os.cpus().length;\n  \n  for (let i = 0; i < numCPUs; i++) {\n    cluster.fork();\n  }\n  \n  cluster.on('exit', (worker, code, signal) => {\n    console.log(`Worker ${worker.process.pid} died`);\n  });\n} else {\n  console.log('Worker process started');\n  // Workers can share any TCP connection\n  // For example, an HTTP server\n}\n"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What is the best practice for securing JWT secrets in a Node.js application?",
+      "options": {
+        "A": "Store the secret directly in the application code for easy access",
+        "B": "Use environment variables or a secure vault service and rotate the secret regularly",
+        "C": "Store the secret in a config file that is included in version control",
+        "D": "Use a fixed, complex string that never changes to ensure consistency"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates rate limiting in Express.js?",
+      "options": {
+        "A": "All requests will be processed without any rate limiting",
+        "B": "The first 3 requests will succeed, the 4th will fail with a 429 Too Many Requests error",
+        "C": "The first 2 requests will succeed, the 3rd will fail with a 429 Too Many Requests error",
+        "D": "All requests will be processed but with increasing delays between them"
+      },
+      "correct_answer": "C",
+      "code_example": "const express = require('express');\nconst rateLimit = require('express-rate-limit');\n\nconst app = express();\n\n// Create a rate limiter\nconst apiLimiter = rateLimit({\n  windowMs: 15 * 60 * 1000, // 15 minutes\n  max: 2, // limit each IP to 2 requests per windowMs\n  message: 'Too many requests from this IP, please try again later'\n});\n\n// Apply the rate limiter to all requests\napp.use(apiLimiter);\n\napp.get('/', (req, res) => {\n  res.send('Request successful');\n});\n\n// Simulate multiple requests\nconst fetch = require('node-fetch');\n\nasync function testRateLimit() {\n  try {\n    // First request\n    await fetch('http://localhost:3000/');\n    console.log('First request successful');\n    \n    // Second request\n    await fetch('http://localhost:3000/');\n    console.log('Second request successful');\n    \n    // Third request (should be rate limited)\n    await fetch('http://localhost:3000/');\n    console.log('Third request successful');\n  } catch (error) {\n    console.error('Rate limit exceeded');\n  }\n}\n\n// Start server and test rate limiting\napp.listen(3000, () => {\n  console.log('Server running on port 3000');\n  testRateLimit();\n});"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will the following Winston logger code output to the console?",
+      "options": {
+        "A": "Only errors will be logged, info messages will be ignored",
+        "B": "All messages will be logged with timestamps and appropriate levels",
+        "C": "Only info level and above messages will be logged with colorized output",
+        "D": "No logs will appear as the transport configuration is incorrect"
+      },
+      "correct_answer": "B",
+      "code_example": "const winston = require('winston');\n\nconst logger = winston.createLogger({\n  level: 'info',\n  format: winston.format.combine(\n    winston.format.timestamp(),\n    winston.format.json()\n  ),\n  transports: [\n    new winston.transports.Console({\n      format: winston.format.combine(\n        winston.format.colorize(),\n        winston.format.simple()\n      )\n    }),\n    new winston.transports.File({ filename: 'error.log', level: 'error' }),\n    new winston.transports.File({ filename: 'combined.log' })\n  ]\n});\n\nlogger.info('This is an informational message');\nlogger.error('This is an error message');\nlogger.debug('This is a debug message');"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which of the following Kubernetes manifest files correctly defines a Pod with an init container, resource limits, and health checks?",
+      "options": {
+        "A": "apiVersion: v1\nkind: Pod\nmetadata:\n  name: nodejs-app\nspec:\n  containers:\n  - name: app\n    image: node-app:latest\n    ports:\n    - containerPort: 3000",
+        "B": "apiVersion: v1\nkind: Pod\nmetadata:\n  name: nodejs-app\nspec:\n  initContainers:\n  - name: init-db\n    image: busybox:latest\n    command: ['sh', '-c', 'until nc -z db 5432; do echo waiting for db; sleep 2; done;']\n  containers:\n  - name: app\n    image: node-app:latest\n    ports:\n    - containerPort: 3000\n    resources:\n      limits:\n        memory: \"256Mi\"\n        cpu: \"500m\"\n      requests:\n        memory: \"128Mi\"\n        cpu: \"250m\"\n    livenessProbe:\n      httpGet:\n        path: /health\n        port: 3000\n      initialDelaySeconds: 30\n      periodSeconds: 10\n    readinessProbe:\n      httpGet:\n        path: /ready\n        port: 3000\n      initialDelaySeconds: 5\n      periodSeconds: 5",
+        "C": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: nodejs-app\nspec:\n  replicas: 3\n  selector:\n    matchLabels:\n      app: nodejs\n  template:\n    metadata:\n      labels:\n        app: nodejs\n    spec:\n      containers:\n      - name: app\n        image: node-app:latest\n        ports:\n        - containerPort: 3000",
+        "D": "apiVersion: v1\nkind: Service\nmetadata:\n  name: nodejs-app\nspec:\n  selector:\n    app: nodejs\n  ports:\n  - port: 80\n    targetPort: 3000\n  type: LoadBalancer"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of this code that demonstrates parallel processing in Node.js using worker threads?",
+      "options": {
+        "A": "Main thread: 1, Worker thread: 2, Main thread: 3",
+        "B": "Main thread: 1, Main thread: 3, Worker thread: 2",
+        "C": "Worker thread: 2, Main thread: 1, Main thread: 3",
+        "D": "Main thread: 1, Worker thread: 2, Worker thread result: 10000"
+      },
+      "correct_answer": "D",
+      "code_example": "const { Worker, isMainThread, parentPort, workerData } = require('worker_threads');\n\nif (isMainThread) {\n  console.log('Main thread: 1');\n  \n  // Create a worker thread\n  const worker = new Worker(__filename, {\n    workerData: { iterations: 10000 }\n  });\n  \n  // Listen for messages from the worker\n  worker.on('message', (result) => {\n    console.log(`Worker thread result: ${result}`);\n  });\n  \n  worker.on('error', (error) => {\n    console.error(`Worker error: ${error}`);\n  });\n  \n  worker.on('exit', (code) => {\n    if (code !== 0) {\n      console.error(`Worker stopped with exit code ${code}`);\n    }\n  });\n} else {\n  // This code runs in the worker thread\n  console.log('Worker thread: 2');\n  \n  // Perform a CPU-intensive task\n  let result = 0;\n  for (let i = 0; i < workerData.iterations; i++) {\n    result += i;\n  }\n  \n  // Send the result back to the main thread\n  parentPort.postMessage(result);\n}"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What is the correct configuration for load balancing a Node.js application with PM2 in cluster mode?",
+      "options": {
+        "A": "pm2 start app.js --instances 4 --exec babel-node",
+        "B": "pm2 start app.js -i max --watch",
+        "C": "pm2 start app.js --fork",
+        "D": "pm2 start app.js --scale 4"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates encryption of sensitive data in Node.js?",
+      "options": {
+        "A": "The original data will be printed, followed by encrypted data, followed by the decrypted data which matches the original",
+        "B": "The encrypted data will be the same as the original data",
+        "C": "An error will occur during decryption because the initialization vector is incorrect",
+        "D": "The code will run without output because the encryption is asynchronous"
+      },
+      "correct_answer": "A",
+      "code_example": "const crypto = require('crypto');\n\n// Encryption function\nfunction encrypt(text, secretKey) {\n  // Generate a random initialization vector\n  const iv = crypto.randomBytes(16);\n  \n  // Create cipher using AES-256-CBC algorithm\n  const cipher = crypto.createCipheriv('aes-256-cbc', Buffer.from(secretKey), iv);\n  \n  // Encrypt the data\n  let encrypted = cipher.update(text, 'utf8', 'hex');\n  encrypted += cipher.final('hex');\n  \n  // Return IV and encrypted data\n  return iv.toString('hex') + ':' + encrypted;\n}\n\n// Decryption function\nfunction decrypt(encryptedText, secretKey) {\n  // Split IV and encrypted data\n  const parts = encryptedText.split(':');\n  const iv = Buffer.from(parts[0], 'hex');\n  const encryptedData = parts[1];\n  \n  // Create decipher\n  const decipher = crypto.createDecipheriv('aes-256-cbc', Buffer.from(secretKey), iv);\n  \n  // Decrypt the data\n  let decrypted = decipher.update(encryptedData, 'hex', 'utf8');\n  decrypted += decipher.final('utf8');\n  \n  return decrypted;\n}\n\n// Generate a 32-byte key (for AES-256)\nconst secretKey = crypto.randomBytes(32).toString('hex').slice(0, 32);\n\n// Original sensitive data\nconst sensitiveData = \"User's credit card: 4111-1111-1111-1111\";\nconsole.log('Original:', sensitiveData);\n\n// Encrypt the data\nconst encrypted = encrypt(sensitiveData, secretKey);\nconsole.log('Encrypted:', encrypted);\n\n// Decrypt the data\nconst decrypted = decrypt(encrypted, secretKey);\nconsole.log('Decrypted:', decrypted);"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which of the following statements about using Prometheus and Grafana with Node.js applications is correct?",
+      "options": {
+        "A": "Prometheus is used for visualization while Grafana is used for data collection",
+        "B": "Prometheus pulls metrics data from applications, while Grafana provides dashboards for visualization",
+        "C": "Both Prometheus and Grafana need to be installed on the same server as the Node.js application",
+        "D": "Prometheus requires the use of StatsD to collect metrics from Node.js applications"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
