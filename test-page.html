@@ -432,7 +432,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 let correctOption;
 		    
                 allOptions.forEach(option => {
-                    if (option.value === data.questions.find(q => q.id === qId).correct_answer) {
+                    if (option.value === questions.find(q => q.id === qId).correct_answer) {
                         correctOption = option;
                     }
                 });
@@ -451,7 +451,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             } else {
                 // Find correct answer for display
-                const correctAnswer = data.questions.find(q => q.id === qId).correct_answer;
+                const correctAnswer = questions.find(q => q.id === qId).correct_answer;
                 resultText += `<p>Question ${qId}: No answer selected ❌ (Correct: ${correctAnswer})</p>`;
             }
         });
