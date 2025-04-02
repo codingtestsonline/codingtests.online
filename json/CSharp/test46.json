@@ -1,0 +1,613 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Exception: Invalid operation",
+        "B": "CustomError: This is a custom error",
+        "C": "This is a custom error",
+        "D": "System.Exception: This is a custom error"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\npublic class CustomException : Exception\n{\n    public CustomException(string message) : base(message)\n    {\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        try\n        {\n            throw new CustomException(\"This is a custom error\");\n        }\n        catch (CustomException ex)\n        {\n            Console.WriteLine(ex.Message);\n        }\n    }\n}"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following correctly describes the behavior of the 'ref' and 'out' parameters in C#?",
+      "options": {
+        "A": "Both 'ref' and 'out' parameters must be initialized before being passed to a method",
+        "B": "'ref' parameters must be initialized before being passed, while 'out' parameters don't need to be initialized",
+        "C": "'out' parameters must be initialized before being passed, while 'ref' parameters don't need to be initialized",
+        "D": "Neither 'ref' nor 'out' parameters need to be initialized before being passed to a method"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "0 1 2 3 4",
+        "B": "0 1 2 3",
+        "C": "0 1 2 4",
+        "D": "0 1 3 4"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        for (int i = 0; i < 5; i++)\n        {\n            if (i == 3)\n            {\n                continue;\n            }\n            Console.Write(i + \" \");\n        }\n    }\n}"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "30",
+        "D": "40"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        int[] numbers = new int[5] { 10, 20, 30, 40, 50 };\n        Console.WriteLine(numbers[0]);\n    }\n}"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "1, 2, 3, 4",
+        "B": "1, 4, 7, 10",
+        "C": "1, 2",
+        "D": "1, 2, 3"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        int[,] matrix = new int[2, 2] { { 1, 4 }, { 7, 10 } };\n        for (int i = 0; i < 2; i++)\n        {\n            for (int j = 0; j < 2; j++)\n            {\n                Console.Write(matrix[i, j]);\n                if (!(i == 1 && j == 1))\n                    Console.Write(\", \");\n            }\n        }\n    }\n}"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Both conditions are true",
+        "B": "First condition is true, second condition is false",
+        "C": "First condition is false, second condition is true",
+        "D": "Both conditions are false"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        int x = 5;\n        int y = 10;\n        \n        if (x < 10 && y > 5)\n        {\n            Console.Write(\"First condition is true, \");\n        }\n        else\n        {\n            Console.Write(\"First condition is false, \");\n        }\n        \n        if (x > 10 || y < 5)\n        {\n            Console.Write(\"second condition is true\");\n        }\n        else\n        {\n            Console.Write(\"second condition is false\");\n        }\n    }\n}"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "options": {
+        "A": "File exists",
+        "B": "File does not exist",
+        "C": "IOException: The file is in use by another process",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.IO;\n\npublic class Program\n{\n    public static void Main()\n    {\n        string filePath = \"nonexistent_file.txt\";\n        \n        if (File.Exists(filePath))\n        {\n            Console.WriteLine(\"File exists\");\n        }\n        else\n        {\n            Console.WriteLine(\"File does not exist\");\n        }\n    }\n}"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will happen when the following code is executed?",
+      "options": {
+        "A": "It will print \"Invalid input\"",
+        "B": "It will print \"Exception handled\"",
+        "C": "It will throw an unhandled exception",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        try\n        {\n            CheckValue(-5);\n            Console.WriteLine(\"Valid input\");\n        }\n        catch (Exception ex)\n        {\n            Console.WriteLine(\"Exception handled\");\n        }\n    }\n    \n    static void CheckValue(int value)\n    {\n        if (value < 0)\n        {\n            throw new Exception(\"Invalid input\");\n        }\n    }\n}"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "10, 20",
+        "B": "10, 30",
+        "C": "20, 20",
+        "D": "20, 30"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        int x = 10;\n        UpdateValue(ref x);\n        Console.Write(x + \", \");\n        \n        int y;\n        SetValue(out y);\n        Console.Write(y);\n    }\n    \n    static void UpdateValue(ref int value)\n    {\n        value = 20;\n    }\n    \n    static void SetValue(out int value)\n    {\n        value = 30;\n    }\n}"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Default Constructor, Parameterized Constructor (42)",
+        "B": "Parameterized Constructor (42), Default Constructor",
+        "C": "Parameterized Constructor (42)",
+        "D": "Default Constructor"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\npublic class MyClass\n{\n    public MyClass()\n    {\n        Console.Write(\"Default Constructor\");\n    }\n    \n    public MyClass(int value) : this()\n    {\n        Console.Write(\", Parameterized Constructor (\" + value + \")\");\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        MyClass obj = new MyClass(42);\n    }\n}"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Name: , Age: 0",
+        "B": "Name: John, Age: 0",
+        "C": "Name: , Age: 30",
+        "D": "Name: John, Age: 30"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\n\npublic class Person\n{\n    public string Name;\n    public int Age;\n    \n    public Person(string name, int age)\n    {\n        this.Name = name;\n        this.Age = age;\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        Person person = new Person(\"John\", 30);\n        Console.WriteLine($\"Name: {person.Name}, Age: {person.Age}\");\n    }\n}"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello Alice!",
+        "B": "Hello {name}!",
+        "C": "Hello name!",
+        "D": "Hello \"Alice\"!"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        string name = \"Alice\";\n        Console.WriteLine($\"Hello {name}!\");\n    }\n}"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "0 1 2",
+        "B": "1 2 3",
+        "C": "0 1",
+        "D": "1 2"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        for (int i = 0; i < 5; i++)\n        {\n            if (i == 2)\n                break;\n            Console.Write(i + \" \");\n        }\n    }\n}"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What is the result of the following arithmetic operation in C#?",
+      "options": {
+        "A": "2",
+        "B": "2.5",
+        "C": "2.0",
+        "D": "3"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        int result = 7 / 3;\n        Console.WriteLine(result);\n    }\n}"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Value: 5, Message: Hello",
+        "B": "Value: 10, Message: Default",
+        "C": "Value: 10, Message: Hello",
+        "D": "Value: 5, Message: Default"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        DisplayInfo(5, \"Hello\");\n    }\n    \n    static void DisplayInfo(int value = 10, string message = \"Default\")\n    {\n        Console.WriteLine($\"Value: {value}, Message: {message}\");\n    }\n}"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Width: 15, Height: 10",
+        "B": "Width: 10, Height: 10",
+        "C": "Width: 10, Height: 15",
+        "D": "Width: 15, Height: 15"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        DrawRectangle(height: 15, width: 10);\n    }\n    \n    static void DrawRectangle(int width, int height)\n    {\n        Console.WriteLine($\"Width: {width}, Height: {height}\");\n    }\n}"
+    },
+   {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using 'sealed' keyword?",
+      "options": {
+        "A": "Base Implementation",
+        "B": "Child Implementation",
+        "C": "Grandchild Implementation",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\n\npublic class BaseClass\n{\n    public virtual void Display()\n    {\n        Console.WriteLine(\"Base Implementation\");\n    }\n}\n\npublic class ChildClass : BaseClass\n{\n    public sealed override void Display()\n    {\n        Console.WriteLine(\"Child Implementation\");\n    }\n}\n\npublic class GrandchildClass : ChildClass\n{\n    public override void Display()\n    {\n        Console.WriteLine(\"Grandchild Implementation\");\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        BaseClass obj = new GrandchildClass();\n        obj.Display();\n    }\n}"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Base Method, Derived Method",
+        "B": "Derived Method",
+        "C": "Base Method",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic class BaseClass\n{\n    public virtual void Display()\n    {\n        Console.Write(\"Base Method\");\n    }\n}\n\npublic class DerivedClass : BaseClass\n{\n    public override void Display()\n    {\n        Console.Write(\"Derived Method\");\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        BaseClass obj = new DerivedClass();\n        obj.Display();\n    }\n}"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which C# LINQ statement correctly calculates the sum of all elements in a collection of integers?",
+      "options": {
+        "A": "numbers.Sum();",
+        "B": "numbers.Aggregate((a, b) => a + b);",
+        "C": "numbers.Count();",
+        "D": "Both A and B are correct"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello, World!",
+        "B": "Hello, Claude!",
+        "C": "System.Delegate",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic class Program\n{\n    public delegate void PrintDelegate(string message);\n    \n    public static void Main()\n    {\n        PrintDelegate printMessage = delegate(string message)\n        {\n            Console.WriteLine(\"Hello, \" + message + \"!\");\n        };\n        \n        printMessage(\"Claude\");\n    }\n}"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What is the purpose of the 'ConfigureAwait(false)' method in asynchronous programming?",
+      "options": {
+        "A": "It forces the continuation to run on a new thread",
+        "B": "It makes the async method return immediately",
+        "C": "It allows the continuation to run on any available thread instead of capturing the original synchronization context",
+        "D": "It configures the async method to never await"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What is the primary purpose of Garbage Collection (GC) generations in .NET?",
+      "options": {
+        "A": "To ensure objects are instantiated in the correct order",
+        "B": "To optimize garbage collection based on the observation that newer objects tend to have shorter lifetimes",
+        "C": "To prevent memory leaks in the application",
+        "D": "To allow manual memory management"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "Collection was modified",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class Program\n{\n    public static void Main()\n    {\n        List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };\n        bool result = numbers.Any(n => n > 3);\n        Console.WriteLine(result);\n    }\n}"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What is the key difference between Dispose() and Finalize() methods in C#?",
+      "options": {
+        "A": "Dispose() is automatically called by the garbage collector, while Finalize() must be called explicitly",
+        "B": "Dispose() handles only managed resources, while Finalize() handles only unmanaged resources",
+        "C": "Dispose() is called explicitly by the developer, while Finalize() is called by the garbage collector",
+        "D": "Dispose() and Finalize() are different names for the same method"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "True, True",
+        "B": "True, False",
+        "C": "False, True",
+        "D": "False, False"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Collections.Generic;\n\npublic class Program\n{\n    public static void Main()\n    {\n        HashSet<string> set = new HashSet<string> { \"apple\", \"banana\", \"cherry\" };\n        Dictionary<string, int> dict = new Dictionary<string, int>\n        {\n            { \"apple\", 1 },\n            { \"banana\", 2 },\n            { \"cherry\", 3 }\n        };\n        \n        Console.Write(set.Contains(\"banana\") + \", \");\n        Console.Write(dict.ContainsKey(\"banana\"));\n    }\n}"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What does the following code demonstrate?",
+      "options": {
+        "A": "Method overloading",
+        "B": "Method overriding",
+        "C": "Constructor injection",
+        "D": "Dependency inversion"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\npublic interface ILogger\n{\n    void Log(string message);\n}\n\npublic class ConsoleLogger : ILogger\n{\n    public void Log(string message)\n    {\n        Console.WriteLine(message);\n    }\n}\n\npublic class UserService\n{\n    private readonly ILogger _logger;\n    \n    public UserService(ILogger logger)\n    {\n        _logger = logger;\n    }\n    \n    public void RegisterUser(string username)\n    {\n        // Registration logic\n        _logger.Log($\"User {username} registered\");\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        ILogger logger = new ConsoleLogger();\n        UserService service = new UserService(logger);\n        service.RegisterUser(\"John\");\n    }\n}"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "Which statement correctly describes a scenario where forcing garbage collection with GC.Collect() might be appropriate?",
+      "options": {
+        "A": "At the beginning of every method to ensure clean memory",
+        "B": "After every object creation to immediately release memory",
+        "C": "After a large set of temporary objects has been created and is no longer needed",
+        "D": "Never, as the garbage collector should always be left to work automatically"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using lambda expressions?",
+      "options": {
+        "A": "4 9 16 25",
+        "B": "2 3 4 5",
+        "C": "1 4 9 16",
+        "D": "1 2 3 4"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class Program\n{\n    public static void Main()\n    {\n        List<int> numbers = new List<int> { 2, 3, 4, 5 };\n        var squares = numbers.Select(x => x * x);\n        \n        foreach (var square in squares)\n        {\n            Console.Write(square + \" \");\n        }\n    }\n}"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using LINQ?",
+      "options": {
+        "A": "1 3 5",
+        "B": "2 4",
+        "C": "1 2 3 4 5",
+        "D": "5 4 3 2 1"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class Program\n{\n    public static void Main()\n    {\n        List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };\n        var oddNumbers = numbers.Where(n => n % 2 != 0);\n        \n        foreach (var num in oddNumbers)\n        {\n            Console.Write(num + \" \");\n        }\n    }\n}"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What is the difference between eager loading and lazy loading in Entity Framework?",
+      "options": {
+        "A": "Eager loading loads all data at application startup, while lazy loading loads data only when the application is idle",
+        "B": "Eager loading loads related entities immediately with the primary entity, while lazy loading loads related entities only when they're accessed",
+        "C": "Eager loading uses more memory but is faster, while lazy loading uses less memory but processes data sequentially",
+        "D": "Eager loading automatically caches all database queries, while lazy loading requires manual cache management"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using a generic constraint?",
+      "options": {
+        "A": "Created a new instance of String",
+        "B": "Created a new instance of Object",
+        "C": "The code will not compile",
+        "D": "A runtime exception will be thrown"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        CreateAndPrint<string>();\n    }\n    \n    static void CreateAndPrint<T>() where T : class, new()\n    {\n        T instance = new T();\n        Console.WriteLine($\"Created a new instance of {typeof(T).Name}\");\n    }\n}"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code involving an event?",
+      "options": {
+        "A": "Button Clicked by User",
+        "B": "The event was not triggered",
+        "C": "System.EventHandler",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\npublic class Button\n{\n    public event EventHandler Clicked;\n    \n    public void Click()\n    {\n        Clicked?.Invoke(this, EventArgs.Empty);\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        Button button = new Button();\n        button.Clicked += OnButtonClicked;\n        button.Click();\n    }\n    \n    static void OnButtonClicked(object sender, EventArgs e)\n    {\n        Console.WriteLine(\"Button Clicked by User\");\n    }\n}"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses ArrayPool<T>?",
+      "options": {
+        "A": "5, 0, 0, 0, 0",
+        "B": "5, 0, 0, 0, 0, 0, 0, 0",
+        "C": "An ArgumentException will be thrown",
+        "D": "5"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Buffers;\n\nclass Program\n{\n    static void Main()\n    {\n        ArrayPool<int> pool = ArrayPool<int>.Shared;\n        int[] array = pool.Rent(5);\n        \n        array[0] = 5;\n        \n        foreach (int item in array)\n        {\n            Console.Write(item + \", \");\n        }\n    }\n}"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "When using P/Invoke to call unmanaged code, which of the following attributes is used to define how strings should be marshaled?",
+      "options": {
+        "A": "[MarshalAsString]",
+        "B": "[MarshalAs(UnmanagedType.LPStr)]",
+        "C": "[StringMarshaling(MarshalType.Unicode)]",
+        "D": "[StringEncoding(Encoding.UTF8)]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Activator.CreateInstance()?",
+      "options": {
+        "A": "DefaultName",
+        "B": "CustomName",
+        "C": "A NullReferenceException will be thrown",
+        "D": "An ArgumentException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Type type = typeof(Person);\n        object[] constructorArgs = { \"CustomName\" };\n        \n        var person = Activator.CreateInstance(type, constructorArgs) as Person;\n        Console.WriteLine(person.Name);\n    }\n}\n\nclass Person\n{\n    public string Name { get; private set; } = \"DefaultName\";\n    \n    public Person(string name)\n    {\n        Name = name;\n    }\n}"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "In the Observer Pattern, which of the following statements is TRUE?",
+      "options": {
+        "A": "Observers can only be attached to a single subject at a time",
+        "B": "A subject can have only one observer at a time",
+        "C": "Observers are notified in the order they were registered",
+        "D": "The subject is responsible for maintaining a list of observers and notifying them of state changes"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "When using COM Interop in C#, what is the purpose of the [ComVisible] attribute?",
+      "options": {
+        "A": "To specify which .NET types can be accessed from COM clients",
+        "B": "To indicate which COM objects should be visible to the .NET runtime",
+        "C": "To configure the marshaling behavior for COM method parameters",
+        "D": "To specify the COM threading model for the assembly"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses ExpandoObject?",
+      "options": {
+        "A": "42",
+        "B": "An exception will be thrown because ExpandoObject does not support adding properties dynamically",
+        "C": "An exception will be thrown because 'Value' is not a valid property name",
+        "D": "null"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Dynamic;\n\nclass Program\n{\n    static void Main()\n    {\n        dynamic expando = new ExpandoObject();\n        expando.Value = 42;\n        \n        var expandoAsDictionary = expando as IDictionary<string, object>;\n        bool hasProperty = expandoAsDictionary.ContainsKey(\"Value\");\n        \n        Console.WriteLine(hasProperty ? expando.Value : null);\n    }\n}"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "In ASP.NET Core role-based authentication, which of the following correctly applies a policy that requires a user to have both 'Admin' and 'Manager' roles?",
+      "options": {
+        "A": "[Authorize(Roles = \"Admin, Manager\")]",
+        "B": "[Authorize(Roles = \"Admin+Manager\")]",
+        "C": "[Authorize(Roles = \"Admin\"), Authorize(Roles = \"Manager\")]",
+        "D": "[Authorize(Policy = \"AdminAndManager\")]"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing the Singleton Pattern?",
+      "options": {
+        "A": "Instance1 and Instance2 are the same: False",
+        "B": "Instance1 and Instance2 are the same: True",
+        "C": "A NullReferenceException will be thrown",
+        "D": "An InvalidOperationException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        var instance1 = Singleton.Instance;\n        var instance2 = Singleton.Instance;\n        \n        Console.WriteLine($\"Instance1 and Instance2 are the same: {object.ReferenceEquals(instance1, instance2)}\");\n    }\n}\n\npublic sealed class Singleton\n{\n    private static readonly Lazy<Singleton> lazy = new Lazy<Singleton>(() => new Singleton());\n    \n    public static Singleton Instance => lazy.Value;\n    \n    private Singleton()\n    {\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses the dynamic type?",
+      "options": {
+        "A": "10",
+        "B": "Test",
+        "C": "A RuntimeBinderException will be thrown",
+        "D": "A compilation error will occur"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        dynamic value = 10;\n        value = \"Test\";\n        \n        // The method expects an int\n        ProcessValue(value);\n    }\n    \n    static void ProcessValue(int number)\n    {\n        Console.WriteLine(number);\n    }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Span<T>?",
+      "options": {
+        "A": "Original array: 1, 2, 3, 4, 5\nModified span: 99, 2, 3, 4, 5",
+        "B": "Original array: 1, 2, 3, 4, 5\nModified span: 1, 2, 3, 4, 5",
+        "C": "Original array: 99, 2, 3, 4, 5\nModified span: 99, 2, 3, 4, 5",
+        "D": "A compilation error will occur because Span cannot be used with arrays"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int[] array = { 1, 2, 3, 4, 5 };\n        Span<int> span = array;\n        \n        span[0] = 99;\n        \n        Console.WriteLine($\"Original array: {string.Join(\", \", array)}\");\n        Console.WriteLine($\"Modified span: {string.Join(\", \", span.ToArray())}\");\n    }\n}"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "When implementing OAuth with IdentityServer4, which grant type should be used for a single-page application (SPA) that needs to access an API?",
+      "options": {
+        "A": "Client Credentials",
+        "B": "Authorization Code with PKCE",
+        "C": "Resource Owner Password Credentials",
+        "D": "Implicit Grant"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which of the following statements about indexing in SQL Server is FALSE?",
+      "options": {
+        "A": "A clustered index determines the physical order of data in a table",
+        "B": "A table can have multiple clustered indexes",
+        "C": "A filtered index is a nonclustered index with a WHERE clause",
+        "D": "A covering index can improve query performance by including all columns referenced in a query"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Assembly.Load() and Type.GetType()?",
+      "options": {
+        "A": "SampleNamespace.SampleClass",
+        "B": "System.String",
+        "C": "An exception will be thrown because the assembly can't be found",
+        "D": "null"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\nusing System.Reflection;\n\nclass Program\n{\n    static void Main()\n    {\n        try\n        {\n            // Load the currently executing assembly\n            Assembly assembly = Assembly.GetExecutingAssembly();\n            \n            // Try to get a type that doesn't exist in this assembly\n            Type type = Type.GetType(\"SampleNamespace.SampleClass\");\n            \n            Console.WriteLine(type?.FullName ?? \"null\");\n        }\n        catch (Exception ex)\n        {\n            Console.WriteLine(ex.Message);\n        }\n    }\n}"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "In ASP.NET Core API versioning, which approach is NOT a standard method for implementing versioning?",
+      "options": {
+        "A": "URL path versioning (e.g., /api/v1/products)",
+        "B": "Query string versioning (e.g., /api/products?api-version=1.0)",
+        "C": "Header versioning (using a custom HTTP header)",
+        "D": "Database versioning (storing version information in a database table)"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Memory<T>?",
+      "options": {
+        "A": "10, 20, 30, 40, 50",
+        "B": "20, 30, 40",
+        "C": "An IndexOutOfRangeException will be thrown",
+        "D": "A compilation error will occur"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int[] array = { 10, 20, 30, 40, 50 };\n        Memory<int> memory = array;\n        Memory<int> slice = memory.Slice(1, 3);\n        \n        foreach (int item in slice.Span)\n        {\n            Console.Write(item + \", \");\n        }\n    }\n}"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a benefit of using the Repository Pattern in a .NET application?",
+      "options": {
+        "A": "It provides a clean separation between the domain model and data access logic",
+        "B": "It makes the application more testable by allowing mock repositories in unit tests",
+        "C": "It automatically optimizes database queries and improves performance",
+        "D": "It centralizes data access logic, making it easier to maintain"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
