@@ -1,0 +1,616 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What is Node.js?",
+      "options": {
+        "A": "A front-end JavaScript framework",
+        "B": "A JavaScript runtime environment that executes JavaScript code outside a web browser",
+        "C": "A database management system",
+        "D": "A programming language that compiles to JavaScript"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "function greet(name = 'Guest') {\n  return `Hello, ${name}!`;\n}\n\nconsole.log(greet());\nconsole.log(greet(undefined));\nconsole.log(greet('John'));",
+      "options": {
+        "A": "Hello, Guest!, Hello, Guest!, Hello, John!",
+        "B": "Hello, undefined!, Hello, undefined!, Hello, John!",
+        "C": "Hello, Guest!, Hello, undefined!, Hello, John!",
+        "D": "Error: missing parameter"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const promise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    resolve('Success!');\n  }, 100);\n});\n\npromise\n  .then(value => {\n    return value + ' Additional info.';\n  })\n  .then(value => {\n    console.log(value);\n  })\n  .catch(error => {\n    console.log('Error:', error);\n  });",
+      "options": {
+        "A": "Success!",
+        "B": "Success! Additional info.",
+        "C": "Error: Success!",
+        "D": "undefined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "How would you access an environment variable named 'API_KEY' in a Node.js application?",
+      "options": {
+        "A": "global.API_KEY",
+        "B": "env.API_KEY",
+        "C": "process.env.API_KEY",
+        "D": "window.env.API_KEY"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the purpose of event.preventDefault() in JavaScript?",
+      "options": {
+        "A": "It stops the propagation of an event to parent elements",
+        "B": "It prevents the default action associated with an event from occurring",
+        "C": "It removes all event listeners from an element",
+        "D": "It delays the execution of an event until the page is fully loaded"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which of the following creates a basic HTTP server in Node.js?",
+      "code_example": "const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.statusCode = 200;\n  res.setHeader('Content-Type', 'text/plain');\n  res.end('Hello World');\n});\n\nserver.listen(3000, '127.0.0.1', () => {\n  console.log('Server running at http://127.0.0.1:3000/');\n});",
+      "options": {
+        "A": "This code creates a WebSocket server",
+        "B": "This code creates an Express.js server",
+        "C": "This code creates a basic HTTP server that responds with 'Hello World'",
+        "D": "This code creates a server but it won't work because it's missing middleware"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(5 == '5');\nconsole.log(5 === '5');",
+      "options": {
+        "A": "true, true",
+        "B": "false, false",
+        "C": "true, false",
+        "D": "false, true"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "let a = 5;    // 101 in binary\nlet b = 3;    // 011 in binary\n\nconsole.log(a & b);  // Bitwise AND\nconsole.log(a | b);  // Bitwise OR\nconsole.log(a ^ b);  // Bitwise XOR",
+      "options": {
+        "A": "1, 7, 6",
+        "B": "8, 8, 8",
+        "C": "15, 15, 15",
+        "D": "5, 3, 2"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Which of the following correctly selects an element with the id 'main-content'?",
+      "code_example": "// Option A\nconst element1 = document.getElementById('main-content');\n\n// Option B\nconst element2 = document.querySelector('#main-content');\n\n// Option C\nconst element3 = document.getElementsByClassName('main-content')[0];\n\n// Option D\nconst element4 = document.querySelectorAll('main-content');",
+      "options": {
+        "A": "Only Option A is correct",
+        "B": "Only Option B is correct",
+        "C": "Both Option A and Option B are correct",
+        "D": "Both Option C and Option D are correct"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(sayHello());\n\nfunction sayHello() {\n  return 'Hello!';\n}\n\nconsole.log(sayGoodbye());\n\nconst sayGoodbye = function() {\n  return 'Goodbye!';\n};",
+      "options": {
+        "A": "Hello!, Goodbye!",
+        "B": "Hello!, ReferenceError",
+        "C": "undefined, undefined",
+        "D": "ReferenceError, ReferenceError"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a primitive type in JavaScript?",
+      "options": {
+        "A": "string",
+        "B": "symbol",
+        "C": "array",
+        "D": "bigint"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(true && false);\nconsole.log(true || false);\nconsole.log(!true);",
+      "options": {
+        "A": "true, true, false",
+        "B": "false, true, false",
+        "C": "false, false, true",
+        "D": "true, false, true"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const age = 20;\nconst message = age >= 18 ? 'You can vote' : 'Too young to vote';\nconsole.log(message);",
+      "options": {
+        "A": "'You can vote'",
+        "B": "'Too young to vote'",
+        "C": "undefined",
+        "D": "Error: invalid syntax"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What is the key difference between let, const, and var?",
+      "code_example": "// Example 1\nvar x = 1;\nif (true) {\n  var x = 2;\n}\nconsole.log(x);\n\n// Example 2\nlet y = 1;\nif (true) {\n  let y = 2;\n}\nconsole.log(y);\n\n// Example 3\nconst z = 1;\nz = 2;",
+      "options": {
+        "A": "var is function-scoped, let and const are block-scoped; const values cannot be reassigned",
+        "B": "var can be redeclared, let and const cannot; const values can be modified but not reassigned",
+        "C": "var and let can be reassigned, const cannot; var is hoisted, let and const are not",
+        "D": "var and const are globally scoped, let is block-scoped; const arrays can be modified"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const person = {\n  name: 'John',\n  age: 30,\n  city: 'New York'\n};\n\nconst { name, age, country = 'USA' } = person;\n\nconsole.log(name, age, country);",
+      "options": {
+        "A": "John 30 undefined",
+        "B": "John 30 USA",
+        "C": "John 30 null",
+        "D": "undefined undefined USA"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What are the key differences between require() and import()?",
+      "options": {
+        "A": "require() is synchronous and part of CommonJS; import() is asynchronous and part of ES modules",
+        "B": "require() can only import npm packages; import() can import both npm packages and local files",
+        "C": "require() can be called anywhere in the code; import() must be at the top of the file",
+        "D": "require() is slower; import() is faster but less compatible"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which of the following code snippets helps prevent NoSQL Injection in a MongoDB application?",
+      "code_example": "// Example A\napp.post('/search', (req, res) => {\n  const userInput = req.body.query;\n  db.collection('users').find({ username: userInput }).toArray((err, result) => {\n    res.json(result);\n  });\n});\n\n// Example B\napp.post('/search', (req, res) => {\n  const userInput = sanitize(req.body.query);\n  db.collection('users').find({ username: userInput }).toArray((err, result) => {\n    res.json(result);\n  });\n});\n\n// Example C\napp.post('/search', (req, res) => {\n  const query = { $where: `this.username === '${req.body.query}'` };\n  db.collection('users').find(query).toArray((err, result) => {\n    res.json(result);\n  });\n});\n\n// Example D\napp.post('/search', (req, res) => {\n  const userInput = mongoose.Types.String(req.body.query);\n  db.collection('users').find({ username: userInput }).toArray((err, result) => {\n    res.json(result);\n  });\n});",
+      "options": {
+        "A": "Example A",
+        "B": "Example B",
+        "C": "Example C",
+        "D": "Example D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which Express.js middleware correctly handles form data submitted with content-type 'application/x-www-form-urlencoded'?",
+      "code_example": "// Option A\napp.use(express.urlencoded({ extended: true }));\n\n// Option B\napp.use(express.json());\n\n// Option C\napp.use(bodyParser.form());\n\n// Option D\napp.use(express.formData());",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "function createCounter() {\n  let count = 0;\n  \n  return function() {\n    return ++count;\n  };\n}\n\nconst counter1 = createCounter();\nconst counter2 = createCounter();\n\nconsole.log(counter1());\nconsole.log(counter1());\nconsole.log(counter2());",
+      "options": {
+        "A": "1, 1, 1",
+        "B": "1, 2, 1",
+        "C": "1, 2, 3",
+        "D": "0, 1, 0"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which of the following Helmet.js configurations correctly sets secure HTTP headers?",
+      "code_example": "// Option A\napp.use(helmet());\n\n// Option B\napp.use(helmet.xssFilter());\napp.use(helmet.noSniff());\n\n// Option C\napp.use(helmet({\n  contentSecurityPolicy: false,\n  crossOriginEmbedderPolicy: false\n}));\n\n// Option D\napp.use(helmet.defaults());",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Which of the following is a secure way to implement JWT authentication in a Node.js application?",
+      "code_example": "// Option A\nconst token = jwt.sign({ userId: user._id }, 'my-secret', { expiresIn: '1h' });\n\n// Option B\nconst token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });\n\n// Option C\nconst token = jwt.sign({ userId: user._id, role: 'admin' }, 'my-secret');\n\n// Option D\nconst token = Buffer.from(JSON.stringify({ userId: user._id })).toString('base64');",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which of the following correctly implements file streaming in Node.js?",
+      "code_example": "// Option A\napp.get('/download', (req, res) => {\n  const fileContent = fs.readFileSync('./large-file.pdf');\n  res.attachment('file.pdf');\n  res.send(fileContent);\n});\n\n// Option B\napp.get('/download', (req, res) => {\n  const file = fs.createReadStream('./large-file.pdf');\n  res.attachment('file.pdf');\n  file.pipe(res);\n});\n\n// Option C\napp.get('/download', async (req, res) => {\n  const fileContent = await fs.promises.readFile('./large-file.pdf');\n  res.attachment('file.pdf');\n  res.end(fileContent);\n});\n\n// Option D\napp.get('/download', (req, res) => {\n  fs.readFile('./large-file.pdf', (err, data) => {\n    res.attachment('file.pdf');\n    res.send(data);\n  });\n});",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "Which of the following correctly implements a MongoDB schema with validation?",
+      "code_example": "// Option A\nconst UserSchema = new mongoose.Schema({\n  username: String,\n  email: String,\n  age: Number\n});\n\n// Option B\nconst UserSchema = new mongoose.Schema({\n  username: { type: String, required: true, unique: true },\n  email: { \n    type: String, \n    required: true, \n    validate: {\n      validator: function(v) {\n        return /^\\S+@\\S+\\.\\S+$/.test(v);\n      },\n      message: props => `${props.value} is not a valid email!`\n    }\n  },\n  age: { type: Number, min: 18, max: 100 }\n});\n\n// Option C\nconst UserSchema = {\n  username: { type: 'string', required: true },\n  email: { type: 'string', required: true },\n  age: { type: 'number', required: true }\n};\n\n// Option D\nconst UserSchema = db.define('user', {\n  username: db.String(),\n  email: db.String(),\n  age: db.Number()\n});",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "const readable = require('stream').Readable;\n\nconst rs = new readable();\nrs._read = () => {};\n\nrs.push('Hello');\nrs.push(' ');\nrs.push('World');\nrs.push(null);\n\nlet data = '';\nrs.on('data', chunk => {\n  data += chunk;\n});\n\nrs.on('end', () => {\n  console.log(data);\n});",
+      "options": {
+        "A": "HelloWorld",
+        "B": "Hello World",
+        "C": "Hello,World",
+        "D": "Error: stream is not readable"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "Which of the following correctly sets up body parsing middleware in an Express application?",
+      "code_example": "// Option A\napp.use(express.json());\napp.use(express.urlencoded({ extended: true }));\n\n// Option B\napp.use(bodyParser.json());\napp.use(bodyParser.urlencoded({ extended: true }));\n\n// Option C\napp.use(express.bodyParser());\n\n// Option D\napp.use(express.json);\napp.use(express.urlencoded);",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "function performOperation(a, b, operation) {\n  return operation(a, b);\n}\n\nconst add = (x, y) => x + y;\nconst subtract = (x, y) => x - y;\n\nconsole.log(performOperation(5, 3, add));\nconsole.log(performOperation(5, 3, subtract));",
+      "options": {
+        "A": "8, 2",
+        "B": "8, Error",
+        "C": "Error: operation is not a function",
+        "D": "undefined, undefined"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "Which of the following correctly implements lazy loading of images?",
+      "code_example": "// Option A\nconst images = document.querySelectorAll('img');\nimages.forEach(img => {\n  img.src = img.dataset.src;\n});\n\n// Option B\ndocument.addEventListener('DOMContentLoaded', () => {\n  const images = document.querySelectorAll('img[data-src]');\n  images.forEach(img => {\n    img.src = img.dataset.src;\n  });\n});\n\n// Option C\nconst images = document.querySelectorAll('img[data-src]');\nconst loadImage = (img) => {\n  img.src = img.dataset.src;\n};\n\nconst observer = new IntersectionObserver((entries) => {\n  entries.forEach(entry => {\n    if (entry.isIntersecting) {\n      loadImage(entry.target);\n      observer.unobserve(entry.target);\n    }\n  });\n});\n\nimages.forEach(img => {\n  observer.observe(img);\n});\n\n// Option D\nwindow.onload = function() {\n  const images = document.querySelectorAll('img');\n  images.forEach(img => {\n    const src = img.getAttribute('data-src');\n    if (src) {\n      img.src = src;\n    }\n  });\n};",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "Which of the following approaches best reduces redundant database queries?",
+      "code_example": "// Option A\nasync function getUserPosts(userId) {\n  const user = await User.findById(userId);\n  const posts = await Post.find({ author: userId });\n  return { user, posts };\n}\n\n// Option B\nasync function getUserPosts(userId) {\n  const user = await User.findById(userId);\n  user.posts = await Post.find({ author: userId });\n  return user;\n}\n\n// Option C\nasync function getUserPosts(userId) {\n  const [user, posts] = await Promise.all([\n    User.findById(userId),\n    Post.find({ author: userId })\n  ]);\n  return { user, posts };\n}\n\n// Option D\nasync function getUserPosts(userId) {\n  return await User.findById(userId)\n    .populate('posts')\n    .exec();",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "Which of the following correctly implements Express middleware?",
+      "code_example": "// Option A\nfunction logger(req, res) {\n  console.log(`${req.method} ${req.url}`);\n  res.send('Logged');\n}\n\n// Option B\nconst logger = function(req, res, next) {\n  console.log(`${req.method} ${req.url}`);\n  next();\n};\n\n// Option C\nfunction logger(req) {\n  console.log(`${req.method} ${req.url}`);\n  return req;\n}\n\n// Option D\napp.get('/log', (req, res) => {\n  console.log(`${req.method} ${req.url}`);\n  res.send('Logged');\n});",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "const parent = {\n  name: 'Parent',\n  greet() {\n    return `Hello from ${this.name}`;\n  }\n};\n\nconst child = Object.create(parent);\nchild.name = 'Child';\n\nconsole.log(parent.greet());\nconsole.log(child.greet());",
+      "options": {
+        "A": "Hello from Parent, Hello from Parent",
+        "B": "Hello from Parent, Hello from Child",
+        "C": "Error: child.greet is not a function",
+        "D": "Hello from undefined, Hello from Child"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "function fetchData() {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      resolve('Data received');\n    }, 1000);\n  });\n}\n\nfetchData()\n  .then(data => {\n    console.log(`Success: ${data}`);\n    throw new Error('Something went wrong');\n  })\n  .catch(error => {\n    console.log(`Error: ${error.message}`);\n    return 'Recovered';\n  })\n  .finally(() => {\n    console.log('Operation completed');\n  })\n  .then(data => {\n    console.log(`Final: ${data}`);\n  });",
+      "options": {
+        "A": "Success: Data received\nError: Something went wrong\nOperation completed\nFinal: undefined",
+        "B": "Success: Data received\nError: Something went wrong\nOperation completed\nFinal: Recovered",
+        "C": "Success: Data received\nError: Something went wrong\nFinal: Recovered\nOperation completed",
+        "D": "Error: Something went wrong\nOperation completed\nFinal: undefined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "Which of the following correctly implements modular routes using Express Router?",
+      "code_example": "// File: routes/users.js\n// Option A\nconst express = require('express');\nconst router = express.Router();\n\nrouter.get('/', (req, res) => {\n  res.send('Users list');\n});\n\nrouter.get('/:id', (req, res) => {\n  res.send(`User ${req.params.id}`);\n});\n\nmodule.exports = router;\n\n// File: app.js\nconst express = require('express');\nconst usersRouter = require('./routes/users');\n\nconst app = express();\napp.use('/users', usersRouter);\n\n// Option B\n// File: routes/users.js\nfunction getUsers(req, res) {\n  res.send('Users list');\n}\n\nfunction getUser(req, res) {\n  res.send(`User ${req.params.id}`);\n}\n\nmodule.exports = { getUsers, getUser };\n\n// File: app.js\nconst express = require('express');\nconst userFunctions = require('./routes/users');\n\nconst app = express();\napp.get('/users', userFunctions.getUsers);\napp.get('/users/:id', userFunctions.getUser);",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Both options implement modular routes correctly",
+        "D": "Neither option implements modular routes correctly"
+      },
+      "correct_answer": "A"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will happen when the following code is executed?",
+      "options": {
+        "A": "The rate limiter will allow a maximum of 100 requests per minute from any IP address",
+        "B": "The rate limiter will allow a maximum of 100 requests per 15 minutes from any IP address",
+        "C": "The rate limiter will allow a maximum of 100 requests per 15 minutes across all IP addresses",
+        "D": "The rate limiter will block all requests after 100 total requests have been made"
+      },
+      "correct_answer": "B",
+      "code_example": "const rateLimit = require('express-rate-limit');\nconst app = require('express')();\n\nconst limiter = rateLimit({\n  windowMs: 15 * 60 * 1000,\n  max: 100,\n  standardHeaders: true,\n  legacyHeaders: false\n});\n\napp.use(limiter);\n\napp.get('/', (req, res) => {\n  res.send('Hello World!');\n});"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which statement correctly describes a difference between WebSockets and REST?",
+      "options": {
+        "A": "REST is always faster than WebSockets for data transfer",
+        "B": "WebSockets maintain a persistent connection, while REST uses a request-response model",
+        "C": "REST supports bidirectional communication, but WebSockets only support client-to-server communication",
+        "D": "WebSockets are more secure by default than REST APIs"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "{ name: 'Alice', role: 'user' } is printed, followed by an error when the weakMap is accessed",
+        "B": "{ name: 'Alice', role: 'user' } is printed, followed by undefined",
+        "C": "{ name: 'Alice', role: 'user' } is printed once, and then again when accessing the weakMap",
+        "D": "{ name: 'Alice', role: 'user' } is printed, followed by null"
+      },
+      "correct_answer": "B",
+      "code_example": "const weakMap = new WeakMap();\n\nlet user = { name: 'Alice', role: 'user' };\n\nweakMap.set(user, { lastLogin: Date.now() });\n\nconsole.log(user);\n\n// Simulate memory cleanup\nuser = null;\n\n// Force garbage collection (note: this is simplified as actual GC can't be forced directly in standard JS)\nsetTimeout(() => {\n  console.log(weakMap.get(user));\n}, 0);"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "In the context of OAuth 2.0, which flow is most appropriate for a single-page JavaScript application that needs to authenticate users?",
+      "options": {
+        "A": "Client Credentials Flow",
+        "B": "Authorization Code Flow with PKCE",
+        "C": "Resource Owner Password Credentials Flow",
+        "D": "Device Authorization Flow"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be logged after executing this code?",
+      "options": {
+        "A": "true, false",
+        "B": "true, true",
+        "C": "false, false",
+        "D": "false, true"
+      },
+      "correct_answer": "A",
+      "code_example": "const regularMap = new Map();\nconst weakMap = new WeakMap();\n\nlet key1 = { id: 1 };\nlet key2 = { id: 2 };\n\nregularMap.set(key1, 'value1');\nweakMap.set(key2, 'value2');\n\n// Test for key existence after original reference is removed\nconst hasKeyBeforeGC = regularMap.has(key1) && weakMap.has(key2);\n\n// Remove the original references\nkey1 = null;\nkey2 = null;\n\n// Force a new execution context\nsetTimeout(() => {\n  // Try to iterate through the map\n  let valuesExistAfterGC = false;\n  for (const [key, value] of regularMap) {\n    valuesExistAfterGC = true;\n    break;\n  }\n  \n  console.log(hasKeyBeforeGC, valuesExistAfterGC);\n}, 0);"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "When implementing proper JWT security in a Node.js application, which of the following is the MOST secure way to store JWT secrets?",
+      "options": {
+        "A": "Directly in the application code for quick access",
+        "B": "In a configuration file that is included in version control",
+        "C": "As environment variables loaded from a .env file excluded from version control",
+        "D": "Hardcoded in the database initialization script"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of this code involving streams for reading a large file?",
+      "options": {
+        "A": "An error will be thrown because the end event handler is not defined",
+        "B": "The file will be read and processed in chunks of 16KB by default",
+        "C": "The memory usage will spike because the entire file is loaded into memory first",
+        "D": "Nothing will be logged because the stream is paused by default"
+      },
+      "correct_answer": "B",
+      "code_example": "const fs = require('fs');\n\nconst readStream = fs.createReadStream('large-file.txt');\nlet chunkCount = 0;\n\nreadStream.on('data', (chunk) => {\n  chunkCount++;\n  console.log(`Received chunk ${chunkCount}: ${chunk.length} bytes`);\n});\n\nreadStream.on('end', () => {\n  console.log(`File reading completed. Processed ${chunkCount} chunks.`);\n});\n\nreadStream.on('error', (error) => {\n  console.error('An error occurred:', error.message);\n});"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What is the primary purpose of the Helmet.js library in Express applications?",
+      "options": {
+        "A": "To improve JavaScript parsing performance by leveraging V8 engine optimizations",
+        "B": "To add CORS support for cross-domain requests",
+        "C": "To set HTTP response headers that enhance security",
+        "D": "To compress response data before sending it to clients"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using winston for logging?",
+      "options": {
+        "A": "Only the 'Warning message' will be logged",
+        "B": "Both 'Warning message' and 'Error message' will be logged",
+        "C": "Only the 'Error message' will be logged",
+        "D": "No messages will be logged due to the custom format"
+      },
+      "correct_answer": "C",
+      "code_example": "const winston = require('winston');\n\nconst logger = winston.createLogger({\n  level: 'error',\n  format: winston.format.combine(\n    winston.format.timestamp(),\n    winston.format.json()\n  ),\n  transports: [\n    new winston.transports.Console()\n  ]\n});\n\nlogger.warn('Warning message');\nlogger.error('Error message');"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "In the context of refresh tokens and access tokens, which statement is correct?",
+      "options": {
+        "A": "Refresh tokens should have a shorter expiration time than access tokens",
+        "B": "Access tokens should be stored in localStorage for persistence",
+        "C": "Refresh tokens should be used to authenticate every API request",
+        "D": "Refresh tokens are used to obtain new access tokens without requiring re-authentication"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What is the output of this code demonstrating unhandled Promise rejection handling?",
+      "options": {
+        "A": "The process will terminate with error code 1",
+        "B": "The uncaught error will be logged, but the process continues running",
+        "C": "Nothing will be logged as the error is caught by the try/catch",
+        "D": "Error: 'Rejected Promise' will be logged, followed by 'Process completed'"
+      },
+      "correct_answer": "D",
+      "code_example": "process.on('unhandledRejection', (reason, promise) => {\n  console.error('Error:', reason.message);\n});\n\nfunction asyncOperation() {\n  return new Promise((resolve, reject) => {\n    reject(new Error('Rejected Promise'));\n  });\n}\n\nasyncOperation(); // No .catch() or await with try/catch\n\nsetTimeout(() => {\n  console.log('Process completed');\n}, 100);"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the behavior when executing this socket.io server with a client?",
+      "options": {
+        "A": "The server will emit a 'connect' event for each client, while clients emit a 'connection' event",
+        "B": "Messages sent to a namespace will be received by all clients in that namespace",
+        "C": "Each socket automatically joins a room with an ID matching the client ID",
+        "D": "Clients in different namespaces can communicate directly without server intervention"
+      },
+      "correct_answer": "C",
+      "code_example": "const http = require('http');\nconst server = http.createServer();\nconst io = require('socket.io')(server);\n\nio.on('connection', (socket) => {\n  console.log(`Client connected: ${socket.id}`);\n  \n  // Send message to specific client\n  socket.emit('welcome', { message: 'Welcome to the server!' });\n  \n  // Create a custom room and join it\n  socket.join('lobby');\n  \n  socket.on('message', (data) => {\n    // Broadcast to all in the room except sender\n    socket.to('lobby').emit('message', {\n      sender: socket.id,\n      text: data.text\n    });\n  });\n  \n  socket.on('disconnect', () => {\n    console.log(`Client disconnected: ${socket.id}`);\n  });\n});\n\nserver.listen(3000);"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "When configuring Prometheus with a Node.js application, what is the primary purpose of using the prom-client library?",
+      "options": {
+        "A": "To secure API endpoints against unauthorized metrics collection",
+        "B": "To create and expose metrics that Prometheus can scrape",
+        "C": "To analyze log files and convert them to Prometheus metrics format",
+        "D": "To provide authentication between the Node.js application and Grafana dashboards"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code related to CORS?",
+      "options": {
+        "A": "The server will accept requests from any origin",
+        "B": "The server will only accept GET requests from example.com",
+        "C": "The server will accept GET and POST requests from example.com with appropriate credentials",
+        "D": "The server will throw an error because the CORS configuration is incomplete"
+      },
+      "correct_answer": "C",
+      "code_example": "const express = require('express');\nconst cors = require('cors');\nconst app = express();\n\nconst corsOptions = {\n  origin: 'https://example.com',\n  methods: ['GET', 'POST'],\n  allowedHeaders: ['Content-Type', 'Authorization'],\n  credentials: true,\n  maxAge: 86400\n};\n\napp.use(cors(corsOptions));\n\napp.get('/api/data', (req, res) => {\n  res.json({ message: 'Data retrieved successfully' });\n});\n\napp.post('/api/data', (req, res) => {\n  res.json({ message: 'Data submitted successfully' });\n});\n\napp.put('/api/data', (req, res) => {\n  res.json({ message: 'Data updated successfully' });\n});\n\napp.listen(3000);"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "Which approach provides the strongest protection against Cross-Site Request Forgery (CSRF) attacks in an Express application?",
+      "options": {
+        "A": "Using HttpOnly cookies for session management",
+        "B": "Implementing token-based authentication with JWT stored in localStorage",
+        "C": "Using CSRF tokens that are validated on state-changing requests",
+        "D": "Relying on the Same-Origin Policy enforced by modern browsers"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What is the output of this code that uses V8 engine optimization techniques?",
+      "options": {
+        "A": "Monomorphic: 100ms, Polymorphic: 150ms, Megamorphic: 200ms",
+        "B": "The times will be roughly equal because V8 optimizes all three functions equally",
+        "C": "Monomorphic will be fastest, followed by Polymorphic, with Megamorphic being the slowest",
+        "D": "The code will throw an error because V8 optimization hints are invalid"
+      },
+      "correct_answer": "C",
+      "code_example": "// Monomorphic function (always receives same object shape)\nfunction monomorphic() {\n  const start = performance.now();\n  let sum = 0;\n  \n  for (let i = 0; i < 1000000; i++) {\n    const obj = { x: i, y: i * 2 };\n    sum += obj.x + obj.y;\n  }\n  \n  const elapsed = performance.now() - start;\n  console.log(`Monomorphic: ${elapsed.toFixed(2)}ms`);\n  return sum;\n}\n\n// Polymorphic function (uses 2-3 different object shapes)\nfunction polymorphic() {\n  const start = performance.now();\n  let sum = 0;\n  \n  for (let i = 0; i < 1000000; i++) {\n    // Alternating between two object shapes\n    const obj = i % 2 === 0 \n      ? { x: i, y: i * 2 }\n      : { x: i, z: i * 3 };\n    sum += obj.x + (obj.y || obj.z);\n  }\n  \n  const elapsed = performance.now() - start;\n  console.log(`Polymorphic: ${elapsed.toFixed(2)}ms`);\n  return sum;\n}\n\n// Megamorphic function (uses many different object shapes)\nfunction megamorphic() {\n  const start = performance.now();\n  let sum = 0;\n  \n  for (let i = 0; i < 1000000; i++) {\n    // Creating many different object shapes\n    const obj = {};\n    obj[`prop${i % 10}`] = i;\n    obj.x = i * 2;\n    sum += obj.x + (obj[`prop${i % 10}`] || 0);\n  }\n  \n  const elapsed = performance.now() - start;\n  console.log(`Megamorphic: ${elapsed.toFixed(2)}ms`);\n  return sum;\n}\n\n// Run the tests\nmonomorphic();\npolymorphic();\nmegamorphic();"
+    }
+  ]
+}
