@@ -1,0 +1,643 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "Named Parameters",
+      "question": "What will be the output of the following code?",
+      "code_example": "void Display(int x, int y)\n{\n    Console.WriteLine($\"x: {x}, y: {y}\");\n}\n\nDisplay(y: 20, x: 10);",
+      "options": {
+        "A": "x: 10, y: 20",
+        "B": "x: 20, y: 10",
+        "C": "y: 20, x: 10",
+        "D": "Error: Parameters must be passed in the defined order"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "Multi-dimensional Arrays",
+      "question": "What will be the output of the following code?",
+      "code_example": "int[,] matrix = new int[2, 3];\nConsole.WriteLine(matrix.Length);",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "5",
+        "D": "6"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "this keyword",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Counter\n{\n    private int count;\n    \n    public void Increment(int count)\n    {\n        this.count += count;\n    }\n    \n    public void Display()\n    {\n        Console.WriteLine(count);\n    }\n}\n\nCounter c = new Counter();\nc.Increment(5);\nc.Display();",
+      "options": {
+        "A": "0",
+        "B": "5",
+        "C": "null",
+        "D": "Error: 'count' is not initialized"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "StringBuilder vs string",
+      "question": "Which statement about StringBuilder vs string in C# is correct?",
+      "options": {
+        "A": "StringBuilder is immutable, while string is mutable",
+        "B": "StringBuilder is generally more efficient for multiple string concatenations",
+        "C": "StringBuilder has a fixed capacity that cannot be changed after initialization",
+        "D": "Strings created with StringBuilder cannot be converted to regular strings"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "Using using for resource management",
+      "question": "What is the primary purpose of the 'using' statement in C# for resource management?",
+      "options": {
+        "A": "To import namespaces",
+        "B": "To automatically call Dispose() on an object when it goes out of scope",
+        "C": "To create thread-safe code blocks",
+        "D": "To enforce type checking at compile time"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "File Operations",
+      "question": "What will the following code do?",
+      "code_example": "string content = File.ReadAllText(\"sample.txt\");\ncontent = content.Replace(\"Hello\", \"Hi\");\nFile.WriteAllText(\"sample.txt\", content);",
+      "options": {
+        "A": "Append \"Hi\" to the end of sample.txt",
+        "B": "Replace all occurrences of \"Hello\" with \"Hi\" in sample.txt",
+        "C": "Create a backup of sample.txt",
+        "D": "Delete the content of sample.txt"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "Collections",
+      "question": "What will be the output of the following code?",
+      "code_example": "Dictionary<string, int> ages = new Dictionary<string, int>();\nages.Add(\"Alice\", 30);\nages.Add(\"Bob\", 25);\nages.Add(\"Charlie\", 35);\n\nConsole.WriteLine(ages.ContainsKey(\"Bob\") ? \"Found\" : \"Not Found\");",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Found",
+        "D": "Not Found"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "Implicit vs. explicit casting",
+      "question": "What will be the output of the following code?",
+      "code_example": "int intValue = 10;\ndouble doubleValue = intValue;\nint backToInt = (int)doubleValue;\n\nConsole.WriteLine($\"{intValue.GetType().Name}, {doubleValue.GetType().Name}, {backToInt.GetType().Name}\");",
+      "options": {
+        "A": "Int32, Double, Int32",
+        "B": "int, double, int",
+        "C": "System.Int32, System.Double, System.Int32",
+        "D": "Integer, Double, Integer"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Control flow statements",
+      "question": "What will be the output of the following code?",
+      "code_example": "for (int i = 0; i < 5; i++)\n{\n    if (i == 2)\n        continue;\n    if (i == 4)\n        break;\n    Console.Write(i + \" \");\n}",
+      "options": {
+        "A": "0 1 3",
+        "B": "0 1 2 3",
+        "C": "0 1 3 4",
+        "D": "0 1 2 3 4"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Pattern matching in switch",
+      "question": "What will be the output of the following code?",
+      "code_example": "object obj = \"Hello\";\n\nswitch (obj)\n{\n    case int i:\n        Console.WriteLine($\"Integer: {i}\");\n        break;\n    case string s when s.Length > 10:\n        Console.WriteLine(\"Long string\");\n        break;\n    case string s:\n        Console.WriteLine($\"String: {s}\");\n        break;\n    default:\n        Console.WriteLine(\"Unknown type\");\n        break;\n}",
+      "options": {
+        "A": "Integer: Hello",
+        "B": "Long string",
+        "C": "String: Hello",
+        "D": "Unknown type"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "String manipulation",
+      "question": "What will be the output of the following code?",
+      "code_example": "string text = \"  Hello, World!  \";\nstring result = text.Trim().Substring(0, 5).ToLower();\nConsole.WriteLine(result);",
+      "options": {
+        "A": "hello",
+        "B": "  hel",
+        "C": "Hello",
+        "D": "hello,"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "if-else",
+      "question": "What will be the output of the following code?",
+      "code_example": "int a = 5, b = 10;\n\nif (a > b)\n    Console.WriteLine(\"a is greater\");\nelse if (a == b)\n    Console.WriteLine(\"a equals b\");\nelse\n    Console.WriteLine(\"b is greater\");",
+      "options": {
+        "A": "a is greater",
+        "B": "a equals b",
+        "C": "b is greater",
+        "D": "No output is produced"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "Auto-implemented properties",
+      "question": "What is the correct way to define an auto-implemented property in C#?",
+      "options": {
+        "A": "public string Name { get; set; }",
+        "B": "public string Name { get { return name; } set { name = value; } }",
+        "C": "public string Name => name;",
+        "D": "public property string Name;"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "Single-dimensional Arrays",
+      "question": "What will be the output of the following code?",
+      "code_example": "int[] numbers = new int[3] { 10, 20, 30 };\nnumbers[1] = 50;\n\nConsole.WriteLine(string.Join(\", \", numbers));",
+      "options": {
+        "A": "10, 20, 30",
+        "B": "10, 50, 30",
+        "C": "50, 20, 30",
+        "D": "10, 20, 50"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "Cross-platform development in .NET",
+      "question": "Which of the following is NOT a benefit of .NET for cross-platform development?",
+      "options": {
+        "A": "Ability to create applications that run on Windows, macOS, and Linux",
+        "B": "Support for containerization with Docker",
+        "C": "Native access to platform-specific APIs without additional libraries",
+        "D": "Consistent runtime behavior across different operating systems"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "Jagged arrays",
+      "question": "What will be the output of the following code?",
+      "code_example": "int[][] jaggedArray = new int[3][];\njaggedArray[0] = new int[2] { 1, 2 };\njaggedArray[1] = new int[1] { 3 };\njaggedArray[2] = new int[3] { 4, 5, 6 };\n\nConsole.WriteLine(jaggedArray[1][0]);",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Dependency Injection in Testing",
+      "question": "Which statement about dependency injection in testing is correct?",
+      "options": {
+        "A": "Dependency injection makes unit testing harder by introducing additional complexity",
+        "B": "Dependency injection can only be used with constructor injection",
+        "C": "Dependency injection allows for easier mocking of dependencies in unit tests",
+        "D": "Dependency injection requires using a specific test framework like NUnit or xUnit"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "Generic classes",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Box<T>\n{\n    private T item;\n    \n    public Box(T item)\n    {\n        this.item = item;\n    }\n    \n    public string GetItemType()\n    {\n        return item.GetType().Name;\n    }\n}\n\nBox<int> intBox = new Box<int>(10);\nBox<string> stringBox = new Box<string>(\"Hello\");\n\nConsole.WriteLine($\"{intBox.GetItemType()}, {stringBox.GetItemType()}\");",
+      "options": {
+        "A": "int, string",
+        "B": "Int32, String",
+        "C": "T, T",
+        "D": "Integer, String"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "Dispose() vs. Finalize()",
+      "question": "Which statement about Dispose() and Finalize() methods in C# is correct?",
+      "options": {
+        "A": "Finalize() is called explicitly by the programmer, while Dispose() is called by the garbage collector",
+        "B": "Dispose() is used for releasing unmanaged resources, while Finalize() is used for releasing managed resources",
+        "C": "Dispose() is called explicitly, while Finalize() is called by the garbage collector before reclaiming memory",
+        "D": "Finalize() is always called immediately after Dispose()"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "virtual, override, sealed, abstract",
+      "question": "What will be the output of the following code?",
+      "code_example": "abstract class Animal\n{\n    public virtual void MakeSound()\n    {\n        Console.WriteLine(\"Some sound\");\n    }\n    \n    public abstract void Move();\n}\n\nclass Dog : Animal\n{\n    public sealed override void MakeSound()\n    {\n        Console.WriteLine(\"Woof\");\n    }\n    \n    public override void Move()\n    {\n        Console.WriteLine(\"Running\");\n    }\n}\n\nAnimal myDog = new Dog();\nmyDog.MakeSound();\nmyDog.Move();",
+      "options": {
+        "A": "Some sound\\nRunning",
+        "B": "Woof\\nRunning",
+        "C": "Some sound\\nError: Cannot call abstract method",
+        "D": "Error: Cannot instantiate abstract class"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "Generic constraints",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Factory<T> where T : class, new()\n{\n    public T Create()\n    {\n        return new T();\n    }\n}\n\nclass MyClass\n{\n    public MyClass()\n    {\n        Console.WriteLine(\"MyClass created\");\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        Factory<MyClass> factory = new Factory<MyClass>();\n        factory.Create();\n    }\n}",
+      "options": {
+        "A": "Error: MyClass does not satisfy constraint 'new()'",
+        "B": "MyClass created",
+        "C": "Error: Factory<T> requires a parameter",
+        "D": "No output produced"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "Thread-safe collections",
+      "question": "Which statement about ConcurrentDictionary<TKey, TValue> is correct?",
+      "options": {
+        "A": "It has better performance than Dictionary<TKey, TValue> in all scenarios",
+        "B": "It provides thread-safety at the expense of some performance compared to non-concurrent collections",
+        "C": "It can only be used in multi-threaded applications",
+        "D": "It requires explicit locking when accessing items"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "Events",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Publisher\n{\n    public event EventHandler DataChanged;\n    \n    public void UpdateData()\n    {\n        DataChanged?.Invoke(this, EventArgs.Empty);\n    }\n}\n\nclass Subscriber\n{\n    public void OnDataChanged(object sender, EventArgs e)\n    {\n        Console.WriteLine(\"Data has changed\");\n    }\n}\n\nPublisher publisher = new Publisher();\nSubscriber subscriber = new Subscriber();\npublisher.DataChanged += subscriber.OnDataChanged;\npublisher.UpdateData();\npublisher.DataChanged -= subscriber.OnDataChanged;\npublisher.UpdateData();",
+      "options": {
+        "A": "Data has changed\\nData has changed",
+        "B": "Data has changed",
+        "C": "No output produced",
+        "D": "Error: Cannot invoke event without subscribers"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "Declaring events",
+      "question": "What is the correct way to declare a custom event with event arguments in C#?",
+      "options": {
+        "A": "public event Action<MyEventArgs> MyEvent;",
+        "B": "public delegate void MyEventHandler(object sender, MyEventArgs e); public event MyEventHandler MyEvent;",
+        "C": "public EventHandler<MyEventArgs> MyEvent();",
+        "D": "public event void MyEvent(object sender, MyEventArgs e);"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Collections",
+      "question": "When would you use LinkedList<T> instead of List<T>?",
+      "options": {
+        "A": "When you need frequent random access to elements by index",
+        "B": "When you need frequent insertions and removals from the beginning or middle of the list",
+        "C": "When you need to sort the collection frequently",
+        "D": "When you need to ensure uniqueness of elements"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "ASP.NET Attributes",
+      "question": "What is the purpose of the [HttpGet] and [HttpPost] attributes in ASP.NET Core?",
+      "options": {
+        "A": "To specify which HTTP method a controller action responds to",
+        "B": "To validate incoming HTTP request data",
+        "C": "To specify which data format the controller action returns",
+        "D": "To authenticate HTTP requests before reaching controller actions"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "Method hiding",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Base\n{\n    public virtual void Display()\n    {\n        Console.WriteLine(\"Base.Display\");\n    }\n    \n    public void Show()\n    {\n        Console.WriteLine(\"Base.Show\");\n    }\n}\n\nclass Derived : Base\n{\n    public override void Display()\n    {\n        Console.WriteLine(\"Derived.Display\");\n    }\n    \n    public new void Show()\n    {\n        Console.WriteLine(\"Derived.Show\");\n    }\n}\n\nBase obj = new Derived();\nobj.Display();\nobj.Show();",
+      "options": {
+        "A": "Base.Display\\nBase.Show",
+        "B": "Derived.Display\\nDerived.Show",
+        "C": "Derived.Display\\nBase.Show",
+        "D": "Base.Display\\nDerived.Show"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "Entity Framework Migrations",
+      "question": "What is the primary purpose of the Add-Migration command in Entity Framework Core?",
+      "options": {
+        "A": "To create a new database if it doesn't exist",
+        "B": "To generate a migration file that contains code to update the database schema",
+        "C": "To apply pending migrations to the database",
+        "D": "To revert the last applied migration"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "LINQ Aggregate Functions",
+      "question": "What will be the output of the following code?",
+      "code_example": "List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };\n\nbool allPositive = numbers.All(n => n > 0);\nbool anyNegative = numbers.Any(n => n < 0);\nint sum = numbers.Aggregate((a, b) => a + b);\n\nConsole.WriteLine($\"{allPositive}, {anyNegative}, {sum}\");",
+      "options": {
+        "A": "True, True, 15",
+        "B": "True, False, 15",
+        "C": "False, True, 15",
+        "D": "False, False, 15"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Dependency Injection Lifetimes",
+      "question": "Which of the following statements about dependency injection service lifetimes in ASP.NET Core is correct?",
+      "options": {
+        "A": "Transient services are created once per application",
+        "B": "Scoped services are created once per HTTP request",
+        "C": "Singleton services are created once per HTTP request",
+        "D": "Scoped services are created each time they are requested"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "LINQ Methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "var people = new List<(string Name, int Age)>\n{\n    (\"Alice\", 25),\n    (\"Bob\", 30),\n    (\"Charlie\", 20),\n    (\"Diana\", 35),\n    (\"Eve\", 25)\n};\n\nvar result = people\n    .Where(p => p.Age >= 25)\n    .OrderBy(p => p.Age)\n    .GroupBy(p => p.Age)\n    .Select(g => $\"{g.Key}: {string.Join(\", \", g.Select(p => p.Name))}\");\n\nforeach (var group in result)\n{\n    Console.WriteLine(group);\n}",
+      "options": {
+        "A": "25: Alice, Eve\\n30: Bob\\n35: Diana",
+        "B": "Alice, Eve\\nBob\\nDiana",
+        "C": "25: Alice\\n25: Eve\\n30: Bob\\n35: Diana",
+        "D": "25, 30, 35"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "Garbage Collection",
+      "question": "What is the purpose of GC.Collect() in C#?",
+      "options": {
+        "A": "To prevent memory leaks from occurring in the application",
+        "B": "To increase the overall memory allocation for the application",
+        "C": "To force garbage collection to run immediately",
+        "D": "To clear all memory used by unmanaged resources"
+      },
+      "correct_answer": "C"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the primary advantage of using Span<T> over arrays in C#?",
+      "options": {
+        "A": "Span<T> can be modified after creation, while arrays are immutable",
+        "B": "Span<T> allows access to memory without copying, reducing memory allocations",
+        "C": "Span<T> supports multi-dimensional indexing, while arrays are limited to single-dimensional access",
+        "D": "Span<T> automatically manages memory through garbage collection, unlike arrays"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic class SpanExample\n{\n    public static void Main()\n    {\n        // Creating an array and a Span that refers to it\n        byte[] array = { 1, 2, 3, 4, 5 };\n        Span<byte> span = array;\n        \n        // Modifying the span\n        span[2] = 10;\n        \n        // Display results\n        Console.WriteLine(\"Array after modifying span: \" + string.Join(\", \", array));\n        \n        // Create a span from a portion of the array without copying\n        Span<byte> slice = array.AsSpan(1, 3);\n        slice[0] = 20; // This modifies array[1]\n        \n        Console.WriteLine(\"Array after modifying slice: \" + string.Join(\", \", array));\n    }\n}"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which statement about Memory<T> compared to Span<T> is correct?",
+      "options": {
+        "A": "Memory<T> can be stored in fields of classes, while Span<T> cannot",
+        "B": "Memory<T> supports multi-threading, while Span<T> is single-threaded only",
+        "C": "Memory<T> has better performance than Span<T> for all operations",
+        "D": "Memory<T> can only be used with value types, while Span<T> works with both value and reference types"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Monitor instead of the lock keyword?",
+      "options": {
+        "A": "\"Thread 1 acquired lock\" followed by \"Thread 2 acquired lock\"",
+        "B": "\"Thread 2 acquired lock\" followed by \"Thread 1 acquired lock\"",
+        "C": "The output order is non-deterministic, but both messages will be displayed without interleaving",
+        "D": "A ThreadStateException will be thrown"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\npublic class MonitorExample\n{\n    private static readonly object _lock = new object();\n    \n    public static void Main()\n    {\n        Task t1 = Task.Run(() => DoWork(\"Thread 1\"));\n        Task t2 = Task.Run(() => DoWork(\"Thread 2\"));\n        \n        Task.WaitAll(t1, t2);\n    }\n    \n    private static void DoWork(string threadName)\n    {\n        bool lockTaken = false;\n        try\n        {\n            Monitor.Enter(_lock, ref lockTaken);\n            Console.WriteLine($\"{threadName} acquired lock\");\n            Thread.Sleep(100); // Simulate work\n        }\n        finally\n        {\n            if (lockTaken)\n            {\n                Monitor.Exit(_lock);\n            }\n        }\n    }\n}"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates stack vs heap allocation?",
+      "options": {
+        "A": "Value1: 10, Value2: 10",
+        "B": "Value1: 10, Value2: 20",
+        "C": "Value1: 20, Value2: 10",
+        "D": "Value1: 20, Value2: 20"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic class MemoryAllocationExample\n{\n    public static void Main()\n    {\n        // Stack allocation\n        int value1 = 10;\n        \n        // Heap allocation\n        ClassExample obj = new ClassExample { Value = 10 };\n        \n        // Pass by value (copy)\n        ChangeValue(value1, obj);\n        \n        Console.WriteLine($\"Value1: {value1}, Value2: {obj.Value}\");\n    }\n    \n    private static void ChangeValue(int val, ClassExample obj)\n    {\n        val = 20;       // Modifies local copy on stack\n        obj.Value = 20; // Modifies original object on heap\n    }\n}\n\npublic class ClassExample\n{\n    public int Value { get; set; }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses MethodInfo.Invoke()?",
+      "options": {
+        "A": "Hello, World!",
+        "B": "Hello, Reflection!",
+        "C": "A TargetParameterCountException will be thrown",
+        "D": "A MissingMethodException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Reflection;\n\npublic class ReflectionExample\n{\n    public static void Main()\n    {\n        Type type = typeof(MessageService);\n        object instance = Activator.CreateInstance(type);\n        \n        MethodInfo methodInfo = type.GetMethod(\"DisplayMessage\");\n        \n        if (methodInfo != null)\n        {\n            methodInfo.Invoke(instance, new object[] { \"Reflection\" });\n        }\n    }\n}\n\npublic class MessageService\n{\n    public void DisplayMessage(string name)\n    {\n        Console.WriteLine($\"Hello, {name}!\");\n    }\n}"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "In the Observer Pattern implementation below, what will be printed to the console when the code is executed?",
+      "options": {
+        "A": "\"Observer 1 received: Temperature changed to 25.5\" followed by \"Observer 2 received: Temperature changed to 25.5\"",
+        "B": "\"Observer 2 received: Temperature changed to 25.5\" followed by \"Observer 1 received: Temperature changed to 25.5\"",
+        "C": "Only \"Observer 1 received: Temperature changed to 25.5\" will be printed",
+        "D": "Nothing will be printed because observer registration is incorrect"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Collections.Generic;\n\npublic class ObserverPatternExample\n{\n    public static void Main()\n    {\n        // Create subject\n        WeatherStation station = new WeatherStation();\n        \n        // Create observers\n        TemperatureDisplay display1 = new TemperatureDisplay(\"Observer 1\");\n        TemperatureDisplay display2 = new TemperatureDisplay(\"Observer 2\");\n        \n        // Register observers\n        station.AddObserver(display1);\n        station.AddObserver(display2);\n        \n        // Change temperature (will notify observers)\n        station.SetTemperature(25.5f);\n        \n        // Remove one observer\n        station.RemoveObserver(display2);\n        \n        // Change temperature again (will notify remaining observer)\n        station.SetTemperature(26.7f);\n    }\n}\n\npublic interface IObserver\n{\n    void Update(string message);\n}\n\npublic class WeatherStation\n{\n    private readonly List<IObserver> _observers = new List<IObserver>();\n    private float _temperature;\n    \n    public void AddObserver(IObserver observer)\n    {\n        _observers.Add(observer);\n    }\n    \n    public void RemoveObserver(IObserver observer)\n    {\n        _observers.Remove(observer);\n    }\n    \n    public void SetTemperature(float temperature)\n    {\n        _temperature = temperature;\n        NotifyObservers();\n    }\n    \n    private void NotifyObservers()\n    {\n        foreach (var observer in _observers)\n        {\n            observer.Update($\"Temperature changed to {_temperature}\");\n        }\n    }\n}\n\npublic class TemperatureDisplay : IObserver\n{\n    private readonly string _name;\n    \n    public TemperatureDisplay(string name)\n    {\n        _name = name;\n    }\n    \n    public void Update(string message)\n    {\n        Console.WriteLine($\"{_name} received: {message}\");\n    }\n}"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "Which of the following approaches is considered a best practice for API versioning in ASP.NET Core?",
+      "options": {
+        "A": "Using query string parameters (e.g., api/products?version=1.0)",
+        "B": "Using HTTP headers (e.g., X-API-Version: 1.0)",
+        "C": "Using URL path segments (e.g., api/v1/products)",
+        "D": "All of the above are equally recommended practices"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Parallel.Invoke()?",
+      "options": {
+        "A": "The numbers 1 through 3 in sequential order",
+        "B": "The numbers 1 through 3 in any order, with possible interleaving",
+        "C": "The numbers 1 through 3 in any order, but without interleaving",
+        "D": "A ParallelExecutionException will be thrown"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\npublic class ParallelInvokeExample\n{\n    public static void Main()\n    {\n        Parallel.Invoke(\n            () => DoWork(1),\n            () => DoWork(2),\n            () => DoWork(3)\n        );\n    }\n    \n    private static void DoWork(int id)\n    {\n        Thread.Sleep(new Random().Next(100, 500)); // Random delay\n        Console.WriteLine(id);\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "When configuring CORS in ASP.NET Core, which of the following is NOT a valid policy configuration option?",
+      "options": {
+        "A": "AllowAnyOrigin()",
+        "B": "WithMethods(\"GET\", \"POST\")",
+        "C": "WithHeaders(\"Content-Type\")",
+        "D": "AllowEncryptedOrigins()"
+      },
+      "correct_answer": "D",
+      "code_example": "using Microsoft.AspNetCore.Builder;\nusing Microsoft.AspNetCore.Cors.Infrastructure;\nusing Microsoft.AspNetCore.Hosting;\nusing Microsoft.Extensions.DependencyInjection;\n\npublic class Startup\n{\n    public void ConfigureServices(IServiceCollection services)\n    {\n        services.AddCors(options =>\n        {\n            options.AddPolicy(\"AllowSpecificOrigin\",\n                builder => builder\n                    .WithOrigins(\"https://example.com\")\n                    .WithMethods(\"GET\", \"POST\", \"PUT\")\n                    .WithHeaders(\"Content-Type\", \"Authorization\")\n                    .AllowCredentials());\n                    \n            options.AddPolicy(\"AllowAnyOrigin\",\n                builder => builder\n                    .AllowAnyOrigin()\n                    .AllowAnyMethod()\n                    .AllowAnyHeader());\n        });\n        \n        services.AddControllers();\n    }\n    \n    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)\n    {\n        app.UseRouting();\n        \n        // Apply CORS policy globally\n        app.UseCors(\"AllowSpecificOrigin\");\n        \n        app.UseEndpoints(endpoints =>\n        {\n            endpoints.MapControllers();\n        });\n    }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses ArrayPool<T>?",
+      "options": {
+        "A": "5, 0, 0, 0, 0",
+        "B": "5, 10, 0, 0, 0",
+        "C": "5, 10, 15, 0, 0",
+        "D": "5, 10, 15, 20, 25"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Buffers;\n\npublic class ArrayPoolExample\n{\n    public static void Main()\n    {\n        // Get array from pool\n        ArrayPool<int> pool = ArrayPool<int>.Shared;\n        int[] array = pool.Rent(5);\n        \n        try\n        {\n            // Set some values\n            array[0] = 5;\n            array[1] = 10;\n            array[2] = 15;\n            \n            // Print the array contents\n            Console.WriteLine(string.Join(\", \", array.AsSpan(0, 5)));\n        }\n        finally\n        {\n            // Return array to pool\n            pool.Return(array, clearArray: false);\n        }\n    }\n}"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "When using Semaphore and Mutex for thread synchronization, which statement is true?",
+      "options": {
+        "A": "A Semaphore can be released by any thread, but a Mutex can only be released by the thread that acquired it",
+        "B": "A Mutex can be shared between processes, but a Semaphore cannot",
+        "C": "A Semaphore limits the number of concurrent executions to exactly one, just like a Mutex",
+        "D": "A Mutex automatically releases when the owning thread terminates, but a Semaphore does not"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\npublic class SynchronizationExample\n{\n    private static Semaphore _semaphore = new Semaphore(2, 2); // Allow 2 concurrent threads\n    private static Mutex _mutex = new Mutex();\n    \n    public static void Main()\n    {\n        // Test Semaphore with 3 tasks\n        for (int i = 1; i <= 3; i++)\n        {\n            int taskId = i;\n            Task.Run(() => UseResource(taskId, true));\n        }\n        \n        Thread.Sleep(1000); // Wait for semaphore tasks\n        Console.WriteLine(\"-----\");\n        \n        // Test Mutex with 3 tasks\n        for (int i = 1; i <= 3; i++)\n        {\n            int taskId = i;\n            Task.Run(() => UseResource(taskId, false));\n        }\n        \n        Thread.Sleep(1000); // Wait for mutex tasks\n    }\n    \n    private static void UseResource(int taskId, bool useSemaphore)\n    {\n        if (useSemaphore)\n        {\n            Console.WriteLine($\"Task {taskId} waiting for semaphore\");\n            _semaphore.WaitOne();\n            try\n            {\n                Console.WriteLine($\"Task {taskId} acquired semaphore\");\n                Thread.Sleep(200); // Simulate work\n            }\n            finally\n            {\n                Console.WriteLine($\"Task {taskId} releasing semaphore\");\n                _semaphore.Release();\n            }\n        }\n        else\n        {\n            Console.WriteLine($\"Task {taskId} waiting for mutex\");\n            _mutex.WaitOne();\n            try\n            {\n                Console.WriteLine($\"Task {taskId} acquired mutex\");\n                Thread.Sleep(200); // Simulate work\n            }\n            finally\n            {\n                Console.WriteLine($\"Task {taskId} releasing mutex\");\n                _mutex.ReleaseMutex();\n            }\n        }\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses CancellationToken?",
+      "options": {
+        "A": "\"Operation completed successfully\"",
+        "B": "\"Operation was cancelled\"",
+        "C": "\"Operation timed out\"",
+        "D": "A TaskCanceledException will be thrown and unhandled"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\npublic class CancellationExample\n{\n    public static void Main()\n    {\n        // Create cancellation token source with timeout\n        using (var cts = new CancellationTokenSource(TimeSpan.FromSeconds(1)))\n        {\n            CancellationToken token = cts.Token;\n            \n            try\n            {\n                // Start a long-running operation\n                Task.Run(() => PerformLongOperation(token), token)\n                    .GetAwaiter()\n                    .GetResult();\n                \n                Console.WriteLine(\"Operation completed successfully\");\n            }\n            catch (OperationCanceledException)\n            {\n                Console.WriteLine(\"Operation was cancelled\");\n            }\n            catch (TimeoutException)\n            {\n                Console.WriteLine(\"Operation timed out\");\n            }\n        }\n    }\n    \n    private static void PerformLongOperation(CancellationToken token)\n    {\n        for (int i = 0; i < 10; i++)\n        {\n            // Check for cancellation\n            token.ThrowIfCancellationRequested();\n            \n            // Simulate work\n            Thread.Sleep(300);\n            Console.WriteLine($\"Step {i + 1} completed\");\n        }\n    }\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Activator.CreateInstance()?",
+      "options": {
+        "A": "Default Name",
+        "B": "Custom Name",
+        "C": "A MissingMethodException will be thrown",
+        "D": "An InvalidCastException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic class ActivatorExample\n{\n    public static void Main()\n    {\n        // Create instance with default constructor\n        Type personType = typeof(Person);\n        Person person1 = (Person)Activator.CreateInstance(personType);\n        Console.WriteLine(person1.Name);\n        \n        // Create instance with parameters\n        object[] constructorArgs = { \"Custom Name\" };\n        Person person2 = (Person)Activator.CreateInstance(personType, constructorArgs);\n        Console.WriteLine(person2.Name);\n    }\n}\n\npublic class Person\n{\n    public string Name { get; set; }\n    \n    public Person()\n    {\n        Name = \"Default Name\";\n    }\n    \n    public Person(string name)\n    {\n        Name = name;\n    }\n}"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses ExpandoObject?",
+      "options": {
+        "A": "Name: John\nAge: 30",
+        "B": "A RuntimeBinderException will be thrown on the Console.WriteLine(user.Age) line",
+        "C": "A MissingMemberException will be thrown on the dynamic user = new ExpandoObject() line",
+        "D": "Name: John\nA RuntimeBinderException will be thrown on the Console.WriteLine(user.Age) line"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Dynamic;\n\npublic class ExpandoObjectExample\n{\n    public static void Main()\n    {\n        // Create a dynamic object\n        dynamic user = new ExpandoObject();\n        \n        // Add properties dynamically\n        user.Name = \"John\";\n        user.Age = 30;\n        \n        // Add a method dynamically\n        user.Greet = (Action)(() => Console.WriteLine($\"Hello, my name is {user.Name}\"));\n        \n        // Access properties\n        Console.WriteLine($\"Name: {user.Name}\");\n        Console.WriteLine($\"Age: {user.Age}\");\n        \n        // Call the method\n        user.Greet();\n    }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "In ASP.NET Core, which of the following is NOT a valid approach for implementing role-based authentication?",
+      "options": {
+        "A": "Using [Authorize(Roles = \"Admin\")] attribute on controllers or actions",
+        "B": "Calling User.IsInRole(\"Admin\") in controller methods",
+        "C": "Using policy-based authorization with requirements",
+        "D": "Using [RequireHttps(Roles = \"Admin\")] attribute on controllers"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a grant type in OAuth 2.0?",
+      "options": {
+        "A": "Authorization Code Grant",
+        "B": "Implicit Grant",
+        "C": "Resource Owner Password Credentials Grant",
+        "D": "Direct Access Grant"
+      },
+      "correct_answer": "D"
+    }
+  ]
+}
