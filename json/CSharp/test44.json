@@ -1,0 +1,628 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello",
+        "B": "World",
+        "C": "Hello World",
+        "D": "HelloWorld"
+      },
+      "correct_answer": "D",
+      "code_example": "string a = \"Hello\";\nstring b = \"World\";\nConsole.WriteLine(a + b);"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a reference type in C#?",
+      "options": {
+        "A": "string",
+        "B": "int",
+        "C": "class",
+        "D": "interface"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the primary difference between .NET Framework and .NET Core?",
+      "options": {
+        "A": ".NET Core is cross-platform while .NET Framework is Windows-only",
+        "B": ".NET Framework is open-source while .NET Core is proprietary",
+        "C": ".NET Core supports only console applications",
+        "D": ".NET Framework has a smaller memory footprint than .NET Core"
+      },
+      "correct_answer": "A",
+      "code_example": null
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using pattern matching in switch?",
+      "options": {
+        "A": "It's a positive number",
+        "B": "It's zero",
+        "C": "It's a negative number",
+        "D": "It's not an integer"
+      },
+      "correct_answer": "B",
+      "code_example": "object value = 0;\n\nstring result = value switch\n{\n    0 => \"It's zero\",\n    > 0 => \"It's a positive number\",\n    < 0 => \"It's a negative number\",\n    _ => \"It's not an integer\"\n};\n\nConsole.WriteLine(result);"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using a local function?",
+      "options": {
+        "A": "10",
+        "B": "25",
+        "C": "50",
+        "D": "100"
+      },
+      "correct_answer": "C",
+      "code_example": "void Main()\n{\n    int number = 10;\n    \n    int result = CalculateValue();\n    Console.WriteLine(result);\n    \n    int CalculateValue()\n    {\n        return number * 5;\n    }\n}"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using constructor overloading?",
+      "options": {
+        "A": "Name: Unknown, Age: 0",
+        "B": "Name: John, Age: 0",
+        "C": "Name: Unknown, Age: 30",
+        "D": "Name: John, Age: 30"
+      },
+      "correct_answer": "D",
+      "code_example": "class Person\n{\n    public string Name { get; set; }\n    public int Age { get; set; }\n    \n    public Person()\n    {\n        Name = \"Unknown\";\n        Age = 0;\n    }\n    \n    public Person(string name) : this()\n    {\n        Name = name;\n    }\n    \n    public Person(string name, int age) : this(name)\n    {\n        Age = age;\n    }\n}\n\nvoid Main()\n{\n    var person = new Person(\"John\", 30);\n    Console.WriteLine($\"Name: {person.Name}, Age: {person.Age}\");\n}"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following try-catch-finally block?",
+      "options": {
+        "A": "In try\nIn finally",
+        "B": "In try\nIn catch\nIn finally",
+        "C": "In catch\nIn finally",
+        "D": "In finally"
+      },
+      "correct_answer": "C",
+      "code_example": "void Main()\n{\n    try\n    {\n        int result = 10 / 0;\n        Console.WriteLine(\"In try\");\n    }\n    catch (DivideByZeroException)\n    {\n        Console.WriteLine(\"In catch\");\n    }\n    finally\n    {\n        Console.WriteLine(\"In finally\");\n    }\n}"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following LINQ code?",
+      "options": {
+        "A": "2, 4, 6, 8",
+        "B": "2, 4, 6, 8, 10",
+        "C": "10, 8, 6, 4, 2",
+        "D": "2, 4, 6, 8, 10, 12"
+      },
+      "correct_answer": "A",
+      "code_example": "void Main()\n{\n    var numbers = new List<int> { 1, 2, 3, 4, 5, 6 };\n    \n    var result = numbers\n        .Where(n => n % 2 == 0)\n        .Select(n => n * 2)\n        .OrderBy(n => n);\n    \n    Console.WriteLine(string.Join(\", \", result));\n}"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the main difference between 'var' and 'dynamic' in C#?",
+      "options": {
+        "A": "They are completely identical in functionality",
+        "B": "'var' is resolved at compile-time, while 'dynamic' is resolved at runtime",
+        "C": "'dynamic' can only be used with numeric data types",
+        "D": "'var' can change its type during execution, but 'dynamic' cannot"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using null-coalescing and null-conditional operators?",
+      "options": {
+        "A": "Default",
+        "B": "null",
+        "C": "An exception will be thrown",
+        "D": "5"
+      },
+      "correct_answer": "A",
+      "code_example": "void Main()\n{\n    string[] names = null;\n    int? length = names?.Length;\n    string result = length?.ToString() ?? \"Default\";\n    Console.WriteLine(result);\n}"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code demonstrating the immutable nature of strings?",
+      "options": {
+        "A": "Hello World",
+        "B": "Hello",
+        "C": "World",
+        "D": "HelloWorld"
+      },
+      "correct_answer": "B",
+      "code_example": "void Main()\n{\n    string text = \"Hello\";\n    ModifyString(text);\n    Console.WriteLine(text);\n}\n\nvoid ModifyString(string str)\n{\n    str = str + \" World\";\n}"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following if-else statement?",
+      "options": {
+        "A": "x is less than 10",
+        "B": "x is between 10 and 20",
+        "C": "x is greater than or equal to 20",
+        "D": "No output will be produced"
+      },
+      "correct_answer": "C",
+      "code_example": "void Main()\n{\n    int x = 25;\n    \n    if (x < 10)\n    {\n        Console.WriteLine(\"x is less than 10\");\n    }\n    else if (x < 20)\n    {\n        Console.WriteLine(\"x is between 10 and 20\");\n    }\n    else\n    {\n        Console.WriteLine(\"x is greater than or equal to 20\");\n    }\n}"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using auto-implemented properties?",
+      "options": {
+        "A": "John, 0",
+        "B": "John, 30",
+        "C": ", 30",
+        "D": "null, 30"
+      },
+      "correct_answer": "B",
+      "code_example": "class User\n{\n    public string Name { get; set; }\n    public int Age { get; set; }\n}\n\nvoid Main()\n{\n    var user = new User { Name = \"John\", Age = 30 };\n    Console.WriteLine($\"{user.Name}, {user.Age}\");\n}"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using the 'this' keyword?",
+      "options": {
+        "A": "0",
+        "B": "5",
+        "C": "10",
+        "D": "15"
+      },
+      "correct_answer": "C",
+      "code_example": "class Calculator\n{\n    private int value;\n    \n    public Calculator(int value)\n    {\n        this.value = value;\n    }\n    \n    public int AddValue(int amount)\n    {\n        return this.value + amount;\n    }\n}\n\nvoid Main()\n{\n    var calc = new Calculator(5);\n    Console.WriteLine(calc.AddValue(5));\n}"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using bitwise operators?",
+      "options": {
+        "A": "3",
+        "B": "1",
+        "C": "2",
+        "D": "0"
+      },
+      "correct_answer": "A",
+      "code_example": "void Main()\n{\n    int a = 3;  // 011 in binary\n    int b = 5;  // 101 in binary\n    \n    int result = a & b;  // Bitwise AND\n    Console.WriteLine(result);\n}"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using Queue<T> and Stack<T>?",
+      "options": {
+        "A": "1, 2, 3, 3, 2, 1",
+        "B": "1, 2, 3, 1, 2, 3",
+        "C": "3, 2, 1, 3, 2, 1",
+        "D": "3, 2, 1, 1, 2, 3"
+      },
+      "correct_answer": "D",
+      "code_example": "void Main()\n{\n    var stack = new Stack<int>();\n    stack.Push(1);\n    stack.Push(2);\n    stack.Push(3);\n    \n    var queue = new Queue<int>();\n    queue.Enqueue(1);\n    queue.Enqueue(2);\n    queue.Enqueue(3);\n    \n    var result = new List<int>();\n    \n    while (stack.Count > 0)\n    {\n        result.Add(stack.Pop());\n    }\n    \n    while (queue.Count > 0)\n    {\n        result.Add(queue.Dequeue());\n    }\n    \n    Console.WriteLine(string.Join(\", \", result));\n}"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following custom exception code?",
+      "options": {
+        "A": "Custom exception: The value cannot be negative",
+        "B": "ArgumentException: The value cannot be negative",
+        "C": "NegativeValueException: The value cannot be negative",
+        "D": "System.Exception will be thrown"
+      },
+      "correct_answer": "C",
+      "code_example": "class NegativeValueException : Exception\n{\n    public NegativeValueException(string message) : base(message)\n    {\n    }\n}\n\nvoid Main()\n{\n    try\n    {\n        ProcessValue(-5);\n    }\n    catch (Exception ex)\n    {\n        Console.WriteLine($\"{ex.GetType().Name}: {ex.Message}\");\n    }\n}\n\nvoid ProcessValue(int value)\n{\n    if (value < 0)\n    {\n        throw new NegativeValueException(\"The value cannot be negative\");\n    }\n}"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "In Test-Driven Development (TDD), what is the correct sequence of steps?",
+      "options": {
+        "A": "Write code, write tests, refactor",
+        "B": "Write tests, write code, refactor",
+        "C": "Refactor, write tests, write code",
+        "D": "Design, code, test, deploy"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What advantage do thread-safe collections like ConcurrentDictionary<TKey, TValue> provide over their non-concurrent counterparts?",
+      "options": {
+        "A": "They are always faster for single-threaded operations",
+        "B": "They allow for safe concurrent access from multiple threads",
+        "C": "They use less memory than standard collections",
+        "D": "They automatically sort elements upon insertion"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using ConcurrentDictionary?",
+      "options": {
+        "A": "An exception will be thrown",
+        "B": "Value: 1",
+        "C": "Value: 2",
+        "D": "No output will be produced"
+      },
+      "correct_answer": "C",
+      "code_example": "using System.Collections.Concurrent;\n\nvoid Main()\n{\n    var dict = new ConcurrentDictionary<string, int>();\n    \n    dict.TryAdd(\"key\", 1);\n    dict.AddOrUpdate(\"key\", 5, (k, oldValue) => oldValue + 1);\n    \n    int value;\n    if (dict.TryGetValue(\"key\", out value))\n    {\n        Console.WriteLine($\"Value: {value}\");\n    }\n}"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "In Entity Framework, what does the 'Code-First' approach refer to?",
+      "options": {
+        "A": "Creating the database schema first, then generating C# classes",
+        "B": "Creating C# classes first, then generating the database schema",
+        "C": "Writing SQL scripts first, then implementing application logic",
+        "D": "Designing UI components first, then implementing data access"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What is the primary benefit of using Dependency Injection in testing?",
+      "options": {
+        "A": "It makes the code run faster",
+        "B": "It allows for mocking dependencies to isolate the unit under test",
+        "C": "It reduces the amount of code needed for tests",
+        "D": "It automatically generates test cases"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the EventArgs pattern?",
+      "options": {
+        "A": "Name changed to: John",
+        "B": "Name changed to: null",
+        "C": "Name changed",
+        "D": "An exception will be thrown"
+      },
+      "correct_answer": "A",
+      "code_example": "class NameChangedEventArgs : EventArgs\n{\n    public string NewName { get; }\n    \n    public NameChangedEventArgs(string newName)\n    {\n        NewName = newName;\n    }\n}\n\nclass Person\n{\n    private string _name;\n    \n    public event EventHandler<NameChangedEventArgs> NameChanged;\n    \n    public string Name\n    {\n        get => _name;\n        set\n        {\n            if (_name != value)\n            {\n                _name = value;\n                OnNameChanged(value);\n            }\n        }\n    }\n    \n    protected virtual void OnNameChanged(string newName)\n    {\n        NameChanged?.Invoke(this, new NameChangedEventArgs(newName));\n    }\n}\n\nvoid Main()\n{\n    var person = new Person();\n    person.NameChanged += (sender, e) => \n    {\n        Console.WriteLine($\"Name changed to: {e.NewName}\");\n    };\n    \n    person.Name = \"John\";\n}"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating method hiding using the 'new' keyword?",
+      "options": {
+        "A": "Base.Method()\nDerived.Method()",
+        "B": "Base.Method()\nBase.Method()",
+        "C": "Derived.Method()\nDerived.Method()",
+        "D": "Derived.Method()\nBase.Method()"
+      },
+      "correct_answer": "A",
+      "code_example": "class Base\n{\n    public virtual void Method()\n    {\n        Console.WriteLine(\"Base.Method()\");\n    }\n}\n\nclass Derived : Base\n{\n    public new void Method()\n    {\n        Console.WriteLine(\"Derived.Method()\");\n    }\n}\n\nvoid Main()\n{\n    Derived derived = new Derived();\n    Base baseRef = derived;\n    \n    baseRef.Method();\n    derived.Method();\n}"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "Which of the following is an example of Constructor Injection in Dependency Injection?",
+      "options": {
+        "A": "public class Service { public void SetDependency(IDependency dependency) { } }",
+        "B": "public class Service { public Service(IDependency dependency) { } }",
+        "C": "public class Service { public IDependency Dependency { get; set; } }",
+        "D": "public class Service { public Service() { var dependency = new ConcreteDependency(); } }"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What does the Interface Segregation Principle state?",
+      "options": {
+        "A": "A class should have only one reason to change",
+        "B": "Derived classes must be substitutable for their base classes",
+        "C": "Clients should not be forced to depend on methods they do not use",
+        "D": "High-level modules should not depend on low-level modules"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using lambda expressions?",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "25",
+        "D": "100"
+      },
+      "correct_answer": "C",
+      "code_example": "void Main()\n{\n    Func<int, int> square = x => x * x;\n    \n    var numbers = new List<int> { 1, 2, 3, 4, 5 };\n    var result = numbers.Select(square).Sum();\n    \n    Console.WriteLine(result);\n}"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is the key difference between List<T> and LinkedList<T> in terms of performance?",
+      "options": {
+        "A": "LinkedList<T> provides faster random access to elements",
+        "B": "List<T> provides faster insertion and deletion in the middle of the collection",
+        "C": "LinkedList<T> provides faster insertion and deletion in the middle of the collection",
+        "D": "There is no performance difference, only API differences"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What is the difference between Conventional Routing and Attribute Routing in ASP.NET?",
+      "options": {
+        "A": "Attribute Routing allows defining routes using attributes on controller methods, while Conventional Routing uses a central route table",
+        "B": "Conventional Routing is faster than Attribute Routing",
+        "C": "Attribute Routing only works with REST APIs, not with MVC applications",
+        "D": "Conventional Routing works with .NET Core, while Attribute Routing only works with .NET Framework"
+      },
+      "correct_answer": "A",
+      "code_example": null
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the 'using' statement?",
+      "options": {
+        "A": "Resource acquired\nOperation performed\nResource disposed",
+        "B": "Resource acquired\nOperation performed",
+        "C": "Operation performed\nResource disposed",
+        "D": "An exception will be thrown"
+      },
+      "correct_answer": "A",
+      "code_example": "class Resource : IDisposable\n{\n    public Resource()\n    {\n        Console.WriteLine(\"Resource acquired\");\n    }\n    \n    public void Dispose()\n    {\n        Console.WriteLine(\"Resource disposed\");\n    }\n    \n    public void DoOperation()\n    {\n        Console.WriteLine(\"Operation performed\");\n    }\n}\n\nvoid Main()\n{\n    using (var resource = new Resource())\n    {\n        resource.DoOperation();\n    }\n}"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "In Entity Framework, what is the purpose of the 'Add-Migration' command?",
+      "options": {
+        "A": "To create a new database",
+        "B": "To generate code that can update the database schema",
+        "C": "To apply pending migrations to the database",
+        "D": "To roll back the most recent migration"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code comparing Task<T> and void?",
+      "options": {
+        "A": "Starting tasks\nTask 1 completed\nTask 2 completed\nAll tasks completed",
+        "B": "Starting tasks\nAll tasks completed\nTask 1 completed\nTask 2 completed",
+        "C": "Starting tasks\nTask 2 completed\nTask 1 completed\nAll tasks completed",
+        "D": "An exception will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "async void Main()\n{\n    Console.WriteLine(\"Starting tasks\");\n    \n    var task1 = DoWorkAsync(1000);\n    var task2 = DoWorkAsync(500);\n    \n    Console.WriteLine(\"All tasks completed\");\n    \n    await task1;\n    await task2;\n}\n\nasync Task DoWorkAsync(int delayMs)\n{\n    await Task.Delay(delayMs);\n    Console.WriteLine($\"Task {(delayMs == 1000 ? 1 : 2)} completed\");\n}"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Consider the following code using Span<T>. What will be the output?",
+      "options": {
+        "A": "Values: 10, 20, 30",
+        "B": "Values: 5, 20, 30",
+        "C": "Values: 5, 10, 30",
+        "D": "System.ArgumentOutOfRangeException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int[] numbers = { 10, 20, 30 };\n        Span<int> span = numbers;\n        \n        span[0] = 5;\n        \n        Console.WriteLine($\"Values: {numbers[0]}, {numbers[1]}, {numbers[2]}\");\n    }\n}"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which of the following statements about Memory<T> is incorrect?",
+      "options": {
+        "A": "Memory<T> is a struct that represents a contiguous region of memory",
+        "B": "Memory<T> can be stored in fields of classes unlike Span<T>",
+        "C": "Memory<T> can be used directly with asynchronous methods",
+        "D": "Memory<T> is always allocated on the managed heap"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using readonly struct?",
+      "options": {
+        "A": "10, 20",
+        "B": "10, 10",
+        "C": "Compilation error: cannot assign to members of readonly struct",
+        "D": "Compilation error: cannot pass readonly struct by reference"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\nreadonly struct Point\n{\n    public int X { get; }\n    public int Y { get; }\n\n    public Point(int x, int y)\n    {\n        X = x;\n        Y = y;\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        Point p = new Point(10, 10);\n        p.X = 20; // Try to modify readonly struct\n        Console.WriteLine($\"{p.X}, {p.Y}\");\n    }\n}"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using ExpandoObject?",
+      "options": {
+        "A": "Name: John, Age: 30, Job: Developer",
+        "B": "Name: John, Age: 30",
+        "C": "Compilation error: 'dynamic' does not contain a definition for 'Job'",
+        "D": "Runtime error: 'object' does not contain a definition for 'Job'"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Dynamic;\n\nclass Program\n{\n    static void Main()\n    {\n        dynamic person = new ExpandoObject();\n        person.Name = \"John\";\n        person.Age = 30;\n        \n        ((IDictionary<string, object>)person)[\"Job\"] = \"Developer\";\n        \n        Console.WriteLine($\"Name: {person.Name}, Age: {person.Age}, Job: {person.Job}\");\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a valid instruction in a Dockerfile for a .NET application?",
+      "options": {
+        "A": "FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build",
+        "B": "RUN dotnet restore",
+        "C": "ENTRYPOINT [\"dotnet\", \"MyApp.dll\"]",
+        "D": "INSTALL dotnet-runtime-7.0"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "According to the HTTP specification, which of the following statements about HTTP status codes is incorrect?",
+      "options": {
+        "A": "A 400 Bad Request indicates the server cannot process the request due to a client error",
+        "B": "A 200 OK response can contain a body even for HEAD requests",
+        "C": "A 500 Internal Server Error indicates the server encountered an unexpected condition",
+        "D": "A 404 Not Found means the server can't find the requested resource"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Microsoft's MemoryCache?",
+      "options": {
+        "A": "Value: 42, Cache contains value: True",
+        "B": "Value: 42, Cache contains value: False",
+        "C": "Value: , Cache contains value: False",
+        "D": "NullReferenceException will be thrown"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing Microsoft.Extensions.Caching.Memory;\n\nclass Program\n{\n    static void Main()\n    {\n        var cache = new MemoryCache(new MemoryCacheOptions());\n\n        // Set cache with absolute expiration\n        cache.Set(\"key\", 42, TimeSpan.FromSeconds(1));\n\n        // Wait for expiration\n        System.Threading.Thread.Sleep(1500);\n\n        // Try to get the value\n        cache.TryGetValue(\"key\", out string value);\n\n        Console.WriteLine($\"Value: {value}, Cache contains value: {cache.TryGetValue(\"key\", out _)}\");\n    }\n}"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "In ASP.NET Core role-based authentication, which of the following code snippets correctly checks if a user is in multiple roles?",
+      "options": {
+        "A": "[Authorize(Roles = \"Admin, Manager\")]",
+        "B": "[Authorize(Roles = \"Admin\"), Authorize(Roles = \"Manager\")]",
+        "C": "[Authorize(Roles = \"Admin && Manager\")]",
+        "D": "[RequireUserRole(\"Admin, Manager\")]"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing the Singleton pattern?",
+      "options": {
+        "A": "Instance ID: 1, Instance ID: 1",
+        "B": "Instance ID: 1, Instance ID: 2",
+        "C": "Compilation error: cannot access private constructor",
+        "D": "Runtime error: ThreadStaticAttribute cannot be used with properties"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Singleton instance1 = Singleton.Instance;\n        Singleton instance2 = Singleton.Instance;\n        \n        Console.WriteLine($\"Instance ID: {instance1.ID}, Instance ID: {instance2.ID}\");\n    }\n}\n\npublic sealed class Singleton\n{\n    private static readonly Lazy<Singleton> _instance = \n        new Lazy<Singleton>(() => new Singleton());\n    \n    public static Singleton Instance => _instance.Value;\n    \n    public int ID { get; } = 1;\n    \n    private Singleton() { }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "When configuring CORS in ASP.NET Core, which of the following statements is false?",
+      "options": {
+        "A": "AddCors() must be called before UseCors() in the application pipeline",
+        "B": "AllowAnyOrigin() and AllowCredentials() cannot be used together",
+        "C": "Multiple CORS policies can be defined and applied to different controllers",
+        "D": "The default CORS policy allows all origins, headers, and methods"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using API versioning?",
+      "options": {
+        "A": "v1-controller",
+        "B": "v2-controller",
+        "C": "BadHttpRequestException will be thrown",
+        "D": "API version unspecified error will be returned"
+      },
+      "correct_answer": "B",
+      "code_example": "// Startup.cs configuration\n/* \nservices.AddApiVersioning(options =>\n{\n    options.DefaultApiVersion = new ApiVersion(1, 0);\n    options.AssumeDefaultVersionWhenUnspecified = true;\n    options.ReportApiVersions = true;\n});\n*/\n\n// Controller code\n[ApiController]\n[ApiVersion(\"1.0\")]\n[ApiVersion(\"2.0\")]\n[Route(\"api/v{version:apiVersion}/[controller]\")]\npublic class ValuesController : ControllerBase\n{\n    [HttpGet]\n    [MapToApiVersion(\"1.0\")]\n    public string GetV1()\n    {\n        return \"v1-controller\";\n    }\n\n    [HttpGet]\n    [MapToApiVersion(\"2.0\")]\n    public string GetV2()\n    {\n        return \"v2-controller\";\n    }\n}\n\n// Client request:\n// GET /api/v2/values"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following SignalR code when the client connects to the hub?",
+      "options": {
+        "A": "The client receives 'Hello from server' once",
+        "B": "The client receives 'Hello from server' repeatedly every 2 seconds",
+        "C": "The client receives nothing until it sends a message",
+        "D": "The code will throw a HubException"
+      },
+      "correct_answer": "B",
+      "code_example": "// Hub code\npublic class NotificationHub : Hub\n{\n    private readonly Timer _timer;\n    \n    public NotificationHub()\n    {\n        _timer = new Timer(SendMessage, null, 0, 2000);\n    }\n    \n    private async void SendMessage(object state)\n    {\n        await Clients.All.SendAsync(\"ReceiveMessage\", \"Hello from server\");\n    }\n    \n    public override async Task OnConnectedAsync()\n    {\n        await base.OnConnectedAsync();\n    }\n}\n\n// Client-side JavaScript\n/*\nconst connection = new signalR.HubConnectionBuilder()\n    .withUrl(\"/notificationHub\")\n    .build();\n\nconnection.on(\"ReceiveMessage\", (message) => {\n    console.log(message);\n});\n\nconnection.start();\n*/"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "Given the following SQL Server table and query, which statement about indexing is incorrect?",
+      "options": {
+        "A": "A clustered index on OrderId would improve the query performance",
+        "B": "A non-clustered index on CustomerId would improve the WHERE clause performance",
+        "C": "A covering index on (CustomerId, OrderDate) would eliminate table lookups",
+        "D": "Adding a filtered index on Status='Pending' would be more efficient than a full-table index"
+      },
+      "correct_answer": "A",
+      "code_example": "-- Table definition\nCREATE TABLE Orders (\n    OrderId INT PRIMARY KEY,\n    CustomerId INT NOT NULL,\n    OrderDate DATETIME NOT NULL,\n    Status NVARCHAR(20) NOT NULL\n);\n\n-- Query\nSELECT OrderDate \nFROM Orders \nWHERE CustomerId = 1234 AND Status = 'Pending';"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using MethodInfo.Invoke()?",
+      "options": {
+        "A": "Original Value: 10, Modified Value: 20",
+        "B": "Original Value: 10, Modified Value: 10",
+        "C": "MissingMethodException will be thrown",
+        "D": "TargetParameterCountException will be thrown"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Reflection;\n\nclass Program\n{\n    static void Main()\n    {\n        var calculator = new Calculator();\n        calculator.Value = 10;\n        \n        Console.Write($\"Original Value: {calculator.Value}, \");\n        \n        Type type = typeof(Calculator);\n        MethodInfo methodInfo = type.GetMethod(\"Double\", \n            BindingFlags.NonPublic | BindingFlags.Instance);\n            \n        methodInfo.Invoke(calculator, null);\n        \n        Console.WriteLine($\"Modified Value: {calculator.Value}\");\n    }\n}\n\npublic class Calculator\n{\n    public int Value { get; set; }\n    \n    private void Double()\n    {\n        Value *= 2;\n    }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "Which of the following statements about RabbitMQ message exchange types is incorrect?",
+      "options": {
+        "A": "A Fanout exchange routes messages to all queues bound to it",
+        "B": "A Direct exchange routes messages based on a routing key",
+        "C": "A Topic exchange routes messages based on wildcard pattern matching",
+        "D": "A Headers exchange ignores routing keys and uses message headers instead of binding keys"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Activator.CreateInstance()?",
+      "options": {
+        "A": "Type: CustomType, Value: Default",
+        "B": "Type: CustomType, Value: Custom",
+        "C": "MissingMethodException will be thrown",
+        "D": "ArgumentException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Type type = typeof(CustomType);\n        \n        // Create instance with parameters\n        object instance = Activator.CreateInstance(\n            type, \n            new object[] { \"Custom\" }\n        );\n        \n        var customInstance = (CustomType)instance;\n        Console.WriteLine($\"Type: {customInstance.GetType().Name}, Value: {customInstance.Value}\");\n    }\n}\n\npublic class CustomType\n{\n    public string Value { get; }\n    \n    public CustomType()\n    {\n        Value = \"Default\";\n    }\n    \n    public CustomType(string value)\n    {\n        Value = value;\n    }\n}"
+    }
+  ]
+}
