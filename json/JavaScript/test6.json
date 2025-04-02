@@ -1,0 +1,642 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "Object properties & methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "const user = {\n  name: 'John',\n  greet() {\n    return `Hello, ${this.name}`\n  }\n}\n\nconst greetFn = user.greet\nconsole.log(greetFn())",
+      "options": {
+        "A": "Hello, John",
+        "B": "Hello, undefined",
+        "C": "TypeError: Cannot read property 'name' of undefined",
+        "D": "Hello, null"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "Event propagation",
+      "question": "Which statement about event propagation in JavaScript is correct?",
+      "options": {
+        "A": "Event bubbling occurs when events are triggered starting from the target element and move up through its ancestors",
+        "B": "Event capturing occurs when events are triggered starting from the target element and move up through its ancestors",
+        "C": "stopPropagation() prevents both the default action and event propagation",
+        "D": "addEventListener() can only handle bubbling phase events"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "Arithmetic operators",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(5 ** 2 % 3)",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "4",
+        "D": "25"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "Changing content",
+      "question": "What is the key difference between innerHTML and textContent when setting content?",
+      "options": {
+        "A": "innerHTML can only add text while textContent can add HTML elements",
+        "B": "innerHTML parses content as HTML while textContent treats content as plain text",
+        "C": "innerHTML is faster than textContent for all operations",
+        "D": "innerHTML automatically sanitizes content while textContent does not"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "Reference types",
+      "question": "What will be the output of the following code?",
+      "code_example": "const arr1 = [1, 2, 3]\nconst arr2 = [1, 2, 3]\nconst obj1 = { values: [1, 2, 3] }\nconst obj2 = { values: [1, 2, 3] }\n\nconsole.log(arr1 === arr2, obj1.values === obj2.values)",
+      "options": {
+        "A": "true true",
+        "B": "false false",
+        "C": "true false",
+        "D": "false true"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "Object destructuring",
+      "question": "What will be the output of the following code?",
+      "code_example": "const settings = {\n  theme: 'dark',\n  fontSize: 16\n}\n\nconst { theme, fontWeight = 'normal' } = settings\nconsole.log(theme, fontWeight)",
+      "options": {
+        "A": "dark undefined",
+        "B": "dark normal",
+        "C": "undefined normal",
+        "D": "dark 16"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "let vs. const vs. var",
+      "question": "What will be the output of the following code?",
+      "code_example": "function testScope() {\n  if (true) {\n    var x = 1\n    let y = 2\n    const z = 3\n  }\n  console.log(x)\n  console.log(typeof y)\n}\n\ntestScope()",
+      "options": {
+        "A": "1, 'number'",
+        "B": "1, 'undefined'",
+        "C": "1, ReferenceError",
+        "D": "ReferenceError, ReferenceError"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "Bitwise operators",
+      "question": "What will be the output of the following code?",
+      "code_example": "const a = 5  // 101 in binary\nconst b = 3  // 011 in binary\n\nconsole.log(a & b, a | b, a ^ b)",
+      "options": {
+        "A": "1 7 6",
+        "B": "1 7 2",
+        "C": "15 8 2",
+        "D": "1 7 4"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Environment variables",
+      "question": "In Node.js, what is the best practice for loading environment variables in development?",
+      "options": {
+        "A": "Hardcode them directly in application code",
+        "B": "Use the dotenv package to load variables from a .env file",
+        "C": "Store them in a JSON file and require() the file",
+        "D": "Set them manually before starting the application with node app.js"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Function scope",
+      "question": "What will be the output of the following code?",
+      "code_example": "const x = 10\n\nfunction outer() {\n  const x = 20\n  function inner() {\n    console.log(x)\n  }\n  return inner\n}\n\nconst innerFn = outer()\ninnerFn()",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "undefined",
+        "D": "ReferenceError"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "Default parameters",
+      "question": "What will be the output of the following code?",
+      "code_example": "function greet(name = 'Guest', greeting = `Hello, ${name}!`) {\n  return greeting\n}\n\nconsole.log(greet('John'))\nconsole.log(greet(undefined, 'Welcome!'))",
+      "options": {
+        "A": "Hello, John! Welcome!",
+        "B": "Hello, John! Hello, undefined!",
+        "C": "Hello, John! Welcome!",
+        "D": "Hello, Guest! Welcome!"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "require() vs import()",
+      "question": "Which statement about require() and import() in Node.js is correct?",
+      "options": {
+        "A": "require() is asynchronous while import() is synchronous",
+        "B": "require() can be called anywhere in a file while import() must be at the top level",
+        "C": "import() returns a promise while require() does not",
+        "D": "require() supports tree-shaking while import() does not"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "Ternary operators",
+      "question": "What will be the output of the following code?",
+      "code_example": "const age = 18\nconst status = age >= 21 ? 'adult' : age >= 18 ? 'young adult' : 'minor'\n\nconsole.log(status)",
+      "options": {
+        "A": "adult",
+        "B": "young adult",
+        "C": "minor",
+        "D": "undefined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "Promises",
+      "question": "What will be the output of the following code?",
+      "code_example": "Promise.resolve('Success!')\n  .then(data => {\n    throw new Error('Something went wrong')\n    return data.toUpperCase()\n  })\n  .then(data => console.log('Then:', data))\n  .catch(err => console.log('Catch:', err.message))\n  .finally(() => console.log('Finally!'))",
+      "options": {
+        "A": "Then: SUCCESS! Finally!",
+        "B": "Catch: Something went wrong Finally!",
+        "C": "Then: undefined Finally!",
+        "D": "Catch: Cannot read property 'toUpperCase' of undefined Finally!"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "Prevent default behavior",
+      "question": "In what situation would you typically use event.preventDefault()?",
+      "options": {
+        "A": "To prevent an event from propagating to parent elements",
+        "B": "To stop all JavaScript execution on a page",
+        "C": "To prevent a form from submitting or a link from navigating to its href",
+        "D": "To prevent event listeners from being added to an element"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "Comparison operators",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log('10' == 10)\nconsole.log('10' === 10)\nconsole.log(0 == false)\nconsole.log(0 === false)",
+      "options": {
+        "A": "true false true false",
+        "B": "true true true true",
+        "C": "false false false false",
+        "D": "false true false true"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Compression",
+      "question": "What is the purpose of the zlib.createGzip() method in Node.js?",
+      "options": {
+        "A": "To create a readable stream that decompresses Gzip data",
+        "B": "To create a transform stream that compresses data using Gzip",
+        "C": "To compress a string or buffer directly without streaming",
+        "D": "To create a writeable stream that stores compressed data in memory"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "Streaming files",
+      "question": "What will be the output of the following code assuming 'sample.txt' contains the text 'Hello, World!'?",
+      "code_example": "const fs = require('fs')\nconst stream = fs.createReadStream('sample.txt', { highWaterMark: 5 })\n\nlet content = ''\nstream.on('data', chunk => {\n  content += chunk\n  console.log(`Chunk: ${chunk.toString()}`)\n})\n\nstream.on('end', () => {\n  console.log(`Content: ${content}`)\n})",
+      "options": {
+        "A": "Chunk: Hello Chunk: , Wor Chunk: ld! Content: Hello, World!",
+        "B": "Chunk: Hello, World! Content: Hello, World!",
+        "C": "Chunk: Hello Chunk: , Wor Chunk: ld! Content: HelloWorld",
+        "D": "Chunk: Hello Chunk: World Content: HelloWorld"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "Rate limiting",
+      "question": "When implementing rate limiting with express-rate-limit, what does the 'windowMs' option represent?",
+      "options": {
+        "A": "The maximum time a request can take to process",
+        "B": "The time window for which request counts are kept track of",
+        "C": "The delay between when a client exceeds the rate limit and when they can try again",
+        "D": "The frequency at which the rate limiter checks for violations"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "Creating a simple Express server",
+      "question": "What will be the output when a GET request is made to '/users/42' with the following Express code?",
+      "code_example": "const express = require('express')\nconst app = express()\n\napp.get('/users', (req, res) => {\n  res.send('User List')\n})\n\napp.get('/users/:id', (req, res) => {\n  res.send(`User ID: ${req.params.id}`)\n})\n\napp.get('/users/*', (req, res) => {\n  res.send('Wildcard Route')\n})",
+      "options": {
+        "A": "User List",
+        "B": "User ID: 42",
+        "C": "Wildcard Route",
+        "D": "Cannot GET /users/42"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "Handling CORS",
+      "question": "Which of the following accurately describes the purpose of the 'Access-Control-Allow-Origin' header in CORS?",
+      "options": {
+        "A": "It specifies which HTTP methods are allowed when accessing the resource",
+        "B": "It indicates whether the response can be shared with requesting code from the given origin",
+        "C": "It specifies how long the results of a preflight request can be cached",
+        "D": "It indicates which headers can be used during the actual request"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "Logging requests",
+      "question": "When using the morgan middleware in Express, what does the 'combined' format log?",
+      "options": {
+        "A": "Only the HTTP method and URL of each request",
+        "B": "The request method, URL, status code, and response time",
+        "C": "The Apache combined log format including remote address, user identifier, date, request line, status, and user agent",
+        "D": "A JSON object containing all request and response details"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "Promises",
+      "question": "What will be the output of the following code?",
+      "code_example": "const p1 = Promise.resolve('First')\nconst p2 = new Promise((resolve) => setTimeout(() => resolve('Second'), 100))\nconst p3 = Promise.reject(new Error('Failed'))\n\nPromise.all([p1, p2, p3])\n  .then(values => console.log('Success:', values))\n  .catch(error => console.log('Error:', error.message))\n\nPromise.allSettled([p1, p2, p3])\n  .then(results => console.log('Status:', results.map(r => r.status)))",
+      "options": {
+        "A": "Error: Failed Status: ['fulfilled', 'fulfilled', 'rejected']",
+        "B": "Success: ['First', 'Second', Error: Failed] Status: ['fulfilled', 'fulfilled', 'rejected']",
+        "C": "Error: Failed",
+        "D": "Status: ['fulfilled', 'pending', 'rejected']"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "Using PostgreSQL/MySQL",
+      "question": "What does the following Sequelize code accomplish?",
+      "code_example": "const User = sequelize.define('User', {\n  username: {\n    type: DataTypes.STRING,\n    allowNull: false,\n    unique: true\n  },\n  isActive: {\n    type: DataTypes.BOOLEAN,\n    defaultValue: true\n  }\n})\n\nawait User.findOrCreate({\n  where: { username: 'john_doe' },\n  defaults: { isActive: false }\n})",
+      "options": {
+        "A": "Updates an existing user with username 'john_doe' to have isActive set to false",
+        "B": "Creates a new user with username 'john_doe' and isActive set to true",
+        "C": "Creates a new user with username 'john_doe' and isActive set to false only if no user with that username exists",
+        "D": "Throws an error if a user with username 'john_doe' already exists"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Using Helmet.js for HTTP security headers",
+      "question": "What security benefit does the 'helmet.contentSecurityPolicy()' middleware provide?",
+      "options": {
+        "A": "It encrypts all data sent between the server and client",
+        "B": "It prevents clickjacking attacks by controlling frame embedding",
+        "C": "It helps prevent Cross-Site Scripting (XSS) attacks by controlling which resources can be loaded",
+        "D": "It prevents Cross-Site Request Forgery (CSRF) attacks by validating request origins"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "Middleware",
+      "question": "What will be the output when a request is made to any route with the following Express code?",
+      "code_example": "const express = require('express')\nconst app = express()\n\napp.use((req, res, next) => {\n  console.log('Middleware 1')\n  next()\n})\n\napp.use((req, res, next) => {\n  console.log('Middleware 2')\n  next(new Error('Something went wrong'))\n})\n\napp.use((req, res, next) => {\n  console.log('Middleware 3')\n  res.send('Response')\n})\n\napp.use((err, req, res, next) => {\n  console.log('Error handler')\n  res.status(500).send(err.message)\n})",
+      "options": {
+        "A": "Middleware 1 Middleware 2 Middleware 3 Response",
+        "B": "Middleware 1 Middleware 2 Error handler Something went wrong",
+        "C": "Middleware 1 Error handler Something went wrong",
+        "D": "Error handler Something went wrong"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "Memory management and garbage collection impact",
+      "question": "What potential memory issue exists in the following code?",
+      "code_example": "function processData() {\n  const cache = {}\n  \n  return function(id) {\n    if (!cache[id]) {\n      cache[id] = loadDataFromDatabase(id)\n    }\n    return cache[id]\n  }\n}\n\nconst getData = processData()",
+      "options": {
+        "A": "The cache object might grow indefinitely as new IDs are processed",
+        "B": "A memory leak occurs because processData is called repeatedly",
+        "C": "The returned function creates a new cache object on each call",
+        "D": "loadDataFromDatabase might not release memory properly"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "Debouncing & throttling",
+      "question": "What will be the output of the following code when the button is clicked 5 times in rapid succession?",
+      "code_example": "const button = document.getElementById('myButton')\nlet clickCount = 0\n\nconst handleClick = _.debounce(() => {\n  clickCount++\n  console.log(`Button clicked ${clickCount} times`)\n}, 300)\n\nbutton.addEventListener('click', handleClick)",
+      "options": {
+        "A": "Button clicked 1 times Button clicked 2 times Button clicked 3 times Button clicked 4 times Button clicked 5 times",
+        "B": "Button clicked 5 times",
+        "C": "Button clicked 1 times",
+        "D": "Button clicked 5 times Button clicked 5 times Button clicked 5 times Button clicked 5 times Button clicked 5 times"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "How JavaScript inheritance differs from classical OOP",
+      "question": "Which of the following correctly describes JavaScript's prototypal inheritance compared to classical inheritance?",
+      "options": {
+        "A": "JavaScript uses classes with static typing while classical OOP uses dynamic typing",
+        "B": "In JavaScript, objects inherit directly from other objects, while in classical OOP, objects are instances of classes",
+        "C": "JavaScript inheritance is only possible through the class keyword, while classical OOP allows for prototypal chains",
+        "D": "In JavaScript, multiple inheritance is fully supported, while classical OOP typically restricts it"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Nullish coalescing",
+      "question": "What will be the output of the following code?",
+      "code_example": "const values = {\n  a: 0,\n  b: '',\n  c: false,\n  d: null,\n  e: undefined\n}\n\nconst result = {\n  a: values.a || 'default',\n  b: values.b || 'default',\n  c: values.c || 'default',\n  d: values.d || 'default',\n  e: values.e || 'default',\n  f: values.a ?? 'default',\n  g: values.b ?? 'default',\n  h: values.c ?? 'default',\n  i: values.d ?? 'default',\n  j: values.e ?? 'default'\n}\n\nconsole.log(result.b, result.g)",
+      "options": {
+        "A": "'' ''",
+        "B": "default ''",
+        "C": "default default",
+        "D": "'' default"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "Function composition",
+      "question": "What will be the output of the following code?",
+      "code_example": "const double = x => x * 2\nconst increment = x => x + 1\nconst square = x => x * x\n\nconst compose = (...fns) => x => fns.reduceRight((acc, fn) => fn(acc), x)\nconst pipe = (...fns) => x => fns.reduce((acc, fn) => fn(acc), x)\n\nconst f1 = compose(square, increment, double)\nconst f2 = pipe(double, increment, square)\n\nconsole.log(f1(3), f2(3))",
+      "options": {
+        "A": "49 49",
+        "B": "64 49",
+        "C": "49 64",
+        "D": "64 64"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "Implicit binding",
+      "question": "What will be the output of the following code?",
+      "code_example": "const person = {\n  name: 'Alice',\n  greet() {\n    return `Hello, ${this.name}`\n  },\n  farewell: () => {\n    return `Goodbye, ${this.name}`\n  }\n}\n\nconst greet = person.greet\n\nconsole.log(person.greet())\nconsole.log(person.farewell())\nconsole.log(greet())",
+      "options": {
+        "A": "Hello, Alice Goodbye, Alice Hello, Alice",
+        "B": "Hello, Alice Goodbye, undefined Hello, undefined",
+        "C": "Hello, Alice Goodbye, Alice Hello, undefined",
+        "D": "Hello, undefined Goodbye, undefined Hello, undefined"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code related to custom event listeners?",
+      "options": {
+        "A": "First handler, Second handler",
+        "B": "Event fired!",
+        "C": "Second handler, First handler",
+        "D": "Nothing, the event is not dispatched correctly"
+      },
+      "correct_answer": "A",
+      "code_example": "const eventTarget = new EventTarget();\n\neventTarget.addEventListener('customEvent', () => {\n  console.log('First handler');\n});\n\neventTarget.addEventListener('customEvent', () => {\n  console.log('Second handler');\n});\n\neventTarget.dispatchEvent(new Event('customEvent'));"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which of the following correctly sets up a global handler for unhandled Promise rejections in Node.js?",
+      "options": {
+        "A": "process.on('uncaughtException', (err) => console.error(err));",
+        "B": "window.addEventListener('unhandledrejection', (event) => console.error(event.reason));",
+        "C": "process.on('unhandledRejection', (reason, promise) => console.error(reason));",
+        "D": "Promise.onRejection((err) => console.error(err));"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "When using Nginx as a reverse proxy for a Node.js application, which of the following configurations is correct for forwarding requests to a Node.js server running on port 3000?",
+      "options": {
+        "A": "proxy_pass http://localhost:3000/api/;",
+        "B": "location /api/ { proxy_pass http://localhost:3000; }",
+        "C": "server { listen 80; location / { proxy_pass http://localhost:3000; } }",
+        "D": "upstream node_app { server 127.0.0.1:3000; proxy_pass node_app; }"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will the following WeakMap code output?",
+      "options": {
+        "A": "{ name: 'Alice' }, undefined",
+        "B": "{ name: 'Alice' }, WeakMap { <items unknown> }",
+        "C": "{ name: 'Alice' }, null",
+        "D": "{ name: 'Alice' }, { name: 'Bob' }"
+      },
+      "correct_answer": "B",
+      "code_example": "let userMap = new WeakMap();\n\nlet userA = { name: 'Alice' };\nlet userB = { name: 'Bob' };\n\nuserMap.set(userA, 'Data for Alice');\nuserMap.set(userB, 'Data for Bob');\n\nconsole.log(userA, userMap.get(userA));\n\n// Simulate garbage collection\nuserA = null;\n\n// WeakMap's contents aren't directly inspectable\nconsole.log(userB, userMap);"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What is the primary difference between WebSockets and REST?",
+      "options": {
+        "A": "WebSockets use HTTP while REST uses TCP",
+        "B": "WebSockets maintain a persistent connection while REST follows a request-response model",
+        "C": "WebSockets only support text data while REST supports JSON and XML",
+        "D": "WebSockets are more secure than REST by default"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of this code demonstrating JavaScript memory allocation?",
+      "options": {
+        "A": "1, 2",
+        "B": "1, 1",
+        "C": "2, 2",
+        "D": "2, 1"
+      },
+      "correct_answer": "B",
+      "code_example": "let a = { count: 1 };\nlet b = a;\n\nconsole.log(a.count, b.count);\n\na.count = 2;\nb = { count: 1 };\n\nconsole.log(a.count, b.count);"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the correct structure for a docker-compose.yml file that sets up a Node.js application with MongoDB?",
+      "options": {
+        "A": "services: [{ name: 'app', image: 'node:14' }, { name: 'db', image: 'mongo:4' }]",
+        "B": "containers: { app: { build: './app' }, db: { image: 'mongo:4' } }",
+        "C": "version: '3', services: { app: { build: './app' }, db: { image: 'mongo:4' } }",
+        "D": "docker: { images: ['node:14', 'mongo:4'], networks: ['app-network'] }"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of this code using streams to read a file?",
+      "options": {
+        "A": "The entire file contents as a single string",
+        "B": "Each line of the file one at a time",
+        "C": "'Data chunk received' followed by the file contents",
+        "D": "'File reading complete'"
+      },
+      "correct_answer": "C",
+      "code_example": "const fs = require('fs');\n\nconst readStream = fs.createReadStream('./example.txt', { encoding: 'utf8' });\n\nreadStream.on('data', (chunk) => {\n  console.log('Data chunk received');\n  console.log(chunk);\n});\n\nreadStream.on('end', () => {\n  console.log('File reading complete');\n});"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What is the correct way to create a Kubernetes Pod configuration that runs a Node.js application container?",
+      "options": {
+        "A": "{'kind': 'Deployment', 'spec': {'containers': [{'name': 'node-app', 'image': 'my-node-app:1.0'}]}}",
+        "B": "{'kind': 'Pod', 'spec': {'containers': [{'name': 'node-app', 'image': 'my-node-app:1.0'}]}}",
+        "C": "{'kind': 'Service', 'spec': {'selector': {'app': 'node'}, 'ports': [{'port': 80}]}}",
+        "D": "{'kind': 'Container', 'name': 'node-app', 'image': 'my-node-app:1.0'}"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of this code testing WeakSet vs Set behavior?",
+      "options": {
+        "A": "true, true",
+        "B": "true, false",
+        "C": "false, false",
+        "D": "Error: Invalid value used in WeakSet"
+      },
+      "correct_answer": "B",
+      "code_example": "let regularSet = new Set();\nlet weakSet = new WeakSet();\n\nlet obj = { name: 'Test Object' };\nlet primitive = 'test string';\n\nregularSet.add(obj);\nregularSet.add(primitive);\n\nweakSet.add(obj);\n\ntry {\n  weakSet.add(primitive);\n} catch (e) {\n  // Silently ignore error\n}\n\nconsole.log(regularSet.has(primitive), weakSet.has(obj));"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What is the correct implementation of refresh token rotation in a Node.js authentication system?",
+      "options": {
+        "A": "Issue a new access token with the same expiration as the refresh token",
+        "B": "Store refresh tokens in local storage and access tokens in cookies",
+        "C": "Issue a new refresh token along with a new access token when the old access token expires",
+        "D": "Use the same token for both access and refresh purposes with different expiration times"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will the following Helmet.js code accomplish?",
+      "options": {
+        "A": "Set multiple security headers including Content-Security-Policy",
+        "B": "Only protect against XSS attacks",
+        "C": "Implement HTTPS encryption",
+        "D": "Block all cross-origin requests"
+      },
+      "correct_answer": "A",
+      "code_example": "const express = require('express');\nconst helmet = require('helmet');\n\nconst app = express();\n\napp.use(helmet());\n\napp.get('/', (req, res) => {\n  res.send('Hello, secure world!');\n});\n\napp.listen(3000);"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What is the purpose of the Referrer-Policy HTTP header?",
+      "options": {
+        "A": "To prevent clickjacking attacks",
+        "B": "To control how much referrer information is included with requests",
+        "C": "To specify which domains can make requests to your server",
+        "D": "To validate the content type of responses"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will this code using the Node.js debugger flag output?",
+      "options": {
+        "A": "The code will pause execution at line 5",
+        "B": "Detailed memory usage information",
+        "C": "A WebSocket URL for connecting Chrome DevTools",
+        "D": "A stack trace of all function calls"
+      },
+      "correct_answer": "C",
+      "code_example": "// Command: node --inspect server.js\n\nconst http = require('http');\n\nconst server = http.createServer((req, res) => {\n  // This is where we could set breakpoints\n  const data = { message: 'Hello from debuggable server' };\n  res.writeHead(200, { 'Content-Type': 'application/json' });\n  res.end(JSON.stringify(data));\n});\n\nserver.listen(3000, () => {\n  console.log('Server listening on port 3000');\n});"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of this code demonstrating Just-In-Time compilation behavior?",
+      "options": {
+        "A": "First execution: 500ms, Second execution: 50ms",
+        "B": "First execution: 500ms, Second execution: 500ms",
+        "C": "Runtime error: maximum call stack size exceeded",
+        "D": "Compilation error: function is too complex"
+      },
+      "correct_answer": "A",
+      "code_example": "function fibonacci(n) {\n  if (n <= 1) return n;\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\n// First execution (not optimized yet)\nconst start1 = performance.now();\nfibonacci(30);\nconst end1 = performance.now();\nconsole.log(`First execution: ${Math.round(end1 - start1)}ms`);\n\n// Second execution (JIT optimized)\nconst start2 = performance.now();\nfibonacci(30);\nconst end2 = performance.now();\nconsole.log(`Second execution: ${Math.round(end2 - start2)}ms`);"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will the following code related to preventing CORS vulnerabilities output?",
+      "options": {
+        "A": "Access-Control-Allow-Origin: *",
+        "B": "Access-Control-Allow-Origin: https://trusted-site.com",
+        "C": "CORS error in browser console",
+        "D": "No CORS headers, resulting in default same-origin policy"
+      },
+      "correct_answer": "B",
+      "code_example": "const express = require('express');\nconst cors = require('cors');\nconst app = express();\n\n// Configure CORS\nconst corsOptions = {\n  origin: 'https://trusted-site.com',\n  methods: ['GET', 'POST'],\n  credentials: true,\n  optionsSuccessStatus: 204\n};\n\napp.use(cors(corsOptions));\n\napp.get('/api/data', (req, res) => {\n  res.json({ message: 'Secure data' });\n});\n\n// What will be in the response headers?\nconsole.log(corsOptions.origin);"
+    }
+  ]
+}
