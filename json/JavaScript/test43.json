@@ -1,0 +1,616 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const obj = { a: 1, b: 2 };\nconst keys = Object.keys(obj);\nconsole.log(keys);",
+      "options": {
+        "A": "['a', 'b']",
+        "B": "[1, 2]",
+        "C": "{ a: 1, b: 2 }",
+        "D": "['a:1', 'b:2']"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What happens when the following code is executed?",
+      "code_example": "const button = document.createElement('button');\nbutton.addEventListener('click', function() {\n  console.log('Button clicked!');\n});\nconsole.log(typeof button.onclick);",
+      "options": {
+        "A": "It logs 'function'",
+        "B": "It logs 'undefined'",
+        "C": "It logs 'object'",
+        "D": "It logs 'Button clicked!'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "function sum() {\n  let total = 0;\n  for (let i = 0; i < arguments.length; i++) {\n    total += arguments[i];\n  }\n  return total;\n}\nconsole.log(sum(2, 3, 4));",
+      "options": {
+        "A": "5",
+        "B": "9",
+        "C": "[2, 3, 4]",
+        "D": "Error: arguments is not defined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "let num = 5;\nnum += 3;\nnum *= 2;\nconsole.log(num);",
+      "options": {
+        "A": "10",
+        "B": "13",
+        "C": "16",
+        "D": "8"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "function processData(data, callback) {\n  callback(data.toUpperCase());\n}\n\nprocessData('hello', function(result) {\n  console.log(result);\n});",
+      "options": {
+        "A": "hello",
+        "B": "HELLO",
+        "C": "undefined",
+        "D": "function"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "function greet(name = 'Guest') {\n  return `Hello, ${name}!`;\n}\n\nconsole.log(greet());",
+      "options": {
+        "A": "Hello, undefined!",
+        "B": "Hello, !",
+        "C": "Hello, Guest!",
+        "D": "Error: Missing parameter"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT true about Node.js compared to browser JavaScript?",
+      "options": {
+        "A": "Node.js has access to filesystem operations through the fs module",
+        "B": "Node.js uses the window object as its global object",
+        "C": "Node.js can create HTTP servers without external libraries",
+        "D": "Node.js uses the V8 JavaScript engine"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const numbers = [1, 2, 3];\nconst newArray = [...numbers, 4, 5];\nconsole.log(newArray);",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[[1, 2, 3], 4, 5]",
+        "C": "[1, 2, 3]",
+        "D": "Error: Invalid syntax"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What's the difference between these two ways of creating objects?",
+      "code_example": "const obj1 = {};\nconst obj2 = new Object();",
+      "options": {
+        "A": "obj1 is a literal while obj2 creates a class instance",
+        "B": "obj1 is faster to create than obj2",
+        "C": "obj2 has access to Object prototype methods while obj1 doesn't",
+        "D": "There is no functional difference between the two"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is a key difference between require() and import() in JavaScript?",
+      "options": {
+        "A": "require() is synchronous while import() can be asynchronous",
+        "B": "import() works in the browser but require() doesn't",
+        "C": "require() supports circular dependencies but import() doesn't",
+        "D": "import() can only import entire modules, not specific exports"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will the following code do when a link is clicked?",
+      "code_example": "document.querySelector('a').addEventListener('click', function(event) {\n  event.preventDefault();\n  console.log('Link clicked');\n});",
+      "options": {
+        "A": "The browser will navigate to the link's href",
+        "B": "The event will be canceled and 'Link clicked' will be logged",
+        "C": "The link will be removed from the DOM",
+        "D": "Nothing will happen because the event listener is improperly defined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a reference type in JavaScript?",
+      "options": {
+        "A": "Object",
+        "B": "Number",
+        "C": "Array",
+        "D": "RegExp"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will the following code create?",
+      "code_example": "const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'text/plain' });\n  res.end('Hello World');\n});\n\nserver.listen(3000);",
+      "options": {
+        "A": "A client that makes HTTP requests",
+        "B": "A web socket server",
+        "C": "An HTTP server that responds with 'Hello World'",
+        "D": "An Express.js application"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const arr = [1, 2, 3];\narr.push(4);\narr.unshift(0);\nconsole.log(arr);",
+      "options": {
+        "A": "[0, 1, 2, 3, 4]",
+        "B": "[1, 2, 3, 4, 0]",
+        "C": "[0, 4, 1, 2, 3]",
+        "D": "[4, 1, 2, 3, 0]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(5 & 3);",
+      "options": {
+        "A": "8",
+        "B": "15",
+        "C": "2",
+        "D": "1"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const { name, age } = { name: 'John', age: 25, occupation: 'Developer' };\nconsole.log(name, age);",
+      "options": {
+        "A": "undefined undefined",
+        "B": "John 25",
+        "C": "Error: Invalid syntax",
+        "D": "{ name: 'John', age: 25 }"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "const user = {\n  name: 'John',\n  details: null\n};\n\nconst city = user.details?.address?.city;\nconsole.log(city);",
+      "options": {
+        "A": "null",
+        "B": "undefined",
+        "C": "Error: Cannot read property 'address' of null",
+        "D": "Error: Invalid syntax"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "const id = Symbol('id');\nconst user = {\n  name: 'John',\n  [id]: 123\n};\n\nconsole.log(Object.keys(user));",
+      "options": {
+        "A": "['name', Symbol(id)]",
+        "B": "['name', 'id']",
+        "C": "['name']",
+        "D": "Error: Symbols cannot be used as property keys"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "In Express.js, what does the following middleware do?",
+      "code_example": "app.use(express.urlencoded({ extended: true }));",
+      "options": {
+        "A": "Parses URL-encoded data from request bodies",
+        "B": "Encodes response bodies to URL format",
+        "C": "Validates URL parameters against a schema",
+        "D": "Handles file uploads in multipart/form-data format"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "async function fetchData() {\n  try {\n    const response = await Promise.reject('API Error');\n    return 'Success';\n  } catch (error) {\n    return 'Failed: ' + error;\n  }\n}\n\nfetchData().then(result => console.log(result));",
+      "options": {
+        "A": "Success",
+        "B": "API Error",
+        "C": "Failed: API Error",
+        "D": "Error: Promise rejected"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a common implementation of JWT authentication in a Node.js application?",
+      "options": {
+        "A": "Storing the token in HTTP-only cookies",
+        "B": "Sending the token in Authorization header",
+        "C": "Storing the token in localStorage on the client",
+        "D": "Storing user credentials in the JWT payload"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What is the primary benefit of using Redis for caching API responses in a Node.js application?",
+      "options": {
+        "A": "It automatically encrypts sensitive data",
+        "B": "It provides in-memory data storage with configurable persistence",
+        "C": "It compresses data to reduce storage requirements",
+        "D": "It validates response data against a schema"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "In Express.js, what does the following middleware configuration accomplish?",
+      "code_example": "app.use(cors({\n  origin: 'https://example.com',\n  methods: ['GET', 'POST'],\n  allowedHeaders: ['Content-Type', 'Authorization']\n}));",
+      "options": {
+        "A": "Blocks all cross-origin requests for security",
+        "B": "Allows only requests from example.com with specific methods and headers",
+        "C": "Redirects all requests to example.com",
+        "D": "Proxies requests through example.com to hide the origin server"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What security issue is being addressed in the following code?",
+      "code_example": "const jwt = require('jsonwebtoken');\n\nconst token = jwt.sign(\n  { userId: user.id },\n  process.env.JWT_SECRET,\n  { expiresIn: '1h' }\n);",
+      "options": {
+        "A": "Cross-Site Scripting (XSS) attacks",
+        "B": "SQL Injection attacks",
+        "C": "Token hijacking through unlimited lifetime",
+        "D": "Man-in-the-Middle attacks"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "const parent = { name: 'Parent' };\nconst child = Object.create(parent);\nchild.age = 25;\n\nconsole.log(child.name);\nconsole.log(child.hasOwnProperty('name'));",
+      "options": {
+        "A": "Parent, true",
+        "B": "Parent, false",
+        "C": "undefined, false",
+        "D": "Error: child has no property 'name'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "const promise = new Promise((resolve, reject) => {\n  setTimeout(() => resolve('Success'), 100);\n});\n\npromise\n  .then(result => {\n    console.log(result);\n    throw new Error('Something went wrong');\n  })\n  .catch(error => {\n    console.log(error.message);\n  })\n  .finally(() => {\n    console.log('Finally');\n  });",
+      "options": {
+        "A": "Success",
+        "B": "Error: Something went wrong",
+        "C": "Success, Error: Something went wrong",
+        "D": "Success, Something went wrong, Finally"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What is the correct way to connect to a MongoDB database using Mongoose in Node.js?",
+      "code_example": "const mongoose = require('mongoose');\n\nmongoose.connect('mongodb://localhost:27017/myapp', {\n  useNewUrlParser: true,\n  useUnifiedTopology: true\n})\n.then(() => console.log('Connected to MongoDB'))\n.catch(err => console.error('Failed to connect', err));",
+      "options": {
+        "A": "The code contains syntax errors and won't connect",
+        "B": "The code is missing required authentication parameters",
+        "C": "The code is correct for establishing a MongoDB connection",
+        "D": "The code will connect but the options are deprecated"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "In Express.js, what does the morgan middleware primarily do?",
+      "code_example": "const morgan = require('morgan');\napp.use(morgan('combined'));",
+      "options": {
+        "A": "Authenticates HTTP requests",
+        "B": "Logs HTTP requests to the console or a file",
+        "C": "Compresses response bodies",
+        "D": "Validates request parameters"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will the following Express.js middleware do?",
+      "code_example": "app.use(express.json());\napp.use(express.urlencoded({ extended: true }));",
+      "options": {
+        "A": "Parse only JSON data from request bodies",
+        "B": "Parse only form data from request bodies",
+        "C": "Parse both JSON and form data from request bodies",
+        "D": "Convert all responses to JSON format"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "const EventEmitter = require('events');\nconst emitter = new EventEmitter();\n\nemitter.on('message', (msg) => {\n  console.log('Message received:', msg);\n});\n\nemitter.emit('message', 'Hello');\nemitter.emit('message', 'World');",
+      "options": {
+        "A": "Message received: Hello",
+        "B": "Message received: World",
+        "C": "Message received: Hello World",
+        "D": "Message received: Hello\\nMessage received: World"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "const obj = {\n  name: 'Object',\n  getName: function() {\n    return this.name;\n  }\n};\n\nconst getName = obj.getName;\nconsole.log(getName());",
+      "options": {
+        "A": "Object",
+        "B": "undefined",
+        "C": "null",
+        "D": "Window"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "In Express.js, what package is commonly used to handle file uploads and what does the following code do?",
+      "code_example": "const upload = multer({ dest: 'uploads/' });\n\napp.post('/profile', upload.single('avatar'), function (req, res) {\n  console.log(req.file);\n  res.send('File uploaded');\n});",
+      "options": {
+        "A": "It uses the 'multer' package to upload a single file named 'avatar' to the 'uploads' directory",
+        "B": "It uses the 'express-fileupload' package to handle multiple files",
+        "C": "It validates that the uploaded file is an image before saving",
+        "D": "It streams the file directly to cloud storage"
+      },
+      "correct_answer": "A"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will happen when the following code is executed?",
+      "options": {
+        "A": "The program will crash with a ReferenceError",
+        "B": "The memory leak will be prevented and 'Cleanup complete' will be logged",
+        "C": "The memory leak will occur and 'Cleanup complete' will never be logged",
+        "D": "The program will run indefinitely without any output"
+      },
+      "correct_answer": "B",
+      "code_example": "function createButtons() {\n  const buttons = [];\n  \n  for (let i = 0; i < 10; i++) {\n    const button = document.createElement('button');\n    button.innerText = `Button ${i}`;\n    \n    // Add event listener\n    const handleClick = () => {\n      console.log(`Button ${i} clicked`);\n    };\n    \n    button.addEventListener('click', handleClick);\n    buttons.push({\n      element: button,\n      cleanup: () => button.removeEventListener('click', handleClick)\n    });\n  }\n  \n  return buttons;\n}\n\nconst buttons = createButtons();\n// Later in the code\nbuttons.forEach(btn => btn.cleanup());\nconsole.log('Cleanup complete');"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "When deploying a Node.js application to Heroku, which of the following statements is TRUE?",
+      "options": {
+        "A": "You must specify a fixed port in your application code, usually port 3000",
+        "B": "Heroku automatically installs all dependencies listed in package-lock.json but ignores package.json",
+        "C": "Heroku uses the 'start' script in package.json to launch your application",
+        "D": "Heroku requires a Procfile even if you have a valid 'start' script in package.json"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Node.js EventEmitter code?",
+      "options": {
+        "A": "First listener, Second listener",
+        "B": "Second listener, First listener",
+        "C": "First listener (only this will be logged)",
+        "D": "Nothing will be logged due to the maxListeners setting"
+      },
+      "correct_answer": "A",
+      "code_example": "const EventEmitter = require('events');\n\nclass MyEmitter extends EventEmitter {}\nconst myEmitter = new MyEmitter();\n\n// Set maximum listeners\nmyEmitter.setMaxListeners(1);\n\n// Add two listeners\nmyEmitter.on('event', () => {\n  console.log('First listener');\n});\n\nmyEmitter.on('event', () => {\n  console.log('Second listener');\n});\n\n// Emit the event\nmyEmitter.emit('event');"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "In a CI/CD pipeline configuration for a Node.js project, which of the following best practices should be implemented to ensure secure deployment?",
+      "options": {
+        "A": "Store API keys and database credentials directly in the pipeline configuration file for ease of access",
+        "B": "Skip the testing phase in the production deployment pipeline to speed up deployment",
+        "C": "Use environment-specific variables and secrets management for different deployment stages",
+        "D": "Allow manual override of all automated tests to ensure deployments are never blocked"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What is the primary advantage of using Nginx as a reverse proxy in front of a Node.js application?",
+      "options": {
+        "A": "It completely eliminates the need for error handling in the Node.js application",
+        "B": "It provides SSL termination, load balancing, and static file serving capabilities",
+        "C": "It automatically refactors your JavaScript code to be more efficient",
+        "D": "It converts your Node.js code into a compiled language for faster execution"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates hidden classes and inline caching in V8?",
+      "options": {
+        "A": "Optimized: 15 ms, Deoptimized: 30 ms",
+        "B": "The execution times will be identical",
+        "C": "The code will throw a TypeError",
+        "D": "The actual execution times will vary, but the optimized version will be faster"
+      },
+      "correct_answer": "D",
+      "code_example": "// Optimized case - consistent property order\nfunction createOptimizedObjects() {\n  const start = performance.now();\n  \n  let sum = 0;\n  for (let i = 0; i < 100000; i++) {\n    let obj = { x: i, y: i+1 };\n    sum += obj.x + obj.y;\n  }\n  \n  return performance.now() - start;\n}\n\n// Deoptimized case - inconsistent property order\nfunction createDeoptimizedObjects() {\n  const start = performance.now();\n  \n  let sum = 0;\n  for (let i = 0; i < 100000; i++) {\n    let obj = {};\n    if (i % 2 === 0) {\n      obj.x = i;\n      obj.y = i+1;\n    } else {\n      obj.y = i+1;\n      obj.x = i;\n    }\n    sum += obj.x + obj.y;\n  }\n  \n  return performance.now() - start;\n}\n\nconsole.log(`Optimized: ${createOptimizedObjects().toFixed(2)} ms`);\nconsole.log(`Deoptimized: ${createDeoptimizedObjects().toFixed(2)} ms`);"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that handles unhandled Promise rejections?",
+      "options": {
+        "A": "Caught rejection: Error: Something went wrong",
+        "B": "UnhandledPromiseRejectionWarning will be shown, but the process continues",
+        "C": "The process will exit with code 1",
+        "D": "Nothing will be logged and the process will continue normally"
+      },
+      "correct_answer": "A",
+      "code_example": "process.on('unhandledRejection', (reason, promise) => {\n  console.log('Caught rejection:', reason);\n});\n\nfunction failingPromise() {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      reject(new Error('Something went wrong'));\n    }, 100);\n  });\n}\n\nfailingPromise();\n\n// Keep the process running\nsetTimeout(() => {}, 1000);"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that implements custom event listeners?",
+      "options": {
+        "A": "Button clicked with id: button1, name: Submit",
+        "B": "CustomEvent not supported in this environment",
+        "C": "Nothing will be logged because the wrong element is being targeted",
+        "D": "TypeError: element.dispatchEvent is not a function"
+      },
+      "correct_answer": "A",
+      "code_example": "// Assume there's a button with id 'button1' in the DOM\nclass EventManager {\n  constructor() {\n    this.events = {};\n  }\n\n  addListener(element, eventType, callback) {\n    if (!this.events[eventType]) {\n      this.events[eventType] = new Set();\n      \n      element.addEventListener(eventType, (event) => {\n        this.events[eventType].forEach(callbackFn => {\n          callbackFn(event);\n        });\n      });\n    }\n    \n    this.events[eventType].add(callback);\n  }\n\n  removeListener(eventType, callback) {\n    if (this.events[eventType]) {\n      this.events[eventType].delete(callback);\n    }\n  }\n\n  triggerEvent(element, eventType, detail = {}) {\n    const event = new CustomEvent(eventType, { detail });\n    element.dispatchEvent(event);\n  }\n}\n\n// Usage\nconst eventManager = new EventManager();\nconst button = { id: 'button1' };\n\n// Simulate DOM element for testing\nconst element = document.createElement('button');\nelement.id = 'button1';\n\neventManager.addListener(element, 'click', (event) => {\n  console.log(`Button clicked with id: ${event.target.id}, name: ${event.detail.name}`);\n});\n\n// Trigger the custom event\neventManager.triggerEvent(element, 'click', { name: 'Submit' });"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "Which of the following approaches is MOST secure for handling JWT secrets in a Node.js application?",
+      "options": {
+        "A": "Store the JWT secret in the application's source code for easy access",
+        "B": "Use the same JWT secret across all environments (development, staging, production)",
+        "C": "Store the JWT secret in environment variables and rotate it periodically",
+        "D": "Generate a new JWT secret for each user session"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates V8 engine optimization techniques?",
+      "options": {
+        "A": "Monomorphic: faster, Polymorphic: slower, Megamorphic: slowest",
+        "B": "All three functions will have identical performance",
+        "C": "The code will throw a RangeError: Maximum call stack size exceeded",
+        "D": "None of the functions will execute due to syntax errors"
+      },
+      "correct_answer": "A",
+      "code_example": "// Monomorphic - always the same type (number)\nfunction monomorphicAdd(a, b) {\n  return a + b;\n}\n\n// Polymorphic - small set of different types\nfunction polymorphicAdd(a, b) {\n  return a + b;\n}\n\n// Megamorphic - many different types\nfunction megamorphicAdd(a, b) {\n  return a + b;\n}\n\n// Benchmark monomorphic (always numbers)\nfunction benchMonomorphic() {\n  const start = performance.now();\n  let result = 0;\n  \n  for (let i = 0; i < 1000000; i++) {\n    result += monomorphicAdd(i, i + 1);\n  }\n  \n  return performance.now() - start;\n}\n\n// Benchmark polymorphic (alternating between 2 types)\nfunction benchPolymorphic() {\n  const start = performance.now();\n  let result = 0;\n  \n  for (let i = 0; i < 1000000; i++) {\n    if (i % 2 === 0) {\n      result += polymorphicAdd(i, i + 1); // numbers\n    } else {\n      result += polymorphicAdd(String(i), String(i + 1)); // strings\n    }\n  }\n  \n  return performance.now() - start;\n}\n\n// Benchmark megamorphic (many different types)\nfunction benchMegamorphic() {\n  const start = performance.now();\n  let result = 0;\n  \n  for (let i = 0; i < 1000000; i++) {\n    const type = i % 5;\n    if (type === 0) {\n      result += megamorphicAdd(i, i + 1); // numbers\n    } else if (type === 1) {\n      result += megamorphicAdd(String(i), String(i + 1)); // strings\n    } else if (type === 2) {\n      result += megamorphicAdd(true, false); // booleans\n    } else if (type === 3) {\n      result += megamorphicAdd([i], [i + 1]); // arrays\n    } else {\n      result += megamorphicAdd({val: i}, {val: i + 1}); // objects\n    }\n  }\n  \n  return performance.now() - start;\n}\n\nconst mono = benchMonomorphic();\nconst poly = benchPolymorphic();\nconst mega = benchMegamorphic();\n\nconsole.log(`Monomorphic: ${mono.toFixed(2)} ms`);\nconsole.log(`Polymorphic: ${poly.toFixed(2)} ms`);\nconsole.log(`Megamorphic: ${mega.toFixed(2)} ms`);"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "When debugging Node.js applications with node --inspect, which of the following statements is TRUE?",
+      "options": {
+        "A": "The debugging port is only accessible from the same machine for security reasons by default",
+        "B": "Breakpoints can only be set programmatically using the debugger statement",
+        "C": "The debugging protocol is proprietary and can only be used with Node.js-specific tools",
+        "D": "To debug a production application, --inspect should be used instead of --inspect-brk"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Node.js streams to handle real-time data?",
+      "options": {
+        "A": "Error: Maximum buffer size exceeded",
+        "B": "Data chunk 1, Data chunk 2, Stream finished",
+        "C": "Nothing will be logged because the stream is never started",
+        "D": "The code will hang indefinitely without producing any output"
+      },
+      "correct_answer": "B",
+      "code_example": "const { Readable, Transform, Writable } = require('stream');\n\n// Create a readable stream that produces data\nconst readableStream = new Readable({\n  read(size) {\n    // Push some data chunks\n    this.push('Data chunk 1');\n    this.push('Data chunk 2');\n    // Signal the end of data\n    this.push(null);\n  }\n});\n\n// Create a transform stream that processes the data\nconst transformStream = new Transform({\n  transform(chunk, encoding, callback) {\n    // Transform the data to uppercase\n    const transformedChunk = chunk.toString().toUpperCase();\n    callback(null, transformedChunk);\n  }\n});\n\n// Create a writable stream that consumes the data\nconst writableStream = new Writable({\n  write(chunk, encoding, callback) {\n    // Log the received chunk\n    console.log(chunk.toString());\n    callback();\n  }\n});\n\n// Handle stream completion\nwritableStream.on('finish', () => {\n  console.log('Stream finished');\n});\n\n// Pipe the streams together\nreadableStream\n  .pipe(transformStream)\n  .pipe(writableStream);"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates WeakMap and WeakSet for memory-sensitive caching?",
+      "options": {
+        "A": "Cache hit for user-123, Cache miss for user-456, Memory leak detected",
+        "B": "Cache hit for user-123, Cache miss for user-456",
+        "C": "TypeError: Cannot convert undefined or null to object",
+        "D": "The code will run without output due to garbage collection"
+      },
+      "correct_answer": "B",
+      "code_example": "// Create a memory-sensitive cache using WeakMap\nconst userDataCache = new WeakMap();\n\n// Create objects as keys\nlet user1 = { id: 'user-123' };\nlet user2 = { id: 'user-456' };\n\n// Function to fetch user data\nfunction fetchUserData(user) {\n  // Check if data exists in cache\n  if (userDataCache.has(user)) {\n    console.log(`Cache hit for ${user.id}`);\n    return userDataCache.get(user);\n  }\n  \n  console.log(`Cache miss for ${user.id}`);\n  \n  // Simulate fetching data from server\n  const userData = {\n    name: 'John Doe',\n    email: `${user.id}@example.com`,\n    preferences: { theme: 'dark', notifications: true }\n  };\n  \n  // Store in cache\n  userDataCache.set(user, userData);\n  \n  return userData;\n}\n\n// First fetch - cache miss\nfetchUserData(user1);\n\n// Second fetch - cache hit\nfetchUserData(user1);\n\n// Third fetch - different user, cache miss\nfetchUserData(user2);\n\n// Simulate user1 object no longer being referenced\nuser1 = null;\n\n// Allow time for garbage collection (in a real scenario)\n// After garbage collection, user1's data would be removed from the cache\n// without programmer intervention"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "How does JavaScript's memory allocation work for the following types of values?",
+      "options": {
+        "A": "Primitive values are stored on the stack, objects are stored on the heap with references on the stack",
+        "B": "All values are stored on the heap regardless of their type",
+        "C": "Primitives are stored on the heap with direct access, objects are stored in fragmented memory",
+        "D": "JavaScript doesn't use stack and heap; all memory is managed through a unified allocation system"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses worker threads to perform a CPU-intensive operation?",
+      "options": {
+        "A": "Sequential execution time: [slower time], Parallel execution time: [faster time]",
+        "B": "The worker thread will fail because it cannot access the main thread's variables",
+        "C": "The code will throw a ReferenceError because worker_threads is not a core module",
+        "D": "Both methods will have nearly identical execution times due to the JavaScript event loop"
+      },
+      "correct_answer": "A",
+      "code_example": "const { Worker, isMainThread, parentPort, workerData } = require('worker_threads');\n\n// CPU-intensive function to calculate primes\nfunction findPrimes(start, end) {\n  const primes = [];\n  for (let num = start; num <= end; num++) {\n    let isPrime = true;\n    for (let i = 2; i <= Math.sqrt(num); i++) {\n      if (num % i === 0) {\n        isPrime = false;\n        break;\n      }\n    }\n    if (isPrime && num > 1) {\n      primes.push(num);\n    }\n  }\n  return primes;\n}\n\n// Worker thread code\nif (!isMainThread) {\n  const { start, end } = workerData;\n  const primes = findPrimes(start, end);\n  parentPort.postMessage(primes.length);\n}\n// Main thread code\nelse {\n  const runSequential = () => {\n    const start = performance.now();\n    const totalPrimes = findPrimes(2, 1000000).length;\n    const end = performance.now();\n    return { totalPrimes, time: end - start };\n  };\n\n  const runParallel = async () => {\n    const start = performance.now();\n    \n    // Divide work into 4 parts\n    const ranges = [\n      { start: 2, end: 250000 },\n      { start: 250001, end: 500000 },\n      { start: 500001, end: 750000 },\n      { start: 750001, end: 1000000 }\n    ];\n    \n    // Create promises for each worker\n    const promises = ranges.map(range => {\n      return new Promise((resolve) => {\n        const worker = new Worker(__filename, { workerData: range });\n        worker.on('message', resolve);\n      });\n    });\n    \n    // Wait for all workers to complete\n    const results = await Promise.all(promises);\n    const totalPrimes = results.reduce((sum, count) => sum + count, 0);\n    \n    const end = performance.now();\n    return { totalPrimes, time: end - start };\n  };\n\n  // Compare performance\n  (async () => {\n    console.log('Running sequential version...');\n    const seqResult = runSequential();\n    console.log(`Sequential execution time: ${seqResult.time.toFixed(2)} ms`);\n    \n    console.log('Running parallel version...');\n    const parResult = await runParallel();\n    console.log(`Parallel execution time: ${parResult.time.toFixed(2)} ms`);\n  })();\n}"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which of the following statements correctly describes the difference between WebSockets, REST, and GraphQL?",
+      "options": {
+        "A": "WebSockets use HTTP for real-time communication, REST requires a continuous connection, and GraphQL is stateless",
+        "B": "WebSockets maintain a persistent connection for bidirectional communication, REST is stateless and based on HTTP methods, and GraphQL allows clients to request exactly the data they need",
+        "C": "WebSockets are only suitable for browser-based applications, REST supports real-time updates natively, and GraphQL requires specialized databases",
+        "D": "WebSockets automatically retry failed connections, REST always returns the complete resource state, and GraphQL cannot be used with existing REST APIs"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
