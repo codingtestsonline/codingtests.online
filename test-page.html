@@ -359,8 +359,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const levelValue = urlParams.get('level');
     const testLevel = parseInt(levelValue, 10);
     const language = urlParams.get('diff');
-
-    document.querySelector('h2').textContent = `${language} Test ${testLevel}`;
+    if(language === 'CSharp') {
+	document.querySelector('h2').textContent = `C# Test ${testLevel}`;
+    }
+    else {
+	document.querySelector('h2').textContent = `${language} Test ${testLevel}`;
+    }
 
     fetch(`json/${language}/test${testLevel}.json`) // Path to your JSON file
         .then(response => {
