@@ -1,0 +1,641 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "if-else",
+      "question": "What will be the output of the following code?",
+      "code_example": "int x = 10;\nif (x > 5)\n    Console.Write(\"A\");\nelse if (x > 8)\n    Console.Write(\"B\");\nelse\n    Console.Write(\"C\");\n\nif (x == 10)\n    Console.Write(\"D\");",
+      "options": {
+        "A": "A",
+        "B": "AD",
+        "C": "B",
+        "D": "BD"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "try-catch-finally",
+      "question": "What will be the output of the following code?",
+      "code_example": "try\n{\n    Console.Write(\"A\");\n    throw new Exception();\n    Console.Write(\"B\");\n}\ncatch\n{\n    Console.Write(\"C\");\n}\nfinally\n{\n    Console.Write(\"D\");\n}\nConsole.Write(\"E\");",
+      "options": {
+        "A": "ACDE",
+        "B": "ADE",
+        "C": "ABE",
+        "D": "ABCDE"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "Default Parameters",
+      "question": "What will be the output of the following code?",
+      "code_example": "void PrintNumbers(int a, int b = 20, int c = 30)\n{\n    Console.Write($\"{a},{b},{c}\");\n}\n\nPrintNumbers(5, c: 15);",
+      "options": {
+        "A": "5,20,15",
+        "B": "5,0,15",
+        "C": "5,20,30",
+        "D": "Compilation error"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "Multi-dimensional arrays",
+      "question": "What is the correct way to declare and initialize a 2x3 multi-dimensional array with all elements set to 1?",
+      "options": {
+        "A": "int[,] arr = new int[2,3] { 1, 1, 1, 1, 1, 1 };",
+        "B": "int[,] arr = new int[2,3] { {1, 1, 1}, {1, 1, 1} };",
+        "C": "int[,] arr = new int[3,2] { {1, 1, 1}, {1, 1, 1} };",
+        "D": "int[,] arr = { {1, 1, 1}, {1, 1, 1} };"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "String Interpolation",
+      "question": "What will be the output of the following code?",
+      "code_example": "string name = \"John\";\nint age = 30;\nstring message = $\"Name: {name,-10} Age: {age:D2}\";\nConsole.Write(message);",
+      "options": {
+        "A": "Name: John       Age: 30",
+        "B": "Name: John Age: 30",
+        "C": "Name: John       Age: 30",
+        "D": "Name: John       Age: 30"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": ".NET Framework vs. .NET Core vs. .NET 5+",
+      "question": "Which of the following statements about .NET 5+ is NOT correct?",
+      "options": {
+        "A": ".NET 5+ unifies .NET Framework and .NET Core",
+        "B": ".NET 5+ is cross-platform",
+        "C": ".NET 5+ maintains backward compatibility with all .NET Framework libraries",
+        "D": ".NET 5+ has improved performance over .NET Core 3.1"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "var vs dynamic",
+      "question": "What will be the output of the following code?",
+      "code_example": "var x = 10;\ndynamic y = 10;\n\nx = \"Hello\"; // Line 1\ny = \"Hello\"; // Line 2\n\nConsole.Write($\"{x}, {y}\");",
+      "options": {
+        "A": "10, Hello",
+        "B": "Hello, Hello",
+        "C": "Compilation error at Line 1",
+        "D": "Runtime error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "ref vs. out parameters",
+      "question": "What will be the output of the following code?",
+      "code_example": "void ModifyValues(ref int x, out int y)\n{\n    x = x * 2;\n    y = 5;\n}\n\nint a = 10;\nint b;\nModifyValues(ref a, out b);\nConsole.Write($\"{a}, {b}\");",
+      "options": {
+        "A": "10, 5",
+        "B": "20, 5",
+        "C": "20, 0",
+        "D": "Compilation error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Access Modifiers",
+      "question": "Which access modifier allows a class member to be accessed within the same assembly, but not from derived classes in other assemblies?",
+      "options": {
+        "A": "private",
+        "B": "protected",
+        "C": "internal",
+        "D": "protected internal"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Single-dimensional arrays",
+      "question": "What will be the output of the following code?",
+      "code_example": "int[] numbers = new int[3];\nnumbers[0] = 10;\nnumbers[1] = 20;\nConsole.Write($\"{numbers[0]}, {numbers[1]}, {numbers[2]}\");",
+      "options": {
+        "A": "10, 20, 0",
+        "B": "10, 20, null",
+        "C": "10, 20, undefined",
+        "D": "10, 20, NaN"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "Properties",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Person\n{\n    private int _age;\n    \n    public int Age\n    {\n        get { return _age; }\n        set { _age = value > 0 ? value : 0; }\n    }\n}\n\nPerson p = new Person();\np.Age = -10;\nConsole.Write(p.Age);",
+      "options": {
+        "A": "-10",
+        "B": "0",
+        "C": "Compilation error",
+        "D": "Runtime exception"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "String Methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "string text = \"Hello, World!\";\nstring result = text.Substring(7, 5).ToUpper().Replace('O', '_');\nConsole.Write(result);",
+      "options": {
+        "A": "WORLD",
+        "B": "W_RLD",
+        "C": "WORL_",
+        "D": "Wo_ld"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "Using statement",
+      "question": "What is the primary purpose of the 'using' statement in C#?",
+      "options": {
+        "A": "To include namespaces in the code file",
+        "B": "To create a scope after which an object's Dispose method is automatically called",
+        "C": "To implement multithreading in applications",
+        "D": "To handle exceptions in a try-catch block"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "Logical operators",
+      "question": "What will be the output of the following code?",
+      "code_example": "bool a = true;\nbool b = false;\nbool c = true;\n\nConsole.Write(a || b && !c);",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Compilation error",
+        "D": "Runtime exception"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "Type Conversion",
+      "question": "What will be the output of the following code?",
+      "code_example": "string numberString = \"123.45\";\ntry\n{\n    int number1 = Convert.ToInt32(numberString);\n    Console.Write(\"A\");\n}\ncatch\n{\n    Console.Write(\"B\");\n}\n\nif (int.TryParse(numberString, out int number2))\n    Console.Write(\"C\");\nelse\n    Console.Write(\"D\");",
+      "options": {
+        "A": "AC",
+        "B": "AD",
+        "C": "BC",
+        "D": "BD"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "Collections",
+      "question": "What is the main difference between ArrayList and List<T> in C#?",
+      "options": {
+        "A": "ArrayList can store only one type of object, List<T> can store multiple types",
+        "B": "ArrayList is faster than List<T> for large collections",
+        "C": "ArrayList stores objects of any type, List<T> is type-safe and stores objects of a specific type",
+        "D": "ArrayList is part of .NET Core, List<T> is part of .NET Framework"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Dispose vs Finalize",
+      "question": "Which statement about Dispose() and Finalize() is correct?",
+      "options": {
+        "A": "Dispose() is called automatically by the garbage collector",
+        "B": "Finalize() must be explicitly called in code",
+        "C": "Dispose() is called explicitly to release unmanaged resources immediately",
+        "D": "Finalize() guarantees immediate resource release"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "Read-only properties",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Person\n{\n    public string Name { get; private set; }\n    \n    public Person(string name)\n    {\n        Name = name;\n    }\n    \n    public void UpdateName(string newName)\n    {\n        Name = newName;\n    }\n}\n\nvar person = new Person(\"John\");\nperson.Name = \"Mike\"; // Line 1\nperson.UpdateName(\"Mike\"); // Line 2\nConsole.Write(person.Name);",
+      "options": {
+        "A": "John",
+        "B": "Mike",
+        "C": "Compilation error at Line 1",
+        "D": "Compilation error at Line 2"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "GC generations",
+      "question": "Which statement about garbage collection in .NET is correct?",
+      "options": {
+        "A": "Gen0 has the longest-lived objects",
+        "B": "Objects are collected in Gen2 before Gen1",
+        "C": "A collection of Gen1 will also collect Gen0",
+        "D": "Objects in Gen2 are never collected"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "Dependency Injection in Testing",
+      "question": "What is the primary benefit of using dependency injection in unit testing?",
+      "options": {
+        "A": "It makes the code run faster",
+        "B": "It allows mocking dependencies to isolate the unit being tested",
+        "C": "It reduces the number of required tests",
+        "D": "It automatically finds bugs in the code"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "Property Injection",
+      "question": "Which of the following best describes property injection in dependency injection?",
+      "options": {
+        "A": "Dependencies are provided through a class constructor",
+        "B": "Dependencies are provided through public properties",
+        "C": "Dependencies are provided through method parameters",
+        "D": "Dependencies are resolved automatically at runtime"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "Constructor Injection",
+      "question": "What will be the output of the following code?",
+      "code_example": "interface ILogger\n{\n    void Log(string message);\n}\n\nclass ConsoleLogger : ILogger\n{\n    public void Log(string message)\n    {\n        Console.Write(\"Console: \" + message);\n    }\n}\n\nclass Service\n{\n    private readonly ILogger _logger;\n    \n    public Service(ILogger logger)\n    {\n        _logger = logger;\n    }\n    \n    public void DoWork()\n    {\n        _logger.Log(\"Working\");\n    }\n}\n\nvar logger = new ConsoleLogger();\nvar service = new Service(logger);\nservice.DoWork();",
+      "options": {
+        "A": "Working",
+        "B": "Console: Working",
+        "C": "ILogger: Working",
+        "D": "Compilation error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "LINQ Aggregate",
+      "question": "What will be the output of the following code?",
+      "code_example": "var numbers = new[] { 1, 2, 3, 4 };\n\nvar result = numbers.Aggregate(0, (total, next) => total + next * next);\nConsole.Write(result);",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "30",
+        "D": "100"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "Deferred Execution",
+      "question": "What will be the output of the following code?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3 };\nvar query = numbers.Select(n => n * 10);\n\nnumbers.Add(4);\n\nforeach (var n in query)\n{\n    Console.Write(n + \" \");\n}\n",
+      "options": {
+        "A": "10 20 30",
+        "B": "10 20 30 40",
+        "C": "1 2 3",
+        "D": "1 2 3 4"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "EventArgs pattern",
+      "question": "What will be the output of the following code?",
+      "code_example": "class CustomEventArgs : EventArgs\n{\n    public string Message { get; }\n    \n    public CustomEventArgs(string message)\n    {\n        Message = message;\n    }\n}\n\nclass Publisher\n{\n    public event EventHandler<CustomEventArgs> OnEvent;\n    \n    public void RaiseEvent()\n    {\n        OnEvent?.Invoke(this, new CustomEventArgs(\"Hello\"));\n    }\n}\n\nclass Subscriber\n{\n    public void HandleEvent(object sender, CustomEventArgs e)\n    {\n        Console.Write(e.Message);\n    }\n}\n\nvar publisher = new Publisher();\nvar subscriber = new Subscriber();\npublisher.OnEvent += subscriber.HandleEvent;\npublisher.RaiseEvent();",
+      "options": {
+        "A": "Hello",
+        "B": "Event raised",
+        "C": "Nothing is printed",
+        "D": "Runtime exception"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "Task<T> vs void",
+      "question": "What is the key advantage of using Task<T> instead of void for asynchronous methods?",
+      "options": {
+        "A": "void methods execute faster than Task<T> methods",
+        "B": "Task<T> methods can return a value and be awaited",
+        "C": "void methods are more memory efficient",
+        "D": "Task<T> methods cannot throw exceptions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "Multicast delegates",
+      "question": "What will be the output of the following code?",
+      "code_example": "delegate void TestDelegate(string message);\n\nclass Program\n{\n    static void Main()\n    {\n        TestDelegate del1 = (s) => Console.Write(\"A:\" + s);\n        TestDelegate del2 = (s) => Console.Write(\"B:\" + s);\n        \n        TestDelegate combined = del1 + del2;\n        combined -= del1;\n        \n        combined(\"Test\");\n    }\n}",
+      "options": {
+        "A": "A:Test",
+        "B": "B:Test",
+        "C": "A:TestB:Test",
+        "D": "No output"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "Request pipeline",
+      "question": "In ASP.NET Core, which middleware component is responsible for routing requests to the appropriate controller and action?",
+      "options": {
+        "A": "UseAuthorization",
+        "B": "UseEndpoints",
+        "C": "UseMvc",
+        "D": "UseAuthentication"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "LINQ Methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "var people = new List<(string Name, int Age)>\n{\n    (\"Alice\", 25),\n    (\"Bob\", 30),\n    (\"Charlie\", 25),\n    (\"David\", 30)\n};\n\nvar result = people\n    .GroupBy(p => p.Age)\n    .Select(g => new { Age = g.Key, Count = g.Count() })\n    .OrderByDescending(x => x.Count)\n    .First();\n\nConsole.Write($\"{result.Age}:{result.Count}\");",
+      "options": {
+        "A": "25:2",
+        "B": "30:2",
+        "C": "Alice:1",
+        "D": "2:25"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Migrations",
+      "question": "In Entity Framework Core, what does the 'Add-Migration' command do?",
+      "options": {
+        "A": "Updates the database schema to match the current model",
+        "B": "Creates a new migration class with code to update the database schema",
+        "C": "Generates a SQL script for database updates",
+        "D": "Reverts the database to a previous migration"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "ConfigureAwait",
+      "question": "What will be the output of the following code when run in a UI application?",
+      "code_example": "async Task Method1()\n{\n    await Task.Delay(100);\n    Console.Write(\"Same thread: \" + (TaskScheduler.Current == TaskScheduler.Default));\n}\n\nasync Task Method2()\n{\n    await Task.Delay(100).ConfigureAwait(false);\n    Console.Write(\"Same thread: \" + (TaskScheduler.Current == TaskScheduler.Default));\n}\n\nawait Method1();\nawait Method2();",
+      "options": {
+        "A": "Same thread: True, Same thread: True",
+        "B": "Same thread: False, Same thread: False",
+        "C": "Same thread: False, Same thread: True",
+        "D": "Same thread: True, Same thread: False"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "LINQ FirstOrDefault",
+      "question": "What will be the output of the following code?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4 };\n\nvar result1 = numbers.FirstOrDefault(n => n > 10);\nvar result2 = numbers.SingleOrDefault(n => n > 3);\nvar result3 = numbers.SingleOrDefault(n => n > 10);\n\nConsole.Write($\"{result1}, {result2}, {result3}\");",
+      "options": {
+        "A": "0, 4, 0",
+        "B": "null, 4, null",
+        "C": "0, 4, null",
+        "D": "Exception is thrown"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the purpose of the Repository Pattern in C#?",
+      "options": {
+        "A": "To directly map database tables to C# objects",
+        "B": "To abstract the data access layer and provide a collection-like interface for domain objects",
+        "C": "To create a direct channel between the UI and the database",
+        "D": "To manage database transactions and connection pooling"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates an implementation of the Observer Pattern?",
+      "code_example": "public class WeatherStation\n{\n    private float temperature;\n    private List<IObserver> observers = new List<IObserver>();\n\n    public void RegisterObserver(IObserver observer)\n    {\n        observers.Add(observer);\n    }\n\n    public void SetTemperature(float temperature)\n    {\n        this.temperature = temperature;\n        NotifyObservers();\n    }\n\n    private void NotifyObservers()\n    {\n        foreach (var observer in observers)\n        {\n            observer.Update(temperature);\n        }\n    }\n}\n\npublic interface IObserver\n{\n    void Update(float temperature);\n}\n\npublic class TemperatureDisplay : IObserver\n{\n    public void Update(float temperature)\n    {\n        Console.WriteLine($\"Temperature Display: {temperature}°C\");\n    }\n}\n\npublic class PhoneApp : IObserver\n{\n    public void Update(float temperature)\n    {\n        Console.WriteLine($\"Phone App: The current temperature is {temperature}°C\");\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var weatherStation = new WeatherStation();\n        var display = new TemperatureDisplay();\n        var phoneApp = new PhoneApp();\n        \n        weatherStation.RegisterObserver(display);\n        weatherStation.SetTemperature(25.0f);\n        weatherStation.RegisterObserver(phoneApp);\n        weatherStation.SetTemperature(26.5f);\n    }\n}",
+      "options": {
+        "A": "Temperature Display: 25°C\nPhone App: The current temperature is 25°C\nTemperature Display: 26.5°C\nPhone App: The current temperature is 26.5°C",
+        "B": "Temperature Display: 25°C\nTemperature Display: 26.5°C\nPhone App: The current temperature is 26.5°C",
+        "C": "Temperature Display: 25°C\nPhone App: The current temperature is 25°C",
+        "D": "Temperature Display: 25°C\nTemperature Display: 26.5°C"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Which of the following statements about clustered and non-clustered indexes in SQL Server is correct?",
+      "options": {
+        "A": "A table can have multiple clustered indexes but only one non-clustered index",
+        "B": "Non-clustered indexes contain the actual table data, while clustered indexes contain pointers to the data",
+        "C": "Clustered indexes determine the physical order of data in a table, while non-clustered indexes create a separate structure with pointers to the data",
+        "D": "Both clustered and non-clustered indexes require the same amount of storage space"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Span<T>?",
+      "code_example": "static void Main()\n{\n    int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };\n    \n    Span<int> span = numbers;\n    Span<int> firstHalf = span.Slice(0, 5);\n    Span<int> secondHalf = span.Slice(5, 5);\n    \n    ModifySpan(firstHalf);\n    ReverseSpan(secondHalf);\n    \n    Console.WriteLine(string.Join(\", \", numbers));\n}\n\nstatic void ModifySpan(Span<int> span)\n{\n    for (int i = 0; i < span.Length; i++)\n    {\n        span[i] *= 2;\n    }\n}\n\nstatic void ReverseSpan(Span<int> span)\n{\n    span.Reverse();\n}",
+      "options": {
+        "A": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10",
+        "B": "2, 4, 6, 8, 10, 6, 7, 8, 9, 10",
+        "C": "2, 4, 6, 8, 10, 10, 9, 8, 7, 6",
+        "D": "1, 2, 3, 4, 5, 10, 9, 8, 7, 6"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What is the main benefit of using the CQRS (Command Query Responsibility Segregation) pattern in a C# application?",
+      "options": {
+        "A": "It simplifies database schema design by enforcing a single model for all operations",
+        "B": "It reduces the need for unit testing by combining reads and writes into a single model",
+        "C": "It separates read and write operations, allowing each to be optimized independently",
+        "D": "It automatically generates database migration scripts when the domain model changes"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates in-memory caching?",
+      "code_example": "static void Main()\n{\n    var cache = new MemoryCache(new MemoryCacheOptions());\n    \n    // First cache access\n    string value1 = GetOrCreateCache(cache, \"key1\", () => \"Original Value\");\n    Console.WriteLine($\"First access: {value1}\");\n    \n    // Second cache access\n    string value2 = GetOrCreateCache(cache, \"key1\", () => \"New Value\");\n    Console.WriteLine($\"Second access: {value2}\");\n    \n    // Wait for expiration\n    Thread.Sleep(3000);\n    \n    // Third cache access after expiration\n    string value3 = GetOrCreateCache(cache, \"key1\", () => \"Value After Expiration\");\n    Console.WriteLine($\"Third access: {value3}\");\n}\n\nstatic string GetOrCreateCache(MemoryCache cache, string key, Func<string> valueFactory)\n{\n    if (!cache.TryGetValue(key, out string cachedValue))\n    {\n        cachedValue = valueFactory();\n        \n        cache.Set(key, cachedValue, new MemoryCacheEntryOptions\n        {\n            AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(2)\n        });\n    }\n    \n    return cachedValue;\n}",
+      "options": {
+        "A": "First access: Original Value\nSecond access: New Value\nThird access: Value After Expiration",
+        "B": "First access: Original Value\nSecond access: Original Value\nThird access: Original Value",
+        "C": "First access: Original Value\nSecond access: Original Value\nThird access: Value After Expiration",
+        "D": "First access: Original Value\nSecond access: New Value\nThird access: New Value"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "Which of the following configurations correctly sets up CORS in an ASP.NET Core application to allow requests from a specific origin with credentials?",
+      "code_example": "public void ConfigureServices(IServiceCollection services)\n{\n    services.AddCors(options =>\n    {\n        options.AddPolicy(\"MyPolicy\", builder =>\n        {\n            builder.WithOrigins(\"https://example.com\")\n                   .AllowAnyMethod()\n                   .AllowAnyHeader()\n                   .AllowCredentials();\n        });\n    });\n    \n    services.AddControllers();\n}\n\npublic void Configure(IApplicationBuilder app, IWebHostEnvironment env)\n{\n    // Other middleware registrations...\n    \n    app.UseRouting();\n    \n    app.UseCors(\"MyPolicy\");\n    \n    app.UseAuthorization();\n    \n    app.UseEndpoints(endpoints =>\n    {\n        endpoints.MapControllers();\n    });\n}",
+      "options": {
+        "A": "The configuration is incorrect because AllowAnyMethod() and AllowCredentials() cannot be used together",
+        "B": "The configuration is incorrect because UseCors() should be called before UseRouting()",
+        "C": "The configuration is correct and will allow CORS requests with credentials from https://example.com",
+        "D": "The configuration is incorrect because WithOrigins() should be replaced with AllowAnyOrigin() for credentials to work"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What is the main advantage of using a readonly struct in C#?",
+      "options": {
+        "A": "It prevents the struct from being garbage collected",
+        "B": "It allows the struct to be stored on the heap instead of the stack",
+        "C": "It improves performance by avoiding defensive copies when passed as parameters",
+        "D": "It automatically implements the IEquatable<T> interface"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates ArrayPool<T>?",
+      "code_example": "static void Main()\n{\n    // Get array from pool\n    ArrayPool<int> pool = ArrayPool<int>.Shared;\n    int[] array = pool.Rent(3);\n    \n    try\n    {\n        array[0] = 1;\n        array[1] = 2;\n        array[2] = 3;\n        \n        Console.WriteLine($\"Array length: {array.Length}\");\n        Console.WriteLine($\"Array contents: {string.Join(\", \", array.Take(3))}\");\n        \n        // Rent another array\n        int[] array2 = pool.Rent(3);\n        Console.WriteLine($\"Second array length: {array2.Length}\");\n        Console.WriteLine($\"Is same reference: {object.ReferenceEquals(array, array2)}\");\n        \n        // Return the first array to the pool\n        pool.Return(array);\n        \n        // Try to use it after returning\n        Console.WriteLine($\"After return: {array[0]}\");\n    }\n    finally\n    {\n        // Ensure arrays are returned\n        pool.Return(array, clearArray: true);\n    }\n}",
+      "options": {
+        "A": "Array length: 3\nArray contents: 1, 2, 3\nSecond array length: 3\nIs same reference: False\nAfter return: 1",
+        "B": "Array length: 3\nArray contents: 1, 2, 3\nSecond array length: 3\nIs same reference: False\nAfter return: 0",
+        "C": "Array length: 4\nArray contents: 1, 2, 3\nSecond array length: 4\nIs same reference: False\nAfter return: 1",
+        "D": "Array length: 16\nArray contents: 1, 2, 3\nSecond array length: 16\nIs same reference: False\nAfter return: 1"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates string interning?",
+      "code_example": "static void Main()\n{\n    string s1 = \"Hello\";\n    string s2 = \"Hello\";\n    string s3 = new string(new char[] { 'H', 'e', 'l', 'l', 'o' });\n    string s4 = string.Intern(s3);\n    \n    Console.WriteLine($\"s1 == s2: {object.ReferenceEquals(s1, s2)}\");\n    Console.WriteLine($\"s1 == s3: {object.ReferenceEquals(s1, s3)}\");\n    Console.WriteLine($\"s1 == s4: {object.ReferenceEquals(s1, s4)}\");\n    Console.WriteLine($\"s3 == s4: {object.ReferenceEquals(s3, s4)}\");\n}",
+      "options": {
+        "A": "s1 == s2: True\ns1 == s3: True\ns1 == s4: True\ns3 == s4: True",
+        "B": "s1 == s2: True\ns1 == s3: False\ns1 == s4: True\ns3 == s4: False",
+        "C": "s1 == s2: True\ns1 == s3: False\ns1 == s4: False\ns3 == s4: True",
+        "D": "s1 == s2: False\ns1 == s3: False\ns1 == s4: False\ns3 == s4: True"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "Which of the following correctly describes what happens when you call P/Invoke (using DllImport) in C#?",
+      "options": {
+        "A": "The CLR automatically converts the C# method to native code before calling the external function",
+        "B": "The CLR loads the specified native library, maps the method signature, and handles marshalling data between managed and unmanaged code",
+        "C": "The compiler embeds the external function directly into the compiled assembly",
+        "D": "The CLR decompiles the external function to IL code and executes it in the managed environment"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates JWT token validation?",
+      "code_example": "static void Main()\n{\n    // For demonstration purposes - normally these would be securely stored\n    string secretKey = \"MyVerySecretKey12345678901234567890\";\n    string validToken = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJleHAiOjE5MTYyMzkwMjJ9.MpxgGvEKHwzf9nbyBKpOlO-AjEVSzJwlR9S51gIj4Mo\";\n    string expiredToken = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJleHAiOjE1MTYyMzkwMjJ9.4Adcj3UFYzPUVaVF43FmMab6RlaQD8A9V8wFzzht-KQ\";\n    string tampered = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkhhY2tlciIsImlhdCI6MTUxNjIzOTAyMiwiZXhwIjoxOTE2MjM5MDIyfQ.IKJ-bHtAFxtkl9mxKaJK5wE_4xGbTAWqKN_5u2xn65M\";\n\n    try\n    {\n        Console.WriteLine($\"Valid token validation: {ValidateToken(validToken, secretKey)}\");\n    }\n    catch (Exception ex)\n    {\n        Console.WriteLine($\"Valid token exception: {ex.Message}\");\n    }\n\n    try\n    {\n        Console.WriteLine($\"Expired token validation: {ValidateToken(expiredToken, secretKey)}\");\n    }\n    catch (Exception ex)\n    {\n        Console.WriteLine($\"Expired token exception: {ex.Message}\");\n    }\n\n    try\n    {\n        Console.WriteLine($\"Tampered token validation: {ValidateToken(tampered, secretKey)}\");\n    }\n    catch (Exception ex)\n    {\n        Console.WriteLine($\"Tampered token exception: {ex.Message}\");\n    }\n}\n\nstatic bool ValidateToken(string token, string secretKey)\n{\n    var tokenHandler = new JwtSecurityTokenHandler();\n    var key = Encoding.ASCII.GetBytes(secretKey);\n    \n    tokenHandler.ValidateToken(token, new TokenValidationParameters\n    {\n        ValidateIssuerSigningKey = true,\n        IssuerSigningKey = new SymmetricSecurityKey(key),\n        ValidateIssuer = false,\n        ValidateAudience = false,\n        ClockSkew = TimeSpan.Zero\n    }, out SecurityToken validatedToken);\n    \n    return true;\n}",
+      "options": {
+        "A": "Valid token validation: True\nExpired token exception: IDX10223: Lifetime validation failed\nTampered token exception: IDX10511: Signature validation failed",
+        "B": "Valid token validation: True\nExpired token validation: False\nTampered token validation: False",
+        "C": "Valid token exception: Invalid token format\nExpired token exception: Token has expired\nTampered token exception: Invalid signature",
+        "D": "Valid token validation: True\nExpired token validation: True\nTampered token validation: True"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What is the primary difference between token-based authentication and JWT (JSON Web Token) authentication?",
+      "options": {
+        "A": "Token-based authentication requires a database to validate tokens, while JWT is self-contained and can be validated without a database",
+        "B": "Token-based authentication uses symmetric keys, while JWT always uses asymmetric keys",
+        "C": "Token-based authentication is stateless, while JWT authentication is stateful",
+        "D": "Token-based authentication is only suitable for web applications, while JWT works across all platforms"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates distributed caching with Redis?",
+      "code_example": "static void Main()\n{\n    // Simulate Redis connection for demo purposes\n    SimulateRedisCaching();\n}\n\nstatic void SimulateRedisCaching()\n{\n    var redisCache = new MockRedisDistributedCache();\n    \n    // Add initial data\n    redisCache.SetString(\"user:1001\", \"John Doe\", new DistributedCacheEntryOptions\n    {\n        AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(5)\n    });\n    \n    // Read from distributed cache\n    Console.WriteLine($\"Initial: {redisCache.GetString(\"user:1001\")}\");\n    \n    // Simulate another service updating the same key\n    redisCache.SetString(\"user:1001\", \"Jane Smith\");\n    \n    // Read after update\n    Console.WriteLine($\"After update: {redisCache.GetString(\"user:1001\")}\");\n    \n    // Simulate server restart or connection to different Redis node in cluster\n    var redisCache2 = new MockRedisDistributedCache(redisCache.Storage);\n    Console.WriteLine($\"After 'server restart': {redisCache2.GetString(\"user:1001\")}\");\n    \n    // Wait for expiration\n    Thread.Sleep(6000);\n    \n    // Try to read expired data\n    Console.WriteLine($\"After expiration: {redisCache2.GetString(\"user:1001\")}\");\n}\n\nclass MockRedisDistributedCache : IDistributedCache\n{\n    public Dictionary<string, CacheEntry> Storage { get; }\n    \n    public MockRedisDistributedCache(Dictionary<string, CacheEntry> existingStorage = null)\n    {\n        Storage = existingStorage ?? new Dictionary<string, CacheEntry>();\n    }\n    \n    public byte[] Get(string key) => GetAsync(key).Result;\n    \n    public Task<byte[]> GetAsync(string key, CancellationToken token = default)\n    {\n        if (!Storage.TryGetValue(key, out var entry) || entry.IsExpired)\n            return Task.FromResult<byte[]>(null);\n            \n        return Task.FromResult(entry.Value);\n    }\n    \n    public void Set(string key, byte[] value, DistributedCacheEntryOptions options) \n        => SetAsync(key, value, options).Wait();\n    \n    public Task SetAsync(string key, byte[] value, DistributedCacheEntryOptions options, CancellationToken token = default)\n    {\n        DateTime? expiry = null;\n        \n        if (options?.AbsoluteExpirationRelativeToNow.HasValue == true)\n            expiry = DateTime.UtcNow.Add(options.AbsoluteExpirationRelativeToNow.Value);\n            \n        Storage[key] = new CacheEntry { Value = value, ExpiryTime = expiry };\n        return Task.CompletedTask;\n    }\n    \n    public string GetString(string key)\n    {\n        var value = Get(key);\n        return value != null ? Encoding.UTF8.GetString(value) : null;\n    }\n    \n    public void SetString(string key, string value, DistributedCacheEntryOptions options = null)\n    {\n        Set(key, Encoding.UTF8.GetBytes(value), options ?? new DistributedCacheEntryOptions());\n    }\n    \n    public void Remove(string key) => RemoveAsync(key).Wait();\n    \n    public Task RemoveAsync(string key, CancellationToken token = default)\n    {\n        Storage.Remove(key);\n        return Task.CompletedTask;\n    }\n    \n    public void Refresh(string key) => RefreshAsync(key).Wait();\n    \n    public Task RefreshAsync(string key, CancellationToken token = default)\n    {\n        // Simulation - real Redis would extend TTL\n        return Task.CompletedTask;\n    }\n    \n    internal class CacheEntry\n    {\n        public byte[] Value { get; set; }\n        public DateTime? ExpiryTime { get; set; }\n        \n        public bool IsExpired => ExpiryTime.HasValue && DateTime.UtcNow > ExpiryTime.Value;\n    }\n}",
+      "options": {
+        "A": "Initial: John Doe\nAfter update: Jane Smith\nAfter 'server restart': Jane Smith\nAfter expiration: Jane Smith",
+        "B": "Initial: John Doe\nAfter update: Jane Smith\nAfter 'server restart': John Doe\nAfter expiration: null",
+        "C": "Initial: John Doe\nAfter update: Jane Smith\nAfter 'server restart': Jane Smith\nAfter expiration: null",
+        "D": "Initial: John Doe\nAfter update: Jane Smith\nAfter 'server restart': null\nAfter expiration: null"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "Which of the following approaches is considered best practice for API versioning in ASP.NET Core?",
+      "options": {
+        "A": "Using a version query parameter (e.g., api/products?version=1.0)",
+        "B": "Including the version in the request body as a JSON field",
+        "C": "Using a custom HTTP header (e.g., 'X-API-Version: 1.0')",
+        "D": "Including the version in the URL path (e.g., api/v1/products)"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates Memory<T>?",
+      "code_example": "static void Main()\n{\n    // Create a character array\n    char[] text = \"Hello, Memory<T> in C#\".ToCharArray();\n    \n    // Create Memory<char> and get span from it\n    Memory<char> memory = new Memory<char>(text, 7, 9);\n    Span<char> span = memory.Span;\n    \n    // Display original content\n    Console.WriteLine($\"Original: '{new string(span.ToArray())}'\");\n    \n    // Pass memory to a Task\n    Process(memory).Wait();\n    \n    // Show the changes\n    Console.WriteLine($\"Modified: '{new string(span.ToArray())}'\");\n    Console.WriteLine($\"Full text: '{new string(text)}'\");\n}\n\nstatic async Task Process(Memory<char> memory)\n{\n    // This demonstrates that Memory<T> can be used across async boundaries (unlike Span<T>)\n    await Task.Delay(100); // Simulate async operation\n    \n    // Get a span from the memory to modify its contents\n    Span<char> span = memory.Span;\n    \n    // Convert to uppercase\n    for (int i = 0; i < span.Length; i++)\n    {\n        span[i] = char.ToUpper(span[i]);\n    }\n}",
+      "options": {
+        "A": "Original: 'Memory<T>'\nModified: 'Memory<T>'\nFull text: 'Hello, Memory<T> in C#'",
+        "B": "Original: 'Memory<T>'\nModified: 'MEMORY<T>'\nFull text: 'Hello, MEMORY<T> in C#'",
+        "C": "Original: 'Memory<T>'\nModified: 'memory<t>'\nFull text: 'Hello, memory<t> in C#'",
+        "D": "Original: 'memory<t>'\nModified: 'MEMORY<T>'\nFull text: 'Hello, MEMORY<T> in C#'"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
