@@ -1,0 +1,609 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string message = null;\nstring result = message ?? \"Default Message\";\nConsole.WriteLine(result);",
+      "options": {
+        "A": "null",
+        "B": "Default Message",
+        "C": "An exception will be thrown",
+        "D": "Empty string"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which statement correctly creates and instantiates a Dictionary where both the key and value are strings?",
+      "options": {
+        "A": "var dict = Dictionary<string, string>();",
+        "B": "Dictionary<string, string> dict = new();",
+        "C": "var dict = new Dictionary<String, String>();",
+        "D": "Dictionary dict = new Dictionary<string, string>();"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "int x = 10;\nint y = 3;\nConsole.WriteLine(x % y);",
+      "options": {
+        "A": "3.33",
+        "B": "3",
+        "C": "1",
+        "D": "0"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string a = \"Hello\";\nstring b = \"Hello\";\nConsole.WriteLine(a == b);",
+      "options": {
+        "A": "false",
+        "B": "true",
+        "C": "Hello",
+        "D": "An exception will be thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the purpose of the 'ref' keyword in method parameters?",
+      "options": {
+        "A": "It marks the parameter as read-only",
+        "B": "It passes the parameter by value",
+        "C": "It passes a reference to the variable, requiring initialization before the call",
+        "D": "It requires the method to return a value of the same type"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "List<int> numbers = new List<int>{ 1, 2, 3, 4, 5 };\nvar result = numbers.Where(n => n > 2).Select(n => n * n);\nforeach (var n in result)\n    Console.Write(n + \" \");",
+      "options": {
+        "A": "3 4 5",
+        "B": "9 16 25",
+        "C": "1 4 9 16 25",
+        "D": "3 16 25"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "var x = 10;\nvar y = 20;\nvar result = x > y ? \"x is greater\" : \"y is greater\";\nConsole.WriteLine(result);",
+      "options": {
+        "A": "x is greater",
+        "B": "y is greater",
+        "C": "true",
+        "D": "false"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "int Modify(ref int x)\n{\n    x = x + 5;\n    return x * 2;\n}\n\nint a = 10;\nint b = Modify(ref a);\nConsole.WriteLine($\"{a}, {b}\");",
+      "options": {
+        "A": "10, 30",
+        "B": "15, 30",
+        "C": "15, 20",
+        "D": "10, 20"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the main difference between int.Parse() and int.TryParse()?",
+      "options": {
+        "A": "int.Parse() can handle null values, while int.TryParse() cannot",
+        "B": "int.TryParse() returns a boolean indicating success and outputs the result via an out parameter",
+        "C": "int.Parse() is faster but less accurate than int.TryParse()",
+        "D": "int.TryParse() can only parse positive integers"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "var person = new { Name = \"John\", Age = 30 };\nConsole.WriteLine(person.GetType().Name);",
+      "options": {
+        "A": "Object",
+        "B": "Person",
+        "C": "Anonymous",
+        "D": "A compiler-generated name like '<>f__AnonymousType0`2'"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will happen when you execute the following code?",
+      "code_example": "string name = null;\nint? age = null;\nConsole.WriteLine($\"Name: {name?.ToUpper()}, Age: {age ?? 18}\");",
+      "options": {
+        "A": "An exception will be thrown due to null reference",
+        "B": "Name: NULL, Age: 18",
+        "C": "Name: , Age: 18",
+        "D": "Name: null, Age: 18"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following loop?",
+      "code_example": "int sum = 0;\nfor (int i = 1; i <= 5; i++)\n{\n    if (i % 2 == 0)\n        continue;\n    sum += i;\n}\nConsole.WriteLine(sum);",
+      "options": {
+        "A": "15",
+        "B": "6",
+        "C": "9",
+        "D": "5"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What is the correct way to create a custom exception class in C#?",
+      "options": {
+        "A": "public class CustomException implements Exception { }",
+        "B": "public class CustomException : Exception { }",
+        "C": "public class CustomException extends Exception { }",
+        "D": "public class CustomException { throw new Exception(); }"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "Dictionary<string, int> ages = new Dictionary<string, int>\n{\n    { \"Alice\", 25 },\n    { \"Bob\", 30 },\n    { \"Charlie\", 35 }\n};\n\nConsole.WriteLine(ages.ContainsKey(\"Dave\") ? ages[\"Dave\"] : 0);",
+      "options": {
+        "A": "null",
+        "B": "0",
+        "C": "KeyNotFoundException will be thrown",
+        "D": "-1"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "Which of the following correctly describes how to write text to a file in C#?",
+      "options": {
+        "A": "File.WriteText(\"path.txt\", \"content\");",
+        "B": "File.WriteAllText(\"path.txt\", \"content\");",
+        "C": "File.AppendText(\"path.txt\", \"content\");",
+        "D": "File.CreateText(\"path.txt\", \"content\");"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "bool a = true;\nbool b = false;\nbool c = true;\nConsole.WriteLine(a && b || c);",
+      "options": {
+        "A": "false",
+        "B": "true",
+        "C": "Compiler error",
+        "D": "Runtime exception"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Program\n{\n    static void Main()\n    {\n        var actions = new List<Action>();\n        \n        for (int i = 0; i < 3; i++)\n        {\n            actions.Add(() => Console.Write(i + \" \"));\n        }\n        \n        foreach (var action in actions)\n        {\n            action();\n        }\n    }\n}",
+      "options": {
+        "A": "0 1 2",
+        "B": "3 3 3",
+        "C": "2 2 2",
+        "D": "Compiler error because i is used inside the lambda"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is the purpose of the 'where T : new()' constraint in generic type declarations?",
+      "options": {
+        "A": "It restricts T to types that have a public constructor",
+        "B": "It restricts T to types that have a parameterless constructor",
+        "C": "It restricts T to reference types only",
+        "D": "It restricts T to value types only"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "delegate void MyDelegate(string message);\n\nclass Program\n{\n    static void Main()\n    {\n        MyDelegate del1 = (s) => Console.Write(\"A: \" + s);\n        MyDelegate del2 = (s) => Console.Write(\"B: \" + s);\n        \n        MyDelegate combined = del1 + del2;\n        combined(\"Hello\");\n    }\n}",
+      "options": {
+        "A": "A: Hello",
+        "B": "B: Hello",
+        "C": "A: HelloB: Hello",
+        "D": "Compiler error: cannot add delegates with the + operator"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which of the following is true about HashSet<T> compared to Dictionary<TKey, TValue>?",
+      "options": {
+        "A": "HashSet<T> is generally faster for lookups than Dictionary<TKey, TValue>",
+        "B": "HashSet<T> stores unique values without associated keys, while Dictionary<TKey, TValue> stores key-value pairs",
+        "C": "HashSet<T> can store duplicate values, while Dictionary<TKey, TValue> cannot store duplicate keys",
+        "D": "HashSet<T> is a specialized form of Dictionary<TKey, TValue> with better memory optimization"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Program\n{\n    static void Main()\n    {\n        var list1 = new List<string> { \"A\", \"B\", \"C\" };\n        var list2 = new List<int> { 1, 2, 3 };\n        \n        var joined = list1.Zip(list2, (l, r) => $\"{l}{r}\");\n        \n        foreach (var item in joined)\n        {\n            Console.Write(item + \" \");\n        }\n    }\n}",
+      "options": {
+        "A": "A B C",
+        "B": "1 2 3",
+        "C": "A1 B2 C3",
+        "D": "Compiler error: Zip method doesn't exist"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What is the primary purpose of Explicit Interface Implementation in C#?",
+      "options": {
+        "A": "To improve performance of interface method calls",
+        "B": "To resolve naming conflicts when a class implements multiple interfaces with the same method names",
+        "C": "To hide interface members from being accessed directly through the class instance",
+        "D": "Both B and C"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Program\n{\n    static void Main()\n    {\n        var numbers = new List<int> { 1, 2, 3, 4, 5 };\n        \n        var result = numbers.Aggregate(0, (acc, n) => acc + n * n);\n        Console.WriteLine(result);\n    }\n}",
+      "options": {
+        "A": "15",
+        "B": "55",
+        "C": "225",
+        "D": "Compiler error: Aggregate method doesn't exist"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "In the context of dependency injection lifetimes in ASP.NET Core, which statement is true?",
+      "options": {
+        "A": "Singleton services are created once per application, Scoped services once per HTTP request, and Transient services every time they are requested",
+        "B": "Singleton services are created once per HTTP request, Scoped services once per application, and Transient services every time they are requested",
+        "C": "Singleton services are created every time they are requested, Scoped services once per HTTP request, and Transient services once per application",
+        "D": "Singleton services are created once per HTTP request, Scoped services every time they are requested, and Transient services once per application"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Program\n{\n    static void Main()\n    {\n        var numbers = new List<int> { 5, 3, 8, 1, 7, 2 };\n        \n        var grouped = numbers.GroupBy(n => n % 2 == 0 ? \"Even\" : \"Odd\")\n                           .Select(g => new { Key = g.Key, Count = g.Count() });\n        \n        foreach (var group in grouped)\n        {\n            Console.WriteLine($\"{group.Key}: {group.Count}\");\n        }\n    }\n}",
+      "options": {
+        "A": "Even: 2\nOdd: 4",
+        "B": "Odd: 4\nEven: 2",
+        "C": "0: 2\n1: 4",
+        "D": "The output order is undefined"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "Which of the following correctly declares an event in C#?",
+      "options": {
+        "A": "event delegate EventHandler StatusChanged;",
+        "B": "event EventHandler StatusChanged;",
+        "C": "public EventHandler StatusChanged;",
+        "D": "delegate event EventHandler StatusChanged;"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "T Add<T>(T a, T b) where T : struct, IComparable\n{\n    dynamic x = a;\n    dynamic y = b;\n    return x + y;\n}\n\nvar result = Add(5, 10);\nConsole.WriteLine($\"Type: {result.GetType().Name}, Value: {result}\");",
+      "options": {
+        "A": "Type: Int32, Value: 15",
+        "B": "Type: Double, Value: 15",
+        "C": "Compiler error: Operator '+' cannot be applied to operands of type 'T'",
+        "D": "Runtime error: Cannot apply operator '+' to operands of type 'int'"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is the primary purpose of the Parallel.ForEach() method?",
+      "options": {
+        "A": "To ensure that collection items are processed in order",
+        "B": "To process collection items in parallel across multiple threads to improve performance",
+        "C": "To ensure thread safety when modifying a collection",
+        "D": "To create a non-blocking asynchronous loop"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "In xUnit, which attribute is used to mark a method as a test that should be run?",
+      "options": {
+        "A": "[TestMethod]",
+        "B": "[Test]",
+        "C": "[Fact]",
+        "D": "[TestCase]"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Program\n{\n    static void Main()\n    {\n        var customers = new List<Customer>\n        {\n            new Customer { Id = 1, Name = \"Alice\" },\n            new Customer { Id = 2, Name = \"Bob\" }\n        };\n        \n        var orders = new List<Order>\n        {\n            new Order { Id = 101, CustomerId = 1, Amount = 100 },\n            new Order { Id = 102, CustomerId = 1, Amount = 200 },\n            new Order { Id = 103, CustomerId = 2, Amount = 300 }\n        };\n        \n        var result = customers.GroupJoin(\n            orders,\n            c => c.Id,\n            o => o.CustomerId,\n            (c, customerOrders) => new { Customer = c.Name, TotalAmount = customerOrders.Sum(o => o.Amount) }\n        );\n        \n        foreach (var item in result)\n        {\n            Console.WriteLine($\"{item.Customer}: {item.TotalAmount}\");\n        }\n    }\n    \n    class Customer { public int Id { get; set; } public string Name { get; set; } }\n    class Order { public int Id { get; set; } public int CustomerId { get; set; } public int Amount { get; set; } }\n}",
+      "options": {
+        "A": "Alice: 300\nBob: 300",
+        "B": "Alice: 100,200\nBob: 300",
+        "C": "1: 300\n2: 300",
+        "D": "The output order is undefined"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "When mocking a dependency using Moq, what does the following code do?",
+      "code_example": "var mockRepository = new Mock<IUserRepository>();\nmockRepository.Setup(repo => repo.GetUserById(It.IsAny<int>()))\n            .Returns((int id) => new User { Id = id, Name = \"Test User\" });",
+      "options": {
+        "A": "It configures the mock to throw an exception when GetUserById is called",
+        "B": "It configures the mock to return null when GetUserById is called",
+        "C": "It configures the mock to return a User object with the provided id and name \"Test User\" when GetUserById is called",
+        "D": "It verifies that GetUserById was called exactly once"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "Which of the following statements about .NET garbage collection generations is correct?",
+      "options": {
+        "A": "Generation 2 contains the oldest objects, while Generation 0 contains the newest objects",
+        "B": "Generation 0 contains the oldest objects, while Generation 2 contains the newest objects",
+        "C": "Generation 0 is collected less frequently than Generation 2",
+        "D": "Large objects are always placed in Generation 0 regardless of their age"
+      },
+      "correct_answer": "A"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the primary purpose of RabbitMQ in a .NET application?",
+      "options": {
+        "A": "A tool for automated unit testing",
+        "B": "A message broker implementing Advanced Message Queuing Protocol (AMQP)",
+        "C": "A library for object-relational mapping",
+        "D": "A framework for building real-time web applications"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code?",
+      "code_example": "object lockObject = new object();\nbool flag = false;\n\nTask t1 = Task.Run(() => {\n    lock (lockObject) {\n        Thread.Sleep(1000);\n        flag = true;\n        Console.Write(\"A\");\n    }\n});\n\nTask t2 = Task.Run(() => {\n    Thread.Sleep(200);\n    lock (lockObject) {\n        Console.Write(\"B\");\n        if (flag) Console.Write(\"C\");\n    }\n});\n\nTask.WaitAll(t1, t2);\nConsole.Write(\"D\");",
+      "options": {
+        "A": "ABCD",
+        "B": "ABDC",
+        "C": "ACBD",
+        "D": "ABCD or BACD (order is non-deterministic)"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Singleton Pattern implementation?",
+      "code_example": "public sealed class Singleton {\n    private static Singleton _instance;\n    private static readonly object _lock = new object();\n    private int _value = 0;\n    \n    private Singleton() { }\n    \n    public static Singleton GetInstance() {\n        if (_instance == null) {\n            lock (_lock) {\n                if (_instance == null) {\n                    _instance = new Singleton();\n                }\n            }\n        }\n        return _instance;\n    }\n    \n    public int IncrementAndGet() {\n        return ++_value;\n    }\n}\n\nvar s1 = Singleton.GetInstance();\nvar s2 = Singleton.GetInstance();\n\nConsole.WriteLine($\"{s1.IncrementAndGet()}, {s2.IncrementAndGet()}, {object.ReferenceEquals(s1, s2)}\");",
+      "options": {
+        "A": "1, 1, True",
+        "B": "1, 2, True",
+        "C": "1, 1, False",
+        "D": "1, 2, False"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will the following code using Activator.CreateInstance() output?",
+      "code_example": "public class CustomClass {\n    private string _message;\n    \n    public CustomClass() {\n        _message = \"Default constructor\";\n    }\n    \n    public CustomClass(string message) {\n        _message = message;\n    }\n    \n    public override string ToString() {\n        return _message;\n    }\n}\n\nvar instance1 = Activator.CreateInstance(typeof(CustomClass));\nvar instance2 = Activator.CreateInstance(typeof(CustomClass), new object[] { \"Parameterized constructor\" });\n\nConsole.WriteLine($\"{instance1}, {instance2}\");",
+      "options": {
+        "A": "CustomClass, CustomClass",
+        "B": "Default constructor, Parameterized constructor",
+        "C": "System.RuntimeType, System.RuntimeType",
+        "D": "null, null"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will the following code using Span<T> and Memory<T> output?",
+      "code_example": "int[] array = { 1, 2, 3, 4, 5 };\nSpan<int> span = array;\nMemory<int> memory = array;\n\nspan[0] = 10;\nmemory.Span[1] = 20;\n\nstatic void ProcessSpan(Span<int> s) {\n    s[2] = 30;\n}\n\nstatic void ProcessMemory(Memory<int> m) {\n    m.Span[3] = 40;\n}\n\nProcessSpan(span);\nProcessMemory(memory);\n\nConsole.WriteLine(string.Join(\", \", array));",
+      "options": {
+        "A": "1, 2, 3, 4, 5",
+        "B": "10, 2, 30, 4, 5",
+        "C": "10, 20, 3, 40, 5",
+        "D": "10, 20, 30, 40, 5"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What is the main benefit of using a 'readonly struct' in C#?",
+      "options": {
+        "A": "It allows the struct to be used in async methods",
+        "B": "It allows the struct to be null",
+        "C": "It enforces immutability and can improve performance by enabling the compiler to make optimizations",
+        "D": "It automatically implements IEquatable<T> for the struct"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "Which statement best describes the Repository Pattern in .NET development?",
+      "options": {
+        "A": "A pattern that allows objects with incompatible interfaces to work together",
+        "B": "A pattern that ensures only one instance of a class exists",
+        "C": "A pattern that mediates between the domain and data mapping layers",
+        "D": "A pattern that separates a method's implementation from the parameters it operates on"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What is SignalR primarily used for in .NET applications?",
+      "options": {
+        "A": "Implementing the repository pattern",
+        "B": "Adding real-time web functionality to applications",
+        "C": "Managing database migrations",
+        "D": "Converting objects between incompatible types"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "When implementing a distributed cache with Redis in .NET, what will the following code output?",
+      "code_example": "// Assuming configured Redis cache with IDistributedCache injected\npublic async Task<string> GetOrSetCacheAsync(IDistributedCache cache) {\n    string cacheKey = \"MyKey\";\n    string cachedValue = await cache.GetStringAsync(cacheKey);\n    \n    if (cachedValue == null) {\n        cachedValue = \"Newly generated value\";\n        \n        var options = new DistributedCacheEntryOptions {\n            AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(10),\n            SlidingExpiration = TimeSpan.FromSeconds(5)\n        };\n        \n        await cache.SetStringAsync(cacheKey, cachedValue, options);\n        return $\"From database: {cachedValue}\";\n    }\n    \n    return $\"From cache: {cachedValue}\";\n}",
+      "options": {
+        "A": "Always returns 'From database: Newly generated value'",
+        "B": "Always returns 'From cache: Newly generated value'",
+        "C": "Returns 'From database: Newly generated value' on first call and 'From cache: Newly generated value' on subsequent calls within 5 seconds",
+        "D": "Returns 'From database: Newly generated value' on first call and 'From cache: Newly generated value' on subsequent calls within 10 seconds regardless of access pattern"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What is NOT a key consideration when deploying .NET applications in Kubernetes?",
+      "options": {
+        "A": "Configuring health checks for container readiness and liveness",
+        "B": "Using memory limits and requests appropriately for .NET containers",
+        "C": "Creating native Windows containers for all .NET applications",
+        "D": "Setting up proper environment variable configuration for different deployment environments"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will the following implementation of the Adapter Pattern output?",
+      "code_example": "public interface ITarget {\n    string GetRequest();\n}\n\npublic class Adaptee {\n    public string GetSpecificRequest() {\n        return \"Specific request from Adaptee\";\n    }\n}\n\npublic class Adapter : ITarget {\n    private readonly Adaptee _adaptee;\n    \n    public Adapter(Adaptee adaptee) {\n        _adaptee = adaptee;\n    }\n    \n    public string GetRequest() {\n        return $\"Adapter: {_adaptee.GetSpecificRequest()}\";\n    }\n}\n\nvar adaptee = new Adaptee();\nITarget target = new Adapter(adaptee);\n\nConsole.WriteLine(target.GetRequest());",
+      "options": {
+        "A": "Specific request from Adaptee",
+        "B": "Adapter: Specific request from Adaptee",
+        "C": "System.Object",
+        "D": "A compiler error will occur"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will the following code using the 'dynamic' type output?",
+      "code_example": "public class DynamicExample {\n    public string Method(int x) {\n        return $\"Integer: {x}\";\n    }\n    \n    public string Method(string x) {\n        return $\"String: {x}\";\n    }\n    \n    public string Method(DateTime x) {\n        return $\"DateTime: {x.ToShortDateString()}\";\n    }\n}\n\nvar example = new DynamicExample();\ndynamic parameter1 = 42;\ndynamic parameter2 = \"Hello\";\ndynamic parameter3 = new DateTime(2023, 1, 15);\n\nConsole.WriteLine(example.Method(parameter1));\nConsole.WriteLine(example.Method(parameter2));\nConsole.WriteLine(example.Method(parameter3));",
+      "options": {
+        "A": "Integer: 42\nString: Hello\nDateTime: 1/15/2023",
+        "B": "42\nHello\n1/15/2023",
+        "C": "System.Int32\nSystem.String\nSystem.DateTime",
+        "D": "A runtime exception will be thrown"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will the following code using ArrayPool<T> and ObjectPool<T> output?",
+      "code_example": "using System.Buffers;\nusing Microsoft.Extensions.ObjectPool;\n\nvar arrayPool = ArrayPool<int>.Shared;\nvar array = arrayPool.Rent(5);\n\ntry {\n    array[0] = 10;\n    array[1] = 20;\n    array[2] = 30;\n    Console.Write($\"Array contents: {string.Join(\", \", array.Take(3))}, \");\n}\nfinally {\n    arrayPool.Return(array, clearArray: false);\n}\n\nvar objectPool = new DefaultObjectPool<StringBuilder>(\n    new DefaultPooledObjectPolicy<StringBuilder>());\n\nvar sb1 = objectPool.Get();\nsb1.Append(\"Hello\");\n\nvar sb2 = objectPool.Get();\nConsole.Write($\"StringBuilder: {sb2}\");\n\nobjectPool.Return(sb1);",
+      "options": {
+        "A": "Array contents: 10, 20, 30, StringBuilder: ",
+        "B": "Array contents: 10, 20, 30, StringBuilder: Hello",
+        "C": "Array contents: 0, 0, 0, StringBuilder: ",
+        "D": "A memory leak will occur"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What is the best practice for implementing API versioning in ASP.NET Core?",
+      "options": {
+        "A": "Creating separate controller classes for each version",
+        "B": "Using query string parameters to specify API versions",
+        "C": "Using HTTP headers for API versioning",
+        "D": "All are valid approaches and should be chosen based on specific requirements"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will the following role-based authentication code output when a user with only the 'Editor' role attempts to access the action?",
+      "code_example": "public class DocumentController : Controller {\n    [Authorize(Roles = \"Admin,Manager\")]\n    public IActionResult DeleteDocument(int id) {\n        // Delete document logic\n        return Ok(\"Document deleted\");\n    }\n    \n    [Authorize(Roles = \"Admin,Manager,Editor\")]\n    public IActionResult EditDocument(int id) {\n        // Edit document logic\n        return Ok(\"Document edited\");\n    }\n    \n    [Authorize(Roles = \"Admin\")]\n    [HttpPost]\n    public IActionResult PublishAll() {\n        // Publish all documents\n        return Ok(\"All documents published\");\n    }\n    \n    [AllowAnonymous]\n    public IActionResult ViewDocument(int id) {\n        // View document logic\n        return Ok(\"Document viewed\");\n    }\n}\n\n// User with only 'Editor' role tries to access:\nvar result = await client.GetAsync(\"/Document/DeleteDocument/1\");\nConsole.WriteLine($\"Status: {result.StatusCode}\");",
+      "options": {
+        "A": "Status: 200 OK",
+        "B": "Status: 403 Forbidden",
+        "C": "Status: 401 Unauthorized",
+        "D": "Status: 404 Not Found"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which section of the Dockerfile is NOT correct for a modern .NET 8 application?",
+      "code_example": "# Build stage\nFROM mcr.microsoft.com/dotnet/sdk:8.0 AS build\nWORKDIR /src\n\n# Copy csproj and restore dependencies\nCOPY *.csproj ./\nRUN dotnet restore\n\n# Copy everything else and build\nCOPY . ./\nRUN dotnet publish -c Release -o /app/publish\n\n# Runtime stage\nFROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime\nWORKDIR /app\n\n# Install additional dependencies\nRUN apt-get update && apt-get install -y unzip\n\n# Copy published app\nCOPY --from=build /app/publish .\n\n# Set environment variables\nENV ASPNETCORE_URLS=http://+:80\nENV DOTNET_EnableDiagnostics=0\n\n# Set the entrypoint\nENTRYPOINT [\"dotnet\", \"HelloWorld.dll\"]",
+      "options": {
+        "A": "Using a multi-stage build approach",
+        "B": "Installing unzip using apt-get in the runtime stage",
+        "C": "Setting ASPNETCORE_URLS environment variable",
+        "D": "Setting DOTNET_EnableDiagnostics=0"
+      },
+      "correct_answer": "D"
+    }
+  ]
+}
