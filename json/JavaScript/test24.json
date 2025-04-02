@@ -1,0 +1,614 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "let result = true ? 'Yes' : 'No';\nconsole.log(result);",
+      "options": {
+        "A": "true",
+        "B": "Yes",
+        "C": "No",
+        "D": "undefined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What does the following logical expression evaluate to?",
+      "code_example": "console.log(true && false || true);",
+      "options": {
+        "A": "false",
+        "B": "true",
+        "C": "undefined",
+        "D": "null"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the difference between let and const in JavaScript?",
+      "options": {
+        "A": "There is no difference, they can be used interchangeably",
+        "B": "let declarations are hoisted, const declarations are not",
+        "C": "let variables can be reassigned, const variables cannot be reassigned",
+        "D": "let has block scope, const has function scope"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using object destructuring?",
+      "code_example": "const person = { name: 'John', age: 30 };\nconst { name, job = 'Developer' } = person;\nconsole.log(job);",
+      "options": {
+        "A": "undefined",
+        "B": "null",
+        "C": "Developer",
+        "D": "ReferenceError"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What is the purpose of a callback function in JavaScript?",
+      "options": {
+        "A": "To immediately invoke a function when it's defined",
+        "B": "To pass a function as an argument to another function, to be executed later",
+        "C": "To declare a function without a name",
+        "D": "To prevent the default behavior of an event"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following IIFE (Immediately Invoked Function Expression)?",
+      "code_example": "const result = (function() {\n  return 'Hello World';\n})();\nconsole.log(result);",
+      "options": {
+        "A": "function",
+        "B": "undefined",
+        "C": "Hello World",
+        "D": "Error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is the primary purpose of event.preventDefault() in JavaScript?",
+      "options": {
+        "A": "To stop event bubbling through the DOM",
+        "B": "To prevent the browser from executing the default action associated with an event",
+        "C": "To remove all event listeners from an element",
+        "D": "To delay the execution of an event handler"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will the following code output?",
+      "code_example": "function sum() {\n  let total = 0;\n  for (let i = 0; i < arguments.length; i++) {\n    total += arguments[i];\n  }\n  return total;\n}\nconsole.log(sum(1, 2, 3));",
+      "options": {
+        "A": "Error: arguments is not defined",
+        "B": "1",
+        "C": "6",
+        "D": "[1, 2, 3]"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be logged to the console?",
+      "code_example": "const promise = new Promise(resolve => resolve('Success'));\npromise.then(value => console.log(value));",
+      "options": {
+        "A": "Promise {<fulfilled>: 'Success'}",
+        "B": "Success",
+        "C": "undefined",
+        "D": "Error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the output of the following arrow function code?",
+      "code_example": "const multiply = (a, b) => a * b;\nconsole.log(multiply(3, 4));",
+      "options": {
+        "A": "7",
+        "B": "12",
+        "C": "undefined",
+        "D": "function"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What is the difference between function declarations and function expressions?",
+      "options": {
+        "A": "Function declarations are hoisted, function expressions are not",
+        "B": "Function declarations cannot be anonymous, function expressions can be",
+        "C": "Function expressions can only be used as callbacks",
+        "D": "Both A and B"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will the following array code output?",
+      "code_example": "const fruits = ['apple', 'banana', 'cherry'];\nfruits.splice(1, 1, 'orange');\nconsole.log(fruits);",
+      "options": {
+        "A": "['apple', 'orange', 'cherry']",
+        "B": "['apple', 'banana', 'cherry', 'orange']",
+        "C": "['apple', 'cherry']",
+        "D": "['orange', 'apple', 'cherry']"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What is the result of the following bitwise operation?",
+      "code_example": "console.log(5 & 3);",
+      "options": {
+        "A": "8",
+        "B": "1",
+        "C": "2",
+        "D": "15"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What is the output of the following code creating objects?",
+      "code_example": "const obj1 = {};\nconst obj2 = new Object();\nobj1.name = 'Object 1';\nobj2.name = 'Object 2';\nconsole.log(obj1.name === 'Object 1' && obj2.name === 'Object 2');",
+      "options": {
+        "A": "false",
+        "B": "true",
+        "C": "undefined",
+        "D": "Error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log('5' == 5);",
+      "options": {
+        "A": "true",
+        "B": "false",
+        "C": "TypeError",
+        "D": "undefined"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will the following code output due to function hoisting?",
+      "code_example": "console.log(typeof add);\nfunction add(a, b) {\n  return a + b;\n}",
+      "options": {
+        "A": "undefined",
+        "B": "null",
+        "C": "function",
+        "D": "ReferenceError"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will the following Object.create() code output?",
+      "code_example": "const person = {\n  isHuman: false,\n  printIntroduction: function() {\n    return `My name is ${this.name}. Am I human? ${this.isHuman}`;\n  }\n};\n\nconst me = Object.create(person);\nme.name = 'Matthew';\nme.isHuman = true;\nconsole.log(me.printIntroduction());",
+      "options": {
+        "A": "My name is undefined. Am I human? false",
+        "B": "My name is Matthew. Am I human? false",
+        "C": "My name is Matthew. Am I human? true",
+        "D": "TypeError: me.printIntroduction is not a function"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "When working with large files in Node.js, which of the following approaches is most memory-efficient?",
+      "options": {
+        "A": "Using fs.readFile() to read the entire file into memory",
+        "B": "Using fs.readFileSync() with a large buffer",
+        "C": "Using streams with fs.createReadStream()",
+        "D": "Loading the file content into a global variable"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the main difference between debouncing and throttling?",
+      "options": {
+        "A": "Debouncing executes the function immediately, throttling delays execution",
+        "B": "Debouncing limits the function to run once per specified time period, throttling executes the function after a quiet period",
+        "C": "Throttling limits the function to run once per specified time period, debouncing executes the function after a quiet period",
+        "D": "They are different names for the same technique"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "In Express.js, what is the primary purpose of the Morgan middleware?",
+      "options": {
+        "A": "To handle authentication and authorization",
+        "B": "To log HTTP requests",
+        "C": "To parse request bodies",
+        "D": "To compress responses"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What makes JavaScript functions 'first-class' citizens?",
+      "code_example": "// Example 1\nconst greet = function(name) {\n  return `Hello, ${name}`;\n};\n\n// Example 2\nfunction executeFunction(fn, param) {\n  return fn(param);\n}\n\n// Example 3\nconst result = executeFunction(greet, 'John');\nconsole.log(result);",
+      "options": {
+        "A": "They can only be declared using the function keyword",
+        "B": "They can be passed as arguments, returned from other functions, and assigned to variables",
+        "C": "They always have access to the 'this' keyword",
+        "D": "They cannot be anonymous"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using nullish coalescing?",
+      "code_example": "let nullValue = null;\nlet emptyString = '';\nlet zero = 0;\n\nconsole.log(nullValue ?? 'default', emptyString ?? 'default', zero ?? 42);",
+      "options": {
+        "A": "null default 0",
+        "B": "default default 42",
+        "C": "default '' 0",
+        "D": "default default 0"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "Which HTTP method is considered idempotent?",
+      "options": {
+        "A": "POST",
+        "B": "GET",
+        "C": "PATCH",
+        "D": "All of the above"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What's wrong with the following Express.js REST API code?",
+      "code_example": "const express = require('express');\nconst app = express();\n\napp.get('/api/users', (req, res) => {\n  const users = [{ id: 1, name: 'John' }];\n  res.send(users);\n});\n\napp.post('/api/users', (req, res) => {\n  // Create new user\n  res.status(201);\n});\n\napp.listen(3000);",
+      "options": {
+        "A": "The server doesn't have error handling",
+        "B": "The POST route doesn't send a response body",
+        "C": "The app.listen() should include a callback function",
+        "D": "Express needs to be initialized with app.init()"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating implicit binding?",
+      "code_example": "const person = {\n  name: 'John',\n  greet: function() {\n    return `Hello, my name is ${this.name}`;\n  }\n};\n\nconst greetFunction = person.greet;\nconsole.log(greetFunction());",
+      "options": {
+        "A": "Hello, my name is John",
+        "B": "Hello, my name is undefined",
+        "C": "TypeError: Cannot read property 'name' of undefined",
+        "D": "Hello, my name is null"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using default parameters?",
+      "code_example": "function createUser(name, role = 'user', active = true) {\n  return { name, role, active };\n}\n\nconsole.log(createUser('John', undefined, false));",
+      "options": {
+        "A": "{ name: 'John', role: undefined, active: false }",
+        "B": "{ name: 'John', role: 'user', active: true }",
+        "C": "{ name: 'John', role: 'user', active: false }",
+        "D": "{ name: 'John', role: null, active: false }"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "In Node.js, what is the main benefit of using the compression middleware?",
+      "options": {
+        "A": "It encrypts sensitive data in HTTP responses",
+        "B": "It reduces the size of HTTP responses, saving bandwidth",
+        "C": "It compresses files on the filesystem to save disk space",
+        "D": "It optimizes JavaScript code execution speed"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be logged by the following simple Express server code?",
+      "code_example": "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Hello World');\n});\n\nconst server = app.listen(3000, () => {\n  console.log(`Server running on port ${server.address().port}`);\n});\n\n// What is logged when the server starts?",
+      "options": {
+        "A": "Server running on port 3000",
+        "B": "undefined",
+        "C": "Error: server.address() is not a function",
+        "D": "Server running"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "When streaming files in Node.js, what event indicates that all data has been consumed from the readable stream?",
+      "code_example": "const fs = require('fs');\nconst readStream = fs.createReadStream('largefile.txt');\n\nreadStream.on('data', (chunk) => {\n  console.log(`Received ${chunk.length} bytes of data`);\n});\n\nreadStream.on('______', () => {\n  console.log('No more data to read');\n});",
+      "options": {
+        "A": "close",
+        "B": "end",
+        "C": "finish",
+        "D": "complete"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "Which of the following is NOT a best practice for securing JWT tokens?",
+      "options": {
+        "A": "Using HTTPS for all communications",
+        "B": "Setting short expiration times",
+        "C": "Storing tokens in localStorage",
+        "D": "Including only necessary data in the payload"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following closure example?",
+      "code_example": "function createCounter() {\n  let count = 0;\n  return function() {\n    count++;\n    return count;\n  };\n}\n\nconst counter1 = createCounter();\nconst counter2 = createCounter();\n\nconsole.log(counter1());\nconsole.log(counter1());\nconsole.log(counter2());",
+      "options": {
+        "A": "1, 2, 3",
+        "B": "1, 2, 1",
+        "C": "1, 1, 1",
+        "D": "undefined, undefined, undefined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "In Mongoose for MongoDB, what is the correct way to create a schema with validation?",
+      "code_example": "const mongoose = require('mongoose');\n\nconst userSchema = new mongoose.Schema({\n  username: {\n    type: String,\n    required: true,\n    minlength: 3,\n    maxlength: 20\n  },\n  email: {\n    type: String,\n    required: true,\n    unique: true,\n    match: /^\\S+@\\S+\\.\\S+$/\n  },\n  createdAt: {\n    type: Date,\n    default: Date.now\n  }\n});\n\nconst User = mongoose.model('User', userSchema);\n\n// Is this schema definition valid?",
+      "options": {
+        "A": "No, the match property should be a function not a regex",
+        "B": "No, mongoose.Schema should be mongoose.schema",
+        "C": "No, unique is not a valid schema option",
+        "D": "Yes, the schema is correctly defined"
+      },
+      "correct_answer": "D"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code which demonstrates JavaScript hidden classes and inline caching?",
+      "options": {
+        "A": "Object creation time: approximately 2x faster for the second approach",
+        "B": "Object creation time: approximately the same for both approaches",
+        "C": "Object creation time: approximately 3-5x faster for the first approach",
+        "D": "Object creation time: approximately 3-5x faster for the second approach"
+      },
+      "correct_answer": "D",
+      "code_example": "// First approach: inconsistent property order\nfunction runTest1() {\n  const start = performance.now();\n  \n  for (let i = 0; i < 1000000; i++) {\n    const obj = {};\n    if (i % 2 === 0) {\n      obj.x = i;\n      obj.y = i + 1;\n    } else {\n      obj.y = i + 1;\n      obj.x = i;\n    }\n  }\n  \n  return performance.now() - start;\n}\n\n// Second approach: consistent property order\nfunction runTest2() {\n  const start = performance.now();\n  \n  for (let i = 0; i < 1000000; i++) {\n    const obj = {};\n    obj.x = i;\n    obj.y = i + 1;\n  }\n  \n  return performance.now() - start;\n}\n\n// Run tests\nconst time1 = runTest1();\nconst time2 = runTest2();\nconsole.log(`Time ratio: ${(time1/time2).toFixed(2)}x`);"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which OAuth 2.0 flow is most appropriate for a Single Page Application (SPA) that cannot securely store client secrets?",
+      "options": {
+        "A": "Authorization Code Flow with PKCE",
+        "B": "Client Credentials Flow",
+        "C": "Resource Owner Password Credentials Flow",
+        "D": "Implicit Flow"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates a memory leak in event listeners?",
+      "options": {
+        "A": "No leak detected: 0 listeners remain",
+        "B": "Memory leak detected: 100 listeners remain",
+        "C": "Memory leak detected: 1000 listeners remain",
+        "D": "Memory leak detected: 10000 listeners remain"
+      },
+      "correct_answer": "C",
+      "code_example": "class LeakyComponent {\n  constructor(id) {\n    this.id = id;\n    this.button = document.createElement('button');\n    document.body.appendChild(this.button);\n    \n    // Potential memory leak: adding event listener\n    this.button.addEventListener('click', this.handleClick);\n  }\n  \n  // Using a regular function instead of an arrow function\n  handleClick() {\n    console.log('Button clicked');\n  }\n  \n  destroy() {\n    // Removing from DOM but not removing the event listener\n    document.body.removeChild(this.button);\n    this.button = null;\n  }\n}\n\n// Create and destroy many components\nconst components = [];\nfor (let i = 0; i < 1000; i++) {\n  const component = new LeakyComponent(i);\n  components.push(component);\n}\n\n// Destroy all components\ncomponents.forEach(component => component.destroy());\n\n// Count listeners (mock implementation for the test)\nfunction countRemainingListeners() {\n  return 1000; // In a real environment, this would be the actual count\n}\n\nconst remainingListeners = countRemainingListeners();\nconsole.log(remainingListeners === 0 ? \n  `No leak detected: ${remainingListeners} listeners remain` : \n  `Memory leak detected: ${remainingListeners} listeners remain`);"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "Which statement about JavaScript's Just-In-Time (JIT) compilation is FALSE?",
+      "options": {
+        "A": "JIT compilation can convert frequently executed code paths into optimized machine code",
+        "B": "Using the 'debugger' statement in your code can cause JIT deoptimization",
+        "C": "JIT compilation occurs entirely before your code starts executing",
+        "D": "Functions with unpredictable parameter types may be less optimized by the JIT compiler"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "When using Prometheus with a Node.js application, what does the following code accomplish?",
+      "options": {
+        "A": "Creates a histogram to measure HTTP request durations",
+        "B": "Creates a counter to track the rate of errors",
+        "C": "Creates a gauge to monitor active connections",
+        "D": "Configures a Prometheus server connection"
+      },
+      "correct_answer": "A",
+      "code_example": "const prometheus = require('prom-client');\n\nconst httpRequestDurationMicroseconds = new prometheus.Histogram({\n  name: 'http_request_duration_seconds',\n  help: 'Duration of HTTP requests in microseconds',\n  labelNames: ['method', 'route', 'status_code'],\n  buckets: [0.1, 0.3, 0.5, 0.7, 1, 3, 5, 7, 10]\n});\n\n// Middleware to measure request duration\nfunction measureRequestDuration(req, res, next) {\n  const end = httpRequestDurationMicroseconds.startTimer();\n  res.on('finish', () => {\n    end({ \n      method: req.method, \n      route: req.route?.path || req.path, \n      status_code: res.statusCode \n    });\n  });\n  next();\n}"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What is the purpose of the following section in a GitLab CI/CD pipeline configuration?",
+      "options": {
+        "A": "Running unit tests in parallel on multiple environments",
+        "B": "Automating deployment to a production environment after manual approval",
+        "C": "Caching node_modules to speed up subsequent pipeline runs",
+        "D": "Creating separate build artifacts for different environments"
+      },
+      "correct_answer": "C",
+      "code_example": "cache:\n  key: ${CI_COMMIT_REF_SLUG}\n  paths:\n    - node_modules/\n\nbuild:\n  stage: build\n  script:\n    - npm ci\n    - npm run build\n  artifacts:\n    paths:\n      - dist/"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "Which of the following statements about Helm charts is FALSE?",
+      "options": {
+        "A": "The 'values.yaml' file provides default configuration values for a Helm chart",
+        "B": "Helm hooks can be used to perform actions at specific points in a release lifecycle",
+        "C": "Helm requires a Kubernetes cluster to validate chart templates",
+        "D": "Helm charts can include subcharts that are deployed as separate applications"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the memory status of the following code after execution?",
+      "options": {
+        "A": "The array 'data' will be automatically garbage collected",
+        "B": "The array 'data' will remain in memory due to a closure reference",
+        "C": "The WeakMap ensures that 'data' will be garbage collected",
+        "D": "A reference cycle prevents garbage collection of all objects"
+      },
+      "correct_answer": "B",
+      "code_example": "let data = new Array(10000000).fill('large data');\n\nfunction createClosure() {\n  // Create an object that references the large data array\n  const manager = {\n    processData: function() {\n      return data.length;\n    }\n  };\n  \n  return manager;\n}\n\n// Create a closure that references 'data'\nconst manager = createClosure();\n\n// Try to remove reference to original data\ndata = null;\n\n// Even though we set data = null, the original array \n// is still referenced by the closure in manager.processData\nconsole.log(manager.processData()); // Will still work and return the array length"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "Which of the following best describes a method to prevent Cross-Site Request Forgery (CSRF) attacks in a Node.js Express application?",
+      "options": {
+        "A": "Using JWT tokens in HTTP-only cookies",
+        "B": "Implementing a same-site cookie policy",
+        "C": "Generating per-session CSRF tokens and validating them on state-changing requests",
+        "D": "Sanitizing user input with regular expressions"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following WebSocket code when a client connects?",
+      "options": {
+        "A": "The server logs 'Received: hello server' followed by 'Client connected'",
+        "B": "The server logs 'Client connected' followed by 'Received: hello server'",
+        "C": "The client logs 'Connected to server' followed by 'Received: welcome client'",
+        "D": "The client receives an error because the server isn't properly handling the connection"
+      },
+      "correct_answer": "C",
+      "code_example": "// Server code\nconst io = require('socket.io')(3000);\n\nio.on('connection', (socket) => {\n  console.log('Client connected');\n  \n  // Send a welcome message to the client\n  socket.emit('message', 'welcome client');\n  \n  // Handle messages from client\n  socket.on('message', (data) => {\n    console.log('Received:', data);\n  });\n});\n\n// Client code\nconst socket = require('socket.io-client')('http://localhost:3000');\n\nsocket.on('connect', () => {\n  console.log('Connected to server');\n  \n  // Send a message to the server\n  socket.emit('message', 'hello server');\n});\n\nsocket.on('message', (data) => {\n  console.log('Received:', data);\n});"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will happen when a client makes 11 requests within 1 minute to an Express server with the following rate limiter configuration?",
+      "options": {
+        "A": "The 11th request will be delayed until the next minute window starts",
+        "B": "The 11th request will receive a 429 (Too Many Requests) response",
+        "C": "All requests will be processed normally",
+        "D": "The server will block the client's IP address for 1 hour"
+      },
+      "correct_answer": "B",
+      "code_example": "const express = require('express');\nconst rateLimit = require('express-rate-limit');\n\nconst app = express();\n\nconst apiLimiter = rateLimit({\n  windowMs: 60 * 1000, // 1 minute\n  max: 10, // limit each IP to 10 requests per windowMs\n  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers\n  legacyHeaders: false, // Disable the `X-RateLimit-*` headers\n  message: 'Too many requests, please try again later.'\n});\n\n// Apply rate limiter to all requests\napp.use(apiLimiter);\n\napp.get('/', (req, res) => {\n  res.send('Hello World!');\n});\n\napp.listen(3000, () => {\n  console.log('Server running on port 3000');\n});"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the console output of the following custom event code?",
+      "options": {
+        "A": "First listener: value changed to 100\nSecond listener: value changed to 100",
+        "B": "Second listener: value changed to 100\nFirst listener: value changed to 100",
+        "C": "First listener: value changed to 100",
+        "D": "An error occurs because EventEmitter.apply() is not a valid method"
+      },
+      "correct_answer": "A",
+      "code_example": "const EventEmitter = require('events');\n\nclass ValueTracker extends EventEmitter {\n  constructor() {\n    super();\n    this._value = 0;\n  }\n  \n  get value() {\n    return this._value;\n  }\n  \n  set value(val) {\n    const oldValue = this._value;\n    this._value = val;\n    this.emit('change', { newValue: val, oldValue });\n  }\n}\n\nconst tracker = new ValueTracker();\n\n// Add first listener\ntracker.on('change', (data) => {\n  console.log(`First listener: value changed to ${data.newValue}`);\n});\n\n// Add second listener with once\ntracker.once('change', (data) => {\n  console.log(`Second listener: value changed to ${data.newValue}`);\n});\n\n// Change the value\ntracker.value = 100;\n\n// Change again - only the first listener should respond\ntracker.value = 200;"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What security feature is NOT provided by the following Helmet.js configuration?",
+      "options": {
+        "A": "Protection against clickjacking attacks",
+        "B": "Secure cookie settings",
+        "C": "Content Security Policy (CSP) implementation",
+        "D": "Prevention of MIME type sniffing"
+      },
+      "correct_answer": "B",
+      "code_example": "const express = require('express');\nconst helmet = require('helmet');\n\nconst app = express();\n\n// Apply helmet middleware with custom CSP\napp.use(\n  helmet({\n    contentSecurityPolicy: {\n      directives: {\n        defaultSrc: [\"'self'\"],\n        scriptSrc: [\"'self'\", \"'unsafe-inline'\", 'example.com'],\n        styleSrc: [\"'self'\", \"'unsafe-inline'\"],\n        imgSrc: [\"'self'\", 'data:', 'validator.swagger.io'],\n        connectSrc: [\"'self'\"],\n      },\n    },\n    frameguard: {\n      action: 'deny'\n    },\n    xssFilter: true,\n    noSniff: true,\n    hsts: {\n      maxAge: 15552000,\n      includeSubDomains: true\n    }\n  })\n);"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will happen when you run the following docker-compose.yml file?",
+      "options": {
+        "A": "The 'backend' service will wait for 'db' to be healthy before starting",
+        "B": "Data in the PostgreSQL database will be lost when containers are removed",
+        "C": "The 'backend' service will be exposed externally on port 80",
+        "D": "The services will run in a network isolated from other Docker containers on the host"
+      },
+      "correct_answer": "A",
+      "code_example": "version: '3.8'\n\nservices:\n  db:\n    image: postgres:13\n    volumes:\n      - postgres_data:/var/lib/postgresql/data\n    environment:\n      POSTGRES_USER: app\n      POSTGRES_PASSWORD: secretpassword\n      POSTGRES_DB: appdb\n    healthcheck:\n      test: [\"CMD-SHELL\", \"pg_isready -U app\"]\n      interval: 5s\n      timeout: 5s\n      retries: 5\n  \n  backend:\n    build: ./backend\n    depends_on:\n      db:\n        condition: service_healthy\n    ports:\n      - \"3000:3000\"\n    environment:\n      DATABASE_URL: postgres://app:secretpassword@db:5432/appdb\n      NODE_ENV: development\n\nvolumes:\n  postgres_data:"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be logged when the following winston logger configuration is used in production?",
+      "options": {
+        "A": "Only error and warn level messages in both console and error.log file",
+        "B": "Info, warn, and error messages in console; only error messages in error.log file",
+        "C": "All messages in the combined.log file; only error messages in error.log file",
+        "D": "All messages go to console regardless of the NODE_ENV setting"
+      },
+      "correct_answer": "C",
+      "code_example": "const winston = require('winston');\nconst { format, transports } = winston;\nconst { combine, timestamp, printf } = format;\n\n// Custom log format\nconst logFormat = printf(({ level, message, timestamp }) => {\n  return `${timestamp} ${level}: ${message}`;\n});\n\n// Create the logger\nconst logger = winston.createLogger({\n  level: process.env.NODE_ENV === 'production' ? 'info' : 'debug',\n  format: combine(\n    timestamp(),\n    logFormat\n  ),\n  transports: [\n    // Write all logs to console in development\n    ...(process.env.NODE_ENV !== 'production' \n      ? [new transports.Console()] \n      : []),\n    // Write all logs to combined.log\n    new transports.File({ filename: 'combined.log' }),\n    // Write only error logs to error.log\n    new transports.File({ \n      filename: 'error.log', \n      level: 'error' \n    })\n  ]\n});\n\n// Set NODE_ENV to production\nprocess.env.NODE_ENV = 'production';\n\n// Log messages at various levels\nlogger.debug('Debug message');\nlogger.info('Info message');\nlogger.warn('Warning message');\nlogger.error('Error message');"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What does the following Node.js clustering code achieve?",
+      "options": {
+        "A": "It creates worker processes on all available CPU cores, but they don't share the server port",
+        "B": "It creates worker processes on all available CPU cores that share the same server port",
+        "C": "It distributes incoming connections to workers in a custom round-robin pattern",
+        "D": "It creates a high-availability setup that automatically restarts crashed worker processes"
+      },
+      "correct_answer": "B",
+      "code_example": "const cluster = require('cluster');\nconst http = require('http');\nconst numCPUs = require('os').cpus().length;\n\nif (cluster.isMaster) {\n  console.log(`Master process ${process.pid} is running`);\n\n  // Fork workers\n  for (let i = 0; i < numCPUs; i++) {\n    cluster.fork();\n  }\n\n  cluster.on('exit', (worker, code, signal) => {\n    console.log(`Worker ${worker.process.pid} died`);\n  });\n} else {\n  // Workers share the same HTTP server\n  http.createServer((req, res) => {\n    res.writeHead(200);\n    res.end(`Worker ${process.pid} handled the request\\n`);\n  }).listen(8000);\n\n  console.log(`Worker ${process.pid} started`);\n}"
+    }
+  ]
+}
