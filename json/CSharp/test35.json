@@ -1,0 +1,614 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following StringBuilder code?",
+      "code_example": "StringBuilder sb = new StringBuilder(\"Hello\");\nsb.Append(\", World\");\nsb.Insert(0, \"Start: \");\nConsole.WriteLine(sb.ToString());",
+      "options": {
+        "A": "Hello, World",
+        "B": "Start: Hello",
+        "C": "Start: Hello, World",
+        "D": "Hello"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following correctly describes the difference between implicit and explicit casting in C#?",
+      "options": {
+        "A": "Implicit casting requires using the 'as' keyword while explicit casting uses parentheses",
+        "B": "Implicit casting can cause data loss while explicit casting is always safe",
+        "C": "Implicit casting happens automatically for compatible types while explicit casting requires explicit syntax",
+        "D": "Implicit casting is only used for value types while explicit casting is only used for reference types"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using if-else?",
+      "code_example": "int x = 10;\nif (x > 5)\n    Console.WriteLine(\"Greater than 5\");\nelse if (x > 7)\n    Console.WriteLine(\"Greater than 7\");\nelse\n    Console.WriteLine(\"Not greater\");\n",
+      "options": {
+        "A": "Greater than 7",
+        "B": "Greater than 5",
+        "C": "Not greater",
+        "D": "No output"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using null-coalescing and null-conditional operators?",
+      "code_example": "string name = null;\nvar result = name?.ToUpper() ?? \"No name provided\";\nConsole.WriteLine(result);",
+      "options": {
+        "A": "NULL",
+        "B": "null",
+        "C": "No name provided",
+        "D": "An exception will be thrown"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using bitwise operators?",
+      "code_example": "int a = 5;  // 101 in binary\nint b = 3;  // 011 in binary\nint c = a & b;\nint d = a | b;\nConsole.WriteLine($\"{c}, {d}\");",
+      "options": {
+        "A": "1, 7",
+        "B": "8, 15",
+        "C": "2, 6",
+        "D": "0, 8"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What is the correct way to create a custom exception class in C#?",
+      "options": {
+        "A": "public class CustomError { }",
+        "B": "public class CustomException : Exception { public CustomException(string message) : base(message) { } }",
+        "C": "public class CustomException implements Exception { }",
+        "D": "public exception CustomException extends Exception { }"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will happen when the following code is executed?",
+      "code_example": "using (var file = File.CreateText(\"test.txt\"))\n{\n    file.WriteLine(\"Test content\");\n    // what happens when the code exits this block?\n}",
+      "options": {
+        "A": "The file will remain open until the program ends",
+        "B": "The file handle will leak and must be manually closed",
+        "C": "An exception will be thrown because the file wasn't properly closed",
+        "D": "The file will be automatically closed because Dispose() is called on the StreamWriter"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code with constructor overloading?",
+      "code_example": "public class Person\n{\n    public string Name { get; set; }\n    public int Age { get; set; }\n\n    public Person()\n    {\n        Name = \"Unknown\";\n        Age = 0;\n    }\n\n    public Person(string name) : this()\n    {\n        Name = name;\n    }\n}\n\nPerson p = new Person(\"John\");\nConsole.WriteLine($\"{p.Name}, {p.Age}\");",
+      "options": {
+        "A": "Unknown, 0",
+        "B": "John, null",
+        "C": "John, 0",
+        "D": "null, 0"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following loop code?",
+      "code_example": "int total = 0;\nfor (int i = 0; i < 5; i++)\n{\n    if (i == 2)\n        continue;\n    total += i;\n}\nConsole.WriteLine(total);",
+      "options": {
+        "A": "10",
+        "B": "15",
+        "C": "8",
+        "D": "6"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following string interpolation code?",
+      "code_example": "string name = \"Alice\";\nint age = 30;\nstring output = $\"Name: {name.ToUpper()}, Age in 5 years: {age + 5}\";\nConsole.WriteLine(output);",
+      "options": {
+        "A": "Name: Alice, Age in 5 years: 35",
+        "B": "Name: ALICE, Age in 5 years: 35",
+        "C": "Name: {name.ToUpper()}, Age in 5 years: {age + 5}",
+        "D": "Name: ALICE, Age in 5 years: 30"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using break and continue?",
+      "code_example": "for (int i = 0; i < 5; i++)\n{\n    if (i == 1)\n        continue;\n    if (i == 3)\n        break;\n    Console.Write(i);\n}",
+      "options": {
+        "A": "0123",
+        "B": "024",
+        "C": "02",
+        "D": "01234"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following try-catch-finally code?",
+      "code_example": "try\n{\n    Console.Write(\"Try \");\n    throw new Exception();\n}\ncatch\n{\n    Console.Write(\"Catch \");\n    return;\n}\nfinally\n{\n    Console.Write(\"Finally\");\n}",
+      "options": {
+        "A": "Try Catch",
+        "B": "Try Catch Finally",
+        "C": "Try Finally",
+        "D": "Catch Finally"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "Which of the following statements about cross-platform development in .NET is TRUE?",
+      "options": {
+        "A": ".NET Framework is the preferred choice for new cross-platform applications",
+        "B": ".NET Core (now .NET 5+) allows applications to run on Windows, macOS, and Linux",
+        "C": "Cross-platform .NET applications can only be written in F#",
+        "D": "Xamarin is required to create any cross-platform .NET application"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using ref and out parameters?",
+      "code_example": "void ModifyValues(ref int x, out int y)\n{\n    x = x * 2;\n    y = 10;\n}\n\nint a = 5;\nint b;\nModifyValues(ref a, out b);\nConsole.WriteLine($\"{a}, {b}\");",
+      "options": {
+        "A": "5, 10",
+        "B": "10, 10",
+        "C": "5, 0",
+        "D": "10, 0"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following LINQ code?",
+      "code_example": "var numbers = new List<int> { 5, 8, 2, 9, 3 };\nvar result = numbers.Where(n => n > 4)\n                     .OrderBy(n => n)\n                     .Select(n => n * 2);\n\nforeach (var num in result)\n{\n    Console.Write(num + \" \");\n}",
+      "options": {
+        "A": "5 8 9",
+        "B": "10 16 18",
+        "C": "18 16 10",
+        "D": "5 2 9"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following multi-dimensional array code?",
+      "code_example": "int[,] matrix = new int[2, 3];\nmatrix[0, 0] = 1;\nmatrix[0, 1] = 2;\nmatrix[0, 2] = 3;\nmatrix[1, 0] = 4;\nmatrix[1, 1] = 5;\nmatrix[1, 2] = 6;\n\nConsole.WriteLine(matrix[1, 1] + matrix[0, 2]);",
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "6",
+        "D": "9"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using an anonymous method?",
+      "code_example": "Func<int, int, int> add = delegate(int x, int y) { return x + y; };\nAction<string> greet = delegate(string name) { Console.WriteLine($\"Hello, {name}\"); };\n\nint result = add(5, 3);\ngreet(result.ToString());",
+      "options": {
+        "A": "Hello, 8",
+        "B": "Hello, 5",
+        "C": "8",
+        "D": "An exception will be thrown"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following best describes the Interface Segregation Principle in C#?",
+      "options": {
+        "A": "Clients should not be forced to depend on interfaces they do not use",
+        "B": "A class should have only one reason to change",
+        "C": "Objects in a program should be replaceable with instances of their subtypes",
+        "D": "High-level modules should not depend on low-level modules"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "In ASP.NET Core, which of the following describes model binding correctly?",
+      "options": {
+        "A": "The process of manually converting JSON data to C# objects",
+        "B": "The process of creating Entity Framework models from database tables",
+        "C": "The automatic mapping of HTTP request data to action method parameters",
+        "D": "The process of binding UI elements to data sources in Blazor"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which of the following correctly demonstrates Property Injection in C#?",
+      "code_example": "public interface ILogger\n{\n    void Log(string message);\n}\n\npublic class UserService\n{\n    public ILogger Logger { get; set; }\n    \n    public void CreateUser(string username)\n    {\n        // Create user logic\n        Logger?.Log($\"User {username} created\");\n    }\n}",
+      "options": {
+        "A": "This is Constructor Injection",
+        "B": "This is Method Injection",
+        "C": "This is Property Injection",
+        "D": "This is Interface Injection"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following xUnit test?",
+      "code_example": "public class Calculator\n{\n    public int Add(int a, int b) => a + b;\n}\n\npublic class CalculatorTests\n{\n    [Theory]\n    [InlineData(1, 2, 3)]\n    [InlineData(5, 5, 10)]\n    [InlineData(-1, 1, 0)]\n    public void Add_ShouldReturnCorrectSum(int a, int b, int expected)\n    {\n        // Arrange\n        var calculator = new Calculator();\n        \n        // Act\n        var result = calculator.Add(a, b);\n        \n        // Assert\n        Assert.Equal(expected, result);\n    }\n}",
+      "options": {
+        "A": "The test will fail for the first data set",
+        "B": "The test will fail for all data sets",
+        "C": "The test will pass for all data sets",
+        "D": "The test will fail for the third data set"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following LINQ query with EF Core?",
+      "code_example": "// Assuming a DbContext with a Products DbSet\nvar expensiveProducts = await dbContext.Products\n    .Where(p => p.Price > 100)\n    .Select(p => new { p.Name, p.Price })\n    .OrderByDescending(p => p.Price)\n    .Take(2)\n    .ToListAsync();\n\n// What does this query do?",
+      "options": {
+        "A": "Returns all products with price greater than 100",
+        "B": "Returns the 2 most expensive products with price greater than 100, including only their name and price",
+        "C": "Returns the 2 least expensive products",
+        "D": "Returns the first 2 products in the database regardless of price"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code with read-only properties?",
+      "code_example": "public class Person\n{\n    public string Name { get; }\n    public int Age { get; private set; }\n    \n    public Person(string name, int age)\n    {\n        Name = name;\n        Age = age;\n    }\n    \n    public void HaveBirthday()\n    {\n        Age++;\n        // Name = Name + \"!\"; // Uncomment this line\n    }\n}\n\nPerson person = new Person(\"John\", 30);\nperson.HaveBirthday();\nConsole.WriteLine($\"{person.Name}, {person.Age}\");",
+      "options": {
+        "A": "John, 30",
+        "B": "John, 31",
+        "C": "John!, 31",
+        "D": "Compilation error: cannot assign to Name because it is read-only"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following generic constraints code?",
+      "code_example": "class Repository<T> where T : class, new()\n{\n    public T CreateDefault()\n    {\n        return new T();\n    }\n}\n\npublic class Product\n{\n    public string Name { get; set; } = \"Default Product\";\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        var repo = new Repository<Product>();\n        var product = repo.CreateDefault();\n        Console.WriteLine(product.Name);\n    }\n}",
+      "options": {
+        "A": "null",
+        "B": "Default Product",
+        "C": "Compilation error: Product does not satisfy the constraints",
+        "D": "Runtime exception"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code with explicit interface implementation?",
+      "code_example": "interface IDrawable\n{\n    void Draw();\n}\n\ninterface IPrintable\n{\n    void Draw();\n}\n\nclass Document : IDrawable, IPrintable\n{\n    public void Draw()\n    {\n        Console.Write(\"Document Drawing \");\n    }\n    \n    void IDrawable.Draw()\n    {\n        Console.Write(\"IDrawable \");\n    }\n    \n    void IPrintable.Draw()\n    {\n        Console.Write(\"IPrintable\");\n    }\n}\n\nDocument doc = new Document();\ndoc.Draw();\n((IDrawable)doc).Draw();\n((IPrintable)doc).Draw();",
+      "options": {
+        "A": "Document Drawing IDrawable IPrintable",
+        "B": "Document Drawing Document Drawing Document Drawing",
+        "C": "IDrawable IPrintable Document Drawing",
+        "D": "Document Drawing Document Drawing Document Drawing"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "Which middleware is NOT typically part of the ASP.NET Core request pipeline?",
+      "options": {
+        "A": "Authentication middleware",
+        "B": "Static files middleware",
+        "C": "Entity Framework middleware",
+        "D": "Routing middleware"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating deferred execution in LINQ?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4 };\n\nvar query = numbers.Select(n => {\n    Console.Write($\"Processing {n}, \");\n    return n * 2;\n});\n\nnumbers.Add(5);\n\nConsole.Write(\"Executing query: \");\nforeach (var num in query)\n{\n    Console.Write($\"{num} \");\n}",
+      "options": {
+        "A": "Executing query: 2 4 6 8",
+        "B": "Processing 1, Processing 2, Processing 3, Processing 4, Executing query: 2 4 6 8",
+        "C": "Processing 1, Processing 2, Processing 3, Processing 4, Processing 5, Executing query: 2 4 6 8 10",
+        "D": "Executing query: Processing 1, 2 Processing 2, 4 Processing 3, 6 Processing 4, 8 Processing 5, 10"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is the correct implementation of Constructor Injection in C#?",
+      "code_example": "public class OrderService\n{\n    private readonly IRepository<Order> _repository;\n    private readonly ILogger _logger;\n    \n    public OrderService(IRepository<Order> repository, ILogger logger)\n    {\n        _repository = repository;\n        _logger = logger;\n    }\n    \n    public void ProcessOrder(Order order)\n    {\n        _logger.Log(\"Processing order\");\n        _repository.Save(order);\n    }\n}",
+      "options": {
+        "A": "This is Property Injection",
+        "B": "This is Method Injection",
+        "C": "This is Service Locator pattern",
+        "D": "This is Constructor Injection"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What is the key difference between `Task<T>` and `void` for asynchronous methods in C#?",
+      "options": {
+        "A": "`Task<T>` methods can only be called with await, while `void` methods cannot use await",
+        "B": "`Task<T>` methods can return a value and be awaited, while async `void` methods cannot be awaited and exceptions are difficult to handle",
+        "C": "`Task<T>` methods run synchronously, while `void` methods run asynchronously",
+        "D": "There is no difference except for the return type syntax"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What is the key difference between Dispose() and Finalize() in C#?",
+      "options": {
+        "A": "Dispose() runs automatically while Finalize() must be called manually",
+        "B": "Dispose() is called explicitly to release resources immediately, while Finalize() is called by the garbage collector",
+        "C": "Dispose() can only release managed resources, while Finalize() can release both managed and unmanaged resources",
+        "D": "Dispose() and Finalize() are different names for the same method in different contexts"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following generic class code?",
+      "code_example": "public class Container<T>\n{\n    private T _item;\n    \n    public Container(T item)\n    {\n        _item = item;\n    }\n    \n    public string GetItemType()\n    {\n        return typeof(T).Name;\n    }\n}\n\nContainer<int> intContainer = new Container<int>(42);\nContainer<string> stringContainer = new Container<string>(\"Hello\");\n\nConsole.WriteLine($\"{intContainer.GetItemType()}, {stringContainer.GetItemType()}\");",
+      "options": {
+        "A": "System.Int32, System.String",
+        "B": "int, string",
+        "C": "Int32, String",
+        "D": "Integer, String"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "Which statement about .NET Garbage Collector generations is correct?",
+      "options": {
+        "A": "Gen0 objects are the oldest objects in the heap",
+        "B": "Gen2 collection happens more frequently than Gen0 collection",
+        "C": "Objects that survive a Gen0 collection are promoted to Gen1",
+        "D": "Large objects are always allocated directly to Gen0"
+      },
+      "correct_answer": "C"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the correct way to add a property dynamically to an ExpandoObject?",
+      "options": {
+        "A": "((IDictionary<string, object>)expando)[\"PropertyName\"] = value;",
+        "B": "expando.AddProperty(\"PropertyName\", value);",
+        "C": "expando.Properties.Add(\"PropertyName\", value);",
+        "D": "expando.SetProperty(\"PropertyName\", value);"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Collections.Generic;\nusing System.Dynamic;\n\npublic class Program\n{\n    public static void Main()\n    {\n        dynamic expando = new ExpandoObject();\n        \n        // How to add a property dynamically?\n        // Option A: ((IDictionary<string, object>)expando)[\"Name\"] = \"John\";\n        // Option B: expando.AddProperty(\"Name\", \"John\");\n        // Option C: expando.Properties.Add(\"Name\", \"John\");\n        // Option D: expando.SetProperty(\"Name\", \"John\");\n        \n        // Using option A for demonstration\n        ((IDictionary<string, object>)expando)[\"Name\"] = \"John\";\n        Console.WriteLine(expando.Name); // Outputs: John\n    }\n}"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "When using MemoryCache in .NET, what does the following code accomplish?",
+      "options": {
+        "A": "Adds an item to the cache that will be removed after 10 minutes regardless of access",
+        "B": "Adds an item to the cache that will be removed after 10 minutes of inactivity",
+        "C": "Adds an item to the cache that will be removed at a specific time (10 minutes from now)",
+        "D": "Adds an item to the cache that will be removed when memory pressure occurs, with a priority set to 10"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing Microsoft.Extensions.Caching.Memory;\n\npublic class Program\n{\n    public static void Main()\n    {\n        var cacheOptions = new MemoryCacheOptions();\n        var memoryCache = new MemoryCache(cacheOptions);\n        \n        memoryCache.Set(\"key\", \"value\", new MemoryCacheEntryOptions()\n            .SetSlidingExpiration(TimeSpan.FromMinutes(10)));\n            \n        Console.WriteLine(\"Item added to cache with sliding expiration of 10 minutes\");\n    }\n}"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Which of the following Dockerfile instructions is NOT correct for a .NET 7 web application?",
+      "options": {
+        "A": "FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build",
+        "B": "FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime",
+        "C": "RUN dotnet restore",
+        "D": "ENTRYPOINT [\"dotnet run\"]"
+      },
+      "correct_answer": "D",
+      "code_example": "# Example Dockerfile for .NET 7 web application\nFROM mcr.microsoft.com/dotnet/sdk:7.0 AS build\nWORKDIR /app\n\nCOPY *.csproj ./\nRUN dotnet restore\n\nCOPY . ./\nRUN dotnet publish -c Release -o out\n\nFROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime\nWORKDIR /app\nCOPY --from=build /app/out ./\n\n# Correct entrypoint would be:\n# ENTRYPOINT [\"dotnet\", \"YourApp.dll\"]\n\n# Incorrect entrypoint:\nENTRYPOINT [\"dotnet\", \"run\"]"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "In the Repository Pattern, what is the primary purpose of the IRepository<T> interface?",
+      "options": {
+        "A": "To provide a direct connection to the database",
+        "B": "To abstract the data persistence logic from the business logic",
+        "C": "To optimize database queries automatically",
+        "D": "To create a caching layer between the application and database"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will the following code using P/Invoke display?",
+      "options": {
+        "A": "The current time",
+        "B": "The system uptime",
+        "C": "An error message because GetTickCount is not accessible",
+        "D": "The number of milliseconds since the system was started"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\nusing System.Runtime.InteropServices;\n\npublic class Program\n{\n    [DllImport(\"kernel32.dll\")]\n    private static extern uint GetTickCount();\n    \n    public static void Main()\n    {\n        uint tickCount = GetTickCount();\n        Console.WriteLine($\"System has been running for {tickCount} milliseconds\");\n    }\n}"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a valid approach for API versioning in ASP.NET Core?",
+      "options": {
+        "A": "URL path versioning (e.g., /api/v1/products)",
+        "B": "Query string versioning (e.g., /api/products?api-version=1.0)",
+        "C": "Header versioning (using custom HTTP headers)",
+        "D": "Protocol versioning (e.g., HTTP/1.1 vs HTTP/2.0)"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "In the context of Apache Kafka, what is a consumer group?",
+      "options": {
+        "A": "A set of producers that write to the same topic",
+        "B": "A collection of Kafka brokers that manage the same partitions",
+        "C": "A group of consumers that work together to consume messages from one or more topics",
+        "D": "A logical grouping of related topics"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code involving Semaphore?",
+      "options": {
+        "A": "Task1 starts, Task1 ends, Task2 starts, Task2 ends",
+        "B": "Task1 starts, Task2 starts, Task1 ends, Task2 ends",
+        "C": "Task1 starts, Task2 starts, Task2 ends, Task1 ends",
+        "D": "Task2 starts, Task2 ends, Task1 starts, Task1 ends"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\npublic class Program\n{\n    private static SemaphoreSlim semaphore = new SemaphoreSlim(1, 1);\n    \n    public static async Task Main()\n    {\n        Task task1 = DoWorkAsync(\"Task1\", 1000);\n        Task task2 = DoWorkAsync(\"Task2\", 500);\n        \n        await Task.WhenAll(task1, task2);\n    }\n    \n    private static async Task DoWorkAsync(string taskName, int delayMs)\n    {\n        await semaphore.WaitAsync();\n        try\n        {\n            Console.WriteLine($\"{taskName} starts\");\n            await Task.Delay(delayMs);\n            Console.WriteLine($\"{taskName} ends\");\n        }\n        finally\n        {\n            semaphore.Release();\n        }\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "In the Adapter Pattern, what is the primary role of the Adapter class?",
+      "options": {
+        "A": "To convert the interface of a class into another interface clients expect",
+        "B": "To define a family of algorithms and make them interchangeable",
+        "C": "To separate the construction of a complex object from its representation",
+        "D": "To define a one-to-many dependency between objects"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\n// Target interface that the client expects to use\npublic interface ITarget\n{\n    string Request();\n}\n\n// The class that needs to be adapted\npublic class Adaptee\n{\n    public string SpecificRequest()\n    {\n        return \"Adaptee's specific request\";\n    }\n}\n\n// Adapter class that makes Adaptee work with Target\npublic class Adapter : ITarget\n{\n    private readonly Adaptee _adaptee;\n    \n    public Adapter(Adaptee adaptee)\n    {\n        _adaptee = adaptee;\n    }\n    \n    public string Request()\n    {\n        // Adapt the different interface\n        return $\"Adapter: {_adaptee.SpecificRequest()}\";\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        Adaptee adaptee = new Adaptee();\n        ITarget target = new Adapter(adaptee);\n        \n        Console.WriteLine(target.Request());\n    }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "Which HTTP status code should be returned when a resource has been permanently moved to a new location?",
+      "options": {
+        "A": "301 Moved Permanently",
+        "B": "302 Found",
+        "C": "307 Temporary Redirect",
+        "D": "308 Permanent Redirect"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "In the CQRS pattern, what is the primary benefit of separating command and query responsibilities?",
+      "options": {
+        "A": "It ensures that all operations use a consistent data model",
+        "B": "It allows for different optimization strategies for reads and writes",
+        "C": "It removes the need for a database completely",
+        "D": "It guarantees immediate consistency between read and write models"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Collections.Generic;\nusing System.Threading.Tasks;\n\n// Command side\npublic class CreateProductCommand\n{\n    public string Name { get; set; }\n    public decimal Price { get; set; }\n}\n\npublic class ProductCommandHandler\n{\n    private readonly IProductRepository _repository;\n    \n    public ProductCommandHandler(IProductRepository repository)\n    {\n        _repository = repository;\n    }\n    \n    public async Task HandleAsync(CreateProductCommand command)\n    {\n        var product = new Product\n        {\n            Id = Guid.NewGuid(),\n            Name = command.Name,\n            Price = command.Price\n        };\n        \n        await _repository.AddAsync(product);\n    }\n}\n\n// Query side\npublic class ProductQuery\n{\n    private readonly IProductReadModel _readModel;\n    \n    public ProductQuery(IProductReadModel readModel)\n    {\n        _readModel = readModel;\n    }\n    \n    public async Task<IEnumerable<ProductDto>> GetAllProductsAsync()\n    {\n        return await _readModel.GetAllProductsAsync();\n    }\n}\n\n// Domain model and DTOs\npublic class Product\n{\n    public Guid Id { get; set; }\n    public string Name { get; set; }\n    public decimal Price { get; set; }\n}\n\npublic class ProductDto\n{\n    public Guid Id { get; set; }\n    public string Name { get; set; }\n    public decimal Price { get; set; }\n}\n\n// Interfaces\npublic interface IProductRepository\n{\n    Task AddAsync(Product product);\n}\n\npublic interface IProductReadModel\n{\n    Task<IEnumerable<ProductDto>> GetAllProductsAsync();\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a component of role-based authentication in ASP.NET Core?",
+      "options": {
+        "A": "User Manager",
+        "B": "Role Manager",
+        "C": "Policy-based authorization",
+        "D": "OAuth tokens"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using the dynamic type?",
+      "options": {
+        "A": "10",
+        "B": "System.Int32",
+        "C": "A runtime error will occur",
+        "D": "A compilation error will occur"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        dynamic value = 10;\n        Console.WriteLine(value);\n        \n        // Change the type at runtime\n        value = \"Hello\";\n        \n        // This will cause a runtime error\n        int result = value * 2;\n        Console.WriteLine(result);\n    }\n}"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating stack vs heap allocation?",
+      "options": {
+        "A": "Value type: 10, Reference type: 20",
+        "B": "Value type: 20, Reference type: 20",
+        "C": "Value type: 10, Reference type: 10",
+        "D": "Value type: 20, Reference type: 10"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        // Value type - allocated on stack\n        int valueType = 10;\n        \n        // Reference type - allocated on heap\n        MyClass referenceType = new MyClass { Value = 10 };\n        \n        ModifyValues(valueType, referenceType);\n        \n        Console.WriteLine($\"Value type: {valueType}, Reference type: {referenceType.Value}\");\n    }\n    \n    private static void ModifyValues(int valueParameter, MyClass referenceParameter)\n    {\n        valueParameter = 20;     // Modifies the copy, not the original\n        referenceParameter.Value = 20;  // Modifies the object on the heap\n    }\n}\n\npublic class MyClass\n{\n    public int Value { get; set; }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "When using Redis as a distributed cache in ASP.NET Core, which of the following statements is TRUE?",
+      "options": {
+        "A": "Redis automatically serializes complex objects without additional configuration",
+        "B": "Redis can only store string values, not complex objects",
+        "C": "Redis requires a serialization mechanism to store complex objects",
+        "D": "Redis supports LINQ queries directly on stored objects"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Text.Json;\nusing System.Threading.Tasks;\nusing Microsoft.Extensions.Caching.Distributed;\nusing Microsoft.Extensions.DependencyInjection;\n\npublic class Program\n{\n    public static async Task Main()\n    {\n        // Setup the services\n        var services = new ServiceCollection();\n        services.AddStackExchangeRedisCache(options =>\n        {\n            options.Configuration = \"localhost:6379\";\n            options.InstanceName = \"SampleInstance\";\n        });\n        \n        var serviceProvider = services.BuildServiceProvider();\n        var distributedCache = serviceProvider.GetRequiredService<IDistributedCache>();\n        \n        // Create a complex object\n        var user = new User { Id = 1, Name = \"John Doe\" };\n        \n        // Serialize the object to store in Redis\n        string serializedUser = JsonSerializer.Serialize(user);\n        await distributedCache.SetStringAsync(\"user:1\", serializedUser, new DistributedCacheEntryOptions\n        {\n            AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10)\n        });\n        \n        // Retrieve and deserialize\n        string cachedUser = await distributedCache.GetStringAsync(\"user:1\");\n        if (cachedUser != null)\n        {\n            User retrievedUser = JsonSerializer.Deserialize<User>(cachedUser);\n            Console.WriteLine($\"Retrieved user: {retrievedUser.Name}\");\n        }\n    }\n}\n\npublic class User\n{\n    public int Id { get; set; }\n    public string Name { get; set; }\n}"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will happen when executing the following code with CancellationToken?",
+      "options": {
+        "A": "It will print 'Operation completed successfully'",
+        "B": "It will print 'Operation was cancelled'",
+        "C": "It will throw an OperationCanceledException",
+        "D": "It will hang indefinitely"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\npublic class Program\n{\n    public static async Task Main()\n    {\n        var cancellationTokenSource = new CancellationTokenSource();\n        var token = cancellationTokenSource.Token;\n        \n        // Start a task\n        var task = Task.Run(async () =>\n        {\n            try\n            {\n                await LongRunningOperationAsync(token);\n                Console.WriteLine(\"Operation completed successfully\");\n            }\n            catch (OperationCanceledException)\n            {\n                Console.WriteLine(\"Operation was cancelled\");\n            }\n        });\n        \n        // Cancel after 100ms\n        await Task.Delay(100);\n        cancellationTokenSource.Cancel();\n        \n        try\n        {\n            await task;\n        }\n        catch (Exception ex)\n        {\n            Console.WriteLine($\"Exception: {ex.GetType().Name}\");\n        }\n    }\n    \n    private static async Task LongRunningOperationAsync(CancellationToken cancellationToken)\n    {\n        for (int i = 0; i < 10; i++)\n        {\n            // Check if cancellation is requested\n            cancellationToken.ThrowIfCancellationRequested();\n            \n            await Task.Delay(200, cancellationToken);\n        }\n    }\n}"
+    }
+  ]
+}
