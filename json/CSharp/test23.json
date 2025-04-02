@@ -1,0 +1,610 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will the following code return if the file 'data.txt' does not exist?",
+      "code_example": "bool result = File.Exists(\"data.txt\");\nConsole.WriteLine(result);",
+      "options": {
+        "A": "true",
+        "B": "false",
+        "C": "An IOException will be thrown",
+        "D": "A FileNotFoundException will be thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "code_example": "string name = null;\nConsole.WriteLine(name ?? \"Unknown\");",
+      "options": {
+        "A": "null",
+        "B": "\"\"",
+        "C": "Unknown",
+        "D": "NullReferenceException will be thrown"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the main difference between ref and out parameters in C#?",
+      "options": {
+        "A": "ref parameters must be initialized before being passed to a method, out parameters don't need to be initialized",
+        "B": "out parameters must be initialized before being passed to a method, ref parameters don't need to be initialized",
+        "C": "ref parameters are read-only inside the method, out parameters can be modified",
+        "D": "out parameters are read-only inside the method, ref parameters can be modified"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "for (int i = 0; i < 5; i++)\n{\n    if (i == 2)\n        continue;\n    Console.Write(i + \" \");\n}",
+      "options": {
+        "A": "0 1 2 3 4",
+        "B": "0 1 3 4",
+        "C": "1 2 3 4",
+        "D": "0 1 2"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which of the following methods will NOT throw an exception if the input string cannot be converted to an integer?",
+      "options": {
+        "A": "Convert.ToInt32(\"abc\")",
+        "B": "int.Parse(\"abc\")",
+        "C": "int.TryParse(\"abc\", out int result)",
+        "D": "All of these methods will throw an exception"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What is the correct way to define an auto-implemented property with a private setter in C#?",
+      "code_example": "public class User\n{\n    // Which property is correctly implemented with a private setter?\n}",
+      "options": {
+        "A": "public string Name { get; private; }",
+        "B": "public string Name { get; private set; }",
+        "C": "public string Name { private get; set; }",
+        "D": "public string Name { get = public; set = private; }"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a value type in C#?",
+      "options": {
+        "A": "int",
+        "B": "char",
+        "C": "string",
+        "D": "struct"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the main purpose of the 'using' statement in C#?",
+      "options": {
+        "A": "To include namespaces in your code",
+        "B": "To automatically dispose of resources when they go out of scope",
+        "C": "To create temporary variables within a block of code",
+        "D": "To define retry blocks for exception handling"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the result of the following expression?",
+      "code_example": "bool a = true;\nbool b = false;\nConsole.WriteLine(a && b || !b);",
+      "options": {
+        "A": "true",
+        "B": "false",
+        "C": "Compilation error",
+        "D": "Runtime exception"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "code_example": "int a = 5;\nint b = 3;\nConsole.WriteLine(a & b);",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "8",
+        "D": "15"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the result of the expression 7 % 3?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "2.33"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "code_example": "string text = \"Hello, World!\";\nConsole.WriteLine(text.Substring(7, 5));",
+      "options": {
+        "A": "Hello",
+        "B": "World",
+        "C": "World!",
+        "D": "o, Wo"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will the following LINQ query return?",
+      "code_example": "List<int> numbers = new List<int>();\nvar result = numbers.FirstOrDefault();\nConsole.WriteLine(result);",
+      "options": {
+        "A": "null",
+        "B": "0",
+        "C": "An InvalidOperationException will be thrown",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What is the correct way to initialize the second row, third element of a jagged array?",
+      "code_example": "int[][] jaggedArray = new int[3][];\njaggedArray[0] = new int[4];\njaggedArray[1] = new int[3];\njaggedArray[2] = new int[5];\n// How do you set the value 42 at the second row, third element?",
+      "options": {
+        "A": "jaggedArray[1, 2] = 42;",
+        "B": "jaggedArray[1][2] = 42;",
+        "C": "jaggedArray[2][1] = 42;",
+        "D": "jaggedArray[1, 3] = 42;"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "int? nullableInt = null;\nConsole.WriteLine(nullableInt ?? 10);",
+      "options": {
+        "A": "null",
+        "B": "0",
+        "C": "10",
+        "D": "NullReferenceException will be thrown"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "Which of the following is TRUE about .NET 5 and later versions?",
+      "options": {
+        "A": "It's a direct upgrade path from .NET Framework 4.8",
+        "B": "It only supports Windows operating systems",
+        "C": "It's a unified platform that replaces both .NET Core and .NET Framework",
+        "D": "It requires installation of the Mono runtime for cross-platform support"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "In ASP.NET Core, what is the primary purpose of the middleware in the request pipeline?",
+      "options": {
+        "A": "To handle database connections",
+        "B": "To process incoming HTTP requests and outgoing responses",
+        "C": "To compile Razor views into HTML",
+        "D": "To manage user authentication tokens"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is the result of the following LINQ query execution?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar query = numbers.Where(n => n > 2);\nnumbers.Add(6);\nforeach (var num in query)\n{\n    Console.Write(num + \" \");\n}",
+      "options": {
+        "A": "3 4 5",
+        "B": "3 4 5 6",
+        "C": "1 2 3 4 5 6",
+        "D": "The query will throw an exception"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the primary difference between HashSet<T> and Dictionary<TKey, TValue>?",
+      "options": {
+        "A": "HashSet<T> allows duplicate values, Dictionary<TKey, TValue> doesn't",
+        "B": "Dictionary<TKey, TValue> stores key-value pairs, while HashSet<T> only stores unique values",
+        "C": "HashSet<T> is faster for lookups than Dictionary<TKey, TValue>",
+        "D": "Dictionary<TKey, TValue> is unordered, while HashSet<T> maintains insertion order"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "In ASP.NET Core Web API, what is the correct way to create an endpoint that responds to HTTP GET requests?",
+      "code_example": "public class ProductsController : ControllerBase\n{\n    // Which method signature is correct for handling GET requests?\n}",
+      "options": {
+        "A": "[HttpGet]\npublic IEnumerable<Product> GetProducts()",
+        "B": "[Get]\npublic IEnumerable<Product> GetProducts()",
+        "C": "[GetMethod]\npublic IEnumerable<Product> GetProducts()",
+        "D": "[GetRequest]\npublic IEnumerable<Product> RetrieveProducts()"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What is the key difference between a method that returns Task<T> and one that returns void?",
+      "options": {
+        "A": "A Task<T> method can be awaited, while a void method cannot",
+        "B": "A void method can be asynchronous, but a Task<T> method cannot",
+        "C": "A Task<T> method always runs faster than a void method",
+        "D": "A void method can return a value, while a Task<T> method cannot"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which of the following is a correct way to assert that a method throws an exception in xUnit?",
+      "code_example": "public void DivideByZero()\n{\n    throw new DivideByZeroException();\n}\n\n// Test method:",
+      "options": {
+        "A": "[Fact]\npublic void Test_DivideByZero()\n{\n    Assert.Throws<DivideByZeroException>(() => DivideByZero());\n}",
+        "B": "[Fact]\npublic void Test_DivideByZero()\n{\n    Assert.ThrowsException<DivideByZeroException>(() => DivideByZero());\n}",
+        "C": "[Fact]\npublic void Test_DivideByZero()\n{\n    Assert.Exception<DivideByZeroException>(() => DivideByZero());\n}",
+        "D": "[Test]\npublic void Test_DivideByZero()\n{\n    Assert.That(() => DivideByZero(), Throws.TypeOf<DivideByZeroException>());\n}"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following LINQ query?",
+      "code_example": "List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar result = numbers.Aggregate(0, (sum, next) => sum + next);\nConsole.WriteLine(result);",
+      "options": {
+        "A": "0",
+        "B": "15",
+        "C": "5",
+        "D": "120"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "Which of the following statements about garbage collection generations in .NET is TRUE?",
+      "options": {
+        "A": "Gen2 collections are faster than Gen0 collections",
+        "B": "Objects start in Gen0 and may be promoted to Gen1 and then Gen2 if they survive collections",
+        "C": "Objects in Gen2 are guaranteed to be collected before objects in Gen0",
+        "D": "Gen0 is reserved for large objects (>85KB)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following LINQ query?",
+      "code_example": "var numbers1 = new[] { 1, 2, 3 };\nvar numbers2 = new[] { 2, 3, 4 };\nvar result = numbers1.Join(numbers2,\n                        n1 => n1,\n                        n2 => n2,\n                        (n1, n2) => n1);\nforeach (var num in result)\n{\n    Console.Write(num + \" \");\n}",
+      "options": {
+        "A": "1 2 3 2 3 4",
+        "B": "2 3",
+        "C": "1 2 3 4",
+        "D": "No output (empty result)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will happen when the following code is executed?",
+      "code_example": "List<int> numbers = new List<int> { 1, 2, 3 };\nvar result = numbers.SingleOrDefault(n => n > 2);\nConsole.WriteLine(result);",
+      "options": {
+        "A": "0",
+        "B": "3",
+        "C": "InvalidOperationException will be thrown",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "In Entity Framework Core, what does the 'Code-First' approach refer to?",
+      "options": {
+        "A": "Writing SQL scripts first, then generating C# entity classes",
+        "B": "Creating a database schema first, then mapping it to C# classes",
+        "C": "Creating C# entity classes first, then generating the database schema from them",
+        "D": "Writing stored procedures first, then implementing client code"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "Func<int, int> multiplier = delegate(int x) { return x * 2; };\nConsole.WriteLine(multiplier(5));",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "25",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "Which of the following is a best practice when using Dependency Injection in unit testing?",
+      "options": {
+        "A": "Always use concrete implementations of dependencies in tests",
+        "B": "Mock or stub external dependencies to isolate the code being tested",
+        "C": "Use static methods instead of interfaces for better testability",
+        "D": "Use Singleton pattern for all dependencies in tests"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What is the purpose of Parallel.ForEach() in C#?",
+      "code_example": "var numbers = Enumerable.Range(1, 100).ToList();\nParallel.ForEach(numbers, number => {\n    Console.WriteLine(number * 2);\n});",
+      "options": {
+        "A": "To execute a loop with a fixed number of iterations",
+        "B": "To execute a loop sequentially with error handling",
+        "C": "To execute a loop in parallel across multiple threads",
+        "D": "To execute a loop that can be cancelled with a token"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is the correct way to define a read-only property in C# that can only be set in the constructor?",
+      "code_example": "public class Person\n{\n    // Which property implementation is correct?\n}",
+      "options": {
+        "A": "public string Name { get; }",
+        "B": "public string Name { get; private set; }",
+        "C": "public readonly string Name { get; }",
+        "D": "public string Name { get; const; }"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will the following code output?",
+      "code_example": "using (var resource = new MemoryStream())\n{\n    resource.WriteByte(65);\n    Console.WriteLine(resource.Length);\n}\nusing var resource2 = new MemoryStream();\nresource2.WriteByte(66);\nConsole.WriteLine(resource2.Length);",
+      "options": {
+        "A": "1\n1",
+        "B": "65\n66",
+        "C": "The code will not compile",
+        "D": "1\nObjectDisposedException will be thrown"
+      },
+      "correct_answer": "A"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the output of the following code using the dynamic type?",
+      "options": {
+        "A": "10",
+        "B": "RuntimeBinderException",
+        "C": "MissingMemberException",
+        "D": "Compilation error"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        dynamic value = 5;\n        Console.WriteLine(value.Multiply(2));\n    }\n}"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "When implementing the Factory Pattern in C#, which statement is true?",
+      "options": {
+        "A": "The Factory class must implement an interface to be considered a proper Factory Pattern",
+        "B": "The Factory Pattern requires the use of abstract classes and cannot work with interfaces",
+        "C": "The Factory Pattern hides the instantiation logic and creates objects without exposing creation logic to the client",
+        "D": "Factory Pattern and Builder Pattern are different names for the same design pattern"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What is the output of this code utilizing a simple Factory Pattern implementation?",
+      "options": {
+        "A": "Simple car created\nDefault car type created",
+        "B": "Simple car created",
+        "C": "Luxury car created",
+        "D": "Default car type created"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic interface ICar\n{\n    void Display();\n}\n\npublic class SimpleCar : ICar\n{\n    public void Display()\n    {\n        Console.WriteLine(\"Simple car created\");\n    }\n}\n\npublic class LuxuryCar : ICar\n{\n    public void Display()\n    {\n        Console.WriteLine(\"Luxury car created\");\n    }\n}\n\npublic class CarFactory\n{\n    public ICar CreateCar(string carType)\n    {\n        switch (carType.ToLower())\n        {\n            case \"simple\":\n                return new SimpleCar();\n            case \"luxury\":\n                return new LuxuryCar();\n            default:\n                return null;\n        }\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        CarFactory factory = new CarFactory();\n        ICar car = factory.CreateCar(\"simple\");\n        car.Display();\n    }\n}"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "Which of the following correctly describes the Adapter Pattern in C#?",
+      "options": {
+        "A": "A pattern that helps control object creation based on conditions",
+        "B": "A pattern that allows incompatible interfaces to work together by creating a wrapper with a compatible interface",
+        "C": "A pattern that restricts instantiation of a class to only one object",
+        "D": "A pattern that enables communication between objects without them explicitly referring to each other"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code which implements the Adapter Pattern?",
+      "options": {
+        "A": "Processing JSON data: {\"name\":\"test\"}",
+        "B": "Adapting XML to JSON format\nProcessing JSON data: {\"name\":\"test\"}",
+        "C": "XML processing error",
+        "D": "Adapting XML to JSON format\nProcessing XML data: <name>test</name>"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\n// Target interface expected by the client\npublic interface IJsonProcessor\n{\n    void ProcessJson(string jsonData);\n}\n\n// The class that actually processes JSON data\npublic class JsonProcessor : IJsonProcessor\n{\n    public void ProcessJson(string jsonData)\n    {\n        Console.WriteLine($\"Processing JSON data: {jsonData}\");\n    }\n}\n\n// The class with an incompatible interface\npublic class XmlProcessor\n{\n    public void ProcessXml(string xmlData)\n    {\n        Console.WriteLine($\"Processing XML data: {xmlData}\");\n    }\n}\n\n// Adapter to make XmlProcessor compatible with IJsonProcessor\npublic class XmlToJsonAdapter : IJsonProcessor\n{\n    private readonly XmlProcessor _xmlProcessor;\n\n    public XmlToJsonAdapter(XmlProcessor xmlProcessor)\n    {\n        _xmlProcessor = xmlProcessor;\n    }\n\n    public void ProcessJson(string jsonData)\n    {\n        Console.WriteLine(\"Adapting XML to JSON format\");\n        // In a real scenario, this would convert JSON to XML\n        // For this example, we'll just pass the data through\n        _jsonProcessor.ProcessJson(jsonData);\n    }\n\n    // For demonstration purposes only\n    private readonly JsonProcessor _jsonProcessor = new JsonProcessor();\n}\n\nclass Program\n{\n    static void Main()\n    {\n        XmlProcessor xmlProcessor = new XmlProcessor();\n        IJsonProcessor adapter = new XmlToJsonAdapter(xmlProcessor);\n        \n        // Client code works with the adapter\n        adapter.ProcessJson(\"{\\\"name\\\":\\\"test\\\"}\");\n    }\n}"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Which statement about RabbitMQ in a .NET application is correct?",
+      "options": {
+        "A": "RabbitMQ is a NoSQL database specifically designed for .NET applications",
+        "B": "RabbitMQ requires Entity Framework to function properly in .NET Core",
+        "C": "RabbitMQ is a message broker that implements Advanced Message Queuing Protocol (AMQP)",
+        "D": "RabbitMQ can only handle synchronous communication in .NET applications"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "Which configuration correctly enables CORS in an ASP.NET Core application to allow requests only from 'https://trusted-site.com' with specific headers and methods?",
+      "options": {
+        "A": "services.AddCors();\napp.UseCors(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());",
+        "B": "services.AddCors();\napp.UseCors(policy => policy.WithOrigins(\"https://trusted-site.com\").WithHeaders(\"Content-Type\", \"Authorization\").WithMethods(\"GET\", \"POST\"));",
+        "C": "services.AddCors(options => { options.AddDefaultPolicy(policy => policy.AllowAnyOrigin()); });\napp.UseCors();",
+        "D": "app.UseCors(\"CustomPolicy\");\nservices.AddCors(options => { options.AddPolicy(\"CustomPolicy\", builder => builder.WithOrigins(\"https://trusted-site.com\")); });"
+      },
+      "correct_answer": "B",
+      "code_example": "public void ConfigureServices(IServiceCollection services)\n{\n    services.AddControllers();\n    \n    services.AddCors();\n    // Or specific policy configuration:\n    // services.AddCors(options =>\n    // {\n    //     options.AddPolicy(\"TrustedSitesPolicy\", policy =>\n    //     {\n    //         policy.WithOrigins(\"https://trusted-site.com\")\n    //              .WithHeaders(\"Content-Type\", \"Authorization\")\n    //              .WithMethods(\"GET\", \"POST\");\n    //     });\n    // });\n}\n\npublic void Configure(IApplicationBuilder app, IWebHostEnvironment env)\n{\n    // Other middleware configurations...\n    \n    app.UseRouting();\n    \n    // CORS must be configured between UseRouting and UseEndpoints\n    app.UseCors(policy => policy\n        .WithOrigins(\"https://trusted-site.com\")\n        .WithHeaders(\"Content-Type\", \"Authorization\")\n        .WithMethods(\"GET\", \"POST\"));\n    \n    // Or using a named policy:\n    // app.UseCors(\"TrustedSitesPolicy\");\n    \n    app.UseEndpoints(endpoints =>\n    {\n        endpoints.MapControllers();\n    });\n}"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code related to stack and heap allocation?",
+      "options": {
+        "A": "Value Type: 10\nReference Type: 20",
+        "B": "Value Type: 10\nReference Type: 10",
+        "C": "Value Type: 20\nReference Type: 20",
+        "D": "Value Type: 20\nReference Type: 10"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        // Value type - stored on stack\n        int valueType = 10;\n        \n        // Reference type - reference on stack, object on heap\n        MyClass refType = new MyClass { Value = 10 };\n        \n        ModifyValues(valueType, refType);\n        \n        Console.WriteLine($\"Value Type: {valueType}\");\n        Console.WriteLine($\"Reference Type: {refType.Value}\");\n    }\n    \n    static void ModifyValues(int value, MyClass reference)\n    {\n        value = 20; // Modifies copy of the value\n        reference.Value = 20; // Modifies the actual object on heap\n    }\n}\n\nclass MyClass\n{\n    public int Value { get; set; }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "Which of the following statements about JWT authentication in ASP.NET Core is correct?",
+      "options": {
+        "A": "JWT tokens cannot store user claims and must be used with a separate claims store",
+        "B": "JWT tokens are encrypted by default and cannot be read without the server's private key",
+        "C": "JWT tokens are digitally signed to verify their authenticity but their content can be read without decryption",
+        "D": "JWT authentication requires a persistent connection to the authentication server for each request"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What does the HTTP status code 400 represent in an ASP.NET Core Web API?",
+      "options": {
+        "A": "The server has encountered a situation it doesn't know how to handle",
+        "B": "The request was successful and the resource was created",
+        "C": "The requested resource was not found on the server",
+        "D": "The server cannot process the request due to a client error (e.g., malformed request syntax)"
+      },
+      "correct_answer": "D",
+      "code_example": "using Microsoft.AspNetCore.Mvc;\n\n[ApiController]\n[Route(\"api/[controller]\")]\npublic class UsersController : ControllerBase\n{\n    [HttpPost]\n    public IActionResult CreateUser(UserDto userDto)\n    {\n        if (string.IsNullOrEmpty(userDto.Username))\n        {\n            return BadRequest(\"Username is required\"); // Returns 400 Bad Request\n        }\n        \n        if (userDto.Age < 18)\n        {\n            return BadRequest(\"Age must be 18 or older\"); // Returns 400 Bad Request\n        }\n        \n        // Process valid request\n        return CreatedAtAction(nameof(GetUser), new { id = 1 }, userDto); // Returns 201 Created\n    }\n    \n    [HttpGet(\"{id}\")]\n    public IActionResult GetUser(int id)\n    {\n        var user = FindUser(id);\n        \n        if (user == null)\n        {\n            return NotFound(); // Returns 404 Not Found\n        }\n        \n        return Ok(user); // Returns 200 OK\n    }\n    \n    private object FindUser(int id)\n    {\n        // Simulated user lookup\n        return id == 1 ? new { Id = 1, Username = \"user1\" } : null;\n    }\n}\n\npublic class UserDto\n{\n    public string Username { get; set; }\n    public int Age { get; set; }\n}"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing the Mediator Pattern?",
+      "options": {
+        "A": "OrderPlaced event received: Order #12345",
+        "B": "NotificationService: Order #12345 placed\nEmailService: Order confirmation sent for Order #12345",
+        "C": "MediatorException: No handler registered for event type",
+        "D": "NotificationService: Order #12345 placed"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Collections.Generic;\n\n// Event interface\npublic interface IEvent { }\n\n// Concrete event\npublic class OrderPlacedEvent : IEvent\n{\n    public string OrderId { get; }\n\n    public OrderPlacedEvent(string orderId)\n    {\n        OrderId = orderId;\n    }\n}\n\n// Event handler interface\npublic interface IEventHandler<T> where T : IEvent\n{\n    void Handle(T @event);\n}\n\n// Concrete handlers\npublic class NotificationService : IEventHandler<OrderPlacedEvent>\n{\n    public void Handle(OrderPlacedEvent @event)\n    {\n        Console.WriteLine($\"NotificationService: Order #{@event.OrderId} placed\");\n    }\n}\n\npublic class EmailService : IEventHandler<OrderPlacedEvent>\n{\n    public void Handle(OrderPlacedEvent @event)\n    {\n        Console.WriteLine($\"EmailService: Order confirmation sent for Order #{@event.OrderId}\");\n    }\n}\n\n// Mediator\npublic class EventMediator\n{\n    private readonly Dictionary<Type, List<object>> _handlers = new Dictionary<Type, List<object>>();\n\n    public void Register<T>(IEventHandler<T> handler) where T : IEvent\n    {\n        var eventType = typeof(T);\n        if (!_handlers.ContainsKey(eventType))\n        {\n            _handlers[eventType] = new List<object>();\n        }\n        _handlers[eventType].Add(handler);\n    }\n\n    public void Publish<T>(T @event) where T : IEvent\n    {\n        var eventType = @event.GetType();\n        if (_handlers.ContainsKey(eventType))\n        {\n            foreach (var handler in _handlers[eventType])\n            {\n                ((IEventHandler<T>)handler).Handle(@event);\n            }\n        }\n    }\n}\n\n// Usage\nclass Program\n{\n    static void Main()\n    {\n        var mediator = new EventMediator();\n        \n        // Register handlers\n        mediator.Register<OrderPlacedEvent>(new NotificationService());\n        mediator.Register<OrderPlacedEvent>(new EmailService());\n        \n        // Publish event\n        mediator.Publish(new OrderPlacedEvent(\"12345\"));\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a feature of SignalR in ASP.NET Core?",
+      "options": {
+        "A": "Automatic reconnection when connections are lost",
+        "B": "Fallback to long polling when WebSockets aren't available",
+        "C": "Persistent server-to-client and client-to-server connections",
+        "D": "Guaranteed message ordering with built-in message sequencing"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using readonly struct?",
+      "options": {
+        "A": "X: 10, Y: 20\nX: 10, Y: 20",
+        "B": "X: 10, Y: 20\nX: 5, Y: 15",
+        "C": "X: 5, Y: 15\nX: 5, Y: 15",
+        "D": "Compilation error: Cannot modify readonly struct members"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\npublic readonly struct Point\n{\n    public readonly int X { get; }\n    public readonly int Y { get; }\n\n    public Point(int x, int y)\n    {\n        X = x;\n        Y = y;\n    }\n\n    public override string ToString() => $\"X: {X}, Y: {Y}\";\n\n    // Returns a new instance with modified values\n    public Point WithX(int newX) => new Point(newX, Y);\n    public Point WithY(int newY) => new Point(X, newY);\n}\n\nclass Program\n{\n    static void Main()\n    {\n        Point p1 = new Point(10, 20);\n        Console.WriteLine(p1);\n        \n        // Since Point is readonly, this creates a new instance\n        // without modifying the original\n        Point p2 = p1.WithX(5).WithY(15);\n        \n        // Original point remains unchanged\n        Console.WriteLine(p1);\n    }\n}"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that implements the Singleton Pattern?",
+      "options": {
+        "A": "Logger Instance #1: 1\nLogger Instance #2: 2",
+        "B": "Logger Instance #1: 1\nLogger Instance #2: 1",
+        "C": "Logger Instance #1: 1\nLogger Instance #1: 2",
+        "D": "ThreadSafetyException: Multiple instances created"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic sealed class Logger\n{\n    private static readonly Lazy<Logger> _instance = new Lazy<Logger>(() => new Logger());\n    private int _logCount = 0;\n\n    private Logger()\n    {\n        // Private constructor prevents direct instantiation\n    }\n\n    public static Logger Instance => _instance.Value;\n\n    public int Log(string message)\n    {\n        // Simplified logging - just increment the count\n        return ++_logCount;\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        // Get the singleton instance\n        Logger logger1 = Logger.Instance;\n        int count1 = logger1.Log(\"This is a log message\");\n        Console.WriteLine($\"Logger Instance #1: {count1}\");\n\n        // Try to get another instance - should be the same\n        Logger logger2 = Logger.Instance;\n        int count2 = logger2.Log(\"This is another log message\");\n        Console.WriteLine($\"Logger Instance #2: {count2}\");\n    }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using ArrayPool<T>?",
+      "options": {
+        "A": "Allocated size: 16\nFirst element: 10",
+        "B": "Allocated size: 8\nFirst element: 10",
+        "C": "Allocated size: 8\nFirst element: 0",
+        "D": "InvalidOperationException: Pool has been exhausted"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Buffers;\n\nclass Program\n{\n    static void Main()\n    {\n        // Request an array of at least 5 integers from the shared pool\n        ArrayPool<int> pool = ArrayPool<int>.Shared;\n        int[] rentedArray = pool.Rent(5);\n        \n        try\n        {\n            // The pool might return a larger array than requested\n            Console.WriteLine($\"Allocated size: {rentedArray.Length}\");\n            \n            // Use the rented array\n            rentedArray[0] = 10;\n            Console.WriteLine($\"First element: {rentedArray[0]}\");\n            \n            // Important: Clear sensitive data before returning to pool\n            Array.Clear(rentedArray, 0, rentedArray.Length);\n        }\n        finally\n        {\n            // Always return the array to the pool when done\n            pool.Return(rentedArray);\n        }\n    }\n}"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which statement about the Repository Pattern in C# is NOT correct?",
+      "options": {
+        "A": "It abstracts the data access logic from the rest of the application",
+        "B": "It makes the application more testable by allowing mocking of data access",
+        "C": "It must always implement the Unit of Work pattern to maintain database consistency",
+        "D": "It promotes separation of concerns by isolating data access code"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
