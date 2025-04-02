@@ -1,0 +1,659 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "if-else",
+      "question": "What will be the output of the following code?",
+      "code_example": "int x = 10;\nif (x > 5)\n    Console.WriteLine(\"Greater\");\nelse if (x > 8)\n    Console.WriteLine(\"Also Greater\");\nelse\n    Console.WriteLine(\"Smaller\");",
+      "options": {
+        "A": "Greater",
+        "B": "Also Greater",
+        "C": "Smaller",
+        "D": "No output"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "Implicit vs. explicit casting",
+      "question": "Which of the following conversions requires an explicit cast?",
+      "options": {
+        "A": "int to long",
+        "B": "long to int",
+        "C": "float to double",
+        "D": "char to int"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "Custom exceptions",
+      "question": "What will be the output of the following code?",
+      "code_example": "class CustomException : Exception\n{\n    public CustomException(string message) : base(message) { }\n}\n\ntry\n{\n    throw new CustomException(\"Custom error\");\n}\ncatch (CustomException ex)\n{\n    Console.WriteLine(\"Caught: \" + ex.Message);\n}\ncatch (Exception ex)\n{\n    Console.WriteLine(\"General: \" + ex.Message);\n}",
+      "options": {
+        "A": "Caught: Custom error",
+        "B": "General: Custom error",
+        "C": "Custom error",
+        "D": "The code will crash with an unhandled exception"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "Value types",
+      "question": "What will be the output of the following code?",
+      "code_example": "struct Point\n{\n    public int X;\n    public int Y;\n}\n\nPoint p1 = new Point { X = 10, Y = 20 };\nPoint p2 = p1;\np2.X = 30;\n\nConsole.WriteLine($\"{p1.X}, {p2.X}\");",
+      "options": {
+        "A": "10, 10",
+        "B": "30, 30",
+        "C": "10, 30",
+        "D": "30, 10"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "StreamReader, StreamWriter",
+      "question": "Which of the following statements about StreamReader and StreamWriter is correct?",
+      "options": {
+        "A": "StreamReader is used for writing text to files and StreamWriter is used for reading text from files",
+        "B": "Both StreamReader and StreamWriter implement the IDisposable interface and should be used with 'using' statements",
+        "C": "StreamReader.ReadLine() returns null when it reaches the beginning of the file",
+        "D": "StreamWriter automatically flushes the buffer after each Write operation by default"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "break, continue, goto",
+      "question": "What will be the output of the following code?",
+      "code_example": "for (int i = 0; i < 5; i++)\n{\n    if (i == 1)\n        continue;\n    if (i == 3)\n        break;\n    Console.Write(i);\n}",
+      "options": {
+        "A": "0124",
+        "B": "024",
+        "C": "013",
+        "D": "012"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "Function Overloading",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Calculator\n{\n    public int Add(int a, int b) { return a + b; }\n    public double Add(double a, double b) { return a + b; }\n}\n\nCalculator calc = new Calculator();\nConsole.WriteLine(calc.Add(5, 10));\nConsole.WriteLine(calc.Add(5.5, 10.5));",
+      "options": {
+        "A": "15\n16.0",
+        "B": "15\n16",
+        "C": "15\n16.5",
+        "D": "15.0\n16.0"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "Creating and instantiating objects",
+      "question": "Which of the following is NOT a valid way to instantiate a List<string> in C#?",
+      "options": {
+        "A": "List<string> list = new List<string>();",
+        "B": "var list = new List<string>();",
+        "C": "List<string> list = new();",
+        "D": "List<string> list = List<string>();"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Nullable types",
+      "question": "What will be the output of the following code?",
+      "code_example": "int? nullableInt = null;\nint regularInt = nullableInt ?? 10;\nConsole.WriteLine(regularInt);",
+      "options": {
+        "A": "null",
+        "B": "0",
+        "C": "10",
+        "D": "The code will produce a compilation error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Access Modifiers",
+      "question": "Which access modifier allows a class member to be accessed by any code in the same assembly or assemblies that specifically reference it?",
+      "options": {
+        "A": "public",
+        "B": "private",
+        "C": "protected",
+        "D": "internal"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "String Interpolation",
+      "question": "What will be the output of the following code?",
+      "code_example": "string name = \"Alice\";\nint age = 30;\nConsole.WriteLine($\"{name} is {age + 5} years old\");",
+      "options": {
+        "A": "{name} is {age + 5} years old",
+        "B": "Alice is 30 + 5 years old",
+        "C": "Alice is 35 years old",
+        "D": "Alice is age + 5 years old"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "Multi-dimensional arrays",
+      "question": "What will be the output of the following code?",
+      "code_example": "int[,] grid = new int[2, 3];\ngrid[0, 0] = 1;\ngrid[0, 1] = 2;\ngrid[0, 2] = 3;\ngrid[1, 0] = 4;\ngrid[1, 1] = 5;\ngrid[1, 2] = 6;\n\nConsole.WriteLine(grid.Length);\nConsole.WriteLine(grid.GetLength(0));\nConsole.WriteLine(grid.GetLength(1));",
+      "options": {
+        "A": "6\n2\n3",
+        "B": "6\n3\n2",
+        "C": "2\n3\n6",
+        "D": "3\n2\n6"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "LINQ methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar result = numbers.Where(n => n > 2)\n                    .Select(n => n * 2)\n                    .OrderByDescending(n => n);\n\nforeach (var item in result)\n{\n    Console.Write(item + \" \");\n}",
+      "options": {
+        "A": "6 8 10",
+        "B": "10 8 6",
+        "C": "3 4 5",
+        "D": "5 4 3"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "Named Parameters",
+      "question": "What will be the output of the following code?",
+      "code_example": "void PrintCoordinates(int x = 0, int y = 0)\n{\n    Console.WriteLine($\"X: {x}, Y: {y}\");\n}\n\nPrintCoordinates(y: 20, x: 10);",
+      "options": {
+        "A": "X: 0, Y: 0",
+        "B": "X: 10, Y: 20",
+        "C": "X: 20, Y: 10",
+        "D": "The code will produce a compilation error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "Properties",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Person\n{\n    private string _name;\n    \n    public string Name\n    {\n        get { return _name ?? \"Unknown\"; }\n        set { _name = value; }\n    }\n}\n\nPerson person = new Person();\nConsole.WriteLine(person.Name);",
+      "options": {
+        "A": "\"\"",
+        "B": "null",
+        "C": "Unknown",
+        "D": "The code will throw a NullReferenceException"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "Constructor overloading",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Car\n{\n    private string _make;\n    private string _model;\n    \n    public Car()\n    {\n        _make = \"Unknown\";\n        _model = \"Unknown\";\n    }\n    \n    public Car(string make) : this()\n    {\n        _make = make;\n    }\n    \n    public Car(string make, string model) : this(make)\n    {\n        _model = model;\n    }\n    \n    public override string ToString()\n    {\n        return $\"{_make} {_model}\";\n    }\n}\n\nCar car = new Car(\"Toyota\");\nConsole.WriteLine(car);",
+      "options": {
+        "A": "Toyota",
+        "B": "Toyota Unknown",
+        "C": "Unknown Unknown",
+        "D": "Unknown Toyota"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Migrations",
+      "question": "In Entity Framework Core, which of the following best describes the purpose of the 'Add-Migration' command?",
+      "options": {
+        "A": "It creates a new database with all the tables defined in your DbContext",
+        "B": "It updates the database schema to match your current model",
+        "C": "It creates a file with code to transform your database schema from its current state to match your model",
+        "D": "It reverts the last migration applied to the database"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "virtual, override, sealed, abstract",
+      "question": "What will be the output of the following code?",
+      "code_example": "abstract class Animal\n{\n    public virtual void MakeSound()\n    {\n        Console.WriteLine(\"Animal sound\");\n    }\n    \n    public abstract void Move();\n}\n\nclass Dog : Animal\n{\n    public sealed override void MakeSound()\n    {\n        Console.WriteLine(\"Woof\");\n    }\n    \n    public override void Move()\n    {\n        Console.WriteLine(\"Running\");\n    }\n}\n\nclass Puppy : Dog\n{\n    public new void MakeSound()\n    {\n        Console.WriteLine(\"Small woof\");\n    }\n}\n\nAnimal animal = new Puppy();\nanimal.MakeSound();",
+      "options": {
+        "A": "Animal sound",
+        "B": "Woof",
+        "C": "Small woof",
+        "D": "The code will produce a compilation error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "GC.Collect()",
+      "question": "Which of the following statements about GC.Collect() is correct?",
+      "options": {
+        "A": "It should be called frequently in production code to ensure optimal memory usage",
+        "B": "It forces immediate garbage collection of all generations",
+        "C": "It guarantees that all objects with finalizers will be finalized",
+        "D": "It has no negative impact on application performance"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "Anonymous methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };\n\nFindNumbers(numbers, delegate(int num) { return num % 2 == 0; });\n\nvoid FindNumbers(List<int> nums, Func<int, bool> filter)\n{\n    foreach (var num in nums)\n    {\n        if (filter(num))\n            Console.Write(num + \" \");\n    }\n}",
+      "options": {
+        "A": "1 2 3 4 5",
+        "B": "1 3 5",
+        "C": "2 4",
+        "D": "No output"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "Property Injection",
+      "question": "Which of the following is an example of Property Injection in Dependency Injection patterns?",
+      "code_example": "// Option A\npublic class UserService\n{\n    private readonly IUserRepository _repository;\n\n    public UserService(IUserRepository repository)\n    {\n        _repository = repository;\n    }\n}\n\n// Option B\npublic class UserService\n{\n    public IUserRepository Repository { get; set; }\n}\n\n// Option C\npublic class UserService\n{\n    private readonly IUserRepository _repository;\n\n    public void SetRepository(IUserRepository repository)\n    {\n        _repository = repository;\n    }\n}\n\n// Option D\npublic class UserService\n{\n    public UserService()\n    {\n        Repository = new UserRepository();\n    }\n\n    public IUserRepository Repository { get; }\n}",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "Read-only properties",
+      "question": "What will be the output of the following code?",
+      "code_example": "class User\n{\n    public string Username { get; }\n    public string Email { get; private set; }\n    \n    public User(string username, string email)\n    {\n        Username = username;\n        Email = email;\n    }\n    \n    public void UpdateEmail(string newEmail)\n    {\n        Email = newEmail;\n    }\n    \n    public void UpdateUsername(string newUsername)\n    {\n        // Username = newUsername; // This line is commented out\n    }\n}\n\nUser user = new User(\"john_doe\", \"john@example.com\");\nuser.UpdateEmail(\"new_john@example.com\");\n// user.Email = \"another@example.com\"; // This line is commented out\nConsole.WriteLine($\"Username: {user.Username}, Email: {user.Email}\");",
+      "options": {
+        "A": "Username: john_doe, Email: john@example.com",
+        "B": "Username: john_doe, Email: new_john@example.com",
+        "C": "Username: john_doe, Email: another@example.com",
+        "D": "The code will produce a compilation error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "EventArgs pattern",
+      "question": "What will be the output of the following code?",
+      "code_example": "class CustomEventArgs : EventArgs\n{\n    public string Message { get; }\n    \n    public CustomEventArgs(string message)\n    {\n        Message = message;\n    }\n}\n\nclass Publisher\n{\n    public event EventHandler<CustomEventArgs> OnEvent;\n    \n    public void RaiseEvent(string message)\n    {\n        OnEvent?.Invoke(this, new CustomEventArgs(message));\n    }\n}\n\nclass Subscriber\n{\n    public void Subscribe(Publisher publisher)\n    {\n        publisher.OnEvent += HandleEvent;\n    }\n    \n    private void HandleEvent(object sender, CustomEventArgs e)\n    {\n        Console.WriteLine($\"Received: {e.Message}\");\n    }\n}\n\nPublisher publisher = new Publisher();\nSubscriber subscriber = new Subscriber();\nsubscriber.Subscribe(publisher);\npublisher.RaiseEvent(\"Hello World\");",
+      "options": {
+        "A": "Received: Hello World",
+        "B": "Hello World",
+        "C": "No output",
+        "D": "The code will throw a NullReferenceException"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "Dependency Injection in Testing",
+      "question": "Which of the following is a primary benefit of using Dependency Injection in unit testing?",
+      "options": {
+        "A": "It eliminates the need for unit tests",
+        "B": "It allows tests to run faster by caching dependencies",
+        "C": "It allows dependencies to be replaced with test doubles (mocks/stubs)",
+        "D": "It automatically generates test cases based on injected dependencies"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Custom Middleware",
+      "question": "What will be the result of the following middleware code?",
+      "code_example": "app.Use(async (context, next) =>\n{\n    Console.WriteLine(\"Middleware 1: Before\");\n    await next();\n    Console.WriteLine(\"Middleware 1: After\");\n});\n\napp.Use(async (context, next) =>\n{\n    Console.WriteLine(\"Middleware 2: Before\");\n    // Notice: next() is not called here\n    Console.WriteLine(\"Middleware 2: After\");\n});\n\napp.Use(async (context, next) =>\n{\n    Console.WriteLine(\"Middleware 3: Before\");\n    await next();\n    Console.WriteLine(\"Middleware 3: After\");\n});\n\n// When a request is processed, what will be printed?",
+      "options": {
+        "A": "Middleware 1: Before\nMiddleware 1: After",
+        "B": "Middleware 1: Before\nMiddleware 2: Before\nMiddleware 2: After\nMiddleware 1: After",
+        "C": "Middleware 1: Before\nMiddleware 2: Before\nMiddleware 2: After\nMiddleware 3: Before\nMiddleware 3: After\nMiddleware 1: After",
+        "D": "Middleware 1: Before\nMiddleware 2: Before\nMiddleware 3: Before\nMiddleware 3: After\nMiddleware 2: After\nMiddleware 1: After"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "Dispose() vs. Finalize()",
+      "question": "Which of the following statements about Dispose() and Finalize() is correct?",
+      "options": {
+        "A": "Dispose() is automatically called by the garbage collector",
+        "B": "Finalize() must be explicitly called by the developer",
+        "C": "Dispose() is typically used to release unmanaged resources",
+        "D": "Finalize() is guaranteed to be called immediately when an object goes out of scope"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "Declaring events",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Button\n{\n    public event EventHandler Clicked;\n    \n    public void Click()\n    {\n        Console.WriteLine(\"Button clicked\");\n        Clicked?.Invoke(this, EventArgs.Empty);\n    }\n}\n\nvoid HandleClick(object sender, EventArgs args)\n{\n    Console.WriteLine(\"Click handled\");\n}\n\nButton button = new Button();\nbutton.Click();\nbutton.Clicked += HandleClick;\nbutton.Click();",
+      "options": {
+        "A": "Button clicked\nButton clicked\nClick handled",
+        "B": "Button clicked\nClick handled\nButton clicked\nClick handled",
+        "C": "Button clicked\nClick handled",
+        "D": "Button clicked\nButton clicked"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "Test-driven development",
+      "question": "Which of the following best describes the correct sequence in Test-Driven Development (TDD)?",
+      "options": {
+        "A": "Write code, write tests, refactor code",
+        "B": "Write tests, write code that passes the tests, refactor code",
+        "C": "Refactor code, write tests, write more code",
+        "D": "Write code, refactor code, write tests"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "Deferred Execution",
+      "question": "What will be the output of the following code?",
+      "code_example": "List<int> numbers = new List<int> { 1, 2, 3 };\n\nvar query = numbers.Where(n => n > 1);\n\nnumbers.Add(4);\n\nforeach (var num in query)\n{\n    Console.Write(num + \" \");\n}",
+      "options": {
+        "A": "2 3",
+        "B": "2 3 4",
+        "C": "1 2 3 4",
+        "D": "No output"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "xUnit / NUnit Basics",
+      "question": "What is the correct way to assert that a method throws an exception in xUnit?",
+      "code_example": "// Method to test\npublic void DivideByZero()\n{\n    int x = 5 / 0;\n}\n\n// Test options:\n// Option A\n[Fact]\npublic void Test_DivideByZero_A()\n{\n    var ex = Assert.Throws<DivideByZeroException>(() => DivideByZero());\n}\n\n// Option B\n[Fact]\npublic void Test_DivideByZero_B()\n{\n    Assert.Throws(typeof(DivideByZeroException), () => DivideByZero());\n}\n\n// Option C\n[Fact]\npublic void Test_DivideByZero_C()\n{\n    try\n    {\n        DivideByZero();\n        Assert.False(true, \"Expected exception was not thrown\");\n    }\n    catch (DivideByZeroException)\n    {\n        Assert.True(true);\n    }\n}\n\n// Option D\n[Fact]\n[ExpectedException(typeof(DivideByZeroException))]\npublic void Test_DivideByZero_D()\n{\n    DivideByZero();\n}",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "HTTP Attributes",
+      "question": "Which of the following accurately describes the purpose of the [HttpGet] and [HttpPost] attributes in ASP.NET Core?",
+      "options": {
+        "A": "They specify which HTTP methods a controller action can respond to",
+        "B": "They are used to control caching behavior for GET and POST requests",
+        "C": "They specify the return type of controller actions",
+        "D": "They are used to validate incoming request data"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "Mocking with Moq",
+      "question": "What will be the result of the following test code using Moq?",
+      "code_example": "// Interface\npublic interface IUserRepository\n{\n    User GetById(int id);\n}\n\n// Service\npublic class UserService\n{\n    private readonly IUserRepository _repository;\n    \n    public UserService(IUserRepository repository)\n    {\n        _repository = repository;\n    }\n    \n    public string GetUserNameById(int id)\n    {\n        var user = _repository.GetById(id);\n        return user?.Name ?? \"Unknown\";\n    }\n}\n\n// Test\n[Fact]\npublic void GetUserNameById_UserExists_ReturnsName()\n{\n    // Arrange\n    var mockRepo = new Mock<IUserRepository>();\n    mockRepo.Setup(repo => repo.GetById(It.IsAny<int>()))\n            .Returns((int id) => id == 1 ? new User { Id = 1, Name = \"John\" } : null);\n    \n    var service = new UserService(mockRepo.Object);\n    \n    // Act\n    var result = service.GetUserNameById(2);\n    \n    // Assert\n    Assert.Equal(\"John\", result);\n}",
+      "options": {
+        "A": "The test will pass",
+        "B": "The test will fail with the message 'Expected: John, Actual: Unknown'",
+        "C": "The test will fail with a NullReferenceException",
+        "D": "The test code will not compile"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "topic": "Factory Pattern",
+      "question": "Which of the following best describes the purpose of the Factory Pattern in C#?",
+      "options": {
+        "A": "To create multiple instances of a class in a single operation",
+        "B": "To provide an interface for creating objects without specifying their concrete classes",
+        "C": "To ensure that a class has only one instance and provide a global point of access to it",
+        "D": "To allow an object to alter its behavior when its internal state changes"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "topic": "Factory Pattern",
+      "question": "What will be the output of the following code that uses a Factory Pattern?",
+      "code_example": "using System;\n\npublic interface IProduct\n{\n    string Operation();\n}\n\npublic class ConcreteProductA : IProduct\n{\n    public string Operation() => \"Result of ConcreteProductA\";\n}\n\npublic class ConcreteProductB : IProduct\n{\n    public string Operation() => \"Result of ConcreteProductB\";\n}\n\npublic abstract class Creator\n{\n    public abstract IProduct FactoryMethod();\n    \n    public string SomeOperation()\n    {\n        var product = FactoryMethod();\n        return $\"Creator: {product.Operation()}\";\n    }\n}\n\npublic class ConcreteCreatorA : Creator\n{\n    public override IProduct FactoryMethod() => new ConcreteProductA();\n}\n\npublic class ConcreteCreatorB : Creator\n{\n    public override IProduct FactoryMethod() => new ConcreteProductB();\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        Creator creator = new ConcreteCreatorB();\n        Console.WriteLine(creator.SomeOperation());\n    }\n}",
+      "options": {
+        "A": "Creator: Result of ConcreteProductA",
+        "B": "Creator: Result of ConcreteProductB",
+        "C": "Result of ConcreteProductB",
+        "D": "Compilation error: Cannot instantiate abstract class 'Creator'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "topic": "JWT Authentication",
+      "question": "Which of the following statements about JWT (JSON Web Token) authentication in ASP.NET Core is correct?",
+      "options": {
+        "A": "JWT tokens are always encrypted by default, ensuring secure transmission of claims",
+        "B": "JWT tokens cannot contain custom claims beyond the standard ones",
+        "C": "JWT tokens are stateless and don't require server-side storage for validation",
+        "D": "JWT tokens can only be used with the OAuth 2.0 protocol"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "topic": "String Interning",
+      "question": "What will be the output of the following code related to string interning?",
+      "code_example": "using System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        string s1 = \"Hello\";\n        string s2 = \"Hel\" + \"lo\";\n        string s3 = \"Hel\";\n        s3 += \"lo\";\n        string s4 = string.Intern(s3);\n        \n        Console.WriteLine($\"s1 == s2: {object.ReferenceEquals(s1, s2)}\");\n        Console.WriteLine($\"s1 == s3: {object.ReferenceEquals(s1, s3)}\");\n        Console.WriteLine($\"s1 == s4: {object.ReferenceEquals(s1, s4)}\");\n    }\n}",
+      "options": {
+        "A": "s1 == s2: True\ns1 == s3: True\ns1 == s4: True",
+        "B": "s1 == s2: True\ns1 == s3: False\ns1 == s4: True",
+        "C": "s1 == s2: False\ns1 == s3: False\ns1 == s4: True",
+        "D": "s1 == s2: True\ns1 == s3: False\ns1 == s4: False"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "topic": "P/Invoke (DllImport)",
+      "question": "What will be the output of the following code that uses P/Invoke?",
+      "code_example": "using System;\n\npublic class Program\n{\n    [System.Runtime.InteropServices.DllImport(\"kernel32.dll\")]\n    private static extern IntPtr GetModuleHandle(string lpModuleName);\n    \n    [System.Runtime.InteropServices.DllImport(\"kernel32.dll\", EntryPoint = \"GetModuleHandleW\")]\n    private static extern IntPtr GetModuleHandleW(string lpModuleName);\n    \n    public static void Main()\n    {\n        IntPtr handle1 = GetModuleHandle(null);\n        IntPtr handle2 = GetModuleHandleW(null);\n        \n        Console.WriteLine(handle1 == handle2);\n    }\n}",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "PlatformNotSupportedException will be thrown",
+        "D": "DllNotFoundException will be thrown"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "topic": "Role-based Authentication",
+      "question": "When implementing role-based authentication in ASP.NET Core, which of the following is the MOST secure approach for requiring multiple roles?",
+      "options": {
+        "A": "Using '[Authorize(Roles = \"Admin, Manager\")]' attribute which grants access if the user has either role",
+        "B": "Using multiple '[Authorize(Roles = \"Admin\")]' and '[Authorize(Roles = \"Manager\")]' attributes which requires the user to have both roles",
+        "C": "Using a policy-based approach with requirements that validate the user has all required roles",
+        "D": "Using a JWT token with the 'role' claim containing a comma-separated list of roles"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "topic": "ExpandoObject",
+      "question": "What will be the output of the following code that uses ExpandoObject?",
+      "code_example": "using System;\nusing System.Dynamic;\nusing System.Collections.Generic;\n\npublic class Program\n{\n    public static void Main()\n    {\n        dynamic expando = new ExpandoObject();\n        expando.Name = \"John\";\n        expando.Age = 30;\n        \n        var expandoDict = expando as IDictionary<string, object>;\n        expandoDict[\"Age\"] = 31;\n        expandoDict.Add(\"Address\", \"123 Main St\");\n        \n        try \n        {\n            expandoDict.Add(\"Name\", \"Jane\");\n            Console.WriteLine(\"Addition successful\");\n        } \n        catch (ArgumentException) \n        {\n            Console.WriteLine(\"Key already exists\");\n        }\n        \n        Console.WriteLine($\"{expando.Name}, {expando.Age}, {expando.Address}\");\n    }\n}",
+      "options": {
+        "A": "Addition successful\nJohn, 31, 123 Main St",
+        "B": "Key already exists\nJane, 31, 123 Main St",
+        "C": "Key already exists\nJohn, 31, 123 Main St",
+        "D": "Addition successful\nJane, 31, 123 Main St"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "topic": "Repository Pattern",
+      "question": "Which statement about the Repository Pattern in C# is INCORRECT?",
+      "options": {
+        "A": "The Repository Pattern abstracts the data access logic from business logic",
+        "B": "Repositories should return domain entities rather than data transfer objects (DTOs)",
+        "C": "The Repository Pattern facilitates unit testing by allowing data access code to be mocked",
+        "D": "The Repository Pattern is used to decouple the application from specific data access technologies"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "topic": "Stack vs Heap Allocation",
+      "question": "What will be the output of the following code demonstrating stack and heap allocation?",
+      "code_example": "using System;\n\npublic class Program\n{\n    public struct Point\n    {\n        public int X, Y;\n        \n        public Point(int x, int y)\n        {\n            X = x;\n            Y = y;\n        }\n        \n        public void Update(int x, int y)\n        {\n            X = x;\n            Y = y;\n        }\n    }\n    \n    public class PointRef\n    {\n        public int X, Y;\n        \n        public PointRef(int x, int y)\n        {\n            X = x;\n            Y = y;\n        }\n        \n        public void Update(int x, int y)\n        {\n            X = x;\n            Y = y;\n        }\n    }\n    \n    public static void Main()\n    {\n        Point p1 = new Point(1, 1);\n        PointRef p2 = new PointRef(1, 1);\n        \n        UpdatePoint(p1);\n        UpdatePointRef(p2);\n        \n        Console.WriteLine($\"p1: {p1.X}, {p1.Y}\");\n        Console.WriteLine($\"p2: {p2.X}, {p2.Y}\");\n    }\n    \n    static void UpdatePoint(Point p)\n    {\n        p.Update(2, 2);\n    }\n    \n    static void UpdatePointRef(PointRef p)\n    {\n        p.Update(2, 2);\n    }\n}",
+      "options": {
+        "A": "p1: 1, 1\np2: 1, 1",
+        "B": "p1: 2, 2\np2: 2, 2",
+        "C": "p1: 1, 1\np2: 2, 2",
+        "D": "p1: 2, 2\np2: 1, 1"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "topic": "In-memory Cache (MemoryCache)",
+      "question": "What will be the output of the following code that uses MemoryCache?",
+      "code_example": "using System;\nusing System.Threading;\nusing Microsoft.Extensions.Caching.Memory;\n\npublic class Program\n{\n    public static void Main()\n    {\n        var cache = new MemoryCache(new MemoryCacheOptions());\n        \n        var cacheEntryOptions = new MemoryCacheEntryOptions()\n            .SetAbsoluteExpiration(TimeSpan.FromSeconds(1))\n            .RegisterPostEvictionCallback((key, value, reason, state) =>\n            {\n                Console.WriteLine($\"Evicted: {key}, Reason: {reason}\");\n            });\n        \n        cache.Set(\"key1\", \"value1\", cacheEntryOptions);\n        \n        Console.WriteLine($\"Value exists: {cache.TryGetValue(\"key1\", out var value)}\");\n        Console.WriteLine($\"Value: {value}\");\n        \n        // Wait for expiration\n        Thread.Sleep(1500);\n        \n        Console.WriteLine($\"After expiration - Value exists: {cache.TryGetValue(\"key1\", out value)}\");\n        Console.WriteLine($\"After expiration - Value: {value}\");\n    }\n}",
+      "options": {
+        "A": "Value exists: True\nValue: value1\nEvicted: key1, Reason: Expired\nAfter expiration - Value exists: False\nAfter expiration - Value: ",
+        "B": "Value exists: True\nValue: value1\nAfter expiration - Value exists: False\nAfter expiration - Value: \nEvicted: key1, Reason: Expired",
+        "C": "Value exists: True\nValue: value1\nEvicted: key1, Reason: Expired\nAfter expiration - Value exists: True\nAfter expiration - Value: value1",
+        "D": "Value exists: True\nValue: value1\nAfter expiration - Value exists: False\nAfter expiration - Value: value1"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "topic": "readonly struct",
+      "question": "What will be the output of the following code that uses readonly struct?",
+      "code_example": "using System;\n\npublic class Program\n{\n    public readonly struct ReadOnlyPoint\n    {\n        public readonly int X;\n        public readonly int Y;\n        \n        public ReadOnlyPoint(int x, int y)\n        {\n            X = x;\n            Y = y;\n        }\n        \n        public ReadOnlyPoint WithX(int newX) => new ReadOnlyPoint(newX, Y);\n    }\n    \n    public static void Main()\n    {\n        ReadOnlyPoint p1 = new ReadOnlyPoint(10, 20);\n        ReadOnlyPoint p2 = p1;\n        p2 = p2.WithX(30);\n        \n        Console.WriteLine($\"p1: {p1.X}, {p1.Y}\");\n        Console.WriteLine($\"p2: {p2.X}, {p2.Y}\");\n        Console.WriteLine($\"Same reference: {object.ReferenceEquals(p1, p2)}\");\n        \n        // Create boxed copies\n        object o1 = p1;\n        object o2 = p2;\n        Console.WriteLine($\"Boxed - Same reference: {object.ReferenceEquals(o1, o2)}\");\n    }\n}",
+      "options": {
+        "A": "p1: 10, 20\np2: 30, 20\nSame reference: True\nBoxed - Same reference: False",
+        "B": "p1: 10, 20\np2: 30, 20\nSame reference: False\nBoxed - Same reference: False",
+        "C": "p1: 30, 20\np2: 30, 20\nSame reference: True\nBoxed - Same reference: True",
+        "D": "p1: 10, 20\np2: 30, 20\nSame reference: False\nBoxed - Same reference: True"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "topic": "Indexing in SQL Server",
+      "question": "When designing indexes for a SQL Server database in a C# application using Entity Framework Core, which of the following statements is FALSE?",
+      "options": {
+        "A": "A clustered index determines the physical order of data in a table, and a table can have multiple clustered indexes",
+        "B": "Composite indexes are useful when queries filter on multiple columns together",
+        "C": "The 'Include' clause in an index can add non-key columns to reduce the need for lookups",
+        "D": "Entity Framework Core migrations can be used to create and manage indexes programmatically"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "topic": "CancellationToken",
+      "question": "What will be the output of the following code that uses CancellationToken?",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\npublic class Program\n{\n    public static async Task Main()\n    {\n        using (var cts = new CancellationTokenSource())\n        {\n            CancellationToken token = cts.Token;\n            \n            Task task = Task.Run(async () =>\n            {\n                try\n                {\n                    Console.WriteLine(\"Task started\");\n                    \n                    // Register a callback that runs when cancellation is requested\n                    token.Register(() => Console.WriteLine(\"Cancellation requested\"));\n                    \n                    // Simulate some work\n                    await Task.Delay(5000, token);\n                    \n                    Console.WriteLine(\"Task completed normally\");\n                }\n                catch (OperationCanceledException)\n                {\n                    Console.WriteLine(\"Task was canceled\");\n                }\n                catch (Exception ex)\n                {\n                    Console.WriteLine($\"Exception: {ex.Message}\");\n                }\n            }, token);\n            \n            // Wait a bit, then cancel\n            await Task.Delay(1000);\n            cts.Cancel();\n            \n            try\n            {\n                await task;\n                Console.WriteLine(\"Main: Task completed\");\n            }\n            catch (Exception ex)\n            {\n                Console.WriteLine($\"Main caught: {ex.GetType().Name}\");\n            }\n        }\n    }\n}",
+      "options": {
+        "A": "Task started\nCancellation requested\nTask was canceled\nMain: Task completed",
+        "B": "Task started\nCancellation requested\nTask was canceled\nMain caught: TaskCanceledException",
+        "C": "Task started\nCancellation requested\nException: A task was canceled\nMain: Task completed",
+        "D": "Task started\nTask was canceled\nCancellation requested\nMain caught: OperationCanceledException"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "topic": "lock, Monitor",
+      "question": "What will be the output of the following code that uses lock and Monitor?",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\npublic class Program\n{\n    private static readonly object _lock1 = new object();\n    private static readonly object _lock2 = new object();\n    \n    public static void Main()\n    {\n        Task t1 = Task.Run(() => Method1());\n        Task t2 = Task.Run(() => Method2());\n        \n        Task.WaitAll(t1, t2);\n    }\n    \n    static void Method1()\n    {\n        Console.WriteLine(\"Method1 starting\");\n        \n        bool lockTaken = false;\n        try\n        {\n            Monitor.TryEnter(_lock1, 1000, ref lockTaken);\n            if (lockTaken)\n            {\n                Console.WriteLine(\"Method1 acquired lock1\");\n                Thread.Sleep(500);\n                \n                lock (_lock2)\n                {\n                    Console.WriteLine(\"Method1 acquired lock2\");\n                }\n            }\n            else\n            {\n                Console.WriteLine(\"Method1 couldn't acquire lock1\");\n            }\n        }\n        finally\n        {\n            if (lockTaken)\n            {\n                Monitor.Exit(_lock1);\n                Console.WriteLine(\"Method1 released lock1\");\n            }\n        }\n    }\n    \n    static void Method2()\n    {\n        Console.WriteLine(\"Method2 starting\");\n        \n        lock (_lock2)\n        {\n            Console.WriteLine(\"Method2 acquired lock2\");\n            Thread.Sleep(2000);\n            \n            lock (_lock1)\n            {\n                Console.WriteLine(\"Method2 acquired lock1\");\n            }\n            \n            Console.WriteLine(\"Method2 released locks\");\n        }\n    }\n}",
+      "options": {
+        "A": "A deadlock occurs, and the program never completes",
+        "B": "The output will vary due to race conditions between the threads",
+        "C": "Method1 times out waiting for lock1, Method2 completes normally",
+        "D": "Method2 times out waiting for lock2, Method1 completes normally"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "topic": "Kafka Basics",
+      "question": "Which of the following statements about Apache Kafka when used with C# is INCORRECT?",
+      "options": {
+        "A": "Kafka's 'exactly-once' semantics guarantee that each message is delivered exactly once to consumers",
+        "B": "Kafka uses zookeeper for broker coordination and metadata management",
+        "C": "Confluent.Kafka is the recommended .NET client library for Kafka",
+        "D": "Kafka topics are partitioned and each partition can have multiple consumer groups reading from it simultaneously"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "topic": "Implementing OAuth with IdentityServer4",
+      "question": "When implementing OAuth 2.0 with IdentityServer4 in a C# application, which of the following best describes the role of a Refresh Token?",
+      "options": {
+        "A": "It's used to authenticate users directly without requiring a username and password",
+        "B": "It's used to obtain a new access token after the current one expires, without requiring user re-authentication",
+        "C": "It's used to validate the identity of the client application making the request",
+        "D": "It's used to authorize specific actions within a resource server based on user permissions"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
