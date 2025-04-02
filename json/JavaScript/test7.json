@@ -1,0 +1,646 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "function example() {\n  var x = 10;\n  if (true) {\n    var x = 20;\n    console.log(x);\n  }\n  console.log(x);\n}\nexample();",
+      "options": {
+        "A": "20, 10",
+        "B": "20, 20",
+        "C": "10, 20",
+        "D": "10, 10"
+      },
+      "correct_answer": "B",
+      "topic": "Function scope (global, local, block)"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "function processData(data, callback) {\n  data.value = data.value * 2;\n  callback(data);\n}\n\nlet obj = { value: 5 };\nprocessData(obj, function(result) {\n  console.log(result.value);\n});",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "undefined",
+        "D": "NaN"
+      },
+      "correct_answer": "B",
+      "topic": "Callbacks"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the primary purpose of event.preventDefault() in JavaScript?",
+      "options": {
+        "A": "To stop event propagation to parent elements",
+        "B": "To prevent the default browser behavior associated with an event",
+        "C": "To remove all event listeners from an element",
+        "D": "To prevent memory leaks in event handling"
+      },
+      "correct_answer": "B",
+      "topic": "Prevent default behavior (event.preventDefault())"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "let fruit = 'apple';\nlet result;\n\nswitch (fruit) {\n  case 'banana':\n    result = 'Yellow fruit';\n    break;\n  case 'apple':\n    result = 'Red fruit';\n  case 'kiwi':\n    result = 'Green fruit';\n    break;\n  default:\n    result = 'Unknown fruit';\n}\n\nconsole.log(result);",
+      "options": {
+        "A": "Red fruit",
+        "B": "Green fruit",
+        "C": "Unknown fruit",
+        "D": "undefined"
+      },
+      "correct_answer": "B",
+      "topic": "if-else, switch-case"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which method would be most appropriate for updating the text of a paragraph element while preserving its HTML formatting?",
+      "options": {
+        "A": "element.text()",
+        "B": "element.innerHTML",
+        "C": "element.innerText",
+        "D": "element.textContent"
+      },
+      "correct_answer": "B",
+      "topic": "Changing content (innerHTML, textContent, value)"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(sayHello());\n\nfunction sayHello() {\n  return \"Hello, world!\";\n}\n\nvar sayGoodbye = function() {\n  return \"Goodbye, world!\";\n};\n\nconsole.log(sayGoodbye());",
+      "options": {
+        "A": "Hello, world! Goodbye, world!",
+        "B": "Hello, world! Error: sayGoodbye is not a function",
+        "C": "Error: sayHello is not defined Goodbye, world!",
+        "D": "Error: Cannot access functions before initialization"
+      },
+      "correct_answer": "A",
+      "topic": "Function hoisting"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const obj1 = {};\nconst obj2 = new Object();\n\nobj1.name = 'Object 1';\nobj2.name = 'Object 2';\n\nobj1.greet = function() { return `Hello from ${this.name}`; };\nobj2.greet = function() { return `Hello from ${this.name}`; };\n\nconsole.log(obj1.greet() === obj2.greet());",
+      "options": {
+        "A": "true",
+        "B": "false",
+        "C": "TypeError",
+        "D": "undefined"
+      },
+      "correct_answer": "B",
+      "topic": "Creating objects ({}, new Object())"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Which of the following best describes Node.js?",
+      "options": {
+        "A": "A JavaScript framework for building user interfaces",
+        "B": "A JavaScript runtime environment that executes code outside a web browser",
+        "C": "A database management system optimized for JavaScript",
+        "D": "A testing library for JavaScript applications"
+      },
+      "correct_answer": "B",
+      "topic": "What is Node.js?"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the correct way to access an environment variable named 'API_KEY' in a Node.js application?",
+      "code_example": "// Assuming the API_KEY environment variable is set\n// Option A\nconst apiKey = API_KEY;\n\n// Option B\nconst apiKey = process.env.API_KEY;\n\n// Option C\nconst apiKey = env.API_KEY;\n\n// Option D\nconst apiKey = environment.API_KEY;",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B",
+      "topic": "Environment variables (process.env)"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(5 == '5');\nconsole.log(5 === '5');\nconsole.log(0 == false);\nconsole.log(0 === false);",
+      "options": {
+        "A": "true true true true",
+        "B": "true false true false",
+        "C": "false true false true",
+        "D": "false false false false"
+      },
+      "correct_answer": "B",
+      "topic": "Implicit type conversion (== vs ===)"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const arr = [1, 2, 3];\narr.push(4);\narr.unshift(0);\narr.pop();\nconsole.log(arr);",
+      "options": {
+        "A": "[0, 1, 2]",
+        "B": "[0, 1, 2, 3]",
+        "C": "[1, 2, 3]",
+        "D": "[1, 2, 3, 4]"
+      },
+      "correct_answer": "B",
+      "topic": "Array methods: push(), pop(), shift(), unshift(), splice(), slice(), concat(), indexOf()"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "async function fetchData() {\n  return 'Data fetched!';\n}\n\nasync function displayData() {\n  const data = await fetchData();\n  return `Success: ${data}`;\n}\n\ndisplayData().then(result => console.log(result));",
+      "options": {
+        "A": "Data fetched!",
+        "B": "Success: Data fetched!",
+        "C": "Promise { 'Success: Data fetched!' }",
+        "D": "undefined"
+      },
+      "correct_answer": "B",
+      "topic": "async/await"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const name = 'Alice';\nconst age = 30;\nconst greeting = `Hello, ${name}! You are ${age} years old.`;\nconsole.log(greeting);",
+      "options": {
+        "A": "Hello, ${name}! You are ${age} years old.",
+        "B": "Hello, Alice! You are 30 years old.",
+        "C": "Hello, name! You are age years old.",
+        "D": "TypeError: Template literals are not supported"
+      },
+      "correct_answer": "B",
+      "topic": "Template literals"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "In a Node.js project, which file is essential for describing the project and its dependencies?",
+      "options": {
+        "A": "node.config",
+        "B": "project.json",
+        "C": "package.json",
+        "D": "dependencies.js"
+      },
+      "correct_answer": "C",
+      "topic": "package.json, NPM/Yarn basics"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "let value;\nconsole.log(typeof value);\nvalue = 42;\nconsole.log(typeof value);\nvalue = 'Hello';\nconsole.log(typeof value);\nvalue = true;\nconsole.log(typeof value);\nvalue = Symbol('id');\nconsole.log(typeof value);\nvalue = 123n;\nconsole.log(typeof value);\nvalue = null;\nconsole.log(typeof value);",
+      "options": {
+        "A": "undefined number string boolean symbol bigint null",
+        "B": "undefined number string boolean symbol bigint object",
+        "C": "undefined number string boolean symbol number object",
+        "D": "undefined number string boolean object number object"
+      },
+      "correct_answer": "B",
+      "topic": "Primitive types: string, number, boolean, null, undefined, symbol, bigint"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "for (let i = 0; i < 5; i++) {\n  if (i === 2) {\n    continue;\n  }\n  if (i === 4) {\n    break;\n  }\n  console.log(i);\n}",
+      "options": {
+        "A": "0 1 2 3",
+        "B": "0 1 3",
+        "C": "0 1 3 4",
+        "D": "0 1 2 3 4"
+      },
+      "correct_answer": "B",
+      "topic": "break and continue statements"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "In an Express.js application, which middleware would you use to parse JSON data from incoming requests?",
+      "code_example": "const express = require('express');\nconst app = express();\n\n// Option A\napp.use(express.parseJson());\n\n// Option B\napp.use(express.json());\n\n// Option C\napp.use(express.bodyParser());\n\n// Option D\napp.use(express.jsonParser());",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B",
+      "topic": "Body parsing (express.json(), express.urlencoded())"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following correctly implements compression middleware in an Express.js application?",
+      "code_example": "const express = require('express');\nconst compression = require('compression');\nconst app = express();\n\n// Option A\napp.use(compression.compress());\n\n// Option B\napp.use(express.compression());\n\n// Option C\napp.use(compression());\n\n// Option D\napp.set('compression', true);",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "C",
+      "topic": "Compression (compression module)"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which of the following code snippets correctly establishes a connection to a MongoDB database using Mongoose?",
+      "code_example": "const mongoose = require('mongoose');\n\n// Option A\nmongoose.connect('mongodb://localhost:27017/mydb')\n  .then(() => console.log('Connected to MongoDB'))\n  .catch(err => console.error('Could not connect to MongoDB', err));\n\n// Option B\nmongoose.createConnection('mongodb://localhost:27017/mydb', function(err) {\n  if (err) console.error('Could not connect to MongoDB', err);\n  else console.log('Connected to MongoDB');\n});\n\n// Option C\nmongoose.db.connect('mongodb://localhost:27017/mydb', {\n  onSuccess: () => console.log('Connected to MongoDB'),\n  onError: (err) => console.error('Could not connect to MongoDB', err)\n});\n\n// Option D\nmongoose.open('mongodb://localhost:27017/mydb')\n  .success(() => console.log('Connected to MongoDB'))\n  .error(err => console.error('Could not connect to MongoDB', err));",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "A",
+      "topic": "Connecting to MongoDB (Mongoose)"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "function createCounter() {\n  let count = 0;\n  return function() {\n    count += 1;\n    return count;\n  };\n}\n\nconst counter1 = createCounter();\nconst counter2 = createCounter();\n\nconsole.log(counter1());\nconsole.log(counter1());\nconsole.log(counter2());\nconsole.log(counter1());",
+      "options": {
+        "A": "1 2 1 3",
+        "B": "1 2 3 4",
+        "C": "1 1 1 1",
+        "D": "NaN NaN NaN NaN"
+      },
+      "correct_answer": "A",
+      "topic": "Closure definition and use cases"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Which HTTP method would be most appropriate for updating an existing resource on a server?",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "correct_answer": "C",
+      "topic": "HTTP methods (GET, POST, PUT, DELETE)"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which of the following code snippets correctly creates a simple Express server that listens on port 3000?",
+      "code_example": "// Option A\nconst express = require('express');\nconst app = express();\napp.listen(3000, () => {\n  console.log('Server running on port 3000');\n});\n\n// Option B\nconst express = require('express');\nconst server = express.createServer();\nserver.listen(3000, () => {\n  console.log('Server running on port 3000');\n});\n\n// Option C\nconst express = require('express');\nexpress.app().listen(3000, () => {\n  console.log('Server running on port 3000');\n});\n\n// Option D\nconst express = require('express');\nexpress.listen(3000, () => {\n  console.log('Server running on port 3000');\n});",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "A",
+      "topic": "Creating a simple Express server"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "Which of the following correctly defines a Mongoose schema with validation for a 'User' model?",
+      "code_example": "const mongoose = require('mongoose');\n\n// Option A\nconst UserSchema = new mongoose.Schema({\n  username: { type: String, required: true, unique: true },\n  email: { type: String, required: true, match: /.+\\@.+\\..+/ },\n  age: { type: Number, min: 18 }\n});\n\n// Option B\nconst UserSchema = mongoose.Schema({\n  username: String.required().unique(),\n  email: String.required().match(/.+\\@.+\\..+/),\n  age: Number.min(18)\n});\n\n// Option C\nconst UserSchema = mongoose.createSchema({\n  username: { type: 'String', validate: ['required', 'unique'] },\n  email: { type: 'String', validate: ['required', 'email'] },\n  age: { type: 'Number', validate: 'min:18' }\n});\n\n// Option D\nconst UserSchema = new Schema({\n  username: String.isRequired().isUnique(),\n  email: String.isRequired().matches(/.+\\@.+\\..+/),\n  age: Number.minimum(18)\n});",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "A",
+      "topic": "MongoDB Schema and validation"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "Which of the following functions is pure?",
+      "code_example": "// Option A\nfunction add(a, b) {\n  return a + b;\n}\n\n// Option B\nlet total = 0;\nfunction addToTotal(value) {\n  total += value;\n  return total;\n}\n\n// Option C\nfunction getRandomNumber() {\n  return Math.random() * 10;\n}\n\n// Option D\nfunction logMessage(message) {\n  console.log(message);\n  return message;\n}",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "A",
+      "topic": "Pure functions & immutability"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "How would you access a route parameter named 'id' and a query string parameter named 'sort' in an Express.js route handler?",
+      "code_example": "const express = require('express');\nconst app = express();\n\napp.get('/users/:id', (req, res) => {\n  // Access route parameter 'id' and query parameter 'sort'\n  \n  // Option A\n  const userId = req.id;\n  const sortBy = req.query.sort;\n  \n  // Option B\n  const userId = req.params.id;\n  const sortBy = req.params.sort;\n  \n  // Option C\n  const userId = req.params.id;\n  const sortBy = req.query.sort;\n  \n  // Option D\n  const userId = req.path.id;\n  const sortBy = req.queryParams.sort;\n});",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "C",
+      "topic": "Route parameters & query strings"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "function delay(ms) {\n  return new Promise(resolve => setTimeout(resolve, ms));\n}\n\nasync function test() {\n  const start = Date.now();\n  \n  const results = await Promise.all([\n    delay(1000).then(() => 'A'),\n    delay(2000).then(() => 'B'),\n    delay(500).then(() => 'C')\n  ]);\n  \n  const end = Date.now();\n  console.log(results);\n  console.log(`Approximate time: ${Math.round((end - start) / 1000)}s`);\n}\n\ntest();",
+      "options": {
+        "A": "['A', 'B', 'C']\nApproximate time: 3s",
+        "B": "['A', 'B', 'C']\nApproximate time: 2s",
+        "C": "['C', 'A', 'B']\nApproximate time: 2s",
+        "D": "['A', 'B', 'C']\nApproximate time: 1s"
+      },
+      "correct_answer": "B",
+      "topic": "Promise.all(), Promise.race(), Promise.any(), Promise.allSettled()"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "Which approach is NOT recommended for securing JWT tokens in a Node.js application?",
+      "options": {
+        "A": "Storing the JWT secret in environment variables",
+        "B": "Setting appropriate expiry times on tokens",
+        "C": "Using HTTPS for all communications",
+        "D": "Storing tokens in localStorage for easy access"
+      },
+      "correct_answer": "D",
+      "topic": "Securing JWT tokens (jsonwebtoken)"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What will be the output of the following MongoDB query executed with Mongoose?",
+      "code_example": "// Assuming a 'User' model with the following documents:\n// { _id: 1, name: 'Alice', age: 25, active: true }\n// { _id: 2, name: 'Bob', age: 30, active: false }\n// { _id: 3, name: 'Charlie', age: 35, active: true }\n\nUser.find({ active: true })\n  .select('name')\n  .sort({ age: -1 })\n  .then(result => console.log(result));",
+      "options": {
+        "A": "[{ _id: 1, name: 'Alice' }, { _id: 3, name: 'Charlie' }]",
+        "B": "[{ _id: 3, name: 'Charlie' }, { _id: 1, name: 'Alice' }]",
+        "C": "[{ name: 'Charlie' }, { name: 'Alice' }]",
+        "D": "['Charlie', 'Alice']"
+      },
+      "correct_answer": "B",
+      "topic": "CRUD operations (find(), findById(), updateOne(), deleteOne())"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using the Node.js EventEmitter?",
+      "code_example": "const EventEmitter = require('events');\n\nclass MyEmitter extends EventEmitter {}\n\nconst myEmitter = new MyEmitter();\n\nmyEmitter.on('event', function(a, b) {\n  console.log(a, b, this === myEmitter);\n});\n\nmyEmitter.on('event', (a, b) => {\n  console.log(a, b, this === myEmitter);\n});\n\nmyEmitter.emit('event', 'a', 'b');",
+      "options": {
+        "A": "a b true\na b true",
+        "B": "a b true\na b false",
+        "C": "a b false\na b true",
+        "D": "a b false\na b false"
+      },
+      "correct_answer": "B",
+      "topic": "Event Emitter pattern"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "const user = {\n  name: 'Alice',\n  profile: {\n    address: {\n      city: 'New York'\n    }\n  }\n};\n\nconst user2 = {\n  name: 'Bob',\n  profile: null\n};\n\nconsole.log(user.profile?.address?.city);\nconsole.log(user2.profile?.address?.city);",
+      "options": {
+        "A": "New York\nundefined",
+        "B": "New York\nnull",
+        "C": "New York\nTypeError: Cannot read property 'address' of null",
+        "D": "undefined\nundefined"
+      },
+      "correct_answer": "A",
+      "topic": "Optional chaining (?.)"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "Which middleware would you use in Express.js to handle file uploads?",
+      "code_example": "const express = require('express');\nconst app = express();\n\n// Option A\nconst upload = require('express-upload');\napp.use(upload.single('file'));\n\n// Option B\nconst fileUpload = require('express-fileupload');\napp.use(fileUpload());\n\n// Option C\nconst multer = require('multer');\nconst upload = multer({ dest: 'uploads/' });\n// Used with: app.post('/upload', upload.single('file'), ...)\n\n// Option D\napp.use(express.uploads({ destination: 'uploads/' }));",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "C",
+      "topic": "Handling file uploads (multer)"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What is the correct way to send a JSON response in an Express.js route handler?",
+      "code_example": "app.get('/api/users', (req, res) => {\n  const users = [{ id: 1, name: 'Alice' }, { id: 2, name: 'Bob' }];\n  \n  // Option A\n  res.send(JSON.stringify(users));\n  \n  // Option B\n  res.json(users);\n  \n  // Option C\n  res.end(JSON.stringify(users));\n  \n  // Option D\n  res.writeJSON(users);\n});",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B",
+      "topic": "Sending JSON responses (res.json())"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Node.js EventEmitter code?",
+      "options": {
+        "A": "'First listener' followed by 'Second listener'",
+        "B": "'Second listener' followed by 'First listener'",
+        "C": "Only 'First listener' (second listener is removed)",
+        "D": "An error is thrown because 'once' cannot be used with 'removeListener'"
+      },
+      "correct_answer": "C",
+      "code_example": "const EventEmitter = require('events');\nconst myEmitter = new EventEmitter();\n\nmyEmitter.once('event', () => {\n  console.log('First listener');\n});\n\nconst secondListener = () => {\n  console.log('Second listener');\n};\n\nmyEmitter.on('event', secondListener);\nmyEmitter.removeListener('event', secondListener);\n\nmyEmitter.emit('event');"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which statement about transform streams in Node.js is correct?",
+      "options": {
+        "A": "Transform streams can only modify data, not filter out chunks",
+        "B": "Transform streams must always modify the data type (e.g., buffer to string)",
+        "C": "Transform streams can both modify and filter data chunks",
+        "D": "Transform streams always process data synchronously"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using WeakMap for memory-sensitive caching?",
+      "options": {
+        "A": "{ name: 'user1', data: 'cached data' }",
+        "B": "undefined",
+        "C": "'cached data'",
+        "D": "TypeError: Cannot convert undefined or null to object"
+      },
+      "correct_answer": "B",
+      "code_example": "const cache = new WeakMap();\n\nlet user = { name: 'user1' };\ncache.set(user, 'cached data');\n\nconsole.log(cache.get(user));\n\n// User is no longer needed in our application\nuser = null;\n\n// Force garbage collection (this doesn't actually work in real code,\n// but illustrates the concept for the test question)\n// global.gc();\n\n// Try to access the cached data\nconsole.log(cache.get(user));"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "When implementing OAuth PKCE (Proof Key for Code Exchange) flow, what is the primary purpose of the code_verifier and code_challenge?",
+      "options": {
+        "A": "To encrypt the authorization code during transit",
+        "B": "To protect against access token leakage",
+        "C": "To prevent authorization code interception attacks",
+        "D": "To eliminate the need for client secrets in public clients"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using bcrypt for password hashing?",
+      "options": {
+        "A": "true, true, false",
+        "B": "true, false, false",
+        "C": "true, true, true",
+        "D": "false, false, false"
+      },
+      "correct_answer": "A",
+      "code_example": "const bcrypt = require('bcrypt');\n\nasync function checkPasswords() {\n  const password = 'secure_password';\n  \n  // Generate two different hashes for the same password\n  const hash1 = await bcrypt.hash(password, 10);\n  const hash2 = await bcrypt.hash(password, 10);\n  \n  // Compare results\n  const result1 = await bcrypt.compare(password, hash1);\n  const result2 = await bcrypt.compare(password, hash2);\n  const result3 = hash1 === hash2;\n  \n  console.log(result1, result2, result3);\n}\n\ncheckPasswords();"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What is the output of this code demonstrating rate limiting in Express?",
+      "options": {
+        "A": "All three requests receive status 200",
+        "B": "First two requests receive status 200, third gets status 429",
+        "C": "First request receives status 200, second and third get status 429",
+        "D": "All three requests receive status 429"
+      },
+      "correct_answer": "B",
+      "code_example": "const express = require('express');\nconst rateLimit = require('express-rate-limit');\n\nconst app = express();\n\nconst limiter = rateLimit({\n  windowMs: 15 * 60 * 1000, // 15 minutes\n  max: 2, // limit each IP to 2 requests per windowMs\n  standardHeaders: true,\n  legacyHeaders: false,\n});\n\napp.use('/api/', limiter);\n\napp.get('/api/test', (req, res) => {\n  res.status(200).json({ message: 'Success' });\n});\n\n// Simulation of three requests from same IP\nasync function simulateRequests() {\n  const response1 = await makeRequest();\n  const response2 = await makeRequest();\n  const response3 = await makeRequest();\n  \n  console.log(response1.status, response2.status, response3.status);\n}\n\n// This is a mock function representing an HTTP request\nfunction makeRequest() {\n  return new Promise((resolve) => {\n    // First two requests succeed, third hits rate limit\n    static let count = 0;\n    count++;\n    if (count <= 2) {\n      resolve({ status: 200 });\n    } else {\n      resolve({ status: 429 }); // Too Many Requests\n    }\n  });\n}\n\nsimulateRequests();"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the primary purpose of the '--inspect' flag when debugging Node.js applications?",
+      "options": {
+        "A": "It enables remote debugging by starting a WebSocket server",
+        "B": "It automatically fixes common errors in your code",
+        "C": "It provides runtime performance metrics",
+        "D": "It enables static code analysis before execution"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of this code implementing a transform stream?",
+      "options": {
+        "A": "data: HELLO",
+        "B": "data: hello",
+        "C": "data: hello data: world",
+        "D": "data: HELLO data: WORLD"
+      },
+      "correct_answer": "D",
+      "code_example": "const { Transform } = require('stream');\n\nclass UppercaseTransform extends Transform {\n  _transform(chunk, encoding, callback) {\n    this.push('data: ' + chunk.toString().toUpperCase());\n    callback();\n  }\n}\n\nconst upperCaseStream = new UppercaseTransform();\n\nupperCaseStream.on('data', (chunk) => {\n  console.log(chunk.toString());\n});\n\nupperCaseStream.write('hello');\nupperCaseStream.write('world');"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "In the context of Helmet.js for web security, what is the primary function of the 'Content-Security-Policy' header?",
+      "options": {
+        "A": "It prevents clickjacking attacks by controlling iframe embedding",
+        "B": "It mitigates XSS attacks by specifying which dynamic resources are allowed to load",
+        "C": "It prevents MIME type sniffing vulnerabilities",
+        "D": "It enforces HTTPS connections by redirecting HTTP requests"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will the following code using socket.io for WebSockets output when a client connects?",
+      "options": {
+        "A": "Server logs 'User connected', then 'hello' once",
+        "B": "Server logs 'User connected', then 'hello' twice",
+        "C": "Server logs 'User connected', client logs 'hello'",
+        "D": "Server logs 'User connected', then client and server both log 'hello'"
+      },
+      "correct_answer": "B",
+      "code_example": "// Server code\nconst server = require('http').createServer();\nconst io = require('socket.io')(server);\n\nio.on('connection', (socket) => {\n  console.log('User connected');\n  \n  socket.emit('greeting', 'hello');\n  io.emit('greeting', 'hello');\n  \n  socket.on('greeting', (message) => {\n    console.log(message);\n  });\n});\n\n// Client code (for reference, not executed)\n/*\nconst socket = io();\nsocket.on('greeting', (message) => {\n  console.log(message);\n});\n*/"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What is the correct structure for a docker-compose.yml file that sets up a Node.js application with a MongoDB database, where the application should wait for the database to be ready before starting?",
+      "options": {
+        "A": "Use 'links' between services and the '--wait' flag in the command",
+        "B": "Use 'depends_on' with 'condition: service_healthy' and define health checks",
+        "C": "Use 'volumes_from' to share state information about service readiness",
+        "D": "Use 'network_mode: host' and implement readiness checks in application code"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will the following code using Node.js parallel processing output?",
+      "options": {
+        "A": "200 200 200",
+        "B": "The three responses in random order",
+        "C": "Only the fastest response",
+        "D": "A combined array of all responses"
+      },
+      "correct_answer": "D",
+      "code_example": "const { Worker, isMainThread, workerData, parentPort } = require('worker_threads');\n\nif (isMainThread) {\n  const runWorkers = async () => {\n    const createWorker = (data) => {\n      return new Promise((resolve) => {\n        const worker = new Worker(__filename, { workerData: data });\n        worker.on('message', resolve);\n      });\n    };\n\n    const results = await Promise.all([\n      createWorker('Task 1'),\n      createWorker('Task 2'),\n      createWorker('Task 3')\n    ]);\n\n    console.log(results);\n  };\n\n  runWorkers();\n} else {\n  // Simulate processing in worker\n  setTimeout(() => {\n    parentPort.postMessage(`Result from ${workerData}`);\n  }, Math.random() * 1000);\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "Which statement about WeakSet compared to Set in JavaScript is correct?",
+      "options": {
+        "A": "WeakSet can contain primitive values while Set cannot",
+        "B": "WeakSet entries are removed when there are no other references to the object",
+        "C": "WeakSet provides methods like .forEach() and .values() for iteration",
+        "D": "WeakSet maintains insertion order while Set does not"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will the following code for encrypting sensitive data output?",
+      "options": {
+        "A": "The original text 'secret data'",
+        "B": "A decryption error message",
+        "C": "'secret data' (successfully decrypted)",
+        "D": "A buffer containing encrypted bytes"
+      },
+      "correct_answer": "C",
+      "code_example": "const crypto = require('crypto');\n\nfunction encryptDecrypt() {\n  const algorithm = 'aes-256-cbc';\n  const key = crypto.randomBytes(32);\n  const iv = crypto.randomBytes(16);\n  \n  // Encrypt\n  const cipher = crypto.createCipheriv(algorithm, key, iv);\n  let encrypted = cipher.update('secret data', 'utf8', 'hex');\n  encrypted += cipher.final('hex');\n  \n  // Decrypt\n  const decipher = crypto.createDecipheriv(algorithm, key, iv);\n  let decrypted = decipher.update(encrypted, 'hex', 'utf8');\n  decrypted += decipher.final('utf8');\n  \n  return decrypted;\n}\n\nconsole.log(encryptDecrypt());"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "Which of the following is a key difference between REST and GraphQL APIs?",
+      "options": {
+        "A": "REST supports real-time data, while GraphQL does not",
+        "B": "GraphQL requires WebSockets, while REST uses HTTP",
+        "C": "REST typically requires multiple endpoints for complex data, while GraphQL uses a single endpoint",
+        "D": "REST has better built-in security features than GraphQL"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which statement about Just-In-Time (JIT) compilation in JavaScript engines is correct?",
+      "options": {
+        "A": "JIT compilation always performs better than interpreted code for all functions",
+        "B": "JIT compilation converts JavaScript directly to machine code, bypassing bytecode entirely",
+        "C": "JIT compilation identifies hot code paths and optimizes them during execution",
+        "D": "JIT compilation requires explicit annotations in the JavaScript code to work effectively"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
