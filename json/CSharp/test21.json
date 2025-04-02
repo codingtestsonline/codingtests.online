@@ -1,0 +1,653 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "ref vs. out parameters",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Original: 5, Modified: 10, Result: 10",
+        "B": "Original: 5, Modified: 10, Result: 5",
+        "C": "Original: 5, Modified: 5, Result: 10",
+        "D": "Compilation error: 'result' variable must be initialized before passing to the method"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int original = 5;\n        int modified;\n        int result;\n        \n        Console.WriteLine($\"Original: {original}\");\n        ModifyValues(ref original, out modified, out result);\n        Console.WriteLine($\"Modified: {modified}, Result: {result}\");\n    }\n    \n    static void ModifyValues(ref int x, out int y, out int z)\n    {\n        x = 10;\n        y = 10;\n        z = x;\n    }\n}"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "Value types (int, double, char, bool, struct)",
+      "question": "Which of the following is NOT a value type in C#?",
+      "options": {
+        "A": "int",
+        "B": "double",
+        "C": "string",
+        "D": "struct"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "StringBuilder vs string",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello World",
+        "B": "Hello",
+        "C": "Hello World World",
+        "D": "World"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Text;\n\nclass Program\n{\n    static void Main()\n    {\n        string str = \"Hello\";\n        StringBuilder sb = new StringBuilder(\"Hello\");\n        \n        AppendWorld(str, sb);\n        Console.WriteLine(str);\n    }\n    \n    static void AppendWorld(string str, StringBuilder sb)\n    {\n        str += \" World\";\n        sb.Append(\" World\");\n    }\n}"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "Default Parameters",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "x = 5, y = 10, z = 15",
+        "B": "x = 5, y = 10, z = 20",
+        "C": "x = 10, y = 10, z = 20",
+        "D": "Compilation error: Default parameter values must appear after all non-default parameters"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        DisplayValues(5);\n    }\n    \n    static void DisplayValues(int x, int y = 10, int z = 20)\n    {\n        Console.WriteLine($\"x = {x}, y = {y}, z = {z}\");\n    }\n}"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "Reference types",
+      "question": "Which statement about reference types in C# is TRUE?",
+      "options": {
+        "A": "Reference types are stored on the stack",
+        "B": "Reference types are always initialized to their default values",
+        "C": "Reference types store a reference (memory address) to the actual data",
+        "D": "Value types can be converted to reference types without boxing"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "Access Modifiers",
+      "question": "Which access modifier allows a class member to be accessed only from within the same assembly or from a derived class in another assembly?",
+      "options": {
+        "A": "public",
+        "B": "private",
+        "C": "protected",
+        "D": "protected internal"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "FirstOrDefault(), SingleOrDefault()",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "5",
+        "B": "0",
+        "C": "An InvalidOperationException will be thrown",
+        "D": "null"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        List<int> numbers = new List<int> { 1, 3, 5, 7, 9 };\n        int result = numbers.FirstOrDefault(n => n > 10);\n        Console.WriteLine(result);\n    }\n}"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "Type inference",
+      "question": "Which of the following uses type inference correctly in C#?",
+      "options": {
+        "A": "var x = 5; x = \"hello\";",
+        "B": "var x; x = 10;",
+        "C": "var x = null;",
+        "D": "var x = 10; x = 20;"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Function Overloading",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Add(int, int) called",
+        "B": "Add(double, double) called",
+        "C": "Add(string, string) called",
+        "D": "Compilation error: Ambiguous call between 'Add(int, int)' and 'Add(double, double)'"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Add(5, 10);\n    }\n    \n    static void Add(int a, int b)\n    {\n        Console.WriteLine(\"Add(int, int) called\");\n    }\n    \n    static void Add(double a, double b)\n    {\n        Console.WriteLine(\"Add(double, double) called\");\n    }\n    \n    static void Add(string a, string b)\n    {\n        Console.WriteLine(\"Add(string, string) called\");\n    }\n}"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Queue<T>, Stack<T>",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "3 2 1",
+        "B": "1 2 3",
+        "C": "3",
+        "D": "1"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        Stack<int> stack = new Stack<int>();\n        stack.Push(1);\n        stack.Push(2);\n        stack.Push(3);\n        \n        while (stack.Count > 0)\n        {\n            Console.Write(stack.Pop() + \" \");\n        }\n    }\n}"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "ArrayList, List<T>",
+      "question": "Which statement about ArrayList and List<T> is FALSE?",
+      "options": {
+        "A": "ArrayList can store elements of different types",
+        "B": "List<T> provides type safety at compile time",
+        "C": "ArrayList is faster for value types than List<T>",
+        "D": "List<T> was introduced in .NET 2.0 as part of generics"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "Dictionary<TKey, TValue>, HashSet<T>",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "KeyNotFoundException will be thrown",
+        "D": "ArgumentException will be thrown"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        Dictionary<string, int> ages = new Dictionary<string, int>();\n        ages.Add(\"Alice\", 25);\n        ages.Add(\"Bob\", 30);\n        ages.Add(\"Charlie\", 35);\n        ages.Add(\"Alice\", 26);\n        \n        Console.WriteLine(ages.ContainsKey(\"Alice\"));\n    }\n}"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "Cross-platform development in .NET",
+      "question": "Which of the following is NOT a cross-platform .NET implementation?",
+      "options": {
+        "A": ".NET 6",
+        "B": ".NET Core",
+        "C": ".NET Framework",
+        "D": "Mono"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "for, while, do-while, foreach",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "1 2 3 4 5",
+        "B": "1 2 3",
+        "C": "1 2",
+        "D": "1"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int i = 1;\n        do\n        {\n            Console.Write(i + \" \");\n            i++;\n            if (i > 2)\n                break;\n        } while (i <= 5);\n    }\n}"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "Convert.ToInt32(), int.Parse(), int.TryParse()",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Invalid number",
+        "B": "FormatException: Input string was not in a correct format",
+        "C": "0",
+        "D": "123"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        string input = \"123abc\";\n        int number;\n        \n        if (int.TryParse(input, out number))\n        {\n            Console.WriteLine(number);\n        }\n        else\n        {\n            Console.WriteLine(\"Invalid number\");\n        }\n    }\n}"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "Where(), Select(), OrderBy(), GroupBy()",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "2 4 6 8 10",
+        "B": "2 4 6 8",
+        "C": "4 8 12 16 20",
+        "D": "10 8 6 4 2"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };\n        \n        var result = numbers\n            .Where(n => n % 2 == 0)\n            .Select(n => n * 1)\n            .Take(5);\n        \n        foreach (var num in result)\n        {\n            Console.Write(num + \" \");\n        }\n    }\n}"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Interface segregation principle",
+      "question": "Which of the following BEST describes the Interface Segregation Principle?",
+      "options": {
+        "A": "Classes should depend on abstractions, not concrete implementations",
+        "B": "A class should have only one reason to change",
+        "C": "Clients should not be forced to depend on interfaces they do not use",
+        "D": "Derived classes must be substitutable for their base classes"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "Select(), Where(), OrderBy(), GroupBy()",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Group: A, Count: 3\nGroup: B, Count: 2\nGroup: C, Count: 1",
+        "B": "Group: A, Count: 1\nGroup: B, Count: 2\nGroup: C, Count: 3",
+        "C": "Group: A, Count: 3\nGroup: B, Count: 2",
+        "D": "InvalidOperationException: Sequence contains no elements"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Linq;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        List<string> items = new List<string> { \"A1\", \"A2\", \"A3\", \"B1\", \"B2\", \"C1\" };\n        \n        var groupedItems = items\n            .GroupBy(item => item[0])\n            .Select(group => new { Key = group.Key, Count = group.Count() })\n            .OrderByDescending(x => x.Count);\n        \n        foreach (var group in groupedItems)\n        {\n            Console.WriteLine($\"Group: {group.Key}, Count: {group.Count}\");\n        }\n    }\n}"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "Lambda expressions",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Value captured: 5",
+        "B": "Value captured: 10",
+        "C": "5",
+        "D": "10"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int value = 5;\n        Func<int> getValueFunc = () => value;\n        \n        value = 10;\n        \n        Console.WriteLine($\"Value captured: {getValueFunc()}\");\n    }\n}"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "[HttpGet], [HttpPost]",
+      "question": "In ASP.NET Core, which statement about the [HttpGet] and [HttpPost] attributes is TRUE?",
+      "options": {
+        "A": "They can only be applied to controller classes, not methods",
+        "B": "They determine which HTTP method can be used to access an action method",
+        "C": "They are required for all controller action methods to function properly",
+        "D": "They cannot be used together on the same action method"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "virtual, override, sealed, abstract",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Base.Display()\nDerived.Display()",
+        "B": "Base.Display()\nBase.Display()",
+        "C": "Derived.Display()\nDerived.Display()",
+        "D": "Compilation error: 'Derived.Display()' cannot override inherited member 'Base.Display()' because it is not marked virtual, abstract, or override"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Base b = new Base();\n        Base d = new Derived();\n        \n        b.Display();\n        d.Display();\n    }\n}\n\nclass Base\n{\n    public void Display()\n    {\n        Console.WriteLine(\"Base.Display()\");\n    }\n}\n\nclass Derived : Base\n{\n    public void Display()\n    {\n        Console.WriteLine(\"Derived.Display()\");\n    }\n}"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "Base class initialization",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Base constructor\nDerived constructor",
+        "B": "Derived constructor\nBase constructor",
+        "C": "Base constructor with value: 10\nDerived constructor",
+        "D": "Base constructor\nBase constructor with value: 10\nDerived constructor"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Derived d = new Derived();\n    }\n}\n\nclass Base\n{\n    public Base()\n    {\n        Console.WriteLine(\"Base constructor\");\n    }\n    \n    public Base(int value)\n    {\n        Console.WriteLine($\"Base constructor with value: {value}\");\n    }\n}\n\nclass Derived : Base\n{\n    public Derived() : base(10)\n    {\n        Console.WriteLine(\"Derived constructor\");\n    }\n}"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "Property Injection",
+      "question": "Which statement about property injection in dependency injection is TRUE?",
+      "options": {
+        "A": "It's generally preferred over constructor injection for required dependencies",
+        "B": "It allows dependencies to be injected after object construction",
+        "C": "It requires the [Inject] attribute in all .NET dependency injection frameworks",
+        "D": "It cannot be used with interfaces, only concrete classes"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "Thread-safe collections",
+      "question": "What will be the output of the following code when run with multiple threads?",
+      "options": {
+        "A": "KeyNotFoundException might be thrown",
+        "B": "The code will always execute without exceptions",
+        "C": "InvalidOperationException: Collection was modified might be thrown",
+        "D": "ArgumentException: An item with the same key has already been added might be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Collections.Concurrent;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static void Main()\n    {\n        ConcurrentDictionary<int, string> dict = new ConcurrentDictionary<int, string>();\n        \n        Parallel.For(0, 100, i =>\n        {\n            dict.TryAdd(i, $\"Value {i}\");\n            string value = dict.GetOrAdd(i, k => $\"New Value {k}\");\n            Console.WriteLine(value);\n        });\n    }\n}"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Generic methods",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "10",
+        "B": "1010",
+        "C": "Compilation error: Operator '+' cannot be applied to operands of type 'T' and 'T'",
+        "D": "Compilation error: The type parameter 'T' cannot be used with the 'as' operator"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int result = Add<int>(5, 5);\n        Console.WriteLine(result);\n    }\n    \n    static T Add<T>(T a, T b)\n    {\n        return a + b;\n    }\n}"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "Anonymous methods",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "x = 5, y = 10",
+        "B": "x = 10, y = 10",
+        "C": "x = 10, y = 5",
+        "D": "x = 5, y = 5"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int x = 5;\n        int y = 5;\n        \n        Func<int> getX = delegate\n        {\n            return x;\n        };\n        \n        Action incrementY = delegate\n        {\n            y += 5;\n        };\n        \n        x = 10;\n        incrementY();\n        \n        Console.WriteLine($\"x = {getX()}, y = {y}\");\n    }\n}"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "Constraints",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Creating new instance of MyClass",
+        "B": "Creating new instance of MyClass\nMyClass.ToString() called",
+        "C": "Compilation error: 'T' must be a non-abstract reference type with a public parameterless constructor",
+        "D": "Compilation error: The type 'T' must be convertible to 'class' in order to use it as parameter 'T'"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        CreateAndPrint<MyClass>();\n    }\n    \n    static void CreateAndPrint<T>() where T : class, new()\n    {\n        Console.WriteLine(\"Creating new instance of \" + typeof(T).Name);\n        T instance = new T();\n        Console.WriteLine(instance.ToString());\n    }\n}\n\nclass MyClass\n{\n    public override string ToString()\n    {\n        return \"MyClass.ToString() called\";\n    }\n}"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "GC generations",
+      "question": "Which statement about garbage collection generations in .NET is TRUE?",
+      "options": {
+        "A": "Objects are always collected in generation order (Gen0 first, then Gen1, then Gen2)",
+        "B": "An object that survives a Gen0 collection is promoted to Gen1",
+        "C": "Gen2 collections are faster than Gen0 collections",
+        "D": "Large objects (> 85KB) are always allocated in Gen0 regardless of size"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "Parallel.ForEach()",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "The numbers 1 through 10 in sequential order",
+        "B": "The numbers 1 through 10 in random order",
+        "C": "Each number from 1 to 10 printed multiple times",
+        "D": "The code will throw an OperationCanceledException"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Threading.Tasks;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };\n        \n        Parallel.ForEach(numbers, number =>\n        {\n            Console.WriteLine(number);\n        });\n    }\n}"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Multicast delegates",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "5",
+        "B": "15",
+        "C": "Method1: 5\nMethod2: 10\nMethod3: 15",
+        "D": "Method1: 5\nMethod2: 10"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    delegate int Calculate(int x);\n    \n    static void Main()\n    {\n        Calculate calc = Method1;\n        calc += Method2;\n        calc += Method3;\n        \n        int result = calc(5);\n        Console.WriteLine(result);\n    }\n    \n    static int Method1(int x)\n    {\n        return x;\n    }\n    \n    static int Method2(int x)\n    {\n        return x * 2;\n    }\n    \n    static int Method3(int x)\n    {\n        return x * 3;\n    }\n}"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "using statement",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Constructor\nDispose\n",
+        "B": "Constructor\nMethod called\nDispose",
+        "C": "Constructor\nException thrown\nDispose",
+        "D": "Constructor\nException thrown"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        try\n        {\n            using (Resource resource = new Resource())\n            {\n                throw new Exception(\"Exception thrown\");\n            }\n        }\n        catch (Exception ex)\n        {\n            Console.WriteLine(ex.Message);\n        }\n    }\n}\n\nclass Resource : IDisposable\n{\n    public Resource()\n    {\n        Console.WriteLine(\"Constructor\");\n    }\n    \n    public void DoSomething()\n    {\n        Console.WriteLine(\"Method called\");\n    }\n    \n    public void Dispose()\n    {\n        Console.WriteLine(\"Dispose\");\n    }\n}"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "Generic classes",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "5\n10.5",
+        "B": "5\n10",
+        "C": "System.Int32\nSystem.Double",
+        "D": "Compilation error: Cannot implicitly convert type 'double' to 'int'"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Container<int> intContainer = new Container<int>(5);\n        Container<double> doubleContainer = new Container<double>(10.5);\n        \n        Console.WriteLine(intContainer.Value);\n        Console.WriteLine(doubleContainer.Value);\n    }\n}\n\nclass Container<T>\n{\n    public T Value { get; private set; }\n    \n    public Container(T value)\n    {\n        Value = value;\n    }\n}"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the primary purpose of Apache Kafka in a microservices architecture?",
+      "options": {
+        "A": "To provide distributed tracing across services",
+        "B": "To function as a message broker for asynchronous communication between services",
+        "C": "To serve as a centralized configuration server",
+        "D": "To manage service discovery and load balancing"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which of the following correctly describes the structure of a JWT (JSON Web Token)?",
+      "options": {
+        "A": "Header, Payload, Signature - separated by periods (.)",
+        "B": "Payload, Signature, Expiry - separated by colons (:)",
+        "C": "Algorithm, Payload, Secret - separated by commas (,)",
+        "D": "Header, Body, Footer - separated by semicolons (;)"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses MemoryCache?",
+      "options": {
+        "A": "Value: 42",
+        "B": "Value: (null)",
+        "C": "Value: 100",
+        "D": "The code will throw a NullReferenceException"
+      },
+      "correct_answer": "B",
+      "code_example": "using Microsoft.Extensions.Caching.Memory;\n\nclass Program\n{\n    static void Main()\n    {\n        var cacheOptions = new MemoryCacheOptions();\n        var cache = new MemoryCache(cacheOptions);\n        \n        // Set cache entry with absolute expiration\n        cache.Set(\"myKey\", 42, new MemoryCacheEntryOptions\n        {\n            AbsoluteExpirationRelativeToNow = TimeSpan.FromMilliseconds(10)\n        });\n        \n        // Wait for cache entry to expire\n        Thread.Sleep(50);\n        \n        // Try to get expired entry\n        if (cache.TryGetValue(\"myKey\", out int value))\n        {\n            Console.WriteLine($\"Value: {value}\");\n        }\n        else\n        {\n            Console.WriteLine($\"Value: (null)\");\n        }\n    }\n}"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses ArrayPool<T>?",
+      "options": {
+        "A": "5, 10, 15, 0, 0",
+        "B": "5, 10, 15, 0, 0, 0, 0, 0",
+        "C": "5, 10, 15",
+        "D": "5, 10, 15, 20, 25"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Buffers;\n\nclass Program\n{\n    static void Main()\n    {\n        // Rent array from shared pool\n        int[] array = ArrayPool<int>.Shared.Rent(8);\n        \n        try\n        {\n            // Populate first 3 elements\n            array[0] = 5;\n            array[1] = 10;\n            array[2] = 15;\n            \n            // Print all elements of the array\n            foreach (int item in array)\n            {\n                Console.Write($\"{item}, \");\n            }\n        }\n        finally\n        {\n            // Return array to the pool\n            ArrayPool<int>.Shared.Return(array);\n        }\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "When configuring CORS in ASP.NET Core, which of the following is NOT a valid policy setting?",
+      "options": {
+        "A": "AllowAnyOrigin()",
+        "B": "AllowAnyHeader()",
+        "C": "AllowAnyCredentials()",
+        "D": "AllowAnyMethod()"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Span<T>?",
+      "options": {
+        "A": "Original array: 1, 2, 3, 4, 5\nModified span: 1, 2, 99, 4, 5\nModified array: 1, 2, 99, 4, 5",
+        "B": "Original array: 1, 2, 3, 4, 5\nModified span: 1, 2, 99, 4, 5\nModified array: 1, 2, 3, 4, 5",
+        "C": "Original array: 1, 2, 3, 4, 5\nModified span: 99, 99, 99, 4, 5\nModified array: 1, 2, 3, 4, 5",
+        "D": "Original array: 1, 2, 3, 4, 5\nModified span: 1, 2, 99, 4, 5\nThe program throws an exception"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        // Create an array\n        int[] array = { 1, 2, 3, 4, 5 };\n        \n        // Print the original array\n        Console.Write(\"Original array: \");\n        foreach (int item in array)\n        {\n            Console.Write($\"{item}, \");\n        }\n        Console.WriteLine();\n        \n        // Create a span from the array\n        Span<int> span = array;\n        \n        // Modify the span\n        span[2] = 99;\n        \n        // Print the modified span\n        Console.Write(\"Modified span: \");\n        foreach (int item in span)\n        {\n            Console.Write($\"{item}, \");\n        }\n        Console.WriteLine();\n        \n        // Print the modified array\n        Console.Write(\"Modified array: \");\n        foreach (int item in array)\n        {\n            Console.Write($\"{item}, \");\n        }\n    }\n}"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Semaphore?",
+      "options": {
+        "A": "Thread 0 entered\nThread 0 exited\nThread 1 entered\nThread 1 exited\nThread 2 entered\nThread 2 exited",
+        "B": "Thread 0 entered\nThread 1 entered\nThread 0 exited\nThread 1 exited\nThread 2 entered\nThread 2 exited",
+        "C": "Thread 0 entered\nThread 1 entered\nThread 2 entered\nThread 0 exited\nThread 1 exited\nThread 2 exited",
+        "D": "The code will deadlock"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Threading;\n\nclass Program\n{\n    static Semaphore _semaphore = new Semaphore(1, 1);\n    \n    static void Main()\n    {\n        // Create and start 3 threads\n        for (int i = 0; i < 3; i++)\n        {\n            int threadId = i;\n            Thread thread = new Thread(() => DoWork(threadId));\n            thread.Start();\n        }\n        \n        // Wait for all to complete\n        Thread.Sleep(1000);\n    }\n    \n    static void DoWork(int id)\n    {\n        _semaphore.WaitOne();\n        \n        try\n        {\n            Console.WriteLine($\"Thread {id} entered\");\n            // Simulate some work\n            Thread.Sleep(100);\n            Console.WriteLine($\"Thread {id} exited\");\n        }\n        finally\n        {\n            _semaphore.Release();\n        }\n    }\n}"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "In ASP.NET Core role-based authentication, which of the following correctly defines a policy that requires a user to belong to multiple roles?",
+      "options": {
+        "A": "services.AddAuthorization(options => {\n    options.AddPolicy(\"RequireMultipleRoles\", policy =>\n        policy.RequireRole(\"Admin\", \"Manager\"));\n});",
+        "B": "services.AddAuthorization(options => {\n    options.AddPolicy(\"RequireMultipleRoles\", policy =>\n        policy.RequireRole(\"Admin\") && policy.RequireRole(\"Manager\"));\n});",
+        "C": "services.AddAuthorization(options => {\n    options.AddPolicy(\"RequireMultipleRoles\", policy =>\n        policy.RequireAssertion(context => \n            context.User.IsInRole(\"Admin\") && \n            context.User.IsInRole(\"Manager\")));\n});",
+        "D": "services.AddAuthorization(options => {\n    options.AddPolicy(\"RequireMultipleRoles\", policy =>\n        policy.RequireClaim(\"role\", \"Admin\", \"Manager\"));\n});"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "Which OAuth 2.0 grant type is specifically designed for mobile apps and single-page applications where the client secret cannot be securely stored?",
+      "options": {
+        "A": "Client Credentials Grant",
+        "B": "Authorization Code Grant with PKCE",
+        "C": "Implicit Grant",
+        "D": "Resource Owner Password Credentials Grant"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing the Singleton pattern?",
+      "options": {
+        "A": "Instances are the same: True",
+        "B": "Instances are the same: False",
+        "C": "The code will throw a NullReferenceException",
+        "D": "The code will deadlock due to threading issues"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\npublic class Singleton\n{\n    private static readonly Lazy<Singleton> _instance = \n        new Lazy<Singleton>(() => new Singleton());\n    \n    // Private constructor\n    private Singleton() { }\n    \n    public static Singleton Instance => _instance.Value;\n    \n    public void DoSomething()\n    {\n        Console.WriteLine(\"Singleton is doing something\");\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        // Get two instances of the singleton\n        Singleton instance1 = Singleton.Instance;\n        Singleton instance2 = Singleton.Instance;\n        \n        // Check if they are the same instance\n        Console.WriteLine($\"Instances are the same: {ReferenceEquals(instance1, instance2)}\");\n    }\n}"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses P/Invoke to call a Windows API function?",
+      "options": {
+        "A": "64-bit Windows detected",
+        "B": "32-bit Windows detected",
+        "C": "The code will throw a DllNotFoundException",
+        "D": "The code will throw a BadImageFormatException"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Runtime.InteropServices;\n\nclass Program\n{\n    [DllImport(\"kernel32.dll\")]\n    [return: MarshalAs(UnmanagedType.Bool)]\n    static extern bool IsWow64Process(\n        IntPtr hProcess, \n        out bool wow64Process);\n\n    [DllImport(\"kernel32.dll\")]\n    static extern IntPtr GetCurrentProcess();\n    \n    static void Main()\n    {\n        bool isWow64 = false;\n        \n        if (Environment.Is64BitOperatingSystem)\n        {\n            // Running on 64-bit Windows\n            if (Environment.Is64BitProcess)\n            {\n                Console.WriteLine(\"64-bit Windows detected\");\n            }\n            else\n            {\n                // 32-bit process on 64-bit Windows\n                if (IsWow64Process(GetCurrentProcess(), out isWow64) && isWow64)\n                {\n                    Console.WriteLine(\"32-bit process on 64-bit Windows\");\n                }\n            }\n        }\n        else\n        {\n            Console.WriteLine(\"32-bit Windows detected\");\n        }\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which of the following statements about SQL Server indexing is NOT true?",
+      "options": {
+        "A": "A table can have multiple non-clustered indexes but only one clustered index",
+        "B": "A clustered index determines the physical order of data in a table",
+        "C": "Creating too many indexes can slow down INSERT, UPDATE, and DELETE operations",
+        "D": "Filtered indexes always perform better than full-table indexes regardless of query patterns"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "When deploying a .NET application to Kubernetes, which of the following is NOT a valid approach?",
+      "options": {
+        "A": "Using a multi-stage Dockerfile to build and run the application",
+        "B": "Deploying the application as a StatefulSet for stateful services",
+        "C": "Using environment variables injected via ConfigMaps for application configuration",
+        "D": "Running the application directly on the host node without containerization"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses COM Interop to interact with Excel?",
+      "options": {
+        "A": "Excel cell value: Hello from C#!",
+        "B": "System.Runtime.InteropServices.COMException: Microsoft Excel cannot be found",
+        "C": "Excel cell value: 42",
+        "D": "The code will throw a SecurityException"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Runtime.InteropServices;\n\nclass Program\n{\n    static void Main()\n    {\n        // Create mock Excel interop objects for testing\n        var excelApp = new MockExcelApplication();\n        var workbook = new MockWorkbook();\n        var worksheet = new MockWorksheet();\n        \n        try\n        {\n            // In real code, we would use:\n            // Type excelType = Type.GetTypeFromProgID(\"Excel.Application\");\n            // dynamic excelApp = Activator.CreateInstance(excelType);\n            \n            // Set up Excel objects using our mocks\n            excelApp.Workbooks.Add();\n            excelApp.Visible = true;\n            \n            // Get active sheet\n            var activeSheet = excelApp.ActiveSheet;\n            \n            // Write to a cell\n            activeSheet.Cells[1, 1].Value = \"Hello from C#!\";\n            \n            // Read cell value\n            var cellValue = activeSheet.Cells[1, 1].Value;\n            Console.WriteLine($\"Excel cell value: {cellValue}\");\n        }\n        finally\n        {\n            // Clean up COM objects\n            Marshal.ReleaseComObject(worksheet);\n            Marshal.ReleaseComObject(workbook);\n            excelApp.Quit();\n            Marshal.ReleaseComObject(excelApp);\n        }\n    }\n}\n\n// Mock classes for testing COM Interop code\npublic class MockExcelApplication\n{\n    public MockWorkbooks Workbooks { get; } = new MockWorkbooks();\n    public bool Visible { get; set; }\n    public MockWorksheet ActiveSheet { get; } = new MockWorksheet();\n    public void Quit() { }\n}\n\npublic class MockWorkbooks\n{\n    public MockWorkbook Add() => new MockWorkbook();\n}\n\npublic class MockWorkbook { }\n\npublic class MockWorksheet\n{\n    private readonly Dictionary<(int, int), object> _cells = new Dictionary<(int, int), object>();\n    \n    public MockCells Cells { get; } = new MockCells();\n    \n    public class MockCells\n    {\n        private readonly Dictionary<(int, int), string> _values = new Dictionary<(int, int), string>();\n        \n        public MockCell this[int row, int col]\n        {\n            get\n            {\n                return new MockCell(_values, row, col);\n            }\n        }\n    }\n    \n    public class MockCell\n    {\n        private readonly Dictionary<(int, int), string> _values;\n        private readonly int _row;\n        private readonly int _col;\n        \n        public MockCell(Dictionary<(int, int), string> values, int row, int col)\n        {\n            _values = values;\n            _row = row;\n            _col = col;\n        }\n        \n        public string Value\n        {\n            get { return _values.TryGetValue((_row, _col), out var value) ? value : null; }\n            set { _values[(_row, _col)] = value; }\n        }\n    }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Parallel.Invoke()?",
+      "options": {
+        "A": "Task 1 starting\nTask 2 starting\nTask 3 starting\nTask 1 completed\nTask 2 completed\nTask 3 completed\nAll tasks completed",
+        "B": "Task 1 starting\nTask 1 completed\nTask 2 starting\nTask 2 completed\nTask 3 starting\nTask 3 completed\nAll tasks completed",
+        "C": "The output order will be non-deterministic, but all tasks will complete",
+        "D": "The code will throw an AggregateException"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static void Main()\n    {\n        try\n        {\n            Parallel.Invoke(\n                () => DoTask(1),\n                () => DoTask(2),\n                () => DoTask(3)\n            );\n            \n            Console.WriteLine(\"All tasks completed\");\n        }\n        catch (AggregateException ae)\n        {\n            foreach (var ex in ae.InnerExceptions)\n            {\n                Console.WriteLine($\"Error: {ex.Message}\");\n            }\n        }\n    }\n    \n    static void DoTask(int taskId)\n    {\n        Console.WriteLine($\"Task {taskId} starting\");\n        \n        // Simulate work with random duration\n        Thread.Sleep(new Random().Next(100, 500));\n        \n        Console.WriteLine($\"Task {taskId} completed\");\n    }\n}"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses CancellationToken?",
+      "options": {
+        "A": "Operation started\nOperation completed successfully\nFinal count: 10",
+        "B": "Operation started\nOperation cancelled\nCancellationException occurred: The operation was canceled.",
+        "C": "Operation started\nOperation cancelled\nFinal count: 5",
+        "D": "The code will deadlock"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static async Task Main()\n    {\n        // Create cancellation token source with timeout\n        using (var cts = new CancellationTokenSource(TimeSpan.FromMilliseconds(500)))\n        {\n            try\n            {\n                Console.WriteLine(\"Operation started\");\n                int result = await CountSlowlyAsync(10, cts.Token);\n                Console.WriteLine($\"Operation completed successfully\\nFinal count: {result}\");\n            }\n            catch (OperationCanceledException ex)\n            {\n                Console.WriteLine($\"CancellationException occurred: {ex.Message}\");\n            }\n        }\n    }\n    \n    static async Task<int> CountSlowlyAsync(int target, CancellationToken token)\n    {\n        int count = 0;\n        \n        try\n        {\n            for (int i = 1; i <= target; i++)\n            {\n                // Check for cancellation\n                token.ThrowIfCancellationRequested();\n                \n                // Increment counter\n                count = i;\n                \n                // Simulate slow operation (200ms per count)\n                await Task.Delay(200, token);\n            }\n            \n            return count;\n        }\n        catch (OperationCanceledException)\n        {\n            Console.WriteLine(\"Operation cancelled\");\n            return count;\n        }\n    }\n}"
+    }
+  ]
+}
