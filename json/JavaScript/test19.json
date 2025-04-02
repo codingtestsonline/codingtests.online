@@ -1,0 +1,616 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const button = document.createElement('button');\nbutton.addEventListener('click', (event) => {\n  event.preventDefault();\n  console.log('Button clicked!');\n});\n\n// What gets logged when the button is clicked?",
+      "options": {
+        "A": "Nothing, as preventDefault() stops the event from being logged",
+        "B": "Button clicked!",
+        "C": "An error because preventDefault() is not valid on button elements",
+        "D": "undefined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "let arr1 = [1, 2, 3];\nlet arr2 = arr1;\narr2.push(4);\nconsole.log(arr1);",
+      "options": {
+        "A": "[1, 2, 3]",
+        "B": "[1, 2, 3, 4]",
+        "C": "Error",
+        "D": "[4, 1, 2, 3]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the result of the following bitwise operation?",
+      "code_example": "console.log(5 & 3);",
+      "options": {
+        "A": "1",
+        "B": "7",
+        "C": "8",
+        "D": "0"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Which of the following statements about variable declarations is correct?",
+      "options": {
+        "A": "Variables declared with const can be reassigned new values",
+        "B": "Variables declared with let can be redeclared within the same scope",
+        "C": "Variables declared with var are block-scoped",
+        "D": "Variables declared with let are block-scoped"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const regularFunction = function(a, b) {\n  return this.value + a + b;\n};\n\nconst arrowFunction = (a, b) => {\n  return this.value + a + b;\n};\n\nconst obj = {\n  value: 10,\n  regularMethod: regularFunction,\n  arrowMethod: arrowFunction\n};\n\nconsole.log(obj.regularMethod(1, 2));\nconsole.log(obj.arrowMethod(1, 2));",
+      "options": {
+        "A": "13, 13",
+        "B": "13, NaN",
+        "C": "NaN, 13",
+        "D": "NaN, NaN"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const user = {\n  name: 'John',\n  greet() {\n    return `Hello, ${this.name}!`;\n  }\n};\n\nconsole.log(user.greet());",
+      "options": {
+        "A": "Hello, John!",
+        "B": "Hello, undefined!",
+        "C": "Hello, ${this.name}!",
+        "D": "Error: this.name is not defined"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const person = {\n  name: 'Alice',\n  age: 30,\n  city: 'Wonderland'\n};\n\nconsole.log(Object.values(person));",
+      "options": {
+        "A": "['name', 'age', 'city']",
+        "B": "{'name': 'Alice', 'age': 30, 'city': 'Wonderland'}",
+        "C": "['Alice', 30, 'Wonderland']",
+        "D": "{'Alice', 30, 'Wonderland'}"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "function greet(name, greeting = 'Hello') {\n  return `${greeting}, ${name}!`;\n}\n\nconsole.log(greet('Sarah'));\nconsole.log(greet('Mike', 'Hi'));",
+      "options": {
+        "A": "Hello, Sarah! and Hi, Mike!",
+        "B": "undefined, Sarah! and Hi, Mike!",
+        "C": "Hello, Sarah! and Hello, Mike!",
+        "D": "Sarah! and Hi, Mike!"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "let x = 5;\nx += 3;\nx *= 2;\nconsole.log(x);",
+      "options": {
+        "A": "10",
+        "B": "16",
+        "C": "13",
+        "D": "8"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a valid way to create an object in JavaScript?",
+      "options": {
+        "A": "const obj = {};",
+        "B": "const obj = new Object();",
+        "C": "const obj = Object.create(null);",
+        "D": "const obj = Object();"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What is a key difference between Node.js and browser JavaScript?",
+      "options": {
+        "A": "Node.js cannot execute JavaScript code",
+        "B": "Browser JavaScript can directly access the file system like Node.js",
+        "C": "Node.js has direct access to the DOM like browser JavaScript",
+        "D": "Node.js has direct access to the file system unlike browser JavaScript"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log('1' === 1);\nconsole.log('1' == 1);",
+      "options": {
+        "A": "true, true",
+        "B": "false, true",
+        "C": "true, false",
+        "D": "false, false"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "In the context of DOM event handling, what is the correct order of event phases?",
+      "options": {
+        "A": "Target phase, capturing phase, bubbling phase",
+        "B": "Bubbling phase, target phase, capturing phase",
+        "C": "Capturing phase, target phase, bubbling phase",
+        "D": "Capturing phase, bubbling phase, target phase"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "Which of the following statements about package.json is FALSE?",
+      "options": {
+        "A": "It contains metadata about the project such as name and version",
+        "B": "It lists the project's dependencies",
+        "C": "It can define custom scripts that can be run with npm run",
+        "D": "It must be manually created and cannot be generated automatically"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(sum(5, 10));\n\nfunction sum(a, b) {\n  return a + b;\n}",
+      "options": {
+        "A": "15",
+        "B": "Error: sum is not defined",
+        "C": "undefined",
+        "D": "NaN"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(Boolean(''));\nconsole.log(Boolean('0'));\nconsole.log(Number('123'));\nconsole.log(String(null));",
+      "options": {
+        "A": "false, true, 123, 'null'",
+        "B": "false, false, 123, ''",
+        "C": "false, true, 123, null",
+        "D": "false, false, NaN, 'null'"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "Which of the following techniques would help reduce redundant database queries in a Node.js application?",
+      "options": {
+        "A": "Using setTimeout() to delay database calls",
+        "B": "Implementing caching for frequently accessed data",
+        "C": "Increasing the number of database connections",
+        "D": "Converting all queries to synchronous operations"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is the correct way to define a required string field with a minimum length validation in a Mongoose schema?",
+      "code_example": "const mongoose = require('mongoose');\nconst userSchema = new mongoose.Schema({\n  username: {\n    // Which configuration is correct for a required string with min length 3?\n  }\n});",
+      "options": {
+        "A": "username: { type: String, required: true, minLength: 3 }",
+        "B": "username: { type: String, required: true, min: 3 }",
+        "C": "username: { type: String, required: true, validate: { min: 3 } }",
+        "D": "username: { type: String, required: true, length: { min: 3 } }"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following Express.js route handling code?",
+      "code_example": "app.get('/users/:id', (req, res) => {\n  console.log(req.params.id);\n  console.log(req.query.role);\n});\n\n// When the request is made to /users/42?role=admin",
+      "options": {
+        "A": "42, undefined",
+        "B": "42, admin",
+        "C": "undefined, admin",
+        "D": "/users/42, { role: 'admin' }"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which HTTP method is idempotent but not safe according to HTTP specifications?",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "PATCH"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Which of the following is the most effective way to prevent SQL injection in a Node.js application using MySQL?",
+      "code_example": "// Using mysql2 package\nconst mysql = require('mysql2');\nconst connection = mysql.createConnection({\n  host: 'localhost',\n  user: 'user',\n  password: 'password',\n  database: 'mydb'\n});\n\nfunction getUserById(userId) {\n  // Which implementation is safest?\n}",
+      "options": {
+        "A": "const query = `SELECT * FROM users WHERE id = ${userId}`;\nreturn connection.query(query);",
+        "B": "const query = 'SELECT * FROM users WHERE id = ?';\nreturn connection.query(query, [userId]);",
+        "C": "const query = `SELECT * FROM users WHERE id = '${userId.toString().replace(/'/g, \"\\'\")}'`;\nreturn connection.query(query);",
+        "D": "const query = 'SELECT * FROM users WHERE id = \"' + userId + '\"';\nreturn connection.query(query);"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which Helmet.js middleware helps prevent clickjacking attacks?",
+      "code_example": "const express = require('express');\nconst helmet = require('helmet');\nconst app = express();\n\n// Which specific middleware prevents clickjacking?",
+      "options": {
+        "A": "helmet.xssFilter()",
+        "B": "helmet.contentSecurityPolicy()",
+        "C": "helmet.frameguard()",
+        "D": "helmet.noSniff()"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What is the correct way to connect to MongoDB using Mongoose?",
+      "code_example": "const mongoose = require('mongoose');\n\n// Which is the correct way to connect with proper error handling?",
+      "options": {
+        "A": "mongoose.connect('mongodb://localhost:27017/myapp');\nmongoose.connection.on('error', console.error);",
+        "B": "mongoose.connect('mongodb://localhost:27017/myapp')\n  .then(() => console.log('Connected to MongoDB'))\n  .catch(err => console.error('Could not connect to MongoDB', err));",
+        "C": "mongoose.createConnection('mongodb://localhost:27017/myapp', (err) => {\n  if (err) console.error(err);\n  else console.log('Connected');\n});",
+        "D": "mongoose.open('mongodb://localhost:27017/myapp')\n  .on('success', () => console.log('Connected'))\n  .on('error', (err) => console.error(err));"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What is the correct way to implement JWT authentication in a Node.js Express application?",
+      "code_example": "const jwt = require('jsonwebtoken');\nconst express = require('express');\nconst app = express();\n\n// Login route\napp.post('/login', (req, res) => {\n  // Validate user credentials\n  const user = { id: 123, username: 'testuser' };\n  \n  // Generate and send token\n  // Which is the correct way?\n});",
+      "options": {
+        "A": "const token = jwt.sign({ user }, 'secret_key');\nres.cookie('auth', token).send({ success: true });",
+        "B": "const token = Buffer.from(JSON.stringify(user)).toString('base64');\nres.json({ token });",
+        "C": "const token = jwt.sign({ user }, 'secret_key', { expiresIn: '1h' });\nres.json({ token });",
+        "D": "const token = jwt.encrypt(user, 'secret_key');\nres.json({ token });"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What is the most efficient way to stream and process a large file in Node.js?",
+      "code_example": "const fs = require('fs');\nconst path = require('path');\n\n// Which approach is most efficient for processing a 1GB log file line by line?",
+      "options": {
+        "A": "const data = fs.readFileSync(filePath, 'utf8');\nconst lines = data.split('\\n');\nlines.forEach(processLine);",
+        "B": "fs.readFile(filePath, 'utf8', (err, data) => {\n  if (err) throw err;\n  const lines = data.split('\\n');\n  lines.forEach(processLine);\n});",
+        "C": "const readline = require('readline');\nconst rl = readline.createInterface({\n  input: fs.createReadStream(filePath),\n  crlfDelay: Infinity\n});\nrl.on('line', processLine);",
+        "D": "fs.readFile(filePath).then(buffer => {\n  buffer.toString().split('\\n').forEach(processLine);\n});"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "Which of the following practices helps minimize DOM reflows?",
+      "code_example": "// Which approach causes fewer reflows when adding multiple elements?",
+      "options": {
+        "A": "for (let i = 0; i < 100; i++) {\n  document.body.appendChild(document.createElement('div'));\n}",
+        "B": "const fragment = document.createDocumentFragment();\nfor (let i = 0; i < 100; i++) {\n  fragment.appendChild(document.createElement('div'));\n}\ndocument.body.appendChild(fragment);",
+        "C": "document.body.innerHTML = Array(100).fill('<div></div>').join('');",
+        "D": "setTimeout(() => {\n  for (let i = 0; i < 100; i++) {\n    document.body.appendChild(document.createElement('div'));\n  }\n}, 0);"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What is the correct way to validate a user's email using express-validator?",
+      "code_example": "const express = require('express');\nconst { body, validationResult } = require('express-validator');\nconst app = express();\n\napp.post('/register',\n  // Validation middleware\n  (req, res) => {\n    const errors = validationResult(req);\n    if (!errors.isEmpty()) {\n      return res.status(400).json({ errors: errors.array() });\n    }\n    res.json({ success: true });\n  }\n);",
+      "options": {
+        "A": "body('email').isValidEmail()",
+        "B": "body('email').isEmail().normalizeEmail()",
+        "C": "body('email').validate('email')",
+        "D": "body('email').matches(/^\\S+@\\S+\\.\\S+$/)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "Which approach best prevents NoSQL injection in a MongoDB application?",
+      "code_example": "const express = require('express');\nconst mongoose = require('mongoose');\nconst User = mongoose.model('User');\nconst app = express();\n\napp.get('/user', async (req, res) => {\n  const username = req.query.username;\n  // Which query is safest against NoSQL injection?",
+      "options": {
+        "A": "const user = await User.findOne({ username });",
+        "B": "const user = await User.findOne({ username: new RegExp(username) });",
+        "C": "const user = await User.findOne({ $where: `this.username === '${username}'` });",
+        "D": "const user = await User.findOne({ username: { $in: [username] } });"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following Express.js route handler?",
+      "code_example": "app.get('/data', (req, res) => {\n  const data = { name: 'Test', values: [1, 2, 3] };\n  res.status(200).json(data);\n  res.send('Data sent');\n});",
+      "options": {
+        "A": "The JSON data followed by the string 'Data sent'",
+        "B": "Only the JSON data, with HTTP status 200",
+        "C": "Only the string 'Data sent', with HTTP status 200",
+        "D": "An error because headers have already been sent"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of this function composition code?",
+      "code_example": "const add5 = x => x + 5;\nconst multiply2 = x => x * 2;\nconst subtract3 = x => x - 3;\n\nconst compose = (...fns) => x => fns.reduceRight((acc, fn) => fn(acc), x);\nconst pipe = (...fns) => x => fns.reduce((acc, fn) => fn(acc), x);\n\nconst composed = compose(subtract3, multiply2, add5);\nconst piped = pipe(add5, multiply2, subtract3);\n\nconsole.log(composed(10));\nconsole.log(piped(10));",
+      "options": {
+        "A": "27, 27",
+        "B": "17, 27",
+        "C": "27, 17",
+        "D": "17, 17"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is the correct way to implement rate limiting in an Express application?",
+      "code_example": "const express = require('express');\nconst rateLimit = require('express-rate-limit');\nconst app = express();\n\n// Which implementation correctly limits to 100 requests per hour?",
+      "options": {
+        "A": "const limiter = rateLimit({\n  max: 100,\n  time: 60 * 60 * 1000\n});\napp.use(limiter);",
+        "B": "const limiter = rateLimit({\n  maxRequests: 100,\n  windowMs: 60 * 60 * 1000\n});\napp.use(limiter);",
+        "C": "const limiter = rateLimit({\n  max: 100,\n  windowMs: 60 * 60 * 1000\n});\napp.use(limiter);",
+        "D": "const limiter = rateLimit({\n  limit: 100,\n  period: 60 * 60 * 1000\n});\napp.use(limiter);"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What is the correct way to implement error handling middleware in Express.js?",
+      "code_example": "const express = require('express');\nconst app = express();\n\napp.get('/data', (req, res) => {\n  throw new Error('Something went wrong');\n});\n\n// Which middleware will correctly catch the error?",
+      "options": {
+        "A": "app.use((err) => {\n  console.error(err);\n  res.status(500).json({ error: err.message });\n});",
+        "B": "app.catch((err, req, res, next) => {\n  console.error(err);\n  res.status(500).json({ error: err.message });\n});",
+        "C": "app.use((err, req, res, next) => {\n  console.error(err);\n  res.status(500).json({ error: err.message });\n});",
+        "D": "app.error((err, req, res) => {\n  console.error(err);\n  res.status(500).json({ error: err.message });\n});"
+      },
+      "correct_answer": "C"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which statement correctly describes the difference between WebSockets and REST?",
+      "options": {
+        "A": "WebSockets maintain a persistent connection while REST is stateless and uses HTTP methods",
+        "B": "REST allows bidirectional communication while WebSockets only allow server-to-client communication",
+        "C": "WebSockets are only used for file transfers while REST is used for general API requests",
+        "D": "REST maintains a persistent connection while WebSockets require a new connection for each request"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following bcrypt password comparison code?",
+      "options": {
+        "A": "true",
+        "B": "false",
+        "C": "Error: Invalid salt version",
+        "D": "Error: Data and hash arguments required"
+      },
+      "correct_answer": "B",
+      "code_example": "const bcrypt = require('bcrypt');\n\nasync function checkPassword() {\n  const plainPassword = 'password123';\n  const hash = '$2b$10$X4kv7j5ZcG39WgogSl16he9AAAAsNTkl0HhP/IHdPOi6pWRDJfQK2';\n  \n  const result = await bcrypt.compare(plainPassword, hash);\n  console.log(result);\n}\n\ncheckPassword();"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What is the primary advantage of using PM2 for load balancing in Node.js applications?",
+      "options": {
+        "A": "It implements container orchestration similar to Kubernetes",
+        "B": "It allows automatic process restarts and distribution of incoming requests across multiple instances",
+        "C": "It provides a serverless environment for Node.js applications",
+        "D": "It bypasses the event loop to improve performance"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of this code demonstrating V8 Engine optimization?",
+      "options": {
+        "A": "Fast: 500ms, Slow: 1500ms",
+        "B": "Fast: 500ms, Slow: 500ms",
+        "C": "Fast: 1500ms, Slow: 500ms",
+        "D": "Fast: 1500ms, Slow: 1500ms"
+      },
+      "correct_answer": "A",
+      "code_example": "function benchmark(description, fn) {\n  const start = Date.now();\n  fn();\n  console.log(`${description}: ${Date.now() - start}ms`);\n}\n\n// Optimized for hidden classes\nbenchmark('Fast', () => {\n  class Point { constructor(x, y) { this.x = x; this.y = y; } }\n  const points = [];\n  \n  for (let i = 0; i < 1000000; i++) {\n    points.push(new Point(i, i));\n  }\n});\n\n// Breaking hidden classes\nbenchmark('Slow', () => {\n  class Point { constructor(x, y) { this.x = x; this.y = y; } }\n  const points = [];\n  \n  for (let i = 0; i < 1000000; i++) {\n    const point = new Point(i, i);\n    if (i % 2 === 0) point.z = i; // Breaking the hidden class\n    points.push(point);\n  }\n});"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "In the context of express-rate-limit, what does the following code accomplish?",
+      "options": {
+        "A": "Limits each IP to 100 requests per 15 minutes for all routes",
+        "B": "Limits each IP to 100 requests per 15 minutes only for the /api route",
+        "C": "Creates a DoS protection system that bans IPs after 100 failed attempts",
+        "D": "Sets up a whitelist of 100 IPs that can access the /api route"
+      },
+      "correct_answer": "B",
+      "code_example": "const rateLimit = require('express-rate-limit');\nconst express = require('express');\nconst app = express();\n\nconst apiLimiter = rateLimit({\n  windowMs: 15 * 60 * 1000, // 15 minutes\n  max: 100, // limit each IP to 100 requests per windowMs\n  standardHeaders: true,\n  legacyHeaders: false,\n});\n\napp.use('/api', apiLimiter);\n\napp.listen(3000);"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What is incorrect about the following Dockerfile for a Node.js application?",
+      "options": {
+        "A": "It uses a full Node.js image instead of a smaller alpine variant",
+        "B": "It copies the package.json before installing dependencies, which is inefficient for build caching",
+        "C": "It runs the application as root user which is a security risk",
+        "D": "It exposes port 3000 but the application listens on port 8080"
+      },
+      "correct_answer": "D",
+      "code_example": "FROM node:14\n\nWORKDIR /app\n\nCOPY package*.json ./\nRUN npm install\n\nCOPY . .\n\nEXPOSE 3000\nCMD [\"node\", \"server.js\"]\n\n# server.js excerpt:\n# const app = express();\n# app.listen(3000, () => {\n#   console.log('Server running on port 3000');\n# });"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of this code using worker threads?",
+      "options": {
+        "A": "Main: 1,2,3,4,5\nWorker: undefined",
+        "B": "Main: 1,2,3,4,5\nWorker: 15",
+        "C": "Main: started worker\nWorker: 15",
+        "D": "Error: Cannot transfer a SharedArrayBuffer"
+      },
+      "correct_answer": "C",
+      "code_example": "const { Worker, isMainThread, parentPort, workerData } = require('worker_threads');\n\nif (isMainThread) {\n  const data = [1, 2, 3, 4, 5];\n  const worker = new Worker(__filename, { workerData: data });\n  \n  worker.on('message', (result) => {\n    console.log(`Worker: ${result}`);\n  });\n  \n  console.log('Main: started worker');\n} else {\n  // In the worker thread\n  const sum = workerData.reduce((acc, curr) => acc + curr, 0);\n  parentPort.postMessage(sum);\n}"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "Which docker-compose.yml configuration correctly sets up a Node.js application with a MongoDB database and proper container dependencies?",
+      "options": {
+        "A": "A docker-compose file where both services share the same network but without explicit depends_on",
+        "B": "A docker-compose file where the Node.js service depends on the MongoDB service with proper healthcheck",
+        "C": "A docker-compose file where MongoDB depends on the Node.js service",
+        "D": "A docker-compose file where both services are in different networks with manual linking"
+      },
+      "correct_answer": "B",
+      "code_example": "version: '3.8'\n\nservices:\n  nodejs:\n    build: .\n    ports:\n      - \"3000:3000\"\n    environment:\n      - MONGODB_URI=mongodb://mongodb:27017/myapp\n    depends_on:\n      mongodb:\n        condition: service_healthy\n    networks:\n      - app-network\n\n  mongodb:\n    image: mongo:4.4\n    ports:\n      - \"27017:27017\"\n    volumes:\n      - mongodb-data:/data/db\n    healthcheck:\n      test: [\"CMD\", \"mongo\", \"--eval\", \"db.adminCommand('ping')\"]\n      interval: 10s\n      timeout: 5s\n      retries: 5\n    networks:\n      - app-network\n\nnetworks:\n  app-network:\n    driver: bridge\n\nvolumes:\n  mongodb-data:"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What is a key difference between horizontal and vertical scaling in Node.js applications?",
+      "options": {
+        "A": "Horizontal scaling uses clustering while vertical scaling uses worker threads",
+        "B": "Vertical scaling adds more CPU/RAM to a single instance while horizontal scaling adds more instances",
+        "C": "Horizontal scaling works only with Docker while vertical scaling works only with bare metal servers",
+        "D": "Vertical scaling is always more cost-effective than horizontal scaling"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will this code using WeakMap and WeakSet output?",
+      "options": {
+        "A": "Map size: 1, Set size: 1",
+        "B": "Map size: 0, Set size: 0",
+        "C": "Error: WeakMap and WeakSet don't have a size property",
+        "D": "Map size: 1, Set size: 0"
+      },
+      "correct_answer": "C",
+      "code_example": "let obj = { id: 1 };\nlet func = function() { return obj; };\n\nconst weakMap = new WeakMap();\nweakMap.set(obj, 'value');\n\nconst weakSet = new WeakSet();\nweakSet.add(func);\n\n// Remove strong references\nobj = null;\nfunc = null;\n\n// Force garbage collection (note: this is not guaranteed to work)\nif (global.gc) {\n  global.gc();\n}\n\nsetTimeout(() => {\n  console.log(`Map size: ${weakMap.size}, Set size: ${weakSet.size}`);\n}, 1000);"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "When implementing a Nginx reverse proxy for a Node.js application, what is the correct configuration to handle WebSocket connections?",
+      "options": {
+        "A": "Using the 'proxy_http_version 1.0' directive",
+        "B": "Adding WebSocket protocol headers and setting proxy_http_version to 1.1",
+        "C": "Setting up a separate server block specifically for WebSocket traffic on a different port",
+        "D": "Using the 'proxy_ssl_session_reuse on' directive"
+      },
+      "correct_answer": "B",
+      "code_example": "# Example Nginx configuration for Node.js with WebSockets\nserver {\n    listen 80;\n    server_name example.com;\n\n    location / {\n        proxy_pass http://localhost:3000;\n        proxy_http_version 1.1;\n        proxy_set_header Upgrade $http_upgrade;\n        proxy_set_header Connection 'upgrade';\n        proxy_set_header Host $host;\n        proxy_cache_bypass $http_upgrade;\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will the following code related to V8 hidden classes and inline caching output?",
+      "options": {
+        "A": "Same shape: true",
+        "B": "Same shape: false",
+        "C": "Error: %HaveSameMap is not defined",
+        "D": "Error: Cannot access internal V8 debugging functions"
+      },
+      "correct_answer": "D",
+      "code_example": "function createPoint(x, y) {\n  return { x, y };\n}\n\nconst p1 = createPoint(1, 2);\nconst p2 = createPoint(3, 4);\n\n// Attempt to use V8's internal %HaveSameMap function\n// This won't work in standard Node.js without --allow-natives-syntax flag\nconst sameShape = %HaveSameMap(p1, p2);\nconsole.log('Same shape:', sameShape);"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What best describes the difference between using GraphQL and REST for API design?",
+      "options": {
+        "A": "GraphQL always performs better than REST for all applications",
+        "B": "REST enables clients to request exactly the data they need while GraphQL provides fixed data structures",
+        "C": "GraphQL allows clients to specify exactly what data they need while REST endpoints return fixed data structures",
+        "D": "GraphQL is exclusively for graph databases while REST works with any database"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will the following code using Node.js crypto module output?",
+      "options": {
+        "A": "The encrypted and then decrypted text 'sensitive data'",
+        "B": "A buffer containing encrypted data followed by the original string",
+        "C": "Error: Invalid IV length",
+        "D": "The encrypted text in hexadecimal format"
+      },
+      "correct_answer": "C",
+      "code_example": "const crypto = require('crypto');\n\nfunction encryptData(text, secretKey) {\n  // AES-256-CBC requires a 16-byte IV\n  const iv = crypto.randomBytes(8); // Using 8 bytes instead of 16\n  const cipher = crypto.createCipheriv('aes-256-cbc', secretKey, iv);\n  \n  let encrypted = cipher.update(text, 'utf8', 'hex');\n  encrypted += cipher.final('hex');\n  \n  return { iv: iv.toString('hex'), encryptedData: encrypted };\n}\n\nfunction decryptData(encrypted, secretKey) {\n  const iv = Buffer.from(encrypted.iv, 'hex');\n  const decipher = crypto.createDecipheriv('aes-256-cbc', secretKey, iv);\n  \n  let decrypted = decipher.update(encrypted.encryptedData, 'hex', 'utf8');\n  decrypted += decipher.final('utf8');\n  \n  return decrypted;\n}\n\nconst secretKey = crypto.scryptSync('password', 'salt', 32);\nconst text = 'sensitive data';\n\nconst encrypted = encryptData(text, secretKey);\nconst decrypted = decryptData(encrypted, secretKey);\n\nconsole.log(decrypted);"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "When setting up Prometheus and Grafana for Node.js monitoring, which statement is correct?",
+      "options": {
+        "A": "Prometheus pulls metrics from your application while Grafana pushes alerts",
+        "B": "Prometheus stores the time-series data and Grafana visualizes it",
+        "C": "Grafana collects metrics and Prometheus creates dashboards",
+        "D": "Both Prometheus and Grafana must be installed on the same server as your Node.js application"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will the following code demonstrating JavaScript memory allocation output?",
+      "options": {
+        "A": "Stack: 123, Heap: [object Object]",
+        "B": "Stack: 123, Heap: { value: [Function] }",
+        "C": "Stack: number, Heap: object",
+        "D": "Memory Leak Detected"
+      },
+      "correct_answer": "A",
+      "code_example": "function memoryAllocationExample() {\n  // Stack allocation for primitive types\n  const stackValue = 123;\n  \n  // Heap allocation for objects and functions\n  const heapValue = {\n    value: function() {\n      return stackValue;\n    }\n  };\n  \n  console.log(`Stack: ${stackValue}, Heap: ${heapValue}`);\n  \n  // The JS engine may optimize this in various ways,\n  // but conceptually primitives go on the stack and\n  // objects go on the heap\n}\n\nmemoryAllocationExample();"
+    }
+  ]
+}
