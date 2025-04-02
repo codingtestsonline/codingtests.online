@@ -1,0 +1,612 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "Dictionary<string, int> scores = new Dictionary<string, int>();\nscores.Add(\"Alice\", 95);\nscores.Add(\"Bob\", 87);\nscores.Add(\"Charlie\", 92);\n\nConsole.WriteLine(scores.ContainsKey(\"Dave\") ? \"Found\" : \"Not Found\");",
+      "options": {
+        "A": "Found",
+        "B": "Not Found",
+        "C": "False",
+        "D": "KeyNotFoundException will be thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the purpose of HashSet<T> in C#?",
+      "options": {
+        "A": "To store key-value pairs with unique keys",
+        "B": "To store unique elements with constant time complexity for basic operations",
+        "C": "To store elements in a sorted order",
+        "D": "To implement a hash-based multidimensional array"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "int? number = null;\nConsole.WriteLine(number.HasValue ? number.Value.ToString() : \"No value\");",
+      "options": {
+        "A": "0",
+        "B": "null",
+        "C": "No value",
+        "D": "NullReferenceException will be thrown"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "Queue<int> queue = new Queue<int>();\nqueue.Enqueue(10);\nqueue.Enqueue(20);\nqueue.Enqueue(30);\n\nint first = queue.Dequeue();\nConsole.WriteLine(first);\nConsole.WriteLine(queue.Count);",
+      "options": {
+        "A": "10\\n3",
+        "B": "10\\n2",
+        "C": "30\\n2",
+        "D": "10\\n0"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "Which access modifier allows a class member to be accessed only within the same class or derived classes?",
+      "options": {
+        "A": "public",
+        "B": "private",
+        "C": "protected",
+        "D": "internal"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string message = \"Hello, World!\";\nConsole.WriteLine(message.Substring(0, 5));",
+      "options": {
+        "A": "Hello",
+        "B": "Hello,",
+        "C": "Hell",
+        "D": "Hello, World!"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy", 
+      "question": "What is the output of the following code?",
+      "code_example": "object intValue = 42;\nint explicitValue = (int)intValue;\nlong implicitValue = explicitValue;\n\nConsole.WriteLine($\"{explicitValue}, {implicitValue}\");",
+      "options": {
+        "A": "42, 0",
+        "B": "0, 42",
+        "C": "42, 42",
+        "D": "The code will throw an InvalidCastException"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "bool a = true;\nbool b = false;\nConsole.WriteLine(a && b || !b);",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Compiler error",
+        "D": "Runtime error"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the key difference between 'var' and 'dynamic' in C#?",
+      "options": {
+        "A": "There is no difference; they are aliases for the same feature",
+        "B": "'var' is resolved at compile-time while 'dynamic' is resolved at runtime",
+        "C": "'var' is for reference types, while 'dynamic' is for value types",
+        "D": "'var' allows type changes during execution, 'dynamic' does not"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string name = null;\nConsole.WriteLine(name ?? \"Unknown\");\n\nstring message = \"Hello\";\nConsole.WriteLine(message?.ToUpper() ?? \"No message\");",
+      "options": {
+        "A": "null\\nHELLO",
+        "B": "Unknown\\nHello",
+        "C": "Unknown\\nHELLO",
+        "D": "null\\nNull"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a key feature of cross-platform development in .NET?",
+      "options": {
+        "A": "Ability to run the same code on Windows, Linux and macOS",
+        "B": "Use of platform-specific APIs through conditional compilation",
+        "C": "Support for containerization and microservices",
+        "D": "Automatic conversion of Windows Forms applications to web applications"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "try {\n  File.WriteAllText(\"test.txt\", \"Hello World\");\n  string content = File.ReadAllText(\"test.txt\");\n  Console.WriteLine(content.Length);\n} catch (Exception) {\n  Console.WriteLine(\"Error\");\n}",
+      "options": {
+        "A": "11",
+        "B": "10",
+        "C": "\"Hello World\"",
+        "D": "Error"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "for (int i = 0; i < 5; i++) {\n  if (i == 2) {\n    continue;\n  }\n  if (i == 4) {\n    break;\n  }\n  Console.Write(i);\n}",
+      "options": {
+        "A": "0134",
+        "B": "0123",
+        "C": "013",
+        "D": "01234"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "Which of the following statements about strings in C# is correct?",
+      "options": {
+        "A": "Strings are mutable objects that can be modified after creation",
+        "B": "String operations like Substring() modify the original string",
+        "C": "Strings are immutable; methods like Replace() return new string instances",
+        "D": "The StringBuilder class should be used when immutability is required"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "using (var writer = new StringWriter()) {\n  writer.Write(\"Hello\");\n  writer.Write(\" World\");\n  Console.WriteLine(writer.ToString());\n}",
+      "options": {
+        "A": "Empty string",
+        "B": "Hello World",
+        "C": "Hello",
+        "D": "ObjectDisposedException will be thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "string[] fruits = { \"apple\", \"banana\", \"cherry\", \"date\" };\n\nfor (int i = 0; i < 2; i++) {\n  Console.Write(fruits[i] + \" \");\n}\n\nforeach (string fruit in fruits) {\n  if (fruit.StartsWith(\"c\")) {\n    Console.Write(fruit);\n    break;\n  }\n}",
+      "options": {
+        "A": "apple banana",
+        "B": "apple banana cherry",
+        "C": "apple banana cherry date",
+        "D": "apple"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Base {\n  public Base() {\n    Console.Write(\"Base \");\n  }\n}\n\nclass Derived : Base {\n  public Derived() : base() {\n    Console.Write(\"Derived \");\n  }\n  \n  public Derived(string message) {\n    Console.Write(message);\n  }\n}\n\nnew Derived();\nnew Derived(\"Hello\");",
+      "options": {
+        "A": "Base Derived Hello",
+        "B": "Base Derived Base Hello",
+        "C": "Derived Hello",
+        "D": "Base Hello"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "Func<int, int, int> multiply = (x, y) => x * y;\nAction<int> display = x => Console.WriteLine(x);\n\ndisplay(multiply(3, 4));",
+      "options": {
+        "A": "7",
+        "B": "12",
+        "C": "3, 4",
+        "D": "Compilation error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which of the following best describes Property Injection in dependency injection?",
+      "options": {
+        "A": "Dependencies are provided through a class's constructor parameters",
+        "B": "Dependencies are provided through public properties of a class",
+        "C": "Dependencies are provided directly to methods when they are called",
+        "D": "Dependencies are automatically detected and created at runtime"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar query = numbers.Where(n => n > 2);\n\nnumbers.Add(6);\nnumbers.Add(0);\n\nforeach (var n in query) {\n  Console.Write(n + \" \");\n}",
+      "options": {
+        "A": "3 4 5",
+        "B": "3 4 5 6",
+        "C": "1 2 3 4 5 6 0",
+        "D": "Empty result, nothing is printed"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What is the correct way to define a custom EventArgs class in C#?",
+      "code_example": "public class StatusChangedEventArgs : EventArgs {\n  public string Status { get; }\n  \n  public StatusChangedEventArgs(string status) {\n    Status = status;\n  }\n}",
+      "options": {
+        "A": "The class should not inherit from EventArgs",
+        "B": "The Status property should be writeable (have a public setter)",
+        "C": "The code is correct as shown",
+        "D": "The class must include a parameterless constructor"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What is the primary purpose of GC.Collect() in C#?",
+      "options": {
+        "A": "To explicitly trigger garbage collection",
+        "B": "To prevent automatic garbage collection",
+        "C": "To collect performance metrics about memory usage",
+        "D": "To remove unused using statements from the code"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will be the output of the following LINQ code?",
+      "code_example": "var students = new List<(string Name, int Age)> {\n  (\"Alice\", 22),\n  (\"Bob\", 21),\n  (\"Charlie\", 23),\n  (\"Diana\", 22)\n};\n\nvar result = students\n  .Where(s => s.Age >= 22)\n  .OrderBy(s => s.Age)\n  .Select(s => s.Name);\n\nConsole.WriteLine(string.Join(\", \", result));",
+      "options": {
+        "A": "Alice, Diana, Charlie",
+        "B": "Charlie, Alice, Diana",
+        "C": "Alice, Charlie, Diana",
+        "D": "Diana, Alice, Charlie"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "var numbers = new List<int> { };\nvar result1 = numbers.FirstOrDefault();\nvar result2 = numbers.SingleOrDefault();\nConsole.WriteLine($\"{result1}, {result2}\");",
+      "options": {
+        "A": "null, null",
+        "B": "0, 0",
+        "C": "Exception will be thrown on FirstOrDefault()",
+        "D": "Exception will be thrown on SingleOrDefault()"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "When using ASP.NET Core MVC, which attribute would you use to handle HTTP POST requests to a specific endpoint?",
+      "options": {
+        "A": "[GetRequest]",
+        "B": "[PostMethod]",
+        "C": "[HttpPost]",
+        "D": "[Route(\"POST\")]"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "void ProcessData<T>(T item) where T : class, new() {\n  Console.WriteLine(item?.GetType().Name ?? \"null\");\n}\n\ntry {\n  ProcessData<string>(null);\n  ProcessData<List<int>>(new List<int>());\n} catch (Exception ex) {\n  Console.WriteLine(ex.GetType().Name);\n}",
+      "options": {
+        "A": "null\\nList`1",
+        "B": "ArgumentNullException",
+        "C": "null\\nInvalidOperationException",
+        "D": "InvalidOperationException"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following LINQ code?",
+      "code_example": "var students = new[] {\n  new { Id = 1, Name = \"Alice\" },\n  new { Id = 2, Name = \"Bob\" },\n  new { Id = 3, Name = \"Charlie\" }\n};\n\nvar courses = new[] {\n  new { StudentId = 1, CourseName = \"Math\" },\n  new { StudentId = 1, CourseName = \"Physics\" },\n  new { StudentId = 2, CourseName = \"Chemistry\" },\n  new { StudentId = 4, CourseName = \"Biology\" }\n};\n\nvar result = students.Join(\n  courses,\n  student => student.Id,\n  course => course.StudentId,\n  (student, course) => $\"{student.Name}: {course.CourseName}\"\n);\n\nConsole.WriteLine(result.Count());",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "2",
+        "D": "1"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "Which statement about Moq mocking framework is NOT correct?",
+      "options": {
+        "A": "It can create mock objects for interfaces",
+        "B": "It allows setting up expectations for method calls",
+        "C": "It can verify that specific methods were called",
+        "D": "It can only mock public methods with at least one parameter"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "In Entity Framework Core, what does the Code-First approach primarily refer to?",
+      "options": {
+        "A": "Writing stored procedures first, then generating entities",
+        "B": "Creating database tables through SQL scripts before defining models",
+        "C": "Defining entity classes and relationships in code, then generating the database",
+        "D": "Focusing on business logic code before considering persistence"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "var set = new HashSet<string> { \"apple\", \"banana\", \"cherry\" };\nvar dict = new Dictionary<string, int> { \n  [\"apple\"] = 1, \n  [\"banana\"] = 2, \n  [\"date\"] = 4 \n};\n\nset.IntersectWith(dict.Keys);\nConsole.WriteLine(string.Join(\", \", set));",
+      "options": {
+        "A": "apple, banana, cherry",
+        "B": "apple, banana",
+        "C": "apple, banana, date",
+        "D": "Empty result"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is a key advantage of using Dependency Injection in unit testing?",
+      "options": {
+        "A": "It makes the code faster by eliminating runtime dependencies",
+        "B": "It allows mocking dependencies to isolate the component being tested",
+        "C": "It eliminates the need for writing unit tests altogether",
+        "D": "It automatically fixes bugs in the code being tested"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Container<T> {\n  public T Item { get; set; }\n  \n  public void Process<U>(U input) where U : T {\n    Console.WriteLine($\"Processing {input}\");\n  }\n}\n\ntry {\n  var container = new Container<object>();\n  container.Process<string>(\"Hello\");\n  container.Process<int>(42);\n} catch (Exception ex) {\n  Console.WriteLine(ex.GetType().Name);\n}",
+      "options": {
+        "A": "Processing Hello\\nProcessing 42",
+        "B": "Processing Hello\\nInvalidCastException",
+        "C": "ArgumentException",
+        "D": "Processing Hello\\nInvalidOperationException"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which of the following statements about P/Invoke and the DllImport attribute is incorrect?",
+      "options": {
+        "A": "P/Invoke allows managed code to call unmanaged functions in DLLs",
+        "B": "The CallingConvention enum can be used to specify how parameters are passed to the external method",
+        "C": "DllImport can only be used with static methods",
+        "D": "DllImport requires you to implement IDisposable to properly release unmanaged resources"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Parallel.Invoke()?",
+      "options": {
+        "A": "The numbers will be printed in order: 1, 2, 3, 4, 5",
+        "B": "The numbers will be printed in reverse order: 5, 4, 3, 2, 1",
+        "C": "The order of the numbers will be unpredictable due to parallel execution",
+        "D": "The code will throw a ParallelExecutionException"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static void Main()\n    {\n        Parallel.Invoke(\n            () => Console.WriteLine(1),\n            () => Console.WriteLine(2),\n            () => Console.WriteLine(3),\n            () => Console.WriteLine(4),\n            () => Console.WriteLine(5)\n        );\n    }\n}"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "In OAuth 2.0, which grant type is most appropriate for a server-side web application that needs to access an API on behalf of a user?",
+      "options": {
+        "A": "Client Credentials Grant",
+        "B": "Authorization Code Grant",
+        "C": "Implicit Grant",
+        "D": "Resource Owner Password Credentials Grant"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using MethodInfo.Invoke()?",
+      "options": {
+        "A": "HelloWorld",
+        "B": "Hello World",
+        "C": "A TargetParameterCountException will be thrown",
+        "D": "A MethodAccessException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Reflection;\n\nclass Program\n{\n    static void Main()\n    {\n        Type type = typeof(Greeter);\n        object instance = Activator.CreateInstance(type);\n        MethodInfo method = type.GetMethod(\"SayHello\");\n        object result = method.Invoke(instance, new object[] { \"World\" });\n        Console.WriteLine(result);\n    }\n}\n\npublic class Greeter\n{\n    public string SayHello(string name)\n    {\n        return $\"Hello {name}\";\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What is the output of the following code using Span<T> and Memory<T>?",
+      "options": {
+        "A": "1 2 3 4 5\\n1 2 3 4 5",
+        "B": "1 2 3 4 5\\n1 2 99 4 5",
+        "C": "1 2 3 4 5\\nThe code throws an InvalidOperationException",
+        "D": "1 2 99 4 5\\n1 2 99 4 5"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int[] array = { 1, 2, 3, 4, 5 };\n        Memory<int> memory = array;\n        Span<int> span = memory.Span;\n        \n        // Print original array\n        Console.WriteLine(string.Join(\" \", array));\n        \n        // Modify through span\n        span[2] = 99;\n        \n        // Print array after modification\n        Console.WriteLine(string.Join(\" \", array));\n    }\n}"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a valid transport method supported by SignalR in ASP.NET Core?",
+      "options": {
+        "A": "WebSockets",
+        "B": "Server-Sent Events",
+        "C": "Long Polling",
+        "D": "UDP Sockets"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the correct way to configure CORS in ASP.NET Core to allow specific origins?",
+      "options": {
+        "A": "app.UseCors(builder => builder.AllowAllOrigins());",
+        "B": "app.UseCors(builder => builder.WithOrigins(\"https://example.com\").AllowAnyMethod().AllowAnyHeader());",
+        "C": "app.UseCors(policy => policy.SetIsOriginAllowed(_ => true));",
+        "D": "app.UseCors(\"CorsPolicy\");"
+      },
+      "correct_answer": "B",
+      "code_example": "public void Configure(IApplicationBuilder app, IWebHostEnvironment env)\n{\n    if (env.IsDevelopment())\n    {\n        app.UseDeveloperExceptionPage();\n    }\n\n    // Configure CORS\n    app.UseCors(builder => \n        builder.WithOrigins(\"https://example.com\")\n               .AllowAnyMethod()\n               .AllowAnyHeader());\n\n    app.UseRouting();\n    app.UseAuthorization();\n    app.UseEndpoints(endpoints =>\n    {\n        endpoints.MapControllers();\n    });\n}"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Assembly.Load() and Type.GetType()?",
+      "options": {
+        "A": "System.String",
+        "B": "System.Int32",
+        "C": "A TypeLoadException will be thrown",
+        "D": "A NullReferenceException will be thrown"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Reflection;\n\nclass Program\n{\n    static void Main()\n    {\n        Assembly mscorlib = Assembly.Load(\"System.Private.CoreLib\");\n        Type stringType = Type.GetType(\"System.String, System.Private.CoreLib\");\n        Console.WriteLine(stringType.FullName);\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What is the output of the following code using MemoryCache?",
+      "options": {
+        "A": "Item found: CachedValue",
+        "B": "Item not found in cache",
+        "C": "Item found: CachedValue\\nItem not found in cache",
+        "D": "Item found: CachedValue\\nItem found: CachedValue"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing Microsoft.Extensions.Caching.Memory;\n\nclass Program\n{\n    static void Main()\n    {\n        var cacheOptions = new MemoryCacheOptions\n        {\n            ExpirationScanFrequency = TimeSpan.FromSeconds(1)\n        };\n        \n        var cache = new MemoryCache(cacheOptions);\n        \n        // Set cache item with absolute expiration\n        cache.Set(\"key\", \"CachedValue\", TimeSpan.FromSeconds(1));\n        \n        // Check if item exists immediately\n        if (cache.TryGetValue(\"key\", out string value1))\n        {\n            Console.WriteLine($\"Item found: {value1}\");\n        }\n        else\n        {\n            Console.WriteLine(\"Item not found in cache\");\n        }\n        \n        // Wait for expiration\n        System.Threading.Thread.Sleep(1100);\n        \n        // Check if item exists after expiration\n        if (cache.TryGetValue(\"key\", out string value2))\n        {\n            Console.WriteLine($\"Item found: {value2}\");\n        }\n        else\n        {\n            Console.WriteLine(\"Item not found in cache\");\n        }\n    }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "In the Observer pattern implementation below, what is the output when the NotifyObservers method is called?",
+      "options": {
+        "A": "Observer 1 received: State changed\\nObserver 2 received: State changed",
+        "B": "Observer 1 received: State changed",
+        "C": "The code will throw a NullReferenceException",
+        "D": "No output will be produced"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Collections.Generic;\n\npublic interface IObserver\n{\n    void Update(string message);\n}\n\npublic class ConcreteObserver : IObserver\n{\n    private string _name;\n    \n    public ConcreteObserver(string name)\n    {\n        _name = name;\n    }\n    \n    public void Update(string message)\n    {\n        Console.WriteLine($\"{_name} received: {message}\");\n    }\n}\n\npublic class Subject\n{\n    private List<IObserver> _observers = new List<IObserver>();\n    \n    public void RegisterObserver(IObserver observer)\n    {\n        _observers.Add(observer);\n    }\n    \n    public void NotifyObservers(string message)\n    {\n        foreach (var observer in _observers)\n        {\n            observer.Update(message);\n        }\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var subject = new Subject();\n        var observer1 = new ConcreteObserver(\"Observer 1\");\n        var observer2 = new ConcreteObserver(\"Observer 2\");\n        \n        subject.RegisterObserver(observer1);\n        subject.RegisterObserver(observer2);\n        \n        subject.NotifyObservers(\"State changed\");\n    }\n}"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What critical issue exists in the following Singleton pattern implementation?",
+      "options": {
+        "A": "The class is not thread-safe and could create multiple instances in a multithreaded environment",
+        "B": "The static constructor will prevent lazy initialization",
+        "C": "The private constructor makes it impossible to create instances",
+        "D": "The singleton instance is exposed as a public field, breaking encapsulation"
+      },
+      "correct_answer": "A",
+      "code_example": "public class Singleton\n{\n    private static Singleton _instance;\n    \n    private Singleton() { }\n    \n    public static Singleton Instance\n    {\n        get\n        {\n            if (_instance == null)\n            {\n                _instance = new Singleton();\n            }\n            return _instance;\n        }\n    }\n    \n    public void DoSomething()\n    {\n        // Method implementation\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "Which approach is NOT a valid way to implement API versioning in ASP.NET Core?",
+      "options": {
+        "A": "URL path versioning (e.g., /api/v1/products)",
+        "B": "Query string versioning (e.g., /api/products?api-version=1.0)",
+        "C": "HTTP header versioning (e.g., X-API-Version: 1.0)",
+        "D": "Using the SOAP protocol with version attributes in the XML body"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What is the output of the following JWT token validation code?",
+      "options": {
+        "A": "Valid token: John Doe",
+        "B": "Invalid token: Token has expired",
+        "C": "Invalid token: Signature validation failed",
+        "D": "A SecurityTokenException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.IdentityModel.Tokens.Jwt;\nusing System.Security.Claims;\nusing Microsoft.IdentityModel.Tokens;\nusing System.Text;\n\nclass Program\n{\n    static void Main()\n    {\n        // Create a token that expired 1 day ago\n        var tokenHandler = new JwtSecurityTokenHandler();\n        var key = Encoding.ASCII.GetBytes(\"ThisIsASecretKeyUsedForSigningToken12345\");\n        \n        var tokenDescriptor = new SecurityTokenDescriptor\n        {\n            Subject = new ClaimsIdentity(new[] { new Claim(\"name\", \"John Doe\") }),\n            Expires = DateTime.UtcNow.AddDays(-1), // Expired token\n            SigningCredentials = new SigningCredentials(\n                new SymmetricSecurityKey(key), \n                SecurityAlgorithms.HmacSha256Signature)\n        };\n        \n        var token = tokenHandler.CreateToken(tokenDescriptor);\n        var tokenString = tokenHandler.WriteToken(token);\n        \n        // Now validate the token\n        try\n        {\n            var validationParameters = new TokenValidationParameters\n            {\n                ValidateIssuerSigningKey = true,\n                IssuerSigningKey = new SymmetricSecurityKey(key),\n                ValidateIssuer = false,\n                ValidateAudience = false,\n                ClockSkew = TimeSpan.Zero // No tolerance for token expiration\n            };\n            \n            var principal = tokenHandler.ValidateToken(tokenString, validationParameters, out _);\n            var nameClaim = principal.FindFirst(\"name\")?.Value;\n            Console.WriteLine($\"Valid token: {nameClaim}\");\n        }\n        catch (SecurityTokenExpiredException)\n        {\n            Console.WriteLine(\"Invalid token: Token has expired\");\n        }\n        catch (SecurityTokenException ex)\n        {\n            Console.WriteLine($\"Invalid token: {ex.Message}\");\n        }\n    }\n}"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "Consider the following code. Which statement about stack and heap allocation is correct?",
+      "options": {
+        "A": "The 'value' variable is allocated on the heap, while the 'reference' variable is allocated on the stack",
+        "B": "Both 'value' and 'reference' variables are allocated on the stack, but the Person object is allocated on the heap",
+        "C": "Both 'value' and 'reference' variables, as well as the Person object, are allocated on the heap",
+        "D": "Both 'value' and 'reference' variables, as well as the Person object, are allocated on the stack"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int value = 42;              // Value type\n        Person reference = new Person(); // Reference type\n    }\n}\n\nclass Person\n{\n    public string Name { get; set; }\n    public int Age { get; set; }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What is the output of the following code using ExpandoObject?",
+      "options": {
+        "A": "Name: John\\nAge: 30\\nJob: Developer",
+        "B": "Name: John\\nAge: 30\\nThe code throws a RuntimeBinderException for the Job property",
+        "C": "Name: John\\nAge: 30\\nJob: ",
+        "D": "The code fails to compile due to missing type information"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Dynamic;\n\nclass Program\n{\n    static void Main()\n    {\n        dynamic person = new ExpandoObject();\n        \n        // Add properties dynamically\n        person.Name = \"John\";\n        person.Age = 30;\n        \n        // Add a method dynamically\n        var personDict = (IDictionary<string, object>)person;\n        personDict[\"Job\"] = \"Developer\";\n        \n        // Access properties\n        Console.WriteLine($\"Name: {person.Name}\");\n        Console.WriteLine($\"Age: {person.Age}\");\n        Console.WriteLine($\"Job: {person.Job}\");\n    }\n}"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which of the following statements about indexing in SQL Server is false?",
+      "options": {
+        "A": "A clustered index determines the physical order of data in a table",
+        "B": "A table can have multiple clustered indexes",
+        "C": "Non-clustered indexes contain a pointer to the data in the clustered index",
+        "D": "Filtered indexes can be used to index a subset of rows in a table"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
