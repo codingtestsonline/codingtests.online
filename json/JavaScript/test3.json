@@ -1,0 +1,643 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "async/await",
+      "question": "What will be the output of the following code?",
+      "code_example": "async function test() {\n  return 'Hello';\n}\n\nconst result = test();\nconsole.log(result);",
+      "options": {
+        "A": "'Hello'",
+        "B": "Promise { 'Hello' }",
+        "C": "undefined",
+        "D": "Error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "for, while, do-while, forEach",
+      "question": "What's the key difference between a do-while loop and a while loop?",
+      "options": {
+        "A": "do-while loops can't be used with arrays",
+        "B": "while loops always execute at least once",
+        "C": "do-while loops always execute at least once",
+        "D": "There is no difference between them"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "Object properties & methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "const person = {\n  name: 'John',\n  age: 30,\n  greet() {\n    console.log(`Hello, my name is ${this.name}`);\n  }\n};\n\nconst greetFn = person.greet;\ngreetFn();",
+      "options": {
+        "A": "Hello, my name is John",
+        "B": "Hello, my name is undefined",
+        "C": "TypeError: Cannot read property 'name' of undefined",
+        "D": "Hello, my name is null"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "Function scope",
+      "question": "What will be the output of the following code?",
+      "code_example": "let x = 10;\n\nfunction test() {\n  let x = 20;\n  if (true) {\n    let x = 30;\n    console.log(x);\n  }\n  console.log(x);\n}\n\ntest();\nconsole.log(x);",
+      "options": {
+        "A": "30, 20, 10",
+        "B": "30, 30, 30",
+        "C": "10, 20, 30",
+        "D": "20, 20, 10"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "arguments object",
+      "question": "What will be the output of the following code?",
+      "code_example": "function sum() {\n  let total = 0;\n  for (let i = 0; i < arguments.length; i++) {\n    total += arguments[i];\n  }\n  return total;\n}\n\nconsole.log(sum(1, 2, 3, 4, 5));",
+      "options": {
+        "A": "15",
+        "B": "Error: arguments is not defined",
+        "C": "0",
+        "D": "[1, 2, 3, 4, 5]"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "var, let, const",
+      "question": "Which statement about var, let, and const is NOT true?",
+      "options": {
+        "A": "var is function-scoped",
+        "B": "let is block-scoped",
+        "C": "const doesn't allow reassignment of the variable",
+        "D": "const prevents mutation of object properties"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "Promises",
+      "question": "What will be the output of the following code?",
+      "code_example": "Promise.resolve('Success!')\n  .then(data => {\n    throw new Error('Error!');\n    return data;\n  })\n  .then(data => console.log('Then:', data))\n  .catch(error => console.log('Catch:', error.message))\n  .finally(() => console.log('Finally!'));",
+      "options": {
+        "A": "Then: Success! Finally!",
+        "B": "Catch: Error! Then: Success! Finally!",
+        "C": "Catch: Error! Finally!",
+        "D": "Then: undefined Finally!"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "Changing content",
+      "question": "What is the safest way to set text content for an element to prevent XSS attacks?",
+      "options": {
+        "A": "element.innerHTML = userProvidedText;",
+        "B": "element.textContent = userProvidedText;",
+        "C": "element.innerText = userProvidedText;",
+        "D": "element.value = userProvidedText;"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Event listeners",
+      "question": "What will be the output of the following code when the button is clicked?",
+      "code_example": "const button = document.createElement('button');\nbutton.textContent = 'Click me';\n\nbutton.onclick = () => console.log('onclick fired');\nbutton.addEventListener('click', () => console.log('addEventListener fired'));\nbutton.onclick = () => console.log('onclick replaced');",
+      "options": {
+        "A": "onclick fired",
+        "B": "addEventListener fired",
+        "C": "onclick replaced",
+        "D": "onclick replaced addEventListener fired"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Template literals",
+      "question": "What will be the output of the following code?",
+      "code_example": "const name = 'World';\nconst greeting = `Hello ${name.toLowerCase()}`;\nconsole.log(greeting);",
+      "options": {
+        "A": "Hello World",
+        "B": "Hello world",
+        "C": "Hello ${name.toLowerCase()}",
+        "D": "Hello undefined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "Object methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "const person = {\n  firstName: 'John',\n  lastName: 'Doe',\n  age: 30\n};\n\nconsole.log(Object.entries(person)[1]);",
+      "options": {
+        "A": "['firstName', 'John']",
+        "B": "['lastName', 'Doe']",
+        "C": "['age', 30]",
+        "D": "{ lastName: 'Doe' }"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "Function hoisting",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(add(2, 3));\nconsole.log(subtract(5, 2));\n\nfunction add(a, b) {\n  return a + b;\n}\n\nconst subtract = function(a, b) {\n  return a - b;\n};",
+      "options": {
+        "A": "5, 3",
+        "B": "5, Error",
+        "C": "Error, Error",
+        "D": "undefined, undefined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "require() vs import()",
+      "question": "Which statement about CommonJS (require()) and ES Modules (import) is correct?",
+      "options": {
+        "A": "require() is asynchronous while import is synchronous",
+        "B": "import can only be used at the top level, while require() can be used conditionally",
+        "C": "require() cannot be used in browser environments",
+        "D": "import and require() are interchangeable in all contexts"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "package.json, NPM/Yarn basics",
+      "question": "What is the purpose of the 'devDependencies' section in package.json?",
+      "options": {
+        "A": "To list packages required for production deployment",
+        "B": "To list packages needed only during development and testing",
+        "C": "To list optional packages that enhance functionality",
+        "D": "To list deprecated packages that will be removed in future versions"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "module.exports and export",
+      "question": "What's the difference between 'module.exports' and 'exports' in Node.js?",
+      "options": {
+        "A": "They are aliases and can be used interchangeably in all cases",
+        "B": "exports can be completely replaced while module.exports cannot",
+        "C": "module.exports can be completely replaced while exports cannot",
+        "D": "exports is for ES Modules while module.exports is for CommonJS"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "Prevent default behavior",
+      "question": "What will be the output of the following code when the link is clicked?",
+      "code_example": "const link = document.createElement('a');\nlink.href = 'https://example.com';\nlink.textContent = 'Example';\n\nlink.addEventListener('click', function(event) {\n  console.log('Link clicked');\n  return false;\n});\n\ndocument.body.appendChild(link);",
+      "options": {
+        "A": "The browser will log 'Link clicked' and then navigate to example.com",
+        "B": "The browser will log 'Link clicked' and prevent navigation",
+        "C": "The browser will only prevent navigation without logging anything",
+        "D": "Nothing will happen when the link is clicked"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "MongoDB Schema and validation",
+      "question": "What is the correct way to define a validation rule in Mongoose that requires a string field to be at least 3 characters long?",
+      "code_example": "const mongoose = require('mongoose');\n\nconst userSchema = new mongoose.Schema({\n  username: {\n    type: String,\n    // Add validation here\n  }\n});",
+      "options": {
+        "A": "username: { type: String, minlength: 3 }",
+        "B": "username: { type: String, minLength: 3 }",
+        "C": "username: { type: String, validate: { min: 3 } }",
+        "D": "username: { type: String, constraint: { minLength: 3 } }"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "API versioning",
+      "question": "Which of the following is NOT a common approach to API versioning in Node.js applications?",
+      "options": {
+        "A": "Using URL path segments (e.g., /api/v1/users)",
+        "B": "Using query parameters (e.g., /api/users?version=1)",
+        "C": "Using custom HTTP headers (e.g., Accept-Version: 1.0)",
+        "D": "Using different port numbers for different API versions"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "Default parameters",
+      "question": "What will be the output of the following code?",
+      "code_example": "function greet(name = 'Guest', greeting = `Hello, ${name}!`) {\n  return greeting;\n}\n\nconsole.log(greet('John'));\nconsole.log(greet(undefined, 'Welcome!'));",
+      "options": {
+        "A": "Hello, John! Welcome!",
+        "B": "Hello, Guest! Welcome!",
+        "C": "Hello, John! Welcome, Guest!",
+        "D": "Hello, undefined! Welcome!"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "Object.create()",
+      "question": "What will be the output of the following code?",
+      "code_example": "const person = {\n  isHuman: false,\n  printIntroduction: function() {\n    return `My name is ${this.name}. Am I human? ${this.isHuman}`;\n  }\n};\n\nconst me = Object.create(person);\nme.name = 'Matthew';\nme.isHuman = true;\n\nconsole.log(person.isHuman);\nconsole.log(me.printIntroduction());",
+      "options": {
+        "A": "true My name is Matthew. Am I human? true",
+        "B": "false My name is Matthew. Am I human? true",
+        "C": "false My name is undefined. Am I human? false",
+        "D": "undefined My name is Matthew. Am I human? true"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "setTimeout, setInterval, requestAnimationFrame",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log('Start');\n\nsetTimeout(() => console.log('Timeout 1'), 0);\nsetTimeout(() => console.log('Timeout 2'), 0);\n\nPromise.resolve().then(() => console.log('Promise'));\n\nconsole.log('End');",
+      "options": {
+        "A": "Start End Timeout 1 Timeout 2 Promise",
+        "B": "Start End Promise Timeout 1 Timeout 2",
+        "C": "Start Promise End Timeout 1 Timeout 2",
+        "D": "Start Timeout 1 Timeout 2 Promise End"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "new binding",
+      "question": "What will be the output of the following code?",
+      "code_example": "function Person(name) {\n  this.name = name;\n}\n\nPerson.prototype.getName = function() {\n  return this.name;\n};\n\nconst john = Person('John');\nconsole.log(john?.getName?.());",
+      "options": {
+        "A": "John",
+        "B": "undefined",
+        "C": "null",
+        "D": "TypeError: Cannot read property 'getName' of undefined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "Explicit binding",
+      "question": "What will be the output of the following code?",
+      "code_example": "const user = {\n  name: 'John',\n  greet: function(greeting) {\n    return `${greeting}, ${this.name}!`;\n  }\n};\n\nconst greet = user.greet;\nconst boundGreet = greet.bind(user);\n\nconsole.log(greet.call({name: 'Alice'}, 'Hello'));\nconsole.log(boundGreet('Hi'));",
+      "options": {
+        "A": "Hello, Alice! Hi, Alice!",
+        "B": "Hello, John! Hi, John!",
+        "C": "Hello, Alice! Hi, John!",
+        "D": "Hello, undefined! Hi, John!"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "Logging requests",
+      "question": "Which morgan logging format will display the HTTP method, URL, status code, response time, and response content length?",
+      "options": {
+        "A": "morgan('combined')",
+        "B": "morgan('common')",
+        "C": "morgan('dev')",
+        "D": "morgan('tiny')"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Callbacks and Callback Hell",
+      "question": "What will be the output of the following code?",
+      "code_example": "function doStep1(init, callback) {\n  const result = init + 1;\n  callback(result);\n}\n\nfunction doStep2(init, callback) {\n  const result = init + 2;\n  callback(result);\n}\n\nfunction doStep3(init, callback) {\n  const result = init + 3;\n  callback(result);\n}\n\ndoStep1(0, (result1) => {\n  doStep2(result1, (result2) => {\n    doStep3(result2, (result3) => {\n      console.log(result3);\n    });\n    console.log(result2);\n  });\n  console.log(result1);\n});",
+      "options": {
+        "A": "1 3 6",
+        "B": "6 3 1",
+        "C": "3 3 3",
+        "D": "0 0 0"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "Destructuring",
+      "question": "What will be the output of the following code?",
+      "code_example": "const user = {\n  id: 1,\n  name: 'John',\n  address: {\n    city: 'New York',\n    country: 'USA'\n  },\n  hobbies: ['reading', 'gaming']\n};\n\nconst { name, address: { city }, hobbies: [firstHobby] } = user;\n\nconsole.log(`${name} lives in ${city} and likes ${firstHobby}`);",
+      "options": {
+        "A": "John lives in undefined and likes undefined",
+        "B": "John lives in New York and likes reading",
+        "C": "John lives in New York and likes reading, gaming",
+        "D": "undefined lives in New York and likes reading"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "Memory management and garbage collection",
+      "question": "Which of the following is NOT a common cause of memory leaks in JavaScript applications?",
+      "options": {
+        "A": "Global variables that are never cleaned up",
+        "B": "Event listeners that aren't removed when no longer needed",
+        "C": "Closures capturing large objects that are no longer needed",
+        "D": "Using const instead of let for variable declarations"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "Caching API responses",
+      "question": "What is a disadvantage of using in-memory caching (like node-cache) compared to Redis in a Node.js application?",
+      "options": {
+        "A": "In-memory caching is significantly slower than Redis",
+        "B": "In-memory cache is lost if the application restarts",
+        "C": "In-memory caching doesn't support setting expiration times",
+        "D": "In-memory caching requires more CPU resources"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "Handling CORS",
+      "question": "What will be the behavior of the following CORS configuration?",
+      "code_example": "const cors = require('cors');\nconst app = express();\n\napp.use(cors({\n  origin: 'https://example.com',\n  methods: ['GET', 'POST'],\n  allowedHeaders: ['Content-Type', 'Authorization']\n}));",
+      "options": {
+        "A": "Only allows requests from any origin using GET or POST methods",
+        "B": "Only allows requests from https://example.com using any HTTP method",
+        "C": "Only allows requests from https://example.com using GET or POST methods",
+        "D": "Allows all cross-origin requests without restrictions"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Prototype chain",
+      "question": "What will be the output of the following code?",
+      "code_example": "function Parent() {}\nParent.prototype.getType = function() { return 'Parent'; };\n\nfunction Child() {}\nChild.prototype = Object.create(Parent.prototype);\nChild.prototype.getType = function() { return 'Child'; };\n\nfunction GrandChild() {}\nGrandChild.prototype = Object.create(Child.prototype);\n\nconst obj = new GrandChild();\nconsole.log(obj.getType());",
+      "options": {
+        "A": "Parent",
+        "B": "Child",
+        "C": "GrandChild",
+        "D": "undefined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "Securing JWT tokens",
+      "question": "Which of the following is the most secure way to handle JWT tokens in a Node.js application?",
+      "options": {
+        "A": "Store the JWT in localStorage and send it in the request body",
+        "B": "Store the JWT in an HTTP-only cookie and enable the 'Secure' flag",
+        "C": "Store the JWT in sessionStorage and send it in URL parameters",
+        "D": "Store the JWT in a global variable and send it in custom headers"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "Symbols and unique property keys",
+      "question": "What will be the output of the following code?",
+      "code_example": "const id = Symbol('id');\nconst user = {\n  name: 'John',\n  [id]: 123\n};\n\nconsole.log(Object.keys(user));\nconsole.log(Object.getOwnPropertySymbols(user).length);\nfor (let key in user) {\n  console.log(key);\n}",
+      "options": {
+        "A": "['name'] 1 'name'",
+        "B": "['name', Symbol(id)] 1 'name' Symbol(id)",
+        "C": "['name'] 1 'name' Symbol(id)",
+        "D": "['name', Symbol(id)] 0 'name'"
+      },
+      "correct_answer": "A"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Which HTTP header is used to control whether a browser should be allowed to render a page in a <frame>, <iframe>, <embed> or <object>?",
+      "options": {
+        "A": "X-Content-Type-Options",
+        "B": "X-Frame-Options",
+        "C": "Referrer-Policy",
+        "D": "Content-Security-Policy"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code?",
+      "code_example": "const map = new Map();\nconst weakMap = new WeakMap();\n\nlet obj = { name: 'test' };\nmap.set(obj, 'mapped value');\nweakMap.set(obj, 'weak mapped value');\n\nobj = null;\n\nconsole.log(map.size);",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "undefined",
+        "D": "The code will throw an error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What is the value of `result` after executing the following code?",
+      "code_example": "const crypto = require('crypto');\n\nconst algorithm = 'aes-256-cbc';\nconst key = crypto.randomBytes(32);\nconst iv = crypto.randomBytes(16);\n\nfunction encrypt(text) {\n  const cipher = crypto.createCipheriv(algorithm, key, iv);\n  let encrypted = cipher.update(text, 'utf8', 'hex');\n  encrypted += cipher.final('hex');\n  return encrypted;\n}\n\nfunction decrypt(encrypted) {\n  const decipher = crypto.createDecipheriv(algorithm, key, iv);\n  let decrypted = decipher.update(encrypted, 'hex', 'utf8');\n  decrypted += decipher.final('utf8');\n  return decrypted;\n}\n\nconst result = decrypt(encrypt('hello world')) === 'hello world';",
+      "options": {
+        "A": "false",
+        "B": "true",
+        "C": "undefined",
+        "D": "The code will throw an error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "In the context of memory management in JavaScript, which of the following statements is true?",
+      "options": {
+        "A": "JavaScript uses manual memory management requiring explicit free() calls",
+        "B": "The JavaScript engine uses a reference-counting garbage collector only",
+        "C": "JavaScript uses a mark-and-sweep algorithm to collect objects that are no longer reachable",
+        "D": "JavaScript has no garbage collection mechanism"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code?",
+      "code_example": "const fs = require('fs');\nconst { Transform } = require('stream');\n\nconst upperCaseTransform = new Transform({\n  transform(chunk, encoding, callback) {\n    callback(null, chunk.toString().toUpperCase());\n  }\n});\n\nconst reverseTransform = new Transform({\n  transform(chunk, encoding, callback) {\n    callback(null, chunk.toString().split('').reverse().join(''));\n  }\n});\n\nlet result = '';\nconst readable = fs.createReadStream(__filename);\n\nreadable\n  .pipe(upperCaseTransform)\n  .pipe(reverseTransform)\n  .on('data', (chunk) => {\n    result = chunk.toString().slice(0, 11);\n  });\n\nsetTimeout(() => {\n  console.log(result.charAt(0));\n}, 100);",
+      "options": {
+        "A": "The first character of the file in lowercase",
+        "B": "The first character of the file in uppercase",
+        "C": "The last character of the file in uppercase",
+        "D": "The last character of the file in lowercase"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the result of the following code that demonstrates handling unhandled Promise rejections?",
+      "code_example": "let rejectionHandled = false;\n\nprocess.on('unhandledRejection', (reason, promise) => {\n  rejectionHandled = true;\n  console.log('Unhandled Rejection detected');\n});\n\nconst promise1 = new Promise((resolve, reject) => {\n  reject(new Error('Promise 1 Rejected'));\n});\n\nconst promise2 = new Promise((resolve, reject) => {\n  reject(new Error('Promise 2 Rejected'));\n});\n\npromise2.catch(err => {\n  console.log('Caught promise2 error');\n});\n\nsetTimeout(() => {\n  console.log(rejectionHandled);\n}, 100);",
+      "options": {
+        "A": "false",
+        "B": "true",
+        "C": "undefined",
+        "D": "The code will throw an uncaught exception error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the primary difference between WeakMap and Map in JavaScript?",
+      "options": {
+        "A": "WeakMap keys must be objects, while Map can use any value as a key",
+        "B": "WeakMap has better performance but fewer features",
+        "C": "Map cannot be garbage-collected until all references are removed, while WeakMap allows its keys to be garbage-collected",
+        "D": "WeakMap can only store primitive values, while Map can store any value"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code which demonstrates custom event listeners?",
+      "code_example": "const EventEmitter = require('events');\n\nclass Notifier extends EventEmitter {\n  sendNotification(message) {\n    this.emit('notification', message);\n  }\n}\n\nconst notifier = new Notifier();\nlet notifications = [];\n\nnotifier.once('notification', (message) => {\n  notifications.push(`Once: ${message}`);\n});\n\nnotifier.on('notification', (message) => {\n  notifications.push(`Always: ${message}`);\n});\n\nnotifier.sendNotification('First message');\nnotifier.sendNotification('Second message');\n\nconsole.log(notifications.length);",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "1"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "When implementing refresh tokens alongside access tokens, which of the following is a best practice?",
+      "options": {
+        "A": "Store both refresh and access tokens in localStorage for persistence",
+        "B": "Make refresh tokens short-lived and access tokens long-lived",
+        "C": "Implement token rotation where each refresh token can only be used once",
+        "D": "Use the same secret key for signing both refresh and access tokens"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What is the output of the following code which demonstrates rate limiting?",
+      "code_example": "const limiter = {\n  resetTime: Date.now(),\n  maxRequests: 3,\n  requests: 0,\n  requestAllowed() {\n    const now = Date.now();\n    if (now - this.resetTime > 1000) {\n      this.resetTime = now;\n      this.requests = 0;\n    }\n    \n    if (this.requests < this.maxRequests) {\n      this.requests++;\n      return true;\n    }\n    \n    return false;\n  }\n};\n\nconst makeRequests = (count) => {\n  let allowed = 0;\n  for (let i = 0; i < count; i++) {\n    if (limiter.requestAllowed()) {\n      allowed++;\n    }\n  }\n  return allowed;\n};\n\nconst allowed = makeRequests(5);\nconsole.log(allowed);",
+      "options": {
+        "A": "0",
+        "B": "3",
+        "C": "5",
+        "D": "Depends on execution time"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "Which method of parallel processing in Node.js is best suited for CPU-intensive tasks?",
+      "options": {
+        "A": "The Cluster module",
+        "B": "The Child Process module",
+        "C": "Worker Threads",
+        "D": "The async/await approach"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code related to identifying memory leaks?",
+      "code_example": "const createLeakyCode = () => {\n  const leakyArray = [];\n  let count = 0;\n  \n  const intervalId = setInterval(() => {\n    const obj = { \n      index: count++,\n      data: new Array(10000).fill('x')\n    };\n    \n    leakyArray.push(obj);\n    \n    if (count >= 3) {\n      clearInterval(intervalId);\n      console.log(leakyArray[0].index);\n    }\n  }, 50);\n};\n\ncreateLeakyCode();",
+      "options": {
+        "A": "undefined",
+        "B": "0",
+        "C": "3",
+        "D": "The code will result in a memory overflow error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "When configuring a Referrer-Policy HTTP header, which value provides the highest level of privacy by not sending any referrer information?",
+      "options": {
+        "A": "same-origin",
+        "B": "strict-origin",
+        "C": "no-referrer",
+        "D": "origin-when-cross-origin"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be logged in the console after executing the following code?",
+      "code_example": "const { createHash, createHmac } = require('crypto');\n\nconst password = 'secure_password123';\nconst salt = 'random_salt';\n\nconst sha256Hash = createHash('sha256')\n  .update(password)\n  .digest('hex');\n\nconst hmacHash = createHmac('sha256', salt)\n  .update(password)\n  .digest('hex');\n\nconsole.log(sha256Hash === hmacHash);",
+      "options": {
+        "A": "true",
+        "B": "false",
+        "C": "TypeError: Cannot compare hashes of different types",
+        "D": "The code will throw a crypto error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates Just-In-Time (JIT) compilation behavior in V8?",
+      "code_example": "function sumLoop(n) {\n  let sum = 0;\n  for (let i = 0; i < n; i++) {\n    sum += i;\n  }\n  return sum;\n}\n\nfunction sumMath(n) {\n  return (n * (n - 1)) / 2;\n}\n\n// Warm up the JIT for sumLoop\nfor (let i = 0; i < 100000; i++) {\n  sumLoop(10);\n}\n\nconst start1 = process.hrtime.bigint();\nconst result1 = sumLoop(1000000);\nconst end1 = process.hrtime.bigint();\n\nconst start2 = process.hrtime.bigint();\nconst result2 = sumMath(1000000);\nconst end2 = process.hrtime.bigint();\n\nconsole.log(result1 === result2);",
+      "options": {
+        "A": "false",
+        "B": "true",
+        "C": "undefined",
+        "D": "The code will throw an arithmetic overflow error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What is the correct approach for configuring Winston to log to both the console and a file with different severity levels?",
+      "code_example": "const winston = require('winston');\n\nconst logger = winston.createLogger({\n  level: 'info',\n  format: winston.format.combine(\n    winston.format.timestamp(),\n    winston.format.json()\n  ),\n  transports: [\n    new winston.transports.Console({\n      level: 'warn'\n    }),\n    new winston.transports.File({ \n      filename: 'error.log',\n      level: 'error'\n    }),\n    new winston.transports.File({ \n      filename: 'combined.log'\n    })\n  ]\n});\n\nlogger.info('This is an info message');\nlogger.warn('This is a warning');\nlogger.error('This is an error');\n\n// Which of the following statements is true about the logging behavior?",
+      "options": {
+        "A": "The info message will appear in the console and both log files",
+        "B": "The warning message will appear in the console and combined.log but not error.log",
+        "C": "The error message will appear in all three outputs (console, error.log, combined.log)",
+        "D": "All messages will be logged to all three outputs"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
