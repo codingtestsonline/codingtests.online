@@ -1,0 +1,650 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "Custom exceptions",
+      "question": "What will be the output of the following code?",
+      "code_example": "try {\n    throw new DatabaseException(\"Connection failed\");\n}\ncatch (DatabaseException ex) {\n    Console.WriteLine($\"Caught: {ex.Message}\");\n}\ncatch (Exception ex) {\n    Console.WriteLine($\"General error: {ex.Message}\");\n}\n\npublic class DatabaseException : Exception {\n    public DatabaseException(string message) : base(message) { }\n}",
+      "options": {
+        "A": "Caught: Connection failed",
+        "B": "General error: Connection failed",
+        "C": "Unhandled exception: DatabaseException: Connection failed",
+        "D": "The code will not compile because DatabaseException is not a valid exception type"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "Jagged arrays",
+      "question": "What will be the output of the following code?",
+      "code_example": "int[][] jaggedArray = new int[3][];\njaggedArray[0] = new int[] { 1, 3, 5 };\njaggedArray[1] = new int[] { 2, 4 };\njaggedArray[2] = new int[] { 7 };\n\nConsole.WriteLine(jaggedArray[1][1]);",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "4",
+        "D": "7"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": ".NET Framework vs. .NET Core vs. .NET 5+",
+      "question": "Which of the following statements about .NET 5+ is true?",
+      "options": {
+        "A": ".NET 5+ can only run on Windows operating systems",
+        "B": ".NET 5+ is a direct successor to .NET Framework 4.8",
+        "C": ".NET 5+ unifies .NET Core and .NET Framework into a single platform",
+        "D": ".NET 5+ only supports C# as a programming language"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "FirstOrDefault(), SingleOrDefault()",
+      "question": "What will be the output of the following code?",
+      "code_example": "List<int> numbers = new List<int> { 5, 10, 15 };\nvar result = numbers.FirstOrDefault(x => x > 20);\nConsole.WriteLine($\"Result: {result}\");",
+      "options": {
+        "A": "Result: 5",
+        "B": "Result: 0",
+        "C": "Result: ",
+        "D": "The code will throw an InvalidOperationException"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "Implicit vs. explicit casting",
+      "question": "What will be the output of the following code?",
+      "code_example": "double pi = 3.14159;\nint roundedPi = (int)pi;\nlong bigNumber = roundedPi;\n\nConsole.WriteLine($\"{roundedPi}, {bigNumber}\");",
+      "options": {
+        "A": "3.14159, 3",
+        "B": "3, 3.14159",
+        "C": "3, 3",
+        "D": "3.14, 3.14"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "this keyword",
+      "question": "What is the purpose of the 'this' keyword in C#?",
+      "options": {
+        "A": "To access static members of the current class",
+        "B": "To refer to the current instance of the class",
+        "C": "To call methods of the parent class",
+        "D": "To declare a new instance of the current class"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "Local functions",
+      "question": "What will be the output of the following code?",
+      "code_example": "public static void Main()\n{\n    int result = CalculateSum(5);\n    Console.WriteLine(result);\n    \n    int CalculateSum(int n)\n    {\n        return n * (n + 1) / 2;\n    }\n}",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "10",
+        "D": "15"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "if-else",
+      "question": "What will be the output of the following code?",
+      "code_example": "int x = 10;\nint y = 20;\n\nif (x > y)\n    Console.WriteLine(\"x is greater\");\nelse if (x == y)\n    Console.WriteLine(\"x equals y\");\nelse\n    Console.WriteLine(\"y is greater\");",
+      "options": {
+        "A": "x is greater",
+        "B": "x equals y",
+        "C": "y is greater",
+        "D": "No output will be displayed"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Single-dimensional arrays",
+      "question": "What will be the output of the following code?",
+      "code_example": "int[] numbers = new int[5] { 10, 20, 30, 40, 50 };\nint sum = 0;\n\nfor (int i = 1; i < numbers.Length; i += 2)\n{\n    sum += numbers[i];\n}\n\nConsole.WriteLine(sum);",
+      "options": {
+        "A": "60",
+        "B": "90",
+        "C": "150",
+        "D": "The code will throw an IndexOutOfRangeException"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Arithmetic operators",
+      "question": "What will be the output of the following code?",
+      "code_example": "int a = 17;\nint b = 5;\n\nConsole.WriteLine($\"{a / b}, {a % b}\");",
+      "options": {
+        "A": "3, 2",
+        "B": "3.4, 2",
+        "C": "3, 0",
+        "D": "3.4, 0"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "throw new Exception()",
+      "question": "What will be the output of the following code?",
+      "code_example": "try\n{\n    Method1();\n    Console.WriteLine(\"After Method1\");\n}\ncatch (Exception ex)\n{\n    Console.WriteLine($\"Exception caught: {ex.Message}\");\n}\n\nstatic void Method1()\n{\n    throw new ArgumentException(\"Invalid argument\");\n    Console.WriteLine(\"After throw\");\n}",
+      "options": {
+        "A": "After Method1",
+        "B": "After throw\\nException caught: Invalid argument",
+        "C": "Exception caught: Invalid argument",
+        "D": "The code will terminate with an unhandled exception"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "Value types",
+      "question": "Which of the following is NOT a value type in C#?",
+      "options": {
+        "A": "int",
+        "B": "char",
+        "C": "string",
+        "D": "struct"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "Reference types",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Person\n{\n    public string Name { get; set; }\n}\n\npublic static void Main()\n{\n    Person p1 = new Person { Name = \"Alice\" };\n    Person p2 = p1;\n    p2.Name = \"Bob\";\n    Console.WriteLine(p1.Name);\n}",
+      "options": {
+        "A": "Alice",
+        "B": "Bob",
+        "C": "null",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "Creating and instantiating objects",
+      "question": "Which of the following is the correct way to create and instantiate an object of class Customer with a parameterized constructor?",
+      "options": {
+        "A": "Customer customer = Customer();",
+        "B": "var customer = new Customer(\"John\");",
+        "C": "Customer customer = create Customer(\"John\");",
+        "D": "Customer customer = Customer.New(\"John\");"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "Access Modifiers",
+      "question": "What access modifier should be used for a class member that needs to be accessible only within the same class and derived classes?",
+      "options": {
+        "A": "public",
+        "B": "private",
+        "C": "protected",
+        "D": "internal"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "Queue<T>, Stack<T>",
+      "question": "What will be the output of the following code?",
+      "code_example": "Queue<int> queue = new Queue<int>();\nqueue.Enqueue(1);\nqueue.Enqueue(2);\nqueue.Enqueue(3);\n\nint first = queue.Dequeue();\nqueue.Enqueue(4);\nint second = queue.Dequeue();\n\nConsole.WriteLine($\"{first}, {second}\");",
+      "options": {
+        "A": "1, 2",
+        "B": "3, 2",
+        "C": "1, 3",
+        "D": "3, 4"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Dispose() vs. Finalize()",
+      "question": "Which of the following statements about Dispose() and Finalize() is true?",
+      "options": {
+        "A": "The Finalize() method is explicitly called by the programmer",
+        "B": "The Dispose() method is automatically called by the garbage collector",
+        "C": "The Finalize() method is called by the garbage collector and cannot be directly called in code",
+        "D": "The IDisposable interface mandates implementation of both Dispose() and Finalize() methods"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "delegate keyword",
+      "question": "What will be the output of the following code?",
+      "code_example": "delegate int MathOperation(int x, int y);\n\npublic static void Main()\n{\n    MathOperation add = (x, y) => x + y;\n    MathOperation multiply = (x, y) => x * y;\n    \n    int result = PerformOperation(3, 4, add);\n    Console.WriteLine(result);\n}\n\nstatic int PerformOperation(int a, int b, MathOperation operation)\n{\n    return operation(a, b);\n}",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "7",
+        "D": "12"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "Custom Middleware",
+      "question": "In ASP.NET Core, what is the correct way to add custom middleware to the application pipeline?",
+      "code_example": "public void Configure(IApplicationBuilder app)\n{\n    // What code goes here to add custom logging middleware?\n}",
+      "options": {
+        "A": "app.AddMiddleware<LoggingMiddleware>();",
+        "B": "app.Use(async (context, next) => {\n    Console.WriteLine($\"Request: {context.Request.Path}\");\n    await next();\n    Console.WriteLine($\"Response: {context.Response.StatusCode}\");\n});",
+        "C": "app.Pipeline.Add(new LoggingMiddleware());",
+        "D": "app.Middlewares.Add(() => {\n    Console.WriteLine(\"Request received\");\n});"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "Code-first approach",
+      "question": "In Entity Framework Core's code-first approach, which of the following is used to create or update the database schema based on your model classes?",
+      "options": {
+        "A": "DbContext.GenerateSchema()",
+        "B": "Database.EnsureCreated()",
+        "C": "EF.CreateDatabase()",
+        "D": "Using migration commands like 'Add-Migration' and 'Update-Database'"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "LINQ Queries with EF Core",
+      "question": "What will be the result of the following LINQ query with Entity Framework Core?",
+      "code_example": "var result = await dbContext.Products\n    .Where(p => p.Category == \"Electronics\")\n    .OrderByDescending(p => p.Price)\n    .Skip(5)\n    .Take(10)\n    .Select(p => new { p.Name, p.Price })\n    .ToListAsync();",
+      "options": {
+        "A": "All Electronics products ordered by price",
+        "B": "The 5 most expensive Electronics products",
+        "C": "The 6th through 15th most expensive Electronics products",
+        "D": "10 random Electronics products"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "Constraints",
+      "question": "What will be the output of the following code?",
+      "code_example": "public static void Main()\n{\n    var result = CreateAndProcess<string>();\n    Console.WriteLine(result);\n}\n\nstatic T CreateAndProcess<T>() where T : class, new()\n{\n    T item = new T();\n    return item;\n}",
+      "options": {
+        "A": "\"\"",
+        "B": "null",
+        "C": "The code will not compile because string doesn't have a parameterless constructor",
+        "D": "The code will throw a runtime exception"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "Subscribing & unsubscribing",
+      "question": "What will be the output of the following code?",
+      "code_example": "public class Publisher\n{\n    public event EventHandler DataChanged;\n    \n    public void UpdateData()\n    {\n        DataChanged?.Invoke(this, EventArgs.Empty);\n    }\n}\n\npublic static void Main()\n{\n    Publisher publisher = new Publisher();\n    publisher.DataChanged += OnDataChanged;\n    publisher.UpdateData();\n    publisher.DataChanged -= OnDataChanged;\n    publisher.UpdateData();\n}\n\nstatic void OnDataChanged(object sender, EventArgs e)\n{\n    Console.WriteLine(\"Data changed!\");\n}",
+      "options": {
+        "A": "Data changed!\\nData changed!",
+        "B": "Data changed!",
+        "C": "The code will not compile",
+        "D": "The code will throw a NullReferenceException"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "Multicast delegates",
+      "question": "What will be the output of the following code?",
+      "code_example": "delegate void StringProcessor(string s);\n\npublic static void Main()\n{\n    StringProcessor processor = null;\n    \n    processor += s => Console.Write(s.ToUpper());\n    processor += s => Console.Write(s.ToLower());\n    processor += s => Console.Write(s.Length);\n    \n    processor(\"Hello\");\n}",
+      "options": {
+        "A": "HELLOhello5",
+        "B": "HELLO",
+        "C": "hello",
+        "D": "5"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Generic classes",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Container<T>\n{\n    public T Item { get; set; }\n    \n    public Container(T item)\n    {\n        Item = item;\n    }\n    \n    public string GetItemType()\n    {\n        return typeof(T).Name;\n    }\n}\n\npublic static void Main()\n{\n    var container1 = new Container<int>(42);\n    var container2 = new Container<string>(\"Hello\");\n    \n    Console.WriteLine($\"{container1.GetItemType()}, {container2.GetItemType()}\");\n}",
+      "options": {
+        "A": "int, string",
+        "B": "Int32, String",
+        "C": "System.Int32, System.String",
+        "D": "Integer, String"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "Base class initialization",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Animal\n{\n    public Animal()\n    {\n        Console.Write(\"A\");\n    }\n    \n    public Animal(string name)\n    {\n        Console.Write($\"A({name})\");\n    }\n}\n\nclass Dog : Animal\n{\n    public Dog() : base()\n    {\n        Console.Write(\"D\");\n    }\n    \n    public Dog(string name) : base(name)\n    {\n        Console.Write(\"D\");\n    }\n}\n\npublic static void Main()\n{\n    Dog dog = new Dog(\"Rex\");\n}",
+      "options": {
+        "A": "A",
+        "B": "AD",
+        "C": "A(Rex)",
+        "D": "A(Rex)D"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "Auto-implemented properties",
+      "question": "What will be the output of the following code?",
+      "code_example": "class User\n{\n    public string Name { get; private set; } = \"Anonymous\";\n    public int Age { get; set; }\n}\n\npublic static void Main()\n{\n    var user = new User { Age = 25 };\n    // user.Name = \"John\"; // This line is commented out\n    Console.WriteLine($\"{user.Name}, {user.Age}\");\n}",
+      "options": {
+        "A": "Anonymous, 25",
+        "B": "John, 25",
+        "C": "null, 25",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "Lambda expressions",
+      "question": "What will be the output of the following code?",
+      "code_example": "List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };\n\nvar result = numbers\n    .Where(n => n % 2 == 0)\n    .Select(n => n * n)\n    .Where(n => n > 20)\n    .OrderByDescending(n)\n    .Take(2);\n    \nforeach (var item in result)\n{\n    Console.Write($\"{item} \");\n}",
+      "options": {
+        "A": "64 36",
+        "B": "100 64",
+        "C": "4 16 36 64 100",
+        "D": "36 64"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "Model binding",
+      "question": "In ASP.NET Core MVC, which of the following will NOT automatically bind data from an HTTP request to a controller action parameter?",
+      "options": {
+        "A": "A simple type parameter like 'int id'",
+        "B": "A complex type parameter with [FromBody] attribute",
+        "C": "A parameter with [FromQuery] attribute",
+        "D": "A private field in the controller class"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Method hiding using new",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Base\n{\n    public virtual void Method1()\n    {\n        Console.Write(\"Base.Method1 \");\n    }\n    \n    public void Method2()\n    {\n        Console.Write(\"Base.Method2 \");\n    }\n}\n\nclass Derived : Base\n{\n    public override void Method1()\n    {\n        Console.Write(\"Derived.Method1 \");\n    }\n    \n    public new void Method2()\n    {\n        Console.Write(\"Derived.Method2 \");\n    }\n}\n\npublic static void Main()\n{\n    Base b = new Derived();\n    b.Method1();\n    b.Method2();\n}",
+      "options": {
+        "A": "Base.Method1 Base.Method2",
+        "B": "Derived.Method1 Derived.Method2",
+        "C": "Derived.Method1 Base.Method2",
+        "D": "Base.Method1 Derived.Method2"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "SortedList<T>, SortedDictionary<T, T>",
+      "question": "What is the primary difference between SortedList<TKey, TValue> and SortedDictionary<TKey, TValue>?",
+      "options": {
+        "A": "SortedList uses less memory but has slower insertion and removal operations for large collections",
+        "B": "SortedDictionary allows duplicate keys while SortedList does not",
+        "C": "SortedList can only use strings as keys while SortedDictionary can use any type",
+        "D": "SortedDictionary is thread-safe while SortedList is not"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "Transient, Scoped, Singleton",
+      "question": "In ASP.NET Core dependency injection, which lifetime is most appropriate for a service that maintains state that should be shared across different HTTP requests?",
+      "options": {
+        "A": "Transient",
+        "B": "Scoped",
+        "C": "Singleton",
+        "D": "Stateful"
+      },
+      "correct_answer": "C"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the behavior of the lock statement in a multi-threaded environment?",
+      "options": {
+        "A": "Thread 1: Started, Thread 1: Processing, Thread 1: Completed, Thread 2: Started, Thread 2: Processing, Thread 2: Completed",
+        "B": "Thread 1: Started, Thread 2: Started, Thread 1: Processing, Thread 1: Completed, Thread 2: Processing, Thread 2: Completed",
+        "C": "Thread 1: Started, Thread 2: Started, Thread 1: Processing, Thread 2: Processing, Thread 1: Completed, Thread 2: Completed",
+        "D": "The output order is non-deterministic and can vary between runs"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static readonly object _lock = new object();\n    \n    static void Main(string[] args)\n    {\n        Task task1 = Task.Run(() => ProcessData(\"Thread 1\"));\n        Task task2 = Task.Run(() => ProcessData(\"Thread 2\"));\n        \n        Task.WaitAll(task1, task2);\n    }\n    \n    static void ProcessData(string threadName)\n    {\n        Console.WriteLine($\"{threadName}: Started\");\n        \n        lock(_lock)\n        {\n            Console.WriteLine($\"{threadName}: Processing\");\n            Thread.Sleep(100); // Simulate work\n            Console.WriteLine($\"{threadName}: Completed\");\n        }\n    }\n}"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which of the following best describes the purpose and functionality of OAuth 2.0 in .NET applications?",
+      "options": {
+        "A": "It's a cryptographic protocol that provides secure communication over a computer network, typically used for database encryption",
+        "B": "It's an authorization framework that enables third-party applications to obtain limited access to a user's account on an HTTP service",
+        "C": "It's a framework for building real-time web applications using WebSockets, server-sent events and long polling",
+        "D": "It's a built-in .NET authentication mechanism that provides Windows-based security for intranet applications"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates a readonly struct?",
+      "options": {
+        "A": "Original: X=5, Y=10\nModified: X=5, Y=10",
+        "B": "Original: X=5, Y=10\nModified: X=15, Y=20",
+        "C": "Compilation error: Cannot assign to members of readonly struct",
+        "D": "Runtime exception: System.InvalidOperationException"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main(string[] args)\n    {\n        readonly struct Point\n        {\n            public int X { get; set; }\n            public int Y { get; set; }\n\n            public Point(int x, int y)\n            {\n                X = x;\n                Y = y;\n            }\n        }\n\n        var point = new Point(5, 10);\n        Console.WriteLine($\"Original: X={point.X}, Y={point.Y}\");\n\n        point.X = 15;\n        point.Y = 20;\n        Console.WriteLine($\"Modified: X={point.X}, Y={point.Y}\");\n    }\n}"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates ArrayPool<T>?",
+      "options": {
+        "A": "Array length: 1024\nPool: System.Buffers.TlsOverPerCoreLockedStacksArrayPool`1[System.Int32]",
+        "B": "Array length: 100\nPool: System.Buffers.TlsOverPerCoreLockedStacksArrayPool`1[System.Int32]",
+        "C": "Array length: 100\nPool: System.Buffers.ArrayPool`1[System.Int32]",
+        "D": "Array length: 128\nPool: System.Buffers.TlsOverPerCoreLockedStacksArrayPool`1[System.Int32]"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\nusing System.Buffers;\n\nclass Program\n{\n    static void Main(string[] args)\n    {\n        ArrayPool<int> pool = ArrayPool<int>.Shared;\n        \n        // Request an array of at least 100 items\n        int[] array = pool.Rent(100);\n        \n        Console.WriteLine($\"Array length: {array.Length}\");\n        Console.WriteLine($\"Pool: {pool.GetType()}\");\n        \n        // Important: Return the array to the pool when done\n        pool.Return(array);\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "Which of the following best describes how the Repository Pattern should be implemented in a C# .NET application?",
+      "options": {
+        "A": "Define a DbContext class that inherits directly from the database driver and exposes table-specific methods for CRUD operations",
+        "B": "Create a separate class for each database table, with each class having direct SQL queries for data manipulation",
+        "C": "Define an interface that abstracts data access operations and concrete implementations that handle the data access logic for different entity types",
+        "D": "Use static methods in a utility class that performs database operations, with each method taking a connection string as a parameter"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates Span<T> and Memory<T>?",
+      "options": {
+        "A": "Original array: 1, 2, 3, 4, 5\nSlice: 2, 3, 4\nModified array: 1, 2, 99, 4, 5",
+        "B": "Original array: 1, 2, 3, 4, 5\nSlice: 2, 3, 4\nModified array: 1, 2, 3, 4, 5",
+        "C": "Original array: 1, 2, 3, 4, 5\nSlice: 2, 3\nModified array: 1, 2, 99, 4, 5",
+        "D": "Compilation error: Cannot modify elements through a readonly Span<T>"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main(string[] args)\n    {\n        int[] array = { 1, 2, 3, 4, 5 };\n        \n        Console.WriteLine($\"Original array: {string.Join(\", \", array)}\");\n        \n        // Create a span that references a slice of the original array\n        Span<int> span = array.AsSpan(1, 3); // Start at index 1, length 3\n        \n        Console.WriteLine($\"Slice: {string.Join(\", \", span.ToArray())}\");\n        \n        // Modify the second element of the span (which is the third element of the array)\n        span[1] = 99;\n        \n        Console.WriteLine($\"Modified array: {string.Join(\", \", array)}\");\n    }\n}"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "Which of the following statements about indexing in SQL Server is FALSE?",
+      "options": {
+        "A": "A clustered index determines the physical order of data in a table",
+        "B": "A table can have multiple clustered indexes",
+        "C": "A nonclustered index contains a pointer to the data rather than the data itself",
+        "D": "Covering indexes can improve query performance by including non-key columns"
+      },
+      "correct_answer": "B",
+      "code_example": null
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates MethodInfo.Invoke()?",
+      "options": {
+        "A": "Hello, World!",
+        "B": "Hello, Reflection!",
+        "C": "System.ArgumentException: Method not found",
+        "D": "System.MissingMethodException: Method not found"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Reflection;\n\nclass Program\n{\n    static void Main(string[] args)\n    {\n        Type type = typeof(MessagePrinter);\n        \n        // Get the MethodInfo for the PrintMessage method\n        MethodInfo methodInfo = type.GetMethod(\"PrintMessage\", \n                                  BindingFlags.Public | BindingFlags.Instance);\n        \n        // Create an instance of MessagePrinter\n        object instance = Activator.CreateInstance(type);\n        \n        // Invoke the method with parameters\n        methodInfo.Invoke(instance, new object[] { \"Reflection\" });\n    }\n}\n\nclass MessagePrinter\n{\n    public void PrintMessage(string name)\n    {\n        Console.WriteLine($\"Hello, {name}!\");\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates MemoryCache?",
+      "options": {
+        "A": "Cache hit: Value from cache\nCache hit: Value from cache",
+        "B": "Cache hit: Value from cache\nCache miss: New value calculated",
+        "C": "Cache miss: New value calculated\nCache hit: Value from cache",
+        "D": "Cache miss: New value calculated\nCache miss: New value calculated"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Threading;\nusing Microsoft.Extensions.Caching.Memory;\n\nclass Program\n{\n    static void Main(string[] args)\n    {\n        var cacheOptions = new MemoryCacheOptions\n        {\n            ExpirationScanFrequency = TimeSpan.FromSeconds(10)\n        };\n        \n        var cache = new MemoryCache(cacheOptions);\n        \n        string key = \"myData\";\n        \n        // First attempt to get data\n        if (cache.TryGetValue(key, out string cachedValue))\n        {\n            Console.WriteLine($\"Cache hit: {cachedValue}\");\n        }\n        else\n        {\n            // Data not in cache, calculate it\n            string newValue = \"New value calculated\";\n            \n            // Store in cache for 30 seconds\n            var cacheEntryOptions = new MemoryCacheEntryOptions()\n                .SetAbsoluteExpiration(TimeSpan.FromSeconds(30));\n                \n            cache.Set(key, newValue, cacheEntryOptions);\n            Console.WriteLine($\"Cache miss: {newValue}\");\n        }\n        \n        // Second attempt to get data (should be a cache hit)\n        if (cache.TryGetValue(key, out string cachedValue2))\n        {\n            Console.WriteLine($\"Cache hit: {cachedValue2}\");\n        }\n        else\n        {\n            Console.WriteLine(\"Cache miss: New value calculated\");\n        }\n    }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "Which of the following correctly describes SignalR's transport fallback mechanism?",
+      "options": {
+        "A": "SignalR attempts to use HTTP long polling first, then falls back to WebSockets if available",
+        "B": "SignalR always uses WebSockets and will throw an exception if WebSockets are not supported",
+        "C": "SignalR attempts to use WebSockets first, then falls back to Server-Sent Events, and finally to long polling",
+        "D": "SignalR defaults to using Server-Sent Events and does not implement any fallback mechanism"
+      },
+      "correct_answer": "C",
+      "code_example": null
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the Factory Pattern?",
+      "options": {
+        "A": "Created BasicCalculator\nResult: 8",
+        "B": "Created ScientificCalculator\nResult: 8",
+        "C": "Created BasicCalculator\nResult: 15",
+        "D": "Created ScientificCalculator\nResult: 15"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\ninterface ICalculator\n{\n    int Calculate(int a, int b);\n}\n\nclass BasicCalculator : ICalculator\n{\n    public BasicCalculator()\n    {\n        Console.WriteLine(\"Created BasicCalculator\");\n    }\n    \n    public int Calculate(int a, int b)\n    {\n        return a + b;\n    }\n}\n\nclass ScientificCalculator : ICalculator\n{\n    public ScientificCalculator()\n    {\n        Console.WriteLine(\"Created ScientificCalculator\");\n    }\n    \n    public int Calculate(int a, int b)\n    {\n        return a * b;\n    }\n}\n\nclass CalculatorFactory\n{\n    public static ICalculator CreateCalculator(string type)\n    {\n        if (type.Equals(\"scientific\", StringComparison.OrdinalIgnoreCase))\n            return new ScientificCalculator();\n        else\n            return new BasicCalculator();\n    }\n}\n\nclass Program\n{\n    static void Main(string[] args)\n    {\n        // Create a calculator using the factory\n        ICalculator calculator = CalculatorFactory.CreateCalculator(\"basic\");\n        \n        // Use the calculator\n        int result = calculator.Calculate(3, 5);\n        Console.WriteLine($\"Result: {result}\");\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates Semaphore?",
+      "options": {
+        "A": "Thread 1 enters\nThread 1 leaves\nThread 2 enters\nThread 2 leaves\nThread 3 enters\nThread 3 leaves",
+        "B": "Thread 1 enters\nThread 2 enters\nThread 1 leaves\nThread 2 leaves\nThread 3 enters\nThread 3 leaves",
+        "C": "Thread 1 enters\nThread 2 enters\nThread 3 enters\nThread 1 leaves\nThread 2 leaves\nThread 3 leaves",
+        "D": "The output order is non-deterministic and can vary between runs"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static SemaphoreSlim semaphore = new SemaphoreSlim(2, 2); // Allow 2 concurrent accesses\n    \n    static void Main(string[] args)\n    {\n        // Start 3 tasks\n        Task task1 = Task.Run(() => AccessResource(\"Thread 1\"));\n        Task task2 = Task.Run(() => AccessResource(\"Thread 2\"));\n        Task task3 = Task.Run(() => AccessResource(\"Thread 3\"));\n        \n        Task.WaitAll(task1, task2, task3);\n    }\n    \n    static void AccessResource(string threadName)\n    {\n        Console.WriteLine($\"{threadName} waiting to enter\");\n        semaphore.Wait();\n        \n        try\n        {\n            Console.WriteLine($\"{threadName} enters\");\n            Thread.Sleep(100); // Simulate work\n        }\n        finally\n        {\n            Console.WriteLine($\"{threadName} leaves\");\n            semaphore.Release();\n        }\n    }\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates string interning?",
+      "options": {
+        "A": "String1 == String2: True\nString1 == String3: True\nString1 == String4: True",
+        "B": "String1 == String2: True\nString1 == String3: True\nString1 == String4: False",
+        "C": "String1 == String2: True\nString1 == String3: False\nString1 == String4: False",
+        "D": "String1 == String2: False\nString1 == String3: False\nString1 == String4: False"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Text;\n\nclass Program\n{\n    static void Main(string[] args)\n    {\n        // Literal strings are automatically interned\n        string string1 = \"Hello\";\n        string string2 = \"Hello\";\n        \n        // String created at runtime\n        string string3 = string.Intern(\"Hel\" + \"lo\");\n        \n        // String created from character array\n        char[] chars = { 'H', 'e', 'l', 'l', 'o' };\n        string string4 = new string(chars);\n        \n        // Compare references using == operator\n        Console.WriteLine($\"String1 == String2: {object.ReferenceEquals(string1, string2)}\");\n        Console.WriteLine($\"String1 == String3: {object.ReferenceEquals(string1, string3)}\");\n        Console.WriteLine($\"String1 == String4: {object.ReferenceEquals(string1, string4)}\");\n    }\n}"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates P/Invoke with DllImport?",
+      "options": {
+        "A": "MessageBox displayed with text 'P/Invoke Example'",
+        "B": "DllNotFoundException: Unable to load DLL 'user32.dll'",
+        "C": "EntryPointNotFoundException: Unable to find entry point 'MessageBox' in DLL 'user32.dll'",
+        "D": "MarshalDirectiveException: Cannot marshal 'parameter #1'"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Runtime.InteropServices;\n\nclass Program\n{\n    // Import the MessageBox function from the user32.dll\n    [DllImport(\"user32.dll\")]\n    public static extern int MessageBox(IntPtr hWnd, string text, string caption, uint type);\n    \n    static void Main(string[] args)\n    {\n        try\n        {\n            // Call the imported function\n            MessageBox(IntPtr.Zero, \"P/Invoke Example\", \"Native Windows API\", 0);\n            Console.WriteLine(\"MessageBox displayed with text 'P/Invoke Example'\");\n        }\n        catch (Exception ex)\n        {\n            Console.WriteLine(ex.ToString());\n        }\n    }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "Which of the following statements about token-based authentication in .NET is FALSE?",
+      "options": {
+        "A": "JWT tokens are typically stateless, meaning the server doesn't need to maintain a session store",
+        "B": "Access tokens should have a short lifetime while refresh tokens can have a longer lifetime",
+        "C": "Bearer tokens must always be transmitted over HTTPS to ensure security",
+        "D": "The JWT token validation is performed on the client side using the public key from the server"
+      },
+      "correct_answer": "D",
+      "code_example": null
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What is the CORRECT way to define a multi-stage Dockerfile for a .NET application to minimize the final image size?",
+      "options": {
+        "A": "Use a single SDK image with the RUN command to build and publish the application",
+        "B": "Use the SDK image for building, then copy all files to a runtime image without using COPY --from",
+        "C": "Use the SDK image for building, then copy only the published output to a runtime image",
+        "D": "Install the .NET SDK in the runtime image and build the application inside it"
+      },
+      "correct_answer": "C",
+      "code_example": "# Stage 1: Build the application\nFROM mcr.microsoft.com/dotnet/sdk:8.0 AS build\nWORKDIR /src\nCOPY *.csproj .\nRUN dotnet restore\nCOPY . .\nRUN dotnet publish -c Release -o /app/publish\n\n# Stage 2: Create the runtime image\nFROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final\nWORKDIR /app\nCOPY --from=build /app/publish .\nENTRYPOINT [\"dotnet\", \"MyApp.dll\"]"
+    }
+  ]
+}
