@@ -1,0 +1,612 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What does the following code snippet return?",
+      "code_example": "string path = \"C:\\\\example.txt\";\nbool result = File.Exists(path);",
+      "options": {
+        "A": "true if the file exists, false otherwise",
+        "B": "An exception if the file doesn't exist",
+        "C": "null if the file doesn't exist",
+        "D": "A FileNotFoundException if the path is invalid"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "code_example": "string directoryPath = \"C:\\\\NewFolder\";\nif (!Directory.Exists(directoryPath))\n{\n    Directory.CreateDirectory(directoryPath);\n    Console.WriteLine(\"Created\");\n}\nelse\n{\n    Console.WriteLine(\"Already exists\");\n}",
+      "options": {
+        "A": "Always \"Created\"",
+        "B": "Always \"Already exists\"",
+        "C": "\"Created\" if the directory doesn't exist, \"Already exists\" otherwise",
+        "D": "A DirectoryNotFoundException"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "When should you use StringBuilder instead of string for text manipulation?",
+      "options": {
+        "A": "Always, as StringBuilder is always more memory efficient",
+        "B": "When you need to make a single concatenation of strings",
+        "C": "When you need to perform multiple string operations in a loop",
+        "D": "Only when working with strings shorter than 50 characters"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "code_example": "StringBuilder sb = new StringBuilder();\nsb.Append(\"Hello\");\nsb.Append(\" \");\nsb.Append(\"World\");\nstring result = sb.ToString();\nConsole.WriteLine(result);",
+      "options": {
+        "A": "HelloWorld",
+        "B": "Hello World",
+        "C": "Hello\\sWorld",
+        "D": "System.Text.StringBuilder"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What happens when you execute the following code?",
+      "code_example": "string input = \"abc\";\nint number = Convert.ToInt32(input);",
+      "options": {
+        "A": "number equals 0",
+        "B": "number equals the ASCII value of 'a'",
+        "C": "A FormatException is thrown",
+        "D": "A runtime error occurs but no exception is thrown"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "code_example": "string input = \"42\";\nif (int.TryParse(input, out int result))\n{\n    Console.WriteLine($\"Success: {result}\");\n}\nelse\n{\n    Console.WriteLine(\"Failed\");\n}",
+      "options": {
+        "A": "Success: 42",
+        "B": "Failed",
+        "C": "Success: 0",
+        "D": "The code will throw an exception"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "code_example": "string name = \"Alice\";\nint age = 30;\nstring message = $\"{name} is {age} years old\";\nConsole.WriteLine(message);",
+      "options": {
+        "A": "{name} is {age} years old",
+        "B": "name is age years old",
+        "C": "Alice is 30 years old",
+        "D": "\"Alice\" is \"30\" years old"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What happens when the following code executes?",
+      "code_example": "try\n{\n    int x = 10;\n    int y = 0;\n    int result = x / y;\n    Console.WriteLine(result);\n}\ncatch (Exception ex)\n{\n    Console.WriteLine(\"Error caught\");\n}",
+      "options": {
+        "A": "The program prints \"0\"",
+        "B": "The program prints \"Error caught\"",
+        "C": "The program crashes with a DivideByZeroException",
+        "D": "The program hangs indefinitely"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the difference between 'ref' and 'out' parameters in C#?",
+      "options": {
+        "A": "ref parameters must be initialized before calling the method, out parameters don't need to be",
+        "B": "out parameters must be initialized before calling the method, ref parameters don't need to be",
+        "C": "ref parameters are read-only, out parameters are write-only",
+        "D": "There is no difference, they're synonyms"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "code_example": "void ModifyValues(ref int x, out int y)\n{\n    x = x * 2;\n    y = 100;\n}\n\nint a = 5;\nint b;\nModifyValues(ref a, out b);\nConsole.WriteLine($\"a = {a}, b = {b}\");",
+      "options": {
+        "A": "a = 5, b = 100",
+        "B": "a = 10, b = 100",
+        "C": "a = 10, b = 0",
+        "D": "Compilation error: b is not initialized"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "code_example": "int[,] matrix = new int[2, 3];\nfor (int i = 0; i < 2; i++)\n{\n    for (int j = 0; j < 3; j++)\n    {\n        matrix[i, j] = i + j;\n    }\n}\nConsole.WriteLine(matrix[1, 2]);",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a reference type in C#?",
+      "options": {
+        "A": "string",
+        "B": "int",
+        "C": "interface",
+        "D": "delegate"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "code_example": "int score = 85;\nif (score >= 90)\n{\n    Console.WriteLine(\"A\");\n}\nelse if (score >= 80)\n{\n    Console.WriteLine(\"B\");\n}\nelse if (score >= 70)\n{\n    Console.WriteLine(\"C\");\n}\nelse\n{\n    Console.WriteLine(\"D\");\n}",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "code_example": "for (int i = 0; i < 5; i++)\n{\n    if (i == 2)\n    {\n        continue;\n    }\n    Console.Write(i + \" \");\n}",
+      "options": {
+        "A": "0 1 2 3 4",
+        "B": "0 1 3 4",
+        "C": "0 1 2",
+        "D": "0 1"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "code_example": "int? nullableInt = null;\nbool? nullableBool = true;\n\nConsole.WriteLine($\"{nullableInt ?? 0}, {nullableBool ?? false}\");",
+      "options": {
+        "A": "null, true",
+        "B": "0, true",
+        "C": "null, null",
+        "D": ", True"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "code_example": "void Greet(string name = \"World\")\n{\n    Console.WriteLine($\"Hello, {name}!\");\n}\n\nGreet();\nGreet(\"John\");",
+      "options": {
+        "A": "Hello, World! Hello, John!",
+        "B": "Hello, ! Hello, John!",
+        "C": "Hello, World! Hello, World!",
+        "D": "Compilation error: missing parameter"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What is the output of the following code?",
+      "code_example": "public class ButtonClickEventArgs : EventArgs\n{\n    public int ClickCount { get; set; }\n}\n\npublic class Button\n{\n    public event EventHandler<ButtonClickEventArgs> Click;\n\n    public void PerformClick()\n    {\n        var args = new ButtonClickEventArgs { ClickCount = 1 };\n        Click?.Invoke(this, args);\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        var button = new Button();\n        button.Click += (sender, e) => Console.WriteLine($\"Clicked {e.ClickCount} times\");\n        button.PerformClick();\n    }\n}",
+      "options": {
+        "A": "Clicked",
+        "B": "Clicked 1 times",
+        "C": "Compilation error: EventArgs cannot be extended",
+        "D": "No output (the event is not fired)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is the purpose of ConfigureAwait(false) in the following code?",
+      "code_example": "public async Task<string> GetDataAsync()\n{\n    HttpClient client = new HttpClient();\n    var response = await client.GetAsync(\"https://example.com\").ConfigureAwait(false);\n    var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);\n    return content;\n}",
+      "options": {
+        "A": "It makes the async method run faster by using fewer resources",
+        "B": "It allows the continuation to run on any available thread from the thread pool rather than capturing the original context",
+        "C": "It prevents the method from throwing exceptions",
+        "D": "It forces the async method to run synchronously"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the output of the following code?",
+      "code_example": "var numbers = new[] { 1, 2, 3, 4, 5 };\nvar result = numbers.Aggregate(0, (sum, n) => sum + n);\nConsole.WriteLine(result);",
+      "options": {
+        "A": "0",
+        "B": "5",
+        "C": "15",
+        "D": "An exception is thrown"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What is the output of the following code?",
+      "code_example": "var numbers = new[] { 1, 2, 3, 4, 5 };\nvar hasEvenNumbers = numbers.Any(n => n % 2 == 0);\nvar allPositive = numbers.All(n => n > 0);\n\nConsole.WriteLine($\"{hasEvenNumbers}, {allPositive}\");",
+      "options": {
+        "A": "True, True",
+        "B": "True, False",
+        "C": "False, True",
+        "D": "False, False"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "In Entity Framework Core, what is the most appropriate LINQ query to fetch all active users with their assigned roles?",
+      "code_example": "var activeUsers = await _context.Users\n    .Where(u => u.IsActive)\n    .Include(u => u.UserRoles)\n        .ThenInclude(ur => ur.Role)\n    .ToListAsync();",
+      "options": {
+        "A": "This approach is inefficient and will cause N+1 query problems",
+        "B": "This approach is correct but should use Select() instead of Include()",
+        "C": "This approach is correct and efficiently loads related data",
+        "D": "This approach is incorrect because it uses async/await with LINQ"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What is the output of the following code?",
+      "code_example": "public T Add<T>(T a, T b) where T : struct, IComparable<T>\n{\n    if (typeof(T) == typeof(int))\n    {\n        return (T)(object)((int)(object)a + (int)(object)b);\n    }\n    else if (typeof(T) == typeof(double))\n    {\n        return (T)(object)((double)(object)a + (double)(object)b);\n    }\n    throw new NotSupportedException();\n}\n\nvar result1 = Add(5, 10);\nvar result2 = Add(2.5, 3.5);\nConsole.WriteLine($\"{result1}, {result2}\");",
+      "options": {
+        "A": "5, 2.5",
+        "B": "15, 6",
+        "C": "Compilation error: cannot perform addition on generic types",
+        "D": "Runtime exception: InvalidCastException"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "Which of the following is a correct xUnit test method for testing a method that adds two numbers?",
+      "code_example": "public class CalculatorTests\n{\n    [Fact]\n    public void Add_TwoNumbers_ReturnsSum()\n    {\n        // Arrange\n        var calculator = new Calculator();\n        \n        // Act\n        var result = calculator.Add(5, 10);\n        \n        // Assert\n        Assert.Equal(15, result);\n    }\n}",
+      "options": {
+        "A": "This test is incorrect because it's missing [TestMethod] attribute",
+        "B": "This test is incorrect because Assert.Equal parameters are in the wrong order",
+        "C": "This test is correct and follows the AAA pattern",
+        "D": "This test is incorrect because it's missing a try/catch block"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What is the output of the following code?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\n\nvar result = numbers\n    .Where(n => n > 2)\n    .Select(n => n * n)\n    .OrderByDescending(n => n)\n    .ToList();\n\nforeach (var num in result)\n{\n    Console.Write(num + \" \");\n}",
+      "options": {
+        "A": "1 2 3 4 5",
+        "B": "9 16 25",
+        "C": "25 16 9",
+        "D": "3 4 5"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What is the output of the following code?",
+      "code_example": "var dictionary = new ConcurrentDictionary<string, int>();\n\nParallel.For(0, 100, i =>\n{\n    dictionary.AddOrUpdate(\"counter\", 1, (key, oldValue) => oldValue + 1);\n});\n\nConsole.WriteLine(dictionary[\"counter\"]);",
+      "options": {
+        "A": "1",
+        "B": "100",
+        "C": "Between 1 and 100, but unpredictable",
+        "D": "The code throws a ConcurrentModificationException"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "Which of the following correctly describes the Test-Driven Development (TDD) process?",
+      "options": {
+        "A": "Write code first, then write tests to verify it works correctly",
+        "B": "Write tests first, then write code to make the tests pass, then refactor",
+        "C": "Write documentation first, then write tests, then implement the code",
+        "D": "Run existing tests, modify code to fix failures, add new features"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What is the difference between Lazy and Eager Loading in Entity Framework?",
+      "options": {
+        "A": "Lazy loading loads all related data automatically; eager loading loads data only when explicitly requested",
+        "B": "Eager loading loads all related data at once; lazy loading loads related data only when accessed",
+        "C": "Lazy loading is always faster than eager loading",
+        "D": "Eager loading is only available in EF Core, not in EF6"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "Which of the following is the correct command sequence to create and apply a new migration in Entity Framework Core?",
+      "options": {
+        "A": "Update-Database, followed by Add-Migration 'MigrationName'",
+        "B": "Add-Migration 'MigrationName', followed by Update-Database",
+        "C": "Create-Migration 'MigrationName', followed by Apply-Database",
+        "D": "New-Migration 'MigrationName', followed by Commit-Database"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What is the output of the following code?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3 };\nvar firstEven = numbers.FirstOrDefault(n => n % 2 == 0);\nvar firstNegative = numbers.FirstOrDefault(n => n < 0);\nConsole.WriteLine($\"{firstEven}, {firstNegative}\");",
+      "options": {
+        "A": "2, null",
+        "B": "2, 0",
+        "C": "2, ",
+        "D": "The code throws an InvalidOperationException"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What is the primary purpose of GC.Collect() in C#?",
+      "options": {
+        "A": "It immediately releases all unused memory in the application",
+        "B": "It forces garbage collection to reclaim memory that may be eligible for collection",
+        "C": "It prevents memory leaks by automatically fixing circular references",
+        "D": "It is required to be called regularly for proper memory management in C#"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "In ASP.NET Core, what is the correct order of middleware execution in the request pipeline?",
+      "options": {
+        "A": "Middleware executes in the order it's added to the pipeline, both for request and response",
+        "B": "Middleware executes in reverse order of addition for both request and response",
+        "C": "Middleware executes in the order it's added for the request, and in reverse order for the response",
+        "D": "The order of middleware execution is determined automatically based on dependencies"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What is the output of the following code when a form with input name 'username' and value 'john' is submitted?",
+      "code_example": "public class UserController : Controller\n{\n    [HttpPost]\n    public IActionResult Login(UserModel model)\n    {\n        return Content($\"Hello {model.Username}\");\n    }\n}\n\npublic class UserModel\n{\n    public string Username { get; set; }\n}",
+      "options": {
+        "A": "Hello ",
+        "B": "Hello null",
+        "C": "Hello john",
+        "D": "The code throws a NullReferenceException"
+      },
+      "correct_answer": "C"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the usage of CancellationToken?",
+      "options": {
+        "A": "Task Started\nTask Canceled\nTask completed successfully",
+        "B": "Task Started\nTask completed successfully",
+        "C": "Task Started\nTask Canceled",
+        "D": "Task Started\nOperation canceled"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static async Task Main()\n    {\n        var cts = new CancellationTokenSource();\n        var token = cts.Token;\n\n        var task = Task.Run(async () =>\n        {\n            Console.WriteLine(\"Task Started\");\n            try\n            {\n                await Task.Delay(2000, token);\n                Console.WriteLine(\"Task completed successfully\");\n            }\n            catch (OperationCanceledException)\n            {\n                Console.WriteLine(\"Operation canceled\");\n                throw;\n            }\n        }, token);\n\n        // Cancel the task after 500ms\n        await Task.Delay(500);\n        cts.Cancel();\n\n        try\n        {\n            await task;\n        }\n        catch (OperationCanceledException)\n        {\n            // Console.WriteLine(\"Task Canceled\");\n        }\n    }\n}"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "In the context of Token-based authentication in ASP.NET Core, what is the correct order of operations when validating a JWT token?",
+      "options": {
+        "A": "Verify signature → Check expiration → Validate claims → Validate issuer",
+        "B": "Validate issuer → Verify signature → Check expiration → Validate claims",
+        "C": "Check expiration → Verify signature → Validate issuer → Validate claims",
+        "D": "Verify signature → Validate issuer → Check expiration → Validate claims"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the usage of MemoryCache?",
+      "options": {
+        "A": "Item found in cache: CachedValue\nItem found in cache: CachedValue",
+        "B": "Item found in cache: CachedValue\nItem not found in cache.",
+        "C": "Item not found in cache.\nItem found in cache: CachedValue",
+        "D": "Item not found in cache.\nItem not found in cache."
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing Microsoft.Extensions.Caching.Memory;\n\nclass Program\n{\n    static void Main()\n    {\n        var cacheOptions = new MemoryCacheOptions\n        {\n            ExpirationScanFrequency = TimeSpan.FromSeconds(1)\n        };\n        \n        var cache = new MemoryCache(cacheOptions);\n        \n        var cacheEntryOptions = new MemoryCacheEntryOptions()\n            .SetAbsoluteExpiration(TimeSpan.FromSeconds(1));\n            \n        cache.Set(\"key\", \"CachedValue\", cacheEntryOptions);\n        \n        // First check - value should be in cache\n        if (cache.TryGetValue(\"key\", out string cachedValue1))\n        {\n            Console.WriteLine($\"Item found in cache: {cachedValue1}\");\n        }\n        else\n        {\n            Console.WriteLine(\"Item not found in cache.\");\n        }\n        \n        // Wait for cache entry to expire\n        System.Threading.Thread.Sleep(1500);\n        \n        // Second check - value should be expired\n        if (cache.TryGetValue(\"key\", out string cachedValue2))\n        {\n            Console.WriteLine($\"Item found in cache: {cachedValue2}\");\n        }\n        else\n        {\n            Console.WriteLine(\"Item not found in cache.\");\n        }\n    }\n}"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "When using ArrayPool<T> in C#, which of the following statements is correct?",
+      "options": {
+        "A": "Arrays obtained from the pool are automatically cleared when returned to the pool",
+        "B": "Arrays obtained from the pool are guaranteed to be exactly the requested size",
+        "C": "Failing to return arrays to the pool will trigger an ObjectDisposedException",
+        "D": "Arrays obtained from the pool may be larger than the requested size"
+      },
+      "correct_answer": "D",
+      "code_example": "using System;\nusing System.Buffers;\n\nclass Program\n{\n    static void Main()\n    {\n        // Request an array of size 100 from the shared pool\n        int[] rentedArray = ArrayPool<int>.Shared.Rent(100);\n        \n        try\n        {\n            // Work with the array\n            Console.WriteLine($\"Requested size: 100, Actual size: {rentedArray.Length}\");\n            \n            // Example output might be:\n            // Requested size: 100, Actual size: 128\n            // This demonstrates that the pool might return a larger array than requested\n        }\n        finally\n        {\n            // Always return the array to the pool when done\n            ArrayPool<int>.Shared.Return(rentedArray);\n        }\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "In RabbitMQ, what is the primary difference between Direct Exchange and Topic Exchange?",
+      "options": {
+        "A": "Direct Exchange routes messages based on exact binding key match, while Topic Exchange allows for pattern matching using wildcards",
+        "B": "Direct Exchange can handle multiple consumers, while Topic Exchange is limited to a single consumer",
+        "C": "Direct Exchange can only route to a single queue, while Topic Exchange can route to multiple queues",
+        "D": "Direct Exchange is durable by default, while Topic Exchange is transient by default"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "Which of the following SQL Server indexing strategies would be most efficient for a query that frequently searches for exact matches on a column with high cardinality (many unique values) and rarely needs to return all columns?",
+      "options": {
+        "A": "Clustered index on the high-cardinality column",
+        "B": "Non-clustered index on the high-cardinality column with included columns for all other columns",
+        "C": "Non-clustered index on the high-cardinality column",
+        "D": "Columnstore index on the entire table"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates P/Invoke with DllImport?",
+      "options": {
+        "A": "MessageBox displayed with the text 'P/Invoke Example'",
+        "B": "DllNotFoundException",
+        "C": "EntryPointNotFoundException",
+        "D": "BadImageFormatException"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Runtime.InteropServices;\n\nclass Program\n{\n    // Import the MessageBox function from the user32.dll library\n    [DllImport(\"incorrect_library_name.dll\")]\n    public static extern int MessageBox(IntPtr hWnd, string text, string caption, uint type);\n\n    static void Main()\n    {\n        try\n        {\n            // Attempt to call the imported function\n            MessageBox(IntPtr.Zero, \"P/Invoke Example\", \"Example\", 0);\n        }\n        catch (Exception ex)\n        {\n            // This will print the type of exception thrown\n            Console.WriteLine(ex.GetType().Name);\n        }\n    }\n}"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates String Interning?",
+      "options": {
+        "A": "Reference Equal: False\nString Equal: True",
+        "B": "Reference Equal: True\nString Equal: True",
+        "C": "Reference Equal: False\nString Equal: False",
+        "D": "Reference Equal: True\nString Equal: False"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        // Create two strings with the same value but different instances\n        string str1 = new string(new char[] { 'H', 'e', 'l', 'l', 'o' });\n        string str2 = new string(new char[] { 'H', 'e', 'l', 'l', 'o' });\n        \n        // Check reference equality\n        Console.WriteLine($\"Reference Equal: {Object.ReferenceEquals(str1, str2)}\");\n        \n        // Check string equality\n        Console.WriteLine($\"String Equal: {str1 == str2}\");\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "In OAuth2, what is the purpose of the 'refresh_token'?",
+      "options": {
+        "A": "To authenticate the client application to the resource server",
+        "B": "To verify the identity of the end user",
+        "C": "To obtain a new access token without requiring the user to re-authenticate",
+        "D": "To encrypt communication between the client and the authorization server"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "When implementing OAuth with IdentityServer4, which of the following grant types would be most appropriate for a single-page application (SPA) that needs to access an API on behalf of the logged-in user?",
+      "options": {
+        "A": "Client Credentials Flow",
+        "B": "Authorization Code Flow with PKCE",
+        "C": "Resource Owner Password Credentials Flow",
+        "D": "Implicit Flow"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the usage of Semaphore and Mutex?",
+      "options": {
+        "A": "Semaphore: Thread 1 entered\nSemaphore: Thread 2 entered\nMutex: Thread 1 entered\nMutex: Thread 2 entered",
+        "B": "Semaphore: Thread 1 entered\nSemaphore: Thread 2 entered\nMutex: Thread 1 entered\nMutex: Thread 1 exited\nMutex: Thread 2 entered",
+        "C": "Semaphore: Thread 1 entered\nMutex: Thread 1 entered\nSemaphore: Thread 2 entered\nMutex: Thread 1 exited\nMutex: Thread 2 entered",
+        "D": "Mutex: Thread 1 entered\nMutex: Thread 2 entered\nSemaphore: Thread 1 entered\nSemaphore: Thread 2 entered"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Threading;\n\nclass Program\n{\n    static Semaphore semaphore = new Semaphore(2, 2); // Allow 2 concurrent threads\n    static Mutex mutex = new Mutex();\n\n    static void Main()\n    {\n        // Start two threads\n        new Thread(ThreadProc).Start(1);\n        new Thread(ThreadProc).Start(2);\n\n        // Wait for the demonstration to complete\n        Thread.Sleep(2000);\n    }\n\n    static void ThreadProc(object threadId)\n    {\n        // Demonstrate Semaphore (allows 2 concurrent threads)\n        semaphore.WaitOne();\n        Console.WriteLine($\"Semaphore: Thread {threadId} entered\");\n        // No release here to keep the example simple\n\n        // Demonstrate Mutex (allows only 1 thread at a time)\n        mutex.WaitOne();\n        Console.WriteLine($\"Mutex: Thread {threadId} entered\");\n        Thread.Sleep(500); // Simulate work\n        Console.WriteLine($\"Mutex: Thread {threadId} exited\");\n        mutex.ReleaseMutex();\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates the usage of ExpandoObject?",
+      "options": {
+        "A": "Name: John\nAge: 30\nCompilationError: 'dynamic' object has no member named 'Address'",
+        "B": "Name: John\nAge: 30\nAddress: 123 Main St",
+        "C": "Name: John\nAge: 30\nMissingMemberException",
+        "D": "RuntimeBinderException: 'object' does not contain a definition for 'Name'"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\nusing System.Dynamic;\n\nclass Program\n{\n    static void Main()\n    {\n        // Create a dynamic object using ExpandoObject\n        dynamic person = new ExpandoObject();\n        \n        // Add properties dynamically\n        person.Name = \"John\";\n        person.Age = 30;\n        \n        // Add a method dynamically\n        ((IDictionary<string, object>)person)[\"GetFullDetails\"] = (Func<string>)(() => \n            $\"{person.Name}, {person.Age}, {person.Address}\");\n        \n        // Add another property after initial creation\n        person.Address = \"123 Main St\";\n        \n        // Access properties\n        Console.WriteLine($\"Name: {person.Name}\");\n        Console.WriteLine($\"Age: {person.Age}\");\n        Console.WriteLine($\"Address: {person.Address}\");\n    }\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "In Role-based authentication in ASP.NET Core, what is the correct way to implement policy-based authorization that requires a user to have multiple roles?",
+      "options": {
+        "A": "Use the [Authorize(Roles = \"Role1, Role2\")] attribute, which requires the user to have either Role1 OR Role2",
+        "B": "Use the [Authorize(Roles = \"Role1 & Role2\")] attribute, which requires the user to have both Role1 AND Role2",
+        "C": "Create a policy that uses a RolesAuthorizationRequirement with multiple roles and register it with RequireRole()",
+        "D": "Create a policy that combines multiple requirements with RequireAssertion() to check each role individually"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates Parallel.Invoke()?",
+      "options": {
+        "A": "Task 1 started\nTask 2 started\nTask 3 started\nTask 1 completed\nTask 2 completed\nTask 3 completed",
+        "B": "The output order will always be sequential: Task 1, 2, 3 started then completed in order",
+        "C": "The output will show tasks starting and completing, but the exact order may vary between runs",
+        "D": "AggregateException with multiple OperationCanceledException instances"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static void Main()\n    {\n        try\n        {\n            Parallel.Invoke(\n                () => DoWork(1, 500),\n                () => DoWork(2, 300),\n                () => DoWork(3, 100)\n            );\n        }\n        catch (AggregateException ae)\n        {\n            foreach (var ex in ae.InnerExceptions)\n            {\n                Console.WriteLine($\"Exception: {ex.GetType().Name}\");\n            }\n        }\n    }\n\n    static void DoWork(int taskId, int delayMs)\n    {\n        Console.WriteLine($\"Task {taskId} started\");\n        Thread.Sleep(delayMs); // Simulate work with different durations\n        Console.WriteLine($\"Task {taskId} completed\");\n    }\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "In the context of the Adapter Pattern in C#, which of the following statements is correct?",
+      "options": {
+        "A": "The Adapter implements the target interface and extends the adaptee class",
+        "B": "The Adapter requires multiple inheritance, which is not supported in C#",
+        "C": "The Adapter implements the target interface and contains an instance of the adaptee class",
+        "D": "The Adapter uses static methods to convert between the target interface and adaptee class"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "When configuring CORS (Cross-Origin Resource Sharing) in ASP.NET Core, which of the following correctly represents the order of middleware registration and configuration for CORS to work properly?",
+      "options": {
+        "A": "services.AddCors() in ConfigureServices → app.UseCors() before app.UseRouting() in Configure",
+        "B": "services.AddCors() in ConfigureServices → app.UseCors() after app.UseAuthorization() in Configure",
+        "C": "services.AddCors() in ConfigureServices → app.UseCors() after app.UseRouting() but before app.UseEndpoints() in Configure",
+        "D": "services.AddCors() in Configure → app.UseCors() before app.UseEndpoints() in ConfigureServices"
+      },
+      "correct_answer": "C"
+    }
+  ]
+}
