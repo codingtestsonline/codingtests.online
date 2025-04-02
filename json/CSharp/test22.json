@@ -1,0 +1,612 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What does the following code do?",
+      "options": {
+        "A": "Checks if a file exists and returns true",
+        "B": "Creates a new file if it doesn't exist",
+        "C": "Throws an exception if the file doesn't exist",
+        "D": "Checks if a file exists and returns a boolean"
+      },
+      "correct_answer": "D",
+      "code_example": "bool fileExists = File.Exists(\"example.txt\");"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What will happen if the directory 'data' already exists when the following code is executed?",
+      "options": {
+        "A": "An IOException will be thrown",
+        "B": "Nothing, the code will proceed without error",
+        "C": "The existing directory will be deleted and recreated",
+        "D": "A DirectoryExistsException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "Directory.CreateDirectory(\"data\");"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What is the purpose of the 'using' statement in the following code?",
+      "options": {
+        "A": "To include necessary namespaces",
+        "B": "To ensure the StreamWriter is properly disposed of, even if an exception occurs",
+        "C": "To specify how long the StreamWriter will be used",
+        "D": "To indicate the StreamWriter should use UTF-8 encoding"
+      },
+      "correct_answer": "B",
+      "code_example": "using (StreamWriter writer = new StreamWriter(\"log.txt\"))\n{\n    writer.WriteLine(\"Log entry\");\n}"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "When should StringBuilder be preferred over string concatenation?",
+      "options": {
+        "A": "When you need to concatenate more than two strings",
+        "B": "When you need to perform multiple string manipulations in a loop",
+        "C": "When you need to ensure thread safety",
+        "D": "When you need to compare strings case-insensitively"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "The number is negative",
+        "B": "The number is positive",
+        "C": "The number is zero",
+        "D": "No output will be generated"
+      },
+      "correct_answer": "C",
+      "code_example": "int number = 0;\nif (number > 0)\n{\n    Console.WriteLine(\"The number is positive\");\n}\nelse if (number < 0)\n{\n    Console.WriteLine(\"The number is negative\");\n}\nelse\n{\n    Console.WriteLine(\"The number is zero\");\n}"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What happens when the following code is executed?",
+      "options": {
+        "A": "The program crashes with a NullReferenceException",
+        "B": "The program continues execution after line 3",
+        "C": "A custom exception is thrown with the message 'Invalid input'",
+        "D": "An ArgumentException is thrown"
+      },
+      "correct_answer": "C",
+      "code_example": "void ProcessInput(string input)\n{\n    if (string.IsNullOrEmpty(input))\n    {\n        throw new Exception(\"Invalid input\");\n    }\n    // Process the input\n}"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a value type in C#?",
+      "options": {
+        "A": "int",
+        "B": "double",
+        "C": "string",
+        "D": "char"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the type of 'result' in the following code?",
+      "options": {
+        "A": "int",
+        "B": "double",
+        "C": "var",
+        "D": "decimal"
+      },
+      "correct_answer": "B",
+      "code_example": "var result = 10.5 * 2;"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What is the purpose of creating a custom exception class as shown below?",
+      "options": {
+        "A": "To improve performance when throwing exceptions",
+        "B": "To provide more specific exception types for better error handling",
+        "C": "To override the default exception message",
+        "D": "To create exceptions that cannot be caught by general catch blocks"
+      },
+      "correct_answer": "B",
+      "code_example": "public class DatabaseConnectionException : Exception\n{\n    public DatabaseConnectionException(string message) : base(message)\n    {\n    }\n}"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Output: x=10, y=20",
+        "B": "Output: x=20, y=10",
+        "C": "A compilation error will occur",
+        "D": "Output: 10, 20"
+      },
+      "correct_answer": "A",
+      "code_example": "void DisplayCoordinates(int x, int y)\n{\n    Console.WriteLine($\"Output: x={x}, y={y}\");\n}\n\n// In Main or another method\nDisplayCoordinates(y: 20, x: 10);"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will the following code output?",
+      "options": {
+        "A": "Hello John! You are 30 years old.",
+        "B": "Hello {name}! You are {age} years old.",
+        "C": "Hello + name + ! You are + age + years old.",
+        "D": "A compilation error will occur"
+      },
+      "correct_answer": "A",
+      "code_example": "string name = \"John\";\nint age = 30;\nConsole.WriteLine($\"Hello {name}! You are {age} years old.\");"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What is the output of the following code?",
+      "options": {
+        "A": "The book's title is: C# Programming",
+        "B": "The Book's title is: C# Programming",
+        "C": "A compilation error will occur",
+        "D": "The code will throw a NullReferenceException"
+      },
+      "correct_answer": "A",
+      "code_example": "public class Book\n{\n    public string Title { get; set; }\n}\n\n// In Main or another method\nBook book = new Book();\nbook.Title = \"C# Programming\";\nConsole.WriteLine($\"The book's title is: {book.Title}\");"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What's the major difference between ArrayList and List<T>?",
+      "options": {
+        "A": "ArrayList can store any type of object, while List<T> can only store objects of type T",
+        "B": "ArrayList is faster than List<T>",
+        "C": "List<T> provides compile-time type safety, while ArrayList does not",
+        "D": "ArrayList is newer and recommended over List<T>"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "3 5 0",
+        "B": "3 5",
+        "C": "A compilation error will occur",
+        "D": "A NullReferenceException will be thrown"
+      },
+      "correct_answer": "A",
+      "code_example": "int[][] jaggedArray = new int[2][];\njaggedArray[0] = new int[2] { 3, 5 };\njaggedArray[1] = new int[1] { 0 };\n\nforeach (var row in jaggedArray)\n{\n    foreach (var item in row)\n    {\n        Console.Write(item + \" \");\n    }\n}"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "100",
+        "B": "10",
+        "C": "110",
+        "D": "A compilation error will occur"
+      },
+      "correct_answer": "B",
+      "code_example": "void DisplayValue(int value = 10)\n{\n    Console.WriteLine(value);\n}\n\n// In Main or another method\nDisplayValue();"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What is the main difference between Dictionary<TKey, TValue> and HashSet<T>?",
+      "options": {
+        "A": "Dictionary stores key-value pairs, while HashSet only stores unique values",
+        "B": "Dictionary allows duplicate keys, while HashSet allows duplicate values",
+        "C": "Dictionary is faster than HashSet for lookups",
+        "D": "Dictionary is thread-safe, while HashSet is not"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What is Property Injection in the context of Dependency Injection?",
+      "options": {
+        "A": "A way to inject dependencies through a class constructor",
+        "B": "A way to inject dependencies through properties of a class",
+        "C": "A way to inject dependencies through method parameters",
+        "D": "A way to inject dependencies directly into private fields"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What is the output of the following code that uses Constructor Injection?",
+      "options": {
+        "A": "Using SQL database",
+        "B": "Using MongoDB database",
+        "C": "Using in-memory database",
+        "D": "A compilation error will occur"
+      },
+      "correct_answer": "A",
+      "code_example": "public interface IDatabase\n{\n    void Connect();\n}\n\npublic class SqlDatabase : IDatabase\n{\n    public void Connect()\n    {\n        Console.WriteLine(\"Using SQL database\");\n    }\n}\n\npublic class UserRepository\n{\n    private readonly IDatabase _database;\n\n    public UserRepository(IDatabase database)\n    {\n        _database = database;\n    }\n\n    public void Initialize()\n    {\n        _database.Connect();\n    }\n}\n\n// In Main or another method\nIDatabase sqlDb = new SqlDatabase();\nUserRepository repository = new UserRepository(sqlDb);\nrepository.Initialize();"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using a lambda expression?",
+      "options": {
+        "A": "2 4 6 8 10",
+        "B": "1 2 3 4 5",
+        "C": "2 4 6 8",
+        "D": "1 4 9 16 25"
+      },
+      "correct_answer": "A",
+      "code_example": "List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar doubled = numbers.Select(x => x * 2);\n\nforeach (var num in doubled)\n{\n    Console.Write(num + \" \");\n}"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using method hiding?",
+      "options": {
+        "A": "BaseMethod called\nDerivedMethod called",
+        "B": "BaseMethod called\nBaseMethod called",
+        "C": "DerivedMethod called\nDerivedMethod called",
+        "D": "DerivedMethod called\nBaseMethod called"
+      },
+      "correct_answer": "D",
+      "code_example": "public class Base\n{\n    public void Method()\n    {\n        Console.WriteLine(\"BaseMethod called\");\n    }\n}\n\npublic class Derived : Base\n{\n    public new void Method()\n    {\n        Console.WriteLine(\"DerivedMethod called\");\n    }\n}\n\n// In Main or another method\nDerived d = new Derived();\nd.Method();\nBase b = d;\nb.Method();"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "In the context of unit testing with dependency injection, what is the main purpose of mocking?",
+      "options": {
+        "A": "To speed up test execution",
+        "B": "To isolate the code being tested from its dependencies",
+        "C": "To create real instances of all dependencies",
+        "D": "To validate that exceptions are thrown correctly"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which of the following correctly describes a basic xUnit test?",
+      "options": {
+        "A": "A method decorated with [Test] that uses Assert statements",
+        "B": "A method decorated with [TestMethod] in a class decorated with [TestClass]",
+        "C": "A method decorated with [Fact] that uses Assert statements",
+        "D": "A method decorated with [UnitTest] in a class that inherits from TestBase"
+      },
+      "correct_answer": "C",
+      "code_example": "public class CalculatorTests\n{\n    [Fact]\n    public void Add_TwoNumbers_ReturnsCorrectResult()\n    {\n        // Arrange\n        var calculator = new Calculator();\n\n        // Act\n        int result = calculator.Add(3, 5);\n\n        // Assert\n        Assert.Equal(8, result);\n    }\n}"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "In Entity Framework Core, what does 'Code-First approach' mean?",
+      "options": {
+        "A": "Writing SQL queries first, then generating C# classes",
+        "B": "Creating the database schema first, then generating C# classes",
+        "C": "Writing C# classes first, then generating the database schema",
+        "D": "Writing stored procedures first, then implementing them in C#"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What is the purpose of ConfigureAwait(false) in the following code?",
+      "options": {
+        "A": "To prevent the method from being awaited",
+        "B": "To execute the continuation on any available thread rather than capturing the original context",
+        "C": "To improve performance by avoiding async operations altogether",
+        "D": "To force the continuation to run on the main thread"
+      },
+      "correct_answer": "B",
+      "code_example": "public async Task ProcessDataAsync()\n{\n    var data = await GetDataAsync().ConfigureAwait(false);\n    // Process data here\n}"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will happen when the following code is executed?",
+      "options": {
+        "A": "\"Button clicked\" will be printed to the console",
+        "B": "Nothing will happen because the event is not invoked",
+        "C": "A compilation error will occur",
+        "D": "A NullReferenceException will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "public class Button\n{\n    public event EventHandler Clicked;\n}\n\n// In Main or another method\nButton button = new Button();\nbutton.Clicked += (sender, e) => Console.WriteLine(\"Button clicked\");"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What is the purpose of the 'delegate' keyword in C#?",
+      "options": {
+        "A": "To define methods that can be passed as parameters",
+        "B": "To create a type that references methods with a specific signature",
+        "C": "To implement the Delegate design pattern",
+        "D": "To mark a method that will be executed asynchronously"
+      },
+      "correct_answer": "B",
+      "code_example": "public delegate int MathOperation(int a, int b);\n\npublic class Calculator\n{\n    public int Add(int a, int b) { return a + b; }\n    public int Subtract(int a, int b) { return a - b; }\n}"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will happen when the following code is executed?",
+      "options": {
+        "A": "\"Handler 1\" and \"Handler 2\" will be printed in that order",
+        "B": "\"Handler 2\" and \"Handler 1\" will be printed in that order",
+        "C": "Only \"Handler 2\" will be printed",
+        "D": "A compilation error will occur"
+      },
+      "correct_answer": "C",
+      "code_example": "public class Publisher\n{\n    public event EventHandler DataChanged;\n\n    public void RaiseEvent()\n    {\n        DataChanged?.Invoke(this, EventArgs.Empty);\n    }\n}\n\n// In Main or another method\nPublisher publisher = new Publisher();\npublisher.DataChanged += (sender, e) => Console.WriteLine(\"Handler 1\");\npublisher.DataChanged += (sender, e) => Console.WriteLine(\"Handler 2\");\npublisher.DataChanged -= (sender, e) => Console.WriteLine(\"Handler 1\");\npublisher.RaiseEvent();"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What is the primary purpose of the 'using' statement in the context of resource management?",
+      "options": {
+        "A": "To include necessary namespaces",
+        "B": "To automatically call Dispose() on an object when it goes out of scope",
+        "C": "To create thread-safe objects",
+        "D": "To import static methods from a class"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What is the main difference between Conventional Routing and Attribute Routing in ASP.NET Core?",
+      "options": {
+        "A": "Conventional Routing is defined globally, while Attribute Routing is defined at the controller or action level",
+        "B": "Conventional Routing supports parameters, while Attribute Routing doesn't",
+        "C": "Attribute Routing is deprecated in favor of Conventional Routing",
+        "D": "Conventional Routing works with RESTful APIs, while Attribute Routing doesn't"
+      },
+      "correct_answer": "A",
+      "code_example": "// Attribute Routing Example\n[Route(\"api/[controller]\")]\npublic class ProductsController : ControllerBase\n{\n    [HttpGet(\"{id}\")]\n    public IActionResult GetProduct(int id)\n    {\n        // Implementation\n        return Ok();\n    }\n}"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What will the following test code using Moq verify?",
+      "options": {
+        "A": "That SendEmail was called exactly once with any string parameter",
+        "B": "That SendEmail was never called",
+        "C": "That SendEmail was called at least once with a specific email address",
+        "D": "That SendEmail returns true when called"
+      },
+      "correct_answer": "A",
+      "code_example": "// The service interface\npublic interface IEmailService\n{\n    bool SendEmail(string recipient, string message);\n}\n\n// The test\n[Fact]\npublic void NotifyUser_WhenCalled_SendsEmail()\n{\n    // Arrange\n    var mockEmailService = new Mock<IEmailService>();\n    var notifier = new UserNotifier(mockEmailService.Object);\n    \n    // Act\n    notifier.NotifyUser(\"User notification message\");\n    \n    // Assert\n    mockEmailService.Verify(s => s.SendEmail(It.IsAny<string>(), It.IsAny<string>()), Times.Once);\n}"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is the purpose of using a read-only property (with private set) in the following code?",
+      "options": {
+        "A": "To make the property completely immutable",
+        "B": "To allow the property to be set only within the class",
+        "C": "To optimize memory usage",
+        "D": "To throw an exception if someone tries to set the property"
+      },
+      "correct_answer": "B",
+      "code_example": "public class User\n{\n    public string Username { get; private set; }\n    \n    public User(string username)\n    {\n        Username = username;\n    }\n    \n    public void UpdateUsername(string newUsername)\n    {\n        if (!string.IsNullOrEmpty(newUsername))\n        {\n            Username = newUsername;\n        }\n    }\n}"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What is the key difference between Dispose() and Finalize() methods in C#?",
+      "options": {
+        "A": "Dispose() is called explicitly by the programmer, while Finalize() is called by the garbage collector",
+        "B": "Dispose() can only release managed resources, while Finalize() can only release unmanaged resources",
+        "C": "Dispose() is part of the IDisposable interface, while Finalize() is a language keyword",
+        "D": "Dispose() is called when an object goes out of scope, while Finalize() is called when the application exits"
+      },
+      "correct_answer": "A"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "Consider the following code snippet using Activator.CreateInstance(). What will be the output?",
+      "options": {
+        "A": "Error: Cannot create instance of abstract class",
+        "B": "ConcreteImplementation",
+        "C": "Error: Cannot find constructor with parameters",
+        "D": "BaseClass"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nabstract class BaseClass {\n    public virtual string GetName() { return \"BaseClass\"; }\n}\n\nclass ConcreteImplementation : BaseClass {\n    public override string GetName() { return \"ConcreteImplementation\"; }\n}\n\nclass Program {\n    static void Main() {\n        Type type = typeof(ConcreteImplementation);\n        BaseClass instance = (BaseClass)Activator.CreateInstance(type);\n        Console.WriteLine(instance.GetName());\n    }\n}"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a benefit of using role-based authentication in ASP.NET Core applications?",
+      "options": {
+        "A": "Simplified management of user permissions",
+        "B": "Ability to assign multiple roles to a single user",
+        "C": "Automatic encryption of all user data in transit",
+        "D": "Granular control over access to resources"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What is the correct order of the following commands in a Dockerfile for a .NET 8 application?",
+      "options": {
+        "A": "FROM, WORKDIR, COPY, RUN, ENTRYPOINT",
+        "B": "WORKDIR, FROM, COPY, RUN, ENTRYPOINT",
+        "C": "FROM, COPY, WORKDIR, RUN, ENTRYPOINT",
+        "D": "FROM, WORKDIR, RUN, COPY, ENTRYPOINT"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Observer Pattern implementation?",
+      "options": {
+        "A": "Observer1 notified of: State changed to 10\nObserver2 notified of: State changed to 10",
+        "B": "Observer2 notified of: State changed to 10\nObserver1 notified of: State changed to 10",
+        "C": "Observer1 notified of: State changed\nObserver2 notified of: State changed",
+        "D": "No output, the code will throw an exception"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Collections.Generic;\n\npublic interface IObserver\n{\n    void Update(string message);\n}\n\npublic class ConcreteObserver : IObserver\n{\n    private string _name;\n    \n    public ConcreteObserver(string name)\n    {\n        _name = name;\n    }\n    \n    public void Update(string message)\n    {\n        Console.WriteLine($\"{_name} notified of: {message}\");\n    }\n}\n\npublic class Subject\n{\n    private List<IObserver> _observers = new List<IObserver>();\n    private int _state;\n    \n    public void Attach(IObserver observer)\n    {\n        _observers.Add(observer);\n    }\n    \n    public void SetState(int state)\n    {\n        _state = state;\n        NotifyAllObservers();\n    }\n    \n    private void NotifyAllObservers()\n    {\n        foreach(var observer in _observers)\n        {\n            observer.Update($\"State changed to {_state}\");\n        }\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        Subject subject = new Subject();\n        \n        IObserver observer1 = new ConcreteObserver(\"Observer1\");\n        IObserver observer2 = new ConcreteObserver(\"Observer2\");\n        \n        subject.Attach(observer1);\n        subject.Attach(observer2);\n        \n        subject.SetState(10);\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "When configuring CORS in ASP.NET Core, which of the following statements is TRUE?",
+      "options": {
+        "A": "The 'AllowAnyOrigin()' and 'AllowCredentials()' methods can safely be used together",
+        "B": "CORS must be configured in both the ConfigureServices and Configure methods of Startup.cs",
+        "C": "Without CORS configuration, browsers will allow cross-origin requests by default",
+        "D": "The WithOrigins method accepts multiple domains but requires each to include the protocol (http:// or https://)"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Adapter Pattern implementation?",
+      "options": {
+        "A": "Legacy method called: Processing data...\nNew interface method executed using adapter",
+        "B": "Exception: Cannot convert legacy interface to new interface",
+        "C": "Processing data...\nProcessing data with adapter",
+        "D": "Legacy system: Processing data...\nModern system via adapter: Processing data..."
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\n// Legacy interface\npublic class LegacyService\n{\n    public void LegacyMethod(string data)\n    {\n        Console.WriteLine($\"Legacy method called: {data}\");\n    }\n}\n\n// New interface\npublic interface IModernInterface\n{\n    void ModernMethod();\n}\n\n// Adapter to make LegacyService compatible with IModernInterface\npublic class LegacyToModernAdapter : IModernInterface\n{\n    private readonly LegacyService _legacyService;\n    \n    public LegacyToModernAdapter(LegacyService legacyService)\n    {\n        _legacyService = legacyService;\n    }\n    \n    public void ModernMethod()\n    {\n        // Call the legacy method with adapted parameters\n        _legacyService.LegacyMethod(\"Processing data...\");\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        // Create the legacy service\n        LegacyService legacyService = new LegacyService();\n        \n        // Create the adapter\n        IModernInterface adapter = new LegacyToModernAdapter(legacyService);\n        \n        // Use the new interface\n        adapter.ModernMethod();\n        \n        Console.WriteLine(\"New interface method executed using adapter\");\n    }\n}"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the MAIN benefit of using the Repository Pattern in a .NET application?",
+      "options": {
+        "A": "It automatically implements caching for all database operations",
+        "B": "It ensures that all database queries execute in a separate thread",
+        "C": "It separates the business logic from the data access logic",
+        "D": "It optimizes SQL queries by generating efficient execution plans"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "Consider a table with 10 million records. Which of the following indexing strategies would be LEAST effective in SQL Server for improving query performance?",
+      "options": {
+        "A": "Creating a filtered index on a column where 95% of the values are unique",
+        "B": "Creating a covering index that includes all columns used in the query",
+        "C": "Creating a non-clustered index on a column with mostly NULL values",
+        "D": "Creating a clustered index on an auto-incrementing ID column"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Span<T> and Memory<T>?",
+      "options": {
+        "A": "Hello\nWorld",
+        "B": "Hello\nHello",
+        "C": "Hello\nrld",
+        "D": "Hello\nError: Cannot convert Memory<char> to Span<char>"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        string text = \"Hello World\";\n        \n        // Create a Span over the string\n        Span<char> span = text.AsSpan();\n        \n        // Get a slice of the first 5 characters\n        Span<char> firstWord = span.Slice(0, 5);\n        \n        // Print the first word\n        Console.WriteLine(new string(firstWord));\n        \n        // Create a Memory from the span\n        Memory<char> memory = text.AsMemory();\n        \n        // Get a slice of the last 3 characters\n        Memory<char> lastPart = memory.Slice(8, 3);\n        \n        // Convert Memory back to Span and print\n        Console.WriteLine(new string(lastPart.Span));\n    }\n}"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using CancellationToken?",
+      "options": {
+        "A": "Operation started\nOperation cancelled! (OperationCanceledException)",
+        "B": "Operation started\nOperation completed successfully",
+        "C": "Operation started\nDelay completed successfully\nOperation cancelled! (TaskCanceledException)",
+        "D": "Operation started\nDelay completed successfully\nOperation completed successfully"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static async Task Main()\n    {\n        // Create a cancellation token source with a timeout of 1 second\n        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(1));\n        var token = cts.Token;\n        \n        try\n        {\n            Console.WriteLine(\"Operation started\");\n            \n            // Start a task that takes longer than the timeout\n            await Task.Delay(TimeSpan.FromSeconds(5), token);\n            \n            Console.WriteLine(\"Delay completed successfully\");\n            Console.WriteLine(\"Operation completed successfully\");\n        }\n        catch (OperationCanceledException)\n        {\n            Console.WriteLine(\"Operation cancelled! (OperationCanceledException)\");\n        }\n        catch (TaskCanceledException)\n        {\n            Console.WriteLine(\"Operation cancelled! (TaskCanceledException)\");\n        }\n    }\n}"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating stack and heap allocation?",
+      "options": {
+        "A": "Point struct X: 5\nPoint struct Y: 5\nPoint class X: 5\nPoint class Y: 10",
+        "B": "Point struct X: 5\nPoint struct Y: 10\nPoint class X: 5\nPoint class Y: 10",
+        "C": "Point struct X: 5\nPoint struct Y: 10\nPoint class X: 5\nPoint class Y: 5",
+        "D": "Point struct X: 5\nPoint struct Y: 5\nPoint class X: 5\nPoint class Y: 5"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\n\n// Value type - allocated on the stack\npublic struct PointStruct\n{\n    public int X;\n    public int Y;\n}\n\n// Reference type - allocated on the heap\npublic class PointClass\n{\n    public int X;\n    public int Y;\n}\n\nclass Program\n{\n    static void Main()\n    {\n        // Create a struct instance (on stack)\n        PointStruct point1 = new PointStruct();\n        point1.X = 5;\n        point1.Y = 5;\n        \n        // Create a copy of the struct\n        PointStruct point2 = point1;\n        \n        // Modify the copy\n        point2.Y = 10;\n        \n        // Create a class instance (on heap)\n        PointClass point3 = new PointClass();\n        point3.X = 5;\n        point3.Y = 5;\n        \n        // Create a reference to the same instance\n        PointClass point4 = point3;\n        \n        // Modify through the reference\n        point4.Y = 10;\n        \n        Console.WriteLine($\"Point struct X: {point1.X}\");\n        Console.WriteLine($\"Point struct Y: {point1.Y}\");\n        Console.WriteLine($\"Point class X: {point3.X}\");\n        Console.WriteLine($\"Point class Y: {point3.Y}\");\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating string interning?",
+      "options": {
+        "A": "Equal references: True\nEqual references after intern: True",
+        "B": "Equal references: False\nEqual references after intern: True",
+        "C": "Equal references: False\nEqual references after intern: False",
+        "D": "Equal references: True\nEqual references after intern: False"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        // Create two separate string instances with the same content\n        string s1 = new string(new char[] { 'H', 'e', 'l', 'l', 'o' });\n        string s2 = new string(new char[] { 'H', 'e', 'l', 'l', 'o' });\n        \n        // Check if the references are equal\n        Console.WriteLine($\"Equal references: {ReferenceEquals(s1, s2)}\");\n        \n        // Intern the strings\n        string intern1 = string.Intern(s1);\n        string intern2 = string.Intern(s2);\n        \n        // Check if the interned references are equal\n        Console.WriteLine($\"Equal references after intern: {ReferenceEquals(intern1, intern2)}\");\n    }\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following Singleton Pattern implementation?",
+      "options": {
+        "A": "Instance ID: 1\nInstance ID: 2",
+        "B": "Instance ID: 1\nInstance ID: 1",
+        "C": "Instance ID: 1\nError: Cannot access private constructor",
+        "D": "Error: Singleton instance not initialized properly"
+      },
+      "correct_answer": "B",
+      "code_example": "using System;\n\npublic sealed class Singleton\n{\n    // Private static instance variable\n    private static readonly Singleton _instance = new Singleton();\n    \n    // Property with a unique ID to identify the instance\n    public int InstanceId { get; }\n    \n    // Private constructor so it can't be instantiated from outside\n    private Singleton()\n    {\n        InstanceId = 1; // Just for demonstration purposes\n    }\n    \n    // Public accessor for the instance\n    public static Singleton Instance\n    {\n        get { return _instance; }\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        // Get the singleton instance twice\n        Singleton instance1 = Singleton.Instance;\n        Singleton instance2 = Singleton.Instance;\n        \n        // Print the instance IDs to verify they are the same instance\n        Console.WriteLine($\"Instance ID: {instance1.InstanceId}\");\n        Console.WriteLine($\"Instance ID: {instance2.InstanceId}\");\n    }\n}"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "Which HTTP status code is MOST appropriate for an API endpoint that temporarily cannot process a valid request due to server overload?",
+      "options": {
+        "A": "429 Too Many Requests",
+        "B": "503 Service Unavailable",
+        "C": "502 Bad Gateway",
+        "D": "500 Internal Server Error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "Which of the following RabbitMQ exchange types would be MOST appropriate for distributing tasks among multiple workers where each task should only be processed once?",
+      "options": {
+        "A": "Fanout Exchange",
+        "B": "Topic Exchange",
+        "C": "Direct Exchange",
+        "D": "Headers Exchange"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using P/Invoke (DllImport)?",
+      "options": {
+        "A": "Window title: Untitled - Notepad",
+        "B": "Window title: (null)",
+        "C": "Window title: Error: 0x80004005",
+        "D": "System.DllNotFoundException will be thrown"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Runtime.InteropServices;\nusing System.Text;\n\nclass Program\n{\n    // Import GetWindowText and GetForegroundWindow from user32.dll\n    [DllImport(\"user32.dll\", CharSet = CharSet.Auto)]\n    private static extern int GetWindowTextLength(IntPtr hWnd);\n    \n    [DllImport(\"user32.dll\", CharSet = CharSet.Auto)]\n    private static extern int GetWindowText(IntPtr hWnd, StringBuilder lpString, int nMaxCount);\n    \n    [DllImport(\"user32.dll\")]\n    private static extern IntPtr GetForegroundWindow();\n    \n    static void Main()\n    {\n        // Get handle to foreground window\n        IntPtr handle = GetForegroundWindow();\n        \n        // Get the length of the window title\n        int length = GetWindowTextLength(handle);\n        \n        if (length > 0)\n        {\n            // Create a StringBuilder of the right size\n            StringBuilder title = new StringBuilder(length + 1);\n            \n            // Get the window title\n            GetWindowText(handle, title, title.Capacity);\n            \n            // Print the window title\n            Console.WriteLine($\"Window title: {title}\");\n        }\n        else\n        {\n            Console.WriteLine(\"Window title: (null)\");\n        }\n    }\n}"
+    }
+  ]
+}
