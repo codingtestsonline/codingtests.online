@@ -1,0 +1,649 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "async/await",
+      "question": "What will be the output of the following code?",
+      "code_example": "async function example() {\n  return 'Hello';\n}\n\nconst result = example();\nconsole.log(result);",
+      "options": {
+        "A": "'Hello'",
+        "B": "Promise { 'Hello' }",
+        "C": "undefined",
+        "D": "Error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "Object destructuring",
+      "question": "What will be the output of the following code?",
+      "code_example": "const person = {\n  name: 'John',\n  age: 30\n};\n\nconst { name, height = 175 } = person;\nconsole.log(height);",
+      "options": {
+        "A": "undefined",
+        "B": "null",
+        "C": "175",
+        "D": "Error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "Primitive types",
+      "question": "Which of the following is NOT a primitive type in JavaScript?",
+      "options": {
+        "A": "string",
+        "B": "symbol",
+        "C": "array",
+        "D": "bigint"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "let vs. const vs. var",
+      "question": "What will be the output of the following code?",
+      "code_example": "var x = 1;\nif (true) {\n  let x = 2;\n  console.log(x);\n}\nconsole.log(x);",
+      "options": {
+        "A": "2, 2",
+        "B": "2, 1",
+        "C": "1, 1",
+        "D": "1, 2"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "Implicit type conversion",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log('5' == 5);\nconsole.log('5' === 5);",
+      "options": {
+        "A": "true, true",
+        "B": "false, false",
+        "C": "true, false",
+        "D": "false, true"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "Higher-order functions",
+      "question": "What will be the output of the following code?",
+      "code_example": "const numbers = [1, 4, 9];\nconst roots = numbers.map(Math.sqrt);\nconsole.log(roots);",
+      "options": {
+        "A": "[1, 2, 3]",
+        "B": "[1, 4, 9]",
+        "C": "[1, 16, 81]",
+        "D": "Error"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "Basic HTTP server",
+      "question": "Which of the following correctly creates a basic HTTP server in Node.js that responds with 'Hello World'?",
+      "options": {
+        "A": "const http = require('http');\nhttp.createServer((req, res) => {\n  res.end('Hello World');\n}).listen(3000);",
+        "B": "const http = require('http');\nhttp.createServer((req, res) => {\n  res.send('Hello World');\n}).listen(3000);",
+        "C": "const express = require('express');\nconst app = express();\napp.get('/', (req, res) => {\n  res.end('Hello World');\n});\napp.listen(3000);",
+        "D": "const server = require('server');\nserver.create((req, res) => {\n  res.write('Hello World');\n}).listen(3000);"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "Reference types",
+      "question": "What will be the output of the following code?",
+      "code_example": "const arr1 = [1, 2, 3];\nconst arr2 = arr1;\narr1.push(4);\nconsole.log(arr2);",
+      "options": {
+        "A": "[1, 2, 3]",
+        "B": "[1, 2, 3, 4]",
+        "C": "[4, 1, 2, 3]",
+        "D": "Error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Ternary operators",
+      "question": "What will be the output of the following code?",
+      "code_example": "let x = 10;\nlet result = x > 5 ? x < 15 ? 'Between 5 and 15' : 'Greater than 15' : 'Less than 5';\nconsole.log(result);",
+      "options": {
+        "A": "Less than 5",
+        "B": "Greater than 15",
+        "C": "Between 5 and 15",
+        "D": "Error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "Comparison operators",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(null == undefined);\nconsole.log(null === undefined);",
+      "options": {
+        "A": "true, true",
+        "B": "false, false",
+        "C": "true, false",
+        "D": "false, true"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "package.json",
+      "question": "Which of the following fields in package.json is used to specify the entry point of a Node.js application?",
+      "options": {
+        "A": "entry",
+        "B": "start",
+        "C": "main",
+        "D": "app"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "break and continue statements",
+      "question": "What will be the output of the following code?",
+      "code_example": "let result = 0;\nfor (let i = 0; i < 5; i++) {\n  if (i === 2) continue;\n  if (i === 4) break;\n  result += i;\n}\nconsole.log(result);",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "6",
+        "D": "10"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "Event propagation",
+      "question": "Which method is used to prevent an event from bubbling up the DOM tree?",
+      "options": {
+        "A": "event.preventDefault()",
+        "B": "event.stopBubble()",
+        "C": "event.stopPropagation()",
+        "D": "event.cancelBubble()"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "Default parameters",
+      "question": "What will be the output of the following code?",
+      "code_example": "function multiply(a, b = 2) {\n  return a * b;\n}\nconsole.log(multiply(5));\nconsole.log(multiply(5, undefined));",
+      "options": {
+        "A": "10, NaN",
+        "B": "10, 10",
+        "C": "5, 10",
+        "D": "Error"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "if-else, switch-case",
+      "question": "What will be the output of the following code?",
+      "code_example": "const fruit = 'Apple';\nswitch (fruit) {\n  case 'apple':\n    console.log('Red fruit');\n    break;\n  case 'banana':\n    console.log('Yellow fruit');\n    break;\n  default:\n    console.log('Unknown fruit');\n}",
+      "options": {
+        "A": "Red fruit",
+        "B": "Yellow fruit",
+        "C": "Unknown fruit",
+        "D": "No output"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "Node.js vs. browser JavaScript",
+      "question": "Which of the following is available in Node.js but NOT in browser JavaScript?",
+      "options": {
+        "A": "setTimeout",
+        "B": "console.log",
+        "C": "fetch",
+        "D": "fs module"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Middleware",
+      "question": "What will be the output of the following Express.js code?",
+      "code_example": "const express = require('express');\nconst app = express();\n\napp.use((req, res, next) => {\n  console.log('Middleware 1');\n  next();\n});\n\napp.use((req, res, next) => {\n  console.log('Middleware 2');\n  res.send('Hello');\n});\n\napp.use((req, res, next) => {\n  console.log('Middleware 3');\n  next();\n});",
+      "options": {
+        "A": "Middleware 1, Middleware 2, Middleware 3",
+        "B": "Middleware 1, Middleware 2",
+        "C": "Middleware 1, Middleware 3",
+        "D": "Middleware 1, Middleware 2, Hello"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "Sending JSON responses",
+      "question": "What is wrong with the following Express.js code?",
+      "code_example": "app.get('/api/users', (req, res) => {\n  const users = getUsers();\n  res.json(users);\n  res.status(200);\n});",
+      "options": {
+        "A": "Nothing is wrong",
+        "B": "res.json() cannot be used with user objects",
+        "C": "res.status(200) should come before res.json()",
+        "D": "getUsers() is not defined"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "Optional chaining",
+      "question": "What will be the output of the following code?",
+      "code_example": "const user = {\n  profile: {\n    name: 'John'\n  }\n};\n\nconst admin = {\n  profile: null\n};\n\nconsole.log(user.profile?.name);\nconsole.log(admin.profile?.name);",
+      "options": {
+        "A": "John, null",
+        "B": "John, undefined",
+        "C": "John, Error",
+        "D": "undefined, undefined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "CRUD operations",
+      "question": "Which MongoDB operation would be equivalent to the SQL UPDATE statement?",
+      "options": {
+        "A": "insertOne()",
+        "B": "findOne()",
+        "C": "updateOne()",
+        "D": "replaceOne()"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "Creating a simple Express server",
+      "question": "What will be the output when a GET request is made to '/hello/world' with the following Express.js code?",
+      "code_example": "const express = require('express');\nconst app = express();\n\napp.get('/hello/:name', (req, res) => {\n  res.send(`Hello ${req.params.name}`);\n});\n\napp.listen(3000);",
+      "options": {
+        "A": "Hello world",
+        "B": "Hello :name",
+        "C": "Error",
+        "D": "Hello undefined"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "Destructuring",
+      "question": "What will be the output of the following code?",
+      "code_example": "const person = {\n  name: 'John',\n  age: 30,\n  address: {\n    city: 'New York',\n    country: 'USA'\n  }\n};\n\nconst { name, address: { city } } = person;\nconsole.log(name, city, address);",
+      "options": {
+        "A": "John New York { city: 'New York', country: 'USA' }",
+        "B": "John New York undefined",
+        "C": "John New York ReferenceError",
+        "D": "undefined undefined ReferenceError"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "JavaScript inheritance",
+      "question": "What is the key difference between classical inheritance in languages like Java and prototypal inheritance in JavaScript?",
+      "options": {
+        "A": "JavaScript doesn't support inheritance",
+        "B": "In JavaScript, objects inherit directly from other objects without using classes",
+        "C": "JavaScript inheritance is always synchronous, while classical inheritance can be asynchronous",
+        "D": "JavaScript inheritance only works with primitive types"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "Pure functions & immutability",
+      "question": "Which of the following is a pure function?",
+      "code_example": "// Function A\nfunction add(a, b) {\n  return a + b;\n}\n\n// Function B\nlet total = 0;\nfunction addToTotal(value) {\n  total += value;\n  return total;\n}\n\n// Function C\nfunction getRandomNumber() {\n  return Math.random();\n}\n\n// Function D\nfunction transformArray(arr) {\n  arr.push(10);\n  return arr;\n}",
+      "options": {
+        "A": "Function A",
+        "B": "Function B",
+        "C": "Function C",
+        "D": "Function D"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Handling form data",
+      "question": "Which middleware is needed to parse form data submitted with content-type 'application/x-www-form-urlencoded' in Express.js?",
+      "options": {
+        "A": "express.json()",
+        "B": "express.urlencoded({ extended: true })",
+        "C": "express.form()",
+        "D": "express.parser()"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "First-class functions",
+      "question": "What will be the output of the following code?",
+      "code_example": "function createMultiplier(factor) {\n  return function(number) {\n    return number * factor;\n  };\n}\n\nconst double = createMultiplier(2);\nconst triple = createMultiplier(3);\n\nconsole.log(double(5) + triple(10));",
+      "options": {
+        "A": "10",
+        "B": "15",
+        "C": "40",
+        "D": "50"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "Compression",
+      "question": "What is the primary purpose of using the compression middleware in Express.js?",
+      "options": {
+        "A": "To compress uploaded files",
+        "B": "To compress JavaScript code for faster execution",
+        "C": "To compress response bodies for faster transmission",
+        "D": "To compress database queries for better performance"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "JavaScript Event Loop",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log('Start');\n\nsetTimeout(() => {\n  console.log('Timeout');\n}, 0);\n\nPromise.resolve().then(() => {\n  console.log('Promise');\n});\n\nconsole.log('End');",
+      "options": {
+        "A": "Start, End, Timeout, Promise",
+        "B": "Start, End, Promise, Timeout",
+        "C": "Start, Promise, End, Timeout",
+        "D": "Start, Timeout, Promise, End"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "Creating a REST API",
+      "question": "Which HTTP method should typically be used for an API endpoint that updates an existing resource?",
+      "options": {
+        "A": "GET",
+        "B": "POST",
+        "C": "PUT",
+        "D": "DELETE"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Streaming files",
+      "question": "What will be the result of the following Node.js code?",
+      "code_example": "const fs = require('fs');\nconst http = require('http');\n\nhttp.createServer((req, res) => {\n  const fileStream = fs.createReadStream('large-file.txt');\n  fileStream.pipe(res);\n}).listen(3000);",
+      "options": {
+        "A": "The server will error because createReadStream isn't a valid method",
+        "B": "The server will serve the entire file at once, potentially using a lot of memory",
+        "C": "The server will stream the file in chunks, efficiently handling memory usage",
+        "D": "The server will download the file to a temporary location before serving it"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "Authentication",
+      "question": "What is a JWT (JSON Web Token) typically composed of?",
+      "options": {
+        "A": "Header, Body, Encryption Key",
+        "B": "Header, Payload, Signature",
+        "C": "Authorization, Body, Credentials",
+        "D": "Header, Metadata, Footer"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "Event Emitter pattern",
+      "question": "What will be the output of the following code?",
+      "code_example": "const EventEmitter = require('events');\nconst myEmitter = new EventEmitter();\n\nmyEmitter.on('event', () => {\n  console.log('First listener');\n});\n\nmyEmitter.on('event', () => {\n  console.log('Second listener');\n});\n\nmyEmitter.emit('event');",
+      "options": {
+        "A": "First listener",
+        "B": "Second listener",
+        "C": "First listener, Second listener",
+        "D": "No output"
+      },
+      "correct_answer": "C"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What will the following code output when implementing custom event listeners?",
+      "options": {
+        "A": "EventEmitter is not a constructor",
+        "B": "'Database connected' followed by 'Query executed'",
+        "C": "'Query executed' followed by 'Database connected'",
+        "D": "Nothing, as the event listener is not registered correctly"
+      },
+      "correct_answer": "B",
+      "code_example": "const EventEmitter = require('events');\n\nclass Database extends EventEmitter {\n  connect() {\n    // Simulating async connection\n    setTimeout(() => {\n      this.emit('connected');\n    }, 100);\n  }\n  \n  query() {\n    // Simulating query execution\n    setTimeout(() => {\n      this.emit('query_complete');\n    }, 200);\n  }\n}\n\nconst db = new Database();\n\ndb.on('connected', () => {\n  console.log('Database connected');\n  db.query();\n});\n\ndb.on('query_complete', () => {\n  console.log('Query executed');\n});\n\ndb.connect();"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "When implementing Winston logging in a Node.js application, which of the following statements is true?",
+      "options": {
+        "A": "Winston cannot write to multiple destinations simultaneously",
+        "B": "Custom log levels can only be defined by extending the Winston class",
+        "C": "Winston's default log levels are prioritized from 0 (most important) to 5 (least important)",
+        "D": "When using Winston with Express, middleware must be applied before route handlers for proper error logging"
+      },
+      "correct_answer": "D",
+      "code_example": ""
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "What will the following code output when dealing with memory allocation in JavaScript?",
+      "options": {
+        "A": "true true true",
+        "B": "true false false",
+        "C": "false true true", 
+        "D": "true true false"
+      },
+      "correct_answer": "B",
+      "code_example": "let obj1 = { name: 'Object 1' };\nlet obj2 = { name: 'Object 2' };\nlet obj3 = obj1;\n\nconsole.log(obj1 === obj3, obj1 === obj2, obj2 === obj3);"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What is the key difference between horizontal and vertical scaling in Node.js applications?",
+      "options": {
+        "A": "Horizontal scaling uses multiple CPU cores while vertical scaling uses multiple servers",
+        "B": "Horizontal scaling adds more machines to your pool of resources while vertical scaling adds more power to existing machines",
+        "C": "Horizontal scaling is cheaper but less efficient than vertical scaling in all scenarios",
+        "D": "Vertical scaling is the only option for applications using the Node.js cluster module"
+      },
+      "correct_answer": "B",
+      "code_example": ""
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "What will the following code output when dealing with Node.js streams for reading large files?",
+      "options": {
+        "A": "It will read and process the entire file at once, potentially causing memory issues",
+        "B": "It will log 'Processing chunk: [chunk data]' for each chunk, then 'Done processing'",
+        "C": "It will throw an error because the 'data' event handler is missing",
+        "D": "It will log 'Processing chunk: [chunk data]' for each chunk, but never log 'Done processing'"
+      },
+      "correct_answer": "B",
+      "code_example": "const fs = require('fs');\nconst readStream = fs.createReadStream('large-file.txt', { highWaterMark: 64 * 1024 });\n\nreadStream.on('data', (chunk) => {\n  console.log(`Processing chunk: ${chunk.length} bytes`);\n});\n\nreadStream.on('end', () => {\n  console.log('Done processing');\n});\n\nreadStream.on('error', (err) => {\n  console.error('Error reading file:', err);\n});"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "When implementing OAuth flow with PKCE (Proof Key for Code Exchange), which of the following is NOT a required step?",
+      "options": {
+        "A": "Generating a code verifier",
+        "B": "Creating a code challenge from the code verifier",
+        "C": "Sending the code verifier to the authorization server in the initial request",
+        "D": "Sending the code verifier when exchanging the authorization code for tokens"
+      },
+      "correct_answer": "C",
+      "code_example": ""
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code demonstrating hidden classes and inline caching in V8?",
+      "options": {
+        "A": "First: 15ms, Second: 5ms",
+        "B": "First: 5ms, Second: 15ms",
+        "C": "First and Second will have nearly identical times",
+        "D": "Error: Cannot read property 'now' of undefined"
+      },
+      "correct_answer": "A",
+      "code_example": "function runTest(testName, createObjects) {\n  const startTime = performance.now();\n  \n  for (let i = 0; i < 100000; i++) {\n    createObjects();\n  }\n  \n  const endTime = performance.now();\n  console.log(`${testName}: ${Math.round(endTime - startTime)}ms`);\n}\n\n// Test with inconsistent property order (breaks hidden classes)\nrunTest('First', function() {\n  const obj = {};\n  obj.x = 1;\n  obj.y = 2;\n  obj.z = obj.x + obj.y;\n});\n\n// Test with consistent property order (maintains hidden classes)\nrunTest('Second', function() {\n  const obj = { x: 1, y: 2 };\n  obj.z = obj.x + obj.y;\n});"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What security header should be set to prevent browsers from MIME-sniffing responses away from the declared content-type?",
+      "options": {
+        "A": "X-Content-Type-Options: nosniff",
+        "B": "Content-Security-Policy: no-transform",
+        "C": "X-Frame-Options: DENY",
+        "D": "Referrer-Policy: no-referrer"
+      },
+      "correct_answer": "A",
+      "code_example": ""
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "What will the following code output when implementing WebSockets with socket.io?",
+      "options": {
+        "A": "Server will emit 'chat message' events but clients won't receive them",
+        "B": "Clients will receive messages from the server, but not from other clients",
+        "C": "Clients will receive all messages, including their own messages",
+        "D": "Clients will receive messages from other clients, but not their own messages"
+      },
+      "correct_answer": "C",
+      "code_example": "// Server side\nconst io = require('socket.io')(httpServer);\n\nio.on('connection', (socket) => {\n  console.log('a user connected');\n  \n  socket.on('chat message', (msg) => {\n    io.emit('chat message', msg);\n  });\n  \n  socket.on('disconnect', () => {\n    console.log('user disconnected');\n  });\n});\n\n// Client side\nconst socket = io();\n\n// Send message\ndocument.getElementById('send-btn').addEventListener('click', () => {\n  const messageInput = document.getElementById('message-input');\n  socket.emit('chat message', messageInput.value);\n  messageInput.value = '';\n});\n\n// Receive message\nsocket.on('chat message', (msg) => {\n  const messagesDiv = document.getElementById('messages');\n  const messageElement = document.createElement('div');\n  messageElement.textContent = msg;\n  messagesDiv.appendChild(messageElement);\n});"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code which demonstrates how to prevent memory leaks in event listeners?",
+      "options": {
+        "A": "Memory leak detected: too many listeners",
+        "B": "Listener count: 1",
+        "C": "Listener count: 11", 
+        "D": "Listener count: 10"
+      },
+      "correct_answer": "D",
+      "code_example": "const EventEmitter = require('events');\nconst emitter = new EventEmitter();\n\n// Set the maximum number of listeners to avoid warnings\nemitter.setMaxListeners(10);\n\nfunction createListeners() {\n  // Create 10 listeners\n  for (let i = 0; i < 10; i++) {\n    const listener = () => {\n      console.log(`Listener ${i} executed`);\n    };\n    \n    emitter.on('event', listener);\n  }\n}\n\ncreateListeners();\n\n// Check how many listeners we have\nconsole.log(`Listener count: ${emitter.listenerCount('event')}`);"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "Which of the following is NOT a benefit of Just-In-Time (JIT) compilation in JavaScript engines?",
+      "options": {
+        "A": "Improved execution speed for hot code paths",
+        "B": "Reduces memory consumption by optimizing code representation",
+        "C": "Enables runtime optimization based on execution patterns",
+        "D": "Eliminates the need for garbage collection"
+      },
+      "correct_answer": "D",
+      "code_example": ""
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will the following code output when implementing parallel processing in Node.js?",
+      "options": {
+        "A": "Tasks are processed in parallel, with all console.logs appearing in a random order",
+        "B": "Tasks are processed sequentially, with console.logs appearing in order from 1 to 4",
+        "C": "The main thread will be blocked until all worker tasks complete",
+        "D": "Worker threads will start but the process will exit before they complete"
+      },
+      "correct_answer": "A",
+      "code_example": "const { Worker, isMainThread, parentPort, workerData } = require('worker_threads');\n\nif (isMainThread) {\n  // This code runs in the main thread\n  \n  // Create and start 4 workers\n  for (let i = 1; i <= 4; i++) {\n    const worker = new Worker(__filename, {\n      workerData: { taskId: i }\n    });\n    \n    worker.on('message', (result) => {\n      console.log(`Task ${result.taskId} completed with result: ${result.output}`);\n    });\n    \n    worker.on('error', (err) => {\n      console.error(`Worker error: ${err}`);\n    });\n  }\n  \n} else {\n  // This code runs in worker threads\n  \n  // Simulate CPU-intensive task\n  const taskId = workerData.taskId;\n  let result = 0;\n  \n  // Different processing times based on task ID\n  const iterations = taskId * 1000000;\n  \n  for (let i = 0; i < iterations; i++) {\n    result += i;\n  }\n  \n  // Send result back to main thread\n  parentPort.postMessage({ taskId, output: result });\n}"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "When setting up a CI/CD pipeline for a Node.js application, which of the following is NOT typically included in the pipeline stages?",
+      "options": {
+        "A": "Unit and integration testing",
+        "B": "Static code analysis and linting",
+        "C": "Manual approval for all commits, including non-production environments",
+        "D": "Building and tagging Docker images"
+      },
+      "correct_answer": "C",
+      "code_example": ""
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will the following code output when dealing with access tokens and refresh tokens?",
+      "options": {
+        "A": "Generated new access token",
+        "B": "Access token still valid",
+        "C": "Error: Cannot verify token",
+        "D": "Error: Refresh token expired"
+      },
+      "correct_answer": "A",
+      "code_example": "const jwt = require('jsonwebtoken');\nconst secretKey = 'your-secret-key';\n\n// Token management functions\nfunction isTokenExpired(token) {\n  try {\n    const decoded = jwt.decode(token);\n    const currentTime = Math.floor(Date.now() / 1000);\n    return decoded.exp < currentTime;\n  } catch (error) {\n    return true; // If error in decoding, consider token expired\n  }\n}\n\nfunction refreshAccessToken(refreshToken) {\n  try {\n    // Verify refresh token\n    const decoded = jwt.verify(refreshToken, secretKey);\n    \n    // Generate new access token\n    const newAccessToken = jwt.sign(\n      { userId: decoded.userId },\n      secretKey,\n      { expiresIn: '15m' }\n    );\n    \n    return { success: true, accessToken: newAccessToken };\n  } catch (error) {\n    return { success: false, error: 'Invalid refresh token' };\n  }\n}\n\n// Create expired access token for testing\nconst userId = 123;\nconst accessToken = jwt.sign(\n  { userId, exp: Math.floor(Date.now() / 1000) - 60 }, // Expired 1 minute ago\n  secretKey\n);\n\n// Create valid refresh token\nconst refreshToken = jwt.sign(\n  { userId },\n  secretKey,\n  { expiresIn: '7d' }\n);\n\n// Check if access token is expired and refresh if needed\nif (isTokenExpired(accessToken)) {\n  const result = refreshAccessToken(refreshToken);\n  if (result.success) {\n    console.log('Generated new access token');\n  } else {\n    console.log('Error: ' + result.error);\n  }\n} else {\n  console.log('Access token still valid');\n}"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "When configuring load balancing with PM2 for a Node.js application, which mode provides the best performance for CPU-bound applications?",
+      "options": {
+        "A": "Fork mode",
+        "B": "Cluster mode",
+        "C": "Server mode",
+        "D": "Executive mode"
+      },
+      "correct_answer": "B",
+      "code_example": ""
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What will the following code output regarding JavaScript memory allocation?",
+      "options": {
+        "A": "Memory Used: approximately 100 MB",
+        "B": "Memory Used: approximately 200 MB", 
+        "C": "RangeError: Array buffer allocation failed",
+        "D": "Memory Used: approximately 10 MB"
+      },
+      "correct_answer": "B",
+      "code_example": "function allocateMemory() {\n  // Allocate a large array (approximately 100MB)\n  const bytes = 100 * 1024 * 1024;\n  const arr1 = new Uint8Array(bytes);\n  \n  // Fill with some data to ensure it's actually allocated\n  for (let i = 0; i < bytes; i += 1024) {\n    arr1[i] = i % 256;\n  }\n  \n  // Allocate another array (approximately 100MB more)\n  const arr2 = new Uint8Array(bytes);\n  for (let i = 0; i < bytes; i += 1024) {\n    arr2[i] = i % 256;\n  }\n  \n  // Force references to stay alive\n  return { arr1, arr2 };\n}\n\nconst memoryObjects = allocateMemory();\n\n// Estimate memory usage in MB\nconst memoryUsedMB = process.memoryUsage().heapUsed / (1024 * 1024);\nconsole.log(`Memory Used: approximately ${Math.round(memoryUsedMB)} MB`);"
+    }
+  ]
+}
