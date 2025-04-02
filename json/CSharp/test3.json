@@ -1,0 +1,607 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using string interpolation?",
+      "code_example": "string name = \"John\";\nint age = 25;\nConsole.WriteLine($\"{name} is {age} years old.\");",
+      "options": {
+        "A": "\"name is age years old.\"",
+        "B": "\"John is 25 years old.\"",
+        "C": "\"John is {age} years old.\"",
+        "D": "\"{name} is 25 years old.\""
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the key difference between 'ref' and 'out' parameters in C#?",
+      "options": {
+        "A": "Both require the variable to be initialized, but only 'ref' allows passing the initial value to the method",
+        "B": "Both allow passing the initial value to the method, but only 'ref' requires the variable to be initialized",
+        "C": "'ref' parameters must be assigned a value inside the method, while 'out' parameters are optional",
+        "D": "'out' parameters must be assigned a value inside the method, while 'ref' parameters are optional"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using the null-coalescing operator?",
+      "code_example": "string name = null;\nstring displayName = name ?? \"Guest\";\nConsole.WriteLine(displayName);",
+      "options": {
+        "A": "null",
+        "B": "\"Guest\"",
+        "C": "\"\"",
+        "D": "An exception will be thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What is the primary purpose of the 'this' keyword in C#?",
+      "options": {
+        "A": "To refer to the base class of the current instance",
+        "B": "To refer to the current instance of the class",
+        "C": "To refer to the static members of the class",
+        "D": "To refer to the global namespace"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following LINQ code?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar result = numbers.Where(n => n > 2).Select(n => n * 2).OrderByDescending(n => n);\nforeach (var num in result)\n{\n    Console.Write(num + \" \");\n}",
+      "options": {
+        "A": "3 4 5",
+        "B": "6 8 10",
+        "C": "10 8 6",
+        "D": "6 8"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Which access modifier allows a class member to be accessed from any other code in the same assembly or from within a derived class in another assembly?",
+      "options": {
+        "A": "private",
+        "B": "protected",
+        "C": "protected internal",
+        "D": "internal"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using a jagged array?",
+      "code_example": "int[][] jaggedArray = new int[3][];\njaggedArray[0] = new int[] { 1, 2 };\njaggedArray[1] = new int[] { 3, 4, 5 };\njaggedArray[2] = new int[] { 6 };\nConsole.WriteLine(jaggedArray[1][2]);",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "IndexOutOfRangeException will be thrown"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a key feature of cross-platform development in .NET?",
+      "options": {
+        "A": "The ability to run the same code on Windows, Linux, and macOS",
+        "B": "The availability of platform-specific APIs through conditional compilation",
+        "C": "Native support for Windows Forms across all platforms",
+        "D": "Support for containerization with Docker"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using value types?",
+      "code_example": "struct Point\n{\n    public int X;\n    public int Y;\n}\n\nPoint p1 = new Point { X = 10, Y = 20 };\nPoint p2 = p1;\np2.X = 30;\nConsole.WriteLine($\"p1.X = {p1.X}, p2.X = {p2.X}\");",
+      "options": {
+        "A": "p1.X = 10, p2.X = 10",
+        "B": "p1.X = 30, p2.X = 30",
+        "C": "p1.X = 10, p2.X = 30",
+        "D": "p1.X = 30, p2.X = 10"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What is the correct way to check if a file exists and create a directory if it doesn't exist?",
+      "code_example": "string filePath = @\"C:\\Data\\report.txt\";\nstring directoryPath = Path.GetDirectoryName(filePath);\n\nif (!Directory.Exists(directoryPath))\n{\n    Directory.CreateDirectory(directoryPath);\n}\n\nif (!File.Exists(filePath))\n{\n    using (File.Create(filePath)) { }\n}",
+      "options": {
+        "A": "The code will throw an exception if the directory doesn't exist",
+        "B": "The code will create the directory but not the file",
+        "C": "The code will create both the directory and the file if they don't exist",
+        "D": "The code will only work on Windows, not on Linux or macOS"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using different loop structures?",
+      "code_example": "int i = 0;\ndo\n{\n    if (i > 5)\n        break;\n    i++;\n} while (i < 10);\n\nfor (int j = i; j < 10; j++)\n{\n    i++;\n}\n\nConsole.WriteLine(i);",
+      "options": {
+        "A": "6",
+        "B": "9",
+        "C": "10",
+        "D": "12"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using StreamReader and StreamWriter?",
+      "code_example": "string filePath = \"test.txt\";\n\nusing (StreamWriter writer = new StreamWriter(filePath))\n{\n    writer.WriteLine(\"Line 1\");\n    writer.WriteLine(\"Line 2\");\n}\n\nusing (StreamReader reader = new StreamReader(filePath))\n{\n    string content = reader.ReadToEnd();\n    Console.WriteLine(content.Split('\\n').Length);    \n}",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a key difference between .NET Framework and .NET 5+?",
+      "options": {
+        "A": ".NET 5+ provides better cross-platform support",
+        "B": ".NET 5+ has improved performance compared to .NET Framework",
+        "C": ".NET 5+ includes WPF and Windows Forms",
+        "D": ".NET Framework only runs on Windows operating systems"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code using C# properties?",
+      "code_example": "class Person\n{\n    private string _name;\n    public string Name\n    {\n        get { return _name ?? \"Unnamed\"; }\n        set { _name = value; }\n    }\n}\n\nvar person = new Person();\nConsole.WriteLine(person.Name);",
+      "options": {
+        "A": "\"\"",
+        "B": "null",
+        "C": "\"Unnamed\"",
+        "D": "A NullReferenceException will be thrown"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What is the primary benefit of using the 'using' statement for resource management in C#?",
+      "options": {
+        "A": "It improves the performance of the application",
+        "B": "It automatically disposes of unmanaged resources when they are no longer needed",
+        "C": "It reduces the amount of code required to handle exceptions",
+        "D": "It ensures thread safety for shared resources"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code with single-dimensional arrays?",
+      "code_example": "int[] numbers = new int[5];\nfor (int i = 0; i < numbers.Length; i++)\n{\n    numbers[i] = i * 2;\n}\n\nint sum = 0;\nforeach (int number in numbers)\n{\n    sum += number;\n}\n\nConsole.WriteLine(sum);",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "25",
+        "D": "30"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that uses base class initialization?",
+      "code_example": "class Base\n{\n    public Base()\n    {\n        Console.Write(\"A\");\n    }\n    \n    public Base(int x)\n    {\n        Console.Write(\"B\" + x);\n    }\n}\n\nclass Derived : Base\n{\n    public Derived() : base(5)\n    {\n        Console.Write(\"C\");\n    }\n    \n    public Derived(int x) : base()\n    {\n        Console.Write(\"D\" + x);\n    }\n}\n\nvar obj = new Derived(3);",
+      "options": {
+        "A": "AD3",
+        "B": "B5C",
+        "C": "AC",
+        "D": "B5D3"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that demonstrates event subscription?",
+      "code_example": "class Publisher\n{\n    public event EventHandler DataChanged;\n    \n    public void RaiseEvent()\n    {\n        DataChanged?.Invoke(this, EventArgs.Empty);\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        Publisher publisher = new Publisher();\n        int count = 0;\n        \n        EventHandler handler = (sender, e) => count++;\n        \n        publisher.DataChanged += handler;\n        publisher.RaiseEvent();\n        \n        publisher.DataChanged += handler;\n        publisher.RaiseEvent();\n        \n        publisher.DataChanged -= handler;\n        publisher.RaiseEvent();\n        \n        Console.Write(count);\n    }\n}",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What is the correct way to declare an event in C# that follows the standard .NET event pattern?",
+      "options": {
+        "A": "public delegate void MyEventHandler();\npublic MyEventHandler MyEvent;",
+        "B": "public event Action MyEvent;",
+        "C": "public event EventHandler<EventArgs> MyEvent;",
+        "D": "public event Func<object, EventArgs, bool> MyEvent;"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "Which of the following statements about .NET Garbage Collection generations is FALSE?",
+      "options": {
+        "A": "Generation 0 is where new objects are allocated",
+        "B": "Objects surviving a Generation 0 collection are promoted to Generation 1",
+        "C": "The Garbage Collector always collects all generations in sequence (0, 1, then 2)",
+        "D": "Large objects (>85KB) are allocated directly on the Large Object Heap"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using Parallel.ForEach?",
+      "code_example": "using System;\nusing System.Collections.Concurrent;\nusing System.Collections.Generic;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static void Main()\n    {\n        var numbers = new List<int> { 1, 2, 3, 4, 5 };\n        var results = new ConcurrentBag<int>();\n        \n        Parallel.ForEach(numbers, num =>\n        {\n            results.Add(num * num);\n        });\n        \n        int sum = 0;\n        foreach (var result in results)\n        {\n            sum += result;\n        }\n        \n        Console.WriteLine(sum);\n    }\n}",
+      "options": {
+        "A": "15",
+        "B": "25",
+        "C": "55",
+        "D": "The result is non-deterministic"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "Which of the following is a key difference between List<T> and LinkedList<T> in C#?",
+      "options": {
+        "A": "List<T> provides O(1) insertion at any position, while LinkedList<T> provides O(n) insertion",
+        "B": "LinkedList<T> provides O(1) insertion at the beginning and end, while List<T> provides O(1) insertion only at the end",
+        "C": "List<T> supports indexing, while LinkedList<T> does not",
+        "D": "LinkedList<T> is thread-safe, while List<T> is not"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "What will happen if the following model binding code is executed in an ASP.NET Core application?",
+      "code_example": "public class UserViewModel\n{\n    [Required]\n    public string Username { get; set; }\n    \n    [Range(18, 100)]\n    public int Age { get; set; }\n}\n\n[HttpPost]\npublic IActionResult Register(UserViewModel model)\n{\n    if (ModelState.IsValid)\n    {\n        // Save user\n        return RedirectToAction(\"Success\");\n    }\n    \n    return View(model);\n}",
+      "options": {
+        "A": "If Username is missing, ModelState.IsValid will be true because Age has a default value",
+        "B": "If Age is 0, ModelState.IsValid will be false because 0 is outside the specified range",
+        "C": "If Username is provided but Age is 0, ModelState.IsValid will be true because 0 is a valid int",
+        "D": "If both Username and Age are valid, ModelState.IsValid will be true and the user will be redirected to the Success action"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "Which of the following HTTP attributes correctly maps to the corresponding HTTP method in ASP.NET Core?",
+      "options": {
+        "A": "[HttpPut] maps to DELETE requests",
+        "B": "[HttpGet] maps to both GET and POST requests",
+        "C": "[HttpPost] maps to POST requests",
+        "D": "[HttpPatch] maps to PUT requests"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following LINQ code?",
+      "code_example": "var data = new List<(string Category, int Value)>\n{\n    (\"A\", 10), (\"B\", 20), (\"A\", 30), (\"C\", 40), (\"B\", 50)\n};\n\nvar result = data\n    .GroupBy(x => x.Category)\n    .Select(g => new { Category = g.Key, Total = g.Sum(x => x.Value) })\n    .OrderByDescending(x => x.Total)\n    .First().Category;\n\nConsole.WriteLine(result);",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "The code will throw an exception"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What is the key difference between Conventional Routing and Attribute Routing in ASP.NET Core?",
+      "options": {
+        "A": "Attribute Routing is defined in the Startup.cs file, while Conventional Routing is defined in controller classes",
+        "B": "Conventional Routing uses a centralized route template, while Attribute Routing allows routes to be defined directly on controllers and actions",
+        "C": "Attribute Routing is only available for API controllers, while Conventional Routing works for all controller types",
+        "D": "Conventional Routing is case-sensitive, while Attribute Routing is case-insensitive"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What will be the output of the following xUnit test?",
+      "code_example": "public class Calculator\n{\n    public int Add(int a, int b) => a + b;\n}\n\npublic class CalculatorTests\n{\n    [Theory]\n    [InlineData(1, 2, 3)]\n    [InlineData(5, 5, 10)]\n    [InlineData(-1, 1, 0)]\n    public void Add_ShouldReturnExpectedSum(int a, int b, int expected)\n    {\n        // Arrange\n        var calculator = new Calculator();\n        \n        // Act\n        var result = calculator.Add(a, b);\n        \n        // Assert\n        Assert.Equal(expected, result);\n    }\n}",
+      "options": {
+        "A": "The test will fail because [Theory] cannot be used with [InlineData]",
+        "B": "The test will run once and pass",
+        "C": "The test will run three times and pass",
+        "D": "The test will run three times and fail on at least one case"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "Which of the following correctly explains the difference between Transient, Scoped, and Singleton service lifetimes in ASP.NET Core Dependency Injection?",
+      "options": {
+        "A": "Transient services are created once per application, Scoped services are created once per request, and Singleton services are created each time they are requested",
+        "B": "Transient services are created each time they are requested, Scoped services are created once per application, and Singleton services are created once per request",
+        "C": "Transient services are created once per request, Scoped services are created once per application, and Singleton services are created each time they are requested",
+        "D": "Transient services are created each time they are requested, Scoped services are created once per request, and Singleton services are created once per application"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using ConfigureAwait(false)?",
+      "code_example": "using System;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static async Task Main()\n    {\n        await Method1();\n    }\n    \n    static async Task Method1()\n    {\n        await Task.Delay(100).ConfigureAwait(false);\n        Console.WriteLine($\"Current context is null: {System.Threading.SynchronizationContext.Current == null}\");\n    }\n}",
+      "options": {
+        "A": "Current context is null: False",
+        "B": "Current context is null: True",
+        "C": "The code will throw an exception",
+        "D": "ConfigureAwait(false) has no effect on console applications"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "In Entity Framework Core, which of the following best describes the Code-First approach?",
+      "options": {
+        "A": "Creating database tables first, then generating entity classes from them",
+        "B": "Creating entity classes first, then generating the database schema from them",
+        "C": "Creating a model using a graphical designer, then generating both the database and entity classes",
+        "D": "Writing raw SQL to create database objects, then manually mapping them to entity classes"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What is the key difference between Lazy Loading and Eager Loading in Entity Framework Core?",
+      "options": {
+        "A": "Lazy Loading automatically loads related entities when they are accessed, while Eager Loading loads them in advance with the Include method",
+        "B": "Eager Loading automatically loads related entities when they are accessed, while Lazy Loading loads them in advance with the Include method",
+        "C": "Lazy Loading is more efficient for large datasets, while Eager Loading is more efficient for small datasets",
+        "D": "Lazy Loading is enabled by default, while Eager Loading must be explicitly configured"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using Moq for mocking?",
+      "code_example": "public interface ICalculator\n{\n    int Add(int a, int b);\n}\n\npublic class CalculatorService\n{\n    private readonly ICalculator _calculator;\n    \n    public CalculatorService(ICalculator calculator)\n    {\n        _calculator = calculator;\n    }\n    \n    public int AddAndDouble(int a, int b)\n    {\n        return _calculator.Add(a, b) * 2;\n    }\n}\n\n// Test code\nvar mockCalculator = new Mock<ICalculator>();\nmockCalculator.Setup(c => c.Add(It.IsAny<int>(), It.IsAny<int>())).Returns(5);\n\nvar service = new CalculatorService(mockCalculator.Object);\nvar result = service.AddAndDouble(10, 20);\nConsole.WriteLine(result);",
+      "options": {
+        "A": "30",
+        "B": "10",
+        "C": "60",
+        "D": "5"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the key difference between a readonly struct and a regular struct in C#?",
+      "options": {
+        "A": "readonly structs can only be created at compile time",
+        "B": "readonly structs cannot have methods",
+        "C": "readonly structs cannot modify their instance fields after construction",
+        "D": "readonly structs are always stored on the heap, not the stack"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Span<T>?",
+      "options": {
+        "A": "Original: 1,2,3,4,5 Modified: 10,20,3,4,5",
+        "B": "Original: 1,2,3,4,5 Modified: 1,2,3,4,5",
+        "C": "Original: 10,20,3,4,5 Modified: 10,20,3,4,5",
+        "D": "The code will throw an ArgumentOutOfRangeException"
+      },
+      "code_example": "int[] numbers = { 1, 2, 3, 4, 5 };\nSpan<int> span = numbers;\nspan.Slice(0, 2).Fill(10);\nspan[1] = 20;\n\nConsole.Write(\"Original: \");\nConsole.Write(string.Join(\",\", numbers));\nConsole.Write(\" Modified: \");\nConsole.Write(string.Join(\",\", span.ToArray()));",
+      "correct_answer": "C"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Which of the following correctly declares a P/Invoke method to call the Windows API function 'MessageBox'?",
+      "options": {
+        "A": "[DllImport(\"user32.dll\")] public static extern int MessageBox(IntPtr hWnd, string text, string caption, uint type);",
+        "B": "[DllImport(\"kernel32.dll\")] private static extern bool MessageBox(IntPtr handle, string message, string title, int flags);",
+        "C": "[ImportDll(\"user32.dll\")] public static extern void MessageBox(int handle, string message, string title, uint type);",
+        "D": "[DllExport(\"user32.dll\")] protected static int MessageBox(IntPtr hWnd, string text, string caption, uint type);"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of this code that demonstrates Memory<T> and Span<T> interaction?",
+      "options": {
+        "A": "50,60,30,40,50",
+        "B": "10,20,30,40,50",
+        "C": "10,20,30,40,50,60",
+        "D": "10,20,60,40,50"
+      },
+      "code_example": "int[] array = { 10, 20, 30, 40, 50 };\nMemory<int> memory = array;\nSpan<int> span = memory.Span;\nspan[2] = 60;\n\nConsole.WriteLine(string.Join(\",\", array));",
+      "correct_answer": "D"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "When implementing COM Interop in C#, which attribute is used to specify the COM interface that a class implements?",
+      "options": {
+        "A": "[ComImplementation]",
+        "B": "[ComInterface]",
+        "C": "[ComImport]",
+        "D": "[ComVisible]"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What is the most appropriate use case for Redis as a distributed cache in a .NET application?",
+      "options": {
+        "A": "Storing user session state in a web farm environment",
+        "B": "Primary database for all application data",
+        "C": "Long-term persistent storage of business-critical data",
+        "D": "File storage for large binary objects like videos"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates SignalR connection handling?",
+      "options": {
+        "A": "Connection Started. Method Invoked: Hello",
+        "B": "Method Invoked: Hello",
+        "C": "Connection Error: Object reference not set to an instance of an object.",
+        "D": "The code will compile but throw a runtime exception when executed"
+      },
+      "code_example": "// Client-side SignalR code\nvar connection = new HubConnectionBuilder()\n    .WithUrl(\"/chatHub\")\n    .Build();\n\nconnection.On<string>(\"ReceiveMessage\", (message) => {\n    Console.WriteLine($\"Method Invoked: {message}\");\n});\n\nconnection.StartAsync()\n    .ContinueWith(task => {\n        if (task.IsFaulted)\n            Console.WriteLine($\"Connection Error: {task.Exception.GetBaseException().Message}\");\n        else\n            Console.WriteLine(\"Connection Started.\");\n        \n        // This line runs regardless of connection success\n        connection.InvokeAsync(\"SendMessage\", \"Hello\");\n    });",
+      "correct_answer": "D"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "In the Factory Pattern, what is the primary purpose of the Factory class?",
+      "options": {
+        "A": "To implement business logic for product classes",
+        "B": "To create instances of product classes without exposing instantiation logic",
+        "C": "To serve as a base class for all product classes",
+        "D": "To provide static utility methods for product classes"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "When implementing OAuth with IdentityServer4 in ASP.NET Core, which of the following correctly configures the client for authorization code flow with PKCE?",
+      "options": {
+        "A": "client.AllowedGrantTypes = GrantTypes.ClientCredentials;",
+        "B": "client.AllowedGrantTypes = GrantTypes.Implicit;",
+        "C": "client.AllowedGrantTypes = GrantTypes.Code; client.RequirePkce = true;",
+        "D": "client.AllowedGrantTypes = GrantTypes.ResourceOwnerPassword;"
+      },
+      "code_example": "public static IEnumerable<Client> GetClients()\n{\n    return new List<Client>\n    {\n        new Client\n        {\n            ClientId = \"web_app\",\n            ClientName = \"Web Application\",\n            AllowedScopes = { \"openid\", \"profile\", \"api1\" },\n            RedirectUris = { \"https://localhost:5001/signin-oidc\" },\n            PostLogoutRedirectUris = { \"https://localhost:5001/signout-callback-oidc\" },\n            RequireClientSecret = false,\n            // Configuration for grant type here\n        }\n    };\n}",
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses the Mediator pattern with MediatR?",
+      "options": {
+        "A": "Request started. Request completed.",
+        "B": "Request started. Request completed. Request: Get User 123",
+        "C": "Request started. Handling GetUserQuery. Request completed. Request: Get User 123",
+        "D": "The code will throw a NullReferenceException"
+      },
+      "code_example": "// Using MediatR\npublic class GetUserQuery : IRequest<string>\n{\n    public int UserId { get; set; }\n}\n\npublic class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>\n{\n    public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)\n    {\n        Console.WriteLine(\"Request started.\");\n        var response = await next();\n        Console.WriteLine(\"Request completed.\");\n        \n        if (request is GetUserQuery query)\n            Console.WriteLine($\"Request: Get User {query.UserId}\");\n            \n        return response;\n    }\n}\n\npublic class GetUserQueryHandler : IRequestHandler<GetUserQuery, string>\n{\n    public Task<string> Handle(GetUserQuery request, CancellationToken cancellationToken)\n    {\n        Console.WriteLine($\"Handling GetUserQuery.\");\n        return Task.FromResult($\"User {request.UserId}\");\n    }\n}\n\n// Usage:\nvar mediator = new ServiceCollection()\n    .AddMediatR(cfg => {\n        cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);\n        cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));\n    })\n    .BuildServiceProvider()\n    .GetRequiredService<IMediator>();\n\nvar result = await mediator.Send(new GetUserQuery { UserId = 123 });",
+      "correct_answer": "C"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates lock and Monitor usage?",
+      "options": {
+        "A": "Starting... Locking with Monitor... Locked with lock... Exiting",
+        "B": "Starting... Locked with lock... Locking with Monitor... Exiting",
+        "C": "Starting... The code will deadlock and never complete",
+        "D": "Starting... Locked with lock... Exiting (Monitor.TryEnter will fail)"
+      },
+      "code_example": "object lockObj = new object();\n\nConsole.WriteLine(\"Starting...\");\n\nbool lockTaken = false;\ntry\n{\n    lock (lockObj)\n    {\n        Console.WriteLine(\"Locked with lock...\");\n        \n        Monitor.TryEnter(lockObj, 1000, ref lockTaken);\n        if (lockTaken)\n            Console.WriteLine(\"Locking with Monitor...\");\n        else\n            Console.WriteLine(\"Monitor.TryEnter failed\");\n    }\n}\nfinally\n{\n    if (lockTaken)\n        Monitor.Exit(lockObj);\n}\n\nConsole.WriteLine(\"Exiting\");",
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that uses Activator.CreateInstance() with dynamic type?",
+      "options": {
+        "A": "MyClass with ID: 10",
+        "B": "InvalidCastException will be thrown",
+        "C": "MissingMethodException will be thrown",
+        "D": "dynamic: MyClass with ID: 10"
+      },
+      "code_example": "public class MyClass\n{\n    public int Id { get; set; }\n    \n    public MyClass(int id)\n    {\n        Id = id;\n    }\n    \n    public override string ToString()\n    {\n        return $\"MyClass with ID: {Id}\";\n    }\n}\n\nType type = typeof(MyClass);\nvar parameters = new object[] { 10 };\ndynamic instance = Activator.CreateInstance(type, parameters);\n\nConsole.WriteLine($\"dynamic: {instance}\");",
+      "correct_answer": "D"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates Assembly.Load() and Type.GetType()?",
+      "options": {
+        "A": "System.String",
+        "B": "AssemblyReflectionTest.CustomClass",
+        "C": "System.ArgumentNullException: Could not load file or assembly",
+        "D": "System.TypeLoadException: Type CustomClass not found"
+      },
+      "code_example": "namespace AssemblyReflectionTest\n{\n    public class CustomClass { }\n    \n    public class Program\n    {\n        public static void Main()\n        {\n            try\n            {\n                // Get the currently executing assembly\n                var assembly = System.Reflection.Assembly.GetExecutingAssembly();\n                \n                // Try to load a type from the current assembly\n                var type = assembly.GetType(\"AssemblyReflectionTest.CustomClass\");\n                \n                if (type != null)\n                    Console.WriteLine(type.FullName);\n                else\n                    Console.WriteLine(\"Type not found\");\n            }\n            catch (Exception ex)\n            {\n                Console.WriteLine(ex.ToString());\n            }\n        }\n    }\n}",
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "In the Repository Pattern, what is the main benefit of using the IRepository<T> interface?",
+      "options": {
+        "A": "It provides a direct wrapper for Entity Framework DbContext",
+        "B": "It enables the use of NoSQL databases without changing application code",
+        "C": "It abstracts the data access layer, allowing for easier unit testing and swapping of data sources",
+        "D": "It automatically manages database migrations in Entity Framework"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates role-based authentication in ASP.NET Core?",
+      "options": {
+        "A": "Access granted to Admin resource",
+        "B": "Access denied: User 'testuser' is not in role 'Admin'",
+        "C": "Multiple roles required for this resource",
+        "D": "No output - the code will throw a SecurityException"
+      },
+      "code_example": "public class AuthController : Controller\n{\n    private readonly UserManager<IdentityUser> _userManager;\n    \n    public AuthController(UserManager<IdentityUser> userManager)\n    {\n        _userManager = userManager;\n    }\n    \n    [HttpGet]\n    [Authorize(Roles = \"Admin,SuperAdmin\")]\n    public async Task<IActionResult> AdminResource()\n    {\n        var user = await _userManager.GetUserAsync(User);\n        \n        if (await _userManager.IsInRoleAsync(user, \"Admin\"))\n        {\n            return Content(\"Access granted to Admin resource\");\n        }\n        else if (await _userManager.IsInRoleAsync(user, \"SuperAdmin\"))\n        {\n            return Content(\"Access granted to SuperAdmin\");\n        }\n        else\n        {\n            return Content($\"Access denied: User '{user.UserName}' is not in role 'Admin'\");\n        }\n    }\n}\n\n// Assume these are the roles assigned to the current user:\nvar roles = new[] { \"User\", \"SuperAdmin\" };\n\n// When a user with these roles accesses the AdminResource endpoint",
+      "correct_answer": "A"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which statement about Apache Kafka in the context of .NET applications is correct?",
+      "options": {
+        "A": "Kafka is a distributed SQL database that can replace SQL Server in .NET applications",
+        "B": "Kafka is a message broker and streaming platform that follows a publish-subscribe model",
+        "C": "Kafka is primarily used for in-memory caching, similar to Redis",
+        "D": "Kafka is Microsoft's implementation of the SignalR protocol for real-time web applications"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
