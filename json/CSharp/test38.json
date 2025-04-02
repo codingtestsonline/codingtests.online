@@ -1,0 +1,609 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "[[1, 2], [3, 4, 5], [6]]",
+        "B": "System.Int32[][]",
+        "C": "The code will not compile",
+        "D": "[[1, 2], [3, 4, 5], [6, 0, 0]]"
+      },
+      "correct_answer": "B",
+      "code_example": "int[][] jaggedArray = new int[3][];\njaggedArray[0] = new int[] { 1, 2 };\njaggedArray[1] = new int[] { 3, 4, 5 };\njaggedArray[2] = new int[] { 6 };\nConsole.WriteLine(jaggedArray);"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "Which of the following statements about pattern matching in switch expressions is correct?",
+      "options": {
+        "A": "Pattern matching in switch statements is only available in C# 9.0 and later",
+        "B": "Pattern matching allows you to match on the shape or property of an object",
+        "C": "The 'when' clause cannot be used with pattern matching in switch statements",
+        "D": "Pattern matching can only be used with primitive types like int and string"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Even number: 10",
+        "B": "Positive number",
+        "C": "Even number: 10 and Positive number",
+        "D": "None of the above"
+      },
+      "correct_answer": "A",
+      "code_example": "int number = 10;\nswitch (number)\n{\n    case int n when n % 2 == 0:\n        Console.WriteLine($\"Even number: {n}\");\n        break;\n    case int n when n > 0:\n        Console.WriteLine(\"Positive number\");\n        break;\n    default:\n        Console.WriteLine(\"Default case\");\n        break;\n}"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "Which of the following is a true statement about the differences between .NET Framework, .NET Core, and .NET 5+?",
+      "options": {
+        "A": ".NET Framework has better cross-platform support than .NET 5+",
+        "B": ".NET Core 3.1 was the last version before the unified .NET 5+ platform",
+        "C": ".NET 5+ only supports Windows operating systems",
+        "D": ".NET Framework is newer than .NET Core"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello World",
+        "B": "Hello",
+        "C": "World",
+        "D": "HelloWorld"
+      },
+      "correct_answer": "A",
+      "code_example": "string s1 = \"Hello\";\nstring s2 = s1 + \" World\";\ns1 = \"Changed\";\nConsole.WriteLine(s2);"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What is the primary advantage of using the 'using' statement for resource management in C#?",
+      "options": {
+        "A": "It increases application performance by optimizing memory usage",
+        "B": "It automatically calls Dispose() on IDisposable objects when they go out of scope",
+        "C": "It prevents memory leaks by forcing garbage collection",
+        "D": "It automatically initializes objects with default values"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "file.txt",
+        "B": "The code will throw an exception",
+        "C": "file",
+        "D": "file.txt is not found"
+      },
+      "correct_answer": "B",
+      "code_example": "string fileName = \"file.txt\";\ntry\n{\n    string content = File.ReadAllText(fileName);\n    Console.WriteLine(fileName);\n}\ncatch (FileNotFoundException)\n{\n    Console.WriteLine($\"{fileName} is not found\");\n    throw;\n}\nfinally\n{\n    Console.WriteLine(\"Operation completed\");\n}"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What is the correct way to use the null-coalescing operator (??) in C#?",
+      "options": {
+        "A": "string name = user ?? GetDefaultUser();",
+        "B": "string name = user?.Name ?? \"Unknown\";",
+        "C": "string name = user ? user.Name : \"Unknown\";",
+        "D": "string name = user ?? ? \"Known\" : \"Unknown\";"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "What will be the output of the following LINQ query?",
+      "options": {
+        "A": "2, 4, 6, 8, 10",
+        "B": "10, 8, 6, 4, 2",
+        "C": "1, 2, 3, 4, 5",
+        "D": "5, 4, 3, 2, 1"
+      },
+      "correct_answer": "A",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar result = numbers\n    .Select(n => n * 2)\n    .OrderBy(n => n);\n    \nforeach (var num in result)\n{\n    Console.Write($\"{num}, \");\n}"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello from constructor",
+        "B": "Hello from constructor\nHello from method",
+        "C": "Hello from method",
+        "D": "No output"
+      },
+      "correct_answer": "B",
+      "code_example": "public class MyClass\n{\n    public MyClass()\n    {\n        Console.WriteLine(\"Hello from constructor\");\n    }\n    \n    public void SayHello()\n    {\n        Console.WriteLine(\"Hello from method\");\n    }\n}\n\nMyClass obj = new MyClass();\nobj.SayHello();"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "What will be the result of the following LINQ query?",
+      "options": {
+        "A": "10",
+        "B": "0",
+        "C": "null",
+        "D": "An exception will be thrown"
+      },
+      "correct_answer": "B",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar result = numbers.FirstOrDefault(n => n > 10);\nConsole.WriteLine(result);"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello, World!",
+        "B": "Hello, Default!",
+        "C": "Hello, !",
+        "D": "Compilation error"
+      },
+      "correct_answer": "A",
+      "code_example": "void Greet(string name = \"World\")\n{\n    Console.WriteLine($\"Hello, {name}!\");\n}\n\nGreet();"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello World",
+        "B": "HelloWorld",
+        "C": "An exception will be thrown",
+        "D": "Hello"
+      },
+      "correct_answer": "B",
+      "code_example": "string result = \"\";\nvar sb = new StringBuilder();\nsb.Append(\"Hello\");\nsb.Append(\"World\");\nresult = sb.ToString();\nConsole.WriteLine(result);"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a value type in C#?",
+      "options": {
+        "A": "int",
+        "B": "double",
+        "C": "string",
+        "D": "char"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Custom Exception: Test exception",
+        "B": "System.Exception: Test exception",
+        "C": "The code will not compile",
+        "D": "No output, the exception is caught but not displayed"
+      },
+      "correct_answer": "A",
+      "code_example": "class CustomException : Exception\n{\n    public CustomException(string message) : base(message) { }\n}\n\ntry\n{\n    throw new CustomException(\"Test exception\");\n}\ncatch (CustomException ex)\n{\n    Console.WriteLine($\"Custom Exception: {ex.Message}\");\n}"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the result of the following code?",
+      "options": {
+        "A": "System.Int32",
+        "B": "int",
+        "C": "Int32",
+        "D": "Integer"
+      },
+      "correct_answer": "A",
+      "code_example": "var number = 10;\nConsole.WriteLine(number.GetType());"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code that uses Moq?",
+      "options": {
+        "A": "Greeting: Hello, World!",
+        "B": "Exception: Object reference not set to an instance of an object",
+        "C": "The code will not compile",
+        "D": "null"
+      },
+      "correct_answer": "A",
+      "code_example": "// Assuming Moq is properly referenced\nvar mock = new Mock<IGreeter>();\nmock.Setup(m => m.GetGreeting()).Returns(\"Hello, World!\");\n\nvar service = new GreetingService(mock.Object);\nConsole.WriteLine($\"Greeting: {service.Greet()}\");\n\npublic interface IGreeter\n{\n    string GetGreeting();\n}\n\npublic class GreetingService\n{\n    private readonly IGreeter _greeter;\n    \n    public GreetingService(IGreeter greeter)\n    {\n        _greeter = greeter;\n    }\n    \n    public string Greet()\n    {\n        return _greeter.GetGreeting();\n    }\n}"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "Which of the following statements about ConcurrentDictionary<TKey, TValue> is false?",
+      "options": {
+        "A": "It provides thread-safe add and remove operations",
+        "B": "It is part of the System.Collections.Concurrent namespace",
+        "C": "It guarantees that all operations will be atomic",
+        "D": "It is optimized for scenarios where multiple threads are accessing the dictionary simultaneously"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Value: 10",
+        "B": "Value: 5",
+        "C": "Value: 0",
+        "D": "Value calculated\nValue: 5"
+      },
+      "correct_answer": "D",
+      "code_example": "Dictionary<string, int> values = new Dictionary<string, int>();\nConcurrentDictionary<string, int> concurrentValues = new ConcurrentDictionary<string, int>();\n\nconcurrentValues.GetOrAdd(\"key\", (k) => {\n    Console.WriteLine(\"Value calculated\");\n    return 5;\n});\n\nConsole.WriteLine($\"Value: {concurrentValues[\"key\"]}\");"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "In ASP.NET Core dependency injection, what is the difference between Transient, Scoped, and Singleton service lifetimes?",
+      "options": {
+        "A": "Transient services are created once per application, Scoped services once per request, and Singleton services each time they are requested",
+        "B": "Transient services are created each time they are requested, Scoped services once per request, and Singleton services once per application",
+        "C": "Transient services are created once per request, Scoped services once per application, and Singleton services each time they are requested",
+        "D": "Transient, Scoped, and Singleton services are all created once per application"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Hello",
+        "B": "5",
+        "C": "Hello5",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "D",
+      "code_example": "T Combine<T>(T a, T b)\n{\n    return a + b;\n}\n\nvar result = Combine(\"Hello\", 5);\nConsole.WriteLine(result);"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code using generic methods?",
+      "options": {
+        "A": "3",
+        "B": "Hello World",
+        "C": "3\nHello World",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "C",
+      "code_example": "T Add<T>(T a, T b) where T : class\n{\n    if (a is string && b is string)\n    {\n        return (T)(object)((string)(object)a + (string)(object)b);\n    }\n    throw new NotSupportedException();\n}\n\nstring Add<T>(T a, T b) where T : struct\n{\n    if (typeof(T) == typeof(int))\n    {\n        return ((int)(object)a + (int)(object)b).ToString();\n    }\n    throw new NotSupportedException();\n}\n\nConsole.WriteLine(Add(1, 2));\nConsole.WriteLine(Add(\"Hello \", \"World\"));"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "Which of the following correctly describes the difference between lazy and eager loading?",
+      "options": {
+        "A": "Lazy loading loads all related entities immediately, while eager loading loads them only when accessed",
+        "B": "Lazy loading loads entities only when they are accessed, while eager loading loads them immediately",
+        "C": "Lazy loading and eager loading are synonyms for the same concept",
+        "D": "Lazy loading is only available in Entity Framework Core, while eager loading is only available in Entity Framework 6"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Value computed\n42",
+        "B": "42",
+        "C": "Value computed",
+        "D": "No output"
+      },
+      "correct_answer": "B",
+      "code_example": "Lazy<int> lazyValue = new Lazy<int>(() => {\n    Console.WriteLine(\"Value computed\");\n    return 42;\n});\n\nint value = 0;\nif (value == 0)\n{\n    value = 42;\n}\nelse\n{\n    value = lazyValue.Value;\n}\n\nConsole.WriteLine(value);"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "The code will not compile"
+      },
+      "correct_answer": "A",
+      "code_example": "class Box<T>\n{\n    private T _value;\n    \n    public Box(T value)\n    {\n        _value = value;\n    }\n    \n    public T GetValue()\n    {\n        return _value;\n    }\n}\n\nBox<int> box = new Box<int>(5);\nConsole.WriteLine(box.GetValue());"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Parent constructor\nChild constructor",
+        "B": "Child constructor\nParent constructor",
+        "C": "Parent constructor",
+        "D": "Child constructor"
+      },
+      "correct_answer": "A",
+      "code_example": "class Parent\n{\n    public Parent()\n    {\n        Console.WriteLine(\"Parent constructor\");\n    }\n}\n\nclass Child : Parent\n{\n    public Child() : base()\n    {\n        Console.WriteLine(\"Child constructor\");\n    }\n}\n\nChild child = new Child();"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "Which of the following is a correct statement about Test-Driven Development (TDD)?",
+      "options": {
+        "A": "In TDD, you write production code first, then write tests to verify it works correctly",
+        "B": "TDD follows the Red-Green-Refactor cycle: write a failing test, make it pass, then refactor",
+        "C": "TDD is primarily used for performance testing rather than functional testing",
+        "D": "TDD requires using specific testing frameworks like NUnit or MSTest"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "In ASP.NET Core MVC, what is model binding?",
+      "options": {
+        "A": "The process of converting a view model to a database model",
+        "B": "A technique to bind JavaScript objects to HTML elements",
+        "C": "The process of mapping data from HTTP requests to action method parameters",
+        "D": "The process of validating user input before it reaches the controller"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Button clicked!",
+        "B": "No output, the event is never triggered",
+        "C": "The code will not compile",
+        "D": "An exception will be thrown at runtime"
+      },
+      "correct_answer": "A",
+      "code_example": "public class Button\n{\n    public event EventHandler Clicked;\n    \n    public void Click()\n    {\n        Clicked?.Invoke(this, EventArgs.Empty);\n    }\n}\n\npublic class Program\n{\n    public static void Main()\n    {\n        Button button = new Button();\n        button.Clicked += (sender, e) => Console.WriteLine(\"Button clicked!\");\n        button.Click();\n    }\n}"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "Which of the following best describes the Interface Segregation Principle?",
+      "options": {
+        "A": "High-level modules should not depend on low-level modules",
+        "B": "Classes should be open for extension but closed for modification",
+        "C": "A class should have only one reason to change",
+        "D": "Clients should not be forced to depend on interfaces they do not use"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "Interface: Draw",
+        "B": "Class: Draw",
+        "C": "Class: Draw\nInterface: Draw",
+        "D": "No output"
+      },
+      "correct_answer": "A",
+      "code_example": "interface IDrawable\n{\n    void Draw();\n}\n\nclass Shape : IDrawable\n{\n    public void Draw()\n    {\n        Console.WriteLine(\"Class: Draw\");\n    }\n    \n    void IDrawable.Draw()\n    {\n        Console.WriteLine(\"Interface: Draw\");\n    }\n}\n\nIDrawable shape = new Shape();\nshape.Draw();"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "options": {
+        "A": "1",
+        "B": "4",
+        "C": "9",
+        "D": "16"
+      },
+      "correct_answer": "B",
+      "code_example": "Func<int, int> square = x => x * x;\nvar numbers = new List<int> { 1, 2, 3, 4 };\nConsole.WriteLine(square(numbers[1]));"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the correct way to define a readonly struct in C#?",
+      "options": {
+        "A": "struct Point { readonly int X; readonly int Y; }",
+        "B": "readonly struct Point { int X; int Y; }",
+        "C": "struct readonly Point { int X; int Y; }",
+        "D": "struct Point readonly { int X; int Y; }"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using the dynamic type?",
+      "options": {
+        "A": "10",
+        "B": "\"10\"",
+        "C": "Runtime error: Cannot implicitly convert type 'string' to 'int'",
+        "D": "Compilation error: Cannot implicitly convert type 'string' to 'int'"
+      },
+      "correct_answer": "A",
+      "code_example": "dynamic value = \"10\";\nint result = Convert.ToInt32(value);\nConsole.WriteLine(result);"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Which statement is true about the Repository Pattern in C#?",
+      "options": {
+        "A": "It is primarily used for UI separation and cannot be used with an ORM",
+        "B": "It violates the Single Responsibility Principle by handling both data access and business logic",
+        "C": "It abstracts the data access layer and provides a collection-like interface for domain objects",
+        "D": "It requires the use of static methods to ensure proper connection management"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using lock and Monitor?",
+      "options": {
+        "A": "Start\nEnd",
+        "B": "Start\nThread started\nEnd",
+        "C": "Start\nThread started\nThread completed\nEnd",
+        "D": "Compilation error: Cannot use Monitor.TryEnter without a timeout parameter"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Threading;\n\nclass Program\n{\n    static readonly object _lock = new object();\n    \n    static void Main()\n    {\n        Console.WriteLine(\"Start\");\n        \n        bool lockTaken = false;\n        try\n        {\n            Monitor.TryEnter(_lock, ref lockTaken);\n            \n            if (lockTaken)\n            {\n                Thread t = new Thread(() => \n                {\n                    Console.WriteLine(\"Thread started\");\n                    Thread.Sleep(100);\n                    Console.WriteLine(\"Thread completed\");\n                });\n                t.Start();\n                t.Join();\n            }\n        }\n        finally\n        {\n            if (lockTaken) Monitor.Exit(_lock);\n        }\n        \n        Console.WriteLine(\"End\");\n    }\n}"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "Which of the following is the correct way to configure Redis distributed cache in ASP.NET Core?",
+      "options": {
+        "A": "services.AddDistributedCache(options => options.UseRedis(\"localhost:6379\"));",
+        "B": "services.AddStackExchangeRedisCache(options => { options.Configuration = \"localhost:6379\"; });",
+        "C": "services.AddRedisDistributedCache(\"localhost:6379\");",
+        "D": "services.AddDistributedRedisCache(options => options.Configuration = \"localhost:6379\");"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using MethodInfo.Invoke()?",
+      "options": {
+        "A": "Method called with: Hello, World!",
+        "B": "System.Reflection.TargetParameterCountException: Parameter count mismatch",
+        "C": "System.ArgumentException: Object of type 'System.String' cannot be converted to type 'System.Object[]'",
+        "D": "System.MissingMethodException: Method not found: 'PrintMessage'"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.Reflection;\n\nclass Program\n{\n    static void Main()\n    {\n        Type type = typeof(MessagePrinter);\n        MessagePrinter instance = new MessagePrinter();\n        MethodInfo method = type.GetMethod(\"PrintMessage\");\n        method.Invoke(instance, new object[] { \"Hello, World!\" });\n    }\n}\n\nclass MessagePrinter\n{\n    public void PrintMessage(string message)\n    {\n        Console.WriteLine($\"Method called with: {message}\");\n    }\n}"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is the most efficient way to create a non-clustered index on a SQL Server table with a WHERE clause that filters on a specific CompanyID column?",
+      "options": {
+        "A": "CREATE INDEX IX_CompanyID ON Employees (CompanyID) WHERE CompanyID IS NOT NULL;",
+        "B": "CREATE INDEX IX_CompanyID ON Employees WITH (CompanyID);",
+        "C": "CREATE INDEX IX_CompanyID ON Employees (LastName, FirstName) INCLUDE (CompanyID);",
+        "D": "CREATE FILTERED INDEX IX_CompanyID ON Employees;"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using in-memory cache in ASP.NET Core?",
+      "options": {
+        "A": "Cache hit: Cached data",
+        "B": "Cache miss: New data\nCache hit: New data",
+        "C": "Cache miss: New data\nCache miss: New data",
+        "D": "System.InvalidOperationException: Cannot resolve service IMemoryCache"
+      },
+      "correct_answer": "B",
+      "code_example": "using Microsoft.Extensions.Caching.Memory;\n\nclass Program\n{\n    static void Main()\n    {\n        IMemoryCache cache = new MemoryCache(new MemoryCacheOptions());\n        \n        string key = \"myKey\";\n        \n        if (cache.TryGetValue(key, out string cachedValue))\n        {\n            Console.WriteLine($\"Cache hit: {cachedValue}\");\n        }\n        else\n        {\n            string newData = \"New data\";\n            cache.Set(key, newData, TimeSpan.FromMinutes(10));\n            Console.WriteLine($\"Cache miss: {newData}\");\n        }\n        \n        // Try to get the value again\n        if (cache.TryGetValue(key, out string cachedValue2))\n        {\n            Console.WriteLine($\"Cache hit: {cachedValue2}\");\n        }\n        else\n        {\n            Console.WriteLine(\"Cache miss again\");\n        }\n    }\n}"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "In the Observer Pattern, which of the following best describes the relationship between Subject and Observer?",
+      "options": {
+        "A": "A Subject can have multiple Observers, but an Observer can only watch one Subject",
+        "B": "Both Subject and Observer must inherit from the same base class to maintain type safety",
+        "C": "A Subject maintains a list of Observers and notifies them of state changes",
+        "D": "Observers poll the Subject periodically to detect changes in state"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using JWT authentication?",
+      "options": {
+        "A": "Valid token for user: testuser",
+        "B": "Invalid token: Signature validation failed",
+        "C": "System.ArgumentException: IDX10603: Decryption failed",
+        "D": "System.Security.SecurityException: Invalid token format"
+      },
+      "correct_answer": "A",
+      "code_example": "using System;\nusing System.IdentityModel.Tokens.Jwt;\nusing System.Security.Claims;\nusing System.Text;\nusing Microsoft.IdentityModel.Tokens;\n\nclass Program\n{\n    static void Main()\n    {\n        string secretKey = \"MyVerySecretKey12345678901234567890\";\n        var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));\n        var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);\n        \n        var claims = new[]\n        {\n            new Claim(JwtRegisteredClaimNames.Sub, \"testuser\"),\n            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())\n        };\n        \n        var token = new JwtSecurityToken(\n            issuer: \"myapp\",\n            audience: \"users\",\n            claims: claims,\n            expires: DateTime.Now.AddMinutes(30),\n            signingCredentials: credentials\n        );\n        \n        var tokenString = new JwtSecurityTokenHandler().WriteToken(token);\n        \n        // Validate the token\n        var tokenHandler = new JwtSecurityTokenHandler();\n        var validationParameters = new TokenValidationParameters\n        {\n            ValidateIssuer = true,\n            ValidIssuer = \"myapp\",\n            ValidateAudience = true,\n            ValidAudience = \"users\",\n            ValidateIssuerSigningKey = true,\n            IssuerSigningKey = securityKey,\n            ValidateLifetime = true\n        };\n        \n        try\n        {\n            var principal = tokenHandler.ValidateToken(tokenString, validationParameters, out _);\n            var identity = principal.Identity as ClaimsIdentity;\n            var usernameClaim = identity?.FindFirst(JwtRegisteredClaimNames.Sub);\n            \n            Console.WriteLine($\"Valid token for user: {usernameClaim?.Value}\");\n        }\n        catch (Exception ex)\n        {\n            Console.WriteLine($\"Invalid token: {ex.Message}\");\n        }\n    }\n}"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using Parallel.Invoke()?",
+      "options": {
+        "A": "1\n2\n3",
+        "B": "The output will always be in ascending order: 1, 2, 3",
+        "C": "The output could be in any order, such as 2, 1, 3 or 3, 1, 2",
+        "D": "System.AggregateException: One or more errors occurred"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static void Main()\n    {\n        Parallel.Invoke(\n            () => { Thread.Sleep(10); Console.WriteLine(\"1\"); },\n            () => { Thread.Sleep(5); Console.WriteLine(\"2\"); },\n            () => { Thread.Sleep(15); Console.WriteLine(\"3\"); }\n        );\n    }\n}"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What is the correct way to configure CORS in ASP.NET Core to allow only a specific origin with credentials?",
+      "options": {
+        "A": "app.UseCors(builder => builder.AllowAnyOrigin().AllowCredentials());",
+        "B": "app.UseCors(builder => builder.WithOrigins(\"https://example.com\").AllowCredentials());",
+        "C": "app.UseCors(\"AllowSpecificOrigin\"); services.AddCors(options => options.AddPolicy(\"AllowSpecificOrigin\", policy => policy.AllowAnyOrigin().AllowCredentials()));",
+        "D": "app.UseCors(options => options.WithOrigins(\"https://example.com\").AllowCredentials());"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using CancellationToken?",
+      "options": {
+        "A": "Starting...\nCounting: 0\nCounting: 1\nCounting: 2\nCompleted!",
+        "B": "Starting...\nCounting: 0\nCounting: 1\nCounting: 2\nCounting: 3\nCounting: 4\nOperation was canceled",
+        "C": "Starting...\nCounting: 0\nCounting: 1\nCounting: 2\nOperation was canceled",
+        "D": "Starting...\nCancellationToken triggered\nOperation was canceled"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program\n{\n    static async Task Main()\n    {\n        Console.WriteLine(\"Starting...\");\n        \n        CancellationTokenSource cts = new CancellationTokenSource();\n        CancellationToken token = cts.Token;\n        \n        // Set up a cancellation after 300ms\n        cts.CancelAfter(300);\n        \n        try\n        {\n            await CountAsync(token);\n            Console.WriteLine(\"Completed!\");\n        }\n        catch (OperationCanceledException)\n        {\n            Console.WriteLine(\"Operation was canceled\");\n        }\n    }\n    \n    static async Task CountAsync(CancellationToken cancellationToken)\n    {\n        for (int i = 0; i < 10; i++)\n        {\n            cancellationToken.ThrowIfCancellationRequested();\n            \n            Console.WriteLine($\"Counting: {i}\");\n            \n            await Task.Delay(100, cancellationToken);\n        }\n    }\n}"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What is the key difference between Kafka and RabbitMQ message brokers?",
+      "options": {
+        "A": "Kafka is primarily a log-based message broker with better retention capabilities, while RabbitMQ follows a more traditional queue-based approach",
+        "B": "Kafka only supports the publish-subscribe pattern, while RabbitMQ only supports point-to-point messaging",
+        "C": "Kafka messages are automatically deleted after consumption, while RabbitMQ messages remain in the queue until manually acknowledged",
+        "D": "Kafka can only be deployed on Linux systems, while RabbitMQ supports both Windows and Linux environments"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code implementing the Observer Pattern?",
+      "options": {
+        "A": "Observer 1 notified of update: Price is now 110\nObserver 2 notified of update: Price is now 110",
+        "B": "Observer 1 notified: Price is now 110\nObserver 2 notified: Price is now 110\nObserver 2 notified: Price is now 120\nObserver 1 notified: Price is now 120",
+        "C": "Observer 1 notified: Price is now 110\nObserver 2 notified: Price is now 110\nObserver 1 notified: Price is now 120",
+        "D": "Observer 1 notified: Price is now 110\nObserver 2 notified: Price is now 110"
+      },
+      "correct_answer": "C",
+      "code_example": "using System;\nusing System.Collections.Generic;\n\n// Observer interface\npublic interface IObserver\n{\n    void Update(string message);\n}\n\n// Concrete observer\npublic class PriceObserver : IObserver\n{\n    private string _name;\n    \n    public PriceObserver(string name)\n    {\n        _name = name;\n    }\n    \n    public void Update(string message)\n    {\n        Console.WriteLine($\"{_name} notified: {message}\");\n    }\n}\n\n// Subject\npublic class PriceSubject\n{\n    private readonly List<IObserver> _observers = new List<IObserver>();\n    private int _price;\n    \n    public int Price\n    {\n        get { return _price; }\n        set\n        {\n            _price = value;\n            Notify($\"Price is now {_price}\");\n        }\n    }\n    \n    public void Attach(IObserver observer)\n    {\n        _observers.Add(observer);\n    }\n    \n    public void Detach(IObserver observer)\n    {\n        _observers.Remove(observer);\n    }\n    \n    private void Notify(string message)\n    {\n        foreach (var observer in _observers)\n        {\n            observer.Update(message);\n        }\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        // Create subject\n        var priceSubject = new PriceSubject();\n        \n        // Create observers\n        var observer1 = new PriceObserver(\"Observer 1\");\n        var observer2 = new PriceObserver(\"Observer 2\");\n        \n        // Attach observers to the subject\n        priceSubject.Attach(observer1);\n        priceSubject.Attach(observer2);\n        \n        // Change price, which will notify observers\n        priceSubject.Price = 110;\n        \n        // Detach one observer\n        priceSubject.Detach(observer2);\n        \n        // Change price again\n        priceSubject.Price = 120;\n    }\n}"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "Which of the following is a correct Kubernetes configuration for deploying a .NET Core application with health checks?",
+      "options": {
+        "A": "apiVersion: apps/v1\nkind: Deployment\nspec:\n  containers:\n  - name: my-dotnet-app\n    image: my-dotnet-app:1.0\n    healthChecks:\n      readiness: /health\n      liveness: /health/live",
+        "B": "apiVersion: apps/v1\nkind: Deployment\nspec:\n  template:\n    spec:\n      containers:\n      - name: my-dotnet-app\n        image: my-dotnet-app:1.0\n        livenessProbe:\n          httpGet:\n            path: /health/live\n            port: 80\n        readinessProbe:\n          httpGet:\n            path: /health/ready\n            port: 80",
+        "C": "apiVersion: apps/v1\nkind: Deployment\nspec:\n  containers:\n  - name: my-dotnet-app\n    image: my-dotnet-app:1.0\n    probes:\n      - httpGet:\n          path: /health\n          port: 80\n        type: readiness",
+        "D": "apiVersion: apps/v1\nkind: Deployment\nspec:\n  container:\n    name: my-dotnet-app\n    image: my-dotnet-app:1.0\n    health:\n      liveness: /health\n      readiness: /health/ready"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
