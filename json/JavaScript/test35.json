@@ -1,0 +1,618 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const promise = new Promise((resolve) => {\n  resolve('Success!');\n});\n\npromise\n  .then(result => {\n    return result + ' And';\n  })\n  .then(result => {\n    return result + ' More';\n  })\n  .then(result => {\n    console.log(result);\n  });",
+      "options": {
+        "A": "Success!",
+        "B": "Success! And",
+        "C": "Success! And More",
+        "D": "undefined"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "What is the result of the following bitwise operation?",
+      "code_example": "console.log(5 & 3);",
+      "options": {
+        "A": "1",
+        "B": "7",
+        "C": "2",
+        "D": "8"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "Which of the following is NOT a primitive type in JavaScript?",
+      "options": {
+        "A": "symbol",
+        "B": "bigint",
+        "C": "array",
+        "D": "undefined"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const arr = [1, 2, 3, 4];\narr.shift();\narr.push(5);\nconsole.log(arr);",
+      "options": {
+        "A": "[1, 2, 3, 4, 5]",
+        "B": "[2, 3, 4, 5]",
+        "C": "[1, 2, 3, 5]",
+        "D": "[5, 1, 2, 3, 4]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "What will be the output of the following higher-order function usage?",
+      "code_example": "const numbers = [1, 2, 3, 4, 5];\nconst result = numbers.filter(num => num % 2 === 0).map(num => num * 2);\nconsole.log(result);",
+      "options": {
+        "A": "[2, 4, 6, 8, 10]",
+        "B": "[4, 8]",
+        "C": "[2, 4]",
+        "D": "[1, 3, 5]"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "What will be logged to the console?",
+      "code_example": "function example() {\n  var a = 1;\n  let b = 2;\n  \n  if (true) {\n    var a = 3;\n    let b = 4;\n    console.log(a, b);\n  }\n  \n  console.log(a, b);\n}\n\nexample();",
+      "options": {
+        "A": "3 4, then 1 2",
+        "B": "3 4, then 3 2",
+        "C": "1 2, then 3 4",
+        "D": "3 2, then 3 4"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(1 == '1');\nconsole.log(1 === '1');",
+      "options": {
+        "A": "true, true",
+        "B": "false, false",
+        "C": "true, false",
+        "D": "false, true"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "for (let i = 0; i < 5; i++) {\n  if (i === 2) {\n    continue;\n  }\n  if (i === 4) {\n    break;\n  }\n  console.log(i);\n}",
+      "options": {
+        "A": "0 1 3",
+        "B": "0 1 2 3",
+        "C": "0 1 3 4",
+        "D": "0 1 2 3 4"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "Which of the following correctly prevents the default behavior of a form submission?",
+      "code_example": "const form = document.querySelector('form');\nform.addEventListener('submit', function(event) {\n  // What code should go here?\n  validateForm();\n});",
+      "options": {
+        "A": "event.stopPropagation();",
+        "B": "event.preventDefault();",
+        "C": "event.stopDefault();",
+        "D": "return false;"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "In a package.json file, which property defines the command that will be executed when you run 'npm start'?",
+      "options": {
+        "A": "main",
+        "B": "scripts",
+        "C": "start",
+        "D": "commands"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "Which of the following will select an element with the id 'myElement' and all paragraph elements with the class 'highlight'?",
+      "code_example": "// Option A\ndocument.getElementById('myElement');\ndocument.getElementsByClassName('highlight');\n\n// Option B\ndocument.querySelector('#myElement');\ndocument.querySelectorAll('p.highlight');\n\n// Option C\ndocument.getElementById('myElement');\ndocument.querySelectorAll('.highlight');\n\n// Option D\ndocument.querySelector('myElement');\ndocument.querySelectorAll('p.highlight');",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "What is the difference between the following function declarations?",
+      "code_example": "// Function Declaration\nfunction add1(a, b) {\n  return a + b;\n}\n\n// Function Expression\nconst add2 = function(a, b) {\n  return a + b;\n};",
+      "options": {
+        "A": "There is no difference, they're just alternative syntax",
+        "B": "add1 can be called before its declaration (hoisted), but add2 cannot",
+        "C": "add1 creates a named function, while add2 creates an anonymous function",
+        "D": "Both B and C are correct"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "What will happen when you click the child button in the following code?",
+      "code_example": "<div id=\"parent\">\n  <button id=\"child\">Click me</button>\n</div>\n\n<script>\n  document.getElementById('parent').addEventListener('click', function() {\n    console.log('Parent clicked');\n  });\n  \n  document.getElementById('child').addEventListener('click', function(e) {\n    console.log('Child clicked');\n  });\n</script>",
+      "options": {
+        "A": "Only 'Child clicked' will be logged",
+        "B": "Only 'Parent clicked' will be logged",
+        "C": "'Child clicked' will be logged, then 'Parent clicked'",
+        "D": "'Parent clicked' will be logged, then 'Child clicked'"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "const result = true ? false ? 'A' : 'B' : 'C';\nconsole.log(result);",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "undefined"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "Which of the following is a key difference between Node.js and browser JavaScript?",
+      "options": {
+        "A": "Node.js doesn't support ES6 features",
+        "B": "Node.js has direct access to the file system",
+        "C": "Browser JavaScript can't use npm packages",
+        "D": "Node.js doesn't support asynchronous operations"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "What will be the output of the following code?",
+      "code_example": "console.log(parseInt('10', 2));\nconsole.log(Number('10.5'));\nconsole.log(String(false));\nconsole.log(Boolean(0));",
+      "options": {
+        "A": "10, 10.5, 'false', false",
+        "B": "2, 10.5, 'false', false",
+        "C": "2, 10.5, 'false', true",
+        "D": "10, 10, 'false', true"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "let counter = 0;\n\nconst interval = setInterval(() => {\n  counter++;\n  console.log(counter);\n  if (counter === 3) {\n    clearInterval(interval);\n  }\n}, 100);\n\nconsole.log('Start');",
+      "options": {
+        "A": "'Start', 1, 2, 3",
+        "B": "1, 2, 3, 'Start'",
+        "C": "1, 'Start', 2, 3",
+        "D": "'Start', 3"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "question": "What will be the output of this recursive function when called with factorial(4)?",
+      "code_example": "function factorial(n) {\n  if (n <= 1) {\n    return 1;\n  }\n  return n * factorial(n - 1);\n}",
+      "options": {
+        "A": "4",
+        "B": "12",
+        "C": "24",
+        "D": "16"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "question": "Which of the following correctly implements a simple REST API endpoint in Express.js that returns a user by ID?",
+      "code_example": "const express = require('express');\nconst app = express();\n\n// Option A\napp.get('/users/:id', (req, res) => {\n  const userId = req.params.id;\n  // Fetch user from database\n  res.json({ id: userId, name: 'John Doe' });\n});\n\n// Option B\napp.get('/users', (req, res) => {\n  const userId = req.query.id;\n  // Fetch user from database\n  res.json({ id: userId, name: 'John Doe' });\n});\n\n// Option C\napp.post('/users/:id', (req, res) => {\n  const userId = req.params.id;\n  // Fetch user from database\n  res.json({ id: userId, name: 'John Doe' });\n});\n\n// Option D\napp.get('/users/:id', (req, res) => {\n  const userId = req.body.id;\n  // Fetch user from database\n  res.json({ id: userId, name: 'John Doe' });\n});",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "question": "What will be the output of the following function composition?",
+      "code_example": "const add = x => y => x + y;\nconst multiply = x => y => x * y;\n\nconst compose = (f, g) => x => f(g(x));\nconst addThenMultiply = compose(multiply(2), add(3));\n\nconsole.log(addThenMultiply(5));",
+      "options": {
+        "A": "13",
+        "B": "16",
+        "C": "10",
+        "D": "26"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "question": "Which Node.js code correctly reads a file synchronously and appends new content to it?",
+      "code_example": "const fs = require('fs');\n\n// Option A\nfs.readFileSync('file.txt', 'utf8');\nfs.appendFile('file.txt', 'New content', (err) => {\n  if (err) throw err;\n});\n\n// Option B\nfs.readFileSync('file.txt', 'utf8');\nfs.appendFileSync('file.txt', 'New content');\n\n// Option C\nfs.readFile('file.txt', 'utf8', (err, data) => {\n  if (err) throw err;\n  fs.appendFileSync('file.txt', 'New content');\n});\n\n// Option D\nconst data = fs.readFileSync('file.txt');\nfs.writeFileSync('file.txt', data + 'New content');",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code demonstrating closure?",
+      "code_example": "function createCounter() {\n  let count = 0;\n  return function() {\n    count++;\n    return count;\n  };\n}\n\nconst counter1 = createCounter();\nconst counter2 = createCounter();\n\nconsole.log(counter1());\nconsole.log(counter1());\nconsole.log(counter2());",
+      "options": {
+        "A": "1, 2, 3",
+        "B": "1, 2, 1",
+        "C": "1, 1, 1",
+        "D": "1, 1, 2"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "question": "Which of the following is the most secure way to prevent NoSQL injection in a MongoDB query?",
+      "code_example": "// Option A\napp.post('/login', (req, res) => {\n  const { username, password } = req.body;\n  db.users.find({ username: username, password: password });\n});\n\n// Option B\napp.post('/login', (req, res) => {\n  const { username, password } = req.body;\n  db.users.find({ username: sanitize(username), password: sanitize(password) });\n});\n\n// Option C\napp.post('/login', (req, res) => {\n  const username = String(req.body.username).trim();\n  const password = String(req.body.password).trim();\n  db.users.find({ username, password });\n});\n\n// Option D\napp.post('/login', (req, res) => {\n  const { username, password } = req.body;\n  if (typeof username !== 'string' || typeof password !== 'string') {\n    return res.status(400).json({ error: 'Invalid input' });\n  }\n  db.users.find({ username, password });\n});",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "question": "What is the difference between route parameters and query strings in Express.js?",
+      "code_example": "// Example 1\napp.get('/users/:id', (req, res) => {\n  console.log(req.params.id);\n});\n// URL: /users/123\n\n// Example 2\napp.get('/users', (req, res) => {\n  console.log(req.query.id);\n});\n// URL: /users?id=123",
+      "options": {
+        "A": "Route parameters are optional, query strings are required",
+        "B": "Route parameters are part of the URL path, query strings come after the ? character",
+        "C": "Route parameters are more secure than query strings",
+        "D": "Route parameters are used for GET requests, query strings for POST requests"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "question": "Which of the following code fragments contains an unnecessary loop that could be optimized?",
+      "code_example": "// Option A\nconst numbers = [1, 2, 3, 4, 5];\nlet sum = 0;\nfor (let i = 0; i < numbers.length; i++) {\n  sum += numbers[i];\n}\n\n// Option B\nconst users = [{name: 'John'}, {name: 'Jane'}];\nlet names = [];\nfor (let i = 0; i < users.length; i++) {\n  names.push(users[i].name);\n}\n\n// Option C\nconst data = [1, 2, 3, 4, 5];\nlet hasEven = false;\nfor (let i = 0; i < data.length; i++) {\n  if (data[i] % 2 === 0) {\n    hasEven = true;\n  }\n}\n\n// Option D\nconst items = ['apple', 'banana', 'orange'];\nlet found = false;\nfor (let i = 0; i < items.length; i++) {\n  if (items[i] === 'banana') {\n    found = true;\n    break;\n  }\n}",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "Which of the following correctly sets up Express.js to parse JSON and form data?",
+      "code_example": "const express = require('express');\nconst app = express();\n\n// Option A\napp.use(express.json);\napp.use(express.urlencoded);\n\n// Option B\napp.use(express.json());\napp.use(express.urlencoded({ extended: true }));\n\n// Option C\napp.use(express.bodyParser());\n\n// Option D\napp.use(express.bodyParser.json());\napp.use(express.bodyParser.urlencoded());",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "What is the most secure method to store a JWT secret key in a Node.js application?",
+      "options": {
+        "A": "Directly in the application code",
+        "B": "In a configuration file that is included in source control",
+        "C": "In an environment variable",
+        "D": "In the package.json file"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "What makes the following function pure?",
+      "code_example": "function addNumbers(a, b) {\n  return a + b;\n}",
+      "options": {
+        "A": "It doesn't use global variables",
+        "B": "It always returns the same output for the same input and has no side effects",
+        "C": "It only uses the addition operator",
+        "D": "It doesn't modify the parameters passed to it"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "Which of the following correctly creates a simple Express server that listens on port 3000 and responds with 'Hello World'?",
+      "code_example": "// Option A\nconst express = require('express');\nconst app = express();\napp.get('/', function(req, res) {\n  res.send('Hello World');\n});\napp.listen(3000);\n\n// Option B\nconst http = require('http');\nhttp.createServer(function(req, res) {\n  res.writeHead(200, {'Content-Type': 'text/plain'});\n  res.end('Hello World');\n}).listen(3000);\n\n// Option C\nconst express = require('express');\nconst app = express();\napp.use('/', function(req, res) {\n  res.send('Hello World');\n});\napp.listen(3000);\n\n// Option D\nconst express = require('express');\nconst server = express();\nserver.route('/', function(req, res) {\n  res.send('Hello World');\n});\nserver.listen(3000);",
+      "options": {
+        "A": "Option A",
+        "B": "Option B",
+        "C": "Option C",
+        "D": "Option D"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "What is the key difference between CommonJS modules and ES modules?",
+      "code_example": "// CommonJS\nconst fs = require('fs');\nmodule.exports = { readFile: fs.readFile };\n\n// ES Modules\nimport fs from 'fs';\nexport const readFile = fs.readFile;",
+      "options": {
+        "A": "CommonJS modules are synchronous, ES modules are asynchronous",
+        "B": "CommonJS modules can only be used in Node.js, ES modules only in browsers",
+        "C": "CommonJS uses dynamic binding, ES modules use static binding",
+        "D": "CommonJS is faster than ES modules"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "In the context of the JavaScript Event Loop, which of the following is true?",
+      "code_example": "console.log('Start');\n\nsetTimeout(() => {\n  console.log('Timeout');\n}, 0);\n\nPromise.resolve().then(() => {\n  console.log('Promise');\n});\n\nconsole.log('End');",
+      "options": {
+        "A": "The output will be: Start, Timeout, Promise, End",
+        "B": "The output will be: Start, End, Promise, Timeout",
+        "C": "setTimeout callback is a microtask",
+        "D": "The Event Loop processes macrotasks before microtasks"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "What will be the output of the following code?",
+      "code_example": "const regularFunction = function() {\n  console.log(this.value);\n};\n\nconst arrowFunction = () => {\n  console.log(this.value);\n};\n\nconst obj = {\n  value: 42,\n  regularMethod: regularFunction,\n  arrowMethod: arrowFunction\n};\n\nobj.regularMethod();\nobj.arrowMethod();",
+      "options": {
+        "A": "42, 42",
+        "B": "42, undefined",
+        "C": "undefined, 42",
+        "D": "undefined, undefined"
+      },
+      "correct_answer": "B"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "question": "What is the purpose of the 'Referrer-Policy' HTTP header?",
+      "options": {
+        "A": "To control which websites can embed your page in an iframe",
+        "B": "To control how much referrer information should be included with requests",
+        "C": "To specify which JavaScript APIs can be used on the page",
+        "D": "To limit the number of HTTP requests from a single IP address"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code using the crypto module in Node.js?",
+      "code_example": "const crypto = require('crypto');\n\nconst secret = 'abcdefg';\nconst hash = crypto.createHmac('sha256', secret)\n                   .update('I love JavaScript')\n                   .digest('hex');\nconsole.log(hash.length);",
+      "options": {
+        "A": "32",
+        "B": "64",
+        "C": "128",
+        "D": "256"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "question": "Which of the following best describes how JavaScript allocates memory for objects?",
+      "options": {
+        "A": "JavaScript allocates a fixed amount of memory for all objects when the page loads",
+        "B": "JavaScript uses reference counting and a mark-and-sweep algorithm for garbage collection",
+        "C": "JavaScript requires manual memory allocation and deallocation like C++",
+        "D": "JavaScript stores all objects in the DOM and references them through pointers"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "question": "What will be the output of this code that demonstrates V8 engine optimizations?",
+      "code_example": "function add(x) {\n  return x + 1;\n}\n\nlet sum = 0;\nfor (let i = 0; i < 5; i++) {\n  sum += add(i);\n}\n\n// Now change the function behavior\nadd = function(x) {\n  return x + 2;\n};\n\nfor (let i = 0; i < 5; i++) {\n  sum += add(i);\n}\n\nconsole.log(sum);",
+      "options": {
+        "A": "15",
+        "B": "20",
+        "C": "25",
+        "D": "30"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "question": "In the context of authentication, what is the primary advantage of using refresh tokens alongside access tokens?",
+      "options": {
+        "A": "Refresh tokens can store more user data than access tokens",
+        "B": "Refresh tokens allow for obtaining new access tokens without re-authentication",
+        "C": "Refresh tokens are more secure because they're always stored in HTTP-only cookies",
+        "D": "Refresh tokens enable cross-domain authentication that access tokens cannot provide"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that illustrates a common memory leak pattern?",
+      "code_example": "let leakyArray = [];\nlet counter = 0;\n\nconst interval = setInterval(() => {\n  counter++;\n  \n  const largeObject = { \n    id: counter,\n    data: new Array(1000).fill('potentially large data')\n  };\n  \n  leakyArray.push(largeObject);\n  \n  if (counter === 3) {\n    clearInterval(interval);\n    console.log(leakyArray.length);\n    leakyArray = null; // Attempt to clean up\n    console.log(typeof leakyArray);\n  }\n}, 10);",
+      "options": {
+        "A": "3, 'object'",
+        "B": "3, 'undefined'",
+        "C": "3, 'null'",
+        "D": "0, 'object'"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "question": "What is a key benefit of using Helm for Kubernetes deployments in a Node.js application context?",
+      "options": {
+        "A": "Helm automatically optimizes your JavaScript code during deployment",
+        "B": "Helm enables real-time monitoring of Node.js memory usage",
+        "C": "Helm templates allow for parameterized, reusable Kubernetes manifests",
+        "D": "Helm provides automatic transpilation of TypeScript to JavaScript"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "question": "What will be the output of the following code that demonstrates a closure pattern for rate limiting?",
+      "code_example": "function createRateLimiter(limit, timeWindow) {\n  const requests = [];\n  \n  return function(request) {\n    const now = Date.now();\n    \n    // Remove expired timestamps\n    while (requests.length > 0 && requests[0] < now - timeWindow) {\n      requests.shift();\n    }\n    \n    if (requests.length < limit) {\n      requests.push(now);\n      return 'Accepted';\n    } else {\n      return 'Rate limited';\n    }\n  };\n}\n\nconst limiter = createRateLimiter(2, 1000); // 2 requests per 1 second\n\n// Simulate 3 quick requests\nconst result1 = limiter('request1');\nconst result2 = limiter('request2');\nconst result3 = limiter('request3');\n\nconsole.log(`${result1}, ${result2}, ${result3}`);",
+      "options": {
+        "A": "Accepted, Accepted, Accepted",
+        "B": "Accepted, Accepted, Rate limited",
+        "C": "Rate limited, Rate limited, Rate limited",
+        "D": "Accepted, Rate limited, Rate limited"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "question": "When implementing Content Security Policy (CSP) with Helmet.js, which of the following would allow loading scripts only from the same origin and from a trusted CDN (cdn.example.com)?",
+      "code_example": "const helmet = require('helmet');\nconst express = require('express');\nconst app = express();\n\napp.use(helmet.contentSecurityPolicy({\n  directives: {\n    // Which option is correct?\n  }\n}));",
+      "options": {
+        "A": "scriptSrc: ['self', 'cdn.example.com']",
+        "B": "scriptSrc: [\"'self'\", \"'cdn.example.com'\"]",
+        "C": "scriptSrc: [\"'self'\", \"cdn.example.com\"]",
+        "D": "scriptSrc: \"'self' cdn.example.com\""
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "question": "What will be the output of this code that demonstrates Just-In-Time (JIT) compilation behavior?",
+      "code_example": "function calculationTest(n) {\n  let result = 0;\n  // Creating a function inside to test optimization\n  function add(x) {\n    return x + 1;\n  }\n  \n  // Run many times to trigger JIT compilation\n  for (let i = 0; i < 100000; i++) {\n    if (i === 99999) {\n      // On the very last iteration\n      console.time('optimized');\n      result = add(n);\n      console.timeEnd('optimized');\n    } else {\n      result = add(i);\n    }\n  }\n  \n  // Now run a different type through the same function\n  console.time('deoptimized');\n  const newResult = add('10');\n  console.timeEnd('deoptimized');\n  \n  return `Results: ${result}, ${newResult}, Types: ${typeof result}, ${typeof newResult}`;\n}\n\nconsulationTest(10);",
+      "options": {
+        "A": "Results: 11, 11, Types: number, number",
+        "B": "Results: 11, 101, Types: number, number",
+        "C": "Results: 11, 101, Types: number, string",
+        "D": "Results: 11, '101', Types: number, string"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "question": "When configuring Prometheus to monitor a Node.js application, which of the following metrics would be most useful for detecting potential memory leaks?",
+      "options": {
+        "A": "process_cpu_user_seconds_total",
+        "B": "process_resident_memory_bytes",
+        "C": "http_request_duration_seconds",
+        "D": "nodejs_eventloop_lag_seconds"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "question": "What will be the output of this code demonstrating load balancing using the Node.js cluster module (similar to how PM2 works)?",
+      "code_example": "const cluster = require('cluster');\nconst numCPUs = 4; // Assuming a 4-core machine\n\nif (cluster.isMaster) {\n  let messageCount = 0;\n  \n  console.log(`Master process running with PID: ${process.pid}`);\n  \n  // Track messages from workers\n  function messageHandler(msg) {\n    if (msg.status === 'request handled') {\n      messageCount++;\n    }\n    \n    if (messageCount === 3) {\n      console.log(`Received ${messageCount} messages`);\n      // Shutdown all workers after 3 messages\n      for (const id in cluster.workers) {\n        cluster.workers[id].kill();\n      }\n    }\n  }\n  \n  // Fork workers\n  for (let i = 0; i < 2; i++) {\n    const worker = cluster.fork();\n    worker.on('message', messageHandler);\n  }\n  \n  // Log when a worker exits\n  cluster.on('exit', (worker, code, signal) => {\n    console.log(`Worker ${worker.process.pid} exited`);\n  });\n} else {\n  // Worker processes\n  console.log(`Worker ${process.pid} started`);\n  \n  // Simulate handling requests\n  for (let i = 0; i < 2; i++) {\n    // One worker sends 2 messages, another sends 1\n    if (!(i === 1 && cluster.worker.id === 2)) {\n      process.send({ status: 'request handled', workerId: cluster.worker.id });\n    }\n  }\n}",
+      "options": {
+        "A": "One worker handles all 3 requests, then both workers exit",
+        "B": "Both workers start, but no messages are received before they exit",
+        "C": "Both workers start, 3 messages are received, then both workers exit",
+        "D": "Master receives 4 messages and then exits without terminating the workers"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "question": "Which of the following best describes the main difference between WebSockets and REST in terms of communication patterns?",
+      "options": {
+        "A": "WebSockets use UDP while REST uses TCP",
+        "B": "WebSockets provide bidirectional communication while REST follows a request-response pattern",
+        "C": "WebSockets can only transmit text data while REST can transmit any data type",
+        "D": "WebSockets require authentication while REST does not"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "question": "What will be the output of this code that demonstrates a deployment preparation task?",
+      "code_example": "const fs = require('fs');\nconst path = require('path');\n\nfunction prepareForDeployment(targetEnv) {\n  const configTemplate = {\n    development: {\n      apiUrl: 'http://localhost:3000',\n      debug: true\n    },\n    staging: {\n      apiUrl: 'https://staging-api.example.com',\n      debug: true\n    },\n    production: {\n      apiUrl: 'https://api.example.com',\n      debug: false\n    }\n  };\n  \n  let config;\n  \n  try {\n    if (targetEnv === 'auto') {\n      // Determine environment from NODE_ENV\n      const env = process.env.NODE_ENV || 'development';\n      config = configTemplate[env] || configTemplate.development;\n    } else {\n      config = configTemplate[targetEnv] || configTemplate.development;\n    }\n    \n    // Add timestamp\n    config.buildTime = new Date().toISOString();\n    \n    // Simulate writing to file\n    console.log(JSON.stringify(config, null, 2));\n    return `Config prepared for ${targetEnv}`;\n  } catch (error) {\n    return `Error: ${error.message}`;\n  }\n}\n\n// Test with NODE_ENV set to 'production'\nprocess.env.NODE_ENV = 'production';\nconst result = prepareForDeployment('auto');\nconsole.log(result);",
+      "options": {
+        "A": "Config with staging values and 'Config prepared for auto'",
+        "B": "Config with development values and 'Config prepared for auto'",
+        "C": "Config with production values and 'Config prepared for auto'",
+        "D": "Error: Cannot read property 'auto' of undefined"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "question": "What will be the output of this code using Winston for logging?",
+      "code_example": "const winston = require('winston');\n\n// Custom log level configuration\nconst levels = {\n  error: 0,\n  warn: 1,\n  info: 2,\n  http: 3,\n  verbose: 4,\n  debug: 5,\n  silly: 6\n};\n\n// Create logger\nconst logger = winston.createLogger({\n  levels,\n  level: 'warn', // Set minimum visible level\n  format: winston.format.json(),\n  transports: [\n    new winston.transports.Console({\n      format: winston.format.simple()\n    })\n  ]\n});\n\n// Log messages at different levels\nlogger.error('This is an error message');\nlogger.warn('This is a warning message');\nlogger.info('This is an info message');\nlogger.http('This is an HTTP message');\nlogger.debug('This is a debug message');\n\nconsole.log('Logged messages with level <= warn');",
+      "options": {
+        "A": "Only 'This is an error message' is logged",
+        "B": "All five messages are logged",
+        "C": "'This is an error message' and 'This is a warning message' are logged",
+        "D": "No messages are logged"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "question": "What is the purpose of the 'X-Content-Type-Options: nosniff' header when implemented with Helmet.js?",
+      "code_example": "const helmet = require('helmet');\nconst express = require('express');\nconst app = express();\n\napp.use(helmet.noSniff());\n\napp.get('/download', (req, res) => {\n  res.setHeader('Content-Disposition', 'attachment; filename=\"data.txt\"');\n  res.setHeader('Content-Type', 'text/plain');\n  res.send('This is some text data that could be misinterpreted without proper headers.');\n});\n\napp.listen(3000);",
+      "options": {
+        "A": "It forces browsers to download all files instead of displaying them inline",
+        "B": "It prevents browsers from MIME-sniffing a response away from the declared content type",
+        "C": "It blocks all cross-site scripting attacks automatically",
+        "D": "It disables caching of sensitive resources in the browser"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
