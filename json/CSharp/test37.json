@@ -1,0 +1,656 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "topic": "if-else",
+      "question": "What will be the output of the following code?",
+      "code_example": "int x = 10;\nif(x > 5)\n    Console.WriteLine(\"Greater\");\nelse if(x > 15)\n    Console.WriteLine(\"Much Greater\");\nelse\n    Console.WriteLine(\"Smaller\");",
+      "options": {
+        "A": "Greater",
+        "B": "Much Greater",
+        "C": "Smaller",
+        "D": "No output"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "topic": "Local functions",
+      "question": "What will be the output of the following code?",
+      "code_example": "void Main()\n{\n    int x = 5;\n    int result = AddAndDouble(10);\n    Console.WriteLine(result);\n    \n    int AddAndDouble(int y)\n    {\n        return (x + y) * 2;\n    }\n}",
+      "options": {
+        "A": "15",
+        "B": "20",
+        "C": "25",
+        "D": "30"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "topic": "File.Exists(), Directory.CreateDirectory()",
+      "question": "Which statement correctly creates a directory only if it doesn't already exist?",
+      "options": {
+        "A": "if(!Directory.Exists(path)) File.Create(path);",
+        "B": "if(!Directory.Exists(path)) Directory.CreateDirectory(path);",
+        "C": "if(!File.Exists(path)) Directory.CreateDirectory(path);",
+        "D": "Directory.CreateDirectory(path); // Always creates if not exists"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "topic": "FirstOrDefault(), SingleOrDefault()",
+      "question": "What will be the output of the following code?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\nvar result1 = numbers.FirstOrDefault(n => n > 10);\nvar result2 = numbers.SingleOrDefault(n => n > 3);\nConsole.WriteLine($\"{result1}, {result2}\");",
+      "options": {
+        "A": "null, null",
+        "B": "null, 4",
+        "C": "0, 4",
+        "D": "InvalidOperationException is thrown"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "topic": "Access Modifiers",
+      "question": "Which access modifier allows a class member to be accessed only within the same assembly or by a derived class in another assembly?",
+      "options": {
+        "A": "public",
+        "B": "private",
+        "C": "protected",
+        "D": "protected internal"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "topic": "Using using for resource management",
+      "question": "What will happen in the following code?",
+      "code_example": "public void ProcessFile(string path)\n{\n    using var reader = new StreamReader(path);\n    string content = reader.ReadToEnd();\n    ProcessContent(content);\n    // More code after this\n}",
+      "options": {
+        "A": "The StreamReader will stay open until garbage collection",
+        "B": "The StreamReader will be closed after ReadToEnd() is called",
+        "C": "The StreamReader will be closed when ProcessFile method ends",
+        "D": "A compilation error will occur"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "topic": "StreamReader, StreamWriter",
+      "question": "What will the following code do?",
+      "code_example": "using (var writer = new StreamWriter(\"output.txt\"))\n{\n    writer.WriteLine(\"Line 1\");\n}\n\nusing (var writer = new StreamWriter(\"output.txt\"))\n{\n    writer.WriteLine(\"Line 2\");\n}",
+      "options": {
+        "A": "The file will contain 'Line 1' followed by 'Line 2'",
+        "B": "The file will contain only 'Line 2'",
+        "C": "The file will contain only 'Line 1'",
+        "D": "An exception will be thrown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "topic": "break, continue, goto",
+      "question": "What will be the output of the following code?",
+      "code_example": "for (int i = 0; i < 5; i++)\n{\n    if (i == 1)\n        continue;\n    if (i == 3)\n        break;\n    Console.Write(i);\n}",
+      "options": {
+        "A": "0123",
+        "B": "0124",
+        "C": "024",
+        "D": "02"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "topic": "Creating and instantiating objects",
+      "question": "Which of the following correctly instantiates a Dictionary with an initial capacity of 100?",
+      "options": {
+        "A": "var dict = new Dictionary<string, int>(100);",
+        "B": "var dict = new Dictionary<string, int>() { Capacity = 100 };",
+        "C": "var dict = Dictionary<string, int>.CreateWithCapacity(100);",
+        "D": "var dict = Dictionary<string, int>.Create(100);"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "topic": "var vs dynamic",
+      "question": "What will be the output of the following code?",
+      "code_example": "void Main()\n{\n    var obj1 = 5;\n    dynamic obj2 = 5;\n    \n    // obj1 = \"test\"; // This line would cause a compile error\n    obj2 = \"test\";\n    \n    Console.WriteLine(obj1.GetType().Name + \", \" + obj2.GetType().Name);\n}",
+      "options": {
+        "A": "Int32, Int32",
+        "B": "Int32, String",
+        "C": "Object, Object",
+        "D": "var, dynamic"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "topic": "Jagged arrays",
+      "question": "What will be the output of the following code?",
+      "code_example": "int[][] jaggedArray = new int[3][];\njaggedArray[0] = new int[2] { 1, 2 };\njaggedArray[1] = new int[1] { 3 };\njaggedArray[2] = new int[3] { 4, 5, 6 };\n\nConsole.WriteLine(jaggedArray[1][0]);",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "IndexOutOfRangeException is thrown"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "topic": "LINQ methods",
+      "question": "What will be the output of the following LINQ query?",
+      "code_example": "var fruits = new List<string> { \"apple\", \"banana\", \"cherry\", \"date\", \"elderberry\" };\n\nvar result = fruits\n    .Where(f => f.Length > 5)\n    .OrderBy(f => f.Length)\n    .Select(f => f.Substring(0, 3));\n    \nConsole.WriteLine(string.Join(\", \", result));",
+      "options": {
+        "A": "ban, che, eld",
+        "B": "ban, eld",
+        "C": "banana, cherry, elderberry",
+        "D": "apple, date"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "topic": "ArrayList, List<T>",
+      "question": "Which statement about ArrayList vs List<T> is incorrect?",
+      "options": {
+        "A": "ArrayList stores objects, while List<T> stores a specific type",
+        "B": "List<T> generally provides better performance than ArrayList",
+        "C": "ArrayList requires boxing/unboxing for value types",
+        "D": "ArrayList provides stronger type safety than List<T>"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "topic": "Parsing methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "string value1 = \"123\";\nstring value2 = \"abc\";\n\nbool success = int.TryParse(value2, out int result);\n\nConsole.WriteLine($\"{Convert.ToInt32(value1)}, {success}, {result}\");",
+      "options": {
+        "A": "123, False, 0",
+        "B": "123, False, abc",
+        "C": "123, True, 0",
+        "D": "FormatException is thrown"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "topic": "Cross-platform development",
+      "question": "Which of the following is NOT a correct way to ensure cross-platform compatibility in a .NET application?",
+      "options": {
+        "A": "Using Path.Combine() instead of hardcoded path separators",
+        "B": "Using Environment.NewLine instead of \"\\n\" or \"\\r\\n\"",
+        "C": "Using #if WINDOWS / #elif LINUX compiler directives",
+        "D": "Using RuntimeInformation.IsOSPlatform() to check the operating system"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "topic": "Function Overloading",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Program\n{\n    static void Main()\n    {\n        Print(5);\n        Print(\"Hello\");\n        Print(5, 10);\n    }\n    \n    static void Print(int value)\n    {\n        Console.Write(\"A\");\n    }\n    \n    static void Print(string value)\n    {\n        Console.Write(\"B\");\n    }\n    \n    static void Print(int value1, int value2)\n    {\n        Console.Write(\"C\");\n    }\n}",
+      "options": {
+        "A": "AAA",
+        "B": "ABC",
+        "C": "CBA",
+        "D": "ACB"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 17,
+      "difficulty": "medium",
+      "topic": "Explicit interface implementation",
+      "question": "What will be the output of the following code?",
+      "code_example": "interface IWorker\n{\n    void Work();\n}\n\nclass Employee : IWorker\n{\n    public void Work()\n    {\n        Console.Write(\"Employee working\");\n    }\n    \n    void IWorker.Work()\n    {\n        Console.Write(\"IWorker working\");\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        Employee emp = new Employee();\n        emp.Work();\n        \n        IWorker worker = emp;\n        worker.Work();\n    }\n}",
+      "options": {
+        "A": "Employee working",
+        "B": "IWorker working",
+        "C": "Employee workingIWorker working",
+        "D": "Compilation error"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 18,
+      "difficulty": "medium",
+      "topic": "Routing in ASP.NET",
+      "question": "What is the primary difference between conventional routing and attribute routing in ASP.NET Core?",
+      "options": {
+        "A": "Attribute routing is defined globally in Startup.cs, while conventional routing is defined on controllers",
+        "B": "Conventional routing uses templates with placeholders, while attribute routing uses regex patterns",
+        "C": "Conventional routing is defined globally, while attribute routing is defined on controllers and actions",
+        "D": "Attribute routing only works with API controllers, while conventional routing works with all controllers"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 19,
+      "difficulty": "medium",
+      "topic": "EventArgs pattern",
+      "question": "What will be the output of the following code?",
+      "code_example": "class CustomEventArgs : EventArgs\n{\n    public string Message { get; set; }\n}\n\nclass Publisher\n{\n    public event EventHandler<CustomEventArgs> OnChange;\n    \n    public void RaiseEvent()\n    {\n        OnChange?.Invoke(this, new CustomEventArgs { Message = \"Event raised\" });\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var publisher = new Publisher();\n        publisher.OnChange += (sender, e) => Console.Write(e.Message);\n        publisher.OnChange += (sender, e) => Console.Write(\"!\");\n        publisher.RaiseEvent();\n    }\n}",
+      "options": {
+        "A": "Event raised",
+        "B": "Event raised!",
+        "C": "!Event raised",
+        "D": "! (only)"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 20,
+      "difficulty": "medium",
+      "topic": "LINQ with EF Core",
+      "question": "Which of the following LINQ queries with EF Core will NOT be translated to SQL but instead will be evaluated in memory?",
+      "options": {
+        "A": "context.Users.Where(u => u.Age > 18).ToList();",
+        "B": "context.Users.OrderBy(u => u.LastName).Skip(10).Take(10).ToList();",
+        "C": "context.Users.Where(u => u.Email.EndsWith(\"@example.com\")).ToList();",
+        "D": "context.Users.Where(u => DateTime.Now.Subtract(u.DateOfBirth).TotalDays / 365 > 18).ToList();"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 21,
+      "difficulty": "medium",
+      "topic": "Generic classes",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Container<T> where T : class\n{\n    public T Item { get; set; }\n    \n    public string GetItemType()\n    {\n        return typeof(T).Name;\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var container1 = new Container<string>();\n        var container2 = new Container<List<int>>();\n        \n        Console.Write(container1.GetItemType() + \", \" + container2.GetItemType());\n    }\n}",
+      "options": {
+        "A": "class, class",
+        "B": "String, List",
+        "C": "String, List<int>",
+        "D": "String, List`1"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 22,
+      "difficulty": "medium",
+      "topic": "LINQ Aggregate methods",
+      "question": "What will be the output of the following code?",
+      "code_example": "var numbers = new List<int> { 1, 2, 3, 4, 5 };\n\nvar result1 = numbers.Aggregate((a, b) => a * b);\nvar result2 = numbers.Any(n => n > 10);\nvar result3 = numbers.All(n => n < 10);\n\nConsole.WriteLine($\"{result1}, {result2}, {result3}\");",
+      "options": {
+        "A": "15, False, True",
+        "B": "120, False, True",
+        "C": "15, True, False",
+        "D": "120, True, False"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 23,
+      "difficulty": "medium",
+      "topic": "Test-driven development",
+      "question": "Which of the following is NOT a principle of Test-Driven Development (TDD)?",
+      "options": {
+        "A": "Write a failing test first",
+        "B": "Write only enough code to make the test pass",
+        "C": "Refactor after the test passes",
+        "D": "Write all tests after implementing the feature"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 24,
+      "difficulty": "medium",
+      "topic": "using statement",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Resource : IDisposable\n{\n    public Resource(string name)\n    {\n        Console.Write($\"C:{name} \");\n    }\n    \n    public void Dispose()\n    {\n        Console.Write(\"D \");\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        using (var r1 = new Resource(\"1\"))\n        {\n            using (var r2 = new Resource(\"2\"))\n            {\n                Console.Write(\"Using \");\n            }\n            Console.Write(\"Done \");\n        }\n    }\n}",
+      "options": {
+        "A": "C:1 C:2 Using Done D D",
+        "B": "C:1 C:2 Using D Done D",
+        "C": "C:1 C:2 Using D D Done",
+        "D": "C:1 C:2 Using Done D D Done"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 25,
+      "difficulty": "medium",
+      "topic": "Garbage Collection",
+      "question": "Which statement about GC generations is correct?",
+      "options": {
+        "A": "Objects in Gen2 are collected more frequently than objects in Gen0",
+        "B": "Large objects (>85KB) are allocated directly to Gen2",
+        "C": "When Gen1 is collected, Gen0 is not collected",
+        "D": "Surviving objects from Gen0 move to Gen1, and surviving objects from Gen1 move to Gen2"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "topic": "Dependency Injection in Testing",
+      "question": "Which of the following is a benefit of using dependency injection in unit testing?",
+      "options": {
+        "A": "It allows tests to run faster by reducing disk I/O",
+        "B": "It enables testing components in isolation by substituting dependencies with mocks",
+        "C": "It automatically generates test cases based on method signatures",
+        "D": "It ensures tests always run in the same deterministic order"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "topic": "ConfigureAwait",
+      "question": "What is the primary purpose of using ConfigureAwait(false) in asynchronous methods?",
+      "options": {
+        "A": "To prevent deadlocks in UI applications",
+        "B": "To improve performance by executing continuations on a different thread",
+        "C": "To ensure the method always runs to completion even if exceptions occur",
+        "D": "To allow cancellation of the task if it takes too long"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "topic": "GC.Collect",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Program\n{\n    static void Main()\n    {\n        WeakReference reference = CreateObject();\n        \n        Console.Write(reference.IsAlive + \" \");\n        GC.Collect();\n        GC.WaitForPendingFinalizers();\n        Console.Write(reference.IsAlive);\n    }\n    \n    static WeakReference CreateObject()\n    {\n        object obj = new object();\n        return new WeakReference(obj);\n    }\n}",
+      "options": {
+        "A": "True True",
+        "B": "True False",
+        "C": "False False",
+        "D": "False True"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "topic": "Custom Middleware",
+      "question": "What is the correct order for configuring middleware in ASP.NET Core's Startup.Configure method?",
+      "options": {
+        "A": "The order doesn't matter as middleware runs in parallel",
+        "B": "Middleware that generates responses should be configured first",
+        "C": "Middleware is executed in the reverse order it is added in the pipeline",
+        "D": "Middleware is executed in the same order it is added in the pipeline"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "topic": "Dispose vs Finalize",
+      "question": "Which statement about Dispose() and Finalize() is correct?",
+      "options": {
+        "A": "Finalize() must always be called explicitly in code",
+        "B": "Dispose() is called automatically by the garbage collector",
+        "C": "When implementing IDisposable, a class should also implement a finalizer as a backup",
+        "D": "Finalize() is more efficient than Dispose() for releasing unmanaged resources"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "topic": "Event subscription",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Publisher\n{\n    public event EventHandler Event;\n    \n    public void RaiseEvent()\n    {\n        Event?.Invoke(this, EventArgs.Empty);\n    }\n}\n\nclass Program\n{\n    static void Main()\n    {\n        var publisher = new Publisher();\n        EventHandler handler = (s, e) => Console.Write(\"Handler called\");\n        \n        publisher.Event += handler;\n        publisher.RaiseEvent();\n        \n        publisher.Event -= handler;\n        publisher.RaiseEvent();\n    }\n}",
+      "options": {
+        "A": "Handler called",
+        "B": "Handler called Handler called",
+        "C": "No output",
+        "D": "NullReferenceException is thrown"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "topic": "Parallel programming",
+      "question": "What will be the output of the following code?",
+      "code_example": "class Program\n{\n    static void Main()\n    {\n        var numbers = Enumerable.Range(1, 5).ToList();\n        var result = new ConcurrentBag<int>();\n        \n        Parallel.ForEach(numbers, num =>\n        {\n            result.Add(num * 2);\n        });\n        \n        Console.Write(string.Join(\", \", result.OrderBy(n => n)));\n    }\n}",
+      "options": {
+        "A": "2, 4, 6, 8, 10",
+        "B": "Output could be in any order",
+        "C": "2, 4, 6, 8, 10 (but may be in any order)",
+        "D": "Compilation error: ConcurrentBag not found"
+      },
+      "correct_answer": "A"
+    },
+{
+      "id": 33,
+      "difficulty": "hard",
+      "topic": "String Interning",
+      "question": "What will be the output of the following code?",
+      "code_example": "string s1 = \"hello\";\nstring s2 = \"h\";\ns2 += \"ello\";\nstring s3 = \"hello\";\nConsole.WriteLine(Object.ReferenceEquals(s1, s2));\nConsole.WriteLine(Object.ReferenceEquals(s1, s3));\nConsole.WriteLine(s1 == s2);",
+      "options": {
+        "A": "false\nfalse\ntrue",
+        "B": "false\ntrue\ntrue",
+        "C": "true\nfalse\ntrue",
+        "D": "true\ntrue\ntrue"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 34,
+      "difficulty": "hard",
+      "topic": "MethodInfo.Invoke()",
+      "question": "What will be the output of the following code?",
+      "code_example": "using System;\nusing System.Reflection;\n\npublic class Example {\n    public static string GetMessage(int value) {\n        return $\"The value is {value}\";\n    }\n    \n    public static void Main() {\n        Type type = typeof(Example);\n        MethodInfo method = type.GetMethod(\"GetMessage\");\n        object[] parameters = new object[] { 42 };\n        \n        var result = method.Invoke(null, parameters);\n        Console.WriteLine(result);\n        Console.WriteLine(result.GetType().Name);\n    }\n}",
+      "options": {
+        "A": "The value is 42\nString",
+        "B": "42\nInt32",
+        "C": "System.Reflection.MethodInfo\nObject",
+        "D": "null\nNullReferenceException"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 35,
+      "difficulty": "hard",
+      "topic": "Mediator Pattern",
+      "question": "Which of the following statements is NOT true about the Mediator pattern in C#?",
+      "options": {
+        "A": "It reduces coupling between components by having them communicate indirectly through a mediator object",
+        "B": "It's commonly used in CQRS (Command Query Responsibility Segregation) implementations like MediatR",
+        "C": "It eliminates the need for dependency injection in modern applications",
+        "D": "It centralizes communication logic between components that would otherwise be scattered"
+      },
+      "correct_answer": "C"
+    },
+    {
+      "id": 36,
+      "difficulty": "hard",
+      "topic": "Repository Pattern",
+      "question": "What will be the output of the following code that uses the Repository pattern?",
+      "code_example": "public interface IUserRepository {\n    User GetById(int id);\n}\n\npublic class UserRepository : IUserRepository {\n    private readonly Dictionary<int, User> _users = new Dictionary<int, User> {\n        { 1, new User { Id = 1, Name = \"Alice\" } },\n        { 2, new User { Id = 2, Name = \"Bob\" } }\n    };\n    \n    public User GetById(int id) {\n        return _users.ContainsKey(id) ? _users[id] : null;\n    }\n}\n\npublic class User {\n    public int Id { get; set; }\n    public string Name { get; set; }\n    public override string ToString() => $\"User: {Id} - {Name}\";\n}\n\npublic class Program {\n    public static void Main() {\n        IUserRepository repo1 = new UserRepository();\n        IUserRepository repo2 = new UserRepository();\n        \n        var user1 = repo1.GetById(1);\n        var user2 = repo2.GetById(1);\n        \n        Console.WriteLine(user1.ToString());\n        Console.WriteLine(Object.ReferenceEquals(user1, user2));\n    }\n}",
+      "options": {
+        "A": "User: 1 - Alice\ntrue",
+        "B": "User: 1 - Alice\nfalse",
+        "C": "Alice\ntrue",
+        "D": "User: 1\nfalse"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 37,
+      "difficulty": "hard",
+      "topic": "API Versioning",
+      "question": "Which of the following is the most appropriate way to implement API versioning in ASP.NET Core Web API?",
+      "options": {
+        "A": "Implementing separate controllers for each version with the same route but different namespaces",
+        "B": "Using a query parameter approach with Microsoft.AspNetCore.Mvc.Versioning package",
+        "C": "Creating a custom middleware that parses the Accept header and routes to the correct implementation",
+        "D": "All of the above are appropriate approaches depending on the specific requirements"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 38,
+      "difficulty": "hard",
+      "topic": "dynamic type",
+      "question": "What will be the output of the following code using the dynamic type?",
+      "code_example": "using System;\n\nclass Program {\n    static void Main() {\n        dynamic x = 10;\n        dynamic y = \"5\";\n        \n        Console.WriteLine(x + y);\n        \n        x = new ExpandoObject();\n        x.Name = \"John\";\n        x.GetName = (Func<string>)(() => x.Name);\n        \n        Console.WriteLine(x.GetName());\n        \n        try {\n            Console.WriteLine(x.Age);\n        } catch (Exception ex) {\n            Console.WriteLine(ex.GetType().Name);\n        }\n    }\n}",
+      "options": {
+        "A": "15\nJohn\nNull",
+        "B": "105\nJohn\nRuntimeBinderException",
+        "C": "Error: Cannot implicitly convert type 'string' to 'int'",
+        "D": "15\nError: 'dynamic' does not contain a definition for 'GetName'"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 39,
+      "difficulty": "hard",
+      "topic": "Indexing in SQL Server",
+      "question": "Which of the following statements about SQL Server indexing is NOT correct?",
+      "options": {
+        "A": "Clustered indexes determine the physical order of data in a table and a table can have multiple clustered indexes",
+        "B": "Non-clustered indexes contain a pointer to the actual data row rather than the data itself",
+        "C": "Adding too many indexes can negatively impact INSERT, UPDATE, and DELETE performance",
+        "D": "Filtered indexes can improve query performance by indexing a subset of rows in a table"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 40,
+      "difficulty": "hard",
+      "topic": "Parallel.Invoke()",
+      "question": "What will be the output of the following code using Parallel.Invoke()?",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program {\n    static int counter = 0;\n    static object lockObj = new object();\n    \n    static void IncrementCounter() {\n        for (int i = 0; i < 1000; i++) {\n            lock (lockObj) {\n                counter++;\n            }\n        }\n    }\n    \n    static void Main() {\n        Parallel.Invoke(\n            IncrementCounter,\n            IncrementCounter,\n            IncrementCounter\n        );\n        \n        Console.WriteLine($\"Counter value: {counter}\");\n        \n        counter = 0;\n        \n        // Reset and run sequentially for comparison\n        IncrementCounter();\n        IncrementCounter();\n        IncrementCounter();\n        \n        Console.WriteLine($\"Sequential counter value: {counter}\");\n    }\n}",
+      "options": {
+        "A": "Counter value: 3000\nSequential counter value: 3000",
+        "B": "Counter value: less than 3000\nSequential counter value: 3000",
+        "C": "Counter value: 1000\nSequential counter value: 3000",
+        "D": "Counter value will vary on each run\nSequential counter value: 3000"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 41,
+      "difficulty": "hard",
+      "topic": "Stack vs Heap allocation",
+      "question": "What will be the output of the following code that demonstrates stack and heap allocation?",
+      "code_example": "using System;\n\nstruct Point {\n    public int X;\n    public int Y;\n    \n    public Point(int x, int y) {\n        X = x;\n        Y = y;\n    }\n}\n\nclass PointClass {\n    public int X;\n    public int Y;\n    \n    public PointClass(int x, int y) {\n        X = x;\n        Y = y;\n    }\n}\n\nclass Program {\n    static void Main() {\n        Point p1 = new Point(10, 20);\n        Point p2 = p1;\n        p2.X = 30;\n        \n        PointClass pc1 = new PointClass(10, 20);\n        PointClass pc2 = pc1;\n        pc2.X = 30;\n        \n        Console.WriteLine($\"p1.X = {p1.X}, p2.X = {p2.X}\");\n        Console.WriteLine($\"pc1.X = {pc1.X}, pc2.X = {pc2.X}\");\n    }\n}",
+      "options": {
+        "A": "p1.X = 30, p2.X = 30\npc1.X = 30, pc2.X = 30",
+        "B": "p1.X = 10, p2.X = 30\npc1.X = 30, pc2.X = 30",
+        "C": "p1.X = 10, p2.X = 10\npc1.X = 10, pc2.X = 10",
+        "D": "p1.X = 10, p2.X = 30\npc1.X = 10, pc2.X = 30"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 42,
+      "difficulty": "hard",
+      "topic": "Implementing OAuth with IdentityServer4",
+      "question": "Which of the following statements is NOT true about implementing OAuth 2.0 with IdentityServer4 in ASP.NET Core?",
+      "options": {
+        "A": "IdentityServer4 supports multiple flows including authorization code, implicit, client credentials, and hybrid flows",
+        "B": "IdentityServer4 eliminates the need for a separate database to store user credentials and tokens",
+        "C": "IdentityServer4 can be configured to use ASP.NET Core Identity for user management",
+        "D": "IdentityServer4 provides endpoints for token issuance, authorization, discovery, and userinfo"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 43,
+      "difficulty": "hard",
+      "topic": "Kafka Basics",
+      "question": "Which of the following is NOT a key component of Apache Kafka's architecture?",
+      "options": {
+        "A": "Producers: Applications that publish messages to Kafka topics",
+        "B": "Consumers: Applications that subscribe to topics and process the messages",
+        "C": "Brokers: Servers that store published messages and serve them to consumers",
+        "D": "Orchestrators: Services that automatically scale producers and consumers based on load"
+      },
+      "correct_answer": "D"
+    },
+    {
+      "id": 44,
+      "difficulty": "hard",
+      "topic": "Activator.CreateInstance()",
+      "question": "What will be the output of the following code using Activator.CreateInstance()?",
+      "code_example": "using System;\n\nclass Program {\n    class Person {\n        public string Name { get; }\n        \n        private Person() {\n            Name = \"Unknown\";\n        }\n        \n        public Person(string name) {\n            Name = name;\n        }\n    }\n    \n    static void Main() {\n        try {\n            var person1 = Activator.CreateInstance(typeof(Person));\n            Console.WriteLine($\"Person1: {((Person)person1).Name}\");\n            \n            var person2 = Activator.CreateInstance(typeof(Person), new object[] { \"John\" });\n            Console.WriteLine($\"Person2: {((Person)person2).Name}\");\n            \n            var person3 = Activator.CreateInstance(\n                typeof(Person),\n                BindingFlags.Instance | BindingFlags.NonPublic,\n                null,\n                new object[] { },\n                null\n            );\n            Console.WriteLine($\"Person3: {((Person)person3).Name}\");\n        }\n        catch (MissingMethodException) {\n            Console.WriteLine(\"MissingMethodException was thrown\");\n        }\n    }\n}",
+      "options": {
+        "A": "Person1: Unknown\nPerson2: John\nPerson3: Unknown",
+        "B": "MissingMethodException was thrown",
+        "C": "Person1: \nPerson2: John\nPerson3: Unknown",
+        "D": "Person2: John\nPerson3: Unknown"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 45,
+      "difficulty": "hard",
+      "topic": "OAuth2",
+      "question": "In the OAuth 2.0 authorization framework, which grant type is MOST appropriate for a single-page application (SPA) that needs to access protected resources on behalf of the logged-in user?",
+      "options": {
+        "A": "Client Credentials Grant",
+        "B": "Authorization Code Grant with PKCE (Proof Key for Code Exchange)",
+        "C": "Resource Owner Password Credentials Grant",
+        "D": "Implicit Grant"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 46,
+      "difficulty": "hard",
+      "topic": "CancellationToken",
+      "question": "What will be the output of the following code using CancellationToken?",
+      "code_example": "using System;\nusing System.Threading;\nusing System.Threading.Tasks;\n\nclass Program {\n    static async Task Main() {\n        var cts = new CancellationTokenSource();\n        var token = cts.Token;\n        \n        var task = Task.Run(async () => {\n            try {\n                Console.WriteLine(\"Task started\");\n                \n                for (int i = 0; i < 10; i++) {\n                    token.ThrowIfCancellationRequested();\n                    await Task.Delay(100);\n                    Console.Write(\".\");\n                }\n                \n                Console.WriteLine(\"\\nTask completed successfully\");\n                return \"Success\";\n            }\n            catch (OperationCanceledException) {\n                Console.WriteLine(\"\\nTask was canceled\");\n                return \"Canceled\";\n            }\n        }, token);\n        \n        await Task.Delay(350); // Wait a bit before canceling\n        cts.Cancel();\n        \n        try {\n            string result = await task;\n            Console.WriteLine($\"Result: {result}\");\n        }\n        catch (Exception ex) {\n            Console.WriteLine($\"Exception: {ex.GetType().Name}\");\n        }\n    }\n}",
+      "options": {
+        "A": "Task started\n....\nTask was canceled\nResult: Canceled",
+        "B": "Task started\n...\nException: TaskCanceledException",
+        "C": "Task started\n...\nTask was canceled\nException: OperationCanceledException",
+        "D": "Task started\n..........\nTask completed successfully\nResult: Success"
+      },
+      "correct_answer": "A"
+    },
+    {
+      "id": 47,
+      "difficulty": "hard",
+      "topic": "Role-based authentication",
+      "question": "What will be the output of the following ASP.NET Core controller code with role-based authentication?",
+      "code_example": "using Microsoft.AspNetCore.Authorization;\nusing Microsoft.AspNetCore.Mvc;\nusing System.Security.Claims;\n\n[ApiController]\n[Route(\"api/[controller]\")]\npublic class SecureController : ControllerBase {\n    \n    [HttpGet(\"public\")]\n    public IActionResult PublicEndpoint() {\n        return Ok(\"This is a public endpoint\");\n    }\n    \n    [HttpGet(\"user\")]\n    [Authorize]\n    public IActionResult UserEndpoint() {\n        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);\n        return Ok($\"User ID: {userId ?? \"Unknown\"}\");\n    }\n    \n    [HttpGet(\"admin\")]\n    [Authorize(Roles = \"Admin\")]\n    public IActionResult AdminEndpoint() {\n        return Ok(\"Admin access granted\");\n    }\n    \n    [HttpGet(\"mixed\")]\n    [Authorize(Roles = \"Admin,Manager\")]\n    public IActionResult MixedEndpoint() {\n        if (User.IsInRole(\"Admin\")) {\n            return Ok(\"Admin role detected\");\n        }\n        return Ok(\"Manager role detected\");\n    }\n}\n\n// The following request is made by an authenticated user with the \"Manager\" role:\n// GET /api/secure/mixed",
+      "options": {
+        "A": "Status: 200 OK, Response: \"Admin role detected\"",
+        "B": "Status: 200 OK, Response: \"Manager role detected\"",
+        "C": "Status: 403 Forbidden",
+        "D": "Status: 401 Unauthorized"
+      },
+      "correct_answer": "B"
+    },
+    {
+      "id": 48,
+      "difficulty": "hard",
+      "topic": "RabbitMQ Basics",
+      "question": "Which of the following statements about RabbitMQ in a .NET application is INCORRECT?",
+      "options": {
+        "A": "RabbitMQ implements the Advanced Message Queuing Protocol (AMQP)",
+        "B": "In RabbitMQ, messages are always delivered to all consumers bound to a queue, enabling true broadcast capabilities",
+        "C": "RabbitMQ supports different exchange types including direct, fanout, topic, and headers",
+        "D": "The most commonly used .NET client library for RabbitMQ is RabbitMQ.Client"
+      },
+      "correct_answer": "B"
+    }
+  ]
+}
