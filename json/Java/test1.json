@@ -131,7 +131,7 @@
       "question": "What will be the output of the following code?",
       "code_example": "class Calculator {\n    // Method overloading with different number of parameters\n    public int add(int a, int b) {\n        return a + b;\n    }\n    \n    public int add(int a, int b, int c) {\n        return a + b + c;\n    }\n    \n    // Method overloading with different types of parameters\n    public double add(double a, double b) {\n        return a + b;\n    }\n    \n    public static void main(String[] args) {\n        Calculator calc = new Calculator();\n        System.out.println(calc.add(5, 10));\n        System.out.println(calc.add(5, 10, 15));\n        System.out.println(calc.add(5.5, 10.5));\n    }\n}",
       "options": {
-        "A": "15\n30\n16.0",
+        "A": "15.0\n30\n16.0",
         "B": "15\n30\n16",
         "C": "15.0\n30.0\n16.0",
         "D": "15\n30\n16.0"
@@ -167,12 +167,12 @@
       "id": 14,
       "difficulty": "easy",
       "question": "What will be the output of the following code?",
-      "code_example": "public class EscapeSequenceDemo {\n    public static void main(String[] args) {\n        System.out.println(\"Hello\\nWorld\");\n        System.out.println(\"Hello\\tWorld\");\n        System.out.println(\"Hello\\\\World\");\n        System.out.println(\"Hello\\\"World\\\"\");\n    }\n}",
+      "code_example": "public class EscapeSequenceDemo {\n    public static void main(String[] args) {\n        System.out.println(\"Hello World\");\n        System.out.println(\"Hello\\tWorld\");\n        System.out.println(\"Hello\\\\World\");\n        System.out.println(\"Hello\\\"World\\\"\");\n    }\n}",
       "options": {
-        "A": "Hello\nWorld\nHello\tWorld\nHello\\World\nHello\"World\"",
-        "B": "HelloWorld\nHello    World\nHello\\World\nHello\"World\"",
-        "C": "Hello\nWorld\nHello    World\nHello\\World\nHello\"World\"",
-        "D": "HelloWorld\nHelloWorld\nHello\\World\nHello\"World\""
+        "A": "Hello World Hello    World\nHello\\World Hello\"World\"",
+        "B": "Hello World Hello World\nHello\\World HelloWorld",
+        "C": "Hello World HelloWorld Hello\\World Hello'World'",
+        "D": "Hello World HelloWorld Hello\\World Hello \"World\""
       },
       "correct_answer": "A"
     },
@@ -192,7 +192,7 @@
       "id": 16,
       "difficulty": "easy",
       "question": "What will be the output of the following code?",
-      "code_example": "import java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.IOException;\n\npublic class TryWithResourcesDemo {\n    public static void main(String[] args) {\n        try {\n            String content = readFirstLineFromFile(\"dummy.txt\");\n            System.out.println(content);\n        } catch (IOException e) {\n            System.out.println(\"File not found or cannot be read\");\n        }\n    }\n    \n    static String readFirstLineFromFile(String path) throws IOException {\n        try (BufferedReader br = new BufferedReader(new FileReader(path))) {\n            return \"File processed successfully\";\n        }\n    }\n}",
+      "code_example": "import java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.IOException;\n\npublic class TryWithResourcesDemo {\n    public static void main(String[] args) {\n        try {\n            String content = readFirstLineFromFile(\"nonexistent_file.txt\");\n            System.out.println(content);\n        } catch (IOException e) {\n            System.out.println(\"File not found or cannot be read\");\n        }\n    }\n    \n    static String readFirstLineFromFile(String path) throws IOException {\n        try (BufferedReader br = new BufferedReader(new FileReader(path))) {\n            return \"File processed successfully\";\n        }\n    }\n}",
       "options": {
         "A": "File processed successfully",
         "B": "File not found or cannot be read",
@@ -261,7 +261,7 @@
         "C": "Compilation error because method1() doesn't declare that it throws Exception",
         "D": "Caught in method1: From method2"
       },
-      "correct_answer": "C"
+      "correct_answer": "A"
     },
     {
       "id": 22,
@@ -281,7 +281,7 @@
       "difficulty": "medium",
       "question": "Why doesn't Java support multiple inheritance through classes?",
       "options": {
-        "A": "It's a design decision to keep the language simple and avoid ambiguity issues like the Diamond Problem",
+        "A": "It's a design decision to keep the language simple and avoid ambiguity issues",
         "B": "Java's Virtual Machine architecture doesn't support multiple inheritance",
         "C": "Multiple inheritance causes performance issues in object-oriented languages",
         "D": "Java originally supported multiple inheritance but it was removed in Java 5"
@@ -384,7 +384,7 @@
       "question": "What will be the output of the following code?",
       "code_example": "public class StringImmutabilityDemo {\n    public static void main(String[] args) {\n        String str1 = \"Hello\";\n        String str2 = str1;\n        \n        System.out.println(\"Before modification:\";\n        System.out.println(\"str1: \" + str1);\n        System.out.println(\"str2: \" + str2);\n        System.out.println(\"str1 == str2: \" + (str1 == str2));\n        \n        str1 += \" World\";\n        \n        System.out.println(\"\\nAfter modification:\";\n        System.out.println(\"str1: \" + str1);\n        System.out.println(\"str2: \" + str2);\n        System.out.println(\"str1 == str2: \" + (str1 == str2));\n        \n        // String interning demonstration\n        String str3 = \"Hello\";\n        String str4 = new String(\"Hello\");\n        String str5 = str4.intern();\n        \n        System.out.println(\"\\nString interning:\";\n        System.out.println(\"str2 == str3: \" + (str2 == str3));\n        System.out.println(\"str3 == str4: \" + (str3 == str4));\n        System.out.println(\"str3 == str5: \" + (str3 == str5));\n    }\n}",
       "options": {
-        "A": "Compilation error due to missing parentheses after println statements",
+        "A": "Compilation error",
         "B": "Runtime error due to string interning issues",
         "C": "Before modification: str1 and str2 are the same, after modification: str1 and str2 are different",
         "D": "Before modification: str1 and str2 are the same, after modification: str1 and str2 are still the same"
@@ -467,8 +467,8 @@
       "code_example": "import java.util.concurrent.CompletableFuture;\nimport java.util.concurrent.ExecutionException;\n\npublic class Test {\n    public static void main(String[] args) throws ExecutionException, InterruptedException {\n        CompletableFuture<String> future1 = CompletableFuture.supplyAsync(() -> {\n            try {\n                Thread.sleep(500);\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n            return \"Hello\";\n        });\n        \n        CompletableFuture<String> future2 = CompletableFuture.supplyAsync(() -> {\n            try {\n                Thread.sleep(300);\n            } catch (InterruptedException e) {\n                e.printStackTrace();\n            }\n            return \"World\";\n        });\n        \n        CompletableFuture<String> result = future1\n            .thenCombine(future2, (s1, s2) -> s1 + \" \" + s2)\n            .thenApply(String::toUpperCase);\n        \n        System.out.println(result.get());\n    }\n}",
       "options": {
         "A": "HELLO WORLD",
-        "B": "Hello World",
-        "C": "HelloWorld",
+        "B": "WORLDHELLO",
+        "C": "WORLD HELLO",
         "D": "HELLOWORLD"
       },
       "correct_answer": "A"
