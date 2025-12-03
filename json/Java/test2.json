@@ -398,7 +398,7 @@
       "correct_answer": "D"
     },
     {
-      "id": 33,
+      "id": 30,
       "difficulty": "medium",
       "question": "What will be the output of the following code?",
       "code_example": "public class SuppressedExceptionTest {\n    public static void main(String[] args) {\n        try {\n            trySuppressed();\n        } catch (Exception e) {\n            System.out.print(e.getMessage() + \" \");\n            \n            for (Throwable t : e.getSuppressed()) {\n                System.out.print(t.getMessage() + \" \");\n            }\n        }\n    }\n    \n    static void trySuppressed() throws Exception {\n        Exception primary = new Exception(\"Primary\");\n        try {\n            throw new Exception(\"Suppressed\");\n        } catch (Exception e) {\n            primary.addSuppressed(e);\n        }\n        throw primary;\n    }\n}",
@@ -411,7 +411,7 @@
       "correct_answer": "C"
     },
     {
-      "id": 34,
+      "id": 31,
       "difficulty": "medium",
       "question": "Which of the following is NOT a key component in OAuth2 authentication flow?",
       "options": {
@@ -423,7 +423,7 @@
       "correct_answer": "D"
     },
     {
-      "id": 35,
+      "id": 32,
       "difficulty": "medium",
       "question": "What is the correct statement about the equals() and hashCode() contract in Java?",
       "options": {
@@ -542,7 +542,7 @@
         "A": "[Apple, Banana, Orange, Pear]",
         "B": "[Pear, Orange, Banana, Apple]",
         "C": "[Apple, Banana, Pear, Orange]", 
-        "D": "[Orange, Pear, Banana, Apple]"
+        "D": "[Banana, Orange, Apple, Pear]"
       },
       "correct_answer": "D",
       "code_example": "import java.util.*;\n\npublic class ComparatorTest {\n    public static void main(String[] args) {\n        List<String> fruits = new ArrayList<>();\n        fruits.add(\"Apple\");\n        fruits.add(\"Banana\");\n        fruits.add(\"Orange\");\n        fruits.add(\"Pear\");\n        \n        Collections.sort(fruits, new LengthThenAlphabeticalComparator());\n        System.out.println(fruits);\n    }\n    \n    static class LengthThenAlphabeticalComparator implements Comparator<String> {\n        @Override\n        public int compare(String s1, String s2) {\n            if (s1.length() != s2.length()) {\n                return s2.length() - s1.length(); // Longer strings first\n            }\n            return s2.compareTo(s1); // Reverse alphabetical for same length\n        }\n    }\n}"
@@ -571,7 +571,7 @@
         "D": "obj1 and obj2 are equal: false\nValue from map: null"
       },
       "correct_answer": "A",
-      "code_example": "import java.util.HashMap;\n\npublic class HashMapTest {\n    public static void main(String[] args) {\n        HashMap<CustomKey, String> map = new HashMap<>();\n        \n        CustomKey obj1 = new CustomKey(1);\n        CustomKey obj2 = new CustomKey(1);\n        \n        System.out.println(\"obj1 and obj2 are equal: \" + obj1.equals(obj2));\n        \n        map.put(obj1, \"First\");\n        map.put(obj2, \"Second\"); // This will replace the first entry\n        \n        System.out.println(\"Value from map: \" + map.get(obj1));\n    }\n    \n    static class CustomKey {\n        private int id;\n        \n        public CustomKey(int id) {\n            this.id = id;\n        }\n        \n        @Override\n        public int hashCode() {\n            return id;\n        }\n        \n        @Override\n        public boolean equals(Object obj) {\n            if (this == obj) return true;\n            if (obj == null || getClass() != obj.getClass()) return false;\n            CustomKey other = (CustomKey) obj;\n            return id == other.id;\n        }\n    }\n}"
+      "code_example": "import java.util.HashMap;\n\npublic class HashMapTest {\n    public static void main(String[] args) {\n        HashMap<CustomKey, String> map = new HashMap<>();\n        \n        CustomKey obj1 = new CustomKey(1);\n        CustomKey obj2 = new CustomKey(1);\n        \n        System.out.println(\"obj1 and obj2 are equal: \" + obj1.equals(obj2));\n        \n        map.put(obj1, \"First\");\n        map.put(obj2, \"Second\");\n        \n        System.out.println(\"Value from map: \" + map.get(obj1));\n    }\n    \n    static class CustomKey {\n        private int id;\n        \n        public CustomKey(int id) {\n            this.id = id;\n        }\n        \n        @Override\n        public int hashCode() {\n            return id;\n        }\n        \n        @Override\n        public boolean equals(Object obj) {\n            if (this == obj) return true;\n            if (obj == null || getClass() != obj.getClass()) return false;\n            CustomKey other = (CustomKey) obj;\n            return id == other.id;\n        }\n    }\n}"
     },
     {
       "id": 44,
